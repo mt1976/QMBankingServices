@@ -21,7 +21,12 @@ VOC/%1
 *.OUT/*
 VOC/%0
 VOC/%1
-stacks/root
+stacks/*
+PROCESS.DIR/*
+PROCESS.DIR.DIC/*
+$HOLD/*
+$HOLD.DIC/*
+$SVLISTS/*
 
 # General
 .DS_Store
