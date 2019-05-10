@@ -1,0 +1,124 @@
+PROGRAM MWT.TEST
+   CRT @(-1)
+   PFX = "[mwt] "
+   PROCESS.PATH = "/Volumes/Documents/People/UNSORTED"
+   FOLDER.PATH = "/Volumes/Documents/People"
+   VAL = "File Processor" ; GOSUB DISPLAY.HEADER
+   VAL = "From ":PROCESS.PATH ; GOSUB DISPLAY
+   VAL = "TO ":FOLDER.PATH ; GOSUB DISPLAY
+   VAL = "WHO ":@LOGNAME ; GOSUB DISPLAY
+   VAL = "USER ":@USER.NO ; GOSUB DISPLAY
+* INIT FILES FILES
+   FN.PD = "PROCESS.DIR" ; F.PD = "" ; PD.ID = ""
+   OPEN FN.PD TO F.PD ELSE
+      INPUTERR PFX:"Unable to Open [":FN.PD:"]"
+   END
+   HUSH ON
+   EXECUTE "SELECT ":FN.PD
+   HUSH OFF
+
+   NO.FOUND=@SELECTED
+   NO.PROCESSED = 0
+
+   VAL = "RECORDS FOUND=[":NO.FOUND:"]" ; GOSUB DISPLAY
+
+   LOOP
+      READNEXT PD.ID ELSE EXIT
+      NO.PROCESSED += 1
+      * VAL= "Processing ":NO.PROCESSED"R#4":"/":NO.FOUND"R#4":" - ":DQUOTE(PD.ID)
+      * GOSUB DISPLAY
+
+      OLD.ID = PD.ID
+
+      TEST.ID = CONVERT("_", @FM, PD.ID)
+      * VAL = TEST.ID
+      * GOSUB DISPLAY
+      NO.PARTS = DCOUNT(TEST.ID, @FM)
+
+      GOT.ONE = @FALSE
+      FOLDER.ID = ""
+      LAST.PART = 0
+      FOR J = 1 TO NO.PARTS
+
+         * VAL=DQUOTE(J:"-":TEST.ID<J>):">>":DQUOTE(J+1:"-"TEST.ID<J+1>)
+         * GOSUB DISPLAY
+         * CRT NUM(TEST.ID<J>):NUM(TEST.ID<J+1>)
+
+
+
+         IF NOT(NUM(TEST.ID<J>)) THEN
+            IF NUM(TEST.ID<J+1>) THEN
+               IF TEST.ID<J+1> # "" THEN
+
+          *     VAL = "GOT ONE >> ":PD.ID
+          *GOSUB DISPLAY
+               GOT.ONE = @TRUE
+               LAST.PART = J+1
+
+               END
+            END
+         END
+
+
+      NEXT J
+
+      IF GOT.ONE THEN
+        * VAL = "PROCESS=":DQUOTE(PD.ID) ; GOSUB DISPLAY
+
+        IF LAST.PART > 0 THEN
+        FOR Q = 1 TO (LAST.PART-1)
+          IF FOLDER.ID = "" THEN
+            FOLDER.ID = TEST.ID<Q>
+          END ELSE
+            FOLDER.ID = FOLDER.ID:"_": TEST.ID<Q>
+          END
+        NEXT Q
+        END
+        * VAL = 'FOLDERID=':DQUOTE(FOLDER.ID) ; GOSUB DISPLAY
+
+        GOSUB PROCESS.FOLDER
+
+        FOLDER.ID = "" ; GOT.ONE = @FALSE ; LAST.PART = 0
+      END
+
+
+   REPEAT
+
+   STOP
+
+DISPLAY:
+   DISPLAY @(-4):@(-11):"[mwt] ":@(-12):VAL
+   RETURN
+
+DISPLAY.HEADER:
+   BUF.AMT = LEN(VAL)
+   MAIN.VAL = VAL
+   VAL = ""
+   FOR I = 1 TO BUF.AMT STEP 1
+      VAL = VAL:"-"
+   NEXT I
+   AFTER.VAL = VAL
+   GOSUB DISPLAY
+   VAL = MAIN.VAL
+   GOSUB DISPLAY
+   VAL = AFTER.VAL
+   GOSUB DISPLAY
+   RETURN
+
+   PROCESS.FOLDER:
+   IF FOLDER.ID # "" THEN
+      VAL = "GENERATING Folder [":FOLDER.ID:"]"
+      GOSUB DISPLAY
+      CREATE.STMT = 'sh mkdir "':FOLDER.PATH:"/":FOLDER.ID:'"'
+      MOVE.STMT = 'sh mv "':PROCESS.PATH:'/':PD.ID:'" "':FOLDER.PATH:'/':FOLDER.ID:'/':PD.ID:'"'
+      *VAL = CREATE.STMT
+      *GOSUB DISPLAY
+      EXECUTE CREATE.STMT
+      VAL = "PROCESSING Item [":PD.ID:"]" ; GOSUB DISPLAY
+      *VAL = MOVE.STMT
+      EXECUTE MOVE.STMT
+      GOSUB DISPLAY
+   END
+   RETURN
+
+END
