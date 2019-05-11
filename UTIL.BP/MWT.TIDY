@@ -3,15 +3,17 @@ PROGRAM MWT.TEST
    PFX = "[mwt] "
    PROCESS.PATH = "/Volumes/Documents/People/UNSORTED"
    FOLDER.PATH = "/Volumes/Documents/People"
-   VAL = "File Processor" ; GOSUB DISPLAY.HEADER
-   VAL = "From ":PROCESS.PATH ; GOSUB DISPLAY
-   VAL = "TO ":FOLDER.PATH ; GOSUB DISPLAY
-   VAL = "WHO ":@LOGNAME ; GOSUB DISPLAY
-   VAL = "USER ":@USER.NO ; GOSUB DISPLAY
+   CALL M.HEADER("File Processor")
+   CALL M.CRT("From ":PROCESS.PATH)
+   CALL M.CRT("TO ":FOLDER.PATH)
+   CALL M.CRT("WHO ":@LOGNAME)
+   CALL M.CRT("USER ":@USER.NO)
+
+
 * INIT FILES FILES
    FN.PD = "PROCESS.DIR" ; F.PD = "" ; PD.ID = ""
    OPEN FN.PD TO F.PD ELSE
-      INPUTERR PFX:"Unable to Open [":FN.PD:"]"
+      CALL M.CRT("!!!! Unable to Open [":FN.PD:"] !!!!")
    END
    HUSH ON
    EXECUTE "SELECT ":FN.PD
@@ -87,7 +89,7 @@ PROGRAM MWT.TEST
    STOP
 
 DISPLAY:
-   DISPLAY @(-4):@(-11):"[mwt] ":@(-12):VAL
+   CALL M.CRT(VAL)
    RETURN
 
 DISPLAY.HEADER:
@@ -105,19 +107,17 @@ DISPLAY.HEADER:
    GOSUB DISPLAY
    RETURN
 
-   PROCESS.FOLDER:
+PROCESS.FOLDER:
    IF FOLDER.ID # "" THEN
-      VAL = "GENERATING Folder [":FOLDER.ID:"]"
-      GOSUB DISPLAY
+      CALL M.CRT("GENERATING Folder [":FOLDER.ID:"]")
       CREATE.STMT = 'sh mkdir "':FOLDER.PATH:"/":FOLDER.ID:'"'
       MOVE.STMT = 'sh mv "':PROCESS.PATH:'/':PD.ID:'" "':FOLDER.PATH:'/':FOLDER.ID:'/':PD.ID:'"'
       *VAL = CREATE.STMT
       *GOSUB DISPLAY
       EXECUTE CREATE.STMT
-      VAL = "PROCESSING Item [":PD.ID:"]" ; GOSUB DISPLAY
+      CALL M.CRT("PROCESSING Item [":PD.ID:"]")
       *VAL = MOVE.STMT
       EXECUTE MOVE.STMT
-      GOSUB DISPLAY
    END
    RETURN
 
