@@ -1,0 +1,79 @@
+* common include item for all web routines
+* Written by Mike Ryder @pwchest.com 16 March 2012
+
+COM /I_WEBCOMMON/ ANYVALUE,
+        WEB$ENV(100), ; * user stuff
+         WEB$ARG(10), ; * holds the arguments
+COMMONEND
+
+
+     PROMPT ""
+     PRECISION 9
+
+* functions *
+DEFFUN VOCREC(id) CALLING "!VOCREC"       ;** return a VOC record
+DEFFUN WEBERROR(string)                   ;** Populate ERROR$VALUE and return TRUE
+DEFFUN URLDECODE(string)                  ;** decode the webstuff sent through html
+DEFFUN DBREAD(tablename,tableID)          ;** return a record in R.DBREAD
+DEFFUN HTTPEXTRACT(fieldname)             ;** return the value from HTTP$DATA matched pairs
+DEFFUN HTTPDATADO()                       ;** build a record from HTTP$DATA
+DEFFUN WBGNN()                            ;** return the next new ID in the sequence
+DEFFUN XMLDECODE(string) CALLING "XMLMASKER" KEY "1" ;** turn stuff back into xml
+DEFFUN XMLENCODE(string) CALLING "XMLMASKER" KEY "0" ;** encode the xml stuff which isn't xml!!
+*------------------------------------------------------------------------
+
+* equates *
+EQU FM TO CHAR(254)
+EQU VM TO CHAR(253)
+EQU SM TO CHAR(252)
+EQU TM TO CHAR(251)
+EQU BELL TO CHAR(007)
+EQU LF TO CHAR(10)
+EQU CR TO CHAR(13)
+EQU TAB TO CHAR(9)
+EQU XFE TO "%FE;"
+EQU ESC TO CHAR(27)
+EQU TRUE TO 1,FALSE TO 0,EMPTY TO ""
+EQU V$SPACE TO " "
+
+
+* equates for WEB$ENV where appropriate
+EQU  FATAL$ERROR TO WEB$ENV(01), ; * WORLDWIDE error flag
+     ERROR$VALUE TO WEB$ENV(02), ; * worldwide error message to do with FATAL$ERROR
+     MY$COMPANY  TO WEB$ENV(03), ; * company mnemonic of this user
+     SIGN$ON     TO WEB$ENV(04), ; * user sign on name
+    COMMAND$LINE TO WEB$ENV(05), ; * the command line
+     COMI        TO WEB$ENV(06), ; * Common Interprocess Variable
+   HTTP$ELEMENTS TO WEB$ENV(07), ; * used by WEBAPP
+   HTTP$FORMVALS TO WEB$ENV(08), ; * used by WEBAPP
+   HTTP$DETAILS  TO WEB$ENV(09), ; * used by WEBAPP
+       HTTP$DATA TO WEB$ENV(10), ; * used by WEBAPP
+   RESPONSE$FLAG TO WEB$ENV(11), ; * used by subsystems to return a response code
+         IS.AJAX TO WEB$ENV(12), ; * flag to say that this is being called as an ajax service
+  REQUEST_METHOD TO WEB$ENV(13), ; * REQUEST_METHOD because it comes in many disguises
+           HTTPX TO WEB$ENV(14), ; * XHR variable
+   R.WEBSERVICES TO WEB$ENV(15), ; * This is the particular service that we have requested
+     APPLICATION TO WEB$ENV(16), ; * Application we are writing
+   F.APPLICATION TO WEB$ENV(17), ; * Application file handle
+  DF.APPLICATION TO WEB$ENV(18), ; * Application dictionary file handle
+   IS.APP.LOADED TO WEB$ENV(19), ; * Application flag call by @LOADAPP
+   R.APPLICATION TO WEB$ENV(20), ; * record we are making
+   I.APPLICATION TO WEB$ENV(21), ; * application id
+        R.DBREAD TO WEB$ENV(22), ; * returned record from DBREAD with CHAR(10)
+        R.MVREAD TO WEB$ENV(23), ; * returned record from DBREAD unmodified
+     START.COUNT TO WEB$ENV(24), ; * the start number of a page listing
+       END.COUNT TO WEB$ENV(25), ; * the end number of a page listing
+        R.SCHEMA TO WEB$ENV(26), ; * schema of our application
+ENVEND     TO WEB$ENV(100)
+
+* equate for ARGV
+EQU ARGV1 TO WEB$ARG(1),
+    ARGV2 TO WEB$ARG(2),
+    ARGV3 TO WEB$ARG(3),
+    ARGV4 TO WEB$ARG(4),
+    ARGV5 TO WEB$ARG(5),
+    ARGV6 TO WEB$ARG(6),
+    ARGV7 TO WEB$ARG(7),
+    ARGV8 TO WEB$ARG(8),
+    ARGV9 TO WEB$ARG(9),
+    ARGV0 TO WEB$ARG(10)

@@ -1,0 +1,133 @@
+PROGRAM JSON.IMPORT
+* import json into a QM table
+*$Copyright (c) 2010 TO 2012 to 2008 mike.ryder@pwchest.com, All Rights Reserved
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2, or (at your option)
+* any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* Written by Mike Ryder @pwchest.com 18 March 2012
+
+$CATALOG
+$MODE UV.LOCATE
+$INCLUDE I_WEBCOMMON
+$INCLUDE I_SCHEMA
+
+* notice *
+* This program requires a schema as builf by CREATE.SCHEMA
+*
+* syntax *
+* JSON.IMPORT QMTABLE SOURCE
+* JSON.IMPORT DATAGRID2 WEBPAGES/datagrid_data2.json
+*
+* This program was written to facilitate the ideas and arguments
+* in an article on using REST with QM
+
+* main *
+     GOSUB INITIALISE
+     GOSUB PROCESS
+     GOSUB FINALISE
+     STOP
+***************
+* end of main *
+***************
+* subroutines *
+***************
+INITIALISE:
+     EOPROG = TRUE
+
+     TCLREAD = TRIM(SENTENCE())
+     CONVERT ' ' TO FM IN TCLREAD
+     DEL TCLREAD<1>
+     FN.TABLE = TCLREAD<1>
+     I.SOURCE = TCLREAD<2>
+
+     OPEN FN.TABLE TO F.TABLE ELSE
+          PRINT FN.TABLE:' not found'
+          RETURN
+     END
+
+     OPEN 'DICT',FN.TABLE TO F.DTABLE ELSE
+          PRINT 'No dictionary for ':FN.TABLE
+          RETURN
+     END
+
+     READ R.SCHEMA FROM F.DTABLE,'SCHEMA' ELSE
+          PRINT 'No schema for ':FN.TABLE
+          RETURN
+     END
+
+     OPENSEQ I.SOURCE TO F.SOURCE ELSE
+          PRINT 'Cannot read ':I.SOURCE
+          RETURN
+     END
+     R.SOURCE = EMPTY
+     DONE = FALSE
+     LOOP
+          READSEQ MYLINE FROM F.SOURCE ELSE DONE = TRUE
+     UNTIL DONE DO
+          R.SOURCE := MYLINE
+     REPEAT
+     CLOSESEQ F.SOURCE
+     CONVERT LF:CR:TAB TO EMPTY IN R.SOURCE
+     WRCOUNT = 0
+     EOPROG = FALSE
+RETURN
+******
+PROCESS:
+     IF EOPROG THEN RETURN
+     LOOP
+          FP = INDEX(R.SOURCE,'}',1)
+     WHILE FP DO
+          WORDROW = R.SOURCE[1,FP-1]
+          LEFTROW = R.SOURCE[FP+1,LEN(R.SOURCE)]
+          CONVERT '{' TO FM IN WORDROW
+          N.ROW = DCOUNT(WORDROW,FM)
+          MYROW = WORDROW<N.ROW>
+          GOSUB WRITEDATA
+          R.SOURCE = LEFTROW
+     REPEAT
+RETURN
+******
+FINALISE:
+     IF EOPROG THEN RETURN
+     IF WRCOUNT THEN
+          PRINT WRCOUNT:' records imported'
+     END
+
+RETURN
+******
+WRITEDATA:
+     R.RECORD = EMPTY
+     I.RECORD = 0
+     CONVERT ',' TO FM IN MYROW
+     N.MYROW = DCOUNT(MYROW,FM)
+     FOR K = 1 TO N.MYROW
+          THIS.LINE = MYROW<K>
+          THIS.NAME = TRIM(FIELD(THIS.LINE,':',1))
+          THIS.DATA = TRIM(FIELD(THIS.LINE,':',2))
+          CONVERT '"' TO '' IN THIS.NAME
+          CONVERT '"' TO '' IN THIS.DATA
+          LOCATE THIS.NAME IN R.SCHEMA<WEB.NAME>,1 SETTING VK THEN
+               FPOS = VK -1
+               TCONV = R.SCHEMA<FIELD.CONV,VK>
+               THIS.DATA = ICONV(THIS.DATA,TCONV)
+               IF FPOS THEN
+                    R.RECORD<FPOS> = THIS.DATA
+               END ELSE
+                    I.RECORD = THIS.DATA
+               END
+          END
+     NEXT K
+     IF NOT(I.RECORD) THEN
+          PRINT MYROW:' has no ID'
+          RETURN
+     END
+     WRITE R.RECORD ON F.TABLE,I.RECORD
+     WRCOUNT += 1
+RETURN
+******
+END

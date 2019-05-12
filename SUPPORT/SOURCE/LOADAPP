@@ -1,0 +1,36 @@
+SUBROUTINE LOADAPP
+* open the files in one place
+*$Copyright (c) 2010 TO 2012 to 2008 mike.ryder@pwchest.com, All Rights Reserved
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2, or (at your option)
+* any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+
+
+$MODE UV.LOCATE
+$CATALOG
+
+
+
+$INCLUDE I_WEBCOMMON
+
+     OPEN APPLICATION TO F.APPLICATION ELSE
+          FATAL$ERROR = WEBERROR("cannot open ":APPLICATION)
+          RETURN
+     END
+     OPEN "DICT",APPLICATION TO DF.APPLICATION ELSE
+          FATAL$ERROR = WEBERROR("cannot open dictionary of ":APPLICATION)
+          RETURN
+     END
+     READ R.SCHEMA FROM DF.APPLICATION,'SCHEMA' ELSE
+          FATAL$ERROR = WEBERROR("cannot read schema for ":APPLICATION)
+          RETURN
+     END
+     IS.APP.LOADED = TRUE
+RETURN
+******
+END

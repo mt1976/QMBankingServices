@@ -1,0 +1,40 @@
+FUNCTION WBGNN ()
+* get the next number
+*$Copyright (c) 2010 TO 2012 to 2008 mike.ryder@pwchest.com, All Rights Reserved
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2, or (at your option)
+* any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*AUTHOR = Mike 1203182033
+$MODE UV.LOCATE
+$CATALOG
+$INCLUDE I_WEBCOMMON
+
+     GOSUB PROCESS
+RETURN NEXT.NO
+**************
+PROCESS:
+
+* read the next one from DICTIONARY CONTROL
+     I$KEY = 'NEXT.NO'
+     READU NXT FROM DF.APPLICATION,I$KEY ELSE NXT = 'X':FM:1
+
+* Loop around until this is a new ID
+     NXT = NXT<2>
+     LOOP
+          NEXT.NO = NXT
+          READ TEST FROM F.APPLICATION,NEXT.NO THEN NEXT.NO = 0
+          NXT = NXT + 1
+     UNTIL NEXT.NO DO
+
+     REPEAT
+     NXT = 'X':FM:NXT
+     WRITE NXT ON DF.APPLICATION,I$KEY ON ERROR FATAL$ERROR = WEBERROR('Write failure :':STATUS())
+
+RETURN
+******
+END

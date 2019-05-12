@@ -1,0 +1,56 @@
+PROGRAM WSH
+* run a command from any directory *
+*$Copyright (c) 2010 TO 2012 to 2008 mike.ryder@pwchest.com, All Rights Reserved
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2, or (at your option)
+* any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* Written by Mike Ryder - 21 March 2012
+
+$MODE UV.LOCATE
+$CATALOG
+
+
+
+
+
+     TCLREAD = TRIM(SENTENCE())
+     FILENAME = FIELD(TCLREAD,' ',2)
+     CONVERT '\/' TO @FM:@FM IN FILENAME
+     CONVERT @FM TO @DS IN FILENAME
+     OPENSEQ FILENAME TO F.FILENAME ELSE
+          ABORT FILENAME:': command not found'
+     END
+     R.RECORD = ''
+     LOOP
+          READSEQ LINE FROM F.FILENAME ELSE EXIT
+          R.RECORD := LINE:@FM
+     REPEAT
+
+     TOPLINE = FIELD(R.RECORD<1>,' ',1)
+     IF TOPLINE = 'PA' ELSE
+          ABORT FILENAME:': invalid command type'
+     END
+     I.VOC = 'QSH.RUN'
+     READU DUMMY FROM @VOC,I.VOC LOCKED
+          ABORT FILENAME:': locked by another user'
+     END ELSE
+          NULL
+     END
+
+     WRITE R.RECORD ON @VOC,I.VOC
+
+* write a VOC pointer to our source file
+     R.VOC = 'F'
+     R.VOC<2> = 'SOURCE'
+     R.VOC<3> = "@QMSYS/VOC.DIC"
+     WRITE R.VOC ON @VOC,'SOURCE'
+
+     EXECUTE I.VOC
+     DELETE @VOC,I.VOC
+
+END

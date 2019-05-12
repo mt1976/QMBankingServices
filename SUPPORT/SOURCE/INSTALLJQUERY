@@ -1,0 +1,40 @@
+PROGRAM INSTALLJQUERY
+* Install jquery
+*$Copyright (c) 2010 TO 2012 to 2008 mike.ryder@pwchest.com, All Rights Reserved
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2, or (at your option)
+* any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+
+
+$MODE UV.LOCATE
+$CATALOG
+
+* Utility to wget jquery-easyui and install
+* written as part of a suite of programs for an article in International Spectrum Magazine
+     DISPLAY "Authenticate with your password"
+     CMD = "sudo -v -p admin-password:"
+     OS.EXECUTE CMD
+     REPLY = OS.ERROR()
+     IF REPLY THEN
+          DISPLAY "Authentication failure"
+          STOP
+     END
+     OS.EXECUTE 'wget http://www.jeasyui.com/download/downloads/jquery-easyui-1.2.5.zip'
+     IF OS.ERROR() THEN STOP
+     OS.EXECUTE 'mkdir jquery'
+     OS.EXECUTE 'cd jquery;unzip ../jquery-easyui-1.2.5.zip'
+     OS.EXECUTE 'sudo mv jquery /var/www'
+     OS.EXECUTE 'sudo chown -R www-data:www-data /var/www/jquery'
+     OS.EXECUTE 'cp /var/www/jquery/demo/* WEBPAGES'
+     EXECUTE 'COPY FROM WEBPAGES TO CSS demo.css'
+     EXECUTE 'FIX.WEBPAGES'
+     OS.EXECUTE "sudo -k"
+
+     PRINT 'Done'
+
+END

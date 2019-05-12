@@ -1,0 +1,32 @@
+FUNCTION WEBERROR (IP$VAR)
+* Populate ERROR$VALUE and return TRUE
+*$Copyright (c) 2010 TO 2012 to 2008 mike.ryder@pwchest.com, All Rights Reserved
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2, or (at your option)
+* any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* Written by Mike Ryder @pwchest.com 16 March 2012
+
+$MODE UV.LOCATE
+$CATALOG
+$INCLUDE I_WEBCOMMON
+
+     CONVERT ';' TO '.' IN IP$VAR
+     CONVERT CHAR(10) TO FM IN IP$VAR
+     OPR = TRUE
+     ERROR$VALUE<-1> = IP$VAR
+     IF IP$VAR = 'CLEAR' THEN
+          OPR = FALSE
+          ERROR$VALUE = EMPTY
+     END ELSE
+          CALL WEB4LOG(IP$VAR)
+     END
+
+
+RETURN (OPR)
+******
+END
