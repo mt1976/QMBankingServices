@@ -9,9 +9,9 @@ sites/site*/public/theme/
 textpattern/
 HISTORY.txt
 README.txt
-.DIC
+*.DIC
 VOC/
-.DIC/
+*.DIC/
 %0
 %1
 VOC/%1
@@ -21,6 +21,7 @@ VOC/%1
 *.OUT/*
 VOC/%0
 VOC/%1
+VOC/*
 stacks/*
 PROCESS.DIR/*
 PROCESS.DIR.DIC/*
@@ -29,7 +30,7 @@ $HOLD.DIC/*
 $SVLISTS/*
 *.DIC/*
 cat/*
-stacks/root
+stacks/*
 
 # General
 .DS_Store

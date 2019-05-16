@@ -1,0 +1,134 @@
+PROGRAM MWT.TEST
+   CRT @(-1)
+   PFX = "[mwt] "
+   PATH.SOURCE = "/Volumes/Documents/People/UNSORTED"
+   * PATH.SOURCE = "/Volumes/Documents/People/NEW PEOPLE"
+   PATH.DEST = "/Volumes/Documents/People"
+   CALL M.HEADER("File Processor")
+   CALL M.CRT.ACTION("From", PATH.SOURCE)
+   CALL M.CRT.ACTION("TO", PATH.DEST)
+
+   FN.VOC= "VOC" ; FV.VOC = "" ; ID.VOC = "PROCESS.DIR"
+   CALL M.OPENFILE(FN.VOC, FV.VOC, @TRUE, "")
+   R.VOC = ""
+   CALL M.READ(FV.VOC, ID.VOC, R.VOC, @TRUE, "")
+   *DISPLAY R.VOC
+   R.VOC<2> = PATH.SOURCE
+   * DISPLAY R.VOC
+   CALL M.WRITE(FV.VOC, ID.VOC, R.VOC, @TRUE, "")
+
+* INIT FILES FILES
+   FN.PROCESS.DIR = "PROCESS.DIR" ; FV.PROCESS.DIR = "" ; ID.PROCESS.DIR = ""
+   CALL M.OPENFILE(FN.PROCESS.DIR, FV.PROCESS.DIR, @TRUE, "")
+
+THIS.DELIM = "_"
+GOSUB PROCESS.DELIM
+THIS.DELIM = "-"
+GOSUB PROCESS.DELIM
+
+   STOP
+
+DISPLAY:
+   CALL M.CRT(VAL)
+   RETURN
+
+DISPLAY.HEADER:
+**** DEFUNCT
+   RETURN
+
+
+
+PROCESS.DELIM:
+   CALL M.CRT.ACTION("DELIMITER",DQUOTE(THIS.DELIM))
+   CALL M.CRT.ACTION("SELECT", "STARTED")
+   HUSH ON
+   EXECUTE "SELECT ":FN.PROCESS.DIR
+   HUSH OFF
+   CALL M.CRT.ACTION("SELECT", "COMPLETED")
+
+   NO.FOUND=@SELECTED
+   NO.PROCESSED = 0
+
+   VAL = "RECORDS FOUND=[":NO.FOUND:"]"
+   CALL M.CRT.ACTION("RESULT", VAL)
+
+   LOOP
+      READNEXT ID.PROCESS.DIR ELSE EXIT
+      NO.PROCESSED += 1
+      * VAL= "Processing ":NO.PROCESSED"R#4":"/":NO.FOUND"R#4":" - ":DQUOTE(ID.PROCESS.DIR)
+      * GOSUB DISPLAY
+
+      OLD.ID = ID.PROCESS.DIR
+
+      TEST.ID = CONVERT(THIS.DELIM, @FM, ID.PROCESS.DIR)
+      * VAL = TEST.ID
+      * GOSUB DISPLAY
+      NO.PARTS = DCOUNT(TEST.ID, @FM)
+
+      GOT.ONE = @FALSE
+      PATH.FOLDER = ""
+      LAST.PART = 0
+      FOR J = 1 TO NO.PARTS
+
+         * VAL=DQUOTE(J:"-":TEST.ID<J>):">>":DQUOTE(J+1:"-"TEST.ID<J+1>)
+         * GOSUB DISPLAY
+         * CRT NUM(TEST.ID<J>):NUM(TEST.ID<J+1>)
+
+
+
+         IF NOT(NUM(TEST.ID<J>)) THEN
+            IF NUM(TEST.ID<J+1>) THEN
+               IF TEST.ID<J+1> # "" THEN
+
+                  *     VAL = "GOT ONE >> ":ID.PROCESS.DIR
+                  *GOSUB DISPLAY
+                  GOT.ONE = @TRUE
+                  LAST.PART = J+1
+
+               END
+            END
+         END
+
+
+      NEXT J
+
+      IF GOT.ONE THEN
+         * VAL = "PROCESS=":DQUOTE(ID.PROCESS.DIR) ; GOSUB DISPLAY
+
+         IF LAST.PART > 0 THEN
+            FOR Q = 1 TO (LAST.PART-1)
+               IF PATH.FOLDER = "" THEN
+                  PATH.FOLDER = TEST.ID<Q>
+               END ELSE
+                  PATH.FOLDER = PATH.FOLDER:THIS.DELIM:TEST.ID<Q>
+               END
+            NEXT Q
+         END
+         * VAL = 'PATH.FOLDER=':DQUOTE(PATH.FOLDER) ; GOSUB DISPLAY
+
+         GOSUB PROCESS.FOLDER
+
+         PATH.FOLDER = "" ; GOT.ONE = @FALSE ; LAST.PART = 0
+      END
+
+
+   REPEAT
+RETURN
+
+PROCESS.FOLDER:
+   IF PATH.FOLDER # "" THEN
+      CALL M.CRT.ACTION("GENERATING", "Folder [":PATH.FOLDER:"]")
+      HUSH ON
+      CREATE.STMT = 'sh mkdir "':PATH.DEST:"/":PATH.FOLDER:'"'
+      EXECUTE CREATE.STMT
+      HUSH OFF
+      CALL M.CRT.ACTION("PROCESSING", "Item [":ID.PROCESS.DIR:"]")
+      HUSH ON
+      MOVE.STMT = 'sh mv "':PATH.SOURCE:'/':ID.PROCESS.DIR:'" "':PATH.DEST:'/':PATH.FOLDER:'/':ID.PROCESS.DIR:'"'
+      EXECUTE MOVE.STMT
+      HUSH OFF
+   END
+   RETURN
+
+
+END
