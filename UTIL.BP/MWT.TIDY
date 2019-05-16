@@ -1,44 +1,54 @@
 PROGRAM MWT.TEST
    CRT @(-1)
    PFX = "[mwt] "
-   PROCESS.PATH = "/Volumes/Documents/People/UNSORTED"
-   FOLDER.PATH = "/Volumes/Documents/People"
+   * PATH.SOURCE = "/Volumes/Documents/People/UNSORTED"
+   PATH.SOURCE = "/Volumes/Documents/People/NEW PEOPLE"
+   PATH.DEST = "/Volumes/Documents/People"
    CALL M.HEADER("File Processor")
-   CALL M.CRT("From ":PROCESS.PATH)
-   CALL M.CRT("TO ":FOLDER.PATH)
-   CALL M.CRT("WHO ":@LOGNAME)
-   CALL M.CRT("USER ":@USER.NO)
+   CALL M.CRT.ACTION("From",PATH.SOURCE)
+   CALL M.CRT.ACTION("TO",PATH.DEST)
 
+   FN.VOC= "VOC" ; FV.VOC = "" ; ID.VOC = "PROCESS.DIR"
+   CALL M.OPENFILE(FN.VOC, FV.VOC, @TRUE , "")
+   R.VOC = ""
+   CALL M.READ(FV.VOC,ID.VOC,R.VOC,@TRUE,"")
+   *DISPLAY R.VOC
+   R.VOC<2> = PATH.SOURCE
+   * DISPLAY R.VOC
+   CALL M.WRITE(FV.VOC,ID.VOC,R.VOC,@TRUE,"")
 
 * INIT FILES FILES
-   FN.PD = "PROCESS.DIR" ; F.PD = "" ; PD.ID = ""
-   OPEN FN.PD TO F.PD ELSE
-      CALL M.CRT("!!!! Unable to Open [":FN.PD:"] !!!!")
-   END
+   FN.PROCESS.DIR = "PROCESS.DIR" ; FV.PROCESS.DIR = "" ; ID.PROCESS.DIR = ""
+   CALL M.OPENFILE(FN.PROCESS.DIR, FV.PROCESS.DIR, @TRUE , "")
+
+
+   CALL M.CRT.ACTION("SELECT","STARTED")
    HUSH ON
-   EXECUTE "SELECT ":FN.PD
+   EXECUTE "SELECT ":FN.PROCESS.DIR
    HUSH OFF
+   CALL M.CRT.ACTION("SELECT","COMPLETED")
 
    NO.FOUND=@SELECTED
    NO.PROCESSED = 0
 
-   VAL = "RECORDS FOUND=[":NO.FOUND:"]" ; GOSUB DISPLAY
+   VAL = "RECORDS FOUND=[":NO.FOUND:"]"
+   CALL M.CRT.ACTION("RESULT",VAL)
 
    LOOP
-      READNEXT PD.ID ELSE EXIT
+      READNEXT ID.PROCESS.DIR ELSE EXIT
       NO.PROCESSED += 1
-      * VAL= "Processing ":NO.PROCESSED"R#4":"/":NO.FOUND"R#4":" - ":DQUOTE(PD.ID)
+      * VAL= "Processing ":NO.PROCESSED"R#4":"/":NO.FOUND"R#4":" - ":DQUOTE(ID.PROCESS.DIR)
       * GOSUB DISPLAY
 
-      OLD.ID = PD.ID
+      OLD.ID = ID.PROCESS.DIR
 
-      TEST.ID = CONVERT("_", @FM, PD.ID)
+      TEST.ID = CONVERT("_", @FM, ID.PROCESS.DIR)
       * VAL = TEST.ID
       * GOSUB DISPLAY
       NO.PARTS = DCOUNT(TEST.ID, @FM)
 
       GOT.ONE = @FALSE
-      FOLDER.ID = ""
+      PATH.FOLDER = ""
       LAST.PART = 0
       FOR J = 1 TO NO.PARTS
 
@@ -52,7 +62,7 @@ PROGRAM MWT.TEST
             IF NUM(TEST.ID<J+1>) THEN
                IF TEST.ID<J+1> # "" THEN
 
-          *     VAL = "GOT ONE >> ":PD.ID
+          *     VAL = "GOT ONE >> ":ID.PROCESS.DIR
           *GOSUB DISPLAY
                GOT.ONE = @TRUE
                LAST.PART = J+1
@@ -65,22 +75,22 @@ PROGRAM MWT.TEST
       NEXT J
 
       IF GOT.ONE THEN
-        * VAL = "PROCESS=":DQUOTE(PD.ID) ; GOSUB DISPLAY
+        * VAL = "PROCESS=":DQUOTE(ID.PROCESS.DIR) ; GOSUB DISPLAY
 
         IF LAST.PART > 0 THEN
         FOR Q = 1 TO (LAST.PART-1)
-          IF FOLDER.ID = "" THEN
-            FOLDER.ID = TEST.ID<Q>
+          IF PATH.FOLDER = "" THEN
+            PATH.FOLDER = TEST.ID<Q>
           END ELSE
-            FOLDER.ID = FOLDER.ID:"_": TEST.ID<Q>
+            PATH.FOLDER = PATH.FOLDER:"_": TEST.ID<Q>
           END
         NEXT Q
         END
-        * VAL = 'FOLDERID=':DQUOTE(FOLDER.ID) ; GOSUB DISPLAY
+        * VAL = 'PATH.FOLDER=':DQUOTE(PATH.FOLDER) ; GOSUB DISPLAY
 
         GOSUB PROCESS.FOLDER
 
-        FOLDER.ID = "" ; GOT.ONE = @FALSE ; LAST.PART = 0
+        PATH.FOLDER = "" ; GOT.ONE = @FALSE ; LAST.PART = 0
       END
 
 
@@ -93,30 +103,17 @@ DISPLAY:
    RETURN
 
 DISPLAY.HEADER:
-   BUF.AMT = LEN(VAL)
-   MAIN.VAL = VAL
-   VAL = ""
-   FOR I = 1 TO BUF.AMT STEP 1
-      VAL = VAL:"-"
-   NEXT I
-   AFTER.VAL = VAL
-   GOSUB DISPLAY
-   VAL = MAIN.VAL
-   GOSUB DISPLAY
-   VAL = AFTER.VAL
-   GOSUB DISPLAY
+**** DEFUNCT
    RETURN
 
 PROCESS.FOLDER:
-   IF FOLDER.ID # "" THEN
-      CALL M.CRT("GENERATING Folder [":FOLDER.ID:"]")
-      CREATE.STMT = 'sh mkdir "':FOLDER.PATH:"/":FOLDER.ID:'"'
-      MOVE.STMT = 'sh mv "':PROCESS.PATH:'/':PD.ID:'" "':FOLDER.PATH:'/':FOLDER.ID:'/':PD.ID:'"'
-      *VAL = CREATE.STMT
-      *GOSUB DISPLAY
+   IF PATH.FOLDER # "" THEN
+      CALL M.CRT.ACTION("GENERATING","Folder [":PATH.FOLDER:"]")
+      CREATE.STMT = 'sh mkdir "':PATH.DEST:"/":PATH.FOLDER:'"'
       EXECUTE CREATE.STMT
-      CALL M.CRT("PROCESSING Item [":PD.ID:"]")
-      *VAL = MOVE.STMT
+
+      MOVE.STMT = 'sh mv "':PATH.SOURCE:'/':ID.PROCESS.DIR:'" "':PATH.DEST:'/':PATH.FOLDER:'/':ID.PROCESS.DIR:'"'
+      CALL M.CRT.ACTION("PROCESSING","Item [":ID.PROCESS.DIR:"]")
       EXECUTE MOVE.STMT
    END
    RETURN
