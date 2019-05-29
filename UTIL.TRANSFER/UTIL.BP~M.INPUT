@@ -1,5 +1,5 @@
 SUBROUTINE M.INPUT(QUESTION, RESPONSE)
-   DISPLAY @(-4):@(-11):"[mwt] ":@(-12):QUESTION:" ":
+   DISPLAY @(-4):@(-11):"🅼 ":@(-12):QUESTION:" ":
    INPUT RESPONSE, 20:_
    CRT
    RETURN
