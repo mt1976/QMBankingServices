@@ -7,7 +7,7 @@ SUBROUTINE M.HEADER(TEXT)
 
    BAR = STR("━", SPAN.WIDTH)
 
-   STMT = "sh figlet -f banner ":DQUOTE(TEXT)
+   STMT = "sh figlet -f small ":DQUOTE(TEXT)
 
    * HUSH ON
    EXECUTE STMT CAPTURING OUTPUT
