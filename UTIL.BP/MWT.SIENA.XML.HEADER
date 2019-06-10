@@ -1,14 +1,14 @@
-SUBROUTINE MWT.SIENA.XML.HEADER(XML.REC,SIENA.ACTION,SIENA.TABLE.NAME)
-XML.REC = ''
-XML.REC<-1> = '<?xml version="1.0" encoding="UTF-8"?>'
+SUBROUTINE MWT.SIENA.XML.HEADER(XML.REC, SIENA.ACTION, SIENA.TABLE.NAME)
+   XML.REC = ''
+   XML.REC<-1> = '<?xml version="1.0" encoding="UTF-8"?>'
 
-XML.REC<-1> = '<TRANSACTIONS xsi:noNamespaceSchemaLocation="file:///C:/Users/mtownsend/Desktop/tlate/NegotiableInstrument.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">'
-XML.REC<-1> = '<TRANSACTION type="':SIENA.ACTION:'">'
+   XML.REC<-1> = '<TRANSACTIONS xsi:noNamespaceSchemaLocation="file:///C:/Users/mtownsend/Desktop/tlate/NegotiableInstrument.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">'
+   XML.REC<-1> = '<TRANSACTION type="':SIENA.ACTION:'">'
 
-SIENA.TABLE.NAME = "NegotiableInstrument"
-SIENA.CLASS.NAME = "com.eurobase.siena.data.negotiableinstrument.NegotiableInstrument"
+   SIENA.TABLE.NAME = "NegotiableInstrument"
+   SIENA.CLASS.NAME = "com.eurobase.siena.data.negotiableinstrument.NegotiableInstrument"
 
-XML.REC<-1> = '<TABLE name="':SIENA.TABLE.NAME:'" classname="':SIENA.CLASS.NAME:'">'
+   XML.REC<-1> = '<TABLE name="':SIENA.TABLE.NAME:'" classname="':SIENA.CLASS.NAME:'">'
 
 
    RETURN

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xsi:noNamespaceSchemaLocation="file:///C:/Users/mtownsend/Desktop/tlate/NegotiableInstrument.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<TRANSACTION type="UPDATE">
+<TABLE name="NegotiableInstrument" classname="com.eurobase.siena.data.negotiableinstrument.NegotiableInstrument">
+<RECORD>
+<KEYFIELD name="name">WESSEX WATER SERVICES FINANCE P</KEYFIELD>
+<FIELD name="type">BOND</FIELD>
+<FIELD name="currency.code">GBP</FIELD>
+<FIELD name="issuer.firm">Q_UKB_IHJ</FIELD>
+<FIELD name="issuer.centre">_LO</FIELD>
+<FIELD name="acceptor.firm"/>
+<FIELD name="acceptor.centre"/>
+<FIELD name="issue.date">20031015</FIELD>
+<FIELD name="maturity.date">20331014</FIELD>
+<FIELD name="rate.type"/>
+<FIELD name="coupon.rate">5.75</FIELD>
+<FIELD name="interest.basis">ACT/ACT ISMA</FIELD>
+<FIELD name="interest.frequency">1Y</FIELD>
+<FIELD name="clearing.system"/>
+<FIELD name="parent.deal.type">BOND</FIELD>
+<FIELD name="securityID">XS0178489844</FIELD>
+<FIELD name="encumbered"/>
+<FIELD name="marketable"/>
+<FIELD name="hypothecated"/>
+</RECORD>
+<RECORD>
+<KEYFIELD name="name">UK 2 3/4% TR 24</KEYFIELD>
+<FIELD name="type">GILT</FIELD>
+<FIELD name="currency.code">GBP</FIELD>
+<FIELD name="issuer.firm">Q_UKB_IHJ</FIELD>
+<FIELD name="issuer.centre">_LO</FIELD>
+<FIELD name="acceptor.firm"/>
+<FIELD name="acceptor.centre"/>
+<FIELD name="issue.date">20140312</FIELD>
+<FIELD name="maturity.date">20240907</FIELD>
+<FIELD name="rate.type"/>
+<FIELD name="coupon.rate">2.75</FIELD>
+<FIELD name="interest.basis">GILTS ACT/ACT</FIELD>
+<FIELD name="interest.frequency">6M</FIELD>
+<FIELD name="clearing.system"/>
+<FIELD name="parent.deal.type">GILT</FIELD>
+<FIELD name="securityID">GB00BHBFH458</FIELD>
+<FIELD name="encumbered"/>
+<FIELD name="marketable"/>
+<FIELD name="hypothecated"/>
+</RECORD>
+<RECORD>
+<KEYFIELD name="name">RETAIL CHARITY BONDS PLC CB26</KEYFIELD>
+<FIELD name="type">BOND</FIELD>
+<FIELD name="currency.code">GBP</FIELD>
+<FIELD name="issuer.firm">Q_UKB_IHJ</FIELD>
+<FIELD name="issuer.centre">_LO</FIELD>
+<FIELD name="acceptor.firm"/>
+<FIELD name="acceptor.centre"/>
+<FIELD name="issue.date">20170315</FIELD>
+<FIELD name="maturity.date">20260330</FIELD>
+<FIELD name="rate.type"/>
+<FIELD name="coupon.rate">4.25</FIELD>
+<FIELD name="interest.basis">ACT/ACT ISMA</FIELD>
+<FIELD name="interest.frequency">6M</FIELD>
+<FIELD name="clearing.system"/>
+<FIELD name="parent.deal.type">BOND</FIELD>
+<FIELD name="securityID">XS1575974933</FIELD>
+<FIELD name="encumbered"/>
+<FIELD name="marketable"/>
+<FIELD name="hypothecated"/>
+</RECORD>
+<RECORD>
+<KEYFIELD name="name">UK TR 3 3/4% 19</KEYFIELD>
+<FIELD name="type">GILT</FIELD>
+<FIELD name="currency.code">GBP</FIELD>
+<FIELD name="issuer.firm">Q_UKB_IHJ</FIELD>
+<FIELD name="issuer.centre">_LO</FIELD>
+<FIELD name="acceptor.firm"/>
+<FIELD name="acceptor.centre"/>
+<FIELD name="issue.date">20090708</FIELD>
+<FIELD name="maturity.date">20190907</FIELD>
+<FIELD name="rate.type"/>
+<FIELD name="coupon.rate">3.75</FIELD>
+<FIELD name="interest.basis">GILTS ACT/ACT</FIELD>
+<FIELD name="interest.frequency">6M</FIELD>
+<FIELD name="clearing.system"/>
+<FIELD name="parent.deal.type">GILT</FIELD>
+<FIELD name="securityID">GB00B4YRFP41</FIELD>
+<FIELD name="encumbered"/>
+<FIELD name="marketable"/>
+<FIELD name="hypothecated"/>
+</RECORD>
+<RECORD>
+<KEYFIELD name="name">RETAIL CHARITY BONDS PLC CB25</KEYFIELD>
+<FIELD name="type">BOND</FIELD>
+<FIELD name="currency.code">GBP</FIELD>
+<FIELD name="issuer.firm">Q_UKB_IHJ</FIELD>
+<FIELD name="issuer.centre">_LO</FIELD>
+<FIELD name="acceptor.firm"/>
+<FIELD name="acceptor.centre"/>
+<FIELD name="issue.date">20150420</FIELD>
+<FIELD name="maturity.date">20250430</FIELD>
+<FIELD name="rate.type"/>
+<FIELD name="coupon.rate">4.4</FIELD>
+<FIELD name="interest.basis">ACT/ACT</FIELD>
+<FIELD name="interest.frequency">6M</FIELD>
+<FIELD name="clearing.system"/>
+<FIELD name="parent.deal.type">BOND</FIELD>
+<FIELD name="securityID">XS1200788369</FIELD>
+<FIELD name="encumbered"/>
+<FIELD name="marketable"/>
+<FIELD name="hypothecated"/>
+</RECORD>
+<RECORD>
+<KEYFIELD name="name">PRIMARY HEALTH PROPERTIES PLC H</KEYFIELD>
+<FIELD name="type">BOND</FIELD>
+<FIELD name="currency.code">GBP</FIELD>
+<FIELD name="issuer.firm">Q_UKB_IHJ</FIELD>
+<FIELD name="issuer.centre">_LO</FIELD>
+<FIELD name="acceptor.firm"/>
+<FIELD name="acceptor.centre"/>
+<FIELD name="issue.date">20120724</FIELD>
+<FIELD name="maturity.date">20190723</FIELD>
+<FIELD name="rate.type"/>
+<FIELD name="coupon.rate">5.375</FIELD>
+<FIELD name="interest.basis">ACT/ACT</FIELD>
+<FIELD name="interest.frequency">6M</FIELD>
+<FIELD name="clearing.system"/>
+<FIELD name="parent.deal.type">BOND</FIELD>
+<FIELD name="securityID">XS0795445823</FIELD>
+<FIELD name="encumbered"/>
+<FIELD name="marketable"/>
+<FIELD name="hypothecated"/>
+</RECORD>
+<RECORD>
+<KEYFIELD name="name">UK 0 1/2% IL 50</KEYFIELD>
+<FIELD name="type">GILT</FIELD>
+<FIELD name="currency.code">GBP</FIELD>
+<FIELD name="issuer.firm">Q_UKB_IHJ</FIELD>
+<FIELD name="issuer.centre">_LO</FIELD>
+<FIELD name="acceptor.firm"/>
+<FIELD name="acceptor.centre"/>
+<FIELD name="issue.date">20090925</FIELD>
+<FIELD name="maturity.date">20500322</FIELD>
+<FIELD name="rate.type"/>
+<FIELD name="coupon.rate">0.5</FIELD>
+<FIELD name="interest.basis">GILTS ACT/ACT</FIELD>
+<FIELD name="interest.frequency">6M</FIELD>
+<FIELD name="clearing.system"/>
+<FIELD name="parent.deal.type">GILT</FIELD>
+<FIELD name="securityID">GB00B421JZ66</FIELD>
+<FIELD name="encumbered"/>
+<FIELD name="marketable"/>
+<FIELD name="hypothecated"/>
+</RECORD>
+<RECORD>
+<KEYFIELD name="name">UK 3 3/4 TR 21</KEYFIELD>
+<FIELD name="type">GILT</FIELD>
+<FIELD name="currency.code">GBP</FIELD>
+<FIELD name="issuer.firm">Q_UKB_IHJ</FIELD>
+<FIELD name="issuer.centre">_LO</FIELD>
+<FIELD name="acceptor.firm"/>
+<FIELD name="acceptor.centre"/>
+<FIELD name="issue.date">20110803</FIELD>
+<FIELD name="maturity.date">20210907</FIELD>
+<FIELD name="rate.type"/>
+<FIELD name="coupon.rate">3.75</FIELD>
+<FIELD name="interest.basis">GILTS ACT/ACT</FIELD>
+<FIELD name="interest.frequency">6M</FIELD>
+<FIELD name="clearing.system"/>
+<FIELD name="parent.deal.type">GILT</FIELD>
+<FIELD name="securityID">GB00B4RMG977</FIELD>
+<FIELD name="encumbered"/>
+<FIELD name="marketable"/>
+<FIELD name="hypothecated"/>
+</RECORD>
+</TABLE>
+</TRANSACTION>
+</TRANSACTIONS>
