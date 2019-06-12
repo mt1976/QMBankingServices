@@ -14,7 +14,8 @@
 # Revsion:
 # ===================================================================
 #
-qmpath="/home/mwt"
+#qmpath="/home/mwt"
+qmpath="/Users/matttownsend/Development/qm/dev"
 outputDir="SIENA.IN"
 fetchID="SP"
 

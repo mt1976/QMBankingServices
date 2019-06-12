@@ -15,7 +15,8 @@
 # ===================================================================
 #
 
-qmpath="/home/mwt"
+#qmpath="/home/mwt"
+qmpath="/Users/matttownsend/Development/qm/dev"
 outputDir="SIENA.IN"
 fetchID="EONIA"
 
@@ -27,8 +28,11 @@ echo
 echo "MT: Attempt to get 'latest' EONIA rate for processing"
 echo
 dateID=$(date "+%Y%m%d")
-dateFrom=$(date "+%d-%m-%Y" --date="2 days ago")
-dateTo=$(date "+%d-%m-%Y" --date="1 days ago")
+#dateFrom=$(date "+%d-%m-%Y" --date="2 days ago")
+#dateTo=$(date "+%d-%m-%Y" --date="1 days ago")
+dateFrom=$(date -v -2d "+%d-%m-%Y")
+dateTo=$(date -v -1d "+%d-%m-%Y")
+
 fetchID="EONIA"
 #outputFileName="ecbDataSnatched/ecb_EONIA_"$dateID".xml"
 
