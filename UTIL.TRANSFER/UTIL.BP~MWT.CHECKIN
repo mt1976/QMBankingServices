@@ -1,16 +1,16 @@
 PROGRAM MWT.CHECKIN
 
-   CALL M.START("MWT.CHECKIN")
-   CALL M.HEADER("Code & Data Checkin Processor")
+   CALL U_START("MWT.CHECKIN")
+   CALL U_HEADER("Code & Data Checkin Processor")
 
-   CALL M.INPUT("Filename", FN.CHECKIN)
-   CALL M.INPUT("Item Name", ID.CHECKIN)
+   CALL U_INPUT("Filename", FN.CHECKIN)
+   CALL U_INPUT("Item Name", ID.CHECKIN)
 
    IF FN.CHECKIN # '' AND ID.CHECKIN # '' THEN
       CALL MWT.CHECKIN.HELPER(FN.CHECKIN, ID.CHECKIN)
    END
 
-   CALL M.STOP("")
+   CALL U_STOP("")
 
    STOP
 
