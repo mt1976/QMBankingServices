@@ -1,0 +1,2 @@
+https://api.stlouisfed.org/fred/series/observations?series_id=TB3MS&api_key=d4d50b886c05baa2795c363319ca64db&realtime_start=2019-06-14&realtime_end=2019-06-15&file_type=json
+sh curl -sL "https://api.stlouisfed.org/fred/series/observations?series_id=TB3MS&api_key=d4d50b886c05baa2795c363319ca64db&realtime_start=2019-06-14&realtime_end=2019-06-15&file_type=json"
