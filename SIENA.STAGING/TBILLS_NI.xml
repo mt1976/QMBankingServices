@@ -1,127 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TRANSACTIONS xsi:noNamespaceSchemaLocation="file:///C:/Users/mtownsend/Desktop/tlate/NegotiableInstrument.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <TRANSACTION type="IMPORT">
-    <TABLE name="NegotiableInstrument" classname="com.eurobase.siena.data.negotiableinstrument.NegotiableInstrument">
-      <RECORD>
-        <KEYFIELD name="name">TB3MS</KEYFIELD>
-        <FIELD name="status">Active</FIELD>
-        <FIELD name="type">TREASURY BILL</FIELD>
-        <FIELD name="currencyCode">USD</FIELD>
-        <FIELD name="issuer.firm">UKTR</FIELD>
-        <FIELD name="issuer.centre">LON</FIELD>
-        <FIELD name="acceptor.firm"/>
-        <FIELD name="acceptor.centre"/>
-        <FIELD name="issueDate"/>
-        <FIELD name="maturityDate"/>
-        <FIELD name="rateType">Fixed</FIELD>
-        <FIELD name="couponRate">2.35</FIELD>
-        <FIELD name="interestBasis">Actual 365</FIELD>
-        <FIELD name="interestFrequency">None</FIELD>
-        <FIELD name="clearingSystem"/>
-        <FIELD name="parentDealType">Treasury Bill</FIELD>
-        <FIELD name="securityID">TB3MS</FIELD>
-        <FIELD name="encumbered"/>
-        <FIELD name="marketable"/>
-        <FIELD name="hypothecated"/>
-        <FIELD name="repoFactor">100.00</FIELD>
-        <FIELD name="lotSize">1</FIELD>
-      </RECORD>
-      <RECORD>
-        <KEYFIELD name="name">TB1YR</KEYFIELD>
-        <FIELD name="status">Active</FIELD>
-        <FIELD name="type">TREASURY BILL</FIELD>
-        <FIELD name="currencyCode">USD</FIELD>
-        <FIELD name="issuer.firm">UKTR</FIELD>
-        <FIELD name="issuer.centre">LON</FIELD>
-        <FIELD name="acceptor.firm"/>
-        <FIELD name="acceptor.centre"/>
-        <FIELD name="issueDate"/>
-        <FIELD name="maturityDate"/>
-        <FIELD name="rateType">Fixed</FIELD>
-        <FIELD name="couponRate">2.27</FIELD>
-        <FIELD name="interestBasis">Actual 365</FIELD>
-        <FIELD name="interestFrequency">None</FIELD>
-        <FIELD name="clearingSystem"/>
-        <FIELD name="parentDealType">Treasury Bill</FIELD>
-        <FIELD name="securityID">TB1YR</FIELD>
-        <FIELD name="encumbered"/>
-        <FIELD name="marketable"/>
-        <FIELD name="hypothecated"/>
-        <FIELD name="repoFactor">100.00</FIELD>
-        <FIELD name="lotSize">1</FIELD>
-      </RECORD>
-      <RECORD>
-        <KEYFIELD name="name">DTB6</KEYFIELD>
-        <FIELD name="status">Active</FIELD>
-        <FIELD name="type">TREASURY BILL</FIELD>
-        <FIELD name="currencyCode">USD</FIELD>
-        <FIELD name="issuer.firm">UKTR</FIELD>
-        <FIELD name="issuer.centre">LON</FIELD>
-        <FIELD name="acceptor.firm"/>
-        <FIELD name="acceptor.centre"/>
-        <FIELD name="issueDate"/>
-        <FIELD name="maturityDate"/>
-        <FIELD name="rateType">Fixed</FIELD>
-        <FIELD name="couponRate">2.15</FIELD>
-        <FIELD name="interestBasis">Actual 365</FIELD>
-        <FIELD name="interestFrequency">None</FIELD>
-        <FIELD name="clearingSystem"/>
-        <FIELD name="parentDealType">Treasury Bill</FIELD>
-        <FIELD name="securityID">DTB6</FIELD>
-        <FIELD name="encumbered"/>
-        <FIELD name="marketable"/>
-        <FIELD name="hypothecated"/>
-        <FIELD name="repoFactor">100.00</FIELD>
-        <FIELD name="lotSize">1</FIELD>
-      </RECORD>
-      <RECORD>
-        <KEYFIELD name="name">TB4WK</KEYFIELD>
-        <FIELD name="status">Active</FIELD>
-        <FIELD name="type">TREASURY BILL</FIELD>
-        <FIELD name="currencyCode">USD</FIELD>
-        <FIELD name="issuer.firm">UKTR</FIELD>
-        <FIELD name="issuer.centre">LON</FIELD>
-        <FIELD name="acceptor.firm"/>
-        <FIELD name="acceptor.centre"/>
-        <FIELD name="issueDate"/>
-        <FIELD name="maturityDate"/>
-        <FIELD name="rateType">Fixed</FIELD>
-        <FIELD name="couponRate">2.36</FIELD>
-        <FIELD name="interestBasis">Actual 365</FIELD>
-        <FIELD name="interestFrequency">None</FIELD>
-        <FIELD name="clearingSystem"/>
-        <FIELD name="parentDealType">Treasury Bill</FIELD>
-        <FIELD name="securityID">TB4WK</FIELD>
-        <FIELD name="encumbered"/>
-        <FIELD name="marketable"/>
-        <FIELD name="hypothecated"/>
-        <FIELD name="repoFactor">100.00</FIELD>
-        <FIELD name="lotSize">1</FIELD>
-      </RECORD>
-      <RECORD>
-        <KEYFIELD name="name">DTB4WK</KEYFIELD>
-        <FIELD name="status">Active</FIELD>
-        <FIELD name="type">TREASURY BILL</FIELD>
-        <FIELD name="currencyCode">USD</FIELD>
-        <FIELD name="issuer.firm">UKTR</FIELD>
-        <FIELD name="issuer.centre">LON</FIELD>
-        <FIELD name="acceptor.firm"/>
-        <FIELD name="acceptor.centre"/>
-        <FIELD name="issueDate"/>
-        <FIELD name="maturityDate"/>
-        <FIELD name="rateType">Fixed</FIELD>
-        <FIELD name="couponRate">2.26</FIELD>
-        <FIELD name="interestBasis">Actual 365</FIELD>
-        <FIELD name="interestFrequency">None</FIELD>
-        <FIELD name="clearingSystem"/>
-        <FIELD name="parentDealType">Treasury Bill</FIELD>
-        <FIELD name="securityID">DTB4WK</FIELD>
-        <FIELD name="encumbered"/>
-        <FIELD name="marketable"/>
-        <FIELD name="hypothecated"/>
-        <FIELD name="repoFactor">100.00</FIELD>
-        <FIELD name="lotSize">1</FIELD>
-      </RECORD>
-    </TABLE>
-  </TRANSACTION>
-  </TRANSACTIONS>
+<TRANSACTION type="IMPORT">
+<TABLE name="NegotiableInstrument" classname="com.eurobase.siena.data.negotiableinstrument.NegotiableInstrument">
+<RECORD>
+<KEYFIELD name="name">TB3MS               |     |  </KEYFIELD>
+<FIELD name="status">Active</FIELD>
+<FIELD name="type">TREASURY BILL</FIELD>
+<FIELD name="currencyCode">USD</FIELD>
+<FIELD name="issuer.firm">UKTR</FIELD>
+<FIELD name="issuer.centre">LON</FIELD>
+<FIELD name="acceptor.firm"/>
+<FIELD name="acceptor.centre"/>
+<FIELD name="issueDate"/>
+<FIELD name="maturityDate"/>
+<FIELD name="rateType">Fixed</FIELD>
+<FIELD name="couponRate">2.35</FIELD>
+<FIELD name="interestBasis">Actual 365</FIELD>
+<FIELD name="interestFrequency">None</FIELD>
+<FIELD name="clearingSystem"/>
+<FIELD name="parentDealType">Treasury Bill</FIELD>
+<FIELD name="securityID">TB3MS</FIELD>
+<FIELD name="encumbered"/>
+<FIELD name="marketable"/>
+<FIELD name="hypothecated"/>
+<FIELD name="repoFactor">100.00</FIELD>
+<FIELD name="lotSize">1</FIELD>
+</RECORD>
+<RECORD>
+<KEYFIELD name="name">TB1YR               |     |  </KEYFIELD>
+<FIELD name="status">Active</FIELD>
+<FIELD name="type">TREASURY BILL</FIELD>
+<FIELD name="currencyCode">USD</FIELD>
+<FIELD name="issuer.firm">UKTR</FIELD>
+<FIELD name="issuer.centre">LON</FIELD>
+<FIELD name="acceptor.firm"/>
+<FIELD name="acceptor.centre"/>
+<FIELD name="issueDate"/>
+<FIELD name="maturityDate"/>
+<FIELD name="rateType">Fixed</FIELD>
+<FIELD name="couponRate">2.27</FIELD>
+<FIELD name="interestBasis">Actual 365</FIELD>
+<FIELD name="interestFrequency">None</FIELD>
+<FIELD name="clearingSystem"/>
+<FIELD name="parentDealType">Treasury Bill</FIELD>
+<FIELD name="securityID">TB1YR</FIELD>
+<FIELD name="encumbered"/>
+<FIELD name="marketable"/>
+<FIELD name="hypothecated"/>
+<FIELD name="repoFactor">100.00</FIELD>
+<FIELD name="lotSize">1</FIELD>
+</RECORD>
+<RECORD>
+<KEYFIELD name="name">DTB6                |     |  </KEYFIELD>
+<FIELD name="status">Active</FIELD>
+<FIELD name="type">TREASURY BILL</FIELD>
+<FIELD name="currencyCode">USD</FIELD>
+<FIELD name="issuer.firm">UKTR</FIELD>
+<FIELD name="issuer.centre">LON</FIELD>
+<FIELD name="acceptor.firm"/>
+<FIELD name="acceptor.centre"/>
+<FIELD name="issueDate"/>
+<FIELD name="maturityDate"/>
+<FIELD name="rateType">Fixed</FIELD>
+<FIELD name="couponRate">2.12</FIELD>
+<FIELD name="interestBasis">Actual 365</FIELD>
+<FIELD name="interestFrequency">None</FIELD>
+<FIELD name="clearingSystem"/>
+<FIELD name="parentDealType">Treasury Bill</FIELD>
+<FIELD name="securityID">DTB6</FIELD>
+<FIELD name="encumbered"/>
+<FIELD name="marketable"/>
+<FIELD name="hypothecated"/>
+<FIELD name="repoFactor">100.00</FIELD>
+<FIELD name="lotSize">1</FIELD>
+</RECORD>
+<RECORD>
+<KEYFIELD name="name">TB4WK               |     |  </KEYFIELD>
+<FIELD name="status">Active</FIELD>
+<FIELD name="type">TREASURY BILL</FIELD>
+<FIELD name="currencyCode">USD</FIELD>
+<FIELD name="issuer.firm">UKTR</FIELD>
+<FIELD name="issuer.centre">LON</FIELD>
+<FIELD name="acceptor.firm"/>
+<FIELD name="acceptor.centre"/>
+<FIELD name="issueDate"/>
+<FIELD name="maturityDate"/>
+<FIELD name="rateType">Fixed</FIELD>
+<FIELD name="couponRate">2.36</FIELD>
+<FIELD name="interestBasis">Actual 365</FIELD>
+<FIELD name="interestFrequency">None</FIELD>
+<FIELD name="clearingSystem"/>
+<FIELD name="parentDealType">Treasury Bill</FIELD>
+<FIELD name="securityID">TB4WK</FIELD>
+<FIELD name="encumbered"/>
+<FIELD name="marketable"/>
+<FIELD name="hypothecated"/>
+<FIELD name="repoFactor">100.00</FIELD>
+<FIELD name="lotSize">1</FIELD>
+</RECORD>
+<RECORD>
+<KEYFIELD name="name">DTB4WK              |     |  </KEYFIELD>
+<FIELD name="status">Active</FIELD>
+<FIELD name="type">TREASURY BILL</FIELD>
+<FIELD name="currencyCode">USD</FIELD>
+<FIELD name="issuer.firm">UKTR</FIELD>
+<FIELD name="issuer.centre">LON</FIELD>
+<FIELD name="acceptor.firm"/>
+<FIELD name="acceptor.centre"/>
+<FIELD name="issueDate"/>
+<FIELD name="maturityDate"/>
+<FIELD name="rateType">Fixed</FIELD>
+<FIELD name="couponRate">2.20</FIELD>
+<FIELD name="interestBasis">Actual 365</FIELD>
+<FIELD name="interestFrequency">None</FIELD>
+<FIELD name="clearingSystem"/>
+<FIELD name="parentDealType">Treasury Bill</FIELD>
+<FIELD name="securityID">DTB4WK</FIELD>
+<FIELD name="encumbered"/>
+<FIELD name="marketable"/>
+<FIELD name="hypothecated"/>
+<FIELD name="repoFactor">100.00</FIELD>
+<FIELD name="lotSize">1</FIELD>
+</RECORD>
+</TABLE>
+</TRANSACTION>
+</TRANSACTIONS>
