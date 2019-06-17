@@ -1,0 +1,40 @@
+FUNCTION DBREAD (FN.TABLE,I.TABLE)
+* Read a record and return the value
+*$Copyright (c) 2010 TO 2012 to 2008 mike.ryder@pwchest.com, All Rights Reserved
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2, or (at your option)
+* any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* Written by Mike Ryder @pwchest.com 16 March 2012
+
+$CATALOG
+$MODE UV.LOCATE
+$INCLUDE I_WEBCOMMON
+
+
+     GOSUB PROCESS
+RETURN (EMG)
+**************
+PROCESS:
+     R.DBREAD = EMPTY
+     R.MVREAD = EMPTY
+     OPEN FN.TABLE TO F.TABLE ELSE
+          EMG = 2
+          FATAL$ERROR = WEBERROR('Cannot open ':FN.TABLE)
+          RETURN
+     END
+     READ R.MVREAD FROM F.TABLE,I.TABLE ELSE
+          EMG = 1
+          FATAL$ERROR = WEBERROR('Cannot read ':I.TABLE:' from ':FN.TABLE)
+          RETURN
+     END
+     R.DBREAD = R.MVREAD
+     EMG = 0
+     CONVERT FM:VM:SM TO LF:LF:LF IN R.DBREAD
+RETURN
+******
+END

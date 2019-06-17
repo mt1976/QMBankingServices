@@ -1,0 +1,104 @@
+SUBROUTINE XMLMASKER (OPVALUE,ACTION,IPVALUE)
+* masks out invalid xml characters or puts them back
+*$Copyright (c) 2010 TO 2012 to 2008 mike.ryder@pwchest.com, All Rights Reserved
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2, or (at your option)
+* any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* Written by Mike Ryder @pwchest.com 16 March 2012
+
+$CATALOG
+$MODE UV.LOCATE
+$INCLUDE I_WEBCOMMON
+
+* A Generic routine to cope with "banned" XML characters
+*
+*    OPVALUE     -   The returned value
+*    ACTION      -   0 = outbound conversion
+*                    1 = inbound conversion
+*    IPVALUE     -   The text to change
+
+
+* main *
+     GOSUB INITIALISE
+     OPVALUE = IPVALUE
+     IF ACTION THEN
+          GOSUB INBOUND
+     END ELSE
+          GOSUB OUTBOUND
+     END
+RETURN
+***************
+* end of main *
+***************
+* subroutined *
+***************
+OUTBOUND:
+* get rid of non-xml data
+     OPVALUE = CHANGE(OPVALUE, "&", "&amp;")
+     OPVALUE = CHANGE(OPVALUE, "'", "&apos;")
+     OPVALUE = CHANGE(OPVALUE, "xml", "x_m_l")
+     OPVALUE = CHANGE(OPVALUE,"field","f_ield")
+     OPVALUE = CHANGE(OPVALUE,"transaction","trans_action")
+     OPVALUE = CHANGE(OPVALUE, "<", "&lt;")
+     OPVALUE = CHANGE(OPVALUE, ">","&gt;")
+     OPVALUE = CHANGE(OPVALUE,CHAR(34), "&quot;")
+     OPVALUE = CHANGE(OPVALUE,CHAR(163), "&pound;")
+     OPVALUE = CHANGE(OPVALUE,CHAR(165), "&yen;")
+     OPVALUE = CHANGE(OPVALUE,CHAR(128), "&euro;")
+     OPVALUE = CHANGE(OPVALUE,CHAR(160), "&nbsp;")
+     OPVALUE = CHANGE(OPVALUE,"-","&ndash;")
+     FOR J = 1 TO N.STRINGS
+          IXSTR = INSTRING[J,1]
+          OPVALUE = CHANGE(OPVALUE,IXSTR,"&#":SEQ(IXSTR):";")
+     NEXT J
+
+
+RETURN
+******
+INBOUND:
+* put back non-xml data
+     OPVALUE = CHANGE(OPVALUE,"&apos;","'")
+     OPVALUE = CHANGE(OPVALUE,"x_m_l","xml")
+     OPVALUE = CHANGE(OPVALUE,"f_ield","field")
+     OPVALUE = CHANGE(OPVALUE,"trans_action","transaction")
+     OPVALUE = CHANGE(OPVALUE,"&lt;","<")
+     OPVALUE = CHANGE(OPVALUE,"&gt;",">")
+     OPVALUE = CHANGE(OPVALUE,"&quot;",CHAR(34))
+     OPVALUE = CHANGE(OPVALUE,"&pound;",CHAR(163))
+     OPVALUE = CHANGE(OPVALUE,"&yen;",CHAR(165))
+     OPVALUE = CHANGE(OPVALUE,"&euro;",CHAR(128))
+     OPVALUE = CHANGE(OPVALUE,"&nbsp;",CHAR(160))
+     OPVALUE = CHANGE(OPVALUE,"&ndash;","-")
+* this must be the last otherwise we get the other stuff corrupted
+     OPVALUE = CHANGE(OPVALUE,"&amp;","&")
+     FOR J = 1 TO N.STRINGS
+          IXSTR = INSTRING[J,1]
+          OPVALUE = CHANGE(OPVALUE,"&#":SEQ(IXSTR):";",IXSTR)
+     NEXT J
+
+RETURN
+******
+INITIALISE:
+* Create a string to convert everything except A..Z and 0..9
+* These should be converted to their HEX equivalents as &#x0D  or &#nnn for decimal
+     INSTRING = EMPTY
+     FOR J = 1 TO 254
+          INSTRING := CHAR(J)
+     NEXT J
+     OUTSTRING = EMPTY
+     FOR J = 32 TO 126
+          OUTSTRING := CHAR(J)
+     NEXT J
+     OUTSTRING := CHAR(156)
+     CONVERT OUTSTRING TO EMPTY IN INSTRING
+     N.STRINGS = LEN(INSTRING)
+
+
+RETURN
+******
+END

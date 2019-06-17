@@ -1,0 +1,227 @@
+PROGRAM CREATE.SCHEMA
+* create a schema and dictionaries
+*$Copyright (c) 2010 TO 2012 to 2008 mike.ryder@pwchest.com, All Rights Reserved
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2, or (at your option)
+* any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* Written by Mike Ryder at pwchest.com 16 March 2012
+*AUDIT_TRAIL*COMPILE*20120317T10:06*0000-0009-5101-7226
+$CATALOG
+*VERSION= 25
+
+* notice *
+* This routine was written as part of an article on web services to
+* facilitate the creation of a QM file and associated dictionary.
+* Any responsibility for its use lies with the user.
+* You are welcome to use it and modify it to your own taste and flavour.
+* Please acknowledge that I wrote it in any future versions that you may create.
+* end of notice *
+
+$MODE UV.LOCATE
+
+$INCLUDE I_WEBCOMMON
+
+* main *
+     GOSUB INITIALISE
+     GOSUB PROCESS
+     GOSUB CREATETABLE
+     GOSUB WRITEDATA
+     IF EOPROG THEN PRINT "Failure to create table"
+
+     STOP
+***************
+* end of main *
+***************
+* subroutines *
+***************
+INITIALISE:
+     EOPROG = FALSE
+
+     TCLREAD = TRIM(SENTENCE())
+
+     R.INCLUDES = '* autowritten by CREATE.SCHEMA ':TIMEDATE()
+     OPEN "WEB.BP" TO F.WEBBP ELSE
+          PRINT 'cannot open WEB.BP'
+          EOPROG = TRUE
+          RETURN
+     END
+RETURN
+******
+PROCESS:
+     IF EOPROG THEN RETURN
+
+* this will be in the form of CREATE.SCHEMA TABLENAME(FIELD TYPE(X),FIELD TYPE(Y))
+     FN.TABLE = FIELD(FIELD(TCLREAD,'(',1),' ',2)
+     LCID = UPCASE(FN.TABLE)
+     I.TABLE = LCID
+     CONVERT 'ABCDEFGHIJKLMNOPQRSTUVWXYZ.0123456789' TO '' IN LCID
+     IF LEN(LCID) THEN
+          PRINT 'Invalid schema name containing ':LCID:' invalid characters'
+          EOPROG = TRUE
+          RETURN
+     END
+     IF LEN(VOCREC(I.TABLE)) THEN
+          PRINT 'Invalid schema name - already exists'
+          EOPROG = TRUE
+          RETURN
+     END
+
+     CONVERT '(' TO @FM IN TCLREAD
+     DEL TCLREAD<1>
+     CONVERT @FM TO '(' IN TCLREAD
+     LIST.ROWS = TCLREAD
+     PRINT 'creating ':FN.TABLE
+     CONVERT ',' TO @FM IN LIST.ROWS
+     N.LF = DCOUNT(LIST.ROWS,@FM)
+     SCHEMAX = EMPTY
+     EOPROG = FALSE
+     FOR J = 1 TO N.LF
+          THIS.ROW = LIST.ROWS<J>
+          I.ROW = FIELD(THIS.ROW,' ',1)
+          TYPE.ROW = FIELD(THIS.ROW,' ',2)
+          GOSUB VALIDATE
+          IF EOPROG THEN EXIT
+     NEXT J
+RETURN
+******
+VALIDATE:
+     LCID = DOWNCASE(I.ROW)
+     USERFLD = LCID
+     CONVERT 'abcdefghijklmnopqrstuvwxyz0123456789' TO '' IN LCID
+     CONVERT LCID TO '' IN USERFLD
+     LOCATE USERFLD IN SCHEMAX<2>,1 SETTING VK THEN
+          PRINT J:' name ':I.ROW:' exists as ':USERFLD
+          EOPROG = TRUE
+          RETURN
+     END
+     SCHEMAX<1,VK> = I.ROW
+     SCHEMAX<2,VK> = USERFLD
+     VTYPE = FIELD(TYPE.ROW,'(',1)
+     VTYPE.VAL = FIELD(FIELD(TYPE.ROW,')',1),'(',2)
+     IF NOT(NUM(VTYPE.VAL)) THEN
+          PRINT J:' value ':VTYPE.VAL:' must be numeric'
+          EOPROG = TRUE
+          RETURN
+     END
+     IF VTYPE = 'VARCHAR' THEN JUST = 'L' ELSE JUST = 'R'
+     SCHEMAX<3,VK> = VTYPE
+     SCHEMAX<4,VK> = JUST
+     CONVRATE = ''
+     COLWIDTH = 0
+     BEGIN CASE
+          CASE VTYPE = 'VARCHAR'
+               COLWIDTH = INT(VTYPE.VAL)
+          CASE VTYPE = 'DATE' ; CONVRATE = 'D2/'
+               COLWIDTH = 10
+          CASE VTYPE = 'TIME' ; CONVRATE = 'MTS'
+               COLWIDTH = 10
+          CASE VTYPE = 'INTEGER'
+               COLWIDTH = INT(VTYPE.VAL)
+          CASE VTYPE = 'FLOAT'
+               DECPTS = FIELD(VTYPE.VAL,'.',2)
+               CONVRATE = 'MR':DECPTS
+               COLWIDTH = FIELD(VTYPE.VAL,'.',1)+DECPTS+1
+          CASE VTYPE = 'BOOLEAN'
+               COLWIDTH = 1
+          CASE 1
+               PRINT J:' type ':VTYPE:' is not recognised'
+               EOPROG = TRUE
+               RETURN
+     END CASE
+     IF NOT(COLWIDTH) THEN
+          PRINT J:' value ':VTYPE:' requires a number'
+          EOPROG = TRUE
+          RETURN
+     END
+     SCHEMAX<5,VK> = COLWIDTH+0
+     SCHEMAX<6,VK> = CONVRATE
+RETURN
+******
+CREATETABLE:
+     IF EOPROG THEN RETURN
+     CMD = 'CREATE.FILE ':I.TABLE:' PATHNAME datastore MODE 777'
+     EXECUTE CMD
+     IF @SYSTEM.RETURN.CODE THEN
+          PRINT 'Unable to create table ':I.TABLE
+          PRINT @SYSTEM.RETURN.CODE
+          EOPROG = TRUE
+          RETURN
+     END
+     OPEN I.TABLE TO F.TABLE ELSE
+          PRINT 'Unable to create table ':I.TABLE
+          EOPROG = TRUE
+          RETURN
+     END
+     OPEN 'DICT',I.TABLE TO F.DICT ELSE
+          PRINT 'Unable to open dictionary of table ':I.TABLE
+          EOPROG = TRUE
+          RETURN
+     END
+     R.PREFIX = I.TABLE
+     CONVERT '.-_' TO FM:FM:FM IN R.PREFIX
+     NO.PFX = DCOUNT(R.PREFIX,FM)
+     KX = EMPTY
+     FOR Y = 1 TO NO.PFX
+          K = R.PREFIX<Y>[1,1]
+          KX := K
+     NEXT Y
+     KX = DOWNCASE(KX)
+     R.INCLUDES<2> = '* insert file for ':I.TABLE:' PREFIX [':KX:']'
+     R.PREFIX = KX:'.'
+     R.INCLUDES<3> = 'EQU '
+     IRMASK = 'R#24'
+
+RETURN
+******
+WRITEDATA:
+     IF EOPROG THEN RETURN
+     R.DICT = 'X':FM:SCHEMAX
+     I.DICT = 'SCHEMA'
+     WRITE R.DICT ON F.DICT,I.DICT
+     LISTPH = 'PH'
+     FCNO = 0
+     FOR J = 1 TO N.LF
+          I.DICT = SCHEMAX<1,J>
+          COLNAME = SCHEMAX<2,J>
+          JUST = SCHEMAX<4,J>
+          COLWIDTH = SCHEMAX<5,J>
+          CONVRATE = SCHEMAX<6,J>
+          FIELDNO = J-1
+          R.DICT = 'D'
+          R.DICT<2> = FIELDNO
+          R.DICT<3> = CONVRATE
+          R.DICT<4> = COLNAME
+          R.DICT<5> = COLWIDTH:JUST
+          R.DICT<6> = 'S'
+          WRITE R.DICT ON F.DICT,I.DICT
+          IF FIELDNO THEN
+               LISTPH<2> := I.DICT:' '
+          END ELSE
+               I.DICT = '@ID'
+               WRITE R.DICT ON F.DICT,I.DICT
+          END
+          IF FIELDNO THEN
+               FCNO += 1
+               * continue to build the include file
+               R.INCLUDES := (R.PREFIX:COLNAME) IRMASK:' TO ':FIELDNO
+               IF J < N.LF THEN
+                    R.INCLUDES := ','
+               END
+               IF NOT(MOD(FCNO,2)) THEN
+                    R.INCLUDES := FM
+               END
+               IRMASK = 'R#28'
+          END
+     NEXT J
+     I.DICT = '@'
+     WRITE LISTPH ON F.DICT,I.DICT
+     WRITE R.INCLUDES ON F.WEBBP,'I_':I.TABLE
+     PRINT 'Dictionary written with ':N.LF:' fields'
+RETURN
+******
+END

@@ -1,0 +1,59 @@
+SUBROUTINE WEB4LOG (MY$MSG)
+* Write a log record
+*$Copyright (c) 2010 TO 2012 to 2008 mike.ryder@pwchest.com, All Rights Reserved
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2, or (at your option)
+* any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* Written by Mike Ryder @pwchest.com 16 March 2012
+
+$CATALOG
+$MODE UV.LOCATE
+
+
+* This program appends the message to the sequential log file
+* This needs a "root" directory named logfile
+
+     MY$LOGNAME = "webpages"
+     Y = DATE() 'DY'
+     M = DATE() 'DM'
+     D = DATE() 'DD'
+     H = OCONV(TIME(),'MT')
+     TSTAMP = (M 'R%2'):(D 'R%2'):'T':H
+
+     FN.DIR.LOGFILE = "logfile":@DS:MY$LOGNAME
+
+     OPMSG = TSTAMP: '_':SYSTEM(18):'-':MY$MSG
+
+     OPENSEQ FN.DIR.LOGFILE TO F.LOGFILEDIR ELSE
+          CREATE F.LOGFILEDIR ELSE
+               LOGMSG 'error creating logfile in WEB4LOG'
+               RETURN
+          END
+          WEOFSEQ F.LOGFILEDIR
+     END
+
+* append the message to the log file
+* if it cannot seek to the end of the file, just give up
+     SEEK F.LOGFILEDIR , 0 , 2 ELSE
+          LOGMSG 'cannot seek in WEB4LOG'
+          CLOSESEQ F.LOGFILEDIR
+          RETURN
+     END
+     CONVERT @FM:@VM:@SM TO '#]~' IN OPMSG
+     WRITESEQ OPMSG ON F.LOGFILEDIR ELSE
+          LOGMSG "error writing logfile in WEB4LOG"
+          RETURN
+     END
+*
+     WEOFSEQ F.LOGFILEDIR
+     CLOSESEQ F.LOGFILEDIR
+
+RETURN
+******
+END
+

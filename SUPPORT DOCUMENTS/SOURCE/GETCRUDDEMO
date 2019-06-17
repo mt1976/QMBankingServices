@@ -1,0 +1,30 @@
+PROGRAM GETCRUDDEMO
+
+*$Copyright (c) 2010 TO 2012 to 2008 mike.ryder@pwchest.com, All Rights Reserved
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2, or (at your option)
+* any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+
+
+$MODE UV.LOCATE
+$CATALOG
+
+PRINT @(-1):
+OS.EXECUTE 'rm easyui-crud-demo.zip'
+OS.EXECUTE 'wget http://www.jeasyui.com/tutorial/app/crud/downloads/easyui-crud-demo.zip'
+IF OS.ERROR() THEN STOP
+OS.EXECUTE 'mkdir cruddemo'
+OS.EXECUTE 'cd cruddemo;unzip ../easyui-crud-demo.zip'
+IF OS.ERROR() THEN STOP
+OS.EXECUTE 'cp cruddemo/index.html WEBPAGES/webusers.html'
+EXECUTE 'FIX.WEBPAGES webusers.html'
+FOR J = 1 TO 10 ; PRINT ; NEXT J
+
+PRINT '!Done'
+
+END 

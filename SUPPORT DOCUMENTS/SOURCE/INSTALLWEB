@@ -1,0 +1,62 @@
+PROGRAM INSTALLWEB
+* Create a website link
+*$Copyright (c) 2010 TO 2012 to 2008 mike.ryder@pwchest.com, All Rights Reserved
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2, or (at your option)
+* any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* AUTHOR = Mike Ryder 20111104T16:42
+EQU F.VOC TO @VOC
+$MODE UV.LOCATE
+$CATALOG
+     FN.TMP = 'TMP'
+     MENU.PASS = 'WEBDEV'
+
+
+     DISPLAY "Authenticate with your password"
+     OS.EXECUTE "sudo -k"
+     OS.EXECUTE "sudo -v -p admin-password:"
+     IF OS.ERROR() THEN
+          DISPLAY "Authentication failure"
+          STOP
+     END
+     EXECUTE 'CREATE-FILE ':FN.TMP:' DIRECTORY' CAPTURING GARBAGE
+     OPEN FN.TMP TO F.TMP ELSE ABORT
+
+* /var/www/qmweb/webapp
+     R.RECORD = "#!/bin/sh"
+     R.RECORD<2> = "cat - | qm -a":MENU.PASS:" -quiet WEBAPP"
+     WRITE R.RECORD ON F.TMP,"webapp"
+
+
+* /etc/apache2/sites-available/qmweb
+     R.RECORD = "<Location /qmweb>"
+     R.RECORD<3> = "SetHandler cgi-script"
+     R.RECORD<4> = "Options +ExecCGI"
+     R.RECORD<6> = "</Location>"
+     WRITE R.RECORD ON F.TMP,"qmweb"
+
+     OS.EXECUTE "sudo mkdir /var/www/qmweb"
+     IF OS.ERROR() THEN STOP
+     OS.EXECUTE "sudo cp TMP/qmweb /etc/apache2/sites-available"
+     IF OS.ERROR() THEN STOP
+     OS.EXECUTE "sudo cp TMP/webapp /var/www/qmweb"
+     IF OS.ERROR() THEN STOP
+     OS.EXECUTE "sudo a2ensite qmweb"
+     IF OS.ERROR() THEN STOP
+     OS.EXECUTE "sudo chown -R www-data:www-data /var/www/qmweb"
+     IF OS.ERROR() THEN STOP
+     OS.EXECUTE "sudo chmod 744 /var/www/qmweb/webapp"
+     IF OS.ERROR() THEN STOP
+     OS.EXECUTE "sudo /etc/init.d/apache2 reload"
+     IF OS.ERROR() THEN STOP
+     OS.EXECUTE "sudo -k"
+     DISPLAY "Done!"
+
+******
+END
+

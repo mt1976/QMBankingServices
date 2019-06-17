@@ -1,0 +1,30 @@
+FUNCTION HTTPEXTRACT (FIELDNAME)
+* function to extract the data from HTTP$DATA
+*$Copyright (c) 2010 TO 2012 to 2008 mike.ryder@pwchest.com, All Rights Reserved
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2, or (at your option)
+* any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+
+$MODE UV.LOCATE
+$CATALOG
+$INCLUDE I_WEBCOMMON
+
+     GOSUB PROCESS
+RETURN RESULT
+*************
+PROCESS:
+     RESULT = EMPTY
+     IF NOT(ASSIGNED(FIELDNAME)) THEN RETURN
+     LOCATE FIELDNAME IN HTTP$DATA<1>,1 SETTING VK THEN
+          RESULT = HTTP$DATA<2,VK>
+     END ELSE
+          FATAL$ERROR = WEBERROR("HTTPEXTRACT: No field ":FIELDNAME:" in received data")
+     END
+RETURN
+******
+END

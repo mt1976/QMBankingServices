@@ -1,0 +1,239 @@
+PROGRAM WEBAPP
+* the connector between CGI-BIN and the MV database
+*$Copyright (c) 2010 TO 2012 to 2008 mike.ryder@pwchest.com, All Rights Reserved
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2, or (at your option)
+* any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* Written by Mike Ryder @pwchest.com 16 March 2012
+
+$MODE UV.LOCATE
+$CATALOG
+$INCLUDE I_WEBCOMMON
+
+
+     GOSUB PROCESS
+     STOP
+***************
+PROCESS:
+
+* set it up
+     J = @(0,0); J = J
+     EXECUTE 'TERM 32767,32767 NULL'
+     MAT WEB$ENV = EMPTY
+     MAT WEB$ARG = EMPTY
+
+* get some env vars
+     REQUEST_METHOD = ENV('REQUEST_METHOD')
+     CONTENT_LENGTH = ENV('CONTENT_LENGTH')
+     HTTPX = ENV("HTTP_X_REQUESTED_WITH")
+     IS.AJAX = (LEN(HTTPX)>0)
+     SERVER_NAME = ENV('SERVER_NAME')
+
+* this is get
+     HTTP$ELEMENTS = ENV('QUERY_STRING')
+     IF CONTENT_LENGTH THEN
+          * this is post
+          ECHO OFF
+          FOR J = 1 TO CONTENT_LENGTH
+               IN A
+               HTTP$DETAILS := CHAR(A)
+          NEXT J
+          ECHO ON
+     END
+     MX = DCOUNT(HTTP$DETAILS,'&')
+     EPS = 0
+     FOR J = 1 TO MX
+          EPS += 1
+          KA = FIELD(HTTP$DETAILS,'&',J)
+          HTTP$DATA<1,EPS> = URLDECODE(FIELD(KA,'=',1))
+          HTTP$DATA<2,EPS> = URLDECODE(FIELD(KA,'=',2))
+     NEXT J
+     MX = DCOUNT(HTTP$ELEMENTS,'&')
+     FOR J = 1 TO MX
+          EPS += 1
+          KA = FIELD(HTTP$ELEMENTS,'&',J)
+          HTTP$DATA<1,EPS> = URLDECODE(FIELD(KA,'=',1))
+          HTTP$DATA<2,EPS> = URLDECODE(FIELD(KA,'=',2))
+     NEXT J
+* write out the env vars to our log file
+     CALL WRENV
+
+* check out the request
+     RESPONSE$NAME = ENV('PATH_INFO')
+     CONVERT '/' TO FM IN RESPONSE$NAME
+* we always get a leading flag
+     DEL RESPONSE$NAME<1>
+
+     ARGV1 = RESPONSE$NAME<1>
+     ARGV2 = RESPONSE$NAME<2>
+     IF NOT(ARGV2) THEN
+          ARGV2 = ARGV1
+          ARGV1 = EMPTY
+     END
+
+     COMI = UPCASE(ARGV2)
+
+
+* what have we received? Sort out the request type
+* make sure we don't get into a recursive link
+     IF COMI = "WEBAPP" THEN COMI = EMPTY
+     ROUTINE = COMI
+     IS.HOME = NOT(LEN(COMI)) OR COMI = "HOME"
+     IS.ROUTINE = CATALOGUED(ROUTINE)
+* this enables us to call a service using extension rather than method
+     TESTEXTN = FIELD(COMI,'.',2)
+     TFG = TRUE
+     BEGIN CASE
+          CASE TESTEXTN = 'QML' ; REQUEST_METHOD = "GET"
+          CASE TESTEXTN = 'QMD' ; REQUEST_METHOD = "DELETE"
+          CASE TESTEXTN = 'QMU' ; REQUEST_METHOD = "PUT"
+          CASE TESTEXTN = 'QMI' ; REQUEST_METHOD = "POST"
+          CASE 1                ; TFG = FALSE
+     END CASE
+
+     BEGIN CASE
+          CASE FATAL$ERROR
+          CASE IS.ROUTINE        ; GOSUB LOADROUTINE
+          CASE COMI[5] = '.JSON' ; GOSUB LOADPAGE
+          CASE COMI[4] = '.HTM'  ; GOSUB LOADPAGE
+          CASE COMI[5] = '.HTML' ; GOSUB LOADPAGE
+          CASE COMI[4] = '.CSS'  ; GOSUB LOADCSS
+          CASE IS.HOME           ; GOSUB SENDHOME
+          CASE COMI[4] = ".PDF"  ; GOSUB SENDPDF
+          CASE IS.AJAX OR TFG    ; GOSUB WEBSERVICE
+          CASE 1                 ; GOSUB SENDERROR
+     END CASE
+     IF FATAL$ERROR THEN GOSUB ERRHANDLER
+RETURN
+******
+LOADROUTINE:
+* if you load a routine it is the responsibility of the routine to return the "Content-Type" header
+     CALL WEB4LOG("Loading @":ROUTINE)
+     EXECUTE ROUTINE
+RETURN
+******
+LOADPAGE:
+     IF ARGV1 ELSE ARGV1 = 'WEBPAGES'
+     IF DBREAD(ARGV1,ARGV2) THEN RETURN
+
+     PRINT "Content-Type: text/html"
+     PRINT
+     PRINT R.DBREAD
+RETURN
+******
+LOADCSS:
+* load the .css file
+     IF ARGV1 ELSE ARGV1 = 'CSS'
+     IF DBREAD(ARGV1,ARGV2) THEN R.DBREAD = 'body':LF:'{':LF:'missing':LF:'}'
+
+     PRINT "Content-Type: text/css"
+     PRINT
+     PRINT R.DBREAD
+RETURN
+******
+SENDHOME:
+* example of a redirection
+     PRINT "Content-Type: text/html"
+     PRINT "Location: http://":SERVER_NAME:"/qmweb/webapp/index.htm"
+     PRINT
+RETURN
+******
+SENDERROR:
+* missing request data
+* catchall response
+* send the standard response
+     PRINT "Content-Type: text/html"
+     PRINT
+     MSG = RESPONSE$NAME:' not found'
+     FATAL$ERROR = WEBERROR(MSG)
+RETURN
+******
+SENDPDF:
+* send a pdf
+     SENT.HEADER = FALSE
+     FN.TABLE = 'LIBRARY'
+     I.TABLE = COMI
+* force it for testing
+     I.TABLE = 'ACCOUNT_TYPES.pdf'
+     IF DBREAD(FN.TABLE,COMI) THEN RETURN
+
+     PRINT "Content-Type: application/pdf"
+     PRINT
+     CONVERT FM TO CHAR(10) IN R.TABLE
+     PRINT R.DBREAD
+RETURN
+******
+ERRHANDLER:
+     PRINT "Content-Type: text/html"
+     PRINT
+* print a web response
+     PRINT '<!doctype html>'
+     PRINT '<html>'
+     PRINT '<head>'
+     PRINT '<style type="text/css">ý<!--ýa {ý color: #157CD0;ý text-decoration: underline;ý}ýbody {ý background-color: #E9bCEF;ý font-family:      Verdana, Geneva, Arial, Helvetica, sans-serif;ý margin:           1px;ý}ýtable {ý background-color: #A9ECEF;ý font-family:      Verdana, Geneva, Arial, Helvetica, sans-serif;ý margin:           1px;ý vertical-align:   top;ý}ýtd {ý background-color: #A9ECEF;ý font-family:      Verdana, Geneva, Arial, Helvetica, sans-serif;ý margin:           1px;ý vertical-align:   top;ý}ýa:hover {ýcolor: #CC0000;ý}ýh1 {ý font-size: 36px;ý font-family: Arial, Helvetica, sans-serif;ý color: #000000;ý text-align: center;ý}ýh2 {ý font-size: 24px;ý font-family: Arial, Helvetica, sans-serif;ý color: #000000;ý text-align: center;ýmargin: 10px;ý}ý.logo {ý font-size: 56px;ý font-family: Arial, Helvetica, sans-serif;ý color: #990000;ý text-align: center;ý}ý.tableeven {ý background-color: #aaaaaa;ý background: #eeeeee;ý color: red;ý}ý.tableodd {ý background-color: #EDF2F7;ý background: #dddddd;ý color: green;ý}ý-->ý</style>'
+     PRINT '<title>error message from an abort</title>'
+     PRINT '</head>'
+     PRINT '<body>'
+     PRINT '<h2>Oops - Internal error</h2>'
+     PRINT '<fieldset>'
+     PRINT '<legend>Error Results</legend>'
+
+     NXL = DCOUNT(ERROR$VALUE,FM)
+     FOR X = 1 TO NXL
+          IVAR = ERROR$VALUE<X>
+          CALL WEB4LOG(IVAR)
+          PRINT "<p>":IVAR:"</p>"
+     NEXT X
+     PRINT '</fieldset>'
+     PRINT '<li><a href="home">home</a></li>'
+     PRINT '</body>'
+     PRINT '</html>'
+
+RETURN
+******
+WEBSERVICE:
+
+     IF ARGV1 THEN
+          APPLICATION = ARGV1
+     END ELSE
+          APPLICATION = FIELD(ARGV2,'.',1)
+     END
+     APPLICATION = UPCASE(APPLICATION)
+
+     MSG = "Loading webservice method=":REQUEST_METHOD:' application=':APPLICATION
+     CALL WEB4LOG(MSG)
+     CALL LOADAPP
+     BEGIN CASE
+          CASE FATAL$ERROR
+          CASE REQUEST_METHOD = 'GET'   ; CALL JSON.FORMAT
+          CASE REQUEST_METHOD = 'POST'  ; CALL QMETHOD.POST
+          CASE REQUEST_METHOD = 'PUT'   ; CALL QMETHOD.PUT
+          CASE REQUEST_METHOD = 'DELETE'; CALL QMETHOD.DEL
+          CASE 1
+               FATAL$ERROR = WEBERROR("Method:":REQUEST_METHOD:" not available")
+     END CASE
+     BEGIN CASE
+          CASE FATAL$ERROR
+               PRINT "Content-Type: text/html"
+               PRINT "Status: 500"
+               PRINT
+               MSG = ERROR$VALUE
+               PRINT '{"msg":':DQUOTE(MSG):'}'
+          CASE REQUEST_METHOD = 'GET'
+               PRINT "Content-Type: text/html"
+               PRINT
+               PRINT COMI
+          CASE 1
+               PRINT "Content-Type: text/html"
+               PRINT
+               PRINT '{"success":true}'
+     END CASE
+     FATAL$ERROR = WEBERROR('CLEAR')
+RETURN
+******
+END

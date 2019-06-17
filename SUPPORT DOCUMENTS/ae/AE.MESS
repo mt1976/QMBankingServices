@@ -1,0 +1,728 @@
+* Messages for AE - alternate editor
+*                   Version 3.02
+*
+PREFIX=
+*
+6300       General Help for the Alternate Editor - version 3.02\F\
+\F\
+ This program can be called with the following formats:\F\
+ %1               file and record id's are prompted for\F\
+ %1 file          record id's are prompted for\F\
+ %1 file id       %2 the record 'id' in 'file'\F\
+ %1 file id id... %2 multiple records in 'file'\F\
+ %1 file *        %2 all records in 'file'\F\
+    options in brackets or on line 4 of the verb used\F\
+      B - binary so line feeds and attribute marks aren't confused\F\
+      D - data to feed comands into the editor (no page editing)\F\
+      H - show character in hexadecimal in page edit mode\F\
+      V - view option to disallow changes\F\
+      X - disallow XEQ within editor\F\
+    a SELECT      may precede '%1 file' command\F\
+ Special ASCII characters may be entered as:\F\
+    ^nnn  where nnn is the decimal character code (like ^027)\F\
+    ^     will enter a single UP ARROW character.\F\
+ The following commands may be used in the Editor:\F\
+     Note that the number shown as # MAY be represented as * meaning 999999\F\
+A#           - Do the last Append command again for # lines.\F\
+A# any       - Append 'any' to # lines (default 1).\F\
+B            + Set the current line pointer to the BOTTOM line.\F\
+B# any       - BREAK # lines (default 1) after 'any' into two lines.\F\
+BC# posn     - Break Column - Break # lines after posn into two lines.\F\
+BCD# posn    - Break Column and Discard the second part.\F\
+BCK# posn    - Break Column and Keep only the second part.\F\
+BCR# posn    - Break Column and Reverse the order of the two parts.\F\
+BCS# posn    - Break Column and Swap the parts about the character at posn.\F\
+BD# any      - BREAK and Discard the second part.\F\
+BK# any      - BREAK and Keep only the second part.\F\
+BR# any      - BREAK and Reverse the order of the two parts.\F\
+BS# any      - BREAK and Swap the parts about 'any'.\F\
+BLEACH ON/OFF+ Switch code colouring flag. | is a toggle only synonym.\F\
+               If neither ON nor OFF is used, then toggle flag.\F\
+BLOCK ON/OFF + Switch block operation confirmation flag.\F\
+               If neither ON nor OFF is used, then toggle BLOCK flag.\F\
+C            - Do the last 'CHANGE' command again.\F\
+C///         - CHANGE one or more lines. Full format is:\F\
+               C[#]/from/to/[G][S][s-e]\F\
+               where    / - is any delimiter character.\F\
+                        # - number of lines to CHANGE (default 1).\F\
+                     from - is the character string to be replaced.\F\
+                       to - is the character string to substitute.\F\
+                        G - 'G'lobal flag - CHANGE all instances in line.\F\
+                        S - 'S'how flag - display all changes made.\F\
+                      s-e - start and end column numbers.\F\
+CASE ON/OFF  + Switch CASE flag for FL, FLA, L, LA, LN, LNA commands.\F\
+               If neither ON nor OFF is used, then toggle CASE flag.\F\
+               OFF means that the commands are not case sensitive.\F\
+CAT          - Synonym for 'J'oin.\F\
+CD           + Show or change the command delimiter.\F\
+               (this is the input for a blank line).\F\
+CLEAR#       + Clear kept buffer # (default 1, 0 for all)\F\
+CM///        - ChangeMatch one or more lines. Full format is:\F\
+               CM[#]/pattern[/range/to]\F\
+               where  / - is any delimiter character.\F\
+                      # - number of lines to CHANGE (default 1).\F\
+                pattern - is the pattern match for the line.\F\
+                     to - is the character string to substitute/add.\F\
+                  range - Can be numeric, which field(s) to change,\F\
+                       or 'A'ppend or 'P'refix to the line,\F\
+                       or 'D'elete, 'R'eplace, 'L'ocate (default) the line,\F\
+                       or 'In' or 'nI' to insert before/after field n.\F\
+               EG 'CM/6X' will scan to the line matching '6X'.\F\
+               Also: 'N'ot - locate the next non-matching line.\F\
+               Also: + - * / for arithmetic operation (EG line+to)\F\
+COL          + Display relative COLUMN POSITIONS on the Terminal.\F\
+COPY#        + Copy the predefined block to kept buffer # (default 1).\F\
+COPY# x      + Copy the next x lines to kept buffer #.\F\
+COPY#/x/y    + Copy lines from x to y inclusive to kept buffer #.\F\
+COUNT#/any   + Count of 'any' in next # lines (default all to end of file).\F\
+CRT xxxx     - Inserts a line CRT 'xxxx = ':xxxx\F\
+               Use double quote or backslash as delimiter to change quotes.\F\
+CUT#         - Move the predefined block to kept buffer # (default 1).\F\
+CUT# x       - Move the next x lines to kept buffer #.\F\
+CUT#/x/y     - Move lines from x to y inclusive to kept buffer #.\F\
+D            + Display the current line.\F\
+DB ON/OFF    - Insert "DBG. = @TRUE" or "DBG. = @FALSE" line.\F\
+               can use 1 or 0 for ON and OFF respectively.\F\
+DBV string   - Inserts "IF DBG. THEN CRT 'string = ':string"\F\
+               Using " or \ as the delimiter will change the quote mark used\F\
+DBW string   - If string, insert "IF DBG. THEN CRT 'string = ':string: ; "\F\
+                          and/or "INPUT WAIT ; IF WAIT NE '' THEN STOP"\F\
+DE           - DELETE the current line.\F\
+DE#          - DELETE '#' lines (default 1).\F\
+DE#/any      - DELETE as above, but only if the line contains 'any'.\F\
+DISPLAY xxxx - Inserts a line DISPLAY 'xxxx = ':xxxx\F\
+               Just like CRT, handy to distinguish temporary code.\F\
+DROP         - Remove the predefined block.\F\
+DTX any      + Convert decimal string 'any' to hexadecimal and display it.\F\
+DUP          - DUPLICATE the current line.\F\
+DUP#         - DUPLICATE the current line '#' times.\F\
+EC           + Edit a called subroutine in this file.\F\
+ECS          + Edit the command stack.\F\
+EF#          + Edit fields delimited by CHAR(#) as lines.\F\
+EI           + Edit the included code.\F\
+EIT          + Edit I-type (not just a split on semi-colon).\F\
+EK#          + Edit the kept buffer # (default 1).\F\
+EPR          + Edit the prestored commands.\F\
+EPR#         + Edit prestored command #.\F\
+ET           - Edit Tags set.\F\
+ESS          + Edit Search Stack.\F\
+ESV          + Edit subvalues as 1ines.\F\
+EV           + Edit multivalues as lines.\F\
+EW           + Edit words as lines.\F\
+EXIT (EX)    + QUIT - EXIT the program.\F\
+EXITK (EXK)  + QUITKill - EXIT the program, abandon any active SELECT list.\F\
+FD           - DELETE the entire record from the file.\F\
+FI           - FILE the record. You can also process it.\F\
+               FIB = BASIC, FIC = CATALOG, FIR = RUN\F\
+               You can have up to three processes (EG. FIBCR).\F\
+               You can modify BASIC with D for DEBUGGING (EG. FIBD).\F\
+               You can modify CATALOG with L for LOCAL (EG. FICL).\F\
+FILE         - Synonym for SAVE.\F\
+FL           + Find the next Label.\F\
+FL any       + Find the label 'any' or matching pattern 'any'.\F\
+FL#          + Find (display) the labels in next # lines.\F\
+FLA          + Find label above this line.\F\
+FM           + Find Matching logic by position.\F\
+FMA          + Find Matching logic by position above this line.\F\
+FOLD/length  - Split current line (on blanks if possible) to fit width.\F\
+FORMAT (FOR) + FORMAT a BASIC program to show logical structure by\F\
+               indenting. This has the following keywords;\F\
+               '-Mx' = Set margin to x.\F\
+               '-Iy' = Set Indentation to y.\F\
+               '-A' = Align comments with code.\F\
+               '-N' = No CASE indentation.\F\
+               '-C' = Compress - same as '-M0 -I1 -A -N'.\F\
+G#           + GO TO line '#' ('G' is optional).\F\
+HELP (H)     + Prompt user to display HELP information on the Terminal.\F\
+HELP any     + Display HELP information on Terminal for 'any'.\F\
+HELP NEW     + Display HELP information on new features.\F\
+HEX          + Displays the current line in hexadecimal.\F\
+HOLD         - Retain a select list when exiting AE.\F\
+I            - INSERT new lines AFTER the current line. Prompt for\F\
+               successive lines. INPUT until NULL input. An INPUT line\F\
+               of a single space will store an empty line.\F\
+I any        - INSERT (INPUT) the line 'any' AFTER the current line.\F\
+I#/any       - INSERT # lines of 'any' AFTER the current line.\F\
+IC any       - IConv the line using the conversion 'any'.\F\
+IN command   - Insert the results of the command AFTER the current line.\F\
+               It is not a good idea to use a command requiring input.\F\
+J#/any       - Join next '#' lines (default 1), separated by 'any'.\F\
+KEEP# name   + Copy the record 'name' into kept buffer#.\F\
+               line #'s will be prompted.\F\
+KEEP# f name + Copy the record 'name' from file 'f' into kept buffer #,\F\
+               line #'s will be prompted.\F\
+KEEPA#       + KEEPAll - KEEP without line # prompting.\F\
+KEPT# (K)    + Display kept buffer # - no number for list of used ones.\F\
+L            + Repeat the last 'LOCATE' command.\F\
+L any        # LOCATE the next line that contains the string 'any'.\F\
+               L can be concatenated with A N R or W in any order.\F\
+               A - LOCATE ABOVE - effectively a reverse search.\F\
+               N - LOCATE NOT - sought line does NOT contain the string.\F\
+               R - only remark (comment) lines are searched.\F\
+               W - only working (non-comment) lines are searched.\F\
+L#/any/10-20 + LOCATE in next # lines those with 'any' in columns 10 to 20.\F\
+               So 'L#' effectively lists # lines.\F\
+               Using : or ; as delimiter pins to the start or end column/line. \F\
+L#!any!THING + LOCATE in next # lines those with 'any' OR 'THING' (|).\F\
+L#&any&THING + LOCATE in next # lines those with 'any' AND 'THING' (+).\F\
+L#^any^THING + LOCATE in next # lines those with 'any' AND NOT 'THING' (#).\F\
+               !| &+ ^#  work this way for LA, LN, and LNA commands too.\F\
+LC#          - Change '#' lines to lower case except strings and quotes.\F\
+LCF#         - Change '#' lines to lower case include strings and quotes.\F\
+LL#/length   + Show lines 'length' or longer (null '#' is a search).\F\
+LOAD name    - LOAD the record 'name' from the current FILE,\F\
+               line #'s will be prompted.\F\
+LOAD f name  - LOAD the record 'name' from file 'f',\F\
+               line #'s will be prompted.\F\
+LOADA        - LOADAll - LOAD without line # prompting.\F\
+LD           - Synonym for LOAD.\F\
+LDA          - Synonym for LOADA.\F\
+M pattern    + Search for a line matching the pattern.\F\
+MACRO#       + Toggle macro recording into #th PRESTORE command.\F\
+MERGE (ME)   - Merge a copy of the predefined block after the current line.\F\
+MERGE#/x     - Merge # lines starting at line x.\F\
+MERGE/x/y    - Merge lines starting at x to line y inclusive.\F\
+MOVE (MV)    - Move the predefined block to after the current line.\F\
+MOVE#/x      - Move # lines starting at line x.\F\
+MOVE/x/y     - Move the lines starting at x to line y inclusive.\F\
+NUM          + Toggle the line numbering.\F\
+NULL/symbol  + Change the null line input for 'I' to 'symbol'.\F\
+OC# any      - OConv '#' lines using the conversion 'any'.\F\
+OOPS         - RESTORE the record to the condition prior to last change.\F\
+OUT#         - Outline labels gotos and gosubs next '#' lines (default all).\F\
+OUT# CEPST*    Flags to show C=call E=excute P=perform S=case T=tags *=all\F\
+P            + PRINT on Terminal one page worth of lines.\F\
+P#           + PRINT on Terminal '#' lines starting with the current line.\F\
+PA#          + PRINT the current line and the prior '#' lines,\F\
+               do not change the current line pointer.\F\
+PASTE#       - Paste kept buffer # (default 1) after the current line'.\F\
+PASTE# name  - Copy kept buffer # as record 'name' in current file.\F\
+PASTE# f name- Copy kept buffer # as record 'name' in file 'f'.\F\
+PE           + Page Edit mode.\F\
+PL#          + PRINT the current line and the next '#' lines,\F\
+               do not change the current line pointer.\F\
+PP#          + PAGE.PRINT a window of '#' lines around the current line,\F\
+               do not change the current line pointer.\F\
+PR           + Show the PRESTORE commands.\F\
+PR#          + Run the #th PRESTORE command.\F\
+PR#/any      + Change the #th PRESTORE command.\F\
+               where / - is any delimiter character which will also be\F\
+                         used as the command separator.\F\
+QSORT seq    # Sort the predefined block using QM !SORT subroutine.\F\
+               QS is an alternative, seq is any of ACDFLRNUX.\F\
+               Read the documentation for !SORT to understand seq codes.\F\
+QUIT (Q)     + QUIT - EXIT the program.\F\
+QUITK (QK)   + QuitKill - EXIT the program, abandon any active SELECT list.\F\
+R            - Replace the line with prompted for text.\F\
+R any        - REPLACE this line with 'any'.\F\
+R#/any       - REPLACE # lines with 'any'.\F\
+R///         - CHANGE one or more lines (same as C/// command).\F\
+RA           - Show last 20 'CHANGE' commands.\F\
+RA#          - Repeat #th 'CHANGE' command.\F\
+RELEASE      + RELEASE the update record LOCK for this file.\F\
+S            - Show last 20 'LOCATE' commands.\F\
+S#           - Repeat #th 'LOCATE' command.\F\
+SAVE         - SAVE a copy of this record under the original name.\F\
+SAVE name    - SAVE a copy of this record under the specified 'name'.\F\
+SAVE f name  - SAVE a copy of this record as record 'name' in file 'f'.\F\
+SEQ#////     - Build a sequence. Format is:\F\
+               SEQ#/from/base/inc/cols\F\
+               where    / - is any delimiter character.\F\
+                        # - number of lines to CHANGE (default 1).\F\
+                     from - is the character string to be replaced.\F\
+                     base - is the start number (defaults to 1).\F\
+                      inc - is the increment (defaults to 1).\F\
+                     cols - restricts the change to a column range.\F\
+SHOW ON/OFF  + toggle overriding 'S'how flag for 'C' command.\F\
+               OFF won't show more than a page of changes.\F\
+               If neither ON nor OFF is used, then toggle SHOW flag.\F\
+SORT seq     - Sort the predefined block (seq defaults to 'AL').\F\
+SORTU seq    - Sort, removing duplicates (seq defaults to 'AL').\F\
+SPACE ON/OFF + Switch SPACE flag for L, LA, LN, LNA commands.\F\
+               If neither ON nor OFF is used, then toggle SPACE flag.\F\
+               OFF means that the commands will ignore spaces and tabs.\F\
+SPOOL        + SPOOL entire record to PRINTER.\F\
+SPOOL#       + SPOOL '#' lines to the PRINTER.\F\
+SPOOLHELP    + SPOOL the HELP listing to the default PRINTER.\F\
+SPOUT#       - SPOOL labels gotos and gosubs next '#' lines (default all).\F\
+SPOUT# CEPST*  Flags to show C=call E=excute P=perform S=case T=tags *=all\F\
+STAMP        - INSERT a 'last modified' stamp into the record, which\F\
+               begins with a '*' (for BASIC 'comment'), and contains the\F\
+               account name, LOGIN name (if different from account name),\F\
+               date and time. Used to mark when record was last changed.\F\
+SV           - Synonym for SAVE.\F\
+T            + Set current line to the TOP (before first line).\F\
+TC#          - Change '#' lines to Text case except strings and quotes.\F\
+TCF#         - Change '#' lines to Text case include strings and quotes.\F\
+TRIM#        - TRIM '#' lines (default 1).\F\
+TRIM# a b    - TRIM '#' lines of character 'a' with argument 'b'.\F\
+TRIMB#       - TRIMB '#' lines (default 1).\F\
+TRIMF#       - TRIMF '#' lines (default 1).\F\
+TRIPLE#/any  - Copy '#' lines (default 1) into three clones, joined by 'any'.\F\
+TWIN#/any    - Copy '#' lines (default 1) into two clones, joined by 'any'.\F\
+UC#          - Change '#' lines to UPPER case except strings and quotes.\F\
+UCF#         - Change '#' lines to UPPER case include strings and quotes.\F\
+UK#          - User Key definition (# = 5 to 12) or just UK for listing.\F\
+UNLOAD       - Synonym for SAVE.\F\
+V            + Version information.\F\
+WHERE (W)    + Show the item and file being %2ed.\F\
+WM           + Show or change the word marker.\F\
+X            + QuitKill - EXIT the program, abandon any active SELECT list.\F\
+XEQ          - The XEQ command allows a user to execute any legal PERFORM\F\
+                command from within the program. Upon completion of the\F\
+                command, there is an opportunity to enter further commands.\F\
+XTD any      + Convert hexadecimal string 'any' to decimal and display it.\F\
+YANK (Y)     - Move current item-id on or off held select list.\F\
+ZOOM (Z) H/F - Set or toggle page edit movement Full or Half page.\F\
+/any         + Same as L99999999/any - NOTE you are left at the bottom.\F\
+//any        # Same as LW99999999/any  leaving you at the bottom.\F\
+!            - XEQ equivalent which does not allow subsequent commands.\F\
+.A# any      + APPEND 'any' to command '#' (default 1).\F\
+.C#///       + CHANGE stack command '#' (default 1). Syntax is like 'C'.\F\
+.D#          + DELETE stack command '#' (default 1).\F\
+.I# any      + INSERT 'any' at stack position '#' (default 1).\F\
+.L#          + LIST on the Terminal the last '#' stack commands.\F\
+.R#          + RECALL (copy) command '#' to stack position 1.\F\
+.S# n m      + SAVE stack n to m as prestore '#' (all default to 1).\F\
+.U#          + UPCASE stack command '#' (default 1).\F\
+.UL#         + lower case stack command '#' (default 1).\F\
+.UT#         + text case stack command '#' (default 1).\F\
+.W#          + wiggle stack command case '#' (default 1) L->U->T->L.\F\
+.X#          + EXECUTE stack command '#' (default 1).\F\
+               The command will be put in stack position 1.\F\
++#           + Advance current line pointer by '#' lines (default 1).\F\
+-#           + Back up current line pointer by '#' lines (default 1).\F\
+#            + Set the current line pointer to the '#' line.\F\
+<#           + Sets the starting block pointer to # (current line default).\F\
+<># #        + Set both block pointers at the same time.\F\
+>#           + Sets the ending block pointer to # (current line default).\F\
+?            + Show various parameters - easier to use than explain.\F\
+[            + Go to the previous line tag.\F\
+[[           + Display the line tags.\F\
+[any         + Go to the line tag 'any'.\F\
+\            + Set a line tag with default label like 'T#'.\F\
+\\           + Clear the line tags.\F\
+\any         + Set a line tag labelled 'any'.\F\
+]            + Go to the next line tag.\F\
+]]           + Display the line tags.\F\
+]any         + Go to the line tag 'any'.\F\
+^            + Switch UP ARROW on/off to show non-printing characters as\F\
+               ^nnn where nnn is the decimal equivalent of ASCII code.\F\
+{            + Half page shift in page edit mode.\F\
+|            + Toggle colouring\F\
+}            + Full page shift in page edit mode.
+*
+6301                               Page viewing help\F\
+\F\
+ Cursor movement keys                    Line movement keys\F\
+\F\
+       UP = <UP arrow> or ^Z               LEFT END = <Home> or ^A\F\
+     DOWN = <DOWN arrow> or ^J            RIGHT END = <End> or ^E\F\
+     LEFT = <LEFT arrow> or ^U           GO TO LINE = ^G\F\
+    RIGHT = <RIGHT arrow> or ^F                 (prompts for desired line)\F\
+\F\
+ Page movement keys\F\
+                                                 XEQ = ^X\F\
+ PREVIOUS = <Page Up> or ^P                NEXT WORD = <Tab>\F\
+     NEXT = <Page Down> or ^N          PREVIOUS WORD = <BackTab>\F\
+      TOP = <Ctrl-Page Up> or ^T\F\
+   BOTTOM = <Ctrl-Page Down> or ^B\F\
+\F\
+\F\
+ <Esc> or ^Q Go to LINE mode
+*
+6302                               Page editing help\F\
+\F\
+ Cursor movement keys                    Line movement keys\F\
+\F\
+       UP = <UP arrow> or ^Z               LEFT END = <Home> or ^A\F\
+     DOWN = <DOWN arrow> or ^J            RIGHT END = <End> or ^E\F\
+     LEFT = <LEFT arrow> or ^U           GO TO LINE = ^G\F\
+    RIGHT = <RIGHT arrow> or ^F                 (prompts for desired line)\F\
+\F\
+ Page movement keys                      Deleting keys\F\
+\F\
+ PREVIOUS = <Page Up> or ^P                DELETE CHAR = <Delete> or ^D\F\
+     NEXT = <Page Down> or ^N              DELETE LINE = <Ctrl-Home> or ^L\F\
+      TOP = <Ctrl-Page Up> or ^T         DELETE TO EOL = <Ctrl-End> or ^K\F\
+   BOTTOM = <Ctrl-Page Down> or ^B\F\
+                                         <Ctrl-]> = Value Mark\F\
+ <Backspace> is destructive              <Ctrl-\> = Sub-value Mark\F\
+ <Enter> splits the line\F\
+ <Insert> toggles between insert and overwrite          XEQ = ^X\F\
+ <F3> Forward search                              NEXT WORD = <Tab>\F\
+ <F4> Reverse search                          PREVIOUS WORD = <BackTab>\F\
+ <F2> Go to LINE mode WITH changes    CHANGE CASE LINE/WORD = ^W\F\
+ <Esc> or ^Q Go to LINE mode WITHOUT changes          <F10> = Command Menu
+*
+6303 *** $ command ERROR\F\
+Line 2 of record '%1' in file 'AE_XCOMS'\F\
+contains '%2'.\F\
+\F\
+This line should contain the name of a Basic subroutine that\F\
+has been written to implement the external command '%1'.\F\
+The program name must end in '_AE'.
+*
+6304 *** Some general helps\F\
+A select list was active, but specific ids were entered.\F\
+Select list will be ignored.\F\
+VIEW ONLY - NO UPDATES ALLOWED\F\
+Line Editor Mode\F\
+ - CHANGES HAVE BEEN MADE\F\
+No previous append command to repeat\F\
+The second field is empty.\F\
+Command delimiter is \F\
+Characters reserved for other uses: \.*!?-+=^@<>_:\F\
+No previous ChangeMatch command to repeat.\F\
+No string given to count\F\
+You have not said what to put on CRT line!\F\
+Unload disabled\F\
+You have not said what to put on DISPLAY line!\F\
+No previous locate command to repeat.\F\
+Delete disabled\F\
+File disabled\F\
+Non-numeric length - try HELP FOLD.\F\
+No conversion given\F\
+No external command given\F\
+ (bottom)\F\
+LOAD disabled\F\
+No pattern given to match\F\
+Page editing not available\F\
+***** Record changed --- OK to Quit? (N/Y)>\F\
+Select list cancelled.\F\
+Empty record, use Insert (I) command.\F\
+File disabled\F\
+Unload disabled\F\
+Cannot save to null item.\F\
+WRITE NOT ALLOWED\F\
+Too few fields in this command.\F\
+Base for sequence command must be a number.\F\
+Increment for sequence command must be a number.\F\
+Increment for sequence command must not be zero.\F\
+XEQ disabled\F\
+<RETURN> or command :\F\
+Returned - \F\
+%1 is not a valid command delimiter.\F\
+Characters available for delimiters: %1\F\
+WRITE failure - file not updated\F\
+ABANDONING CHANGES\F\
+You cannot search 'W'orking and 'R'emark lines at the same time
+*
+6305 *** Command format helps\F\
+Formats are: "CUT[#]" (from <> block) or "CUT[#] n" or "CUT[#]/s/f".\F\
+The EC command requires lines in format "CALL ID" or "CALL ID(..."\F\
+The EI command requires lines in format "$IN... {DICT} {FN} ID"\F\
+Format of MErge command is: "MEn/s"; eg: "ME10/15" or "ME/s/f"; eg: "ME/15/24"\F\
+Format of MoVe command is: "MVn/s"; eg: "MV10/15" or "MV/s/f"; eg: "MV/15/24"\F\
+That command is not allowed in VIEW mode%1\F\
+Command not understood - try "H" for help.\F\
+Command was: "%1"\F\
+Formats are: "COPY[#]" (from <> block) or "COPY[#] n" or "COPY[#]/s/f".\F\
+EIT is only for line 2 of a dictionary I-type
+*
+6306 *** Extended editing \F\
+Leading "@" is logical pointer\F\
+"%1" is not in this file\F\
+%1 is outside range 0-255\F\
+%1ing IType as fields...\F\
+%1ing prestores\F\
+subvalues\F\
+values\F\
+words\F\
+char%1\F\
+%1ing %2 as fields...\F\
+Back %1ing the record "%2" in file "%3"\F\
+%1ing command stack\F\
+%1ing prestore %1\F\
+%1ing search stack\F\
+%1ing KEPT(%2) buffer\F\
+edit\F\
+view\F\
+Setting Tag labelled %1 at line %2\F\
+Tags cleared\F\
+Tags at line-Labelled\F\
+Moved to line %1 labelled %2\F\
+There is already a Tag on line %1\F\
+There is already a Tag labelled %1\F\
+No Tag found\F\
+Tag %1 cleared from line %2\F\
+Enter Tag Label:\F\
+Enter Format specification:\F\
+Enter file and name or just name:\F\
+Code colouring is ON\F\
+Code colouring is OFF\F\
+tags
+*
+6307 *** "?" Responses\F\
+         Login name = %1 (%2, userno %3)\F\
+            Account = %1\F\
+           VOC path = %1\F\
+              Level = %1\F\
+          File name = %1\F\
+          Record id = %1\F\
+       Current line = %1\F\
+              Lines = %1\F\
+         Characters = %1\F\
+Last Change command = %1\F\
+Last CMatch command = %1\F\
+Last Append command = %1\F\
+              Block = %1-%2\F\
+Command Delimiter is %1\F\
+character to end inserting is %1\F\
+WordMark is %1\F\
+Page: window for PA/PL/PP is %1, length for P is %2\F\
+%1 flag ON\F\
+%1 flag OFF\F\
+OOPS will restore record prior to command: %1\F\
+OOPS already executed, or no changes in effect.\F\
+ Last Match command = %1\F\
+CASE\F\
+SPACE\F\
+SHOW\F\
+BLOCK\F\
+BELL\F\
+NO BELL
+*
+6308 *** General editing\F\
+Top of "%1" in "%2", %3 lines, %4 characters.\F\
+Top of new "%1" in "%2".\F\
+%1 occurances of string.\F\
+Characters available for delimiters: %1\F\
+Line Numbering is ON\F\
+Line Numbering is OFF\F\
+No conversion given\F\
+"%1" undone - now at line %2.\F\
+last change already "undone" or nothing to undo\F\
+Quit "%1" in file "%2" not created.\F\
+Quit "%1" in file "%2" unchanged.\F\
+Last %1 searches\F\
+Search must be in range 1-%1.\F\
+There is no search number %1.\F\
+Record "%1" saved in "%2".\F\
+Show changes flag is ON\F\
+Show changes flag is OFF\F\
+SPACE flag is ON\F\
+SPACE flag is OFF\F\
+Record - %1 File - %2 Account - %3 \F\
+Lines %1 to %2 of \F\
+"%1" spooled to the printer.\F\
+* Last updated by %1 in account %2 at %3\F\
+Viewing "%1" in "%2"\F\
+Editing "%1" in "%2"\F\
+Press <F1> for help.\F\
+Last %1 changes\F\
+Change must be in range 1-%1.\F\
+There is no change number %1.\F\
+Split %1 lines\F\
+there are no prior searches\F\
+there are no prior changes
+*
+6309 *** Nothing done messages\F\
+Nothing done - record does not have that many lines.\F\
+Nothing done - no lines selected.\F\
+Nothing done - no output from command.\F\
+Nothing done - this line is within the range.\F\
+Nothing done - starting and ending lines must be numeric.\F\
+Nothing done - %1 is outside range %2-%3
+*
+6310 *** Specific Helps\F\
+Split %1 records.  Now at line %2\F\
+Starting word "%1" unknown\F\
+%1 has no matching word for %2\F\
+FOLD line to length %1\F\
+Margin=%1, Indentation=%2\F\
+At line %1. %2 lines inserted, bottom now at line %3.\F\
+Terminate input with "%1"\F\
+Inserted %1 lines; still at line %2.\F\
+Now at line %1\F\
+At line %1, %2 lines loaded.\F\
+Merged %1 lines starting at line %2; still at line %3.\F\
+Moved %1 lines starting at line %2; now at line %3.\F\
+Moved %1 lines starting at line %2; still at line %3.\F\
+NULL character to terminate INSERT is %1.\F\
+At line %1. Deleted %2 lines.\F\
+Inserted %1 copies of line %2 after line %2. Still at %2.\F\
+Must be less than one billion (1,000,000,000)\F\
+Bottom. Line %1 was above the last delete.\F\
+Cut %1 lines starting at line %2\F\
+Still at line %1.\F\
+%1 lines changed - now at %2\F\
+Range specifications must be positive whole numbers.\F\
+Ending number # must exceed or equal starting number #.\F\
+No previous change command to repeat.\F\
+Too many delimiters (3 max.).\F\
+Missing required TO field (for "CHANGE/FROM/TO").\F\
+"FD" operates only on the current record & file.\F\
+"FI" only for current record & file. Use SAVE.\F\
+Record lock has been released!   Write not allowed.\F\
+***** You are about to DELETE the record! OK? %1\F\
+Deleted "%1" from file "%2".\F\
+Saved "%1" in "%2" - now at line %3.\F\
+Filed "%1" in file "%2" UNCHANGED.\F\
+Filed "%1" in file "%2".\F\
+Record name, or file name and record name >\F\
+Record "%1" already exists - overwrite? %2\F\
+Record "%1" was not found on file "%2".\F\
+Record is currently locked by another user. Try again? %1 \F\
+Cannot %1 - must be type 1 or 19\F\
+Invalid TRIM argument - must be one of "ABCDEFLRT"\F\
+No Column position given\F\
+Holding %1\F\
+list already held. Release it (y/n)?\F\
+No list held\F\
+%1 added to list\F\
+%1 removed\F\
+Key String\F\
+You can only set function keys 5 to 12.\F\
+Page Mode movement <%1>   ^%2v
+*
+6311 *** Prestore and like command messages\F\
+Macro saved to PRestore %1\F\
+Macro empty - not saved\F\
+PRestore must be in range 1-%1.\F\
+Macro being recorded for PRestore %1\F\
+Defined prestores (%1 Maximum)\F\
+PRestore must be in range 1-%1.\F\
+Invalid - delimiter in prestore\F\
+UNIDATA prestore is not implemented - Use "PR"\F\
+$ external commands disabled\F\
+Record "%1" does not exist in "AE_XCOMS".\F\
+History command %1 does not exist.\F\
+History #%1 DELETEd.\F\
+%1 is greater than pre-store limit of %2\F\
+One of the values was not a number\F\
+there are no defined prestores\F\
+Subroutine %1 not catalogued
+*
+6312 *** Block command helps\F\
+Command requests a block operation, but no block is defined.\F\
+Block command cancelled.\F\
+Dropped (deleted) %1 lines.\F\
+A block may not be moved into itself. MERGE will work.\F\
+Move line %1 to after line %2 OK? %3\F\
+Move lines %1-%2 to after line %3 OK? %4\F\
+Cannot find beginning of block\F\
+Invalid sort sequence - use "AL" "AR" "DL" or "DR"\F\
+Cannot find end of block\F\
+Block starts at line %1\F\
+; End moved from %1 to %2\F\
+ (%1 lines)\F\
+Cannot mark line %1\F\
+Block ends at line %1\F\
+; Start moved from %1 to %2\F\
+Block starts and ends at line %1\F\
+Block starts at %1 and ends at %2\F\
+Cannot mark Block\F\
+KEPT buffer %1 cleared\F\
+%1 lines copied to KEPT buffer %2 starting at line %3\F\
+%1 lines moved to KEPT buffer %2 starting at line %3\F\
+Nothing in KEPT buffer %1\F\
+***** Contents of KEPT buffer %1 is %2 lines *****\F\
+Press return to continue showing KEPT buffer %1, Q to quit\F\
+Pasted %1 lines from KEPT buffer %2; still at line %3.\F\
+At line %1, %2 lines loaded into KEPT buffer %3\F\
+Sort block beginning at %1 and ending at %2?\F\
+Enter PASTE now if you meant to do an ED-style COPY\F\
+Are you SURE you want to abandon your changes?
+*
+6313 *** CM, parsing, and page helps\F\
+Pattern: character "%1" is not allowed unless quoted.\F\
+At line %1.\F\
+Bottom at %1.\F\
+No lines (in %1-%2) NOT matching pattern "%3"\F\
+No lines (in %1-%2) matching pattern "%3"\F\
+Deleted %1 lines matching "%2"\F\
+Found %1 lines matching "%2"\F\
+Found %1 lines NOT matching "%2"\F\
+"%1" appended to \F\
+Deleted \F\
+"%1" prefixed to \F\
+Replaced with "%", \F\
+Element %1 changed to "%2" in \F\
+Element %1-%2 changed to "%3" in \F\
+1 line matching "%1"\F\
+%1 lines matching "%2"\F\
+\F\
+STOPPED\F\
+"Q"uit, or starting line > \F\
+, ending line > \F\
+File is %1: "Q"uit, or starting line > %2, %3\F\
+New Features\F\
+Press return to continue showing this, Q to quit\F\
+No explanation of "%1" is available.\F\
+For a list of words that have explanations, type "HELP".\F\
+Go to line :\F\
+No deletion possible - %1 > %2.\F\
+Top of empty record.\F\
+Top.\F\
+Bottom.\F\
+Bottom at line %1.\F\
+%1 added to \F\
+%1 taken from \F\
+line multiplied by %1 in \F\
+line divided by %1 in
+*
+6314 *** alphabetic command input\F\
+Press [Enter] to continue\F\
+A\F\
+Bottom\F\
+C\F\
+Delete\F\
+E\F\
+F\F\
+G\F\
+H\F\
+Insert\F\
+J\F\
+K\F\
+L\F\
+M\F\
+Next\F\
+O\F\
+Previous\F\
+Quit\F\
+R\F\
+Save\F\
+Top\F\
+U\F\
+V\F\
+W\F\
+X exit\F\
+Y\F\
+Z
+*
+6315 *** Key words and functions\F\
+*** keywords in QM~ABORT~ABORTE~ABORTM~ADD~AKCLEAR~AKDELETE~AKREAD~AKRELEASE~AKWRITE~BEFORE~BEGIN~BREAK~BREAKPOINT~BY~CALL~CALLV~CASE~CATCH~CHAIN~CLASS~CLEAR~CLEARCOMMON~CLEARDATA~CLEARFILE~CLEARINPUT~CLEARSELECT~CLOSE~CLOSE.SOCKET~CLOSESEQ~COM~COMMIT~COMMON~COMO~CONFIGURE.FILE~CONTINUE~CONVERT~CREATE~CREATE.AK~CREATE.FILE~CRT~CSV.MODE~DATA~DEBUG~DEBUG.OFF~DEBUG.ON~DEBUG.SET~DEFFUN~DEL~DELETE~DELETE.AK~DELETE.COMMON~DELETELIST~DELETESEQ~DELETEU~DIM~DIMENSION~DISINHERIT~DISPLAY~DO~DPARSE~DPARSE.CSV~ECHO~ELSE~END~ENTER~EQU~EQUATE~ERRMSG~ERROR~EVALUATE~EXECUTE~EXIT~FILE~FILELOCK~FILEUNLOCK~FIND~FINDSTR~FLUSH~FLUSH.DH.CACHE~FOOTING~FOR~FORMLIST~FORMLISTV~FROM~FUNCTION~GET~GETLIST~GO~GOSUB~GOTO~HEADING~HUSH~IF~IN~INCLUDE~INHERIT~INPUT~INPUTCLEAR~INPUTCSV~INPUTDW~INPUTERR~INPUTFIELD~INPUTFIELDV~INS~KEYBOARD.INPUT~KEYEDIT~KEYEXIT~KEYTRAP~LOCAL~LOCATE~LOCK~LOCKED~LOGMSG~LOOP~MARK.MAPPING~MAT~MATBUILD~MATCHES~MATPARSE~MATREAD~MATREADCSV~MATREADL~MATREADU~MATWRITE~MATWRITEU~MODIFY~NAP~NEXT~NOBUF~NULL~ON~OPEN~OPENPATH~OPENSEQ~OS.EXECUTE~OSDELETE~OSREAD~OSWRITE~PAGE~PAUSE~PERFORM~PRECISION~PRINT~PRINTCSV~PRINTER~PRINTERR~PRIVATE~PROCREAD~PROCWRITE~PROGRAM~PROMPT~PUBLIC~PUT~QUIT~RANDOMIZE~READ~READBLK~READCSV~READL~READLIST~READNEXT~READSEQ~READU~READV~READVL~READVU~RECORDLOCKL~RECORDLOCKU~RELEASE~RELEASE.LOCK~REM~REMARK~REMOVE~REMOVE.BREAK.HANDLER~REMOVE.TOKEN~REPEAT~RESET.MODES~RESTORE.SCREEN~RETURN~REWIND~ROLLBACK~RQM~RUN~SAVELIST~SEEK~SELECT~SELECTE~SELECTINDEX~SELECTLEFT~SELECTN~SELECTRIGHT~SELECTV~SENDMAIL~SET~SET.ARG~SET.BREAK.HANDLER~SET.EXIT.STATUS~SET.MODES~SET.STATUS~SET.TIMEZONE~SET.TRIGGER~SET.UNASSIGNED~SETLEFT~SETNLS~SETPU~SETREM~SETRIGHT~SETTING~SLEEP~SORTADD~SORTCLEAR~SORTINIT~SSELECT~SSELECTN~SSELECTV~STATUS~STDERR~STOP~STOPE~STOPM~SUB~SUBROUTINE~TCLREAD~THEN~THROW~TIMEOUT~TO~TRACE~TRANSACTION~TRY~TTYSET~UNLOAD.OBJECT~UNLOCK~UNTIL~VARSET~VOID~WAKE~WATCH~WEOFSEQ~WHILE~WRITE~WRITE.COMO~WRITEBLK~WRITECSV~WRITEPKT~WRITESEQ~WRITESEQF~WRITEU~WRITEV~WRITEVU\F\
+*** Functions in QM when followed by a left bracket~ABS~ABSS~ACCEPT.SOCKET.CONNECTION~ACOS~ADDS~ALPHA~ANDS~ARG~ARG.COUNT~ARG.PRESENT~ASCII~ASIN~ASSIGNED~ATAN~BINDKEY~BITAND~BITNOT~BITOR~BITRESET~BITSET~BITTEST~BITXOR~CATALOGUED~CATS~CCALL~CHANGE~CHAR~CHECKSUM~CHGPHANT~COL1~COL2~COMPARE~COMPARES~CONFIG~CONNECT.PORT~CONVERT~COS~COUNT~COUNTS~CREATE.SERVER.SOCKET~CROP~CSVDQ~DATE~DCOUNT~DECRYPT~DELETE~DFPART~DIR~DISPLAY.WIDTH~DIV~DIVS~DOWNCASE~DQUOTE~DQUOTES~DTX~EBCDIC~ECHAR~ENCRYPT~ENTER.PACKAGE~ENV~EPOCH~EQS~EXIT.PACKAGE~EXP~EXTRACT~FCONTROL~FIELD~FIELDS~FIELDSTORE~FILE.EVENT~FILEINFO~FMT~FMTDW~FMTDWS~FMTS~FOLD~FOLDDW~FOLDDWS~FOLDS~FORMCSV~GES~GET.MESSAGES~GET.PORT.PARAMS~GETNLS~GETPU~GETREM~GTS~HASH~ICONV~ICONVS~IDIV~IFS~INDEX~INDEXS~INDICES~INMAT~INPUTBLK~INSERT~INT~IS.ALPHA~IS.DIGIT~IS.ECS~IS.GRAPH~IS.MARK~IS.SPACE~IS.WIDE~ITYPE~KEYCODE~KEYCODEV~KEYIN~KEYINC~KEYINCV~KEYINR~KEYINV~KEYREADY~LEN~LENS~LES~LISTINDEX~LN~LOCATE~LOWER~LTS~MATCHESS~MATCHFIELD~MATCHFIELDS~MAX~MAXIMUM~MD5~MIN~MINIMUM~MOD~MODS~MULS~MVDATE~MVDATE.TIME~MVEPOCH~MVTIME~NEG~NEGS~NES~NOT~NOTS~NS~NUM~NUMS~NV~OBJECT~OBJINFO~OCONV~OCONVS~OPEN.SOCKET~ORS~OS.ERROR~OUTERJOIN~PARSE~PRINTER.SETTING~PTERM~PWR~QUOTE~QUOTES~RAISE~RDIV~READ.SOCKET~RECORDLOCKED~REM~REMOVE~REMOVEF~REPLACE~REUSE~RND~ROUNDDOWN~ROUNDUP~RTRANS~SAVE.SCREEN~SELECT.SOCKET~SELECTINFO~SENTENCE~SEQ~SERVER.ADDR~SERVER.WINDOW~SET.PORT.PARAMS~SET.SOCKET.MODE~SHIFT~SIN~SOCKET.INFO~SORT.COMPARE~SOUNDEX~SOUNDEXS~SPACE~SPACES~SPLICE~SQRT~SQUOTE~SQUOTES~STATUS~STR~STRS~SUBR~SUBS~SUBSTITUTE~SUBSTRDW~SUBSTRINGS~SUM~SUMMATION~SWAP~SWAPCASE~SWAPMARKS~SYSMSG~SYSTEM~TAN~TERMINFO~TESTLOCK~TIME~TIMEDATE~TRANS~TRANSLITERATE~TRIM~TRIMB~TRIMBS~TRIMF~TRIMFS~TRIMS~TTYGET~UMASK~UNASSIGNED~UPCASE~VARTYPE~VOCPATH~VSLICE~WAIT.FILE.EVENT~WRITE.SOCKET~XLATE~XTD
+*
+6316 *** Menus\F\
+File Edit Seek Logic Go Buffer Code Tag < > / [ ] \ | { }   ~~F = File Menu~E = Edit Menu~S = Search Menu~L = Logic/Labels Menu~G = Go to command~B = Buffer Menu~C = Code Menu~T = Tag Menu~< = Set Block Start~> = Set Block End~/ = Unset Block~[ = Go to last Tag~] = Go to next tag~\ = Set Tag~| = Toggle colouring~{ = Half Page Move~} = Full Page Move\F\
+Delete fIle Kill Load Print Quit Save Write        file menu~~D = Delete - will prompt first~I - fIle - update item and go to next one~K = Kill - force exit with no prompts~L = Load - prompts and loads after the current line~P = Print the current item~Q = Quit - will prompt if there are any changes~S = Save - will prompt where to save item~W = Write item to disk with no prompts\F\
+Copy cuT Paste Duplicate Join mErge mOve Linemode  edit menu~~C = Copy text from item~T = Take text, removing it from item~P = Paste text in item~D = Duplicate current line~J = Join lines - will prompt for number and inserted string~E = Merge text from current item~O = Move text within current item~L = Change to line mode input\F\
+Back Forward Last Next Highlight Case              seek menu~~B = Find string above cursor - will prompt for string~F = Find string after cursor - will prompt for string~L = Find last search string above cursor - no prompt~N = Find next search string after cursor - no prompt~H = change last search string without a search~C = toggle case flag for search\F\
+Back Find Last Next Above Match                  logic menu~~B = Find label BEFORE this one - will prompt for label~F = Find label FOLLOWING this one - will prompt for label~L = Find LAST search label before this one - no prompt~N = Find NEXT search label behind this one - no prompt~A = Find the line ABOVE this one matching it logically~M = Find the next line MATCHING this one logically~~You can enter a pattern for the label prompt~~\F\
+Oops Update Wipe                                 buffer menu~~O = Restore item to last checkpoint~U = Update checkpoint~W = Reset item to original state\F\
+Basic Catalog Run Stamp Format                     code menu~~B = Basic (compile) the item~C = Catalog the item~R = Run the item as a program~S = Insert a line giving user, account, time, and date~F = format the item - prompts for formatting parameters\F\
+Last Next Set Remove Wipe Display Go                tag menu~~L = Find last tag above cursor~N = Find next tag after cursor~S = Set a tag on this line~R = Remove any tag on this line~W = Wipe all tags~D = Display the tag information\F\
+^ = Toggle mouse input
+*
+6317 Alternate Editor Syntax\F\
+\F\
+%1 [DICT] filename [record.ids|*] [(options[)]]\F\
+\F\
+record.ids mean that any active default select list is ignored.\F\
+* means all records - this may cause a delay.\F\
+No record.ids and no active default select list will mean a prompt.\F\
+Options are:\F\
+\F\
+ B - Means that the file will be accessed in binary mode.\F\
+     That is, line feeds are not confused with attribute marks.\F\
+ D - Allows DATA statements in a controlling paragraph.\F\
+     That is, INPUT statements are used and Page Editing is not allowed.\F\
+ E - Like the option used in SED. This restricts the user to editing\F\
+     only the records on the command line and disallows use of XEQ.\F\
+ H - Means the Page Editor displays the code for the character under the\F\
+     cursor in hexadecimal, rather than decimal, in brackets on the top line.\F\
+ V - Allows the editor to view items safely as a flexible alternative\F\
+     to the previously hard-coded BROWSE, LOOK, and VIEW "verbs".\F\
+ X - Disallows the use of XEQ within the editor.
