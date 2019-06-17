@@ -92,7 +92,8 @@ DATE.STOP = OCONV(DATE()-1,dateFormat)
 
            CALL U_CRT.ACTION(CURRENCY, RATE)
            CALL U_TRANSLATE("FEDNAME", fetchSeries , TRNS.RVSERVER, LONG.NAME)
-           CALL SIENA.NI.NAME(LONG.NAME,"","")
+           CALL U_TRANSLATE("FEDTENOR", fetchSeries, TRNs... 
+CALL SIENA.NI.NAME(LONG.NAME,"","")
 
 
 
