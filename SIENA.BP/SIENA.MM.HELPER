@@ -44,7 +44,7 @@ $INCLUDE UTIL.BP RATECSV.H
             END ELSE
                CCYPAIR = SPACE(3):INPUT.DATA<THIS.ROW, RATE.CCY2>
             END
-            IF PROCESS.TYPE = "cpi" THEN
+            IF UPCASE(PROCESS.TYPE) = "CPI" THEN
                TMP.CCYPAIR = CCYPAIR
                CALL U_TRANSLATE("CPICCY", TMP.CCYPAIR, TRNS.RVSERVER, CCYPAIR)
             END
