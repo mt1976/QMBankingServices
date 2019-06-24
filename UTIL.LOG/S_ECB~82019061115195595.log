@@ -1,98 +1,0 @@
-[K[1mM [m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[K[1mM [m ___ ___ ___ _  _   _           _____  __  ___ ___ ___   ___ ___  ___ _____ 
-[K[1mM [m/ __|_ _| __| \| | /_\    ___  | __\ \/ / | __/ __| _ ) / __| _ \/ _ \_   _|
-[K[1mM [m\__ \| || _|| .` |/ _ \  |___| | _| >  <  | _| (__| _ \ \__ \  _/ (_) || |  
-[K[1mM [m|___/___|___|_|\_/_/ \_\       |_| /_/\_\ |___\___|___/ |___/_|  \___/ |_|  
-[K[1mM [m                                                                            
-[K[1mM [m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[K[1mM [m[[1mEXECUTE   [m][sh curl -s https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml]
-[K[1mM [m[[1mEXTRACTI  [m][<?xml^version="1.0"^encoding="UTF-8"?>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][<gesmes:Envelope^xmlns:gesmes="http://www.gesmes.org/xml/2002-08-01"^xmlns="http://www.ecb.int/vocabulary/2002-08-01/eurofxref">]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][	<gesmes:subject>Reference^rates</gesmes:subject>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][	<gesmes:Sender>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][		<gesmes:name>European^Central^Bank</gesmes:name>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][	</gesmes:Sender>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][	<Cube>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][		<Cube^time=]2019-06-11]>]
-Press RETURN to continue, A to abort, Q to Quit, S to suppress pagination
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]USD]^rate=]1.1320]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]JPY]^rate=]123.09]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]BGN]^rate=]1.9558]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]CZK]^rate=]25.640]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]DKK]^rate=]7.4687]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]GBP]^rate=]0.89085]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]HUF]^rate=]320.50]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]PLN]^rate=]4.2678]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]RON]^rate=]4.7252]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]SEK]^rate=]10.6828]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]CHF]^rate=]1.1233]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]ISK]^rate=]140.50]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]NOK]^rate=]9.7700]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]HRK]^rate=]7.4140]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]RUB]^rate=]73.0227]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]TRY]^rate=]6.5752]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]AUD]^rate=]1.6273]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]BRL]^rate=]4.3893]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]CAD]^rate=]1.5002]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]CNY]^rate=]7.8243]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]HKD]^rate=]8.8700]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]IDR]^rate=]16116.85]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]ILS]^rate=]4.0544]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]INR]^rate=]78.6155]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]KRW]^rate=]1337.48]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]MXN]^rate=]21.6783]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]MYR]^rate=]4.7123]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]NZD]^rate=]1.7206]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]PHP]^rate=]58.810]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]SGD]^rate=]1.5446]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]THB]^rate=]35.403]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][			<Cube^currency=]ZAR]^rate=]16.7140]/>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][		</Cube>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][	</Cube>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mEXTRACTI  [m][</gesmes:Envelope>]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mDELETE    [m][RVECB]
-[K[1mM [m[[1mSTORE     [m][RVECB]
-[K[1mM [m[[1mPROCESSING[m][COMPLETE]

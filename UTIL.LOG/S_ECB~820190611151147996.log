@@ -1,299 +1,0 @@
-[K[1mM [mâ”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
-[K[1mM [m ___ ___ ___ _  _   _           _____  __  ___ ___ ___   ___ ___  ___ _____ 
-[K[1mM [m/ __|_ _| __| \| | /_\    ___  | __\ \/ / | __/ __| _ ) / __| _ \/ _ \_   _|
-[K[1mM [m\__ \| || _|| .` |/ _ \  |___| | _| >  <  | _| (__| _ \ \__ \  _/ (_) || |  
-[K[1mM [m|___/___|___|_|\_/_/ \_\       |_| /_/\_\ |___\___|___/ |___/_|  \___/ |_|  
-[K[1mM [m                                                                            
-[K[1mM [mâ”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
-[K[1mM [m[[1mEXECUTE   [m][sh curl -s https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml]
-<?xml
-version="1.0"
-encoding="UTF-8"?>
-[K[1mM [m[[1mEXTRACTI  [m][<?xml]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-<gesmes:Envelope
-xmlns:gesmes="http://www.gesmes.org/xml/2002-08-01"
-xmlns="http://www.ecb.int/vocabulary/2002-08-01/eurofxref">
-[K[1mM [m[[1mEXTRACTI  [m][xmlns:gesmes="http://www.gesmes.org/xml/2002-08-01"]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-	<gesmes:subject>Reference
-rates</gesmes:subject>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-Press RETURN to continue, A to abort, Q to Quit, S to suppress pagination
-	<gesmes:Sender>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-		<gesmes:name>European
-Central
-Bank</gesmes:name>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-	</gesmes:Sender>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-	<Cube>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-		<Cube
-time=ý2019-06-11ý>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýUSDý
-rate=ý1.1320ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýJPYý
-rate=ý123.09ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýBGNý
-rate=ý1.9558ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýCZKý
-rate=ý25.640ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýDKKý
-rate=ý7.4687ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýGBPý
-rate=ý0.89085ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýHUFý
-rate=ý320.50ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýPLNý
-rate=ý4.2678ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýRONý
-rate=ý4.7252ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýSEKý
-rate=ý10.6828ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýCHFý
-rate=ý1.1233ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýISKý
-rate=ý140.50ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýNOKý
-rate=ý9.7700ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýHRKý
-rate=ý7.4140ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýRUBý
-rate=ý73.0227ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýTRYý
-rate=ý6.5752ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýAUDý
-rate=ý1.6273ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýBRLý
-rate=ý4.3893ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýCADý
-rate=ý1.5002ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýCNYý
-rate=ý7.8243ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýHKDý
-rate=ý8.8700ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýIDRý
-rate=ý16116.85ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýILSý
-rate=ý4.0544ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýINRý
-rate=ý78.6155ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýKRWý
-rate=ý1337.48ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýMXNý
-rate=ý21.6783ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýMYRý
-rate=ý4.7123ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýNZDý
-rate=ý1.7206ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýPHPý
-rate=ý58.810ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýSGDý
-rate=ý1.5446ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýTHBý
-rate=ý35.403ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-			<Cube
-currency=ýZARý
-rate=ý16.7140ý/>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-		</Cube>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-	</Cube>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-</gesmes:Envelope>
-[K[1mM [m[[1mEXTRACTI  [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mDATA      [m][]
-[K[1mM [m[[1mOUTPUT    [m][sEUR   sptD           D           ]
-[K[1mM [m[[1mDELETE    [m][RVECB]
-[K[1mM [m[[1mSTORE     [m][RVECB]
-[K[1mM [m[[1mPROCESSING[m][COMPLETE]
