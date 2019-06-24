@@ -61,7 +61,7 @@ $INCLUDE UTIL.BP RATECSV.H
             *CALL U_CRT.ACTION("SELL",OUT.SEL)
 
             ROW.DATA = OUT.CCYTN:"D":OUT.BUY:"D":OUT.SEL
-            IF NUM(OUT.BUY) AND NUM(OUT.SELL) THEN
+            IF NUM(OUT.BUY) AND NUM(OUT.SEL) THEN
             OUTPUT.DATA<-1> = ROW.DATA
             END
          END
