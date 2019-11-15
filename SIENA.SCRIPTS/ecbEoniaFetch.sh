@@ -16,7 +16,7 @@
 #
 
 #qmpath="/home/mwt"
-qmpath="/Users/matttownsend/Development/qm/dev"
+qmpath=$(pwd)
 outputDir="SIENA.IN"
 fetchID="EONIA"
 
