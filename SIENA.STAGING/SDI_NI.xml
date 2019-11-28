@@ -75,30 +75,6 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR 3 3/4 19     3.75  19</KEYFIELD>
-<FIELD name="status">Active</FIELD>
-<FIELD name="type">GVT BOND</FIELD>
-<FIELD name="currencyCode">GBP</FIELD>
-<FIELD name="issuer.firm">UKTR</FIELD>
-<FIELD name="issuer.centre">LON</FIELD>
-<FIELD name="acceptor.firm"/>
-<FIELD name="acceptor.centre"/>
-<FIELD name="issueDate">20090630</FIELD>
-<FIELD name="maturityDate">20190907</FIELD>
-<FIELD name="rateType">Fixed</FIELD>
-<FIELD name="couponRate">3.75</FIELD>
-<FIELD name="interestBasis">Actual Actual</FIELD>
-<FIELD name="interestFrequency">6m</FIELD>
-<FIELD name="clearingSystem"/>
-<FIELD name="parentDealType">Government Bond</FIELD>
-<FIELD name="securityID">GB00B4YRFP41</FIELD>
-<FIELD name="encumbered"/>
-<FIELD name="marketable"/>
-<FIELD name="hypothecated"/>
-<FIELD name="repoFactor">100.00</FIELD>
-<FIELD name="lotSize">0.01</FIELD>
-</RECORD>
-<RECORD>
 <KEYFIELD name="name">RETAIL CHARITY BONDS 4.4   25</KEYFIELD>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
@@ -603,7 +579,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 46        0.125 46</KEYFIELD>
+<KEYFIELD name="name">U.K. 0 1/8 IL TG 46  0.125 46</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -651,7 +627,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 36        0.125 36</KEYFIELD>
+<KEYFIELD name="name">U.K. 0 1/8 IL TG 36  0.125 36</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -915,30 +891,6 @@
 <FIELD name="lotSize">2000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">BEAZLEY IRELAND HOLD 5.375 19</KEYFIELD>
-<FIELD name="status">Incomplete</FIELD>
-<FIELD name="type">BOND</FIELD>
-<FIELD name="currencyCode">GBP</FIELD>
-<FIELD name="issuer.firm">PENDING</FIELD>
-<FIELD name="issuer.centre">REV</FIELD>
-<FIELD name="acceptor.firm"/>
-<FIELD name="acceptor.centre"/>
-<FIELD name="issueDate">20120920</FIELD>
-<FIELD name="maturityDate">20190925</FIELD>
-<FIELD name="rateType">Fixed</FIELD>
-<FIELD name="couponRate">5.375</FIELD>
-<FIELD name="interestBasis">Actual Actual</FIELD>
-<FIELD name="interestFrequency">6m</FIELD>
-<FIELD name="clearingSystem"/>
-<FIELD name="parentDealType">Corporate Bond</FIELD>
-<FIELD name="securityID">XS0827693663</FIELD>
-<FIELD name="encumbered"/>
-<FIELD name="marketable"/>
-<FIELD name="hypothecated"/>
-<FIELD name="repoFactor">100.00</FIELD>
-<FIELD name="lotSize">100</FIELD>
-</RECORD>
-<RECORD>
 <KEYFIELD name="name">U.K. 2 25            2     25</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
@@ -1105,30 +1057,6 @@
 <FIELD name="hypothecated"/>
 <FIELD name="repoFactor">100.00</FIELD>
 <FIELD name="lotSize">2000</FIELD>
-</RECORD>
-<RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TG 19  0.125 19</KEYFIELD>
-<FIELD name="status">Active</FIELD>
-<FIELD name="type">GVT BOND</FIELD>
-<FIELD name="currencyCode">GBP</FIELD>
-<FIELD name="issuer.firm">UKTR</FIELD>
-<FIELD name="issuer.centre">LON</FIELD>
-<FIELD name="acceptor.firm"/>
-<FIELD name="acceptor.centre"/>
-<FIELD name="issueDate">20130813</FIELD>
-<FIELD name="maturityDate">20191122</FIELD>
-<FIELD name="rateType">LIBOR</FIELD>
-<FIELD name="couponRate">0.125</FIELD>
-<FIELD name="interestBasis">Actual Actual</FIELD>
-<FIELD name="interestFrequency">6m</FIELD>
-<FIELD name="clearingSystem"/>
-<FIELD name="parentDealType">Government Bond</FIELD>
-<FIELD name="securityID">GB00BBDR7T29</FIELD>
-<FIELD name="encumbered"/>
-<FIELD name="marketable"/>
-<FIELD name="hypothecated"/>
-<FIELD name="repoFactor">100.00</FIELD>
-<FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
 <KEYFIELD name="name">NATWEST MARKETS PLC  5.1   20</KEYFIELD>
@@ -1395,30 +1323,6 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 3 3/4 52        3.75  52</KEYFIELD>
-<FIELD name="status">Active</FIELD>
-<FIELD name="type">GVT BOND</FIELD>
-<FIELD name="currencyCode">GBP</FIELD>
-<FIELD name="issuer.firm">UKTR</FIELD>
-<FIELD name="issuer.centre">LON</FIELD>
-<FIELD name="acceptor.firm"/>
-<FIELD name="acceptor.centre"/>
-<FIELD name="issueDate">20110926</FIELD>
-<FIELD name="maturityDate">20520722</FIELD>
-<FIELD name="rateType">Fixed</FIELD>
-<FIELD name="couponRate">3.75</FIELD>
-<FIELD name="interestBasis">Actual Actual</FIELD>
-<FIELD name="interestFrequency">6m</FIELD>
-<FIELD name="clearingSystem"/>
-<FIELD name="parentDealType">Government Bond</FIELD>
-<FIELD name="securityID">GB00B6RNH572</FIELD>
-<FIELD name="encumbered"/>
-<FIELD name="marketable"/>
-<FIELD name="hypothecated"/>
-<FIELD name="repoFactor">100.00</FIELD>
-<FIELD name="lotSize">1</FIELD>
-</RECORD>
-<RECORD>
 <KEYFIELD name="name">U.K. TR.4 1/4 36     4.25  36</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
@@ -1441,6 +1345,30 @@
 <FIELD name="hypothecated"/>
 <FIELD name="repoFactor">100.00</FIELD>
 <FIELD name="lotSize">0.01</FIELD>
+</RECORD>
+<RECORD>
+<KEYFIELD name="name">U.K. 3 3/4 52        3.75  52</KEYFIELD>
+<FIELD name="status">Active</FIELD>
+<FIELD name="type">GVT BOND</FIELD>
+<FIELD name="currencyCode">GBP</FIELD>
+<FIELD name="issuer.firm">UKTR</FIELD>
+<FIELD name="issuer.centre">LON</FIELD>
+<FIELD name="acceptor.firm"/>
+<FIELD name="acceptor.centre"/>
+<FIELD name="issueDate">20110926</FIELD>
+<FIELD name="maturityDate">20520722</FIELD>
+<FIELD name="rateType">Fixed</FIELD>
+<FIELD name="couponRate">3.75</FIELD>
+<FIELD name="interestBasis">Actual Actual</FIELD>
+<FIELD name="interestFrequency">6m</FIELD>
+<FIELD name="clearingSystem"/>
+<FIELD name="parentDealType">Government Bond</FIELD>
+<FIELD name="securityID">GB00B6RNH572</FIELD>
+<FIELD name="encumbered"/>
+<FIELD name="marketable"/>
+<FIELD name="hypothecated"/>
+<FIELD name="repoFactor">100.00</FIELD>
+<FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
 <KEYFIELD name="name">U.K. 1 3/4 TG 37     3.5   37</KEYFIELD>
@@ -1563,7 +1491,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 TR 56     0.125 56</KEYFIELD>
+<KEYFIELD name="name">U.K. 0 1/8 IL TR 56  0.125 56</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1585,30 +1513,6 @@
 <FIELD name="hypothecated"/>
 <FIELD name="repoFactor">100.00</FIELD>
 <FIELD name="lotSize">0.01</FIELD>
-</RECORD>
-<RECORD>
-<KEYFIELD name="name">SEVERN TRENT UTILITI 6.125 24</KEYFIELD>
-<FIELD name="status">Incomplete</FIELD>
-<FIELD name="type">BOND</FIELD>
-<FIELD name="currencyCode">GBP</FIELD>
-<FIELD name="issuer.firm">PENDING</FIELD>
-<FIELD name="issuer.centre">REV</FIELD>
-<FIELD name="acceptor.firm"/>
-<FIELD name="acceptor.centre"/>
-<FIELD name="issueDate">20020704</FIELD>
-<FIELD name="maturityDate">20240226</FIELD>
-<FIELD name="rateType">Fixed</FIELD>
-<FIELD name="couponRate">6.125</FIELD>
-<FIELD name="interestBasis">30/360</FIELD>
-<FIELD name="interestFrequency">12m</FIELD>
-<FIELD name="clearingSystem"/>
-<FIELD name="parentDealType">Corporate Bond</FIELD>
-<FIELD name="securityID">XS0094475802</FIELD>
-<FIELD name="encumbered"/>
-<FIELD name="marketable"/>
-<FIELD name="hypothecated"/>
-<FIELD name="repoFactor">100.00</FIELD>
-<FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
 <KEYFIELD name="name">U.K. 4.75 30         4.75  30</KEYFIELD>
@@ -1731,7 +1635,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 65        0.125 65</KEYFIELD>
+<KEYFIELD name="name">U.K. 0 1/8 IL TG 65  0.125 65</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1777,30 +1681,6 @@
 <FIELD name="hypothecated"/>
 <FIELD name="repoFactor">100.00</FIELD>
 <FIELD name="lotSize">1000</FIELD>
-</RECORD>
-<RECORD>
-<KEYFIELD name="name">SEVERN TRENT PLC T.2 1.3   22</KEYFIELD>
-<FIELD name="status">Incomplete</FIELD>
-<FIELD name="type">BOND</FIELD>
-<FIELD name="currencyCode">GBP</FIELD>
-<FIELD name="issuer.firm">PENDING</FIELD>
-<FIELD name="issuer.centre">REV</FIELD>
-<FIELD name="acceptor.firm"/>
-<FIELD name="acceptor.centre"/>
-<FIELD name="issueDate">20120705</FIELD>
-<FIELD name="maturityDate">20220711</FIELD>
-<FIELD name="rateType">LIBOR</FIELD>
-<FIELD name="couponRate">1.3</FIELD>
-<FIELD name="interestBasis">Actual Actual</FIELD>
-<FIELD name="interestFrequency">6m</FIELD>
-<FIELD name="clearingSystem"/>
-<FIELD name="parentDealType">Corporate Bond</FIELD>
-<FIELD name="securityID">XS0796078193</FIELD>
-<FIELD name="encumbered"/>
-<FIELD name="marketable"/>
-<FIELD name="hypothecated"/>
-<FIELD name="repoFactor">100.00</FIELD>
-<FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
 <KEYFIELD name="name">U.K. 4 1/4 55        4.25  55</KEYFIELD>
@@ -1873,30 +1753,6 @@
 <FIELD name="hypothecated"/>
 <FIELD name="repoFactor">100.00</FIELD>
 <FIELD name="lotSize">0.01</FIELD>
-</RECORD>
-<RECORD>
-<KEYFIELD name="name">UNITED UTILITIES WAT 5.625 27</KEYFIELD>
-<FIELD name="status">Incomplete</FIELD>
-<FIELD name="type">BOND</FIELD>
-<FIELD name="currencyCode">GBP</FIELD>
-<FIELD name="issuer.firm">PENDING</FIELD>
-<FIELD name="issuer.centre">REV</FIELD>
-<FIELD name="acceptor.firm"/>
-<FIELD name="acceptor.centre"/>
-<FIELD name="issueDate">20021220</FIELD>
-<FIELD name="maturityDate">20271220</FIELD>
-<FIELD name="rateType">Fixed</FIELD>
-<FIELD name="couponRate">5.625</FIELD>
-<FIELD name="interestBasis">Actual Actual</FIELD>
-<FIELD name="interestFrequency">12m</FIELD>
-<FIELD name="clearingSystem"/>
-<FIELD name="parentDealType">Corporate Bond</FIELD>
-<FIELD name="securityID">XS0159728236</FIELD>
-<FIELD name="encumbered"/>
-<FIELD name="marketable"/>
-<FIELD name="hypothecated"/>
-<FIELD name="repoFactor">100.00</FIELD>
-<FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
 <KEYFIELD name="name">U.K. 0 3/4 IL 34     0.75  34</KEYFIELD>
@@ -2019,7 +1875,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 26        0.125 26</KEYFIELD>
+<KEYFIELD name="name">U.K. 0 1/8 IL TG 26  0.125 26</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2667,7 +2523,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 58        0.125 58</KEYFIELD>
+<KEYFIELD name="name">U.K. 0 1/8 IL TG 58  0.125 58</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -3217,30 +3073,6 @@
 <FIELD name="hypothecated"/>
 <FIELD name="repoFactor">100.00</FIELD>
 <FIELD name="lotSize">100</FIELD>
-</RECORD>
-<RECORD>
-<KEYFIELD name="name">SEVERN TRENT UTILITI 6.25  29</KEYFIELD>
-<FIELD name="status">Incomplete</FIELD>
-<FIELD name="type">BOND</FIELD>
-<FIELD name="currencyCode">GBP</FIELD>
-<FIELD name="issuer.firm">PENDING</FIELD>
-<FIELD name="issuer.centre">REV</FIELD>
-<FIELD name="acceptor.firm"/>
-<FIELD name="acceptor.centre"/>
-<FIELD name="issueDate">20020704</FIELD>
-<FIELD name="maturityDate">20290607</FIELD>
-<FIELD name="rateType">Fixed</FIELD>
-<FIELD name="couponRate">6.25</FIELD>
-<FIELD name="interestBasis">30/360</FIELD>
-<FIELD name="interestFrequency">12m</FIELD>
-<FIELD name="clearingSystem"/>
-<FIELD name="parentDealType">Corporate Bond</FIELD>
-<FIELD name="securityID">XS0097777253</FIELD>
-<FIELD name="encumbered"/>
-<FIELD name="marketable"/>
-<FIELD name="hypothecated"/>
-<FIELD name="repoFactor">100.00</FIELD>
-<FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
 <KEYFIELD name="name">RETAIL CHARITY BONDS 5     26</KEYFIELD>
