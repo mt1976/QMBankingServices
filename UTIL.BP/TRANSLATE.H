@@ -3,3 +3,5 @@
 
 equate TRNS.RVSERVER to    1
 equate TRNS.UKTDATA  to    2
+equate TRNS.NIPART   to    3
+equate TRNS.NINAME   to    4
