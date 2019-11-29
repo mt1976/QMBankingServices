@@ -1,0 +1,28 @@
+[K[1mM [m[[1mOPENING   [m][UTIL.CMD.LOG]
+[K[1mM [m[[1mWRITE ID= [m][c1dd935c-347c-4acc-8c72-033f3f111cab]
+[K[1mM [m[[1mOPENING   [m][SIENA.IN]
+[K[1mM [m[[1mOPENING   [m][SIENA.PROCESSED]
+[K[1mM [m[[1mOPENING   [m][SIENA.STAGING]
+[K[1mM [m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[K[1mM [m ___ ___ ___ _  _   _            ___ ___ ___ 
+[K[1mM [m/ __|_ _| __| \| | /_\    ___   / __| _ \_ _|
+[K[1mM [m\__ \| || _|| .` |/ _ \  |___| | (__|  _/| | 
+[K[1mM [m|___/___|___|_|\_/_/ \_\        \___|_| |___|
+[K[1mM [m                                             
+[K[1mM [m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[K[1mM [m[[1mEXECUTE   [m][SELECT SIENA.IN WITH @ID LIKE mm_CPI_rates_...]
+[K[1mM [m[[1mOPENING   [m][UTIL.CMD.LOG]
+[K[1mM [m[[1mWRITE ID= [m][c5b993ec-8fbe-477c-951c-aea1d32f148d]
+[K[1mM [m[[1mPROCESSING[m][mm_CPI_rates_20191128.csv]
+[K[1mM [m[[1mOPENING   [m][TRANSLATE]
+[K[1mM [m[[1mOPENING   [m][TRANSLATE]
+[K[1mM [m[[1mOPENING   [m][TRANSLATE]
+[K[1mM [m[[1mOPENING   [m][TRANSLATE]
+[K[1mM [m[[1mOPENING   [m][TRANSLATE]
+[K[1mM [m[[1mOPENING   [m][TRANSLATE]
+[K[1mM [m[[1mSTORE     [m][26da616e-8960-420f-ada6-9bb44624af60]
+[K[1mM [m[[1mWRITE ID= [m][26da616e-8960-420f-ada6-9bb44624af60]
+[K[1mM [m[[1mDELETE    [m][RVCPI]
+[K[1mM [m[[1mSTORE     [m][RVCPI]
+[K[1mM [m[[1mWRITE ID= [m][RVCPI]
+[K[1mM [m[[1mPROCESSING[m][COMPLETE]
