@@ -3,7 +3,7 @@
 <TRANSACTION type="IMPORT">
 <TABLE name="NegotiableInstrument" classname="com.eurobase.siena.data.negotiableinstrument.NegotiableInstrument">
 <RECORD>
-<KEYFIELD name="name">WESSEX WATER SERVICE 5.75  33</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -27,7 +27,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 2 3/4 TR 24     2.75  24</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -51,7 +51,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">RETAIL CHARITY BONDS 4.25  26</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -75,7 +75,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">RETAIL CHARITY BONDS 4.4   25</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -99,7 +99,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/2 IL 50     0.5   50</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -123,7 +123,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 3 3/4 TR 21     3.75  21</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -147,7 +147,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 4 1/4 46        4.25  46</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -171,7 +171,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 1/4 IL 55     1.25  55</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -195,7 +195,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">EASTERN POWER NETWOR 5.75  24</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -219,7 +219,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 6 28            6     28</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -243,7 +243,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 2 20            2     20</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -267,7 +267,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">INTL. PERSONAL FIN.  6.125 20</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -291,7 +291,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">LONDON STOCK EXCHANG 4.75  21</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -315,7 +315,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TG 68  0.125 68</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -339,7 +339,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">EASTERN GRP EAST.GP. 8.5   25</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -363,7 +363,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">ENQUEST PLC ENQ 22 P 5.5   22</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -387,7 +387,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">PARAGON BANKING GRP  6.125 22</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -411,7 +411,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">UNITE GRP PLC GRP 20 6.125 20</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -435,7 +435,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR 4 1/2 42     4.5   42</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -459,7 +459,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">PLACES FOR PEOPLE FI 4.25  23</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -483,7 +483,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 1/8 IL 37     1.125 37</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -507,7 +507,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">BURFORD CAPITAL PLC  2.5   26</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -531,7 +531,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TR 24  0.125 24</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -555,7 +555,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">LLOYDS BANK PLC BK.4 6.5   40</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -579,7 +579,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TG 46  0.125 46</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -603,7 +603,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">WASPS FIN. PLC 22    6.5   22</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -627,7 +627,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TG 36  0.125 36</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -651,7 +651,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 3/4 TG 23     1.5   23</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -675,7 +675,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">LENDINVEST SECURED I 2.69  23</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -699,7 +699,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 3 3/4 20        3.75  20</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -723,7 +723,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL 29     0.125 29</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -747,7 +747,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">HAMMERSON PLC 7Q28   7.25  28</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -771,7 +771,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 3 1/2 TR GT 68  3.5   68</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -795,7 +795,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">A2D FUNDING PLC FUND 4.75  22</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -819,7 +819,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">VODAFONE GRP PLC NTS 5.625 25</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -843,7 +843,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">PREMIER OIL PLC OIL2 5     20</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -867,7 +867,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">EROS INTL. PLC INT 2 6.5   21</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -891,7 +891,7 @@
 <FIELD name="lotSize">2000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 2 25            2     25</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -915,7 +915,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">TESCO PERSONAL FIN.  1     19</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -939,7 +939,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">LLOYDS BANK PLC BK.9 9.625 23</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -963,7 +963,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">HSBC BANK PLC BK.6.5 6.5   23</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -987,7 +987,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/2 22        0.5   22</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1011,7 +1011,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 3/4 IL 47       0.75  47</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1035,7 +1035,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">REGIONAL REIT LTD RE 4.5   24</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1059,7 +1059,7 @@
 <FIELD name="lotSize">2000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">NATWEST MARKETS PLC  5.1   20</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1083,7 +1083,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR. 4 60        4     60</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1107,7 +1107,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">PARAGON BANKING GRP  6     24</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1131,7 +1131,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">INTERMEDIATE CAPITAL 6.25  20</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1155,7 +1155,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 4 3/4 38        4.75  38</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1179,7 +1179,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">BURFORD CAPITAL FIN. 3.06  25</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">USD</FIELD>
@@ -1203,7 +1203,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">BRITISH TELECOMMUNIC 8.625 20</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1227,7 +1227,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 5 25            5     25</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1251,7 +1251,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR 0 5/8 IL 42  0.625 42</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1275,7 +1275,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">ANGLIAN WATER SERVIC 6.625 23</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1299,7 +1299,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">PROVIDENT FINANCIAL  6     21</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1323,7 +1323,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR.4 1/4 36     4.25  36</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1347,7 +1347,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 3 3/4 52        3.75  52</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1371,7 +1371,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 3/4 TG 37     3.5   37</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1395,7 +1395,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR.4 1/2 34     4.5   34</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1419,7 +1419,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 8 21            8     21</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1443,7 +1443,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">HAMMERSON PLC 626    6     26</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1467,7 +1467,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">A2D FUNDING II PLC F 4.5   26</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1491,7 +1491,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TR 56  0.125 56</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1515,7 +1515,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 4.75 30         4.75  30</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1539,7 +1539,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR 4 1/439      4.25  39</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1563,7 +1563,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">SEGRO PLC SEGRO.6.75 6.75  24</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1587,7 +1587,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">AVIVA PLC 6.12536    6.125 36</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1611,7 +1611,7 @@
 <FIELD name="lotSize">10000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">STANDARD CHARTERED B 5.375 99</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1635,7 +1635,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TG 65  0.125 65</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1659,7 +1659,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">LONDON POWER NETWORK 6.125 27</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1683,7 +1683,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 4 1/4 55        4.25  55</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1707,7 +1707,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">TESCO PLC 6NT29      6     29</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1731,7 +1731,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 7/8 IL 22     1.875 22</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1755,7 +1755,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 3/4 IL 34     0.75  34</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1779,7 +1779,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">BRUNTWOOD INVESTMENT 6     20</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1803,7 +1803,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">HSBC BANK PLC BK.5.3 5.375 33</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1827,7 +1827,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL 44     0.125 44</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1851,7 +1851,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">INTERMEDIATE CAPITAL 5     23</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1875,7 +1875,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TG 26  0.125 26</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1899,7 +1899,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">NATIONAL GRID PLC NA 1.25  21</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1923,7 +1923,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">SSE PLC SSE.5.875    5.875 22</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1947,7 +1947,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">GLAXOSMITHKLINE CAPI 5.25  33</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1971,7 +1971,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">RETAIL CHARITY BONDS 4.375 21</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1995,7 +1995,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 4 1/4 40        4.25  40</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2019,7 +2019,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">BURFORD CAPITAL PLC  6.5   22</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2043,7 +2043,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR 4 22         4     22</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2067,7 +2067,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR.2 1/2IL 24   2.5   24</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2091,7 +2091,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 3/8 IL 62     0.375 62</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2115,7 +2115,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">TESCO PLC TESCO5.50  5.5   19</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2139,7 +2139,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 1/2 TG 47     1.5   47</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2163,7 +2163,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">LADBROKES GRP FIN. P 5.125 22</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2187,7 +2187,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 1/2 TG 21     1.5   21</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2211,7 +2211,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">ALPHA PLUS HOLDINGS  5.75  19</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2235,7 +2235,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 1/4 IL 27     1.25  27</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2259,7 +2259,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">WESSEX WATER SERVICE 5.375 28</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2283,7 +2283,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">PROVIDENT FINANCIAL  7     20</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2307,7 +2307,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">GE CAPITAL UK FUNDIN 5.875 33</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2331,7 +2331,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR.0 5/8IL 40   0.625 40</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2355,7 +2355,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR 4 1/4 49     4.25  49</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2379,7 +2379,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">BRITISH TELECOMMUNIC 5.75  28</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2403,7 +2403,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">B.A.T. INTL. FIN. PL 6.375 19</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2427,7 +2427,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR 2 1/4 23     2.25  23</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2451,7 +2451,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 2 1/2 TG 65     5     65</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2475,7 +2475,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">VODAFONE GRP PLC 5.9 5.9   32</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2499,7 +2499,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/4 IL 52     0.25  52</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2523,7 +2523,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TG 58  0.125 58</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2547,7 +2547,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">LLOYDS BANK PLC BK.  7.625 25</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2571,7 +2571,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">PROVIDENT FINANCIAL  5.125 23</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2595,7 +2595,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 3 1/2 45        7     45</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2619,7 +2619,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">PRUDENTIAL PLC PRU.6 6.875 23</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2643,7 +2643,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 1/4 IL 32     1.25  32</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2667,7 +2667,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">RETAIL CHARITY BONDS 3.9   27</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2691,7 +2691,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 4 1/4 27        4.25  27</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2715,7 +2715,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">LEGAL + GENERAL FIN. 5.875 31</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2739,7 +2739,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">PARAGON BANKING GRP  6     20</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2763,7 +2763,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">PLACES FOR PEOPLE CA 1     22</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2787,7 +2787,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">BURFORD CAPITAL PLC  6.125 24</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2811,7 +2811,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">BARCLAYS BANK PLC BA 5.75  26</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2835,7 +2835,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 1/2 TG 26     1.5   26</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2859,7 +2859,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR.4 1/8IL 30   4.125 30</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2883,7 +2883,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR.2IL 35       2     35</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2907,7 +2907,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR.2HIL 20      2.5   20</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2931,7 +2931,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 4 1/4 32        4.25  32</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2955,7 +2955,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">TESCO PERSONAL FIN.  5     20</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2979,7 +2979,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 3/4 22        1.75  22</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -3003,7 +3003,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">LENDINVEST SECURED I 2.63  22</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -3027,7 +3027,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">ALPHA PLUS HOLDINGS  5     24</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -3051,7 +3051,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">RETAIL CHARITY BONDS 4.25  26</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -3075,7 +3075,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">RETAIL CHARITY BONDS 5     26</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -3099,7 +3099,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">SEGRO PLC SEGRO.5.75 5.75  35</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -3123,7 +3123,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 4 3/4 20        4.75  20</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -3147,7 +3147,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 3/4 TG 57     3.5   57</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -3171,7 +3171,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 3 1/4 44        3.25  44</KEYFIELD>
+<KEYFIELD name="name"/>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
