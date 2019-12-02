@@ -5,7 +5,11 @@ PROGRAM SIENA.DELIVER
    CALL U_HEADER("SIENA - DELIVER FILE(S)")
 
    CMD.STRING = CONVERT(SPACE(1),@AM,@SENTENCE)
-
+   IF CMD.STRING<2> = "" THEN
+     CALL U_CRT.ACTION("ERROR","Parameters [ALL, or specific type i.e. RVMARKET]")
+     CALL U_STOP(PROCESS.NAME)
+     STOP
+   END
 * remove the program name from the stack of cmds
   DEL CMD.STRING<1>
 * loop through the cmd strings
