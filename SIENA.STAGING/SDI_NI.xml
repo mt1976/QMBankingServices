@@ -27,7 +27,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 2 3/4 TR 24     2.75  24</KEYFIELD>
+<KEYFIELD name="name">U*K* 2 3/4 TR 24     2.75  24</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -99,7 +99,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/2 IL 50     0.5   50</KEYFIELD>
+<KEYFIELD name="name">U*K* 0 1/2 IL 50     0.5   50</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -109,7 +109,7 @@
 <FIELD name="acceptor.centre"/>
 <FIELD name="issueDate">20090923</FIELD>
 <FIELD name="maturityDate">20500322</FIELD>
-<FIELD name="rateType">LIBOR</FIELD>
+<FIELD name="rateType">Variable</FIELD>
 <FIELD name="couponRate">0.5</FIELD>
 <FIELD name="interestBasis">Actual Actual</FIELD>
 <FIELD name="interestFrequency">6m</FIELD>
@@ -123,7 +123,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 3 3/4 TR 21     3.75  21</KEYFIELD>
+<KEYFIELD name="name">U*K* 3 3/4 TR 21     3.75  21</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -147,7 +147,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 4 1/4 46        4.25  46</KEYFIELD>
+<KEYFIELD name="name">U*K* 4 1/4 46        4.25  46</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -171,7 +171,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 1/4 IL 55     1.25  55</KEYFIELD>
+<KEYFIELD name="name">U*K* 1 1/4 IL 55     1.25  55</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -219,7 +219,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 6 28            6     28</KEYFIELD>
+<KEYFIELD name="name">U*K* 6 28            6     28</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -243,7 +243,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 2 20            2     20</KEYFIELD>
+<KEYFIELD name="name">U*K* 2 20            2     20</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -315,7 +315,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TG 68  0.125 68</KEYFIELD>
+<KEYFIELD name="name">U*K* 0 1/8 IL TG 68  0.125 68</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -325,7 +325,7 @@
 <FIELD name="acceptor.centre"/>
 <FIELD name="issueDate">20130923</FIELD>
 <FIELD name="maturityDate">20680322</FIELD>
-<FIELD name="rateType">LIBOR</FIELD>
+<FIELD name="rateType">Variable</FIELD>
 <FIELD name="couponRate">0.125</FIELD>
 <FIELD name="interestBasis">Actual Actual</FIELD>
 <FIELD name="interestFrequency">6m</FIELD>
@@ -339,7 +339,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">EASTERN GROUP EAST.G 8.5   25</KEYFIELD>
+<KEYFIELD name="name">EASTERN GROUP EAST*G 8.5   25</KEYFIELD>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -435,7 +435,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR 4 1/2 42     4.5   42</KEYFIELD>
+<KEYFIELD name="name">U*K* TR 4 1/2 42     4.5   42</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -483,7 +483,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 1/8 IL 37     1.125 37</KEYFIELD>
+<KEYFIELD name="name">U*K* 1 1/8 IL 37     1.125 37</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -531,7 +531,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TR 24  0.125 24</KEYFIELD>
+<KEYFIELD name="name">U*K* 0 1/8 IL TR 24  0.125 24</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -541,7 +541,7 @@
 <FIELD name="acceptor.centre"/>
 <FIELD name="issueDate">20121002</FIELD>
 <FIELD name="maturityDate">20240322</FIELD>
-<FIELD name="rateType">LIBOR</FIELD>
+<FIELD name="rateType">Variable</FIELD>
 <FIELD name="couponRate">0.125</FIELD>
 <FIELD name="interestBasis">Actual Actual</FIELD>
 <FIELD name="interestFrequency">6m</FIELD>
@@ -555,7 +555,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">LLOYDS BANK PLC BK.4 6.5   40</KEYFIELD>
+<KEYFIELD name="name">LLOYDS BANK PLC BK*4 6.5   40</KEYFIELD>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -579,7 +579,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TG 46  0.125 46</KEYFIELD>
+<KEYFIELD name="name">U*K* 0 1/8 IL TG 46  0.125 46</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -589,7 +589,7 @@
 <FIELD name="acceptor.centre"/>
 <FIELD name="issueDate">20150622</FIELD>
 <FIELD name="maturityDate">20460322</FIELD>
-<FIELD name="rateType">LIBOR</FIELD>
+<FIELD name="rateType">Variable</FIELD>
 <FIELD name="couponRate">0.125</FIELD>
 <FIELD name="interestBasis">Actual Actual</FIELD>
 <FIELD name="interestFrequency">6m</FIELD>
@@ -627,7 +627,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TG 36  0.125 36</KEYFIELD>
+<KEYFIELD name="name">U*K* 0 1/8 IL TG 36  0.125 36</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -651,7 +651,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 3/4 TG 23     1.5   23</KEYFIELD>
+<KEYFIELD name="name">U*K* 0 3/4 TG 23     1.5   23</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -699,7 +699,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 3 3/4 20        3.75  20</KEYFIELD>
+<KEYFIELD name="name">U*K* 3 3/4 20        3.75  20</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -723,7 +723,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL 29     0.125 29</KEYFIELD>
+<KEYFIELD name="name">U*K* 0 1/8 IL 29     0.125 29</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -733,7 +733,7 @@
 <FIELD name="acceptor.centre"/>
 <FIELD name="issueDate">20111121</FIELD>
 <FIELD name="maturityDate">20290322</FIELD>
-<FIELD name="rateType">LIBOR</FIELD>
+<FIELD name="rateType">Variable</FIELD>
 <FIELD name="couponRate">0.125</FIELD>
 <FIELD name="interestBasis">Actual Actual</FIELD>
 <FIELD name="interestFrequency">6m</FIELD>
@@ -771,7 +771,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 3 1/2 TR GT 68  3.5   68</KEYFIELD>
+<KEYFIELD name="name">U*K* 3 1/2 TR GT 68  3.5   68</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -891,7 +891,7 @@
 <FIELD name="lotSize">2000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 2 25            2     25</KEYFIELD>
+<KEYFIELD name="name">U*K* 2 25            2     25</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -925,7 +925,7 @@
 <FIELD name="acceptor.centre"/>
 <FIELD name="issueDate">20111212</FIELD>
 <FIELD name="maturityDate">20191216</FIELD>
-<FIELD name="rateType">LIBOR</FIELD>
+<FIELD name="rateType">Variable</FIELD>
 <FIELD name="couponRate">1</FIELD>
 <FIELD name="interestBasis">Actual Actual</FIELD>
 <FIELD name="interestFrequency">6m</FIELD>
@@ -939,7 +939,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">LLOYDS BANK PLC BK.9 9.625 23</KEYFIELD>
+<KEYFIELD name="name">LLOYDS BANK PLC BK*9 9.625 23</KEYFIELD>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -963,7 +963,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">HSBC BANK PLC BK.6.5 6.5   23</KEYFIELD>
+<KEYFIELD name="name">HSBC BANK PLC BK*6*5 6.5   23</KEYFIELD>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -987,7 +987,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/2 22        0.5   22</KEYFIELD>
+<KEYFIELD name="name">U*K* 0 1/2 22        0.5   22</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1011,7 +1011,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 3/4 IL 47       0.75  47</KEYFIELD>
+<KEYFIELD name="name">U*K* 3/4 IL 47       0.75  47</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1083,7 +1083,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR. 4 60        4     60</KEYFIELD>
+<KEYFIELD name="name">U*K* TR* 4 60        4     60</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1155,7 +1155,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 4 3/4 38        4.75  38</KEYFIELD>
+<KEYFIELD name="name">U*K* 4 3/4 38        4.75  38</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1227,7 +1227,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 5 25            5     25</KEYFIELD>
+<KEYFIELD name="name">U*K* 5 25            5     25</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1251,7 +1251,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR 0 5/8 IL 42  0.625 42</KEYFIELD>
+<KEYFIELD name="name">U*K* TR 0 5/8 IL 42  0.625 42</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1323,7 +1323,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR.4 1/4 36     4.25  36</KEYFIELD>
+<KEYFIELD name="name">U*K* TR*4 1/4 36     4.25  36</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1347,7 +1347,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 3 3/4 52        3.75  52</KEYFIELD>
+<KEYFIELD name="name">U*K* 3 3/4 52        3.75  52</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1371,7 +1371,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 3/4 TG 37     3.5   37</KEYFIELD>
+<KEYFIELD name="name">U*K* 1 3/4 TG 37     3.5   37</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1395,7 +1395,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR.4 1/2 34     4.5   34</KEYFIELD>
+<KEYFIELD name="name">U*K* TR*4 1/2 34     4.5   34</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1419,7 +1419,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 8 21            8     21</KEYFIELD>
+<KEYFIELD name="name">U*K* 8 21            8     21</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1491,7 +1491,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TR 56  0.125 56</KEYFIELD>
+<KEYFIELD name="name">U*K* 0 1/8 IL TR 56  0.125 56</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1515,7 +1515,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 4.75 30         4.75  30</KEYFIELD>
+<KEYFIELD name="name">U*K* 4*75 30         4.75  30</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1539,7 +1539,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR 4 1/439      4.25  39</KEYFIELD>
+<KEYFIELD name="name">U*K* TR 4 1/439      4.25  39</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1563,7 +1563,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">SEGRO PLC SEGRO.6.75 6.75  24</KEYFIELD>
+<KEYFIELD name="name">SEGRO PLC SEGRO*6*75 6.75  24</KEYFIELD>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1587,7 +1587,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">AVIVA PLC 6.12536    6.125 36</KEYFIELD>
+<KEYFIELD name="name">AVIVA PLC 6*12536    6.125 36</KEYFIELD>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1635,7 +1635,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TG 65  0.125 65</KEYFIELD>
+<KEYFIELD name="name">U*K* 0 1/8 IL TG 65  0.125 65</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1683,7 +1683,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 4 1/4 55        4.25  55</KEYFIELD>
+<KEYFIELD name="name">U*K* 4 1/4 55        4.25  55</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1731,7 +1731,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 7/8 IL 22     1.875 22</KEYFIELD>
+<KEYFIELD name="name">U*K* 1 7/8 IL 22     1.875 22</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1755,7 +1755,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 3/4 IL 34     0.75  34</KEYFIELD>
+<KEYFIELD name="name">U*K* 0 3/4 IL 34     0.75  34</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1765,7 +1765,7 @@
 <FIELD name="acceptor.centre"/>
 <FIELD name="issueDate">20110524</FIELD>
 <FIELD name="maturityDate">20340322</FIELD>
-<FIELD name="rateType">LIBOR</FIELD>
+<FIELD name="rateType">Variable</FIELD>
 <FIELD name="couponRate">0.75</FIELD>
 <FIELD name="interestBasis">Actual Actual</FIELD>
 <FIELD name="interestFrequency">6m</FIELD>
@@ -1803,7 +1803,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">HSBC BANK PLC BK.5.3 5.375 33</KEYFIELD>
+<KEYFIELD name="name">HSBC BANK PLC BK*5*3 5.375 33</KEYFIELD>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1827,7 +1827,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL 44     0.125 44</KEYFIELD>
+<KEYFIELD name="name">U*K* 0 1/8 IL 44     0.125 44</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1837,7 +1837,7 @@
 <FIELD name="acceptor.centre"/>
 <FIELD name="issueDate">20120723</FIELD>
 <FIELD name="maturityDate">20440322</FIELD>
-<FIELD name="rateType">LIBOR</FIELD>
+<FIELD name="rateType">Variable</FIELD>
 <FIELD name="couponRate">0.125</FIELD>
 <FIELD name="interestBasis">Actual Actual</FIELD>
 <FIELD name="interestFrequency">6m</FIELD>
@@ -1875,7 +1875,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TG 26  0.125 26</KEYFIELD>
+<KEYFIELD name="name">U*K* 0 1/8 IL TG 26  0.125 26</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1885,7 +1885,7 @@
 <FIELD name="acceptor.centre"/>
 <FIELD name="issueDate">20150707</FIELD>
 <FIELD name="maturityDate">20260322</FIELD>
-<FIELD name="rateType">LIBOR</FIELD>
+<FIELD name="rateType">Variable</FIELD>
 <FIELD name="couponRate">0.125</FIELD>
 <FIELD name="interestBasis">Actual Actual</FIELD>
 <FIELD name="interestFrequency">6m</FIELD>
@@ -1909,7 +1909,7 @@
 <FIELD name="acceptor.centre"/>
 <FIELD name="issueDate">20110930</FIELD>
 <FIELD name="maturityDate">20211006</FIELD>
-<FIELD name="rateType">LIBOR</FIELD>
+<FIELD name="rateType">Variable</FIELD>
 <FIELD name="couponRate">1.25</FIELD>
 <FIELD name="interestBasis">Actual Actual</FIELD>
 <FIELD name="interestFrequency">6m</FIELD>
@@ -1923,7 +1923,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">SSE PLC SSE.5.875    5.875 22</KEYFIELD>
+<KEYFIELD name="name">SSE PLC SSE*5*875    5.875 22</KEYFIELD>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -1995,7 +1995,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 4 1/4 40        4.25  40</KEYFIELD>
+<KEYFIELD name="name">U*K* 4 1/4 40        4.25  40</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2043,7 +2043,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR 4 22         4     22</KEYFIELD>
+<KEYFIELD name="name">U*K* TR 4 22         4     22</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2067,7 +2067,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR.2 1/2IL 24   2.5   24</KEYFIELD>
+<KEYFIELD name="name">U*K* TR*2 1/2IL 24   2.5   24</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2091,7 +2091,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 3/8 IL 62     0.375 62</KEYFIELD>
+<KEYFIELD name="name">U*K* 0 3/8 IL 62     0.375 62</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2101,7 +2101,7 @@
 <FIELD name="acceptor.centre"/>
 <FIELD name="issueDate">20111020</FIELD>
 <FIELD name="maturityDate">20620322</FIELD>
-<FIELD name="rateType">LIBOR</FIELD>
+<FIELD name="rateType">Variable</FIELD>
 <FIELD name="couponRate">0.375</FIELD>
 <FIELD name="interestBasis">Actual Actual</FIELD>
 <FIELD name="interestFrequency">6m</FIELD>
@@ -2115,7 +2115,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">TESCO PLC TESCO5.50  5.5   19</KEYFIELD>
+<KEYFIELD name="name">TESCO PLC TESCO5*50  5.5   19</KEYFIELD>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2139,7 +2139,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 1/2 TG 47     1.5   47</KEYFIELD>
+<KEYFIELD name="name">U*K* 1 1/2 TG 47     1.5   47</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2187,7 +2187,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 1/2 TG 21     1.5   21</KEYFIELD>
+<KEYFIELD name="name">U*K* 1 1/2 TG 21     1.5   21</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2235,7 +2235,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 1/4 IL 27     1.25  27</KEYFIELD>
+<KEYFIELD name="name">U*K* 1 1/4 IL 27     1.25  27</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2331,7 +2331,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR.0 5/8IL 40   0.625 40</KEYFIELD>
+<KEYFIELD name="name">U*K* TR*0 5/8IL 40   0.625 40</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2341,7 +2341,7 @@
 <FIELD name="acceptor.centre"/>
 <FIELD name="issueDate">20100127</FIELD>
 <FIELD name="maturityDate">20400922</FIELD>
-<FIELD name="rateType">LIBOR</FIELD>
+<FIELD name="rateType">Variable</FIELD>
 <FIELD name="couponRate">0.625</FIELD>
 <FIELD name="interestBasis">Actual Actual</FIELD>
 <FIELD name="interestFrequency">6m</FIELD>
@@ -2355,7 +2355,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR 4 1/4 49     4.25  49</KEYFIELD>
+<KEYFIELD name="name">U*K* TR 4 1/4 49     4.25  49</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2403,7 +2403,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">B.A.T. INTERNATIONAL 6.375 19</KEYFIELD>
+<KEYFIELD name="name">B*A*T* INTERNATIONAL 6.375 19</KEYFIELD>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2427,7 +2427,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR 2 1/4 23     2.25  23</KEYFIELD>
+<KEYFIELD name="name">U*K* TR 2 1/4 23     2.25  23</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2451,7 +2451,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 2 1/2 TG 65     5     65</KEYFIELD>
+<KEYFIELD name="name">U*K* 2 1/2 TG 65     5     65</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2499,7 +2499,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/4 IL 52     0.25  52</KEYFIELD>
+<KEYFIELD name="name">U*K* 0 1/4 IL 52     0.25  52</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2509,7 +2509,7 @@
 <FIELD name="acceptor.centre"/>
 <FIELD name="issueDate">20120924</FIELD>
 <FIELD name="maturityDate">20520322</FIELD>
-<FIELD name="rateType">LIBOR</FIELD>
+<FIELD name="rateType">Variable</FIELD>
 <FIELD name="couponRate">0.25</FIELD>
 <FIELD name="interestBasis">Actual Actual</FIELD>
 <FIELD name="interestFrequency">6m</FIELD>
@@ -2523,7 +2523,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 0 1/8 IL TG 58  0.125 58</KEYFIELD>
+<KEYFIELD name="name">U*K* 0 1/8 IL TG 58  0.125 58</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2547,7 +2547,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">LLOYDS BANK PLC BK.  7.625 25</KEYFIELD>
+<KEYFIELD name="name">LLOYDS BANK PLC BK*  7.625 25</KEYFIELD>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2595,7 +2595,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 3 1/2 45        7     45</KEYFIELD>
+<KEYFIELD name="name">U*K* 3 1/2 45        7     45</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2619,7 +2619,7 @@
 <FIELD name="lotSize">1</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">PRUDENTIAL PLC PRU.6 6.875 23</KEYFIELD>
+<KEYFIELD name="name">PRUDENTIAL PLC PRU*6 6.875 23</KEYFIELD>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2643,7 +2643,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 1/4 IL 32     1.25  32</KEYFIELD>
+<KEYFIELD name="name">U*K* 1 1/4 IL 32     1.25  32</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2691,7 +2691,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 4 1/4 27        4.25  27</KEYFIELD>
+<KEYFIELD name="name">U*K* 4 1/4 27        4.25  27</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2773,7 +2773,7 @@
 <FIELD name="acceptor.centre"/>
 <FIELD name="issueDate">20120126</FIELD>
 <FIELD name="maturityDate">20220131</FIELD>
-<FIELD name="rateType">LIBOR</FIELD>
+<FIELD name="rateType">Variable</FIELD>
 <FIELD name="couponRate">1</FIELD>
 <FIELD name="interestBasis">Actual Actual</FIELD>
 <FIELD name="interestFrequency">6m</FIELD>
@@ -2835,7 +2835,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 1/2 TG 26     1.5   26</KEYFIELD>
+<KEYFIELD name="name">U*K* 1 1/2 TG 26     1.5   26</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2859,7 +2859,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR.4 1/8IL 30   4.125 30</KEYFIELD>
+<KEYFIELD name="name">U*K* TR*4 1/8IL 30   4.125 30</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2883,7 +2883,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR.2IL 35       2     35</KEYFIELD>
+<KEYFIELD name="name">U*K* TR*2IL 35       2     35</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2907,7 +2907,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. TR.2HIL 20      2.5   20</KEYFIELD>
+<KEYFIELD name="name">U*K* TR*2HIL 20      2.5   20</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2931,7 +2931,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 4 1/4 32        4.25  32</KEYFIELD>
+<KEYFIELD name="name">U*K* 4 1/4 32        4.25  32</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -2979,7 +2979,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 3/4 22        1.75  22</KEYFIELD>
+<KEYFIELD name="name">U*K* 1 3/4 22        1.75  22</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -3099,7 +3099,7 @@
 <FIELD name="lotSize">100</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">SEGRO PLC SEGRO.5.75 5.75  35</KEYFIELD>
+<KEYFIELD name="name">SEGRO PLC SEGRO*5*75 5.75  35</KEYFIELD>
 <FIELD name="status">Incomplete</FIELD>
 <FIELD name="type">BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -3123,7 +3123,7 @@
 <FIELD name="lotSize">1000</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 4 3/4 20        4.75  20</KEYFIELD>
+<KEYFIELD name="name">U*K* 4 3/4 20        4.75  20</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -3147,7 +3147,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 1 3/4 TG 57     3.5   57</KEYFIELD>
+<KEYFIELD name="name">U*K* 1 3/4 TG 57     3.5   57</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
@@ -3171,7 +3171,7 @@
 <FIELD name="lotSize">0.01</FIELD>
 </RECORD>
 <RECORD>
-<KEYFIELD name="name">U.K. 3 1/4 44        3.25  44</KEYFIELD>
+<KEYFIELD name="name">U*K* 3 1/4 44        3.25  44</KEYFIELD>
 <FIELD name="status">Active</FIELD>
 <FIELD name="type">GVT BOND</FIELD>
 <FIELD name="currencyCode">GBP</FIELD>
