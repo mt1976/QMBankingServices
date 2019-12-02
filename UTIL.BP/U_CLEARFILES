@@ -22,9 +22,9 @@ PROGRAM U_CLEARFILES
    FOR THIS.CMD = 1 TO NO.CMDS
       DELIVERY.TYPE = CMD.STRING<THIS.CMD>
       CALL U_CRT.ACTION("PROCESS", DELIVERY.TYPE)
-      STMT = "SELECT ":FN.UTIL.CONFIG:" LIKE clear.":LOWER(DELIVERY.TYPE):".properties"
+      STMT = "SELECT ":FN.UTIL.CONFIG:" LIKE clear.":DELIVERY.TYPE"MCL":".properties"
       IF DELIVERY.TYPE = "ALL" THEN
-         STMT = "SELECT ":FN.UTIL.CONFIG:" LIKE clear.":"...":".properties"
+         STMT = "SELECT ":FN.UTIL.CONFIG:" LIKE clear":"...":"properties"
       END
       GOSUB PROCESS.IT
    NEXT THIS.CMD
