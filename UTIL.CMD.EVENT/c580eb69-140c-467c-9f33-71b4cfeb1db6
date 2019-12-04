@@ -1,0 +1,15 @@
+CURL
+20191204
+09.24.59
+sales
+
+c580eb69-140c-467c-9f33-71b4cfeb1db6
+sh curl -sL "https://api.stlouisfed.org/fred/series/observations?series_id=TB4WK&api_key=d4d50b886c05baa2795c363319ca64db&realtime_start=2019-12-02&realtime_end=2019-12-03&file_type=json"
+https://api.stlouisfed.org/fred/series/observations?series_id=TB4WK&api_key=d4d50b886c05baa2795c363319ca64db&realtime_start=2019-12-02&realtime_end=2019-12-03&file_type=json
+0
+U_CURL
+/dev/pts/0
+6
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.FEEDS
