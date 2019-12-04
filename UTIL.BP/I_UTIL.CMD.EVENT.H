@@ -1,4 +1,4 @@
-* Log Info Template
+* Log Info Template - First Version
 equate U_LOG_EVENT    to 1
 equate U_LOG_DATE     to 2
 equate U_LOG_TIME     to 3
