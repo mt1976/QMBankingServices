@@ -1,0 +1,40 @@
+[K[7mM [m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[K[7mM [m  ___ ___ ___   _ _____ ___   ___ ___ _    ___  _______  
+[K[7mM [m / __| _ \ __| /_\_   _| __| | __|_ _| |  | __|/ / __\ \ 
+[K[7mM [m| (__|   / _| / _ \| | | _|  | _| | || |__| _|| |\__ \| |
+[K[7mM [m \___|_|_\___/_/ \_\_| |___| |_| |___|____|___| ||___/| |
+[K[7mM [m                                               \_\   /_/ 
+[K[7mM [m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[K[7mM [m[[1mNO PROCESS[m][1]
+[K[7mM [m[[1mPROCESS   [m][ALL]
+[K[7mM [m[[1mSTMT      [m][SELECT UTIL.CONFIG LIKE create...properties]
+[K[7mM [m[[1mEXECUTE   [m][SELECT UTIL.CONFIG LIKE create...properties]
+[K[7mM [m[[1mNO PROPERT[m][2]
+[K[7mM [m[[1m<1>       [m][create.siena.properties]
+[K[7mM [m[[1m<2>       [m][create.util.properties]
+[K[7mM [m[[1mPROPERTIES[m][create.siena.properties]
+[K[7mM [m[[1mFILES     [m][5]
+[K[7mM [m[[1m<1>       [m][#=----------------------------------------------------------------------------=]
+[K[7mM [m[[1m<2>       [m][#=FILES TO AUTO CREATE=]
+[K[7mM [m[[1m<3>       [m][FILE=SIENA.PROCESSED=]
+[K[7mM [m[[1m<4>       [m][FILE=SIENA.TEMP=]
+[K[7mM [m[[1m<5>       [m][FILE=SIENA.STAGING=]
+[K[7mM [m[[1mCREATE    [m][SIENA.PROCESSED]
+[K[7mM [m[[1mEXECUTE   [m][CREATE-FILE SIENA.PROCESSED DIRECTORY]
+[K[7mM [m[[1mCREATE    [m][SIENA.TEMP]
+[K[7mM [m[[1mEXECUTE   [m][CREATE-FILE SIENA.TEMP DIRECTORY]
+[K[7mM [m[[1mCREATE    [m][SIENA.STAGING]
+[K[7mM [m[[1mEXECUTE   [m][CREATE-FILE SIENA.STAGING DIRECTORY]
+[K[7mM [m[[1mPROPERTIES[m][create.util.properties]
+[K[7mM [m[[1mFILES     [m][5]
+[K[7mM [m[[1m<1>       [m][#=----------------------------------------------------------------------------=]
+[K[7mM [m[[1m<2>       [m][#=AUTO CREATE FILES=]
+[K[7mM [m[[1m<3>       [m][FILE=UTIL.LOG=]
+[K[7mM [m[[1m<4>       [m][FILE=UTIL.CMD.LOG=]
+[K[7mM [m[[1m<5>       [m][FILE=UTIL.CMD.EVENT=]
+[K[7mM [m[[1mCREATE    [m][UTIL.LOG]
+[K[7mM [m[[1mEXECUTE   [m][CREATE-FILE UTIL.LOG DIRECTORY]
+[K[7mM [m[[1mCREATE    [m][UTIL.CMD.LOG]
+[K[7mM [m[[1mEXECUTE   [m][CREATE-FILE UTIL.CMD.LOG DIRECTORY]
+[K[7mM [m[[1mCREATE    [m][UTIL.CMD.EVENT]
+[K[7mM [m[[1mEXECUTE   [m][CREATE-FILE UTIL.CMD.EVENT DIRECTORY]
