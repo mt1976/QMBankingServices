@@ -1,0 +1,15 @@
+CURL
+20191205
+15.00.25
+root
+
+759c6978-c84c-4e68-8689-9555747c5541
+sh curl -sL "https://api.stlouisfed.org/fred/series/observations?series_id=TB4WK&api_key=d4d50b886c05baa2795c363319ca64db&realtime_start=2019-12-03&realtime_end=2019-12-04&file_type=json"
+https://api.stlouisfed.org/fred/series/observations?series_id=TB4WK&api_key=d4d50b886c05baa2795c363319ca64db&realtime_start=2019-12-03&realtime_end=2019-12-04&file_type=json
+0
+U_CURL
+/dev/ttys002
+4
+/Users/matttownsend/Development/qm/dev
+DEV
+SIENA.FEEDS

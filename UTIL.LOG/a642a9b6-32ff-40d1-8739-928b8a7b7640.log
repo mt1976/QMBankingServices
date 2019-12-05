@@ -1,0 +1,40 @@
+[K[7mM [m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[K[7mM [m  ___ _    ___   _   ___   ___ ___ _    ___  _______  
+[K[7mM [m / __| |  | __| /_\ | _ \ | __|_ _| |  | __|/ / __\ \ 
+[K[7mM [m| (__| |__| _| / _ \|   / | _| | || |__| _|| |\__ \| |
+[K[7mM [m \___|____|___/_/ \_\_|_\ |_| |___|____|___| ||___/| |
+[K[7mM [m                                            \_\   /_/ 
+[K[7mM [m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[K[7mM [m[[1mNO PROCESS[m][1]
+[K[7mM [m[[1mPROCESS   [m][ALL]
+[K[7mM [m[[1mSTMT      [m][SELECT UTIL.CONFIG LIKE clear...properties]
+[K[7mM [m[[1mEXECUTE   [m][SELECT UTIL.CONFIG LIKE clear...properties]
+[K[7mM [m[[1mNO PROPERT[m][2]
+[K[7mM [m[[1m<1>       [m][clear.util.properties]
+[K[7mM [m[[1m<2>       [m][clear.siena.properties]
+[K[7mM [m[[1mPROPERTIES[m][clear.util.properties]
+[K[7mM [m[[1mFILES     [m][5]
+[K[7mM [m[[1m<1>       [m][#=----------------------------------------------------------------------------=]
+[K[7mM [m[[1m<2>       [m][#=CLEARFILES=]
+[K[7mM [m[[1m<3>       [m][FILE=UTIL.LOG=]
+[K[7mM [m[[1m<4>       [m][FILE=UTIL.CMD.LOG=]
+[K[7mM [m[[1m<5>       [m][FILE=UTIL.CMD.EVENT=]
+[K[7mM [m[[1mCLEAR     [m][UTIL.LOG]
+[K[7mM [m[[1mEXECUTE   [m][CLEAR-FILE DATA UTIL.LOG]
+[K[7mM [m[[1mCLEAR     [m][UTIL.CMD.LOG]
+[K[7mM [m[[1mEXECUTE   [m][CLEAR-FILE DATA UTIL.CMD.LOG]
+[K[7mM [m[[1mCLEAR     [m][UTIL.CMD.EVENT]
+[K[7mM [m[[1mEXECUTE   [m][CLEAR-FILE DATA UTIL.CMD.EVENT]
+[K[7mM [m[[1mPROPERTIES[m][clear.siena.properties]
+[K[7mM [m[[1mFILES     [m][5]
+[K[7mM [m[[1m<1>       [m][#=----------------------------------------------------------------------------=]
+[K[7mM [m[[1m<2>       [m][#=FILES TO CLEAR=]
+[K[7mM [m[[1m<3>       [m][FILE=SIENA.PROCESSED=]
+[K[7mM [m[[1m<4>       [m][FILE=SIENA.TEMP=]
+[K[7mM [m[[1m<5>       [m][FILE=SIENA.STAGING=]
+[K[7mM [m[[1mCLEAR     [m][SIENA.PROCESSED]
+[K[7mM [m[[1mEXECUTE   [m][CLEAR-FILE DATA SIENA.PROCESSED]
+[K[7mM [m[[1mCLEAR     [m][SIENA.TEMP]
+[K[7mM [m[[1mEXECUTE   [m][CLEAR-FILE DATA SIENA.TEMP]
+[K[7mM [m[[1mCLEAR     [m][SIENA.STAGING]
+[K[7mM [m[[1mEXECUTE   [m][CLEAR-FILE DATA SIENA.STAGING]
