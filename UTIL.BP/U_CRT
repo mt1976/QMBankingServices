@@ -8,25 +8,23 @@ CALL U_GET.PROPERTY("UTIL.CONFIG","util","timeZone",timeZone)
 CALL U_GET.PROPERTY("UTIL.CONFIG","util","csvChar",csvChar)
 
 SET.TIMEZONE timeZone
-OUTPUT.DATE := OCONV(EPOCH(),dateTimeFormat)
-
+OUTPUT.DATE = OCONV(EPOCH(),dateTimeFormat)
+OUTPUT.TEXT = ""
 BEGIN CASE
 CASE outputMode = U_OUTPUTMODE_log4j
 
-  OUTPUT.TEXT = ""
+
   * 20191203 UTC 16:15:39.089 INFO  NetClientImpl Client connecting on [localhost/127.0.0.1:7397]..
   * 20191203 UTC 16:15:39.121 INFO  NetChannelHandler Channel open
   OUTPUT.TEXT := OUTPUT.DATE
   OUTPUT.TEXT := " ":outputType:" ":TEXT
 CASE outputMode = U_OUTPUTMODE_csv
-  OUTPUT.TEXT = ""
-  * 20191203 UTC 16:15:39.089 INFO  NetClientImpl Client connecting on [localhost/127.0.0.1:7397]..
-  * 20191203 UTC 16:15:39.121 INFO  NetChannelHandler Channel open
+  * "20191203 UTC 16:15:39.089","INFO","NetClientImpl Client connecting on [localhost/127.0.0.1:7397]"
   OUTPUT.TEXT := DQUOTE(OUTPUT.DATE)
   OUTPUT.TEXT := csvChar:DQUOTE(outputType):csvChar:DQUOTE(TEXT)
 
 CASE 1
-   OUTPUT.TEXT = @(U_REVERSE_ON):U_PREF:@(U_REVERSE_OFF):OUTPUT.DATE:" ":TEXT
+   OUTPUT.TEXT := @(U_REVERSE_ON):U_PREF:@(U_REVERSE_OFF):OUTPUT.DATE:" ":TEXT
 END CASE
 DISPLAY @(U_CLEAR_LINE):OUTPUT.TEXT
 
