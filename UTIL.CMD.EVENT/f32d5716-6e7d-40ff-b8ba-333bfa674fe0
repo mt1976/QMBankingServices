@@ -1,0 +1,15 @@
+EXCUTE
+20191209
+15.50.01
+sales
+
+f32d5716-6e7d-40ff-b8ba-333bfa674fe0
+SSELECT SIENA.SCRIPTS LIKE ...fxSPfetch.sh...
+
+1
+U_EXECUTE
+
+528
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.RUN.SCRIPT fxSPfetch.sh
