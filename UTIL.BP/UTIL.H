@@ -33,3 +33,4 @@ equate U_COL_BRIGHT_MAGENTA  to     13
 equate U_COL_YELLOW          to     14
 equate U_COL_BRIGHT_WHITE    to     15
 equate U_OUTPUTMODE_log4j    to    "log4j"
+equate U_OUTPUTMODE_csv      to    "csv"

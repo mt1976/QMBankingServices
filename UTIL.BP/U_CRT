@@ -1,22 +1,34 @@
 SUBROUTINE U_CRT(TEXT)
 $INCLUDE UTIL.BP UTIL.H
 CALL U_GET.PROPERTY("UTIL.CONFIG","util","outputMode",outputMode)
-IF outputMode = U_OUTPUTMODE_log4j THEN
-
-
-dateTimeFormat = "" ; outputType = ""
+dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
 CALL U_GET.PROPERTY("UTIL.CONFIG","util","dateTimeFormat",dateTimeFormat)
 CALL U_GET.PROPERTY("UTIL.CONFIG","util","outputType",outputType)
 CALL U_GET.PROPERTY("UTIL.CONFIG","util","timeZone",timeZone)
+CALL U_GET.PROPERTY("UTIL.CONFIG","util","csvChar",csvChar)
+
 SET.TIMEZONE timeZone
+OUTPUT.DATE := OCONV(EPOCH(),dateTimeFormat)
+
+BEING CASE
+CASE outputMode = U_OUTPUTMODE_log4j
+
   OUTPUT.TEXT = ""
   * 20191203 UTC 16:15:39.089 INFO  NetClientImpl Client connecting on [localhost/127.0.0.1:7397]..
   * 20191203 UTC 16:15:39.121 INFO  NetChannelHandler Channel open
-  OUTPUT.TEXT := OCONV(EPOCH(),dateTimeFormat)
+  OUTPUT.TEXT := OUTPUT.DATE
   OUTPUT.TEXT := " ":outputType:" ":TEXT
-  DISPLAY @(U_CLEAR_LINE):OUTPUT.TEXT
-END ELSE
-   DISPLAY @(U_CLEAR_LINE):@(U_REVERSE_ON):U_PREF:@(U_REVERSE_OFF):TEXT
-END
+CASE outputMode = U_OUTPUTMODE_csv
+  OUTPUT.TEXT = ""
+  * 20191203 UTC 16:15:39.089 INFO  NetClientImpl Client connecting on [localhost/127.0.0.1:7397]..
+  * 20191203 UTC 16:15:39.121 INFO  NetChannelHandler Channel open
+  OUTPUT.TEXT := DQUOTE(OUTPUT.DATE)
+  OUTPUT.TEXT := csvChar:DQUOTE(outputType):csvChar:DQUOTE(TEXT)
+
+CASE 1
+   OUTPUT.TEXT = @(U_REVERSE_ON):U_PREF:@(U_REVERSE_OFF):OUTPUT.DATE:" ":TEXT
+END CASE
+DISPLAY @(U_CLEAR_LINE):OUTPUT.TEXT
+
    RETURN
 END
