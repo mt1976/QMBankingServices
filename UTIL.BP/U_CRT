@@ -12,7 +12,7 @@ CALL U_GET.PROPERTY("UTIL.CONFIG","util","outputType",outputType)
   * 20191203 UTC 16:15:39.121 INFO  NetChannelHandler Channel open
   OUTPUT.TEXT := OCONV(EPOCH(),dateTimeFormat)
   OUTPUT.TEXT := " ":outputType:" ":TEXT
-
+  DISPLAY @(U_CLEAR_LINE):OUTPUT.TEXT
 END ELSE
    DISPLAY @(U_CLEAR_LINE):@(U_REVERSE_ON):U_PREF:@(U_REVERSE_OFF):TEXT
 END
