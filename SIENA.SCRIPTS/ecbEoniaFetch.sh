@@ -17,6 +17,7 @@
 
 #qmpath="/home/mwt"
 qmpath=$(pwd)
+qmpath="/home/sales/qm/account/mwt-QM-dev"
 outputDir="SIENA.IN"
 fetchID="EONIA"
 
