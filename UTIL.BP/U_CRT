@@ -1,7 +1,7 @@
 SUBROUTINE U_CRT(TEXT)
 $INCLUDE UTIL.BP UTIL.H
 CALL U_GET.PROPERTY("UTIL.CONFIG","util","outputMode",outputMode)
-IF outputMode = U_OUTPUTMODE.log4j THEN
+IF outputMode = U_OUTPUTMODE_log4j THEN
 
 dateTimeFormat = "" ; outputType = ""
 CALL U_GET.PROPERTY("UTIL.CONFIG","util","dateTimeFormat",dateTimeFormat)

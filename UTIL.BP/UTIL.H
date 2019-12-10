@@ -32,4 +32,4 @@ equate U_COL_BRIGHT_RED      to     12
 equate U_COL_BRIGHT_MAGENTA  to     13
 equate U_COL_YELLOW          to     14
 equate U_COL_BRIGHT_WHITE    to     15
-equate U_OUTPUTMODE.log4j  = "log4j"
+equate U_OUTPUTMODE_log4j  = "log4j"
