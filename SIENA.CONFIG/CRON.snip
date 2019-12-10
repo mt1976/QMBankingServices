@@ -1,6 +1,6 @@
-15 15 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.ECB
-17 15 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DELIVER RVECB
-0,10,20,30,40,50 * * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.SCRIPT fxSPfetch.sh
-2,12,22,32,42,52 * * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.FXSP
-3,13,23,33,43,53 * * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DELIVER RVMARKET
-* * * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm U_KEEPALIVE  
+15 15 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.ECB >> CRON.log
+17 15 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DELIVER RVECB >> CRON.log
+0,10,20,30,40,50 * * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.RUN.SCRIPT fxSPfetch.sh >> CRON.log
+2,12,22,32,42,52 * * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.FXSP >> CRON.log
+3,13,23,33,43,53 * * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DELIVER RVMARKET >> CRON.log
+* * * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm U_KEEPALIVE >> CRON.log
