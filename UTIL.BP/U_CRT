@@ -10,7 +10,7 @@ CALL U_GET.PROPERTY("UTIL.CONFIG","util","csvChar",csvChar)
 SET.TIMEZONE timeZone
 OUTPUT.DATE := OCONV(EPOCH(),dateTimeFormat)
 
-BEING CASE
+BEGIN CASE
 CASE outputMode = U_OUTPUTMODE_log4j
 
   OUTPUT.TEXT = ""
