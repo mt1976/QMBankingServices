@@ -26,7 +26,7 @@ echo "[M] initLoc = "$initLoc
 . $initLoc
 
 
-clear
+#clear
 figlet -f small "[M] Get Spot FX Rates"
 echo
 echo "[M] Attempt to get 'latest' spot fx rates for processing"
