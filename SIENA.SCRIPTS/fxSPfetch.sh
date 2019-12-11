@@ -19,7 +19,7 @@
 #qmhome="/home/sales/qm/account/mwt-QM-dev"
 #jq="/snap/bin/jq"
 #outputDir="SIENA.IN"
-. ./mdsInit.sh
+. mdsInit.sh
 
 fetchID="SP"
 
