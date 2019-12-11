@@ -87,7 +87,7 @@ echo "[M] Rate Value = ["$rateValu"]"
 
 
 destFile=""
-destFile+=$qmhome
+destFile+=$qmHome
 destFile+="/"
 destFile+=$outputDir
 destFile+="/"
