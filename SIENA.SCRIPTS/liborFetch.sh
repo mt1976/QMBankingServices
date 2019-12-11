@@ -50,7 +50,7 @@ do
   echo "[M] SERIES ID = ["$seriesKEY"]"
   outCCY=${seriesKEY:0:3}
   outTENOR=${seriesKEY:3:2}
-  outputFileName=$qmhome"/SIENA.TEMP/fred_"$fetchID"_"$seriesKEY"_"$dateID".json"
+  outputFileName=$qmHome"/SIENA.TEMP/fred_"$fetchID"_"$seriesKEY"_"$dateID".json"
   #outputFileName="liborDataSnatched/fred_libor_"$seriesKEY"_"$dateID".json"
   echo "[M] OUT CCY   = ["$outCCY"]"
 
