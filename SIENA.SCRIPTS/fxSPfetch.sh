@@ -20,16 +20,13 @@
 #jq="/snap/bin/jq"
 #outputDir="SIENA.IN"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-echo "[M] i'm in  = "$DIR
 initLoc=$DIR"/mdsInit.sh"
-echo "[M] initLoc = "$initLoc
 . $initLoc
 
-
 #clear
-figlet -f small "[M] Get Spot FX Rates"
+figlet -f digital "[M] Get Spot FX Rates"
 echo
-echo "[M] Attempt to get 'latest' spot fx rates for processing"
+echo "[M] Get 'latest' spot fx rates for processing"
 echo
 fetchID="SP"
 endpoint="latest"
