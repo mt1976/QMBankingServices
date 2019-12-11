@@ -19,21 +19,24 @@
 #qmhome="/home/sales/qm/account/mwt-QM-dev"
 #jq="/snap/bin/jq"
 #outputDir="SIENA.IN"
-. mdsInit.sh
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+initloc=$DIR+"mdsInit.sh"
+echo "[M] initLoc = "$initLoc
+. $initLoc
 
-fetchID="SP"
 
 clear
 figlet -f small "[M] Get Spot FX Rates"
 echo
 echo "[M] Attempt to get 'latest' spot fx rates for processing"
 echo
+fetchID="SP"
 endpoint="latest"
 accessKey=$fixerAccessKey
 urlDest="http://data.fixer.io/api/"
 baseCCY="EUR"
 symbols="USD,JPY,GBP,BTC,CAD,AUD,XAU,CHF,MXN,NOK,DKK,RUR,RMB,HKD,CAD,CHF,DKK,GBP,HKD,JPY,NOK,SEK,SGD,USD,ZAR"
-path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+path=$mdsHome
 newline="\n"
 dateID=$(date "+%Y%m%d%H%M")
 rateSource="2"
