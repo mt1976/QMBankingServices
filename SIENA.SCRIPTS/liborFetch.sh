@@ -14,9 +14,9 @@
 # Revsion:
 # ===================================================================
 #
-#qmpath="/home/mwt"
-#qmpath=$(pwd)
-#qmpath="/home/sales/qm/account/mwt-QM-dev"
+#qmhome="/home/mwt"
+#qmhome=$(pwd)
+#qmhome="/home/sales/qm/account/mwt-QM-dev"
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 initLoc=$DIR"/mdsInit.sh"
@@ -29,15 +29,13 @@ path=$mdsHome
 
 #clear
 figlet -f digital "[M] Fetch "$fetchID" Rate"
-echo
 echo "[M] Get 'latest' "$fetchID" rate for processing"
-echo
 
 apiKey=$fredAccessKey
 dateID=$(date "+%Y%m%d")
 dateFetch=$(date "+%Y-%m-%d")
 #dateTo=$(date "+%d-%m-%Y" --date="1 days ago")
-#outputFileName=$qmpath"/SIENA.TEMP/fred_"$fetchID"_"$dateID".tmp"
+#outputFileName=$qmhome"/SIENA.TEMP/fred_"$fetchID"_"$dateID".tmp"
 
 echo "[M] TODAY     = ["$dateID"]"
 echo "[M] FETCH     = ["$dateFetch"]"
@@ -52,7 +50,7 @@ do
   echo "[M] SERIES ID = ["$seriesKEY"]"
   outCCY=${seriesKEY:0:3}
   outTENOR=${seriesKEY:3:2}
-  outputFileName=$qmpath"/SIENA.TEMP/fred_"$fetchID"_"$seriesKEY"_"$dateID".json"
+  outputFileName=$qmhome"/SIENA.TEMP/fred_"$fetchID"_"$seriesKEY"_"$dateID".json"
   #outputFileName="liborDataSnatched/fred_libor_"$seriesKEY"_"$dateID".json"
   echo "[M] OUT CCY   = ["$outCCY"]"
 
@@ -89,7 +87,7 @@ echo "[M] Rate Value = ["$rateValu"]"
 
 
 destFile=""
-destFile+=$qmpath
+destFile+=$qmhome
 destFile+="/"
 destFile+=$outputDir
 destFile+="/"
@@ -123,5 +121,5 @@ echo -e "$outputFile" >> "$destFile"
 
 done
 
-figlet -f small "[M] JOB DONE"
+figlet -f digital "[M] JOB DONE"
 #

@@ -18,8 +18,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 initLoc=$DIR"/mdsInit.sh"
 . $initLoc
 
-#qmpath=$(pwd)
-#qmpath="/home/sales/qm/account/mwt-QM-dev"
+#qmHome=$(pwd)
+#qmHome="/home/sales/qm/account/mwt-QM-dev"
 #outputDir="SIENA.IN"
 
 fetchID="EONIA"
@@ -38,7 +38,7 @@ dateTo=$(date -v -1d "+%d-%m-%Y")
 
 fetchID="EONIA"
 
-outputFileName=$qmpath"/SIENA.TEMP/ecb_"$fetchID"_"$dateID".xml"
+outputFileName=$qmHome"/SIENA.TEMP/ecb_"$fetchID"_"$dateID".xml"
 
 seriesKEY="198.EON.D.EONIA_TO.RATE"
 echo "[M] TODAY     = ["$dateID"]"
@@ -75,7 +75,7 @@ echo "[M] EONIA     = ["$rRate"]"
 # Right, lets store this bugger
 
 destFile=""
-destFile+=$qmpath
+destFile+=$qmHome
 destFile+="/"
 destFile+=$outputDir
 destFile+="/"

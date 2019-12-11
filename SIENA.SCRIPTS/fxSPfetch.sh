@@ -34,13 +34,13 @@ accessKey=$fixerAccessKey
 urlDest="http://data.fixer.io/api/"
 baseCCY="EUR"
 symbols="USD,JPY,GBP,BTC,CAD,AUD,XAU,CHF,MXN,NOK,DKK,RUR,RMB,HKD,CAD,CHF,DKK,GBP,HKD,JPY,NOK,SEK,SGD,USD,ZAR"
-path=$mdsHome
+path=$qmHome
 newline="\n"
 dateID=$(date "+%Y%m%d%H%M")
 rateSource="2"
 
 destFile=""
-destFile+=$qmhome
+destFile+=$qmHome
 destFile+="/"
 destFile+=$outputDir
 destFile+="/"
@@ -50,7 +50,7 @@ destFile+=".csv"
 
 #
 #echo $fileHDR
-echo "[M] qmhome         = ["$qmhome"]"
+echo "[M] qmhome         = ["$qmHome"]"
 echo "[M] jq             = ["$jq"]"
 echo "[M] fixerAccessKey = ["$fixerAccessKey"]"
 echo "[M] path           = ["$path"]"
@@ -131,5 +131,5 @@ done
 #
 #rm "$destFile"
 echo -e "$outputFile" >> "$destFile"
-figlet -f small "[M] JOB DONE"
+figlet -f digital "[M] JOB DONE"
 #
