@@ -33,8 +33,8 @@ echo "[M] Get 'latest' EONIA rate for processing"
 echo
 
 dateID=$(date "+%Y%m%d")
-dateFrom=$(date -v -2d "+%d-%m-%Y")
-dateTo=$(date -v -1d "+%d-%m-%Y")
+dateFrom=$(date --date "2 day ago" "+%d-%m-%Y")
+dateTo=$(date --date "1 day ago" "+%d-%m-%Y")
 
 fetchID="EONIA"
 
