@@ -21,7 +21,7 @@
 #outputDir="SIENA.IN"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 echo "[M] i'm in  = "$DIR
-initloc=$DIR+"mdsInit.sh"
+initLoc=$DIR+"mdsInit.sh"
 echo "[M] initLoc = "$initLoc
 . $initLoc
 
