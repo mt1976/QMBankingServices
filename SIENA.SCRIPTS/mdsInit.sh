@@ -14,11 +14,9 @@
 # Revsion:
 # ===================================================================
 #
-qmhome="/home/sales/qm/account/mwt-QM-dev"
-jq="/snap/bin/jq"
-fixerAccessKey="c3811be81a6df1db0e14304d77b3a23d"
-outputDir="SIENA.IN"
-export qmhome
-export jq
-export fixerAccessKey
-export outputDir
+echo "[M] INITIALISE COMMON VARS"
+export qmhome="/home/sales/qm/account/mwt-QM-dev"
+export jq="/snap/bin/jq"
+export fixerAccessKey="c3811be81a6df1db0e14304d77b3a23d"
+export outputDir="SIENA.IN"
+echo "[M] INITIALISE COMMON VARS - DONE"
