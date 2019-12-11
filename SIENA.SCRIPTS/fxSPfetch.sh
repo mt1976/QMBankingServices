@@ -14,9 +14,10 @@
 # Revsion:
 # ===================================================================
 #
-#qmpath="/home/mwt"
-qmpath=$(pwd)
-qmpath="/home/sales/qm/account/mwt-QM-dev"
+#qmhome="/home/mwt"
+qmhome=$(pwd)
+qmhome="/home/sales/qm/account/mwt-QM-dev"
+jq="/snap/bin/jq"
 outputDir="SIENA.IN"
 fetchID="SP"
 
@@ -36,7 +37,7 @@ dateID=$(date "+%Y%m%d%H%M")
 rateSource="2"
 
 destFile=""
-destFile+=$qmpath
+destFile+=$qmhome
 destFile+="/"
 destFile+=$outputDir
 destFile+="/"
@@ -74,10 +75,10 @@ curlArgs=""
 # Execute the curl URL request_cmd
 result=$(curl $curlArgs "$request_cmd")
 #
-rateDate=$(echo $result | jq -r '.date')
-rateBase=$(echo $result | jq -r '.base')
-rateRates=$(echo $result | jq '.rates')
-noRates=$(echo $result | jq '.rates|length')
+rateDate=$(echo $result | $jq -r '.date')
+rateBase=$(echo $result | $jq -r '.base')
+rateRates=$(echo $result | $jq '.rates')
+noRates=$(echo $result | $jq '.rates|length')
 #
 echo "MT: result    = ["$result"]"
 echo "MT: rateDate  = ["$rateDate"]"
@@ -92,8 +93,8 @@ for ((c=1;c<=$noRates;c++))
 do
 #
   id="$(($c-1))"
-  rCCY=$(echo $result | jq -r '.rates | keys | .['$id']')
-  rRate=$(echo $result | jq -r '.rates.'$rCCY)
+  rCCY=$(echo $result | $jq -r '.rates | keys | .['$id']')
+  rRate=$(echo $result | $jq -r '.rates.'$rCCY)
 #
   echo "MT: > index      = ["$id"] ["$rCCY"] "$c" "$id" ["$rRate"] "$c" "$id
 #
