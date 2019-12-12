@@ -55,7 +55,7 @@ $INCLUDE UTIL.BP RATECSV.H
    CALL U_STOP(PROCESS.NAME)
 
    RETURN
-END
+
 PROCESS.HTML:
 * --------------------------
 * WORKING ON CURRENCY PAIR
@@ -82,3 +82,6 @@ CALL U_CRT.RECORD(PTS.SEARCH.DATA)
 NEXT THIS.TENOR
 
 RETURN
+
+*-------------------------------------
+END
