@@ -9,3 +9,4 @@ equate U_TRNS.RVSERVER to 1
 equate U_TRNS.UKTDATA to 2
 equate U_TRNS.NIPART to 3
 equate U_TRNS.NINAME to 4
+equate U_TRNS.BARCHARTCOM to 5
