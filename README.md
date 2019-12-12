@@ -15,58 +15,20 @@ TBC
 * xmlstarlet
 * qm
 * git
+* chrome
 
 
-## Installation
-### 1) Installing Linux Tools
-#### Installing on Debian
-```shell
-$ sudo apt-get install figlet curl jq xmlstarlet git
-```
-#### Installing on mac with Homebrew
-```shell
-$ brew install figlet curl jq xmlstarlet git
-```
+Setup key with:
 
-### 2) Installing QM
-QM is Free to use (for 1 user) product from Zumasys which provides powerful string manipulation and data processing capabilities.
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+Setup repository with:
 
-https://www.openqm.com/
-Downloads can be found at: https://www.openqm.com/downloads/
-
-As OpenQM is a 3rd party product its installation instructions may change, therefore please follow the instructions on the OpenQM website.
-
-#### QM for Windows
-Please use the "Self extracting archive for full Windows installation including documentation and QMClient".
-#### QM for Linux
-Please use the "Self extracting archive for Linux installation (Red Hat, Fedora, Debian, Ubuntu, Suse, Centos, etc)"".
-
-### 3) Installing Product
-Change location to the home directory you wish to use going foward e.g.
-"/home/sales/qm/account/"
-``` shell
-git clone https://github.com/mt1976/mwt-QM-dev.git
-```
-A new folder will be created call mwt-QM-dev
-
-### 4) Installing Processing Tools
-When you LOGIN to QM for the first time QM will ask if you wish to create a new 'Account'. Change directory into the directory that was just created by git.
-``` shell
-$ cd mwt-QM-dev
-$ qm
-[ QM Rev 3.4-14   Copyright Zumasys Inc., 2019 ]
-[ 0103035549  For personal use only ]
-
-Current directory /home/sales/qm/account/mwt-QM-dev is not a valid account. Create account?
-```
-Type 'Yes', then from the ':' prompt type the following;
-``` shell
-:COPY FROM $ACC TO VOC INSTALL.UTILS
-:INSTALL.UTILS
-:COPY FROM $ACC TO VOC INSTALL.SIENA.TOOLS
-:INSTALL INSTALL.SIENA.TOOLS
-```
-Congraturlations! The software is now installed!
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+Setup package with:
+sudo apt-get update
+sudo apt-get install google-chrome
+sudo apt-get install -f
+---
 
 After installation a number of new directories will have been created;
 ``` ls

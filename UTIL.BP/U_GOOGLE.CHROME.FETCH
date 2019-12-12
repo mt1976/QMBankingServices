@@ -1,0 +1,38 @@
+SUBROUTINE U_GOOGLE.CHROME.FETCH(URI, VERBOSE, RESULT)
+$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
+
+* GOOGLE CHROME FETCH
+* -------------------
+* Uses a headless google-chrome instance to scrap fully rendered html & data from a uri
+* the result is stored and returned to the calling process.
+
+* Get the location of the chrome executable;
+CHROME.LOCATION = "" ; CHROME.DEFAULTS = ""
+CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "chromeLocation", CHROME.LOCATION)
+CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "chromeDefaults", CHROME.DEFAULTS)
+
+       CALL U_CRT.ACTION("CHROME.FETCH", "START")
+       CALL U_CRT.ACTION("CHROME.FETCH", URI)
+
+      *HUSH ON
+
+      STMT = CHROME.LOCATION:SPACE(1):CHROME.DEFAULTS:SPACE(1):URI
+
+      OS.EXECUTE STMT
+
+      * HUSH OFF
+
+      CALL U_CRT.ACTION("CHROME.FETCH", "STOP")
+
+   R.EVENT = ""
+   R.EVENT<U_LOG_EVENT> = "CHROME.FETCH"
+   R.EVENT<U_LOG_CMD>   = STMT
+   R.EVENT<U_LOG_URI>   = URI
+   R.EVENT<U_LOG_RETCD> = @SYSTEM.RETURN.CODE
+   R.EVENT<U_LOG_SUBR>  = "U_GOOGLE.CHROME.FETCH"
+
+   CALL U_LOG.CMD(STMT,R.EVENT)
+
+   RETURN
+END
