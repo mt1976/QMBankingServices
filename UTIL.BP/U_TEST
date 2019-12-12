@@ -10,6 +10,17 @@ PROGRAM U_TEST
    CALL U_CRT.ACTION("PATH",@PATH)
    CALL U_CRT.ACTION("WHO",@WHO)
 
+   URI     = "https://www.barchart.com/forex/quotes/%5EUSDCAD/forward-rates"
+   VERBOSE = @TRUE
+   RESULT  = ""
+
+   CALL U_GOOGLE.CHROME.FETCH(URI, VERBOSE, RESULT)
+
+   CALL U_CRT.ACTION("START","START")
+   CALL U_CRT.RECORD(RESULT)
+   CALL U_CRT.ACTION("STOP","STOP")
+
+
    CALL U_STOP("")
    STOP
 END
