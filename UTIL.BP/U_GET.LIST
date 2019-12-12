@@ -27,7 +27,7 @@ $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
 
          IF UP.TEST.LIST = UP.SEARCH.LIST THEN
             NO.ITEMS += 1
-            RETURN.LIST<-1> = TEST.VAL<2>)
+            RETURN.LIST<-1> = TEST.VAL<2>
          END
 
       NEXT
