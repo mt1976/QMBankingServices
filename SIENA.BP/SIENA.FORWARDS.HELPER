@@ -24,7 +24,9 @@ $INCLUDE UTIL.BP RATECSV.H
    CALL U_GET.PROPERTY("SIENA.CONFIG", "forwards", "uriSuffix", URI.SUFFIX)
    CALL U_GET.PROPERTY("SIENA.CONFIG", "forwards", "RVType", RVTYPE)
    CALL U_GET.PROPERTY("SIENA.CONFIG", "forwards", "RVFrig", RVFRIG)
+   CALL U_GET.PROPERTY("SIENA.CONFIG", "forwards", "precision", precisionValue)
 
+   PRECISION precisionValue
 
    CCYPAIR.LIST = "" ; NO.PAIRS = -1
    CALL U_GET.LIST("SIENA.CONFIG", "forwards", "X", CCYPAIR.LIST, NO.PAIRS)
