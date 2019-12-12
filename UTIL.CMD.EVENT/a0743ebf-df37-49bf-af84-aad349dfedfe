@@ -1,0 +1,15 @@
+EXECUTE
+20191211
+11.01.43
+sales
+
+a0743ebf-df37-49bf-af84-aad349dfedfe
+SSELECT SIENA.SCRIPTS LIKE ...ecbEoniaFetch.sh...
+
+1
+U_EXECUTE
+/dev/pts/2
+94
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.RUN.SCRIPT ecbEoniaFetch.sh

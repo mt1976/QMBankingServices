@@ -1,0 +1,62 @@
+[K"20191211T102956","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191211T102956","INFO","+-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+-+"
+[K"20191211T102956","INFO","|S|C|R|I|P|T| |f|x|S|P|f|e|t|c|h|.|s|h|"
+[K"20191211T102956","INFO","+-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+-+"
+[K"20191211T102956","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191211T102956","INFO","[[1mHOME      [m][/home/sales/qm/account/mwt-QM-dev]"
+[K"20191211T102956","INFO","[[1mEXECUTE   [m][SSELECT SIENA.SCRIPTS LIKE ...fxSPfetch.sh...]"
+[K"20191211T102956","INFO","[[1mOUTPUT    [m][]"
+[K"20191211T102956","INFO","[[1mNO.SCRIPTS[m][1]"
+[K"20191211T102956","INFO","[[1mSCRIPT    [m][fxSPfetch.sh]"
+[K"20191211T102956","INFO","[[1mINSTRUCTIO[m][bash /home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS/fxSPfetch.sh]"
+[K"20191211T102956","INFO","[[1mOS.COMMAND[m][bash /home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS/fxSPfetch.sh]"
+[M] i'm in  = /home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS
+[M] initLoc = 
+/home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS/fxSPfetch.sh: line 26: .: filename argument required
+.: usage: . filename [arguments]
+ __ __  __ __    ___     _     ___           _     _____  __
+| _|  \/  |_ |  / __|___| |_  / __|_ __  ___| |_  | __\ \/ /
+| || |\/| || | | (_ / -_)  _| \__ \ '_ \/ _ \  _| | _| >  < 
+| ||_|  |_|| |  \___\___|\__| |___/ .__/\___/\__| |_| /_/\_\
+|__|      |__|                    |_|                       
+ ___      _          
+| _ \__ _| |_ ___ ___
+|   / _` |  _/ -_|_-<
+|_|_\__,_|\__\___/__/
+                     
+
+[M] Attempt to get 'latest' spot fx rates for processing
+
+[M] qmhome         = []
+[M] jq             = []
+[M] fixerAccessKey = []
+[M] path           = []
+[M] outputDir      = []
+[M] endpoint       = [latest]
+[M] accessKey      = []
+[M] urlDest        = [http://data.fixer.io/api/]
+[M] symbols        = [USD,JPY,GBP,BTC,CAD,AUD,XAU,CHF,MXN,NOK,DKK,RUR,RMB,HKD,CAD,CHF,DKK,GBP,HKD,JPY,NOK,SEK,SGD,USD,ZAR]
+[M] dateID         = [201912111029]
+[M] destFile       = [//fx_SP_rates_201912111029.csv]
+[M] rateSource     = [2]
+[M] request     = [http://data.fixer.io/api/latest?access_key=&symbols=USD,JPY,GBP,BTC,CAD,AUD,XAU,CHF,MXN,NOK,DKK,RUR,RMB,HKD,CAD,CHF,DKK,GBP,HKD,JPY,NOK,SEK,SGD,USD,ZAR]
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   162    0   162    0     0    487      0 --:--:-- --:--:-- --:--:--   487
+/home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS/fxSPfetch.sh: line 87: -r: command not found
+/home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS/fxSPfetch.sh: line 88: -r: command not found
+/home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS/fxSPfetch.sh: line 89: .rates: command not found
+/home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS/fxSPfetch.sh: line 90: .rates|length: command not found
+[M] result    = [{"success":false,"error":{"code":101,"type":"missing_access_key","info":"You have not supplied an API Access Key. [Required format: access_key=YOUR_ACCESS_KEY]"}}]
+[M] rateDate  = []
+[M] rateBase  = []
+[M] rateRates = []
+[M] noRates   = []
+/home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS/fxSPfetch.sh: line 101: ((: c<=: syntax error: operand expected (error token is "<=")
+/home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS/fxSPfetch.sh: line 136: //fx_SP_rates_201912111029.csv: Permission denied
+ __ __  __ __      _  ___  ___   ___   ___  _  _ ___ 
+| _|  \/  |_ |  _ | |/ _ \| _ ) |   \ / _ \| \| | __|
+| || |\/| || | | || | (_) | _ \ | |) | (_) | .` | _| 
+| ||_|  |_|| |  \__/ \___/|___/ |___/ \___/|_|\_|___|
+|__|      |__|                                       
+[K"20191211T102957","INFO","[[1mPROCESSING[m][COMPLETE]"

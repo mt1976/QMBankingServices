@@ -1,0 +1,49 @@
+[K"20191211T110820","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191211T110820","INFO","+-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+"
+[K"20191211T110820","INFO","|S|C|R|I|P|T| |c|p|i|F|e|t|c|h|.|s|h|"
+[K"20191211T110820","INFO","+-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+"
+[K"20191211T110820","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191211T110820","INFO","[[1mHOME      [m][/home/sales/qm/account/mwt-QM-dev]"
+[K"20191211T110820","INFO","[[1mEXECUTE   [m][SSELECT SIENA.SCRIPTS LIKE ...cpiFetch.sh...]"
+[K"20191211T110820","INFO","[[1mOUTPUT    [m][]"
+[K"20191211T110820","INFO","[[1mNO.SCRIPTS[m][1]"
+[K"20191211T110820","INFO","[[1mSCRIPT    [m][cpiFetch.sh]"
+[K"20191211T110820","INFO","[[1mINSTRUCTIO[m][bash /home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS/cpiFetch.sh]"
+[K"20191211T110820","INFO","[[1mOS.COMMAND[m][bash /home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS/cpiFetch.sh]"
+[M] INITIALISE COMMON VARS - START
+[M] QMHOME         = [/home/sales/qm/account/mwt-QM-dev]
+[M] JQ             = [/snap/bin/jq]
+[M] FIXERACCESSKEY = [c3811be81a6df1db0e14304d77b3a23d]
+[M] FREDACCESSKEY  = [d4d50b886c05baa2795c363319ca64db]
+[M] OUTPUTDIR      = [SIENA.IN]
+[M] MDSHOME        = [/home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS]
+[M] INITIALISE COMMON VARS - DONE
++-+-+-+ +-+-+-+-+-+ +-+-+-+ +-+-+-+-+
+|[|M|]| |F|e|t|c|h| |C|P|I| |R|a|t|e|
++-+-+-+ +-+-+-+-+-+ +-+-+-+ +-+-+-+-+
+
+[M] Attempt to get 'latest' CPI rate for processing
+
+[M] TODAY     = [20191211]
+[M] FETCH     = [2019-12-11]
+[M] API KEY   = [d4d50b886c05baa2795c363319ca64db]
+[M] SERIES ID = [GBRCPIALLMINMEI]
+[M] OUT CCY   = [GBR]
+[M] OUT TENOR = [CP]
+[M] OUTPUT TO = [/home/sales/qm/account/mwt-QM-dev/SIENA.TEMP/fred_CPI_GBRCPIALLMINMEI_20191211.json]
+[M] request    = [https://api.stlouisfed.org/fred/series/observations?series_id=GBRCPIALLMINMEI&api_key=d4d50b886c05baa2795c363319ca64db&realtime_start=2019-12-11&realtime_end=2019-12-11&file_type=json]
+[M] No. Rates = [776]
+[M] Rate Date = ["2019-09-01"]
+[M] Rate Value = ["108.4"]
+[M] SERIES ID = [CPALCY01USQ661N]
+[M] OUT CCY   = [CPA]
+[M] OUT TENOR = [LC]
+[M] OUTPUT TO = [/home/sales/qm/account/mwt-QM-dev/SIENA.TEMP/fred_CPI_CPALCY01USQ661N_20191211.json]
+[M] request    = [https://api.stlouisfed.org/fred/series/observations?series_id=CPALCY01USQ661N&api_key=d4d50b886c05baa2795c363319ca64db&realtime_start=2019-12-11&realtime_end=2019-12-11&file_type=json]
+[M] No. Rates = [258]
+[M] Rate Date = ["2019-07-01"]
+[M] Rate Value = ["107.152401671028"]
++-+-+-+ +-+-+-+ +-+-+-+-+
+|[|M|]| |J|O|B| |D|O|N|E|
++-+-+-+ +-+-+-+ +-+-+-+-+
+[K"20191211T110821","INFO","[[1mPROCESSING[m][COMPLETE]"

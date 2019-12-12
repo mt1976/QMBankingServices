@@ -1,0 +1,15 @@
+EXECUTE
+20191211
+10.59.04
+sales
+
+40433871-0ffc-45ae-bfec-5b16fc61b9ab
+SSELECT SIENA.SCRIPTS LIKE ...liborFetch.sh...
+
+1
+U_EXECUTE
+/dev/pts/2
+92
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.RUN.SCRIPT liborFetch.sh

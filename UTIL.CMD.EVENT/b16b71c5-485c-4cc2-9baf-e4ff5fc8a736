@@ -1,0 +1,15 @@
+CHROME.FETCH
+20191212
+10.35.59
+sales
+
+b16b71c5-485c-4cc2-9baf-e4ff5fc8a736
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EUSDCAD/forward-rates
+https://www.barchart.com/forex/quotes/%5EUSDCAD/forward-rates
+0
+U_GOOGLE.CHROME.FETCH
+/dev/pts/2
+115
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+U_TEST
