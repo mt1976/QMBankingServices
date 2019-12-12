@@ -10,7 +10,7 @@ PROGRAM U_TEST
    CALL U_CRT.ACTION("PATH",@PATH)
    CALL U_CRT.ACTION("WHO",@WHO)
 
-   URI     = ""
+   URI     = "https://www.barchart.com/forex/quotes/%5EUSDCAD/forward-rates"
    VERBOSE = @TRUE
    RESULT  = ""
 
