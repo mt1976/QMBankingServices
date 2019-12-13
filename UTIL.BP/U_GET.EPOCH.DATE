@@ -8,7 +8,5 @@ CALL U_GET.PROPERTY("UTIL.CONFIG","util","timeZone",timeZone)
 SET.TIMEZONE timeZone
 THIS.DATE = OCONV(EPOCH(),dateTimeFormat)
 
-
-
    RETURN
 END
