@@ -28,6 +28,14 @@ Setup package with:
 sudo apt-get update
 sudo apt-get install google-chrome
 sudo apt-get install -f
+
+---
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+sudo curl -o /etc/apt/sources.list.d/microsoft.list https://packages.microsoft.com/config/ubuntu/16.04/prod.list
+sudo apt-get update
+sudo apt-get install mssql-cli
+
+
 ---
 
 After installation a number of new directories will have been created;
