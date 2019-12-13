@@ -1,0 +1,18 @@
+EXECUTE
+20191213
+13.21.48
+sales
+
+58ed449c-2b7e-41c5-ad31-c71eac154a58
+COPY FROM SIENA.STAGING TO SIENA.PROCESSED "RVCPI","3d744dc6-31ba-4a62-a675-8b3146571af2" OVERWRITING
+
+0
+U_EXECUTE
+/dev/pts/1
+135
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DELIVER ALL
+ldn-srv-ubnt01
+
+Linux

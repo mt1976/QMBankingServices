@@ -1,0 +1,18 @@
+EXECUTE
+20191213
+13.21.48
+sales
+
+425cae92-51fe-49c9-bbe7-10b2fe15c281
+COPY FROM SIENA.STAGING TO SIENA.DEST TBILLS_NI.xml OVERWRITING
+
+0
+U_EXECUTE
+/dev/pts/1
+135
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DELIVER ALL
+ldn-srv-ubnt01
+
+Linux

@@ -1,0 +1,18 @@
+EXECUTE
+20191213
+13.21.48
+sales
+
+6c2d0c72-576f-45e4-bf81-629acdb4877b
+COPY FROM SIENA.STAGING TO SIENA.PROCESSED "RVNI","21b8d5bc-f9f2-4f46-a4e5-0653f65070a2" OVERWRITING
+
+0
+U_EXECUTE
+/dev/pts/1
+135
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DELIVER ALL
+ldn-srv-ubnt01
+
+Linux

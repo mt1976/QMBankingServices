@@ -1,0 +1,18 @@
+CHROME.FETCH
+20191213
+13.18.10
+sales
+
+8abf7c36-875a-446a-a17e-2b063152a282
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EEURBTC/overview
+https://www.barchart.com/forex/quotes/%5EEURBTC/overview
+0
+U_GOOGLE.CHROME.FETCH
+/dev/pts/1
+135
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.BC.FXSPOT
+ldn-srv-ubnt01
+
+Linux

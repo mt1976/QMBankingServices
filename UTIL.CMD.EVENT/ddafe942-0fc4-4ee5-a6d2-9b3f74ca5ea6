@@ -1,0 +1,18 @@
+EXECUTE
+20191213
+13.21.48
+sales
+
+ddafe942-0fc4-4ee5-a6d2-9b3f74ca5ea6
+COPY FROM SIENA.STAGING TO SIENA.PROCESSED "RVEONIA","6b3b2b40-cfd6-4045-a9f2-f9edd4b5848f" OVERWRITING
+
+0
+U_EXECUTE
+/dev/pts/1
+135
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DELIVER ALL
+ldn-srv-ubnt01
+
+Linux
