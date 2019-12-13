@@ -5,7 +5,7 @@ THIS.DATE = "" ; VERBOSE=@TRUE
 CALL U_GET.EPOCH.DATE(THIS.DATE)
 
 STMT.1 = "git add ."
-STMT.2 = "git commit -m ":DQUOTE("auto.":THIS.DATE)
+STMT.2 = "git commit -m ":DQUOTE("auto.":DOWNCASE(THIS.DATE))
 STMT.3 = "git push"
 
 CALL U_OS.COMMAND(STMT.1, VERBOSE)
