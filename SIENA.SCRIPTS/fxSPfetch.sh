@@ -14,28 +14,33 @@
 # Revsion:
 # ===================================================================
 #
-#qmpath="/home/mwt"
-qmpath=$(pwd)
-outputDir="SIENA.IN"
-fetchID="SP"
+#qmhome="/home/mwt"
+#qmhome=$(pwd)
+#qmhome="/home/sales/qm/account/mwt-QM-dev"
+#jq="/snap/bin/jq"
+#outputDir="SIENA.IN"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+initLoc=$DIR"/mdsInit.sh"
+. $initLoc
 
-clear
-figlet -f small "MT: Get Spot FX Rates"
+#clear
+figlet -f digital "[M] Get Spot FX Rates"
 echo
-echo "MT: Attempt to get 'latest' spot fx rates for processing"
+echo "[M] Get 'latest' spot fx rates for processing"
 echo
+fetchID="SP"
 endpoint="latest"
-accessKey="c3811be81a6df1db0e14304d77b3a23d"
+accessKey=$fixerAccessKey
 urlDest="http://data.fixer.io/api/"
 baseCCY="EUR"
 symbols="USD,JPY,GBP,BTC,CAD,AUD,XAU,CHF,MXN,NOK,DKK,RUR,RMB,HKD,CAD,CHF,DKK,GBP,HKD,JPY,NOK,SEK,SGD,USD,ZAR"
-path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+path=$qmHome
 newline="\n"
 dateID=$(date "+%Y%m%d%H%M")
 rateSource="2"
 
 destFile=""
-destFile+=$qmpath
+destFile+=$qmHome
 destFile+="/"
 destFile+=$outputDir
 destFile+="/"
@@ -45,16 +50,19 @@ destFile+=".csv"
 
 #
 #echo $fileHDR
-echo "MT: path      = ["$path"]"
-echo "MT: outputDir = ["$outputDir"]"
-echo "MT: endpoint  = ["$endpoint"]"
-echo "MT: accessKey = ["$accessKey"]"
-echo "MT: urlDest   = ["$urlDest"]"
-#echo "MT: baseCCY   = ["$baseCCY"]"
-echo "MT: symbols   = ["$symbols"]"
-echo "MT: dateID    = ["$dateID"]"
-echo "MT: destFile  = ["$destFile"]"
-echo "MT: rateSource= ["$rateSource"]"
+echo "[M] qmhome         = ["$qmHome"]"
+echo "[M] jq             = ["$jq"]"
+echo "[M] fixerAccessKey = ["$fixerAccessKey"]"
+echo "[M] path           = ["$path"]"
+echo "[M] outputDir      = ["$outputDir"]"
+echo "[M] endpoint       = ["$endpoint"]"
+echo "[M] accessKey      = ["$accessKey"]"
+echo "[M] urlDest        = ["$urlDest"]"
+#echo "[M] baseCCY   = ["$baseCCY"]"
+echo "[M] symbols        = ["$symbols"]"
+echo "[M] dateID         = ["$dateID"]"
+echo "[M] destFile       = ["$destFile"]"
+echo "[M] rateSource     = ["$rateSource"]"
 #
 # Build URL request_cmd
 request_cmd=$urlDest
@@ -67,22 +75,22 @@ request_cmd+="access_key="$accessKey
 request_cmd+="&"
 request_cmd+="symbols="$symbols
 #
-echo "MT: request     = ["$request_cmd"]"
+echo "[M] request     = ["$request_cmd"]"
 #
 curlArgs=""
 # Execute the curl URL request_cmd
 result=$(curl $curlArgs "$request_cmd")
 #
-rateDate=$(echo $result | jq -r '.date')
-rateBase=$(echo $result | jq -r '.base')
-rateRates=$(echo $result | jq '.rates')
-noRates=$(echo $result | jq '.rates|length')
+rateDate=$(echo $result | $jq -r '.date')
+rateBase=$(echo $result | $jq -r '.base')
+rateRates=$(echo $result | $jq '.rates')
+noRates=$(echo $result | $jq '.rates|length')
 #
-echo "MT: result    = ["$result"]"
-echo "MT: rateDate  = ["$rateDate"]"
-echo "MT: rateBase  = ["$rateBase"]"
-echo "MT: rateRates = ["$rateRates"]"
-echo "MT: noRates   = ["$noRates"]"
+echo "[M] result    = ["$result"]"
+echo "[M] rateDate  = ["$rateDate"]"
+echo "[M] rateBase  = ["$rateBase"]"
+echo "[M] rateRates = ["$rateRates"]"
+echo "[M] noRates   = ["$noRates"]"
 #
 outputFile=""
 #
@@ -91,10 +99,10 @@ for ((c=1;c<=$noRates;c++))
 do
 #
   id="$(($c-1))"
-  rCCY=$(echo $result | jq -r '.rates | keys | .['$id']')
-  rRate=$(echo $result | jq -r '.rates.'$rCCY)
+  rCCY=$(echo $result | $jq -r '.rates | keys | .['$id']')
+  rRate=$(echo $result | $jq -r '.rates.'$rCCY)
 #
-  echo "MT: > index      = ["$id"] ["$rCCY"] "$c" "$id" ["$rRate"] "$c" "$id
+  echo "[M] > index      = ["$id"] ["$rCCY"] "$c" "$id" ["$rRate"] "$c" "$id
 #
   outputFile+="FX"
   outputFile+=","
@@ -123,5 +131,5 @@ done
 #
 #rm "$destFile"
 echo -e "$outputFile" >> "$destFile"
-figlet -f small "MT: JOB DONE"
+figlet -f digital "[M] JOB DONE"
 #

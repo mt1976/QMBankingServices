@@ -1,0 +1,18 @@
+EXECUTE
+20191213
+13.21.48
+sales
+
+f73e301b-8c27-423f-b182-a70bf1ee1266
+COPY FROM SIENA.STAGING TO SIENA.DEST RVLIBOR OVERWRITING
+
+0
+U_EXECUTE
+/dev/pts/1
+135
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DELIVER ALL
+ldn-srv-ubnt01
+
+Linux

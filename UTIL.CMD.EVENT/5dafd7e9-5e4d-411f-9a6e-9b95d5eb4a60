@@ -1,0 +1,18 @@
+EXECUTE
+20191213
+13.21.49
+sales
+
+5dafd7e9-5e4d-411f-9a6e-9b95d5eb4a60
+COPY FROM SIENA.STAGING TO SIENA.DEST RVECB OVERWRITING
+
+0
+U_EXECUTE
+/dev/pts/1
+135
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DELIVER ALL
+ldn-srv-ubnt01
+
+Linux
