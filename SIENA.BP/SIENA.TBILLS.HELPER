@@ -25,88 +25,88 @@ $INCLUDE UTIL.BP RATECSV.H
    CALL U_HEADER("SIENA - ":PREFIX)
 
    API.KEY = ""
-      CALL U_GET.PROPERTY("SIENA.CONFIG","fred","uri",URI)
-      CALL U_GET.PROPERTY("SIENA.CONFIG","fred","uriSeries",SERIES.LABEL)
-      CALL U_GET.PROPERTY("SIENA.CONFIG","fred","apiKey",API.KEY)
-      CALL U_GET.PROPERTY("SIENA.CONFIG","fred","uriApiKey",API.LABEL)
-      CALL U_GET.PROPERTY("SIENA.CONFIG","fred","uriStartDate",START.LABEL)
-      CALL U_GET.PROPERTY("SIENA.CONFIG","fred","uriEndDate",END.LABEL)
-      CALL U_GET.PROPERTY("SIENA.CONFIG","fred","uriFileType",FILE.LABEL)
-      CALL U_GET.PROPERTY("SIENA.CONFIG","fred","filetype",FILE.TYPE)
-      CALL U_GET.PROPERTY("SIENA.CONFIG","fred","seriesListID",seriesListID)
-      CALL U_GET.PROPERTY("SIENA.CONFIG","fred","dateFormat",dateFormat)
-      CALL U_GET.PROPERTY("SIENA.CONFIG","fred","uriObs",OBS.LABEL)
-      CALL U_GET.PROPERTY("SIENA.CONFIG","fred","currency",CURRENCY)
+   CALL U_GET.PROPERTY("SIENA.CONFIG", "fred", "uri", URI)
+   CALL U_GET.PROPERTY("SIENA.CONFIG", "fred", "uriSeries", SERIES.LABEL)
+   CALL U_GET.PROPERTY("SIENA.CONFIG", "fred", "apiKey", API.KEY)
+   CALL U_GET.PROPERTY("SIENA.CONFIG", "fred", "uriApiKey", API.LABEL)
+   CALL U_GET.PROPERTY("SIENA.CONFIG", "fred", "uriStartDate", START.LABEL)
+   CALL U_GET.PROPERTY("SIENA.CONFIG", "fred", "uriEndDate", END.LABEL)
+   CALL U_GET.PROPERTY("SIENA.CONFIG", "fred", "uriFileType", FILE.LABEL)
+   CALL U_GET.PROPERTY("SIENA.CONFIG", "fred", "filetype", FILE.TYPE)
+   CALL U_GET.PROPERTY("SIENA.CONFIG", "fred", "seriesListID", seriesListID)
+   CALL U_GET.PROPERTY("SIENA.CONFIG", "fred", "dateFormat", dateFormat)
+   CALL U_GET.PROPERTY("SIENA.CONFIG", "fred", "uriObs", OBS.LABEL)
+   CALL U_GET.PROPERTY("SIENA.CONFIG", "fred", "currency", CURRENCY)
 
-      CALL U_CRT.ACTION("URI",URI)
-      CALL U_CRT.ACTION("APIKEY",API.KEY)
-      CALL U_CRT.ACTION("seriesListID",seriesListID)
-      CALL U_CRT.ACTION("dateFormat",dateFormat)
-      seriesList = ""
-      CALL U_READ(FV.SIENA.CONFIG, seriesListID, seriesList, STOP.ON.ERROR, ERROR.TEXT)
+   CALL U_CRT.ACTION("URI", URI)
+   CALL U_CRT.ACTION("APIKEY", API.KEY)
+   CALL U_CRT.ACTION("seriesListID", seriesListID)
+   CALL U_CRT.ACTION("dateFormat", dateFormat)
+   seriesList = ""
+   CALL U_READ(FV.SIENA.CONFIG, seriesListID, seriesList, STOP.ON.ERROR, ERROR.TEXT)
 
-    *  CALL U_CRT.RECORD(seriesList)
-DATE.START = OCONV(DATE()-2,dateFormat)
+   *  CALL U_CRT.RECORD(seriesList)
+   DATE.START = OCONV(DATE()-2, dateFormat)
 
-DATE.STOP = OCONV(DATE()-1,dateFormat)
+   DATE.STOP = OCONV(DATE()-1, dateFormat)
 
-      NO.SERIES = DCOUNT(seriesList,@AM)
-      FOR THIS.SERIES = 1 TO NO.SERIES
-        fetchSeries=seriesList<THIS.SERIES>
-        CALL U_CRT.ACTION("FETCH",fetchSeries)
+   NO.SERIES = DCOUNT(seriesList, @AM)
+   FOR THIS.SERIES = 1 TO NO.SERIES
+      fetchSeries=seriesList<THIS.SERIES>
+      CALL U_CRT.ACTION("FETCH", fetchSeries)
 
-        uri1=URI
-        uri2=SERIES.LABEL:"=":fetchSeries
-        uri3="&api_key=":API.KEY
-        uri4="&":START.LABEL:"=":DATE.START
-        uri5="&":END.LABEL:"=":DATE.STOP
-        uri6="&":FILE.LABEL:"=":FILE.TYPE
+      uri1=URI
+      uri2=SERIES.LABEL:"=":fetchSeries
+      uri3="&api_key=":API.KEY
+      uri4="&":START.LABEL:"=":DATE.START
+      uri5="&":END.LABEL:"=":DATE.STOP
+      uri6="&":FILE.LABEL:"=":FILE.TYPE
 
-        request_cmd=uri1:uri2:uri3:uri4:uri5:uri6
+      request_cmd=uri1:uri2:uri3:uri4:uri5:uri6
 
-        * CRT request_cmd
-    *    CALL U_CRT.ACTION("REQUEST",request_cmd)
+      * CRT request_cmd
+      *    CALL U_CRT.ACTION("REQUEST",request_cmd)
 
-        CALL U_CURL(request_cmd, VERBOSE, R.SIENA.TEMP, ID.SIENA.TEMP)
+      CALL U_CURL(request_cmd, VERBOSE, R.SIENA.TEMP, ID.SIENA.TEMP)
 
-        JSON.OBJ = JPARSE(R.SIENA.TEMP)
-        NO.OBS = JSON.OBJ {'count'}
+      JSON.OBJ = JPARSE(R.SIENA.TEMP)
+      NO.OBS = JSON.OBJ {'count'}
 
-        SIZE = INMAT(JSON.OBJ{'observations'})
+      SIZE = INMAT(JSON.OBJ{'observations'})
 
-        LAST.RATE = JSON.OBJ{'observations',SIZE,'value'}
-        *OBSERVATIONS = EXPAND(JSON.OBJ{'observations'})
-        *CRT OBSERVATIONS
-        *LAST.RATE = OBSERVATIONS{'value', 10}
-
-
-        CALL U_CRT.ACTION("NO.OBS",NO.OBS:"*":SIZE)
-        CALL U_CRT.ACTION("LAST.RATE",LAST.RATE)
-        *CALL U_CRT.ACTION("RETURNID",ID.SIENA.TEMP)
-        *CALL U_CRT.RECORD(R.SIENA.TEMP)
+      LAST.RATE = JSON.OBJ{'observations', SIZE, 'value'}
+      *OBSERVATIONS = EXPAND(JSON.OBJ{'observations'})
+      *CRT OBSERVATIONS
+      *LAST.RATE = OBSERVATIONS{'value', 10}
 
 
-        RATE = LAST.RATE
-
-        IF CURRENCY <> "" AND RATE <> "" THEN
-
-           CALL U_CRT.ACTION(CURRENCY, RATE)
-           CALL U_TRANSLATE("FEDNAME", fetchSeries , U_TRNS.RVSERVER, LONG.NAME)
-TMP.TENOR=""
-           CALL U_TRANSLATE("FEDTENOR", fetchSeries, U_TRNS.RVSERVER, TMP.TENOR)
-CALL SIENA.NI.NAME(LONG.NAME,"",TMP.TENOR)
+      CALL U_CRT.ACTION("NO.OBS", NO.OBS:"*":SIZE)
+      CALL U_CRT.ACTION("LAST.RATE", LAST.RATE)
+      *CALL U_CRT.ACTION("RETURNID",ID.SIENA.TEMP)
+      *CALL U_CRT.RECORD(R.SIENA.TEMP)
 
 
+      RATE = LAST.RATE
 
-           GOSUB DO.CONTRACT
-           GOSUB DO.PRICE
+      IF CURRENCY <> "" AND RATE <> "" THEN
 
-
-        END
+         CALL U_CRT.ACTION(CURRENCY, RATE)
+         CALL U_TRANSLATE("FEDNAME", fetchSeries, U_TRNS.RVSERVER, LONG.NAME)
+         TMP.TENOR=""
+         CALL U_TRANSLATE("FEDTENOR", fetchSeries, U_TRNS.RVSERVER, TMP.TENOR)
+         CALL SIENA.NI.NAME(LONG.NAME, "", TMP.TENOR)
 
 
 
-      NEXT THIS.SERIES
+         GOSUB DO.CONTRACT
+         GOSUB DO.PRICE
+
+
+      END
+
+
+
+   NEXT THIS.SERIES
 
    IF OUTPUT.DATA <> "" THEN
 
@@ -130,39 +130,39 @@ CALL SIENA.NI.NAME(LONG.NAME,"",TMP.TENOR)
 
 DO.PRICE:
 
-GILT.PRICE = RATE+0
-GILT.PRICE = GILT.PRICE"L#11"
-OUTPUT.DATA<-1> = LONG.NAME"L#30":"+":GILT.PRICE:"+":GILT.PRICE
+   GILT.PRICE = RATE+0
+   GILT.PRICE = GILT.PRICE"L#11"
+   OUTPUT.DATA<-1> = LONG.NAME"L#30":"+":GILT.PRICE:"+":GILT.PRICE
 
-RETURN
+   RETURN
 
 DO.CONTRACT:
-XML.REC<-1>="<RECORD>"
+   XML.REC<-1>="<RECORD>"
 
-CALL SIENA.XML.FIELD(XML.REC, "KEYFIELD", "name", LONG.NAME)
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "status", "Active")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "type", "TREASURY BILL")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "currencyCode", "USD")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "issuer.firm", "UKTR")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "issuer.centre", "LON")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "acceptor.firm", "")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "acceptor.centre", "")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "issueDate", "")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "maturityDate", "")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "rateType", "Fixed")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "couponRate", RATE)
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "interestBasis", "Actual 365")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "interestFrequency", "None")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "clearingSystem", "")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "parentDealType", "Treasury Bill")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "securityID", fetchSeries)
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "encumbered", "")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "marketable", "")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "hypothecated", "")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "repoFactor", "100.00")
-CALL SIENA.XML.FIELD(XML.REC, "FIELD", "lotSize", 1)
+   CALL SIENA.XML.FIELD(XML.REC, "KEYFIELD", "name", LONG.NAME)
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "status", "Active")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "type", "TREASURY BILL")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "currencyCode", "USD")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "issuer.firm", "UKTR")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "issuer.centre", "LON")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "acceptor.firm", "")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "acceptor.centre", "")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "issueDate", "")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "maturityDate", "")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "rateType", "Fixed")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "couponRate", RATE)
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "interestBasis", "Actual 365")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "interestFrequency", "None")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "clearingSystem", "")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "parentDealType", "Treasury Bill")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "securityID", fetchSeries)
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "encumbered", "")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "marketable", "")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "hypothecated", "")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "repoFactor", "100.00")
+   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "lotSize", 1)
 *CALL U_CRT.RECORD(XML.REC)
-XML.REC<-1>="</RECORD>"
-RETURN
+   XML.REC<-1>="</RECORD>"
+   RETURN
 
 END

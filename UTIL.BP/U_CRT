@@ -1,31 +1,31 @@
 SUBROUTINE U_CRT(TEXT)
 $COPYRIGHT "Copyright Acme Software, 2011"
 $INCLUDE UTIL.BP UTIL.H
-CALL U_GET.PROPERTY("UTIL.CONFIG","util","outputMode",outputMode)
-dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
-CALL U_GET.PROPERTY("UTIL.CONFIG","util","outputType",outputType)
-CALL U_GET.PROPERTY("UTIL.CONFIG","util","csvChar",csvChar)
+   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "outputMode", outputMode)
+   dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
+   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "outputType", outputType)
+   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "csvChar", csvChar)
 
-OUTPUT.DATE = ""
-CALL U_GET.EPOCH.DATE(OUTPUT.DATE)
-OUTPUT.TEXT = ""
-BEGIN CASE
-CASE outputMode = U_OUTPUTMODE_log4j
+   OUTPUT.DATE = ""
+   CALL U_GET.EPOCH.DATE(OUTPUT.DATE)
+   OUTPUT.TEXT = ""
+   BEGIN CASE
+      CASE outputMode = U_OUTPUTMODE_log4j
 
 
-  * 20191203 UTC 16:15:39.089 INFO  NetClientImpl Client connecting on [localhost/127.0.0.1:7397]..
-  * 20191203 UTC 16:15:39.121 INFO  NetChannelHandler Channel open
-  OUTPUT.TEXT := OUTPUT.DATE
-  OUTPUT.TEXT := " ":outputType:" ":TEXT
-CASE outputMode = U_OUTPUTMODE_csv
-  * "20191203 UTC 16:15:39.089","INFO","NetClientImpl Client connecting on [localhost/127.0.0.1:7397]"
-  OUTPUT.TEXT := DQUOTE(OUTPUT.DATE)
-  OUTPUT.TEXT := csvChar:DQUOTE(outputType):csvChar:DQUOTE(TEXT)
+         * 20191203 UTC 16:15:39.089 INFO  NetClientImpl Client connecting on [localhost/127.0.0.1:7397]..
+         * 20191203 UTC 16:15:39.121 INFO  NetChannelHandler Channel open
+         OUTPUT.TEXT := OUTPUT.DATE
+         OUTPUT.TEXT := " ":outputType:" ":TEXT
+      CASE outputMode = U_OUTPUTMODE_csv
+         * "20191203 UTC 16:15:39.089","INFO","NetClientImpl Client connecting on [localhost/127.0.0.1:7397]"
+         OUTPUT.TEXT := DQUOTE(OUTPUT.DATE)
+         OUTPUT.TEXT := csvChar:DQUOTE(outputType):csvChar:DQUOTE(TEXT)
 
-CASE 1
-   OUTPUT.TEXT := @(U_REVERSE_ON):U_PREF:@(U_REVERSE_OFF):OUTPUT.DATE:" ":TEXT
-END CASE
-DISPLAY @(U_CLEAR_LINE):OUTPUT.TEXT
+      CASE 1
+         OUTPUT.TEXT := @(U_REVERSE_ON):U_PREF:@(U_REVERSE_OFF):OUTPUT.DATE:" ":TEXT
+   END CASE
+   DISPLAY @(U_CLEAR_LINE):OUTPUT.TEXT
 
    RETURN
 END

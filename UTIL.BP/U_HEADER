@@ -8,9 +8,9 @@ $INCLUDE UTIL.BP UTIL.H
 
    BAR = STR("━", SPAN.WIDTH)
 
-headerCMD="sh figlet -f small"
+   headerCMD="sh figlet -f small"
 
-   CALL U_GET.PROPERTY("UTIL.CONFIG","util","headerCMD",headerCMD)
+   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "headerCMD", headerCMD)
 
    STMT = headerCMD:" ":DQUOTE(TEXT)
 
