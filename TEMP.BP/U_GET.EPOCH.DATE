@@ -1,0 +1,12 @@
+SUBROUTINE U_GET.EPOCH.DATE(THIS.DATE)
+$INCLUDE UTIL.BP UTIL.H
+
+   dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
+   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "dateTimeFormat", dateTimeFormat)
+   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "timeZone", timeZone)
+
+   SET.TIMEZONE timeZone
+   THIS.DATE = OCONV(EPOCH(), dateTimeFormat)
+
+   RETURN
+END

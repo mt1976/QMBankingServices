@@ -1,0 +1,17 @@
+PROGRAM MWT.RESTORE
+
+   CALL U_START("MWT.RESTORE")
+   CALL U_HEADER("Code & Data Restore/Install Processor")
+
+   CALL U_INPUT("Filename", FN.RESTORE)
+   CALL U_INPUT("Item Name", ID.RESTORE)
+
+   IF FN.RESTORE # '' AND ID.RESTORE # '' THEN
+      CALL MWT.RESTORE.HELPER(FN.RESTORE, ID.RESTORE)
+   END
+
+   CALL U_STOP("")
+
+   STOP
+
+END

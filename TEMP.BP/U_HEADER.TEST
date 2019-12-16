@@ -1,0 +1,7 @@
+PROGRAM U_HEADER.TEST
+   PID = ""
+   CALL U_START(PID)
+   CALL U_HEADER("this is a test")
+   CALL U_STOP(PID)
+   STOP "DONE"
+END
