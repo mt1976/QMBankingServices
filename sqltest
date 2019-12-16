@@ -1,1 +1,18 @@
 mssql-cli -S 194.128.145.37 -d rel_gateway_sal_prd_demo-sys-3 -U rob -P rob123 -i test.sql -o testoutput.file
+
+
+rel_gateway_sal_prd_demo-sys-3> select name from syscolumns where id=object_id('dbo.Firm')
+Time: 1.303s (a second)
++-----------------+
+| name            |
+|-----------------|
+| Country         |
+| FirmName        |
+| FullName        |
+| Ident           |
+| InternalDeleted |
+| InternalId      |
+| Sector          |
++-----------------+
+(7 rows affected)
+rel_gateway_sal_prd_demo-sys-3>
