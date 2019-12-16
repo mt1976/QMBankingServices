@@ -1,4 +1,5 @@
 SUBROUTINE U_CRT(TEXT)
+$COPYRIGHT "Copyright Acme Software, 2011"
 $INCLUDE UTIL.BP UTIL.H
 CALL U_GET.PROPERTY("UTIL.CONFIG","util","outputMode",outputMode)
 dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
