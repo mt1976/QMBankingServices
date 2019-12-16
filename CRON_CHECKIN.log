@@ -742,3 +742,115 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 [K"20191216T062001","INFO","[[1mPROCESS   [m][CHECKIN]"
 [K"20191216T062001","INFO","[[1mDO SUB    [m][SIENA.GIT.CHECKIN.HELPER]"
 [K"20191216T062001","INFO","[[1mOS.COMMAND[m][git add .]"
+warning: CRLF will be replaced by LF in CRON_CHECKIN.log.
+The file will have its original line endings in your working directory.
+[K"20191216T062002","INFO","[[1mUNQ.ID    [m][085b930e-be49-4d1e-a668-d30b66fafb1b]"
+[K"20191216T062002","INFO","[[1mOS.COMMAND[m][git commit -m "auto.20191216t062001"]"
+[master 77fd97fc] auto.20191216t062001
+ 81 files changed, 1294 insertions(+), 15 deletions(-)
+ create mode 100644 SIENA.PROCESSED/0a7f8c18-8f60-4423-948f-9e1c975bbced
+ create mode 100644 SIENA.PROCESSED/1905d05e-bc56-4aeb-9391-d4ab24e22be8
+ create mode 100644 SIENA.PROCESSED/2e78c9eb-d9f9-42a5-b2e9-0f598a247789
+ create mode 100644 SIENA.PROCESSED/3a9754b4-487d-4aab-9a34-ae4d7053615f
+ create mode 100644 SIENA.PROCESSED/4079aad4-7dbe-48cd-8622-1cc7682f6663
+ create mode 100644 SIENA.PROCESSED/5c168592-7228-4590-828a-1ded575e69af
+ create mode 100644 SIENA.PROCESSED/99035de4-6017-42cb-a4e2-10c3a4b54096
+ create mode 100644 SIENA.PROCESSED/d0d372ea-af8e-4484-9f06-1f8bc4edf51b
+ create mode 100644 SIENA.PROCESSED/f0d2ad64-b21c-48c1-b0ae-5e45473be282
+ rewrite SIENA.STAGING/RVMARKET (100%)
+ create mode 100644 UTIL.CMD.EVENT/0fc85723-0fbd-4c8e-b26f-bac0107af59e
+ create mode 100644 UTIL.CMD.EVENT/1159429f-1b07-4fff-9519-7a45f5984943
+ create mode 100644 UTIL.CMD.EVENT/1c3d1314-6762-427e-bbac-38c45bf0798e
+ create mode 100644 UTIL.CMD.EVENT/25c7d037-c932-44eb-bf81-f9568f4d0770
+ create mode 100644 UTIL.CMD.EVENT/263c4a7f-9222-4c95-8bda-0bc48ea074a4
+ create mode 100644 UTIL.CMD.EVENT/3f6685c7-a6d0-4dce-b830-8169ad9ad2da
+ create mode 100644 UTIL.CMD.EVENT/40058405-35af-48f4-b847-4bf6ad969831
+ create mode 100644 UTIL.CMD.EVENT/4a28dd21-33cf-49d4-b2cf-8af85370dbab
+ create mode 100644 UTIL.CMD.EVENT/5504564a-873a-4a85-8e1c-db22fa9af96e
+ create mode 100644 UTIL.CMD.EVENT/5dd32131-45d3-4c01-9825-706cf7f822cf
+ create mode 100644 UTIL.CMD.EVENT/63f64787-a253-4b29-8476-e95e17fc5247
+ create mode 100644 UTIL.CMD.EVENT/64ef956e-cf42-44c2-93af-e6ef2b514e27
+ create mode 100644 UTIL.CMD.EVENT/704fa0cd-dfe5-4745-91bd-69a07c905253
+ create mode 100644 UTIL.CMD.EVENT/70df62ec-d39e-41d7-92c1-6e5cefef750b
+ create mode 100644 UTIL.CMD.EVENT/78136af0-e4b6-4d79-a121-05b1e692fc7d
+ create mode 100644 UTIL.CMD.EVENT/947dc451-2170-481f-af65-2e9535680871
+ create mode 100644 UTIL.CMD.EVENT/9effc715-b907-479d-9aed-e177f372b3d2
+ create mode 100644 UTIL.CMD.EVENT/a477b9c7-cc35-42a6-9aaa-ba6c4eb20816
+ create mode 100644 UTIL.CMD.EVENT/b3a75af6-f06b-4edc-98e3-d437eb7a80c8
+ create mode 100644 UTIL.CMD.EVENT/b70ebabc-1986-465f-8546-213eced5ee7d
+ create mode 100644 UTIL.CMD.EVENT/ccbb9a43-648c-45c1-88d5-5168c0a660b3
+ create mode 100644 UTIL.CMD.EVENT/d50513cc-d2cf-4b4e-9648-98f2fdb1e664
+ create mode 100644 UTIL.CMD.EVENT/d5488e5d-e25b-43d7-8508-e91ac44fa1e6
+ create mode 100644 UTIL.CMD.EVENT/dae50fa4-05f2-4850-bc8a-c2818aff7148
+ create mode 100644 UTIL.CMD.EVENT/df01f02f-2c64-419f-a36e-7ec482413996
+ create mode 100644 UTIL.CMD.EVENT/dfc41831-ab54-4561-8b1d-6ac61c27e75b
+ create mode 100644 UTIL.CMD.EVENT/e4744e52-07a3-4c4a-925e-24c8a97baa74
+ create mode 100644 UTIL.CMD.EVENT/f5a7646e-7b10-49aa-ae26-eda41f0c876a
+ create mode 100644 UTIL.CMD.EVENT/f8e45ae8-74e3-4544-9fbc-e4222e0a32d9
+ create mode 100644 UTIL.CMD.EVENT/fa2dfffc-00a4-4ef4-b34b-5d24ba280a7d
+ create mode 100644 UTIL.CMD.EVENT/fb1f7cb7-f073-4000-b74f-3d36419b4ab0
+ create mode 100644 UTIL.CMD.EVENT/fc0d2aa6-0863-4958-973b-8329f2d63c04
+ create mode 100644 UTIL.CMD.LOG/0fc85723-0fbd-4c8e-b26f-bac0107af59e
+ create mode 100644 UTIL.CMD.LOG/1159429f-1b07-4fff-9519-7a45f5984943
+ create mode 100644 UTIL.CMD.LOG/1c3d1314-6762-427e-bbac-38c45bf0798e
+ create mode 100644 UTIL.CMD.LOG/25c7d037-c932-44eb-bf81-f9568f4d0770
+ create mode 100644 UTIL.CMD.LOG/263c4a7f-9222-4c95-8bda-0bc48ea074a4
+ create mode 100644 UTIL.CMD.LOG/3f6685c7-a6d0-4dce-b830-8169ad9ad2da
+ create mode 100644 UTIL.CMD.LOG/40058405-35af-48f4-b847-4bf6ad969831
+ create mode 100644 UTIL.CMD.LOG/4a28dd21-33cf-49d4-b2cf-8af85370dbab
+ create mode 100644 UTIL.CMD.LOG/5504564a-873a-4a85-8e1c-db22fa9af96e
+ create mode 100644 UTIL.CMD.LOG/5dd32131-45d3-4c01-9825-706cf7f822cf
+ create mode 100644 UTIL.CMD.LOG/63f64787-a253-4b29-8476-e95e17fc5247
+ create mode 100644 UTIL.CMD.LOG/64ef956e-cf42-44c2-93af-e6ef2b514e27
+ create mode 100644 UTIL.CMD.LOG/704fa0cd-dfe5-4745-91bd-69a07c905253
+ create mode 100644 UTIL.CMD.LOG/70df62ec-d39e-41d7-92c1-6e5cefef750b
+ create mode 100644 UTIL.CMD.LOG/78136af0-e4b6-4d79-a121-05b1e692fc7d
+ create mode 100644 UTIL.CMD.LOG/947dc451-2170-481f-af65-2e9535680871
+ create mode 100644 UTIL.CMD.LOG/9effc715-b907-479d-9aed-e177f372b3d2
+ create mode 100644 UTIL.CMD.LOG/a477b9c7-cc35-42a6-9aaa-ba6c4eb20816
+ create mode 100644 UTIL.CMD.LOG/b3a75af6-f06b-4edc-98e3-d437eb7a80c8
+ create mode 100644 UTIL.CMD.LOG/b70ebabc-1986-465f-8546-213eced5ee7d
+ create mode 100644 UTIL.CMD.LOG/ccbb9a43-648c-45c1-88d5-5168c0a660b3
+ create mode 100644 UTIL.CMD.LOG/d50513cc-d2cf-4b4e-9648-98f2fdb1e664
+ create mode 100644 UTIL.CMD.LOG/d5488e5d-e25b-43d7-8508-e91ac44fa1e6
+ create mode 100644 UTIL.CMD.LOG/dae50fa4-05f2-4850-bc8a-c2818aff7148
+ create mode 100644 UTIL.CMD.LOG/df01f02f-2c64-419f-a36e-7ec482413996
+ create mode 100644 UTIL.CMD.LOG/dfc41831-ab54-4561-8b1d-6ac61c27e75b
+ create mode 100644 UTIL.CMD.LOG/e4744e52-07a3-4c4a-925e-24c8a97baa74
+ create mode 100644 UTIL.CMD.LOG/f5a7646e-7b10-49aa-ae26-eda41f0c876a
+ create mode 100644 UTIL.CMD.LOG/f8e45ae8-74e3-4544-9fbc-e4222e0a32d9
+ create mode 100644 UTIL.CMD.LOG/fa2dfffc-00a4-4ef4-b34b-5d24ba280a7d
+ create mode 100644 UTIL.CMD.LOG/fb1f7cb7-f073-4000-b74f-3d36419b4ab0
+ create mode 100644 UTIL.CMD.LOG/fc0d2aa6-0863-4958-973b-8329f2d63c04
+ create mode 100644 UTIL.LOG/2b204486-9d5e-4a05-87df-6abbd6a34247.log
+ create mode 100644 UTIL.LOG/37209b6d-9464-470f-9c60-0b9d5f6dff41.log
+ create mode 100644 UTIL.LOG/58da7da0-c836-4abc-96ab-2ad892bf1c45.log
+ create mode 100644 UTIL.LOG/dd918522-bfab-4efe-8a3e-99b711365acd.log
+ create mode 100644 UTIL.LOG/eb5bb80b-bdc8-4726-9741-06bab11d32dc.log
+[K"20191216T062002","INFO","[[1mUNQ.ID    [m][f020980d-80c2-4d72-9b8b-586bdb03c20e]"
+[K"20191216T062002","INFO","[[1mOS.COMMAND[m][git push]"
+To https://github.com/mt1976/mwt-QM-dev.git
+ ! [rejected]          master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/mt1976/mwt-QM-dev.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[K"20191216T062003","INFO","[[1mUNQ.ID    [m][2b691eb4-433c-475d-8bfa-a6a4fc61eaec]"
+[K"20191216T062003","INFO","[[1mDO DONE   [m][SIENA.GIT.CHECKIN.HELPER]"
+[K"20191216T062003","INFO","[[1mCOMO OFF  [m][fb23130b-54d4-4fe7-a1b9-624a9b85d612]"
+[ QM Rev 3.4-14   Copyright Zumasys Inc., 2019 ]
+[ 0103035549  For personal use only ]
+[K"20191216T072001","INFO","[[1mUNQ.ID    [m][e98fec96-cab3-4a14-a860-1439b0c792ef]"
+[K"20191216T072001","INFO","[[1mCOMO      [m][e98fec96-cab3-4a14-a860-1439b0c792ef]"
+[K"20191216T072001","INFO","[[1mUNQ.ID    [m][1d9176d8-4cf7-4129-9de5-74fae0446383]"
+[K"20191216T072001","INFO","[[1mUNQ.ID    [m][18320fe6-2375-4cbe-a44a-e542d01b5eea]"
+[K"20191216T072001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191216T072001","INFO","+-+-+-+-+-+-+-+-+"
+[K"20191216T072001","INFO","|S|I|E|N|A|.|D|O|"
+[K"20191216T072001","INFO","+-+-+-+-+-+-+-+-+"
+[K"20191216T072001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191216T072001","INFO","[[1mPROCESS   [m][CHECKIN]"
+[K"20191216T072001","INFO","[[1mDO SUB    [m][SIENA.GIT.CHECKIN.HELPER]"
+[K"20191216T072001","INFO","[[1mOS.COMMAND[m][git add .]"
