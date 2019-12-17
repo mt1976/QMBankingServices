@@ -1,4 +1,14 @@
 SUBROUTINE SIENA.CPI.HELPER(PROCESS.NAME)
+** INFORMATION ****************************************************************
+* Routine Name   : SIENA.CPI.HELPER
+*         Type   : SUBROUTINE
+*         Loc    : SIENA.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20191217 at 11.08.31 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+*******************************************************************************
 
    CALL SIENA.MM.HELPER(PROCESS.NAME, "CPI")
 

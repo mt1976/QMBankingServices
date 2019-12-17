@@ -1,4 +1,14 @@
 SUBROUTINE SIENA.XML.HEADER(XML.REC, SIENA.ACTION, SIENA.TABLE.NAME)
+** INFORMATION ****************************************************************
+* Routine Name   : SIENA.XML.HEADER
+*         Type   : SUBROUTINE
+*         Loc    : SIENA.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20191217 at 11.08.31 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+*******************************************************************************
    XML.REC = ''
    XML.REC<-1> = '<?xml version="1.0" encoding="UTF-8"?>'
 

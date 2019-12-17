@@ -1,4 +1,14 @@
 SUBROUTINE SIENA.SCRIPT.HELPER(SCRIPT.NAME)
+** INFORMATION ****************************************************************
+* Routine Name   : SIENA.SCRIPT.HELPER
+*         Type   : SUBROUTINE
+*         Loc    : SIENA.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20191217 at 11.08.31 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+*******************************************************************************
 $INCLUDE UTIL.BP I_UTIL.TRANSLATE.H
 $INCLUDE UTIL.BP RATECSV.H
 

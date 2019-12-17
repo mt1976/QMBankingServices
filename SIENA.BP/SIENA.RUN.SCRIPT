@@ -1,4 +1,14 @@
 PROGRAM SIENA.RUN.SCRIPT
+** INFORMATION ****************************************************************
+* Routine Name   : SIENA.RUN.SCRIPT
+*         Type   : PROGRAM
+*         Loc    : SIENA.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20191217 at 11.08.31 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+*******************************************************************************
 $INCLUDE UTIL.BP UTIL.H
    PNM = "" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""
    CALL U_START(PNM)
