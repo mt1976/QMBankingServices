@@ -25,8 +25,8 @@ PROGRAM U_TEST
    VERBOSE = @TRUE
    ID.RESULT = ""
 
-   SQL.STATEMENT =  "select CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode from "dbo"."CurrencyPair" where Active=1"
-   SQL.DATABASE  =  "rel_gateway_sal_prd_demo-sys-3"
+   SQL.STATEMENT =  'select CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode from "dbo"."CurrencyPair" where Active=1'
+   *SQL.DATABASE  =  "rel_gateway_sal_prd_demo-sys-3"
    CALL U_MSSQL.EXECUTE(SQL.STATEMENT, SQL.DATABASE, VERBOSE, ID.RESULT)
 
    CALL U_CRT.ACTION("RESULT", ID.RESULT)
