@@ -29,7 +29,7 @@ PROGRAM U_TEST
    *SQL.DATABASE  =  ""
 
 SQL.FIELDS   = "*"
-SQL.TABLE    = "dbo.Centre"
+SQL.TABLE    = "dbo.Broker"
 SQL.DATABASE = ""
 SQL.WHERE    = "InternalDeleted IS NULL"
 RES.COLUMNS  = ""
