@@ -2025,3 +2025,69 @@ User limit reached
 [K"20191217T132001","INFO","[[1mPROCESS   [m][CHECKIN]"
 [K"20191217T132001","INFO","[[1mDO SUB    [m][SIENA.GIT.CHECKIN.HELPER]"
 [K"20191217T132001","INFO","[[1mOS.COMMAND[m][git add .]"
+warning: CRLF will be replaced by LF in CRON_CHECKIN.log.
+The file will have its original line endings in your working directory.
+[K"20191217T132001","INFO","[[1mUNQ.ID    [m][f792c321-35f4-4e8f-b174-2d5de8ec2ab6]"
+[K"20191217T132001","INFO","[[1mOS.COMMAND[m][git commit -m "auto.20191217t132001"]"
+[master 82b2fb34] auto.20191217t132001
+ 41 files changed, 590 insertions(+)
+ create mode 100644 UTIL.CMD.EVENT/10f80837-3b18-4ed9-97f1-3f785f581208
+ create mode 100644 UTIL.CMD.EVENT/1a898f03-30f7-4628-bfea-f30b75033228
+ create mode 100644 UTIL.CMD.EVENT/45aad008-0bfe-4663-a4c2-1fb25e8b559a
+ create mode 100644 UTIL.CMD.EVENT/5d62eb23-2e22-48c3-873e-4be221e84329
+ create mode 100644 UTIL.CMD.EVENT/70df8a6e-9258-4dbb-9b68-7c70df064b79
+ create mode 100644 UTIL.CMD.EVENT/85542c7c-40c1-4fe1-b8c4-89861841291a
+ create mode 100644 UTIL.CMD.EVENT/8752e42a-6e0a-4c26-9bfd-e64002fceb67
+ create mode 100644 UTIL.CMD.EVENT/970aa167-e4ef-478a-bb15-ec194b721e11
+ create mode 100644 UTIL.CMD.EVENT/9eb66d91-c655-4b46-9c4c-c31af0bf4cab
+ create mode 100644 UTIL.CMD.EVENT/a78776a4-5611-458f-b6bc-f937e98f627a
+ create mode 100644 UTIL.CMD.EVENT/abbb14d4-f1e3-40c1-9e69-eb2e6c36d598
+ create mode 100644 UTIL.CMD.EVENT/c03a9b20-0ed7-416a-af0c-66a4738e8738
+ create mode 100644 UTIL.CMD.EVENT/c2048cdb-14fc-46bb-903c-be0f9ef89bcc
+ create mode 100644 UTIL.CMD.EVENT/cb86daf7-b58f-4d75-956e-6d7f4ccd7535
+ create mode 100644 UTIL.CMD.EVENT/d1ff124c-faa8-4634-b85e-94763c898daf
+ create mode 100644 UTIL.CMD.EVENT/dc377b68-b830-47e8-b318-bee183f32e85
+ create mode 100644 UTIL.CMD.EVENT/e8e3665f-9b63-4e01-8471-9a2e8f1231c4
+ create mode 100644 UTIL.CMD.EVENT/fd42f360-c244-433c-9b71-7220cf9a72d6
+ create mode 100644 UTIL.CMD.LOG/10f80837-3b18-4ed9-97f1-3f785f581208
+ create mode 100644 UTIL.CMD.LOG/1a898f03-30f7-4628-bfea-f30b75033228
+ create mode 100644 UTIL.CMD.LOG/45aad008-0bfe-4663-a4c2-1fb25e8b559a
+ create mode 100644 UTIL.CMD.LOG/5d62eb23-2e22-48c3-873e-4be221e84329
+ create mode 100644 UTIL.CMD.LOG/70df8a6e-9258-4dbb-9b68-7c70df064b79
+ create mode 100644 UTIL.CMD.LOG/85542c7c-40c1-4fe1-b8c4-89861841291a
+ create mode 100644 UTIL.CMD.LOG/8752e42a-6e0a-4c26-9bfd-e64002fceb67
+ create mode 100644 UTIL.CMD.LOG/970aa167-e4ef-478a-bb15-ec194b721e11
+ create mode 100644 UTIL.CMD.LOG/9eb66d91-c655-4b46-9c4c-c31af0bf4cab
+ create mode 100644 UTIL.CMD.LOG/a78776a4-5611-458f-b6bc-f937e98f627a
+ create mode 100644 UTIL.CMD.LOG/abbb14d4-f1e3-40c1-9e69-eb2e6c36d598
+ create mode 100644 UTIL.CMD.LOG/c03a9b20-0ed7-416a-af0c-66a4738e8738
+ create mode 100644 UTIL.CMD.LOG/c2048cdb-14fc-46bb-903c-be0f9ef89bcc
+ create mode 100644 UTIL.CMD.LOG/cb86daf7-b58f-4d75-956e-6d7f4ccd7535
+ create mode 100644 UTIL.CMD.LOG/d1ff124c-faa8-4634-b85e-94763c898daf
+ create mode 100644 UTIL.CMD.LOG/dc377b68-b830-47e8-b318-bee183f32e85
+ create mode 100644 UTIL.CMD.LOG/e8e3665f-9b63-4e01-8471-9a2e8f1231c4
+ create mode 100644 UTIL.CMD.LOG/fd42f360-c244-433c-9b71-7220cf9a72d6
+ create mode 100644 UTIL.LOG/fc0910c9-2371-4df0-a6a9-0b0e5a78d231.log
+ create mode 100644 UTIL.SQL.CMD/30fd8cac-ecf3-4329-afcb-3eaf43ab.sql
+ create mode 100644 UTIL.SQL.RESPONSE/30fd8cac-ecf3-4329-afcb-3eaf43ab.out
+[K"20191217T132002","INFO","[[1mUNQ.ID    [m][e7efd249-d7a6-4179-b213-486c25857a28]"
+[K"20191217T132002","INFO","[[1mOS.COMMAND[m][git push]"
+To https://github.com/mt1976/mwt-QM-dev.git
+   294543d1..82b2fb34  master -> master
+[K"20191217T132005","INFO","[[1mUNQ.ID    [m][8c1f2a56-9570-49e8-a23d-ade0e005d5ed]"
+[K"20191217T132005","INFO","[[1mDO DONE   [m][SIENA.GIT.CHECKIN.HELPER]"
+[K"20191217T132005","INFO","[[1mCOMO OFF  [m][144b5fe9-5606-4884-a2da-082036494325]"
+[ QM Rev 3.4-14   Copyright Zumasys Inc., 2019 ]
+[ 0103035549  For personal use only ]
+[K"20191217T142001","INFO","[[1mUNQ.ID    [m][7c26fb87-27fc-4cbb-8aa9-5526c8818473]"
+[K"20191217T142001","INFO","[[1mCOMO      [m][7c26fb87-27fc-4cbb-8aa9-5526c8818473]"
+[K"20191217T142001","INFO","[[1mUNQ.ID    [m][f85b6ba2-db8b-41de-8454-32da6b96f9ae]"
+[K"20191217T142001","INFO","[[1mUNQ.ID    [m][82ae964f-5591-405c-a94a-f64cdfe5e897]"
+[K"20191217T142001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191217T142001","INFO","+-+-+-+-+-+-+-+-+"
+[K"20191217T142001","INFO","|S|I|E|N|A|.|D|O|"
+[K"20191217T142001","INFO","+-+-+-+-+-+-+-+-+"
+[K"20191217T142001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191217T142001","INFO","[[1mPROCESS   [m][CHECKIN]"
+[K"20191217T142001","INFO","[[1mDO SUB    [m][SIENA.GIT.CHECKIN.HELPER]"
+[K"20191217T142001","INFO","[[1mOS.COMMAND[m][git add .]"
