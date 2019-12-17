@@ -1,0 +1,18 @@
+MS.SQL.SERVER
+20191217
+14.45.46
+sales
+
+42b90297-dd52-4127-872c-aeda7649ee7d
+select * from dbo.Centre where InternalDeleted IS NULL
+
+0
+U_MSSQL.EXECUTE
+/dev/pts/1
+71
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+U_TEST
+ldn-srv-ubnt01
+
+Linux

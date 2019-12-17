@@ -1,0 +1,18 @@
+MS.SQL.SERVER
+20191217
+14.29.42
+sales
+
+c7090020-1148-4ff4-9314-ee0a6b29532c
+select CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode from dbo.CurrencyPair where Active=1
+
+0
+U_MSSQL.EXECUTE
+/dev/pts/1
+71
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+U_TEST
+ldn-srv-ubnt01
+
+Linux
