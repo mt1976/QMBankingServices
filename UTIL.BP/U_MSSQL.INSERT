@@ -1,0 +1,19 @@
+SUBROUTINE U_SQL.EXECUTE(IN.STATEMENT, IN.DATABASE, VERBOSE, ID.RESULT)
+** INFORMATION ****************************************************************
+* Routine Name   : U_GOOGLE.CHROME.FETCH
+*         Type   : SUBROUTINE
+*         Loc    : UTIL.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20191217 at 11.07.35 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+*******************************************************************************
+$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
+
+CALL U_MSSQL.EXECUTE(IN.STATEMENT,IN.DATABASE,@TRUE,ID.RESULT)
+
+
+   RETURN
+END

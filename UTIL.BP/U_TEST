@@ -22,16 +22,14 @@ PROGRAM U_TEST
    CALL U_CRT.ACTION("SYS(33)", SYSTEM(33))
    CALL U_CRT.ACTION("SYS(1015)", SYSTEM(1015))
 
-   URI = "https://www.barchart.com/forex/quotes/%5EUSDCAD/forward-rates"
    VERBOSE = @TRUE
-   RESULT = ""
+   ID.RESULT = ""
 
-   * CALL U_GOOGLE.CHROME.FETCH(URI, VERBOSE, RESULT)
+   SQL.STATEMENT =  "select CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode from "dbo"."CurrencyPair" where Active=1"
+   SQL.DATABASE  =  "rel_gateway_sal_prd_demo-sys-3"
+   CALL U_MSSQL.EXECUTE(SQL.STATEMENT, SQL.DATABASE, VERBOSE, ID.RESULT)
 
-   CALL U_CRT.ACTION("START", "START")
-   CALL U_CRT.RECORD(RESULT)
-   CALL U_CRT.ACTION("STOP", "STOP")
-
+   CALL U_CRT.ACTION("RESULT", ID.RESULT)
 
    CALL U_STOP("")
    STOP
