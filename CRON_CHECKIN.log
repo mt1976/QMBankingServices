@@ -1993,3 +1993,35 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 [K"20191217T112001","INFO","[[1mPROCESS   [m][CHECKIN]"
 [K"20191217T112001","INFO","[[1mDO SUB    [m][SIENA.GIT.CHECKIN.HELPER]"
 [K"20191217T112001","INFO","[[1mOS.COMMAND[m][git add .]"
+warning: CRLF will be replaced by LF in CRON_CHECKIN.log.
+The file will have its original line endings in your working directory.
+[K"20191217T112001","INFO","[[1mUNQ.ID    [m][abbb14d4-f1e3-40c1-9e69-eb2e6c36d598]"
+[K"20191217T112001","INFO","[[1mOS.COMMAND[m][git commit -m "auto.20191217t112001"]"
+[master 41daf0dc] auto.20191217t112001
+ 5 files changed, 52 insertions(+)
+ create mode 100644 UTIL.CMD.EVENT/38df6142-1d02-4160-98ad-75fe62cc0789
+ create mode 100644 UTIL.CMD.EVENT/d6cff028-9c57-4c3f-9501-4987ad2d6297
+ create mode 100644 UTIL.CMD.LOG/38df6142-1d02-4160-98ad-75fe62cc0789
+ create mode 100644 UTIL.CMD.LOG/d6cff028-9c57-4c3f-9501-4987ad2d6297
+[K"20191217T112002","INFO","[[1mUNQ.ID    [m][45aad008-0bfe-4663-a4c2-1fb25e8b559a]"
+[K"20191217T112002","INFO","[[1mOS.COMMAND[m][git push]"
+To https://github.com/mt1976/mwt-QM-dev.git
+   30f091da..41daf0dc  master -> master
+[K"20191217T112005","INFO","[[1mUNQ.ID    [m][dc377b68-b830-47e8-b318-bee183f32e85]"
+[K"20191217T112005","INFO","[[1mDO DONE   [m][SIENA.GIT.CHECKIN.HELPER]"
+[K"20191217T112005","INFO","[[1mCOMO OFF  [m][fc0910c9-2371-4df0-a6a9-0b0e5a78d231]"
+User limit reached
+[ QM Rev 3.4-14   Copyright Zumasys Inc., 2019 ]
+[ 0103035549  For personal use only ]
+[K"20191217T132001","INFO","[[1mUNQ.ID    [m][144b5fe9-5606-4884-a2da-082036494325]"
+[K"20191217T132001","INFO","[[1mCOMO      [m][144b5fe9-5606-4884-a2da-082036494325]"
+[K"20191217T132001","INFO","[[1mUNQ.ID    [m][5d62eb23-2e22-48c3-873e-4be221e84329]"
+[K"20191217T132001","INFO","[[1mUNQ.ID    [m][cb86daf7-b58f-4d75-956e-6d7f4ccd7535]"
+[K"20191217T132001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191217T132001","INFO","+-+-+-+-+-+-+-+-+"
+[K"20191217T132001","INFO","|S|I|E|N|A|.|D|O|"
+[K"20191217T132001","INFO","+-+-+-+-+-+-+-+-+"
+[K"20191217T132001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191217T132001","INFO","[[1mPROCESS   [m][CHECKIN]"
+[K"20191217T132001","INFO","[[1mDO SUB    [m][SIENA.GIT.CHECKIN.HELPER]"
+[K"20191217T132001","INFO","[[1mOS.COMMAND[m][git add .]"
