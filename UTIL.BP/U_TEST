@@ -25,15 +25,15 @@ PROGRAM U_TEST
    VERBOSE = @TRUE
    ID.RESULT = ""
 
-   SQL.STATEMENT =  'select CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode from "dbo"."CurrencyPair" where Active=1'
-   SQL.DATABASE  =  ""
+   *SQL.STATEMENT =  'select CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode from "dbo"."CurrencyPair" where Active=1'
+   *SQL.DATABASE  =  ""
 
-SQL.FIELDS   = "CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode"
-SQL.TABLE    = "dbo.CurrencyPair"
+SQL.FIELDS   = "*"
+SQL.TABLE    = "dbo.Centre"
 SQL.DATABASE = ""
-SQL.WHERE    = "Active=1"
+SQL.WHERE    = "InternalDeleted IS NULL"
 
-CALL U_MSSQL.SELECT(SQL.FIELDS, SQL.TABLE, SQL.DATABASE, SQL.WHERE, VERBOSE, ID.RESULT)
+   CALL U_MSSQL.SELECT(SQL.FIELDS, SQL.TABLE, SQL.DATABASE, SQL.WHERE, VERBOSE, ID.RESULT)
 
    CALL U_CRT.ACTION("RESULT", ID.RESULT)
 
