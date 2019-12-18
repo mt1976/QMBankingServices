@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.03
+sales
+
+13c2f510-bbaf-49ac-a871-21287d1efd96
+COPY FROM UTIL.TRANSLATE TO UTIL.BACKUP "NINAME!UK-1-5/8-TG-71---------------","UTIL.TRANSLATE~NINAME!UK-1-5/8-TG-71---------------~20191218"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

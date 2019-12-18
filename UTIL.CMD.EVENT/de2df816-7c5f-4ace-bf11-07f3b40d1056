@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.16.39
+sales
+
+de2df816-7c5f-4ace-bf11-07f3b40d1056
+COPY FROM UTIL.BP TO UTIL.TRANSFER "U_BUILDFILES.HELPER","UTIL.BP~U_BUILDFILES.HELPER"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

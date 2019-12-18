@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.32
+sales
+
+b283ad6d-b86b-4849-8caa-466e821caf9e
+DELETE UTIL.TRANSFER "SIENA.CONFIG~forward_tenors.list"
+
+0
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

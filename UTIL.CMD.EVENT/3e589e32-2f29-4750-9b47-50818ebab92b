@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.18.41
+sales
+
+3e589e32-2f29-4750-9b47-50818ebab92b
+COPY FROM SIENA.SCRIPTS TO UTIL.BACKUP "cpiFetch.sh","SIENA.SCRIPTS~cpiFetch.sh~20191218"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.16.39
+sales
+
+172cf34f-c9f8-403b-82d1-82edcc2ab5f8
+COPY FROM UTIL.BP TO UTIL.BACKUP "UTIL.H","UTIL.BP~UTIL.H~20191218"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

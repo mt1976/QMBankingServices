@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.03
+sales
+
+ed052436-6edb-4e57-b93d-eb0eeb787fcc
+COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "RATETYPE!1","UTIL.TRANSLATE~RATETYPE!1"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

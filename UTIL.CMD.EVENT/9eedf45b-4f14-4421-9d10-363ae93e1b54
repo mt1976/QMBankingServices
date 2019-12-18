@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.16.39
+sales
+
+9eedf45b-4f14-4421-9d10-363ae93e1b54
+COPY FROM UTIL.BP TO UTIL.TRANSFER "MWT.RESTORE","UTIL.BP~MWT.RESTORE"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

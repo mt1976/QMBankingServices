@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.23
+sales
+
+453890c4-1df5-4f14-bf3c-039dd5f6abb9
+COPY FROM UTIL.CONFIG TO UTIL.BACKUP "clear.util.properties","UTIL.CONFIG~clear.util.properties~20191218"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

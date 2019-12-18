@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.03
+sales
+
+930e8ebd-ebcc-41ae-b03e-2e1ecc89ab6e
+COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "NIPART!CAPITAL","UTIL.TRANSLATE~NIPART!CAPITAL"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

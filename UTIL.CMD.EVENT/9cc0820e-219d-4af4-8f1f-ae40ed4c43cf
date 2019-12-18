@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.16.39
+sales
+
+9cc0820e-219d-4af4-8f1f-ae40ed4c43cf
+COPY FROM UTIL.BP TO UTIL.TRANSFER "U_MSSQL.INSERT","UTIL.BP~U_MSSQL.INSERT"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

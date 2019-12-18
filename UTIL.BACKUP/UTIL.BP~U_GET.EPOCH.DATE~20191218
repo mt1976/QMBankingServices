@@ -1,0 +1,22 @@
+SUBROUTINE U_GET.EPOCH.DATE(THIS.DATE)
+** INFORMATION ****************************************************************
+* Routine Name   : U_GET.EPOCH.DATE
+*         Type   : SUBROUTINE
+*         Loc    : UTIL.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20191218 at 15.43.50 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+*******************************************************************************
+$INCLUDE UTIL.BP UTIL.H
+
+   dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
+   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "dateTimeFormat", dateTimeFormat)
+   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "timeZone", timeZone)
+
+   SET.TIMEZONE timeZone
+   THIS.DATE = OCONV(EPOCH(), dateTimeFormat)
+
+   RETURN
+END

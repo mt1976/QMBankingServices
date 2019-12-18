@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.23
+sales
+
+3b2b1f90-57a5-4a9c-bb1f-06f2a8eeff92
+DELETE UTIL.TRANSFER "UTIL.CONFIG~clear.siena.properties"
+
+0
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

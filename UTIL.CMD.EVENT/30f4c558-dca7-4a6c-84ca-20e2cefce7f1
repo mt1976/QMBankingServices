@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.03
+sales
+
+30f4c558-dca7-4a6c-84ca-20e2cefce7f1
+COPY FROM UTIL.TRANSLATE TO UTIL.BACKUP "COUPON.TYPE!Fixed","UTIL.TRANSLATE~COUPON.TYPE!Fixed~20191218"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

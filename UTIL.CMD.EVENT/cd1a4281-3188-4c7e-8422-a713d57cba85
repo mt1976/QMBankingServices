@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.03
+sales
+
+cd1a4281-3188-4c7e-8422-a713d57cba85
+DELETE UTIL.TRANSFER "UTIL.TRANSLATE~FEDNAME!TB1YR"
+
+0
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

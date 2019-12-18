@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.18.41
+sales
+
+f848d920-f180-4a13-b1d5-89a877a98337
+COPY FROM SIENA.SCRIPTS TO UTIL.BACKUP "liborFetch.sh","SIENA.SCRIPTS~liborFetch.sh~20191218"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

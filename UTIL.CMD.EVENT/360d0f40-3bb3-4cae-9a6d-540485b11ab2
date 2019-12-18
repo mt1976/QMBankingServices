@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.18.41
+sales
+
+360d0f40-3bb3-4cae-9a6d-540485b11ab2
+DELETE UTIL.TRANSFER "SIENA.SCRIPTS~fxSPfetch.sh"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

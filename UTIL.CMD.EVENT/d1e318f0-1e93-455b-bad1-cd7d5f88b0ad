@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.03
+sales
+
+d1e318f0-1e93-455b-bad1-cd7d5f88b0ad
+COPY FROM UTIL.TRANSLATE TO UTIL.BACKUP "NIPART!BK*","UTIL.TRANSLATE~NIPART!BK*~20191218"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

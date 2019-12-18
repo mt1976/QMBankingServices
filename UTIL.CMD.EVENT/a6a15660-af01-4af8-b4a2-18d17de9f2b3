@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.04
+sales
+
+a6a15660-af01-4af8-b4a2-18d17de9f2b3
+COPY FROM UTIL.TRANSLATE TO UTIL.BACKUP "ACCRUAL!","UTIL.TRANSLATE~ACCRUAL!~20191218"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

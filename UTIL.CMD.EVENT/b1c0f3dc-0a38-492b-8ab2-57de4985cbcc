@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.03
+sales
+
+b1c0f3dc-0a38-492b-8ab2-57de4985cbcc
+COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "SECTOR!UKC1","UTIL.TRANSLATE~SECTOR!UKC1"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

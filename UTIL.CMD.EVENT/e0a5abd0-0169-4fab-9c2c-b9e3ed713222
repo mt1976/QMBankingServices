@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.04
+sales
+
+e0a5abd0-0169-4fab-9c2c-b9e3ed713222
+COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "CENTER!","UTIL.TRANSLATE~CENTER!"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

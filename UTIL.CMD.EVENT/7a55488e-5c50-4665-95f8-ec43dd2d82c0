@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.23
+sales
+
+7a55488e-5c50-4665-95f8-ec43dd2d82c0
+COPY FROM UTIL.CONFIG TO UTIL.BACKUP "codeHeader.txt","UTIL.CONFIG~codeHeader.txt~20191218"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

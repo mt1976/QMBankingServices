@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.03
+sales
+
+e8ebf9dc-75ab-4942-87a9-2ccb4c17ea96
+DELETE UTIL.TRANSFER "UTIL.TRANSLATE~NIPART!PLC"
+
+0
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

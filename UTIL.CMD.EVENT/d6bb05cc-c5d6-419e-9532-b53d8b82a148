@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.04
+sales
+
+d6bb05cc-c5d6-419e-9532-b53d8b82a148
+COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "NINAME!UK-TR*4-1/4-36-------4*25--36","UTIL.TRANSLATE~NINAME!UK-TR*4-1/4-36-------4*25--36"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

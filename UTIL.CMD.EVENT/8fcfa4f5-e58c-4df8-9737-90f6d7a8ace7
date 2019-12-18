@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.03
+sales
+
+8fcfa4f5-e58c-4df8-9737-90f6d7a8ace7
+COPY FROM UTIL.TRANSLATE TO UTIL.BACKUP "PARENTDEAL!Gilt","UTIL.TRANSLATE~PARENTDEAL!Gilt~20191218"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.04
+sales
+
+498f9c0f-99e7-4ea1-bbf8-a947137f4039
+COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "TYPE!International-Corporate-Bond","UTIL.TRANSLATE~TYPE!International-Corporate-Bond"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

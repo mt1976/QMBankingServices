@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.32
+sales
+
+d0997ced-be63-45e4-96e9-6cdcce8ef05a
+COPY FROM SIENA.CONFIG TO UTIL.BACKUP "delivery.list","SIENA.CONFIG~delivery.list~20191218"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

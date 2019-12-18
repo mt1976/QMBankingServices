@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.16.39
+sales
+
+9c7efcd8-478c-47e6-aa6a-20b7faa8b963
+COPY FROM UTIL.BP TO UTIL.TRANSFER "RATECSV.H","UTIL.BP~RATECSV.H"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

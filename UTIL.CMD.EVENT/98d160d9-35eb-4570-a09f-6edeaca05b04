@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.02
+sales
+
+98d160d9-35eb-4570-a09f-6edeaca05b04
+COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "FIRM!","UTIL.TRANSLATE~FIRM!"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

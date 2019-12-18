@@ -1,0 +1,37 @@
+SUBROUTINE U_MSSQL.INSERT(SQL.TABLE, SQL.FIELDS, SQL.VALUES, SQL.DATABASE, VERBOSE)
+** INFORMATION ****************************************************************
+* Routine Name   : U_MSSQL.INSERT
+*         Type   : SUBROUTINE
+*         Loc    : UTIL.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20191218 at 15.43.50 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+*******************************************************************************
+$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
+
+* INSERT INTO dbo.account (account_name, account_start_date, account_address, account_type, account_create_timestamp, is_active)
+* VALUES ('Initech','2/19/1999','4120 Freidrich Ln.','LIVE',GETUTCDATE(),1);
+
+FIELDS.SECTION = "(":CHANGE(SQL.FIELDS,@AM,","):")"
+VALUE.SECTION  = ""
+NO.DATA.ITEMS  = DCOUNT(SQL.VALUES,@AM)
+
+FOR THIS.ROW = 1 TO NO.DATA.ITEMS
+
+  SQL.INSERT = "INSERT INTO ":SQL.TABLE:" "
+  SQL.INSERT := FIELDS.SECTION
+  VALUE.SECTION = "(":CHANGE(SQL.VALUES<THIS.ROW>,@VM,","):")"
+
+  SQL.INSERT := " VALUES ":VALUE.SECTION
+
+  CALL U_CRT.ACTION("INSERT",SQL.INSERT)
+
+  CALL U_MSSQL.EXECUTE(SQL.INSERT,SQL.DATABASE,@TRUE,ID.RESULT)
+
+NEXT THIS.ROW
+
+   RETURN
+END

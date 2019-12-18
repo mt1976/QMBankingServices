@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.02
+sales
+
+91fd43bf-2200-48d0-808f-2b6f9f84c371
+COPY FROM UTIL.TRANSLATE TO UTIL.BACKUP "FIRM!","UTIL.TRANSLATE~FIRM!~20191218"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

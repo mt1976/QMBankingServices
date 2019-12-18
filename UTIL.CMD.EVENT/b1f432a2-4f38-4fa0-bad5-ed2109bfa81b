@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.16.39
+sales
+
+b1f432a2-4f38-4fa0-bad5-ed2109bfa81b
+COPY FROM UTIL.BP TO UTIL.TRANSFER "U_CURL","UTIL.BP~U_CURL"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

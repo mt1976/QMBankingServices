@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.16.39
+sales
+
+84746aef-d697-4eb8-97dc-e569005b62fe
+COPY FROM UTIL.BP TO UTIL.TRANSFER "U_GET.LIST","UTIL.BP~U_GET.LIST"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.18.41
+sales
+
+2bca464d-8ade-4ba5-a360-d06444aec4e4
+COPY FROM SIENA.SCRIPTS TO UTIL.TRANSFER "fxSPfetch.sh","SIENA.SCRIPTS~fxSPfetch.sh"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

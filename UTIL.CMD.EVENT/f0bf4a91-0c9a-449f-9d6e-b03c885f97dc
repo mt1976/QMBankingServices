@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.23
+sales
+
+f0bf4a91-0c9a-449f-9d6e-b03c885f97dc
+COPY FROM UTIL.CONFIG TO UTIL.TRANSFER "create.util.properties","UTIL.CONFIG~create.util.properties"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

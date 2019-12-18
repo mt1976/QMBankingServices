@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.02
+sales
+
+64b0d3a4-85d5-44be-a988-699b2e2c1ab1
+COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "TENOR!5-Year-Forward","UTIL.TRANSLATE~TENOR!5-Year-Forward"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

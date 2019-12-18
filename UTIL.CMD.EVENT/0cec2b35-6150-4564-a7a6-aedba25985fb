@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.32
+sales
+
+0cec2b35-6150-4564-a7a6-aedba25985fb
+DELETE UTIL.TRANSFER "SIENA.CONFIG~delivery.list"
+
+0
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

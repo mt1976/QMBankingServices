@@ -1,0 +1,26 @@
+SUBROUTINE U_GIT.CHECKIN.HELPER(THIS.THING)
+** INFORMATION ****************************************************************
+* Routine Name   : U_GIT.CHECKIN.HELPER
+*         Type   : SUBROUTINE
+*         Loc    : UTIL.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20191218 at 15.43.50 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+*******************************************************************************
+$INCLUDE UTIL.BP UTIL.H
+
+   THIS.DATE = "" ; VERBOSE=@TRUE
+   CALL U_GET.EPOCH.DATE(THIS.DATE)
+
+   STMT.1 = "git add ."
+   STMT.2 = "git commit -m ":DQUOTE("auto.":DOWNCASE(THIS.DATE))
+   STMT.3 = "git push"
+
+   CALL U_OS.COMMAND(STMT.1, VERBOSE)
+   CALL U_OS.COMMAND(STMT.2, VERBOSE)
+   CALL U_OS.COMMAND(STMT.3, VERBOSE)
+
+   RETURN
+END

@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.16.39
+sales
+
+9ea31142-33bd-40b1-a694-feed9e67b3dd
+COPY FROM UTIL.BP TO UTIL.TRANSFER "MWT.CHECKIN.HELPER","UTIL.BP~MWT.CHECKIN.HELPER"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.02
+sales
+
+6fd7e611-e2eb-42a8-a64e-33c02e0b69c9
+COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "COUPON*TYPE!Fixed","UTIL.TRANSLATE~COUPON*TYPE!Fixed"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

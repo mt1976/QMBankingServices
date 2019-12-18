@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.17.04
+sales
+
+1a392213-f543-435b-9ad5-54f2ef91bfbf
+DELETE UTIL.TRANSFER "UTIL.TRANSLATE~NINAME!HAMMERSON-PLC-7Q28---7*25--28"
+
+0
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

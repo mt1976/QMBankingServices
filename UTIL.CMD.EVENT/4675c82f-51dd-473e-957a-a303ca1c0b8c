@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.16.39
+sales
+
+4675c82f-51dd-473e-957a-a303ca1c0b8c
+COPY FROM UTIL.BP TO UTIL.BACKUP "U_CREATEFILES","UTIL.BP~U_CREATEFILES~20191218"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux

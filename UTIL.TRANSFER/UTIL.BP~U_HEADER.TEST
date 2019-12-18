@@ -1,0 +1,17 @@
+PROGRAM U_HEADER.TEST
+** INFORMATION ****************************************************************
+* Routine Name   : U_HEADER.TEST
+*         Type   : PROGRAM
+*         Loc    : UTIL.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20191218 at 15.43.50 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+*******************************************************************************
+   PID = ""
+   CALL U_START(PID)
+   CALL U_HEADER("this is a test")
+   CALL U_STOP(PID)
+   STOP "DONE"
+END

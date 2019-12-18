@@ -1,0 +1,18 @@
+EXECUTE
+20191218
+16.16.38
+sales
+
+7d2e07f8-f548-443a-9d48-34b38e0ae7ab
+COPY FROM UTIL.BP TO UTIL.TRANSFER "U_HEADER.TEST","UTIL.BP~U_HEADER.TEST"
+
+1
+U_EXECUTE
+/dev/pts/1
+107
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+MWT.CHECKIN
+ldn-srv-ubnt01
+
+Linux
