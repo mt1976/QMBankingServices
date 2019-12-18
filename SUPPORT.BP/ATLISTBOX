@@ -1,0 +1,110 @@
+SUBROUTINE ATLISTBOX(TITLE, PRMPT, LIST, WIDTH, HEIGHT, FIXED, DELIM, SELECTION)
+*
+* ACCUTERM LISTBOX SELECTION SUBROUTINE USING SCRIPT DIALOG BOX
+* 
+*  Call this subroutine to display a list of items using
+*  a windows dialog box, returning the selected item, or
+*  zero if the user clicked the Cancel button.
+*
+*    TITLE:     dialog box title
+*    PRMPT:     prompt text displayed above the list box
+*    LIST:      list contents (items separated by specified delimiter)
+*    WIDTH:     dialog width in characters (approx)
+*    HEIGHT:    dialog height in lines (approx)
+*    FIXED:     0 = proportional font
+*               1 = list displayed using fixed pitch font
+*               2 = list and prompt text displayed using fixed pitch font
+*    DELIM:     delimiter character used to separate list items
+*    SELECTION: on entry, index of initial selection, or zero if no item
+*               is initially selected; on return, index of selection, or
+*               zero if the user clicked the Cancel button
+*
+*  Note: this subroutine builds and executes a script which
+*  displays the list in a dialog box and returns the selected
+*  item back to the host.
+*
+EQU ESC TO CHAR(27), STX TO CHAR(2), CR TO CHAR(13), EM TO CHAR(25)
+EQU BEL TO CHAR(7)
+*Calculate dialog box size in "dialog units"
+WD=WIDTH*8; IF WD<250 THEN WD=250
+HT=HEIGHT*12; IF HT<100 THEN HT=100
+CY=HT+60
+CX=WD+20
+DX=INT((CX-120)/3)
+DY=CY-25
+N=DCOUNT(LIST,DELIM)
+IF N < 1 THEN N = 1
+*Build script to display list using dialog box
+SCR='Dim Listarray(':(N-1):') As String'
+SCR=SCR:EM:'Dim n%'
+*Load Listarray()
+SCR=SCR:EM:'On Error Resume Next'
+FOR I=1 TO N
+ ARG=FIELD(LIST,DELIM,I)
+ GOSUB 100;* fixup any embedded double-quotes
+ SCR=SCR:EM:'Listarray(':(I-1):') = "':ARG:'"'
+NEXT I
+*Define dialog box
+SCR=SCR:EM:'Begin Dialog UserDialog ':CX:',':CY:',"':TITLE:'"'
+SCR=SCR:',.DialogFunc'
+SCR=SCR:EM:'Text 10,10,':WD:',12,"':PRMPT:'",.Heading'
+SCR=SCR:EM:'ListBox 10,27,':WD:',':HT:',Listarray(),.Listbox'
+SCR=SCR:EM:'OKButton ':DX:',':DY:',60,20'
+SCR=SCR:EM:'CancelButton ':(2*DX)+60:',':DY:',60,20'
+SCR=SCR:EM:'End Dialog'
+SCR=SCR:EM:'Dim Dlg As UserDialog'
+*Set the initial selection
+SCR=SCR:EM:'Dlg.Listbox = ':(SELECTION-1)
+*Display the dialog box
+SCR=SCR:EM:'Dialog Dlg'
+*Transmit results to host
+SCR=SCR:EM:'InitSession.Activate'
+SCR=SCR:EM:'If Err = 0 Then n% = Dlg.Listbox + 1 Else n% = 0'
+SCR = SCR:EM:'InitSession.Output CStr(n%) & vbCr'
+*Define dialog function to move focus & select fixed pitch font
+ SCR = SCR:EM:'End Sub'
+ IF FIXED THEN
+  * Declare API functions in "global" area, between End Sub and Sub( )
+  SCR = SCR:EM:'Private Declare Function GetStockObject& Lib "gdi32" (ByVal nid&)'
+  SCR = SCR:EM:'Private Declare Function SendDlgItemMessageA& Lib "user32" (ByVal hWnd&, ByVal ID&, ByVal uMsg&, ByVal wp&, ByVal lp&)'
+  SCR = SCR:EM:'Private Const WM_SETFONT=&H30'
+  SCR = SCR:EM:'Private Const SYSTEM_FIXED_FONT=16'
+ END
+ SCR = SCR:EM:'Private Function DialogFunc(DlgItm$, Action%, SuppVal&) As Boolean'
+ SCR = SCR:EM:'Select Case Action%'
+ IF FIXED THEN
+  *Set the LIST font to SYSTEM_FIXED_FONT
+  SCR = SCR:EM:'Case 1'
+  SCR = SCR:EM:'SendDlgItemMessageA SuppVal&,DlgControlID("Listbox"),WM_SETFONT,GetStockObject(SYSTEM_FIXED_FONT),1'
+ END
+ IF FIXED=2 THEN
+  SCR = SCR:EM:'SendDlgItemMessageA SuppVal&,DlgControlID("Heading"),WM_SETFONT,GetStockObject(SYSTEM_FIXED_FONT),1'
+ END
+ * Move focus to the listbox
+ SCR = SCR:EM:'Case 5'
+ SCR = SCR:EM:'DlgFocus "Listbox"'
+ SCR = SCR:EM:'End Select'
+ SCR = SCR:EM:'End Function'
+ *Since host scripts get automatic End Sub, need a dummy Begin Sub
+ SCR = SCR:EM:'Sub Dummy'
+*Execute script
+PRINT ESC:STX:'P':SCR:CR:
+*Retrieve the result
+PROMPT ''
+ECHO OFF
+INPUT SELECTION:
+ECHO ON
+PROMPT '?'
+RETURN
+*
+100 * Local subroutine to fixup embedded double-quote marks
+K = 1
+LOOP
+ J = INDEX(ARG, '"', K)
+WHILE J DO
+ ARG = ARG[1, J] : ARG[J, 99999]
+ K = K + 2
+REPEAT
+RETURN
+*
+END

@@ -1,0 +1,225 @@
+SUBROUTINE ATINPUTTEXTEX(TITLE, PRMPT, TEXT, WIDTH, HEIGHT, DELIM, FONTNAME, FONTSIZE)
+*
+* ACCUTERM TEXT INPUT SUBROUTINE USING SCRIPT DIALOG BOX
+* 
+*  CALL THIS SUBROUTINE TO INPUT TEXT USING A WINDOWS
+*  DIALOG BOX. PASS A TITLE, PROMPT MESSAGE, INITIAL
+*  TEXT VALUE, WIDTH IN CHARACTERS, HEIGHT IN LINES,
+*  LINE DELIMITER, FONT NAME AND SIZE. DELIMITER IS
+*  NULL FOR SINGLE LINE TEXT ENTRY (HEIGHT IS IGNORED IN
+*  THIS CASE). OTHERWISE, MULTIPLE LINES ARE SEPARATED
+*  BY THE SPECIFIED DELIMITER. THE RESULT IS RETURNED
+*  IN THE TEXT ARGUMENT. IF THE USER CLICKS THE CANCEL
+*  BUTTON, NULL IS RETURNED.
+*
+*  THE FONTNAME AND FONTSIZE ARE OPTIONAL, BUT IF EITHER
+*  IS SPECIFIED (NOT NULL), THE OTHER MUST ALSO BE
+*  SPECIFIED.
+*
+*  THIS ROUTINE IS BASED ON THE ORIGINAL ACCUTERM SAMPLE
+*  ATINPUTTEXT, BUT INCLUDES THE NEW FONTNAME AND FONTSIZE
+*  ARGUMENTS, WHICH ALLOW YOU TO SPECIFY THE FONT USED
+*  IN THE TEXT BOX. THIS ROUTINE WAS CONTRIBUTED BY KIM
+*  STAHL AT ELIZABETH ARDEN SPAS.
+*
+*  NOTE: THIS SUBROUTINE BUILDS AND EXECUTES A SCRIPT WHICH
+*  PERFORMS THE TEXT INPUT, THEN TRANSMITS THE RESULTS BACK
+*  TO THE HOST.
+*
+EQU ESC TO CHAR(27), STX TO CHAR(2), CR TO CHAR(13), EM TO CHAR(25)
+EQU BEL TO CHAR(7)
+* Calculate dialog box size in "dialog units"
+WD=WIDTH*8; IF WD<250 THEN WD=250
+IF DELIM='' THEN ML=0 ELSE ML=1
+IF ML THEN
+ HT=HEIGHT*12; IF HT<100 THEN HT=100
+ CY=HT+60
+END ELSE
+ HT=18
+ CY=78
+END
+CX=WD+20
+DX=INT((CX-120)/3)
+DY=CY-25
+*
+CMD = ''
+IF FONTNAME <> '' AND FONTSIZE > 0 THEN
+* Create custom font
+* The following code is from the SAX website, with some modification for text, and text size.
+CMD := 'Dim hDC As Long':EM
+CMD := 'Dim Height As Long':EM
+CMD := 'hDC = GetWindowDC(0)':EM
+CMD := 'Height = (-':FONTSIZE:'*GetDeviceCaps(hDC,LOGPIXELSY))/72':EM
+CMD := 'ReleaseDC 0,hDC':EM
+CMD := 'hFont = CreateFontA(Height,0,0,0,0,0,0,0,0,0,0,0,0,"':FONTNAME:'")':EM ;*New font
+* End SAX code from website
+END
+*
+* Sets the width of the textbox
+CMD := 'Begin Dialog UserDialog ':CX:',':CY:',"':TITLE:'",.DlgFunc':EM
+CMD := '   Text 10,10,':WD:',12,"':PRMPT:'"':EM
+CMD := '   TextBox 10,27,':WD:',':HT:',.Text1$,':ML:EM
+CMD := '   OKButton ':DX:',':DY:',60,20,.OK':EM
+CMD := '   CancelButton ':(2*DX)+60:',':DY:',60,20,.Cancel':EM
+CMD := 'End Dialog':EM
+CMD := 'Dim dlg as UserDialog':EM
+CMD := 'Dim Text$':EM
+CMD := 'Dim i as Integer':EM
+CMD := 'Dim n as Integer':EM
+* Load initial text value
+CMD := 'On Error Resume Next':EM
+IF ML THEN
+ N=DCOUNT(TEXT,DELIM)
+ FOR I=1 TO N
+  ARG=FIELD(TEXT,DELIM,I); GOSUB 100
+  LOOP WHILE LEN(ARG) > 250 DO
+   CMD := 'Text$ = Text$ & "':ARG[1,250]:'"':EM
+   ARG=ARG[251,999999]
+  REPEAT
+  CMD := 'Text$ = Text$ & "':ARG:'"':EM
+  IF I<N THEN CMD := 'Text$ = Text$ & vbCrLf':EM
+ NEXT I
+END ELSE
+ ARG=TEXT; GOSUB 100
+ CMD := 'Text$ = "':ARG:'"':EM
+END
+CMD := 'dlg.Text1$ = Text$':EM
+* Display the dialog box
+CMD := 'Dialog Dlg':EM
+* Transmit results to host
+CMD := 'InitSession.Activate':EM
+IF ML THEN
+ CMD := 'If Err Then':EM
+ CMD := 'InitSession.Output "-1" & vbCr':EM
+ CMD := 'Else':EM
+ CMD := 'Text$ = Dlg.Text1':EM
+ CMD := 'n=LineCount(Text$)':EM
+ CMD := 'InitSession.InputMode=2':EM
+ CMD := 'InitSession.Output CStr(n) & vbCr':EM
+ CMD := 'For i=1 To n':EM
+ CMD := 'If InitSession.WaitFor(0,5,Chr$(7)) Then':EM
+ CMD := 'InitSession.Output Line(Text$,i,i) & vbCr':EM
+ CMD := 'End If':EM
+ CMD := 'Next i':EM
+ CMD := 'InitSession.InputMode=0':EM
+ CMD := 'End If':EM
+END ELSE
+ CMD := 'If Err = 0 Then Text$ = Dlg.Text1 Else Text$ = ""':EM
+ CMD := 'InitSession.Output Text$ & vbCr':EM
+END
+*
+IF FONTNAME <> '' AND FONTSIZE > 0 THEN
+* Must delete the font when finished
+CMD := 'DeleteObject hFont':EM
+END
+CMD := 'End Sub':EM
+*
+IF FONTNAME <> '' AND FONTSIZE > 0 THEN
+* Declarations for custom font
+* This is code from the SAX website
+CMD := 'Const LOGPIXELSY = 90':EM
+CMD := 'Const WM_SETFONT = &H30':EM
+CMD := 'Declare Function CreateFontA Lib "gdi32" ( _':EM
+CMD := 'ByVal nHeight As Long, _':EM
+CMD := 'ByVal nWidth As Long, _':EM
+CMD := 'ByVal nEscapement As Long, _':EM
+CMD := 'ByVal nOrientation As Long, _':EM
+CMD := 'ByVal fnWeight As Long, _':EM
+CMD := 'ByVal fdwItalic As Long, _':EM
+CMD := 'ByVal fdwUnderline As Long, _':EM
+CMD := 'ByVal fdwStrikeOut As Long, _':EM
+CMD := 'ByVal fdwCharSet As Long, _':EM
+CMD := 'ByVal fdwOutputPrecision As Long, _':EM
+CMD := 'ByVal fdwClipPrecision As Long, _':EM
+CMD := 'ByVal fdwQuality As Long, _':EM
+CMD := 'ByVal fdwPitchAndFamily As Long, _':EM
+CMD := 'ByVal lpszFace As String _':EM
+CMD := ') As Long':EM
+CMD := 'Declare Function DeleteObject Lib "gdi32" ( _':EM
+CMD := 'ByVal hObject As Long _':EM
+CMD := ') As Long':EM
+CMD := 'Declare Function GetDeviceCaps Lib "gdi32" ( _':EM
+CMD := 'ByVal hDC As Long, _':EM
+CMD := 'ByVal nIndex As Long _':EM
+CMD := ') As Long':EM
+CMD := 'Declare Function GetWindowDC Lib "user32" ( _':EM
+CMD := 'ByVal hWnd As Long _':EM
+CMD := ') As Long':EM
+CMD := 'Declare Function ReleaseDC Lib "user32" ( _':EM
+CMD := 'ByVal hWnd As Long, _':EM
+CMD := 'ByVal hDC As Long _':EM
+CMD := ') As Long':EM
+END
+* Declarations for accessing dialog box controls
+CMD := 'Declare Function GetDlgItem Lib "user32" ( _':EM
+CMD := 'ByVal hDlg As Long, _':EM
+CMD := 'ByVal nIDDlgItem As Long _':EM
+CMD := ') As Long':EM
+CMD := 'Declare Function SendDlgItemMessage Lib "user32" ( _':EM
+CMD := 'ByVal hWnd As Long, _':EM
+CMD := 'ByVal ID As Long, _':EM
+CMD := 'ByVal uMsg As Long, _':EM
+CMD := 'ByVal wParam As Long, _':EM
+CMD := 'ByVal lParam As Long _':EM
+CMD := ') As Long':EM
+CMD := 'Const EM_SETSEL = 177':EM
+* The dialog function
+CMD := 'Dim hFont As Long':EM
+CMD := 'Dim DlgWnd As Long':EM
+CMD := 'Private Function DlgFunc(DlgItem$, Action%, SuppValue&) As Boolean':EM
+CMD := 'Select Case Action%':EM
+IF FONTNAME <> '' AND FONTSIZE > 0 THEN
+CMD := 'Case 1 ':EM
+CMD := 'DlgWnd = SuppValue&':EM
+CMD := 'SendDlgItemMessage DlgWnd,DlgControlID("Text1"),WM_SETFONT,hFont,1':EM
+END
+CMD := 'Case 4 ' :EM
+CMD := 'SendDlgItemMessage DlgWnd,DlgControlID("Text1"),EM_SETSEL,0,0':EM
+CMD := 'Case 5 ':EM
+CMD := 'DlgFocus "Text1"':EM
+CMD := 'End Select':EM
+CMD := 'End Function':EM
+* End of code from SAX website
+*
+* Since host scripts get automatic End Sub, need a dummy Begin Sub
+CMD := 'Sub Dummy':EM
+* Execute script
+PRINT ESC:STX:'P':CMD:CR:
+* Retrieve the result
+PROMPT ''
+ECHO OFF
+INPUT ANS:
+IF ML THEN
+ N=OCONV(ANS,'MCN')+0
+ IF ANS >= 0 THEN
+  TEXT = ''
+  FOR I=1 TO N
+   PRINT BEL:
+   INPUT ANS,300:
+   TEXT := ANS
+   IF LEN(ANS) = 300 THEN
+    LOOP
+     INPUT ANS,300:
+     TEXT := ANS
+    UNTIL LEN(ANS) < 300 DO
+    REPEAT
+   END
+   IF I < N THEN TEXT := DELIM
+  NEXT I
+ END
+END ELSE
+ TEXT = ANS
+END
+ECHO ON
+PROMPT '?'
+RETURN
+*
+100 * Local subroutine to fixup embedded double-quote marks
+K = 1
+LOOP
+ J = INDEX(ARG, '"', K)
+WHILE J DO
+ ARG = ARG[1, J] : ARG[J, 99999]
+ K = K + 2
+REPEAT
+RETURN
