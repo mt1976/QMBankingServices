@@ -2,7 +2,7 @@
 ## Purpose
 Queries a public rates source (mid rates only) to extract FX spot rates, EONIA & Libor rates which will in time form the basis of a rate import into siena.
 
-
+http://www.mannyneira.com/universe/basic-practice.html?news
 ## Structure
 ```
 TBC
