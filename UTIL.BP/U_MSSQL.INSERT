@@ -1,10 +1,10 @@
 SUBROUTINE U_MSSQL.INSERT(SQL.TABLE, SQL.FIELDS, SQL.VALUES, SQL.DATABASE, VERBOSE)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_GOOGLE.CHROME.FETCH
+* Routine Name   : U_MSSQL.INSERT
 *         Type   : SUBROUTINE
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20191217 at 11.07.35 in MWT-QM-DEV by sales
+* Info Updated   : 20191218 at 15.43.50 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *

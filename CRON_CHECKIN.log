@@ -4591,3 +4591,20 @@ User limit reached
 [K"20191218T152001","INFO","[[1mPROCESS        [m][CHECKIN]"
 [K"20191218T152001","INFO","[[1mDO SUB         [m][SIENA.GIT.CHECKIN.HELPER]"
 [K"20191218T152001","INFO","[[1mOS.COMMAND     [m][git add .]"
+warning: CRLF will be replaced by LF in CRON_CHECKIN.log.
+The file will have its original line endings in your working directory.
+[K"20191218T152001","INFO","[[1mUNQ.ID         [m][829aea98-c44a-4f72-867a-2b59e2ca75c2]"
+[K"20191218T152001","INFO","[[1mOS.COMMAND     [m][git commit -m "auto.20191218t152001"]"
+[master c0b8aa43] auto.20191218t152001
+ 5 files changed, 52 insertions(+)
+ create mode 100644 UTIL.CMD.EVENT/3fcc2c27-17e9-42ac-9ef8-11e75bfd1415
+ create mode 100644 UTIL.CMD.EVENT/821aad35-5d61-4746-8847-065a83c4dda3
+ create mode 100644 UTIL.CMD.LOG/3fcc2c27-17e9-42ac-9ef8-11e75bfd1415
+ create mode 100644 UTIL.CMD.LOG/821aad35-5d61-4746-8847-065a83c4dda3
+[K"20191218T152001","INFO","[[1mUNQ.ID         [m][dc22b426-6fcd-4307-aff5-23a470d662d6]"
+[K"20191218T152001","INFO","[[1mOS.COMMAND     [m][git push]"
+To https://github.com/mt1976/mwt-QM-dev.git
+   297d3b83..c0b8aa43  master -> master
+[K"20191218T152005","INFO","[[1mUNQ.ID         [m][8b22f696-f9a0-4746-ae9a-9c1e1da194e0]"
+[K"20191218T152005","INFO","[[1mDO DONE        [m][SIENA.GIT.CHECKIN.HELPER]"
+[K"20191218T152005","INFO","[[1mCOMO OFF       [m][d9c0c5a3-5308-4d1f-a9c3-d1d7f0f4134c]"
