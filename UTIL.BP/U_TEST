@@ -30,7 +30,7 @@ PROGRAM U_TEST
    *SQL.DATABASE  =  ""
 
 SQL.FIELDS   = "*"
-SQL.TABLE    = "dbo.CPList"
+SQL.TABLE    = "dbo.vwCPList"
 SQL.DATABASE = ""
 SQL.WHERE    = ""
 RES.COLUMNS  = ""
