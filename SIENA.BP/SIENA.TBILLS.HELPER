@@ -10,7 +10,7 @@ SUBROUTINE SIENA.ECB.HELPER(PROCESS.NAME)
 *
 *******************************************************************************
 $INCLUDE UTIL.BP I_UTIL.TRANSLATE.H
-$INCLUDE UTIL.BP I_I_RATECSV.H
+$INCLUDE UTIL.BP I_RATECSV.H
 
 * INITIALISE
    PREFIX = PROCESS.NAME
