@@ -10,7 +10,7 @@ SUBROUTINE U_GET.LIST(IN.PROPERTIES.FILE, IN.LIST.NAME, IN.LIST.PREFIX, RETURN.L
 $COPYRIGHT = "Copyright (C) 2019 Matt Townsend mt76@gmx.com"
 *******************************************************************************
 $INCLUDE UTIL.BP I_UTIL.H
-$INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
+$INCLUDE UTIL.BP I_UTIL.LOG.EVENT.H
 
    RETURN.LIST = ""
    STOP.ON.ERROR = @TRUE

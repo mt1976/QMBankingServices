@@ -10,7 +10,7 @@ SUBROUTINE U_OS.COMMAND(STMT, VERBOSE)
 $COPYRIGHT = "Copyright (C) 2019 Matt Townsend mt76@gmx.com"
 *******************************************************************************
 $INCLUDE UTIL.BP I_UTIL.H
-$INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
+$INCLUDE UTIL.BP I_UTIL.LOG.EVENT.H
 
    IF VERBOSE THEN
       CALL U_CRT.INFO("OS.COMMAND", STMT)

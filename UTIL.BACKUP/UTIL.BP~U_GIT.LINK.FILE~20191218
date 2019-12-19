@@ -10,7 +10,7 @@ PROGRAM U_GIT.LINK.FILE
 *
 *******************************************************************************
 $INCLUDE UTIL.BP I_UTIL.H
-$INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
+$INCLUDE UTIL.BP I_UTIL.LOG.EVENT.H
 
    FN.VOC = "VOC" ; F.VOC = "" ; ID.VOC = "" ; R.VOC = "" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""
    CALL U_OPENFILE(FN.VOC, FV.VOC, STOP.ON.ERROR, ERROR.TEXT)

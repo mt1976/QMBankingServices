@@ -10,7 +10,7 @@ SUBROUTINE U_MSSQL.EXECUTE(SQL.STATEMENT, SQL.DATABASE, VERBOSE, ID.RESULT)
 *
 *******************************************************************************
 $INCLUDE UTIL.BP I_UTIL.H
-$INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
+$INCLUDE UTIL.BP I_UTIL.LOG.EVENT.H
 
 * SQL SERVER
 * -------------------

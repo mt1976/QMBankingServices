@@ -76,10 +76,10 @@ After installation a number of new directories will have been created;
 ├── UTIL.BP
 ├── UTIL.BP.DIC
 ├── UTIL.BP.OUT
-├── UTIL.CMD.EVENT
-├── UTIL.CMD.EVENT.DIC
-├── UTIL.CMD.LOG
-├── UTIL.CMD.LOG.DIC
+├── UTIL.LOG.EVENT
+├── UTIL.LOG.EVENT.DIC
+├── UTIL.LOG.CMD
+├── UTIL.LOG.CMD.DIC
 ├── UTIL.CONFIG
 ├── UTIL.CONFIG.DIC
 ├── UTIL.FILE.DEFINITIONS

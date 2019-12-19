@@ -10,7 +10,7 @@ SUBROUTINE U_OS.CHROME.FETCH(URI, VERBOSE, RESULT)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-$INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
+$INCLUDE UTIL.BP I_UTIL.LOG.EVENT.H
 
 * GOOGLE CHROME FETCH
 * -------------------
