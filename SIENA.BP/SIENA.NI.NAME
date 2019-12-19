@@ -2,13 +2,13 @@ SUBROUTINE SIENA.NI.NAME(IO.NAME, COUPON.VALUE, MATURITY.DATE)
 ** INFORMATION ****************************************************************
 * Routine Name   : SIENA.NI.NAME
 *         Type   : SUBROUTINE
+*         Params : IO.NAME, COUPON.VALUE, MATURITY.DATE
 *         Loc    : SIENA.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20191219 at 14.47.26 in MWT-QM-DEV by sales
+* Info Updated   : 20191219 at 15.04.30 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
-*******************************************************************************
 $INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP I_UTIL.TRANSLATE.H
 

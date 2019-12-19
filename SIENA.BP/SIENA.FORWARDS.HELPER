@@ -2,13 +2,13 @@ SUBROUTINE SIENA.FORWARDS.HELPER(PROCESS.NAME)
 ** INFORMATION ****************************************************************
 * Routine Name   : SIENA.FORWARDS.HELPER
 *         Type   : SUBROUTINE
+*         Params : PROCESS.NAME
 *         Loc    : SIENA.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20191219 at 14.47.26 in MWT-QM-DEV by sales
+* Info Updated   : 20191219 at 15.04.30 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
-*******************************************************************************
 $INCLUDE UTIL.BP I_UTIL.TRANSLATE.H
 $INCLUDE UTIL.BP I_RATECSV.H
 

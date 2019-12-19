@@ -2,13 +2,13 @@ SUBROUTINE U_WRITE(FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT)
 ** INFORMATION ****************************************************************
 * Routine Name   : U_WRITE
 *         Type   : SUBROUTINE
+*         Params : FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20191219 at 14.47.19 in MWT-QM-DEV by sales
+* Info Updated   : 20191219 at 15.04.21 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
-*******************************************************************************
 
    * CALL U_CRT.INFO("WRITE",ID.RECORD)
    WRITE R.RECORD TO FV.FILEVAR, ID.RECORD

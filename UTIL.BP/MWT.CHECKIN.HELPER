@@ -2,13 +2,13 @@ SUBROUTINE MWT.CHECKIN(FN.CHECKIN, ID.CHECKIN)
 ** INFORMATION ****************************************************************
 * Routine Name   : MWT.CHECKIN.HELPER
 *         Type   : SUBROUTINE
+*         Params : FN.CHECKIN, ID.CHECKIN
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20191219 at 14.47.19 in MWT-QM-DEV by sales
+* Info Updated   : 20191219 at 15.04.21 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
-*******************************************************************************
 $INCLUDE UTIL.BP I_UTIL.H
 
    IF FN.CHECKIN # '' AND ID.CHECKIN # '' THEN

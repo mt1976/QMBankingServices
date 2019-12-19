@@ -2,13 +2,13 @@ PROGRAM SIENA.CPI
 ** INFORMATION ****************************************************************
 * Routine Name   : SIENA.CPI
 *         Type   : PROGRAM
+*         Params : 
 *         Loc    : SIENA.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20191219 at 14.47.26 in MWT-QM-DEV by sales
+* Info Updated   : 20191219 at 15.04.30 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
-*******************************************************************************
 
    CALL SIENA.CPI.HELPER("CPI")
 

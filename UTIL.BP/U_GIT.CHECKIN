@@ -2,13 +2,13 @@ PROGRAM U_GIT.CHECKIN
 ** INFORMATION ****************************************************************
 * Routine Name   : U_GIT.CHECKIN
 *         Type   : PROGRAM
+*         Params : 
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20191219 at 14.47.19 in MWT-QM-DEV by sales
+* Info Updated   : 20191219 at 15.04.21 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
-*******************************************************************************
 $INCLUDE UTIL.BP I_UTIL.H
 
    PNM = "GIT.CHECKIN" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = "" ; VERBOSE=@TRUE
