@@ -1,0 +1,24 @@
+SUBROUTINE U_READ(FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT)
+** INFORMATION ****************************************************************
+* Routine Name   : U_READ
+*         Type   : SUBROUTINE
+*         Params : FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT
+*         Loc    : UTIL.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20191219 at 15.04.21 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+** FN.PD = "PROCESS.DIR" ; F.PD = "" ; PD.ID = ""
+$INSERT UTIL.BP I_UTIL.H
+
+LOCAL.ID.RECORD = DOWNCASE(SYSTEM(1015)):U_SEP:ID.RECORD
+LOCAL.R.RECORD  = ""
+CALL U_READ(FV.FILEVAR, LOCAL.ID.RECORD, LOCAL.R.RECORD, @FALSE, ERROR.TEXT)
+IF LOCAL.R.RECORD = "" THEN
+CALL U_READ(FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT)
+END ELSE
+R.RECORD=LOCAL.R.RECORD
+END
+   RETURN
+END
