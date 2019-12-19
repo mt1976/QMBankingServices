@@ -1,6 +1,6 @@
-SUBROUTINE U_CURL(URI, VERBOSE, R.UTIL.CMD.LOG, ID.UTIL.CMD.LOG)
+SUBROUTINE U_OS.CURL(URI, VERBOSE, R.UTIL.CMD.LOG, ID.UTIL.CMD.LOG)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_CURL
+* Routine Name   : U_OS.CURL
 *         Type   : SUBROUTINE
 *         Loc    : UTIL.BP
 * ------------------------
@@ -9,13 +9,13 @@ SUBROUTINE U_CURL(URI, VERBOSE, R.UTIL.CMD.LOG, ID.UTIL.CMD.LOG)
 *******************************************************************************
 $COPYRIGHT = "Copyright (C) 2019 Matt Townsend mt76@gmx.com"
 *******************************************************************************
-$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
 
    STMT = "sh curl -sL ":DQUOTE(URI)
 
    IF VERBOSE THEN
-      CALL U_CRT.ACTION("CURL", STMT)
+      CALL U_CRT.INFO("CURL", STMT)
    END
 
    EXECUTE STMT CAPTURING R.UTIL.CMD.LOG
@@ -25,7 +25,7 @@ $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
    R.EVENT<U_LOG_CMD> = STMT
    R.EVENT<U_LOG_URI> = URI
    R.EVENT<U_LOG_RETCD> = @SYSTEM.RETURN.CODE
-   R.EVENT<U_LOG_SUBR> = "U_CURL"
+   R.EVENT<U_LOG_SUBR> = "U_OS.CURL"
 
    CALL U_LOG.CMD(R.UTIL.CMD.LOG, R.EVENT)
 

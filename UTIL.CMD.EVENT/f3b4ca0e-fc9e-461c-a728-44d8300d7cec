@@ -7,7 +7,7 @@ f3b4ca0e-fc9e-461c-a728-44d8300d7cec
 DELETE UTIL.TRANSFER "SIENA.SCRIPTS~ecbEoniaFetch.sh"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

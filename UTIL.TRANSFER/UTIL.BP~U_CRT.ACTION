@@ -1,6 +1,6 @@
-SUBROUTINE U_CRT.ACTION(ACTION, TEXT)
+SUBROUTINE U_CRT.INFO(ACTION, TEXT)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_CRT.ACTION
+* Routine Name   : U_CRT.INFO
 *         Type   : SUBROUTINE
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
@@ -9,7 +9,7 @@ SUBROUTINE U_CRT.ACTION(ACTION, TEXT)
 * -----------------------------------------------------------------------------
 *
 *******************************************************************************
-$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
    IN.TEXT = TEXT
    TEXT = CONVERT(@AM, "^", TEXT)
    TEXT = CONVERT(@VM, "]", TEXT)

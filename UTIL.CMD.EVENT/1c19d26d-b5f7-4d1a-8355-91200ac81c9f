@@ -7,7 +7,7 @@ sales
 COPY FROM SIENA.CONFIG TO UTIL.BACKUP "fred_series.list","SIENA.CONFIG~fred_series.list~20191218"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

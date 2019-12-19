@@ -7,7 +7,7 @@ b25a1fe3-1efe-45f4-a694-3472d8e3bfc9
 COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "TYPE!Corporate-Bond","UTIL.TRANSLATE~TYPE!Corporate-Bond"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

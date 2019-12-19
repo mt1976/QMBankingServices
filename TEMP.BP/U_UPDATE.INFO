@@ -9,13 +9,13 @@ PROGRAM U_UPDATE.INFO
 *******************************************************************************
 $COPYRIGHT = "Copyright (C) 2019 Matt Townsend mt76@gmx.com"
 *******************************************************************************
-$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
 
 
    PNM="UPDATE.INFO"
    CMD.STRING = CONVERT(SPACE(1), @AM, @SENTENCE)
    IF CMD.STRING<2> = "" THEN
-      CALL U_CRT.ACTION("ERROR", "Parameters [A specific BP file]")
+      CALL U_CRT.INFO("ERROR", "Parameters [A specific BP file]")
       CALL U_STOP(PNM)
       STOP
    END
@@ -43,7 +43,7 @@ R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG,"<<HOSTNAME>>",SYSTEM(1015))
 R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG,"<<PLATFORM>>",SYSTEM(1010))
 R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG,"<<YYYY>>",@YEAR4)
 ***
-   CALL U_EXECUTE(STMT.EX1, @TRUE)
+   CALL U_OS.EXECUTE(STMT.EX1, @TRUE)
 
    PROCESS.LIST = ""
    LOOP

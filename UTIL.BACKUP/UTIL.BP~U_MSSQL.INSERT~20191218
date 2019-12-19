@@ -9,7 +9,7 @@ SUBROUTINE U_MSSQL.INSERT(SQL.TABLE, SQL.FIELDS, SQL.VALUES, SQL.DATABASE, VERBO
 * -----------------------------------------------------------------------------
 *
 *******************************************************************************
-$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
 
 * INSERT INTO dbo.account (account_name, account_start_date, account_address, account_type, account_create_timestamp, is_active)
@@ -27,7 +27,7 @@ FOR THIS.ROW = 1 TO NO.DATA.ITEMS
 
   SQL.INSERT := " VALUES ":VALUE.SECTION
 
-  CALL U_CRT.ACTION("INSERT",SQL.INSERT)
+  CALL U_CRT.INFO("INSERT",SQL.INSERT)
 
   CALL U_MSSQL.EXECUTE(SQL.INSERT,SQL.DATABASE,@TRUE,ID.RESULT)
 

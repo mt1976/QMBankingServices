@@ -10,7 +10,7 @@ SUBROUTINE U_OPENFILE(FN.FILENAME, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT)
 *
 *******************************************************************************
 
-   * CALL U_CRT.ACTION("OPENING ",FN.FILENAME)
+   * CALL U_CRT.INFO("OPENING ",FN.FILENAME)
 
 ** FN.PD = "PROCESS.DIR" ; F.PD = "" ; PD.ID = ""
 
@@ -18,7 +18,7 @@ SUBROUTINE U_OPENFILE(FN.FILENAME, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT)
 
       ERROR.TEXT = "Unable to Open [":FN.FILENAME:"]"
       LOGMSG ERROR.TEXT
-      CALL U_CRT.ACTION("ERROR", ERROR.TEXT)
+      CALL U_CRT.INFO("ERROR", ERROR.TEXT)
       IF STOP.ON.ERROR THEN
          STOP
       END

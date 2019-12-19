@@ -10,11 +10,11 @@ SUBROUTINE U_CRT(TEXT)
 $COPYRIGHT = "Copyright (C) 2019 Matt Townsend mt76@gmx.com"
 *******************************************************************************
 $COPYRIGHT "Copyright Acme Software, 2011"
-$INCLUDE UTIL.BP UTIL.H
-   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "outputMode", outputMode)
+$INCLUDE UTIL.BP I_UTIL.H
+   CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "outputMode", outputMode)
    dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
-   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "outputType", outputType)
-   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "csvChar", csvChar)
+   CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "outputType", outputType)
+   CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "csvChar", csvChar)
 
    OUTPUT.DATE = ""
    CALL U_GET.EPOCH.DATE(OUTPUT.DATE)

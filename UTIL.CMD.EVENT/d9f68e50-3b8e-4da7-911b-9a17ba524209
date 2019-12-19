@@ -7,7 +7,7 @@ d9f68e50-3b8e-4da7-911b-9a17ba524209
 COPY FROM SIENA.SCRIPTS TO UTIL.BACKUP "ecbEoniaFetch.sh","SIENA.SCRIPTS~ecbEoniaFetch.sh~20191218"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

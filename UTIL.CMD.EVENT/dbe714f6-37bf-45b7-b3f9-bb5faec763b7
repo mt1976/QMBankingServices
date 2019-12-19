@@ -7,7 +7,7 @@ dbe714f6-37bf-45b7-b3f9-bb5faec763b7
 COPY FROM UTIL.BP TO UTIL.TRANSFER "MWT.TIDY","UTIL.BP~MWT.TIDY"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

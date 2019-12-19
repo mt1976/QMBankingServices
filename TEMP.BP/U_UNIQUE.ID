@@ -9,10 +9,10 @@ SUBROUTINE U_UNIQUE.ID(UNIQUE.ID)
 *******************************************************************************
 $COPYRIGHT = "Copyright (C) 2019 Matt Townsend mt76@gmx.com"
 *******************************************************************************
-$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
 
    UID.FORMAT = ""
-   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "uniqueIDformat", UID.FORMAT)
+   CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "uniqueIDformat", UID.FORMAT)
 
    IF UID.FORMAT = "" OR UID.FORMAT = "UUID" THEN
       UNIQUE.ID = SYSTEM(1047)
@@ -24,7 +24,7 @@ $INCLUDE UTIL.BP UTIL.H
 
    UNIQUE.ID = DOWNCASE(CONVERT(":", "", UNIQUE.ID))
 
-   CALL U_CRT.ACTION("UNQ.ID", UNIQUE.ID)
+   CALL U_CRT.INFO("UNQ.ID", UNIQUE.ID)
 
    RETURN
 END

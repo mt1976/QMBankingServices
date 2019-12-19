@@ -7,7 +7,7 @@ f28e5260-1323-40ff-b914-e9d7398bde45
 COPY FROM SIENA.SCRIPTS TO UTIL.TRANSFER "ecbEoniaFetch.sh","SIENA.SCRIPTS~ecbEoniaFetch.sh"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

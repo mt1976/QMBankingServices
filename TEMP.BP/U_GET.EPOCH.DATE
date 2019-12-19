@@ -9,11 +9,11 @@ SUBROUTINE U_GET.EPOCH.DATE(THIS.DATE)
 *******************************************************************************
 $COPYRIGHT = "Copyright (C) 2019 Matt Townsend mt76@gmx.com"
 *******************************************************************************
-$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
 
    dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
-   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "dateTimeFormat", dateTimeFormat)
-   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "timeZone", timeZone)
+   CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "dateTimeFormat", dateTimeFormat)
+   CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "timeZone", timeZone)
 
    SET.TIMEZONE timeZone
    THIS.DATE = OCONV(EPOCH(), dateTimeFormat)

@@ -1,6 +1,6 @@
-SUBROUTINE U_EXECUTE(STMT, VERBOSE)
+SUBROUTINE U_OS.EXECUTE(STMT, VERBOSE)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_EXECUTE
+* Routine Name   : U_OS.EXECUTE
 *         Type   : SUBROUTINE
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
@@ -9,11 +9,11 @@ SUBROUTINE U_EXECUTE(STMT, VERBOSE)
 * -----------------------------------------------------------------------------
 *
 *******************************************************************************
-$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
 
    IF VERBOSE THEN
-      CALL U_CRT.ACTION("EXECUTE", STMT)
+      CALL U_CRT.INFO("EXECUTE", STMT)
 
    END ELSE
       HUSH ON
@@ -24,7 +24,7 @@ $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
 
    IF VERBOSE THEN
 
-      CALL U_CRT.ACTION("OUTPUT", "")
+      CALL U_CRT.INFO("OUTPUT", "")
       * CALL U_CRT.RECORD(OUTPUT)
    END ELSE
       HUSH OFF
@@ -33,7 +33,7 @@ $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
    R.EVENT<U_LOG_EVENT> = "EXECUTE"
    R.EVENT<U_LOG_CMD> = STMT
    R.EVENT<U_LOG_RETCD> = @SYSTEM.RETURN.CODE
-   R.EVENT<U_LOG_SUBR> = "U_EXECUTE"
+   R.EVENT<U_LOG_SUBR> = "U_OS.EXECUTE"
 
    CALL U_LOG.CMD(STMT, R.EVENT)
 

@@ -9,7 +9,7 @@ SUBROUTINE U_LOG.CMD(LOG.DATA, R.CMD.EVENT)
 *******************************************************************************
 $COPYRIGHT = "Copyright (C) 2019 Matt Townsend mt76@gmx.com"
 *******************************************************************************
-$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
 
    FN.UTIL.CMD.LOG = "UTIL.CMD.LOG" ; FV.UTIL.CMD.LOG = "" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""

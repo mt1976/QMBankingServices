@@ -7,7 +7,7 @@ ad7ac53b-83e7-4a08-8d45-ea4d358a54ff
 COPY FROM UTIL.BP TO UTIL.BACKUP "U_TEST","UTIL.BP~U_TEST~20191218"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

@@ -7,7 +7,7 @@ c55cc9c1-e9a3-4c13-865d-45a8b2fbc3fd
 DELETE UTIL.TRANSFER "SIENA.SCRIPTS~liborFetch.sh"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

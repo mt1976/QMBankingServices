@@ -7,7 +7,7 @@ ca298ffd-a97e-4ff4-a9db-05bf650990b4
 DELETE UTIL.TRANSFER "UTIL.TRANSLATE~NINAME!A2D-FUNDING-PLC-FUND-4*75--22"
 
 0
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

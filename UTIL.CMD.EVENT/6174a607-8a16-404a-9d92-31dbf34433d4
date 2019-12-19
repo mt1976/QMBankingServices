@@ -7,7 +7,7 @@ sales
 COPY FROM SIENA.STAGING TO SIENA.PROCESSED "RVMARKET","db52608b-7eae-407c-aef6-83828ac37aca" OVERWRITING
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 
 119
 /home/sales/qm/account/mwt-QM-dev

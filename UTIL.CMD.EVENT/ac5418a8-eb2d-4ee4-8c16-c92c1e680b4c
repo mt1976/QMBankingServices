@@ -7,7 +7,7 @@ ac5418a8-eb2d-4ee4-8c16-c92c1e680b4c
 COPY FROM SIENA.CONFIG TO UTIL.TRANSFER "fred_series.list","SIENA.CONFIG~fred_series.list"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

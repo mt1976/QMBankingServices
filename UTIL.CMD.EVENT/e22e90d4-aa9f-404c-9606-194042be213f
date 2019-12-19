@@ -7,7 +7,7 @@ e22e90d4-aa9f-404c-9606-194042be213f
 COPY FROM SIENA.CONFIG TO UTIL.TRANSFER "forwards.properties","SIENA.CONFIG~forwards.properties"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

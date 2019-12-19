@@ -7,7 +7,7 @@ sales
 COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "NINAME!TB3MS----------------------3M","UTIL.TRANSLATE~NINAME!TB3MS----------------------3M"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

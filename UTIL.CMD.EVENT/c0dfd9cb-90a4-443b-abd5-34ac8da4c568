@@ -7,7 +7,7 @@ c0dfd9cb-90a4-443b-abd5-34ac8da4c568
 COPY FROM UTIL.CONFIG TO UTIL.BACKUP "mssql.properties","UTIL.CONFIG~mssql.properties~20191218"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

@@ -7,7 +7,7 @@ dca4ae0f-a010-4cf9-afe0-ae988f7878e6
 COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "COUPON*TYPE!Variable","UTIL.TRANSLATE~COUPON*TYPE!Variable"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

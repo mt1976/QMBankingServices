@@ -7,7 +7,7 @@ d86cffae-68aa-4167-84d0-f9ca7c1115a6
 DELETE UTIL.TRANSFER "UTIL.TRANSLATE~SECTOR!UKCH"
 
 0
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

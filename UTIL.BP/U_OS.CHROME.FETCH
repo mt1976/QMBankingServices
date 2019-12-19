@@ -1,6 +1,6 @@
-SUBROUTINE U_GOOGLE.CHROME.FETCH(URI, VERBOSE, RESULT)
+SUBROUTINE U_OS.CHROME.FETCH(URI, VERBOSE, RESULT)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_GOOGLE.CHROME.FETCH
+* Routine Name   : U_OS.CHROME.FETCH
 *         Type   : SUBROUTINE
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
@@ -9,7 +9,7 @@ SUBROUTINE U_GOOGLE.CHROME.FETCH(URI, VERBOSE, RESULT)
 * -----------------------------------------------------------------------------
 *
 *******************************************************************************
-$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
 
 * GOOGLE CHROME FETCH
@@ -19,11 +19,11 @@ $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
 
 * Get the location of the chrome executable;
    CHROME.LOCATION = "" ; CHROME.DEFAULTS = ""
-   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "chromeLocation", CHROME.LOCATION)
-   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "chromeDefaults", CHROME.DEFAULTS)
+   CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "chromeLocation", CHROME.LOCATION)
+   CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "chromeDefaults", CHROME.DEFAULTS)
 
-   CALL U_CRT.ACTION("CHR.FETCH", "START")
-   CALL U_CRT.ACTION("CHR.FETCH", URI)
+   CALL U_CRT.INFO("CHR.FETCH", "START")
+   CALL U_CRT.INFO("CHR.FETCH", URI)
 
    *HUSH ON
 
@@ -33,14 +33,14 @@ $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
 
    * HUSH OFF
 
-   CALL U_CRT.ACTION("CHR.FETCH", "STOP")
+   CALL U_CRT.INFO("CHR.FETCH", "STOP")
 
    R.EVENT = ""
    R.EVENT<U_LOG_EVENT> = "CHROME.FETCH"
    R.EVENT<U_LOG_CMD> = STMT
    R.EVENT<U_LOG_URI> = URI
    R.EVENT<U_LOG_RETCD> = @SYSTEM.RETURN.CODE
-   R.EVENT<U_LOG_SUBR> = "U_GOOGLE.CHROME.FETCH"
+   R.EVENT<U_LOG_SUBR> = "U_OS.CHROME.FETCH"
 
    CALL U_LOG.CMD(RESULT, R.EVENT)
 

@@ -7,7 +7,7 @@ sales
 COPY FROM SIENA.SCRIPTS TO UTIL.BACKUP "cpiFetch.sh","SIENA.SCRIPTS~cpiFetch.sh~20191218"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

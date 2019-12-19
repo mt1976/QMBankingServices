@@ -7,7 +7,7 @@ ebc8361e-87e1-4b85-9b74-64eee5754d8b
 COPY FROM UTIL.BP TO UTIL.TRANSFER "U_HEADER","UTIL.BP~U_HEADER"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

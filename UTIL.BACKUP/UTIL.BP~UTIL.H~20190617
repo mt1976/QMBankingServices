@@ -1,4 +1,4 @@
-* UTIL.BP UTIL.H
+* UTIL.BP I_UTIL.H
 equate U_SEP to "~"
 equate U_TRUNC to "-"
 equate U_PROP_SEP to "="

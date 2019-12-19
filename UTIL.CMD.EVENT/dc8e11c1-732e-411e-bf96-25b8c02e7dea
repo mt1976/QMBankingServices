@@ -7,7 +7,7 @@ dc8e11c1-732e-411e-bf96-25b8c02e7dea
 COPY FROM SIENA.CONFIG TO UTIL.TRANSFER "forward_tenors.list","SIENA.CONFIG~forward_tenors.list"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

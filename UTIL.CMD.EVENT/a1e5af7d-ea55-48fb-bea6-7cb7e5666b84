@@ -7,7 +7,7 @@ a1e5af7d-ea55-48fb-bea6-7cb7e5666b84
 COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "NIPART!1/2%","UTIL.TRANSLATE~NIPART!1/2%"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

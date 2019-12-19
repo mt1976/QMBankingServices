@@ -7,7 +7,7 @@ eaa1d8d1-9fd1-4427-980a-ab5a6fff289f
 COPY FROM UTIL.BP TO UTIL.TRANSFER "U_INPUT","UTIL.BP~U_INPUT"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

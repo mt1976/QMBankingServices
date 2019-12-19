@@ -7,7 +7,7 @@ a9f961bc-7269-4e1e-a547-40c86d62e4c2
 COPY FROM SIENA.SCRIPTS TO UTIL.TRANSFER "liborFetch.sh","SIENA.SCRIPTS~liborFetch.sh"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

@@ -7,7 +7,7 @@ sales
 DELETE UTIL.TRANSFER "UTIL.TRANSLATE~NINAME!UK-3-3/4-20----------3*75--20"
 
 0
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

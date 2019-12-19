@@ -7,7 +7,7 @@ e4ed7a0c-32fb-4db1-bf4f-53f1c9423fb2
 COPY FROM UTIL.BP TO UTIL.TRANSFER "U_MSSQL.EXECUTE","UTIL.BP~U_MSSQL.EXECUTE"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

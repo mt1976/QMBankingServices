@@ -7,7 +7,7 @@ d2d57d23-177a-4cf5-bb47-8dc698cf9f00
 COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "NINAME!UK-0-1/2-22----------0*5---22","UTIL.TRANSLATE~NINAME!UK-0-1/2-22----------0*5---22"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

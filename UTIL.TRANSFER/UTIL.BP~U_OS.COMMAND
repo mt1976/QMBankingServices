@@ -9,11 +9,11 @@ SUBROUTINE U_OS.COMMAND(STMT, VERBOSE)
 * -----------------------------------------------------------------------------
 *
 *******************************************************************************
-$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
 
    IF VERBOSE THEN
-      CALL U_CRT.ACTION("OS.COMMAND", STMT)
+      CALL U_CRT.INFO("OS.COMMAND", STMT)
    END ELSE
       HUSH ON
    END
@@ -22,7 +22,7 @@ $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
 
    IF VERBOSE THEN
 
-      * CALL U_CRT.ACTION("OUTPUT","")
+      * CALL U_CRT.INFO("OUTPUT","")
       * CALL U_CRT.RECORD(OUTPUT)
    END ELSE
       HUSH OFF

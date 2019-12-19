@@ -14,7 +14,7 @@ $COPYRIGHT = "Copyright (C) 2019 Matt Townsend mt76@gmx.com"
    READ R.RECORD FROM FV.FILEVAR, ID.RECORD ELSE
       ERROR.TEXT = "Unable to read [":ID.RECORD:"]"
       LOGMSG ERROR.TEXT
-      CALL U_CRT.ACTION("ERROR", ERROR.TEXT)
+      CALL U_CRT.INFO("ERROR", ERROR.TEXT)
       IF STOP.ON.ERROR THEN
          STOP
       END

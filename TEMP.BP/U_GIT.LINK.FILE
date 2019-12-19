@@ -9,7 +9,7 @@ PROGRAM U_GIT.LINK.FILE
 *******************************************************************************
 $COPYRIGHT = "Copyright (C) 2019 Matt Townsend mt76@gmx.com"
 *******************************************************************************
-$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
 
    FN.VOC = "VOC" ; F.VOC = "" ; ID.VOC = "" ; R.VOC = "" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""
@@ -18,7 +18,7 @@ $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
    PN.LEN=LEN("U_GIT.LINK.FILE")+2
    ID.VOC = @SENTENCE[PN.LEN, 999]
 
-   CALL U_CRT.ACTION("CREATE", ID.VOC)
+   CALL U_CRT.INFO("CREATE", ID.VOC)
 
    STMT = "CREATE-FILE DICT ":ID.VOC:" DIRECTORY"
    EXECUTE STMT
@@ -29,7 +29,7 @@ $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
       CALL U_WRITE(FV.VOC, ID.VOC, R.VOC, STOP.ON.ERROR, ERROR.TEXT)
    END
 
-   CALL U_CRT.ACTION("DONE", ID.VOC)
+   CALL U_CRT.INFO("DONE", ID.VOC)
 
    R.EVENT = ""
    R.EVENT<U_LOG_EVENT> = "GIT.LINK.FILE"

@@ -7,7 +7,7 @@ c62cf101-bae3-471b-826e-1a464727f276
 COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "TENOR!4-Year-Forward","UTIL.TRANSLATE~TENOR!4-Year-Forward"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

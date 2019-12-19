@@ -7,7 +7,7 @@ e0500426-ef32-4369-a68d-2e63f4e3038b
 COPY FROM SIENA.SCRIPTS TO UTIL.TRANSFER "mdsInit.sh","SIENA.SCRIPTS~mdsInit.sh"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

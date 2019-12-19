@@ -9,7 +9,7 @@ PROGRAM SIENA.RUN.SCRIPT
 * -----------------------------------------------------------------------------
 *
 *******************************************************************************
-$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
    PNM = "" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""
    CALL U_START(PNM)
    CALL U_HEADER("SIENA - RUN SCRIPT")
@@ -19,7 +19,7 @@ $INCLUDE UTIL.BP UTIL.H
 
    CMD.STRING = CONVERT(SPACE(1), @AM, @SENTENCE)
    IF CMD.STRING<2> = "" THEN
-      CALL U_CRT.ACTION("ERROR", "Parameters [ALL, or specific]")
+      CALL U_CRT.INFO("ERROR", "Parameters [ALL, or specific]")
       CALL U_STOP(PNM)
       STOP
    END
@@ -29,10 +29,10 @@ $INCLUDE UTIL.BP UTIL.H
    * loop through the cmd strings
    NO.CMDS = DCOUNT(CMD.STRING, @AM)
 
-*   CALL U_CRT.ACTION("NO ITEMS", NO.CMDS)
+*   CALL U_CRT.INFO("NO ITEMS", NO.CMDS)
    FOR THIS.CMD = 1 TO NO.CMDS
       SCRIPT.NAME = CMD.STRING<THIS.CMD>
-*      CALL U_CRT.ACTION("PROCESS", SCRIPT.NAME)
+*      CALL U_CRT.INFO("PROCESS", SCRIPT.NAME)
       STMT = "SELECT ":FN.SIENA.SCRIPTS:" LIKE ...":SCRIPT.NAME:"..."
       IF SCRIPT.NAME = "ALL" THEN
          STMT = "SELECT ":FN.SIENA.SCRIPTS
@@ -45,9 +45,9 @@ $INCLUDE UTIL.BP UTIL.H
    STOP
 
 PROCESS.IT:
-*CALL U_CRT.ACTION('STMT',STMT)
+*CALL U_CRT.INFO('STMT',STMT)
 
-   CALL U_EXECUTE(STMT, @TRUE)
+   CALL U_OS.EXECUTE(STMT, @TRUE)
 
    SCRIPT.LIST = ""
    LOOP

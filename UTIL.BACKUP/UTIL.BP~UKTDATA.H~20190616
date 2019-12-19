@@ -1,4 +1,4 @@
-* BP UKTDATA.H
+* BP I_UKTREASURY.H
 
 equate UKTR_LONG.NAME to "1"
 equate UKTR_ISIN to "2"

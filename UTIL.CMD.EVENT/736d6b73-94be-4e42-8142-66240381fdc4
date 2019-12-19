@@ -7,7 +7,7 @@ sales
 COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "TENOR!6M","UTIL.TRANSLATE~TENOR!6M"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

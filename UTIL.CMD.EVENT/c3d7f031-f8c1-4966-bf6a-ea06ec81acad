@@ -7,7 +7,7 @@ c3d7f031-f8c1-4966-bf6a-ea06ec81acad
 COPY FROM UTIL.TRANSLATE TO UTIL.BACKUP "TYPE!","UTIL.TRANSLATE~TYPE!~20191218"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

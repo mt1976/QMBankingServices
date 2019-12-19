@@ -10,7 +10,7 @@ SUBROUTINE U_WRITE(FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT)
 $COPYRIGHT = "Copyright (C) 2019 Matt Townsend mt76@gmx.com"
 *******************************************************************************
 
-   * CALL U_CRT.ACTION("WRITE",ID.RECORD)
+   * CALL U_CRT.INFO("WRITE",ID.RECORD)
    WRITE R.RECORD TO FV.FILEVAR, ID.RECORD
 
    RETURN

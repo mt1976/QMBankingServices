@@ -9,7 +9,7 @@ SUBROUTINE U_GIT.CHECKIN.HELPER(THIS.THING)
 *******************************************************************************
 $COPYRIGHT = "Copyright (C) 2019 Matt Townsend mt76@gmx.com"
 *******************************************************************************
-$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
 
    THIS.DATE = "" ; VERBOSE=@TRUE
    CALL U_GET.EPOCH.DATE(THIS.DATE)

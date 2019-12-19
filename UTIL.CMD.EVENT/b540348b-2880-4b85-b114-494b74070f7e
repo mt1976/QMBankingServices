@@ -7,7 +7,7 @@ b540348b-2880-4b85-b114-494b74070f7e
 COPY FROM UTIL.TRANSLATE TO UTIL.TRANSFER "TENOR!6-Month-Forward","UTIL.TRANSLATE~TENOR!6-Month-Forward"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

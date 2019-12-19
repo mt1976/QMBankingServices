@@ -7,7 +7,7 @@ bceb5eae-8c47-45fe-8613-3d3f028171e6
 DELETE UTIL.TRANSFER "UTIL.TRANSLATE~NINAME!ENQUEST-PLC-ENQ-22-P-5*5---22"
 
 0
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

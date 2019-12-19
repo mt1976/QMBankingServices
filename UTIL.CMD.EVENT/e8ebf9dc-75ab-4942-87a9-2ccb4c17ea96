@@ -7,7 +7,7 @@ e8ebf9dc-75ab-4942-87a9-2ccb4c17ea96
 DELETE UTIL.TRANSFER "UTIL.TRANSLATE~NIPART!PLC"
 
 0
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

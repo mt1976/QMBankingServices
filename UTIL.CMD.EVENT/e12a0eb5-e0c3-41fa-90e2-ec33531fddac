@@ -7,7 +7,7 @@ e12a0eb5-e0c3-41fa-90e2-ec33531fddac
 COPY FROM UTIL.BP TO UTIL.BACKUP "U_HEADER.TEST","UTIL.BP~U_HEADER.TEST~20191218"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

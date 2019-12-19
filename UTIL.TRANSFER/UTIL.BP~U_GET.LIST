@@ -9,7 +9,7 @@ SUBROUTINE U_GET.LIST(IN.PROPERTIES.FILE, IN.LIST.NAME, IN.LIST.PREFIX, RETURN.L
 * -----------------------------------------------------------------------------
 *
 *******************************************************************************
-$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
 
    RETURN.LIST = ""
@@ -27,7 +27,7 @@ $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
       CALL U_READ(FV.PROPERTIES, ID.PROPERTIES, R.PROPERTIES, STOP.ON.ERROR, ERROR.TEXT)
 
       NO.PROPERTIES = DCOUNT(R.PROPERTIES, @AM)
-      * CALL U_CRT.ACTION("NO.PROPS",NO.PROPERTIES)
+      * CALL U_CRT.INFO("NO.PROPS",NO.PROPERTIES)
       NO.ITEMS = 0
       FOR THIS.LIST = 1 TO NO.PROPERTIES
 
@@ -43,11 +43,11 @@ $INCLUDE UTIL.BP I_UTIL.CMD.EVENT.H
       NEXT
 
       IF RETURN.LIST = "" THEN
-         CALL U_CRT.ACTION("ERROR", "Could not find ":DQUOTE(IN.LIST.PREFIX):" in ":ID.PROPERTIES)
+         CALL U_CRT.INFO("ERROR", "Could not find ":DQUOTE(IN.LIST.PREFIX):" in ":ID.PROPERTIES)
       END
 
    END ELSE
-      CALL U_CRT.ACTION("ERROR", "Not enough info to read list ":IN.PROPERTIES.FILE:"|":IN.LIST.PREFIX:"|":IN.LIST.NAME)
+      CALL U_CRT.INFO("ERROR", "Not enough info to read list ":IN.PROPERTIES.FILE:"|":IN.LIST.PREFIX:"|":IN.LIST.NAME)
    END
 
 

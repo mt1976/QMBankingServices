@@ -7,7 +7,7 @@ ba123734-1720-4ea5-a5e6-e73ccf723b0a
 COPY FROM UTIL.CONFIG TO UTIL.BACKUP "clear.siena.properties","UTIL.CONFIG~clear.siena.properties~20191218"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

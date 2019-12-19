@@ -7,7 +7,7 @@ e0015153-f631-42ce-ae26-dde1fe0a6ee0
 COPY FROM SIENA.CONFIG TO UTIL.BACKUP "forwards.list","SIENA.CONFIG~forwards.list~20191218"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

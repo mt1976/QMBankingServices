@@ -7,7 +7,7 @@ bb9cbd11-e04a-4058-ad1e-82fe4f1b27b9
 COPY FROM UTIL.CONFIG TO UTIL.BACKUP "create.siena.properties","UTIL.CONFIG~create.siena.properties~20191218"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

@@ -7,7 +7,7 @@ b72bf7b0-9dac-4a9e-b601-84f74da8268d
 COPY FROM UTIL.TRANSLATE TO UTIL.BACKUP "PARENTDEAL!Corporate-Bond","UTIL.TRANSLATE~PARENTDEAL!Corporate-Bond~20191218"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

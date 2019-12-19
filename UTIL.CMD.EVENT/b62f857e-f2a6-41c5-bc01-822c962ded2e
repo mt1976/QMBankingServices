@@ -7,7 +7,7 @@ b62f857e-f2a6-41c5-bc01-822c962ded2e
 COPY FROM UTIL.TRANSLATE TO UTIL.BACKUP "NINAME!UK-3-1/4-44----------3*25--44","UTIL.TRANSLATE~NINAME!UK-3-1/4-44----------3*25--44~20191218"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

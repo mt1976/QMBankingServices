@@ -9,18 +9,18 @@ SUBROUTINE U_HEADER(TEXT)
 *******************************************************************************
 $COPYRIGHT = "Copyright (C) 2019 Matt Townsend mt76@gmx.com"
 *******************************************************************************
-$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
 
    SCREEN.WIDTH = @CRTWIDE
    SPAN.WIDTH = SCREEN.WIDTH - 6
-*   CALL U_CRT.ACTION("SCR.WIDTH",SCREEN.WIDTH)
-*   CALL U_CRT.ACTION("SPAN",SPAN.WIDTH)
+*   CALL U_CRT.INFO("SCR.WIDTH",SCREEN.WIDTH)
+*   CALL U_CRT.INFO("SPAN",SPAN.WIDTH)
 
    BAR = STR("━", SPAN.WIDTH)
 
    headerCMD="sh figlet -f small"
 
-   CALL U_GET.PROPERTY("UTIL.CONFIG", "util", "headerCMD", headerCMD)
+   CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "headerCMD", headerCMD)
 
    STMT = headerCMD:" ":DQUOTE(TEXT)
 

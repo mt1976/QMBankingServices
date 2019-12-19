@@ -9,7 +9,7 @@ SUBROUTINE U_GIT.CHECKIN.HELPER(THIS.THING)
 * -----------------------------------------------------------------------------
 *
 *******************************************************************************
-$INCLUDE UTIL.BP UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
 
    THIS.DATE = "" ; VERBOSE=@TRUE
    CALL U_GET.EPOCH.DATE(THIS.DATE)

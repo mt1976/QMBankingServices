@@ -7,7 +7,7 @@ d28f4d81-e3bd-4794-81d2-589344008265
 COPY FROM UTIL.TRANSLATE TO UTIL.BACKUP "TENOR!1-Month-Forward","UTIL.TRANSLATE~TENOR!1-Month-Forward~20191218"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

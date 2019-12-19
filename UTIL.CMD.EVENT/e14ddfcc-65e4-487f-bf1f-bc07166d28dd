@@ -7,7 +7,7 @@ e14ddfcc-65e4-487f-bf1f-bc07166d28dd
 COPY FROM SIENA.CONFIG TO UTIL.TRANSFER "forwards.list","SIENA.CONFIG~forwards.list"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

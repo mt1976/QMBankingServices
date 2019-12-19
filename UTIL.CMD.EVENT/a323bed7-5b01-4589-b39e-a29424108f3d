@@ -7,7 +7,7 @@ a323bed7-5b01-4589-b39e-a29424108f3d
 DELETE UTIL.TRANSFER "SIENA.CONFIG~forwards.list"
 
 0
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev

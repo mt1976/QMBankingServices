@@ -4,10 +4,10 @@ EXECUTE
 sales
 
 dd35537f-f263-4fce-afe3-a679934f0185
-DELETE UTIL.TRANSFER "UTIL.BP~U_CURL"
+DELETE UTIL.TRANSFER "UTIL.BP~U_OS.CURL"
 
 1
-U_EXECUTE
+U_OS.EXECUTE
 /dev/pts/1
 107
 /home/sales/qm/account/mwt-QM-dev
