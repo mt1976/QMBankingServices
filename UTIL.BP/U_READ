@@ -20,6 +20,6 @@ CRT "READ ":DQUOTE(ID.RECORD)
          STOP
       END
    END
-   
+CRT "DONE ":DQUOTE(R.RECORD)
    RETURN
 END
