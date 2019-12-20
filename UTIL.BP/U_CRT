@@ -9,7 +9,6 @@ SUBROUTINE U_CRT(TEXT)
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
-$COPYRIGHT "Copyright Acme Software, 2011"
 $INCLUDE UTIL.BP I_UTIL.H
    CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "outputMode", outputMode)
    dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
