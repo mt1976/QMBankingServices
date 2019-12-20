@@ -1,0 +1,18 @@
+EXECUTE
+20191219
+15.13.33
+sales
+
+6c1a116b-b775-4c85-8d51-320bb06e752c
+SELECT UTIL.CONFIG LIKE build.util.properties
+
+1
+U_OS.EXECUTE
+/dev/pts/1
+134
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+U_BUILDFILES UTIL
+ldn-srv-ubnt01
+
+Linux
