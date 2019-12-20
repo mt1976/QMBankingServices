@@ -10,7 +10,7 @@ SUBROUTINE U_READ(FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT)
 * -----------------------------------------------------------------------------
 *
 ** FN.PD = "PROCESS.DIR" ; F.PD = "" ; PD.ID = ""
-CRT "READ ":DQUOTE(ID.RECORD)
+CRT "READ ":DQUOTE(ID.RECORD):" ":DQUOTE(STOP.ON.ERROR):" ":DQUOTE(ERROR.TEXT)
 
    READ R.RECORD FROM FV.FILEVAR, ID.RECORD ELSE
       ERROR.TEXT = "Unable to read [":ID.RECORD:"]"
