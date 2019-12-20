@@ -5383,3 +5383,40 @@ User limit reached
 [K"20191220T132001","INFO","[[1mPROCESS        [m][CHECKIN]"
 [K"20191220T132001","INFO","[[1mDO SUB         [m][SIENA.GIT.CHECKIN.HELPER]"
 [K"20191220T132001","INFO","[[1mOS.COMMAND     [m][git add .]"
+warning: CRLF will be replaced by LF in CRON_CHECKIN.log.
+The file will have its original line endings in your working directory.
+[K"20191220T132001","INFO","[[1mUNQ.ID         [m][8699db56-c4a8-4a84-abda-e4fcab77e7db]"
+[K"20191220T132001","INFO","[[1mOS.COMMAND     [m][git commit -m "auto.20191220t132001"]"
+[master f69d52ac] auto.20191220t132001
+ 5 files changed, 52 insertions(+)
+ create mode 100644 UTIL.LOG.CMD/1184b66c-d787-4ee1-95e2-95a77f0a79b3
+ create mode 100644 UTIL.LOG.CMD/a8357f93-54cb-49f4-b389-2f7694a2a509
+ create mode 100644 UTIL.LOG.EVENT/1184b66c-d787-4ee1-95e2-95a77f0a79b3
+ create mode 100644 UTIL.LOG.EVENT/a8357f93-54cb-49f4-b389-2f7694a2a509
+[K"20191220T132001","INFO","[[1mUNQ.ID         [m][58da254e-eca9-4cff-90ea-bb0197382812]"
+[K"20191220T132001","INFO","[[1mOS.COMMAND     [m][git push]"
+To https://github.com/mt1976/mwt-QM-dev.git
+ ! [rejected]          master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/mt1976/mwt-QM-dev.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[K"20191220T132002","INFO","[[1mUNQ.ID         [m][36b58190-6562-48f5-91eb-bd7979be2bdf]"
+[K"20191220T132002","INFO","[[1mDO DONE        [m][SIENA.GIT.CHECKIN.HELPER]"
+[K"20191220T132002","INFO","[[1mCOMO OFF       [m][09128b0a-d6a8-4d4f-9b7e-2c54cc6eef11]"
+[ QM Rev 3.4-14   Copyright Zumasys Inc., 2019 ]
+[ 0103035549  For personal use only ]
+[K"20191220T142001","INFO","[[1mUNQ.ID         [m][93952184-c6bc-4bf9-a4e6-257af0978764]"
+[K"20191220T142001","INFO","[[1mCOMO           [m][93952184-c6bc-4bf9-a4e6-257af0978764]"
+[K"20191220T142001","INFO","[[1mUNQ.ID         [m][23c94b3c-d239-4d39-8966-1163b0b00eb3]"
+[K"20191220T142001","INFO","[[1mUNQ.ID         [m][50b6683f-671a-41c4-a804-dbfe88197730]"
+[K"20191220T142001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191220T142001","INFO","+-+-+-+-+-+-+-+-+"
+[K"20191220T142001","INFO","|S|I|E|N|A|.|D|O|"
+[K"20191220T142001","INFO","+-+-+-+-+-+-+-+-+"
+[K"20191220T142001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191220T142001","INFO","[[1mPROCESS        [m][CHECKIN]"
+[K"20191220T142001","INFO","[[1mDO SUB         [m][SIENA.GIT.CHECKIN.HELPER]"
+[K"20191220T142001","INFO","[[1mOS.COMMAND     [m][git add .]"

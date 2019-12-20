@@ -17829,3 +17829,172 @@ User limit reached
 User limit reached
 User limit reached
 User limit reached
+[ QM Rev 3.4-14   Copyright Zumasys Inc., 2019 ]
+[ 0103035549  For personal use only ]
+[K"20191220T140001","INFO","[[1mUNQ.ID         [m][6e7f9d52-d5b7-42e4-8ea6-75295b87412d]"
+[K"20191220T140001","INFO","[[1mCOMO           [m][6e7f9d52-d5b7-42e4-8ea6-75295b87412d]"
+[K"20191220T140001","INFO","[[1mUNQ.ID         [m][fb635df6-1455-45b9-b3b9-73e1f643f124]"
+[K"20191220T140001","INFO","[[1mUNQ.ID         [m][9c4460a7-4ba1-4b03-81ce-dc0f09d4130b]"
+[K"20191220T140001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191220T140001","INFO","+-+-+-+-+-+-+-+-+"
+[K"20191220T140001","INFO","|S|I|E|N|A|.|D|O|"
+[K"20191220T140001","INFO","+-+-+-+-+-+-+-+-+"
+[K"20191220T140001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191220T140001","INFO","[[1mPROCESS        [m][FXSPOT]"
+[K"20191220T140001","INFO","[[1mDO SCRIPT      [m][fxSPfetch.sh]"
+[K"20191220T140001","INFO","[[1mUNQ.ID         [m][c45fa3c6-8d02-4d86-82e4-cf6e7dc182a7]"
+[K"20191220T140001","INFO","[[1mCOMO           [m][c45fa3c6-8d02-4d86-82e4-cf6e7dc182a7]"
+[K"20191220T140001","INFO","[[1mUNQ.ID         [m][498cf00c-1b38-48af-9732-87c7facd6d6d]"
+[K"20191220T140001","INFO","[[1mUNQ.ID         [m][82287222-c34b-43de-8357-6e079bd79e4e]"
+[K"20191220T140001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191220T140001","INFO","+-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+-+"
+[K"20191220T140001","INFO","|S|C|R|I|P|T| |f|x|S|P|f|e|t|c|h|.|s|h|"
+[K"20191220T140001","INFO","+-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+-+"
+[K"20191220T140001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191220T140001","INFO","[[1mHOME           [m][/home/sales/qm/account/mwt-QM-dev]"
+[K"20191220T140001","INFO","[[1mEXECUTE        [m][SSELECT SIENA.SCRIPTS LIKE ...fxSPfetch.sh...]"
+[K"20191220T140001","INFO","[[1mOUTPUT         [m][]"
+[K"20191220T140001","INFO","[[1mUNQ.ID         [m][dbc90938-d11a-441d-a8b3-849368313f88]"
+[K"20191220T140001","INFO","[[1mNO.SCRIPTS     [m][1]"
+[K"20191220T140001","INFO","[[1mSCRIPT         [m][fxSPfetch.sh]"
+[K"20191220T140001","INFO","[[1mINSTRUCTION    [m][bash /home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS/fxSPfetch.sh]"
+[K"20191220T140001","INFO","[[1mOS.COMMAND     [m][bash /home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS/fxSPfetch.sh]"
+[M] INITIALISE COMMON VARS - START
+[M] QMHOME         = [/home/sales/qm/account/mwt-QM-dev]
+[M] JQ             = [/snap/bin/jq]
+[M] FIXERACCESSKEY = [c3811be81a6df1db0e14304d77b3a23d]
+[M] FREDACCESSKEY  = [d4d50b886c05baa2795c363319ca64db]
+[M] OUTPUTDIR      = [SIENA.IN]
+[M] MDSHOME        = [/home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS]
+[M] INITIALISE COMMON VARS - DONE
++-+-+-+ +-+-+-+ +-+-+-+-+ +-+-+ +-+-+-+-+-+
+|[|M|]| |G|e|t| |S|p|o|t| |F|X| |R|a|t|e|s|
++-+-+-+ +-+-+-+ +-+-+-+-+ +-+-+ +-+-+-+-+-+
+
+[M] Get 'latest' spot fx rates for processing
+
+[M] qmhome         = [/home/sales/qm/account/mwt-QM-dev]
+[M] jq             = [/snap/bin/jq]
+[M] fixerAccessKey = [c3811be81a6df1db0e14304d77b3a23d]
+[M] path           = [/home/sales/qm/account/mwt-QM-dev]
+[M] outputDir      = [SIENA.IN]
+[M] endpoint       = [latest]
+[M] accessKey      = [c3811be81a6df1db0e14304d77b3a23d]
+[M] urlDest        = [http://data.fixer.io/api/]
+[M] symbols        = [USD,JPY,GBP,BTC,CAD,AUD,XAU,CHF,MXN,NOK,DKK,RUR,RMB,HKD,CAD,CHF,DKK,GBP,HKD,JPY,NOK,SEK,SGD,USD,ZAR]
+[M] dateID         = [201912201400]
+[M] destFile       = [/home/sales/qm/account/mwt-QM-dev/SIENA.IN/fx_SP_rates_201912201400.csv]
+[M] rateSource     = [2]
+[M] request     = [http://data.fixer.io/api/latest?access_key=c3811be81a6df1db0e14304d77b3a23d&symbols=USD,JPY,GBP,BTC,CAD,AUD,XAU,CHF,MXN,NOK,DKK,RUR,RMB,HKD,CAD,CHF,DKK,GBP,HKD,JPY,NOK,SEK,SGD,USD,ZAR]
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   309    0   309    0     0    780      0 --:--:-- --:--:-- --:--:--   782
+[M] result    = [{"success":true,"timestamp":1576847945,"base":"EUR","date":"2019-12-20","rates":{"USD":1.109287,"JPY":121.258927,"GBP":0.851189,"BTC":0.000155,"CAD":1.457886,"AUD":1.608513,"XAU":0.00075,"CHF":1.087889,"MXN":21.021364,"NOK":9.94367,"DKK":7.470759,"HKD":8.64799,"SEK":10.433991,"SGD":1.502971,"ZAR":15.790976}}]
+[M] rateDate  = [2019-12-20]
+[M] rateBase  = [EUR]
+[M] rateRates = [{ "USD": 1.109287, "JPY": 121.258927, "GBP": 0.851189, "BTC": 0.000155, "CAD": 1.457886, "AUD": 1.608513, "XAU": 0.00075, "CHF": 1.087889, "MXN": 21.021364, "NOK": 9.94367, "DKK": 7.470759, "HKD": 8.64799, "SEK": 10.433991, "SGD": 1.502971, "ZAR": 15.790976 }]
+[M] noRates   = [15]
+[M] > index      = [0] [AUD] 1 0 [1.608513] 1 0
+[M] > index      = [1] [BTC] 2 1 [0.000155] 2 1
+[M] > index      = [2] [CAD] 3 2 [1.457886] 3 2
+[M] > index      = [3] [CHF] 4 3 [1.087889] 4 3
+[M] > index      = [4] [DKK] 5 4 [7.470759] 5 4
+[M] > index      = [5] [GBP] 6 5 [0.851189] 6 5
+[M] > index      = [6] [HKD] 7 6 [8.64799] 7 6
+[M] > index      = [7] [JPY] 8 7 [121.258927] 8 7
+[M] > index      = [8] [MXN] 9 8 [21.021364] 9 8
+[M] > index      = [9] [NOK] 10 9 [9.94367] 10 9
+[M] > index      = [10] [SEK] 11 10 [10.433991] 11 10
+[M] > index      = [11] [SGD] 12 11 [1.502971] 12 11
+[M] > index      = [12] [USD] 13 12 [1.109287] 13 12
+[M] > index      = [13] [XAU] 14 13 [0.00075] 14 13
+[M] > index      = [14] [ZAR] 15 14 [15.790976] 15 14
++-+-+-+ +-+-+-+ +-+-+-+-+
+|[|M|]| |J|O|B| |D|O|N|E|
++-+-+-+ +-+-+-+ +-+-+-+-+
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][52666cf5-e642-4834-91c4-b0c83d107556]"
+[K"20191220T140003","INFO","[[1mPROCESSING     [m][COMPLETE]"
+[K"20191220T140003","INFO","[[1mCOMO OFF       [m][c45fa3c6-8d02-4d86-82e4-cf6e7dc182a7]"
+[K"20191220T140003","INFO","[[1mDO DONE        [m][fxSPfetch.sh]"
+[K"20191220T140003","INFO","[[1mDO SUB         [m][SIENA.FXSP.HELPER]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][340cfa87-4e0f-4674-b454-238ea557f8e5]"
+[K"20191220T140003","INFO","[[1mCOMO           [m][340cfa87-4e0f-4674-b454-238ea557f8e5]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][0fe3fb18-03af-4c0a-9dcd-12ef6115922e]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][8b1d3f71-fb1a-453e-bf67-8509c363d705]"
+[K"20191220T140003","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191220T140003","INFO","+-+-+-+-+-+ +-+ +-+-+ +-+-+-+-+"
+[K"20191220T140003","INFO","|S|I|E|N|A| |-| |F|X| |S|P|O|T|"
+[K"20191220T140003","INFO","+-+-+-+-+-+ +-+ +-+-+ +-+-+-+-+"
+[K"20191220T140003","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191220T140003","INFO","[[1mEXECUTE        [m][SELECT SIENA.IN WITH @ID LIKE fx_SP_rates...]"
+[K"20191220T140003","INFO","[[1mOUTPUT         [m][]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][39c11689-87c2-42f0-9ec7-4603609cc6bb]"
+[K"20191220T140003","INFO","[[1mPROCESSING     [m][fx_SP_rates_201912201400.csv]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][3f2eebe4-1949-4e28-bcba-9e3f3847e41a]"
+[K"20191220T140003","INFO","[[1mDELETE         [m][RVMARKET]"
+[K"20191220T140003","INFO","[[1mSTORE          [m][RVMARKET]"
+[K"20191220T140003","INFO","[[1mPROCESSING     [m][COMPLETE]"
+[K"20191220T140003","INFO","[[1mCOMO OFF       [m][340cfa87-4e0f-4674-b454-238ea557f8e5]"
+[K"20191220T140003","INFO","[[1mDO DONE        [m][SIENA.FXSP.HELPER]"
+[K"20191220T140003","INFO","[[1mDO DELIVER     [m][RVMARKET]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][2930f08f-dd4f-4852-b850-469d99c0af0a]"
+[K"20191220T140003","INFO","[[1mCOMO           [m][2930f08f-dd4f-4852-b850-469d99c0af0a]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][a5990440-c448-478b-ac6a-989ec40184f8]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][f42e5239-b5e3-4332-97b2-d559e67c9448]"
+[K"20191220T140003","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191220T140003","INFO","+-+-+-+-+-+ +-+ +-+-+-+-+-+-+-+ +-+-+-+-+ +-+-+-+-+-+-+-+-+"
+[K"20191220T140003","INFO","|S|I|E|N|A| |-| |D|e|l|i|v|e|r| |D|a|t|a| |R|V|M|A|R|K|E|T|"
+[K"20191220T140003","INFO","+-+-+-+-+-+ +-+ +-+-+-+-+-+-+-+ +-+-+-+-+ +-+-+-+-+-+-+-+-+"
+[K"20191220T140003","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191220T140003","INFO","[[1mNO CONFIGS     [m][83]"
+[K"20191220T140003","INFO","[[1mDELIVERING     [m][[1m/mnt/sal-tst/sys-1/data/rvRates_in[m]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][74e8db36-e008-416a-8600-fb9add094d92]"
+[K"20191220T140003","INFO","[[1mDELIVER        [m][RVMARKET]"
+[K"20191220T140003","INFO","[[1mTO             [m][/mnt/sal-tst/sys-1/data/rvRates_in]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][6091d14c-762c-4ef9-b3d9-b78e8e4778ec]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][f45d4299-2d54-4f71-81e3-0d8fbcd27eb5]"
+[K"20191220T140003","INFO","[[1mDELIVERING     [m][[1m/mnt/sal-tst/sys-3/data/rvRates_in[m]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][241a082d-e960-4c0a-b60a-1d2f40e2f713]"
+[K"20191220T140003","INFO","[[1mDELIVER        [m][RVMARKET]"
+[K"20191220T140003","INFO","[[1mTO             [m][/mnt/sal-tst/sys-3/data/rvRates_in]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][948d4eb7-ac2d-48c2-b8af-2d9c48e31e8a]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][a3bbc819-103e-467a-811b-cbd8d9e9c81b]"
+[K"20191220T140003","INFO","[[1mDELIVERING     [m][[1m/mnt/sal-tst/sys-4/data/rvRates_in[m]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][cb54bb7e-92ba-46f0-af44-f083f271973e]"
+[K"20191220T140003","INFO","[[1mDELIVER        [m][RVMARKET]"
+[K"20191220T140003","INFO","[[1mTO             [m][/mnt/sal-tst/sys-4/data/rvRates_in]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][1d58aabe-a3ac-40f7-a8a0-57720ff7c011]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][b75e2e41-1f29-44af-84bf-be69eadceaf9]"
+[K"20191220T140003","INFO","[[1mDELIVERING     [m][[1m/mnt/sal-tst/sys-5/data/rvRates_in[m]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][5d2ba60b-b262-4954-95b1-a27a7d0f391a]"
+[K"20191220T140003","INFO","[[1mDELIVER        [m][RVMARKET]"
+[K"20191220T140003","INFO","[[1mTO             [m][/mnt/sal-tst/sys-5/data/rvRates_in]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][bf44e020-38ab-43f1-87cc-3553208d20cc]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][a406eac7-e85c-4599-b805-038315bf551f]"
+[K"20191220T140003","INFO","[[1mDELIVERING     [m][[1m/mnt/sal-prd/sys-1/data/rvRates_in[m]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][4a9a5b97-fa23-4f16-b117-7e03459d4fcb]"
+[K"20191220T140003","INFO","[[1mDELIVER        [m][RVMARKET]"
+[K"20191220T140003","INFO","[[1mTO             [m][/mnt/sal-prd/sys-1/data/rvRates_in]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][74b5339a-15a1-4267-bc62-7352c443b98e]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][5de2dc71-ce03-4189-9102-80a4c4a99f62]"
+[K"20191220T140003","INFO","[[1mDELIVERING     [m][[1m/mnt/sal-prd/sys-3/data/rvRates_in[m]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][8f8fc173-435c-48c1-9300-877f597fd741]"
+[K"20191220T140003","INFO","[[1mDELIVER        [m][RVMARKET]"
+[K"20191220T140003","INFO","[[1mTO             [m][/mnt/sal-prd/sys-3/data/rvRates_in]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][4e9d809c-65ac-4322-adc2-24728a7df3dc]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][4b3458ec-8c13-4d22-a893-d245e7fd583c]"
+[K"20191220T140003","INFO","[[1mDELIVERING     [m][[1m/mnt/sal-prd/sys-4/data/rvRates_in[m]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][9907c5bb-936e-437c-a9f0-6bb3e07bc2a8]"
+[K"20191220T140003","INFO","[[1mDELIVER        [m][RVMARKET]"
+[K"20191220T140003","INFO","[[1mTO             [m][/mnt/sal-prd/sys-4/data/rvRates_in]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][9d557959-97b2-4bd3-8be3-9a3e6b3ee3d3]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][3bb724d5-b5c0-4571-a0d0-3b192ff66d57]"
+[K"20191220T140003","INFO","[[1mDELIVERING     [m][[1m/mnt/sal-prd/sys-5/data/rvRates_in[m]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][aab55c36-6016-43e1-8222-d1639cb2f007]"
+[K"20191220T140003","INFO","[[1mDELIVER        [m][RVMARKET]"
+[K"20191220T140003","INFO","[[1mTO             [m][/mnt/sal-prd/sys-5/data/rvRates_in]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][363ebda2-1f9a-4276-8101-7b6da871d157]"
+[K"20191220T140003","INFO","[[1mUNQ.ID         [m][27213009-7e18-491a-849f-cbf90a07add4]"
+[K"20191220T140003","INFO","[[1mCOMO OFF       [m][2930f08f-dd4f-4852-b850-469d99c0af0a]"
+[K"20191220T140003","INFO","[[1mDO DONE        [m][RVMARKET]"
+[K"20191220T140003","INFO","[[1mCOMO OFF       [m][6e7f9d52-d5b7-42e4-8ea6-75295b87412d]"
