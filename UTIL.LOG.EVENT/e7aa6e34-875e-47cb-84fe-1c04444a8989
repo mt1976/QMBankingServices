@@ -1,0 +1,18 @@
+MS.SQL.SERVER
+20191220
+15.05.41
+sales
+
+e7aa6e34-875e-47cb-84fe-1c04444a8989
+select name,colid from syscolumns where id=object_id('dbo.Book')
+
+0
+U_MSSQL.EXECUTE
+/dev/pts/1
+168
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+U_TEST2
+ldn-srv-ubnt01
+
+Linux
