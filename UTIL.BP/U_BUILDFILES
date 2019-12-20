@@ -2,7 +2,7 @@ PROGRAM U_BUILDFILES
 ** INFORMATION ****************************************************************
 * Routine Name   : U_BUILDFILES
 *         Type   : PROGRAM
-*         Params : 
+*         Params :
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
 * Info Updated   : 20191219 at 15.04.21 in MWT-QM-DEV by sales
@@ -89,7 +89,4 @@ PROCESS.IT:
 
    NEXT THIS.PROPERTIES.FILE
    RETURN
-
-
-
 END
