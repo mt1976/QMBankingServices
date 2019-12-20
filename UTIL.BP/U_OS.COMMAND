@@ -2,10 +2,10 @@ SUBROUTINE U_OS.COMMAND(STMT, VERBOSE)
 ** INFORMATION ****************************************************************
 * Routine Name   : U_OS.COMMAND
 *         Type   : SUBROUTINE
-*         Params : STMT, VERBOSE
+*         Params : <<PARAMETERS>>
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20191219 at 15.04.21 in MWT-QM-DEV by sales
+* Info Updated   : 20191220 at 15.41.22 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
