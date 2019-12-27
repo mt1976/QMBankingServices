@@ -1,0 +1,18 @@
+EXECUTE
+20191227
+08.00.03
+sales
+
+9cdbe536-4e48-4233-b9f5-67ece5c8ab33
+COPY FROM SIENA.STAGING TO SIENA.PROCESSED "RVMARKET","197b0acc-416e-4b3a-b8ec-3bb76d97c3d5" OVERWRITING
+
+1
+U_OS.EXECUTE
+
+295
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO FXSPOT
+ldn-srv-ubnt01
+
+Linux
