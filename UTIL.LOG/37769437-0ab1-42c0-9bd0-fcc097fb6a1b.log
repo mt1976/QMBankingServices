@@ -1,0 +1,69 @@
+[K"20191230T060001","INFO","[[1mUNQ.ID         [m][e91c6a93-a5f2-4f70-acbb-cb917e7c1fdb]"
+[K"20191230T060001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191230T060001","INFO","+-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+-+"
+[K"20191230T060001","INFO","|S|C|R|I|P|T| |f|x|S|P|f|e|t|c|h|.|s|h|"
+[K"20191230T060001","INFO","+-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+-+"
+[K"20191230T060001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20191230T060001","INFO","[[1mHOME           [m][/home/sales/qm/account/mwt-QM-dev]"
+[K"20191230T060001","INFO","[[1mEXECUTE        [m][SSELECT SIENA.SCRIPTS LIKE ...fxSPfetch.sh...]"
+[K"20191230T060001","INFO","[[1mOUTPUT         [m][]"
+[K"20191230T060001","INFO","[[1mUNQ.ID         [m][3d22baf8-4a76-48dd-bd43-787466814515]"
+[K"20191230T060001","INFO","[[1mNO.SCRIPTS     [m][1]"
+[K"20191230T060001","INFO","[[1mSCRIPT         [m][fxSPfetch.sh]"
+[K"20191230T060001","INFO","[[1mINSTRUCTION    [m][bash /home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS/fxSPfetch.sh]"
+[K"20191230T060001","INFO","[[1mOS.COMMAND     [m][bash /home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS/fxSPfetch.sh]"
+[M] INITIALISE COMMON VARS - START
+[M] QMHOME         = [/home/sales/qm/account/mwt-QM-dev]
+[M] JQ             = [/snap/bin/jq]
+[M] FIXERACCESSKEY = [c3811be81a6df1db0e14304d77b3a23d]
+[M] FREDACCESSKEY  = [d4d50b886c05baa2795c363319ca64db]
+[M] OUTPUTDIR      = [SIENA.IN]
+[M] MDSHOME        = [/home/sales/qm/account/mwt-QM-dev/SIENA.SCRIPTS]
+[M] INITIALISE COMMON VARS - DONE
++-+-+-+ +-+-+-+ +-+-+-+-+ +-+-+ +-+-+-+-+-+
+|[|M|]| |G|e|t| |S|p|o|t| |F|X| |R|a|t|e|s|
++-+-+-+ +-+-+-+ +-+-+-+-+ +-+-+ +-+-+-+-+-+
+
+[M] Get 'latest' spot fx rates for processing
+
+[M] qmhome         = [/home/sales/qm/account/mwt-QM-dev]
+[M] jq             = [/snap/bin/jq]
+[M] fixerAccessKey = [c3811be81a6df1db0e14304d77b3a23d]
+[M] path           = [/home/sales/qm/account/mwt-QM-dev]
+[M] outputDir      = [SIENA.IN]
+[M] endpoint       = [latest]
+[M] accessKey      = [c3811be81a6df1db0e14304d77b3a23d]
+[M] urlDest        = [http://data.fixer.io/api/]
+[M] symbols        = [USD,JPY,GBP,BTC,CAD,AUD,XAU,CHF,MXN,NOK,DKK,RUR,RMB,HKD,CAD,CHF,DKK,GBP,HKD,JPY,NOK,SEK,SGD,USD,ZAR]
+[M] dateID         = [201912300600]
+[M] destFile       = [/home/sales/qm/account/mwt-QM-dev/SIENA.IN/fx_SP_rates_201912300600.csv]
+[M] rateSource     = [2]
+[M] request     = [http://data.fixer.io/api/latest?access_key=c3811be81a6df1db0e14304d77b3a23d&symbols=USD,JPY,GBP,BTC,CAD,AUD,XAU,CHF,MXN,NOK,DKK,RUR,RMB,HKD,CAD,CHF,DKK,GBP,HKD,JPY,NOK,SEK,SGD,USD,ZAR]
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   311    0   311    0     0    801      0 --:--:-- --:--:-- --:--:--   799
+[M] result    = [{"success":true,"timestamp":1577682846,"base":"EUR","date":"2019-12-30","rates":{"USD":1.119909,"JPY":122.220682,"GBP":0.853914,"BTC":0.000152,"CAD":1.463329,"AUD":1.601691,"XAU":0.00074,"CHF":1.089078,"MXN":21.071867,"NOK":9.854637,"DKK":7.469467,"HKD":8.722264,"SEK":10.434252,"SGD":1.511312,"ZAR":15.677099}}]
+[M] rateDate  = [2019-12-30]
+[M] rateBase  = [EUR]
+[M] rateRates = [{ "USD": 1.119909, "JPY": 122.220682, "GBP": 0.853914, "BTC": 0.000152, "CAD": 1.463329, "AUD": 1.601691, "XAU": 0.00074, "CHF": 1.089078, "MXN": 21.071867, "NOK": 9.854637, "DKK": 7.469467, "HKD": 8.722264, "SEK": 10.434252, "SGD": 1.511312, "ZAR": 15.677099 }]
+[M] noRates   = [15]
+[M] > index      = [0] [AUD] 1 0 [1.601691] 1 0
+[M] > index      = [1] [BTC] 2 1 [0.000152] 2 1
+[M] > index      = [2] [CAD] 3 2 [1.463329] 3 2
+[M] > index      = [3] [CHF] 4 3 [1.089078] 4 3
+[M] > index      = [4] [DKK] 5 4 [7.469467] 5 4
+[M] > index      = [5] [GBP] 6 5 [0.853914] 6 5
+[M] > index      = [6] [HKD] 7 6 [8.722264] 7 6
+[M] > index      = [7] [JPY] 8 7 [122.220682] 8 7
+[M] > index      = [8] [MXN] 9 8 [21.071867] 9 8
+[M] > index      = [9] [NOK] 10 9 [9.854637] 10 9
+[M] > index      = [10] [SEK] 11 10 [10.434252] 11 10
+[M] > index      = [11] [SGD] 12 11 [1.511312] 12 11
+[M] > index      = [12] [USD] 13 12 [1.119909] 13 12
+[M] > index      = [13] [XAU] 14 13 [0.00074] 14 13
+[M] > index      = [14] [ZAR] 15 14 [15.677099] 15 14
++-+-+-+ +-+-+-+ +-+-+-+-+
+|[|M|]| |J|O|B| |D|O|N|E|
++-+-+-+ +-+-+-+ +-+-+-+-+
+[K"20191230T060003","INFO","[[1mUNQ.ID         [m][006e9d42-69c1-4c61-ae90-0a8583908c33]"
+[K"20191230T060003","INFO","[[1mPROCESSING     [m][COMPLETE]"
