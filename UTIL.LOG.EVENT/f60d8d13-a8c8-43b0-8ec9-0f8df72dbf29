@@ -1,0 +1,18 @@
+EXECUTE
+20200103
+08.00.01
+sales
+
+f60d8d13-a8c8-43b0-8ec9-0f8df72dbf29
+SSELECT SIENA.SCRIPTS LIKE ...fxSPfetch.sh...
+
+1
+U_OS.EXECUTE
+
+435
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO FXSPOT
+ldn-srv-ubnt01
+
+Linux
