@@ -1,0 +1,18 @@
+EXECUTE
+20200107
+10.16.51
+sales
+
+5f4bee25-c2d1-43aa-8f30-3eac38b53f83
+COPY FROM SIENA.STAGING TO SIENA.DEST RVMARKET OVERWRITING
+
+1
+U_OS.EXECUTE
+
+496
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO FXFWD
+ldn-srv-ubnt01
+
+Linux
