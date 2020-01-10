@@ -1,0 +1,100 @@
+[K"20200110T132001","INFO","[[1mUNQ.ID         [m][16b70cdd-21c7-44aa-aab0-8259489b2df6]"
+[K"20200110T132001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20200110T132001","INFO","+-+-+-+-+-+-+-+-+"
+[K"20200110T132001","INFO","|S|I|E|N|A|.|D|O|"
+[K"20200110T132001","INFO","+-+-+-+-+-+-+-+-+"
+[K"20200110T132001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20200110T132001","INFO","[[1mPROCESS        [m][CHECKIN]"
+[K"20200110T132001","INFO","[[1mDO SUB         [m][SIENA.GIT.CHECKIN.HELPER]"
+[K"20200110T132001","INFO","[[1mOS.COMMAND     [m][git add .]"
+warning: CRLF will be replaced by LF in CRON_CHECKIN.log.
+The file will have its original line endings in your working directory.
+[K"20200110T132001","INFO","[[1mUNQ.ID         [m][83db5d97-12fd-403f-88fd-0fa3c7373c8c]"
+[K"20200110T132001","INFO","[[1mOS.COMMAND     [m][git commit -m "auto.20200110t132001"]"
+[master 4b130bee] auto.20200110t132001
+ 81 files changed, 1282 insertions(+), 15 deletions(-)
+ create mode 100644 SIENA.PROCESSED/1ebf9afd-bad4-4c84-9a72-66794bbce537
+ create mode 100644 SIENA.PROCESSED/23d64662-ecd8-4a96-98f5-682155e49281
+ create mode 100644 SIENA.PROCESSED/2561885b-ea7f-45f2-a7fd-7b63860c9e6b
+ create mode 100644 SIENA.PROCESSED/67e485f9-97df-4963-8a9d-a77ad4067e6c
+ create mode 100644 SIENA.PROCESSED/7cacaf14-0fe7-4275-9c87-e5e2a35c7904
+ create mode 100644 SIENA.PROCESSED/bc7636d1-121e-478b-abda-c07100c693f0
+ create mode 100644 SIENA.PROCESSED/be48bcac-b5d7-473b-b2e5-81ca1be25967
+ create mode 100644 SIENA.PROCESSED/e38c7e1d-3b63-44b8-bd85-99a6ef54b6e3
+ create mode 100644 SIENA.PROCESSED/f3de4377-e002-4ab6-b137-6d8777b0f67d
+ rewrite SIENA.STAGING/RVMARKET (93%)
+ create mode 100644 UTIL.LOG.CMD/11abdb88-ab44-47b8-b5e0-7eda01bf6fcc
+ create mode 100644 UTIL.LOG.CMD/1253c2d7-36ca-49bf-9587-b4f8a55f1548
+ create mode 100644 UTIL.LOG.CMD/1667b4aa-afa1-45d0-bb32-c18d1845494c
+ create mode 100644 UTIL.LOG.CMD/16b70cdd-21c7-44aa-aab0-8259489b2df6
+ create mode 100644 UTIL.LOG.CMD/1c2f8119-9783-4ff9-9502-8101a2fc8fc6
+ create mode 100644 UTIL.LOG.CMD/2da487f5-3cb6-4d86-986d-f11807e80ecb
+ create mode 100644 UTIL.LOG.CMD/2dc56c93-29d7-4197-b230-70f7c8acfc14
+ create mode 100644 UTIL.LOG.CMD/2e028ae9-42bc-4b90-bde4-67d32a3a7977
+ create mode 100644 UTIL.LOG.CMD/3c161e99-7e71-4d68-a71f-b88d43f2a104
+ create mode 100644 UTIL.LOG.CMD/3dc1ce80-6345-4f8e-ab8b-d138fb62520d
+ create mode 100644 UTIL.LOG.CMD/3dda8857-9cd0-450d-be51-b0402b50a7f4
+ create mode 100644 UTIL.LOG.CMD/5d416f57-89c7-458f-bd28-aff1ba856a7c
+ create mode 100644 UTIL.LOG.CMD/67e44400-4a9f-4c8b-a258-54e66e59f278
+ create mode 100644 UTIL.LOG.CMD/6b50c388-dac5-4335-8ed6-a5d3116cd0b8
+ create mode 100644 UTIL.LOG.CMD/73b87265-b967-48bf-bf43-9432b08ff6d8
+ create mode 100644 UTIL.LOG.CMD/7b15b3ed-248c-4398-8067-006a6459d555
+ create mode 100644 UTIL.LOG.CMD/80a1463f-441c-44da-a9f7-1d04f82050f3
+ create mode 100644 UTIL.LOG.CMD/896a622b-7caf-48a5-aed5-0044f4af8e97
+ create mode 100644 UTIL.LOG.CMD/9e87974a-7dd1-4a7e-aa33-12f7576b7bcc
+ create mode 100644 UTIL.LOG.CMD/a0af9787-9b05-4d6a-adb5-cd9e3e8b066a
+ create mode 100644 UTIL.LOG.CMD/a39b48ce-b995-4974-89be-8fd929b1e0e1
+ create mode 100644 UTIL.LOG.CMD/a9b2ea4b-c81f-4982-acd9-5dd8619847b8
+ create mode 100644 UTIL.LOG.CMD/ac4f6f47-d634-4016-9908-24e355feb931
+ create mode 100644 UTIL.LOG.CMD/b1708972-166b-4c7d-abfa-c78f1084d3a6
+ create mode 100644 UTIL.LOG.CMD/b53916bb-f031-4077-a6f2-62884ba5ebf6
+ create mode 100644 UTIL.LOG.CMD/c69abc07-f96d-4fb8-8a8c-1c67a9959735
+ create mode 100644 UTIL.LOG.CMD/c87ce0e6-d0b7-4d3e-b522-cc3c0097300e
+ create mode 100644 UTIL.LOG.CMD/c92a29ed-6378-4f29-aff3-f1315e93907d
+ create mode 100644 UTIL.LOG.CMD/d2472814-a0e4-48d1-a173-aa97185dc605
+ create mode 100644 UTIL.LOG.CMD/d56c96e2-0be8-4967-a6f9-a1127fe04349
+ create mode 100644 UTIL.LOG.CMD/e3a263d9-86ba-4866-8b1d-b0c8f6c1ca9b
+ create mode 100644 UTIL.LOG.CMD/ebfe32cb-bb49-4fcf-860e-21b2effefa6d
+ create mode 100644 UTIL.LOG.EVENT/11abdb88-ab44-47b8-b5e0-7eda01bf6fcc
+ create mode 100644 UTIL.LOG.EVENT/1253c2d7-36ca-49bf-9587-b4f8a55f1548
+ create mode 100644 UTIL.LOG.EVENT/1667b4aa-afa1-45d0-bb32-c18d1845494c
+ create mode 100644 UTIL.LOG.EVENT/16b70cdd-21c7-44aa-aab0-8259489b2df6
+ create mode 100644 UTIL.LOG.EVENT/1c2f8119-9783-4ff9-9502-8101a2fc8fc6
+ create mode 100644 UTIL.LOG.EVENT/2da487f5-3cb6-4d86-986d-f11807e80ecb
+ create mode 100644 UTIL.LOG.EVENT/2dc56c93-29d7-4197-b230-70f7c8acfc14
+ create mode 100644 UTIL.LOG.EVENT/2e028ae9-42bc-4b90-bde4-67d32a3a7977
+ create mode 100644 UTIL.LOG.EVENT/3c161e99-7e71-4d68-a71f-b88d43f2a104
+ create mode 100644 UTIL.LOG.EVENT/3dc1ce80-6345-4f8e-ab8b-d138fb62520d
+ create mode 100644 UTIL.LOG.EVENT/3dda8857-9cd0-450d-be51-b0402b50a7f4
+ create mode 100644 UTIL.LOG.EVENT/5d416f57-89c7-458f-bd28-aff1ba856a7c
+ create mode 100644 UTIL.LOG.EVENT/67e44400-4a9f-4c8b-a258-54e66e59f278
+ create mode 100644 UTIL.LOG.EVENT/6b50c388-dac5-4335-8ed6-a5d3116cd0b8
+ create mode 100644 UTIL.LOG.EVENT/73b87265-b967-48bf-bf43-9432b08ff6d8
+ create mode 100644 UTIL.LOG.EVENT/7b15b3ed-248c-4398-8067-006a6459d555
+ create mode 100644 UTIL.LOG.EVENT/80a1463f-441c-44da-a9f7-1d04f82050f3
+ create mode 100644 UTIL.LOG.EVENT/896a622b-7caf-48a5-aed5-0044f4af8e97
+ create mode 100644 UTIL.LOG.EVENT/9e87974a-7dd1-4a7e-aa33-12f7576b7bcc
+ create mode 100644 UTIL.LOG.EVENT/a0af9787-9b05-4d6a-adb5-cd9e3e8b066a
+ create mode 100644 UTIL.LOG.EVENT/a39b48ce-b995-4974-89be-8fd929b1e0e1
+ create mode 100644 UTIL.LOG.EVENT/a9b2ea4b-c81f-4982-acd9-5dd8619847b8
+ create mode 100644 UTIL.LOG.EVENT/ac4f6f47-d634-4016-9908-24e355feb931
+ create mode 100644 UTIL.LOG.EVENT/b1708972-166b-4c7d-abfa-c78f1084d3a6
+ create mode 100644 UTIL.LOG.EVENT/b53916bb-f031-4077-a6f2-62884ba5ebf6
+ create mode 100644 UTIL.LOG.EVENT/c69abc07-f96d-4fb8-8a8c-1c67a9959735
+ create mode 100644 UTIL.LOG.EVENT/c87ce0e6-d0b7-4d3e-b522-cc3c0097300e
+ create mode 100644 UTIL.LOG.EVENT/c92a29ed-6378-4f29-aff3-f1315e93907d
+ create mode 100644 UTIL.LOG.EVENT/d2472814-a0e4-48d1-a173-aa97185dc605
+ create mode 100644 UTIL.LOG.EVENT/d56c96e2-0be8-4967-a6f9-a1127fe04349
+ create mode 100644 UTIL.LOG.EVENT/e3a263d9-86ba-4866-8b1d-b0c8f6c1ca9b
+ create mode 100644 UTIL.LOG.EVENT/ebfe32cb-bb49-4fcf-860e-21b2effefa6d
+ create mode 100644 UTIL.LOG/33ba6fe4-dd5a-49d8-989c-90d8a4ae71a5.log
+ create mode 100644 UTIL.LOG/342fe867-9348-413e-8ebe-8a982ff90bba.log
+ create mode 100644 UTIL.LOG/49ec1a89-5f28-4b00-873e-964d5001ce17.log
+ create mode 100644 UTIL.LOG/a05f7162-3eb9-428d-82eb-b850c0c52663.log
+ create mode 100644 UTIL.LOG/d2481fda-02c7-4851-88b9-987858028f62.log
+[K"20200110T132002","INFO","[[1mUNQ.ID         [m][776febb6-e7d5-4393-af95-7f6bff0277e8]"
+[K"20200110T132002","INFO","[[1mOS.COMMAND     [m][git push]"
+To https://github.com/mt1976/mwt-QM-dev.git
+   0165a55e..4b130bee  master -> master
+[K"20200110T132006","INFO","[[1mUNQ.ID         [m][1d4d2268-a59a-47f2-9231-c12938587c4e]"
+[K"20200110T132006","INFO","[[1mDO DONE        [m][SIENA.GIT.CHECKIN.HELPER]"
