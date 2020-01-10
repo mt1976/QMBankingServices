@@ -2,6 +2,7 @@
 equate U_SEP to "~"
 equate U_TRUNC to "-"
 equate U_PROP_SEP to "="
+equate U_PROP_ID_SEP to "!"
 equate U_PREF to "M "
 equate U_BOLD_ON to -58
 equate U_BOLD_OFF to -59
