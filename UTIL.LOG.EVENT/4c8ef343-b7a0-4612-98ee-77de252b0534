@@ -1,0 +1,18 @@
+EXECUTE
+20200114
+12.15.01
+sales
+
+4c8ef343-b7a0-4612-98ee-77de252b0534
+SELECT SIENA.IN WITH @ID LIKE fx_SP_rates...
+
+1
+U_OS.EXECUTE
+/dev/pts/0
+659
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO FXSPOT
+ldn-srv-ubnt01
+
+Linux
