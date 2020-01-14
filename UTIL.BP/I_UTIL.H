@@ -1,5 +1,6 @@
 * UTIL.BP I_UTIL.H
 equate U_SEP to "~"
+equate U_SEP_ALT to "!"
 equate U_TRUNC to "-"
 equate U_PROP_SEP to "="
 equate U_PROP_ID_SEP to "!"
