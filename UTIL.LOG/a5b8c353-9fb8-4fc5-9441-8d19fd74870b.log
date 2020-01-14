@@ -1,0 +1,21 @@
+[K"20200114T162001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20200114T162001","INFO","+-+-+-+-+-+-+-+-+"
+[K"20200114T162001","INFO","|S|I|E|N|A|.|D|O|"
+[K"20200114T162001","INFO","+-+-+-+-+-+-+-+-+"
+[K"20200114T162001","INFO","━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+[K"20200114T162001","INFO","[[1mPROCESS        [m][CHECKIN]"
+[K"20200114T162001","INFO","[[1mDO SUB         [m][SIENA.GIT.CHECKIN.HELPER]"
+[K"20200114T162001","INFO","[[1mOS.COMMAND     [m][git add .]"
+warning: CRLF will be replaced by LF in CRON_CHECKIN.log.
+The file will have its original line endings in your working directory.
+[K"20200114T162002","INFO","[[1mOS.COMMAND     [m][git commit -m "auto.20200114t162001"]"
+[master 9e46c748] auto.20200114t162001
+ 7 files changed, 51 insertions(+)
+ create mode 100644 UTIL.LOG.CMD/392cfdf8-0cec-4fc8-b267-50c1bf0e2afa
+ create mode 100644 UTIL.LOG.CMD/57ccb712-e1b0-4a9a-875e-e18d759821d2
+ create mode 100644 UTIL.LOG.EVENT/392cfdf8-0cec-4fc8-b267-50c1bf0e2afa
+ create mode 100644 UTIL.LOG.EVENT/57ccb712-e1b0-4a9a-875e-e18d759821d2
+[K"20200114T162002","INFO","[[1mOS.COMMAND     [m][git push]"
+To https://github.com/mt1976/mwt-QM-dev.git
+   94fa12f2..9e46c748  master -> master
+[K"20200114T162008","INFO","[[1mDO DONE        [m][SIENA.GIT.CHECKIN.HELPER]"
