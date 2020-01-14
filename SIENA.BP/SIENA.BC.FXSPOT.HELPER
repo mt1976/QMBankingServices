@@ -90,8 +90,8 @@ PROCESS.HTML:
 
    IF NUM(BID.STRING) AND NUM(ASK.STRING) THEN
       * Frig the feed data - SIENA is multiplying by a factor of 1000
-      BID.STRING=(BID.STRING+0)
-      ASK.STRING=(ASK.STRING+0)
+      BID.STRING=TRIMS((BID.STRING+0),"0","T")
+      ASK.STRING=TRIMS((ASK.STRING+0),"0","T")
       GOSUB ADD.RVDATA
 
    END
