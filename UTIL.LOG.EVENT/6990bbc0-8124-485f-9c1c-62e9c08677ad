@@ -1,0 +1,18 @@
+EXECUTE
+20200113
+14.01.37
+sales
+
+6990bbc0-8124-485f-9c1c-62e9c08677ad
+COPY FROM SIENA.STAGING TO SIENA.PROCESSED "TBILLS_NI.xml","de2c7d02-0543-4bf2-b7bf-3a2a32af70d5" OVERWRITING
+
+0
+U_OS.EXECUTE
+/dev/pts/0
+635
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DELIVER ALL
+ldn-srv-ubnt01
+
+Linux

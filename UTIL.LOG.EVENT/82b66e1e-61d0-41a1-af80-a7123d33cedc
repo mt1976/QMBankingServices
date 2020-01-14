@@ -1,0 +1,18 @@
+EXECUTE
+20200113
+14.01.37
+sales
+
+82b66e1e-61d0-41a1-af80-a7123d33cedc
+COPY FROM SIENA.STAGING TO SIENA.PROCESSED "RVLIBOR","f13bcbe3-8adf-4ee5-87ef-71daa440ed29" OVERWRITING
+
+0
+U_OS.EXECUTE
+/dev/pts/0
+635
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DELIVER ALL
+ldn-srv-ubnt01
+
+Linux

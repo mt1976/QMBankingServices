@@ -1,0 +1,18 @@
+EXECUTE
+20200113
+14.01.38
+sales
+
+e0eb432f-1c25-4362-b4ee-19a2d156a9f2
+COPY FROM SIENA.STAGING TO SIENA.DEST RVCPI OVERWRITING
+
+0
+U_OS.EXECUTE
+/dev/pts/0
+635
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DELIVER ALL
+ldn-srv-ubnt01
+
+Linux

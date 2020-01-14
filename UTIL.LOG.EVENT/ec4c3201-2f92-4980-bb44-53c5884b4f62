@@ -1,0 +1,18 @@
+EXECUTE
+20200113
+14.01.38
+sales
+
+ec4c3201-2f92-4980-bb44-53c5884b4f62
+COPY FROM SIENA.STAGING TO SIENA.DEST SDI_NI.xml OVERWRITING
+
+0
+U_OS.EXECUTE
+/dev/pts/0
+635
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DELIVER ALL
+ldn-srv-ubnt01
+
+Linux
