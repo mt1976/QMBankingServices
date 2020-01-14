@@ -1,0 +1,18 @@
+EXECUTE
+20200114
+11.43.30
+sales
+
+f5435bb9-9622-4f04-9ef9-bac9f5755205
+SELECT SIENA.STAGING LIKE "RVLIBOR~..."
+
+0
+U_OS.EXECUTE
+/dev/pts/0
+659
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DELIVER ALL
+ldn-srv-ubnt01
+
+Linux
