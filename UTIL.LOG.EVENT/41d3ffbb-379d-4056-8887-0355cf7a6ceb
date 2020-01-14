@@ -1,0 +1,18 @@
+CHROME.FETCH
+20200114
+13.00.29
+sales
+
+41d3ffbb-379d-4056-8887-0355cf7a6ceb
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EEURSGD/overview
+https://www.barchart.com/forex/quotes/%5EEURSGD/overview
+0
+U_OS.CHROME.FETCH
+/dev/pts/0
+659
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.BC.FXSPOT
+ldn-srv-ubnt01
+
+Linux
