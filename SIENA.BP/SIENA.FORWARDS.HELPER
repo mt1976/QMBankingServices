@@ -103,7 +103,9 @@ PROCESS.HTML:
          * Frig the feed data - SIENA is multiplying by a factor of 1000
          BID.STRING=TRIMS(((BID.STRING+0)/RVFRIG)+0,"0","T")
          ASK.STRING=TRIMS(((ASK.STRING+0)/RVFRIG)+0,"0","T")
+         IF BID.STRING <> "" AND ASK.STRING <> "" THEN
          GOSUB ADD.RVDATA
+         END
       END
 *CALL U_CRT.INFO('TENOR',TENOR)
 *CALL U_CRT.INFO('STNR',SIENA.TENOR)
