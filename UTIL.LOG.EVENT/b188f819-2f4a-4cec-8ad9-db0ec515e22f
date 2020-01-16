@@ -1,0 +1,21 @@
+CHROME.FETCH
+20200116
+13.16.36
+sales
+
+b188f819-2f4a-4cec-8ad9-db0ec515e22f
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EEURMUR/forward-rates
+https://www.barchart.com/forex/quotes/%5EEURMUR/forward-rates
+0
+U_OS.CHROME.FETCH
+
+805
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO FXFWD
+ldn-srv-ubnt01
+
+Linux
+13.16.31
+13.16.36
+00.00.05
