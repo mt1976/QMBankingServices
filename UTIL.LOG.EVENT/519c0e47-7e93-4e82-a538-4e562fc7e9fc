@@ -1,0 +1,22 @@
+MS.SQL.SERVER
+20200120
+16.01.27
+sales
+
+519c0e47-7e93-4e82-a538-4e562fc7e9fc
+select CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode from dbo.CurrencyPair where Active=1
+
+0
+U_MSSQL.EXECUTE
+/dev/pts/1
+271
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.FXCCYUPDATE ALL
+ldn-srv-ubnt01
+
+Linux
+
+
+
+U_MSSQL.EXECUTE

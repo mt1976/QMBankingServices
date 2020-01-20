@@ -2,15 +2,15 @@ PROGRAM U_GIT.LINK.FILE
 ** INFORMATION ****************************************************************
 * Routine Name   : U_GIT.LINK.FILE
 *         Type   : PROGRAM
-*         Params : <<PARAMETERS>>
+*         Params : 
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20191220 at 15.41.22 in MWT-QM-DEV by sales
+* Info Updated   : 20200120 at 16.53.17 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-$INCLUDE UTIL.BP I_UTIL.LOG.EVENT.H
+$INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
    FN.VOC = "VOC" ; F.VOC = "" ; ID.VOC = "" ; R.VOC = "" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""
    CALL U_OPENFILE(FN.VOC, FV.VOC, STOP.ON.ERROR, ERROR.TEXT)

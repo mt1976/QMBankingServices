@@ -2,10 +2,10 @@ SUBROUTINE U_BUILDFILES.HELPER(PROCESS.FILE, INSERT.FILE, PREFIX)
 ** INFORMATION ****************************************************************
 * Routine Name   : U_BUILDFILES.HELPER
 *         Type   : SUBROUTINE
-*         Params : <<PARAMETERS>>
+*         Params : PROCESS.FILE, INSERT.FILE, PREFIX
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20191220 at 15.41.22 in MWT-QM-DEV by sales
+* Info Updated   : 20200120 at 16.53.17 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
@@ -29,7 +29,7 @@ $INCLUDE UTIL.BP I_UTIL.H
 * CALL U_CRT.INFO("READ",PROCESS.FILE)
    CALL U_READ(FV.UTIL.FILE.DEFINITIONS, PROCESS.FILE, R.FILE.DEFINITIONS, STOP.ON.ERROR, ERROR.TEXT)
 
-   ID.INSERT.FILE = "I_":PROCESS.FILE:".H"
+   ID.INSERT.FILE = "F_":PROCESS.FILE:".H"
    DEL.STMT = "DELETE ":FN.INSERT.FILE:" ":ID.INSERT.FILE
    CALL U_OS.EXECUTE(DEL.STMT, @TRUE)
 *   CALL U_CRT.INFO("DELETE",DEL.STMT)

@@ -2,15 +2,15 @@ SUBROUTINE U_OS.GET.LIST(IN.PROPERTIES.FILE, IN.LIST.NAME, IN.LIST.PREFIX, RETUR
 ** INFORMATION ****************************************************************
 * Routine Name   : U_OS.GET.LIST
 *         Type   : SUBROUTINE
-*         Params : <<PARAMETERS>>
+*         Params : IN.PROPERTIES.FILE, IN.LIST.NAME, IN.LIST.PREFIX, RETURN.LIST, NO.ITEMS
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20191220 at 15.41.22 in MWT-QM-DEV by sales
+* Info Updated   : 20200120 at 16.53.17 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-$INCLUDE UTIL.BP I_UTIL.LOG.EVENT.H
+$INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
    RETURN.LIST = ""
    STOP.ON.ERROR = @TRUE
@@ -37,7 +37,7 @@ $INCLUDE UTIL.BP I_UTIL.LOG.EVENT.H
             RETURN.LIST<-1> = TEST.VAL<2>
          END
       NEXT
-      
+
       IF RETURN.LIST = "" THEN
          CALL U_CRT.INFO("ERROR", "Could not find ":DQUOTE(IN.LIST.PREFIX):" in ":ID.PROPERTIES)
       END
