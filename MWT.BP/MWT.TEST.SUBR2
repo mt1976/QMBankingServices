@@ -1,4 +1,4 @@
-PROGRAM MWT.TEST
+SUBROUTING MWT.TEST.SUBR2
 ** INFORMATION ****************************************************************
 * Routine Name   : MWT.TEST
 *         Type   : PROGRAM
@@ -9,14 +9,10 @@ PROGRAM MWT.TEST
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
-CRT "MWT.TEST"
+   CRT "MWT.TEST.SUBR2"
    CRT SYSTEM(1047)
    CRT SYSTEM(33)
    CRT SYSTEM(1002)
-   CALL MWT.TEST.SUBR
-   CRT "BACK FROM SUBS"
-   CRT SYSTEM(1047)
-   CRT SYSTEM(33)
-   CRT SYSTEM(1002)
-   STOP
+
+   RETURN
 END
