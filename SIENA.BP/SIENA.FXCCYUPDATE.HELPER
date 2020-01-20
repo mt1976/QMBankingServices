@@ -18,7 +18,7 @@ $INCLUDE UTIL.BP I_UTIL.H
    ERROR.TEXT = ""; STOP.ON.ERROR = @TRUE ; VERBOSE = @TRUE
 * OPEN FILES
 
-   CALL U_HEADER("SIENA - Update CCY's to Deliver"
+   CALL U_HEADER("SIENA - Update CCY's to Deliver")
 
    SQL.FIELDS   = "CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode"
    SQL.TABLE    = "dbo.CurrencyPair"
