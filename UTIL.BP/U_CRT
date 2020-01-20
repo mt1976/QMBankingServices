@@ -35,6 +35,7 @@ TEXT = CONVERT(@SM, "\", TEXT)
          OUTPUT.TEXT := OUTPUT.DATE
          OUTPUT.TEXT := " ":outputType
          OUTPUT.TEXT := " ":CALLING.PROCESS
+         OUTPUT.TEXT := " ":ACTION
          OUTPUT.TEXT := " ":TEXT
 
       CASE outputMode = U_OUTPUTMODE_csv
@@ -42,12 +43,13 @@ TEXT = CONVERT(@SM, "\", TEXT)
          OUTPUT.TEXT := DQUOTE(OUTPUT.DATE)
          OUTPUT.TEXT := csvChar:DQUOTE(outputType)
          OUTPUT.TEXT := csvChar:DQUOTE(CALLING.PROCESS)
+         OUTPUT.TEXT := csvChar:DQUOTE(ACTION)
          OUTPUT.TEXT := csvChar:DQUOTE(TEXT)
 
       CASE 1
          OUTPUT.TEXT :=
          OUTPUT.TEXT := "[":@(U_BOLD_ON):OUTPUT.DATE:@(U_BOLD_OFF):"]"
-         OUTPUT.TEXT := "[":@(U_BOLD_ON):OUTPUT.TYPE:@(U_BOLD_OFF):"]"
+         OUTPUT.TEXT := "[":@(U_BOLD_ON):outputType:@(U_BOLD_OFF):"]"
          OUTPUT.TEXT := "[":@(U_BOLD_ON):CALLING.PROCESS:@(U_BOLD_OFF):"]"
          OUTPUT.TEXT := "[":@(U_BOLD_ON):UPCASE(ACTION)"L#15":@(U_BOLD_OFF):"]"
          OUTPUT.TEXT := "[":TEXT:"]"
