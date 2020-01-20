@@ -1,0 +1,41 @@
+SUBROUTINE SIENA.FXCCYUPDATE.HELPER(PROCESS.NAME, SPECIFIC)
+** INFORMATION ****************************************************************
+* Routine Name   : SIENA.DELIVER.HELPER
+*         Type   : SUBROUTINE
+*         Params : <<PARAMETERS>>
+*         Loc    : SIENA.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20191220 at 15.41.38 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+$INCLUDE UTIL.BP I_UTIL.H
+
+* INITIALISE
+   CALL U_START(PROCESS.NAME)
+* Setup some temp locations for input data
+
+   ERROR.TEXT = ""; STOP.ON.ERROR = @TRUE ; VERBOSE = @TRUE
+* OPEN FILES
+
+   CALL U_HEADER("SIENA - Update CCY's to Deliver"
+
+   SQL.FIELDS   = "CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode"
+   SQL.TABLE    = "dbo.CurrencyPair"
+   SQL.DATABASE = "rel_gateway_sal_prd_demo-sys-3"
+   SQL.WHERE    = "Active=1"
+   RES.COLUMNS  = ""
+   RES.DATA     = ""
+   RES.COUNT    = ""
+
+   CALL U_MSSQL.SELECT(SQL.FIELDS, SQL.TABLE, SQL.DATABASE, SQL.WHERE, VERBOSE, ID.RESULT,RES.COLUMNS,RES.DATA,RES.COUNT)
+
+      CALL U_CRT.INFO("RESULT", ID.RESULT)
+      CALL U_CRT.RECORD(RES.COLUMNS)
+      CALL U_CRT.RECORD(RES.DATA)
+      CALL U_CRT.INFO("NO RECORDS",RES.COUNT)
+
+   CALL U_STOP(PROCESS.NAME)
+
+   RETURN
+END
