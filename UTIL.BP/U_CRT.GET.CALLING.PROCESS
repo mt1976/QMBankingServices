@@ -1,4 +1,4 @@
-SUBROUTINE U_CRT.INFO(ACTION, TEXT)
+SUBROUTINE U_CRT.GET.CALLING.PROCESS(CALLING.SUBR,THIS.CALL.STACK,THIS.PARENT)
 ** INFORMATION ****************************************************************
 * Routine Name   : U_CRT.INFO
 *         Type   : SUBROUTINE
@@ -10,10 +10,17 @@ SUBROUTINE U_CRT.INFO(ACTION, TEXT)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-   IN.TEXT = TEXT
-   CALLING.SUBR = ""
-   CALL  U_CRT.GET.CALLING.PROCESS(CALLING.SUBR,SYSTEM(1002),SYSTEM(33))
-   CALL  U_CRT(TEXT,ACTION,CALLING.SUBR)
-   TEXT = IN.TEXT
+
+   CALLING.SUBR = THIS.CALL.STACK<2,1>
+
+   IF THIS.PARENT = "$CPROC" THEN
+    * get last "/" delim element
+    CS.TEMP = CALLING.SUBR
+    CS.TEMP = CONVERT("/", @AM, CS.TEMP)
+    CS.TEMP = CONVERT("\", @AM, CS.TEMP)
+    LAST.POS = DCOUNT(CS.TEMP,@AM)
+    CALLING.SUBR = CS.TEMP<LAST.POS>
+   END
+
    RETURN
 END
