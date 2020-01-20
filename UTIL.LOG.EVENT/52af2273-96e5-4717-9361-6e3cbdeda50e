@@ -1,0 +1,22 @@
+EXECUTE
+20200120
+12.01.07
+sales
+
+52af2273-96e5-4717-9361-6e3cbdeda50e
+SELECT UTIL.CONFIG LIKE build.util.properties
+
+1
+U_OS.EXECUTE
+/dev/pts/1
+250
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+U_BUILDFILES UTIL
+ldn-srv-ubnt01
+
+Linux
+
+
+
+U_OS.EXECUTE

@@ -1,0 +1,22 @@
+EXECUTE
+20200120
+12.01.07
+sales
+
+1098f34a-efc2-4022-a1ff-b983998ba84c
+DELETE UTIL.BP F_UTIL.LOG.EVENT.H
+
+1
+U_OS.EXECUTE
+/dev/pts/1
+250
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+U_BUILDFILES UTIL
+ldn-srv-ubnt01
+
+Linux
+
+
+
+U_OS.EXECUTE

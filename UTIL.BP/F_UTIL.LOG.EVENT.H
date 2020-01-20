@@ -3,7 +3,7 @@
 * FILE  : "UTIL.BP"
 * NAME  : "F_UTIL.LOG.EVENT.H"
 * NAME  : "U_LOG_"
-* BUILT : 15 JAN 2020 at 11.01.43
+* BUILT : 20 JAN 2020 at 12.01.07
 *
 equate U_LOG_EVENT to 1
 equate U_LOG_DATE to 2
@@ -26,3 +26,4 @@ equate U_LOG_PLATFORM to 18
 equate U_LOG_START to 19
 equate U_LOG_STOP to 20
 equate U_LOG_ELAPSED to 21
+equate U_LOG_PROCESS to 22

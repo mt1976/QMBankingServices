@@ -1,0 +1,22 @@
+EXECUTE
+20200120
+12.01.07
+sales
+
+4a54f616-997b-4480-999a-b7385606e4e9
+DELETE DICT UTIL.LOG.EVENT HOST
+
+1
+U_OS.EXECUTE
+/dev/pts/1
+250
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+U_BUILDFILES UTIL
+ldn-srv-ubnt01
+
+Linux
+
+
+
+U_OS.EXECUTE

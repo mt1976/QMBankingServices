@@ -1,0 +1,22 @@
+EXECUTE
+20200120
+12.01.11
+sales
+
+a6c3ec45-438f-4a92-b020-00bf65671f17
+DELETE DICT UTIL.TRANSLATE NIPART
+
+1
+U_OS.EXECUTE
+/dev/pts/1
+250
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+U_BUILDFILES UTIL
+ldn-srv-ubnt01
+
+Linux
+
+
+
+U_OS.EXECUTE
