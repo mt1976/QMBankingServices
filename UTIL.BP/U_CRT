@@ -1,4 +1,4 @@
-SUBROUTINE U_CRT(TEXT)
+SUBROUTINE U_CRT(TEXT,ACTION,CALLING.PROCESS)
 ** INFORMATION ****************************************************************
 * Routine Name   : U_CRT
 *         Type   : SUBROUTINE
@@ -10,6 +10,12 @@ SUBROUTINE U_CRT(TEXT)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
+
+IN.TEXT = TEXT
+TEXT = CONVERT(@AM, "^", TEXT)
+TEXT = CONVERT(@VM, "]", TEXT)
+TEXT = CONVERT(@SM, "\", TEXT)
+
    CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "outputMode", outputMode)
    dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
    CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "outputType", outputType)
@@ -18,6 +24,8 @@ $INCLUDE UTIL.BP I_UTIL.H
    OUTPUT.DATE = ""
    CALL U_GET.EPOCH.DATE(OUTPUT.DATE)
    OUTPUT.TEXT = ""
+
+
    BEGIN CASE
       CASE outputMode = U_OUTPUTMODE_log4j
 
@@ -25,16 +33,28 @@ $INCLUDE UTIL.BP I_UTIL.H
          * 20191203 UTC 16:15:39.089 INFO  NetClientImpl Client connecting on [localhost/127.0.0.1:7397]..
          * 20191203 UTC 16:15:39.121 INFO  NetChannelHandler Channel open
          OUTPUT.TEXT := OUTPUT.DATE
-         OUTPUT.TEXT := " ":outputType:" ":TEXT
+         OUTPUT.TEXT := " ":outputType
+         OUTPUT.TEXT := " ":CALLING.PROCESS
+         OUTPUT.TEXT := " ":TEXT
+
       CASE outputMode = U_OUTPUTMODE_csv
          * "20191203 UTC 16:15:39.089","INFO","NetClientImpl Client connecting on [localhost/127.0.0.1:7397]"
          OUTPUT.TEXT := DQUOTE(OUTPUT.DATE)
-         OUTPUT.TEXT := csvChar:DQUOTE(outputType):csvChar:DQUOTE(TEXT)
+         OUTPUT.TEXT := csvChar:DQUOTE(outputType)
+         OUTPUT.TEXT := csvChar:DQUOTE(CALLING.PROCESS)
+         OUTPUT.TEXT := csvChar:DQUOTE(TEXT)
 
       CASE 1
-         OUTPUT.TEXT := @(U_REVERSE_ON):U_PREF:@(U_REVERSE_OFF):OUTPUT.DATE:" ":TEXT
+         OUTPUT.TEXT :=
+         OUTPUT.TEXT := "[":@(U_BOLD_ON):OUTPUT.DATE:@(U_BOLD_OFF):"]"
+         OUTPUT.TEXT := "[":@(U_BOLD_ON):OUTPUT.TYPE:@(U_BOLD_OFF):"]"
+         OUTPUT.TEXT := "[":@(U_BOLD_ON):CALLING.PROCESS:@(U_BOLD_OFF):"]"
+         OUTPUT.TEXT := "[":@(U_BOLD_ON):UPCASE(ACTION)"L#15":@(U_BOLD_OFF):"]"
+         OUTPUT.TEXT := "[":TEXT:"]"
    END CASE
    DISPLAY @(U_CLEAR_LINE):OUTPUT.TEXT
+
+TEXT = IN.TEXT
 
    RETURN
 END
