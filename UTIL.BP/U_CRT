@@ -47,7 +47,6 @@ TEXT = CONVERT(@SM, "\", TEXT)
          OUTPUT.TEXT := csvChar:DQUOTE(TEXT)
 
       CASE 1
-         OUTPUT.TEXT :=
          OUTPUT.TEXT := "[":@(U_BOLD_ON):OUTPUT.DATE:@(U_BOLD_OFF):"]"
          OUTPUT.TEXT := "[":@(U_BOLD_ON):outputType:@(U_BOLD_OFF):"]"
          OUTPUT.TEXT := "[":@(U_BOLD_ON):CALLING.PROCESS:@(U_BOLD_OFF):"]"
