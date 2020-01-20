@@ -2,10 +2,10 @@ SUBROUTINE U_LOG.CMD(LOG.DATA, R.UTIL.LOG.EVENT)
 ** INFORMATION ****************************************************************
 * Routine Name   : U_LOG.CMD
 *         Type   : SUBROUTINE
-*         Params : <<PARAMETERS>>
+*         Params : LOG.DATA, R.UTIL.LOG.EVENT
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20191220 at 15.41.22 in MWT-QM-DEV by sales
+* Info Updated   : 20200120 at 16.53.17 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *

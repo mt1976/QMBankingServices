@@ -2,10 +2,10 @@ SUBROUTINE U_OS.CURL(URI, VERBOSE, R.UTIL.LOG.CMD, ID.UTIL.LOG.CMD)
 ** INFORMATION ****************************************************************
 * Routine Name   : U_OS.CURL
 *         Type   : SUBROUTINE
-*         Params : <<PARAMETERS>>
+*         Params : URI, VERBOSE, R.UTIL.LOG.CMD, ID.UTIL.LOG.CMD
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20191220 at 15.41.22 in MWT-QM-DEV by sales
+* Info Updated   : 20200120 at 16.53.17 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
