@@ -1,0 +1,18 @@
+EXECUTE
+20200118
+07.46.17
+sales
+
+c2f45e3b-0300-4ac9-a01a-0c6b911681d9
+SELECT SIENA.STAGING LIKE "RVMARKET!..."
+
+2
+U_OS.EXECUTE
+
+3
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO FXFWD
+ldn-srv-ubnt01
+
+Linux

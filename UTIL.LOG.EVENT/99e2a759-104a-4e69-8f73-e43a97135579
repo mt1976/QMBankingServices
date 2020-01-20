@@ -1,0 +1,21 @@
+CHROME.FETCH
+20200118
+10.15.39
+sales
+
+99e2a759-104a-4e69-8f73-e43a97135579
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EUSDAUD/forward-rates
+https://www.barchart.com/forex/quotes/%5EUSDAUD/forward-rates
+0
+U_OS.CHROME.FETCH
+
+23
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO FXFWD
+ldn-srv-ubnt01
+
+Linux
+10.15.35
+10.15.39
+00.00.04
