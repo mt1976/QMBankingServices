@@ -2,7 +2,7 @@ PROGRAM MWT.TEST
 ** INFORMATION ****************************************************************
 * Routine Name   : MWT.TEST
 *         Type   : PROGRAM
-*         Params : 
+*         Params :
 *         Loc    : MWT.BP
 * -----------------------------------------------------------------------------
 * Info Updated   : 20191220 at 15.44.57 in MWT-QM-DEV by sales
@@ -10,5 +10,7 @@ PROGRAM MWT.TEST
 * -----------------------------------------------------------------------------
 *
    CRT SYSTEM(1047)
+   CRT SYSTEM(33)
+   CRT SYSTEM(1002)
    STOP
 END
