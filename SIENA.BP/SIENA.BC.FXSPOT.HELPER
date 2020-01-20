@@ -9,7 +9,7 @@ SUBROUTINE SIENA.BC.FXSPOT.HELPER(PROCESS.NAME)
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
-$INCLUDE UTIL.BP I_UTIL.TRANSLATE.H
+$INCLUDE UTIL.BP F_UTIL.TRANSLATE.H
 $INCLUDE UTIL.BP I_RATECSV.H
 $INCLUDE UTIL.BP I_UTIL.H
 
