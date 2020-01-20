@@ -20,7 +20,7 @@ TEXT = CONVERT(@SM, "\", TEXT)
    dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
    CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "outputType", outputType)
    CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "csvChar", csvChar)
-
+   CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "timeZone", timeZone)
    OUTPUT.DATE = ""
    CALL U_GET.EPOCH.DATE(OUTPUT.DATE)
    OUTPUT.TEXT = ""
@@ -32,6 +32,7 @@ TEXT = CONVERT(@SM, "\", TEXT)
 
          * 20191203 UTC 16:15:39.089 INFO  NetClientImpl Client connecting on [localhost/127.0.0.1:7397]..
          * 20191203 UTC 16:15:39.121 INFO  NetChannelHandler Channel open
+
          OUTPUT.TEXT := OUTPUT.DATE
          OUTPUT.TEXT := " ":outputType
          OUTPUT.TEXT := " ":CALLING.PROCESS
@@ -49,7 +50,7 @@ TEXT = CONVERT(@SM, "\", TEXT)
       CASE 1
          OUTPUT.TEXT := "[":@(U_BOLD_ON):OUTPUT.DATE:@(U_BOLD_OFF):"]"
          OUTPUT.TEXT := "[":@(U_BOLD_ON):outputType:@(U_BOLD_OFF):"]"
-         OUTPUT.TEXT := "[":@(U_BOLD_ON):CALLING.PROCESS:@(U_BOLD_OFF):"]"
+         OUTPUT.TEXT := "[":@(U_BOLD_ON):CALLING.PROCESS"L#20":@(U_BOLD_OFF):"]"
          OUTPUT.TEXT := "[":@(U_BOLD_ON):UPCASE(ACTION)"L#15":@(U_BOLD_OFF):"]"
          OUTPUT.TEXT := "[":TEXT:"]"
    END CASE
