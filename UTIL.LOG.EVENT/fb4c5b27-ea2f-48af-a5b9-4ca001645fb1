@@ -1,0 +1,22 @@
+CHROME.FETCH
+20200121
+16.10.16
+sales
+
+fb4c5b27-ea2f-48af-a5b9-4ca001645fb1
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EEURUSD/overview
+https://www.barchart.com/forex/quotes/%5EEURUSD/overview
+0
+U_OS.CHROME.FETCH
+
+3
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO BCFXSP
+ldn-srv-ubnt01
+
+Linux
+16.10.10
+16.10.16
+00.00.06
+U_OS.CHROME.FETCH
