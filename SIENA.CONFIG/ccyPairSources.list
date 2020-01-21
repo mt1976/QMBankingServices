@@ -1,22 +1,11 @@
 #=----------------------------------------------------------------------------=
-#=FX SPOT & FORWARD CURVES TO FETCH=
-SOURCE=37-3|192.168.1.1|rel_gw3=
-X=EURUSD=
-X=USDCAD=
-X=EURCAD=
-X=GBPJPY=
-X=EURJPY=
-X=USDJPY=
-X=USDCHF=
-X=USDAUD=
-X=USDNZD=
-X=EURGBP=
-X=EURAUD=
-X=EURCHF=
-X=EURCAD=
-X=EURCHF=
-X=EURZAR=
-#=DEMO ITEMS=
-X=GBPMUR=
-X=EURMUR=
-X=USDMUR=
+#=which machines and db's to update pricing for=
+#=KNOWNAS|IP|DBNAME=
+DBSOURCE=36sys1|194.128.145.36|rel_gateway_sal_prd_demo-sys-1=
+DBSOURCE=36sys3|194.128.145.36|rel_gateway_sal_prd_demo-sys-3=
+DBSOURCE=36sys4|194.128.145.36|rel_gateway_sal_prd_demo-sys-4=
+DBSOURCE=36sys5|194.128.145.36|rel_gateway_sal_prd_demo-sys-5=
+DBSOURCE=37sys1|194.128.145.37|rel_gateway_sal_prd_demo-sys-1=
+DBSOURCE=37sys3|194.128.145.37|rel_gateway_sal_prd_demo-sys-3=
+DBSOURCE=37sys4|194.128.145.37|rel_gateway_sal_prd_demo-sys-4=
+DBSOURCE=37sys5|194.128.145.37|rel_gateway_sal_prd_demo-sys-5=

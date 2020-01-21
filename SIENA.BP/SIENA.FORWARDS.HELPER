@@ -31,11 +31,11 @@ $INCLUDE UTIL.BP I_UTIL.H
    CALL U_HEADER("SIENA - FX FORWARDS")
 
    URI.PREFIX = "" ; URI.SUFFIX = "" ; RVTYPE = "" ; RVFRIG = ""
-   CALL U_OS.GET.PROPERTY("SIENA.CONFIG", "forwards", "uriPrefix", URI.PREFIX)
-   CALL U_OS.GET.PROPERTY("SIENA.CONFIG", "forwards", "uriSuffix", URI.SUFFIX)
-   CALL U_OS.GET.PROPERTY("SIENA.CONFIG", "forwards", "RVType", RVTYPE)
-   CALL U_OS.GET.PROPERTY("SIENA.CONFIG", "forwards", "RVFrig", RVFRIG)
-   CALL U_OS.GET.PROPERTY("SIENA.CONFIG", "forwards", "precision", precisionValue)
+   CALL U_OS.GET.PROPERTY("SIENA.CONFIG", "ccyPair", "uriPrefix", URI.PREFIX)
+   CALL U_OS.GET.PROPERTY("SIENA.CONFIG", "ccyPair", "uriSuffix", URI.SUFFIX)
+   CALL U_OS.GET.PROPERTY("SIENA.CONFIG", "ccyPair", "RVType", RVTYPE)
+   CALL U_OS.GET.PROPERTY("SIENA.CONFIG", "ccyPair", "RVFrig", RVFRIG)
+   CALL U_OS.GET.PROPERTY("SIENA.CONFIG", "ccyPair", "precision", precisionValue)
 
    PRECISION precisionValue
 
