@@ -5,7 +5,7 @@ SUBROUTINE U_WRITE.DRIP(FN.FILEVAR, FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERR
 *         Params : FN.FILEVAR, FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20200120 at 16.53.17 in MWT-QM-DEV by sales
+* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
@@ -37,7 +37,7 @@ SUBROUTINE U_WRITE.DRIP(FN.FILEVAR, FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERR
 *NO.TIMES = 0
 *DONE = @FALSE
 *LOOP
-  *FAILED = @FALSE
+   *FAILED = @FALSE
 *WHILE NOT(DONE)
 *  CALL U_OS.EXECUTE(TEST.STMT, @FALSE)
 *  DATA.LIST = ""

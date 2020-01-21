@@ -2,10 +2,10 @@ PROGRAM U_LOCAL.TEST
 ** INFORMATION ****************************************************************
 * Routine Name   : U_LOCAL.TEST
 *         Type   : PROGRAM
-*         Params : 
+*         Params :
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20200120 at 16.53.17 in MWT-QM-DEV by sales
+* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
@@ -17,25 +17,25 @@ $INSERT UTIL.BP I_UTIL.H
    CALL U_OPENFILE(FN.FILENAME, FV.FILEVAR, @FALSE, "")
    ID.RECORD = "util.properties"
    CALL U_READ.LOCAL(FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT)
-   CALL U_CRT.INFO("ID",ID.RECORD)
+   CALL U_CRT.INFO("ID", ID.RECORD)
    LOCAL.ID.RECORD = UPCASE(SYSTEM(1015)):U_PROP_ID_SEP:ID.RECORD
 
    NEW.PROPERTIES = COLLECTION()
-   NO.PROPERTIES = DCOUNT(R.RECORD,@AM)
-   R.RECORD = CHANGE(R.RECORD,U_PROP_SEP,@VM)
+   NO.PROPERTIES = DCOUNT(R.RECORD, @AM)
+   R.RECORD = CHANGE(R.RECORD, U_PROP_SEP, @VM)
    FOR I = 1 TO NO.PROPERTIES
 
-   THIS.PROP = R.RECORD<I,1>
-   THIS.VALU = R.RECORD<I,2>
+      THIS.PROP = R.RECORD<I, 1>
+      THIS.VALU = R.RECORD<I, 2>
 
-   NEW.PROPERTIES{THIS.PROP} = THIS.VALU
+      NEW.PROPERTIES{THIS.PROP} = THIS.VALU
 
    NEXT I
 
    JS.VERSION = JBUILD(NEW.PROPERTIES)
 
-   CALL U_CRT.INFO("LOCAL",LOCAL.ID.RECORD)
-  * CALL U_CRT.INFO("COLLC",NEW.PROPERTIES)
+   CALL U_CRT.INFO("LOCAL", LOCAL.ID.RECORD)
+   * CALL U_CRT.INFO("COLLC",NEW.PROPERTIES)
    CALL U_CRT.RECORD(JS.VERSION)
    CALL U_CRT.RECORD(R.RECORD)
    CALL U_STOP(PID)

@@ -5,7 +5,7 @@ SUBROUTINE U_OS.COMMAND(STMT, VERBOSE)
 *         Params : STMT, VERBOSE
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20200120 at 16.53.17 in MWT-QM-DEV by sales
+* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
@@ -18,13 +18,13 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
       HUSH ON
    END
    IF VERBOSE THEN
-    OS.EXECUTE STMT CAPTURING OUTPUT
+      OS.EXECUTE STMT CAPTURING OUTPUT
    END ELSE
-    OS.EXECUTE STMT
+      OS.EXECUTE STMT
    END
    IF VERBOSE THEN
 
-      CALL U_CRT.INFO("OUTPUT","")
+      CALL U_CRT.INFO("OUTPUT", "")
       CALL U_CRT.RECORD(OUTPUT)
    END ELSE
       HUSH OFF

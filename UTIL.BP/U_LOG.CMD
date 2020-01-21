@@ -5,7 +5,7 @@ SUBROUTINE U_LOG.CMD(LOG.DATA, R.UTIL.LOG.EVENT)
 *         Params : LOG.DATA, R.UTIL.LOG.EVENT
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20200120 at 16.53.17 in MWT-QM-DEV by sales
+* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
@@ -36,8 +36,8 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
    R.UTIL.LOG.EVENT<U_LOG_HOST> = SYSTEM(1015)
    R.UTIL.LOG.EVENT<U_LOG_PLATFORM> = SYSTEM(1010)
    CALLING.SUBR = ""
-   CALL U_CRT.GET.CALLING.PROCESS(CALLING.SUBR,SYSTEM(1002),SYSTEM(33))
-   R.UTIL.LOG.EVENT<U_LOG_PROCESS>  = CALLING.SUBR
+   CALL U_CRT.GET.CALLING.PROCESS(CALLING.SUBR, SYSTEM(1002), SYSTEM(33))
+   R.UTIL.LOG.EVENT<U_LOG_PROCESS> = CALLING.SUBR
 
    CALL U_WRITE(FV.UTIL.LOG.EVENT, ID.UTIL.LOG.CMD, R.UTIL.LOG.EVENT, STOP.ON.ERROR, ERROR.TEXT)
 

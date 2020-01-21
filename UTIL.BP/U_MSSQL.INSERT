@@ -5,7 +5,7 @@ SUBROUTINE U_MSSQL.INSERT(SQL.TABLE, SQL.FIELDS, SQL.VALUES, SQL.DATABASE, VERBO
 *         Params : SQL.TABLE, SQL.FIELDS, SQL.VALUES, SQL.DATABASE, VERBOSE
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20200120 at 16.53.17 in MWT-QM-DEV by sales
+* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
@@ -15,23 +15,23 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 * INSERT INTO dbo.account (account_name, account_start_date, account_address, account_type, account_create_timestamp, is_active)
 * VALUES ('Initech','2/19/1999','4120 Freidrich Ln.','LIVE',GETUTCDATE(),1);
 
-FIELDS.SECTION = "(":CHANGE(SQL.FIELDS,@AM,","):")"
-VALUE.SECTION  = ""
-NO.DATA.ITEMS  = DCOUNT(SQL.VALUES,@AM)
+   FIELDS.SECTION = "(":CHANGE(SQL.FIELDS, @AM, ","):")"
+   VALUE.SECTION = ""
+   NO.DATA.ITEMS = DCOUNT(SQL.VALUES, @AM)
 
-FOR THIS.ROW = 1 TO NO.DATA.ITEMS
+   FOR THIS.ROW = 1 TO NO.DATA.ITEMS
 
-  SQL.INSERT = "INSERT INTO ":SQL.TABLE:" "
-  SQL.INSERT := FIELDS.SECTION
-  VALUE.SECTION = "(":CHANGE(SQL.VALUES<THIS.ROW>,@VM,","):")"
+      SQL.INSERT = "INSERT INTO ":SQL.TABLE:" "
+      SQL.INSERT := FIELDS.SECTION
+      VALUE.SECTION = "(":CHANGE(SQL.VALUES<THIS.ROW>, @VM, ","):")"
 
-  SQL.INSERT := " VALUES ":VALUE.SECTION
+      SQL.INSERT := " VALUES ":VALUE.SECTION
 
-  CALL U_CRT.INFO("INSERT",SQL.INSERT)
+      CALL U_CRT.INFO("INSERT", SQL.INSERT)
 
-  CALL U_MSSQL.EXECUTE(SQL.INSERT,SQL.DATABASE,@TRUE,ID.RESULT)
+      CALL U_MSSQL.EXECUTE(SQL.INSERT, SQL.DATABASE, @TRUE, ID.RESULT)
 
-NEXT THIS.ROW
+   NEXT THIS.ROW
 
    RETURN
 END
