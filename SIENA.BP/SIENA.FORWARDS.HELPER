@@ -5,7 +5,7 @@ SUBROUTINE SIENA.FORWARDS.HELPER(PROCESS.NAME)
 *         Params : PROCESS.NAME
 *         Loc    : SIENA.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20200120 at 16.52.44 in MWT-QM-DEV by sales
+* Info Updated   : 20200121 at 15.43.53 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
@@ -101,10 +101,10 @@ PROCESS.HTML:
       ASK.STRING = CHANGE(PTS.SEARCH.DATA<3>, SPLIT.STRING, @AM)<1>
       IF NUM(BID.STRING) AND NUM(ASK.STRING) THEN
          * Frig the feed data - SIENA is multiplying by a factor of 1000
-         BID.STRING=TRIMS(((BID.STRING+0)/RVFRIG)+0,"0","T")
-         ASK.STRING=TRIMS(((ASK.STRING+0)/RVFRIG)+0,"0","T")
+         BID.STRING=TRIMS(((BID.STRING+0)/RVFRIG)+0, "0", "T")
+         ASK.STRING=TRIMS(((ASK.STRING+0)/RVFRIG)+0, "0", "T")
          IF BID.STRING <> "" AND ASK.STRING <> "" THEN
-         GOSUB ADD.RVDATA
+            GOSUB ADD.RVDATA
          END
       END
 *CALL U_CRT.INFO('TENOR',TENOR)
@@ -119,8 +119,8 @@ ADD.RVDATA:
 
    OUT.CCYTN = RVTYPE:CURRENCY.PAIR"L#6":SIENA.TENOR
 
-   OUT.BUY = "D":LEFT(BID.STRING,11)"R#11"
-   OUT.SEL = "D":LEFT(ASK.STRING,11)"R#11"
+   OUT.BUY = "D":LEFT(BID.STRING, 11)"R#11"
+   OUT.SEL = "D":LEFT(ASK.STRING, 11)"R#11"
    ROW.DATA = OUT.CCYTN:OUT.BUY:OUT.SEL
    CALL U_CRT.INFO(CURRENCY.PAIR, ROW.DATA)
    OUTPUT.DATA<-1> = ROW.DATA

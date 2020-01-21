@@ -1,27 +1,27 @@
-SUBROUTINE U_CRT.GET.CALLING.PROCESS(CALLING.SUBR,THIS.CALL.STACK,THIS.PARENT)
+SUBROUTINE U_CRT.GET.CALLING.PROCESS(CALLING.SUBR, THIS.CALL.STACK, THIS.PARENT)
 ** INFORMATION ****************************************************************
 * Routine Name   : U_CRT.GET.CALLING.PROCESS
 *         Type   : SUBROUTINE
 *         Params : CALLING.SUBR,THIS.CALL.STACK,THIS.PARENT
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20200120 at 16.53.17 in MWT-QM-DEV by sales
+* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
 
-   CALLING.SUBR = THIS.CALL.STACK<2,1>
+   CALLING.SUBR = THIS.CALL.STACK<2, 1>
 
 *CRT THIS.CALL.STACK
 *CRT CALLING.SUBR
 *CRT THIS.PARENT
 
-    CS.TEMP = CALLING.SUBR
-    CS.TEMP = CONVERT("/", @AM, CS.TEMP)
-    CS.TEMP = CONVERT("\", @AM, CS.TEMP)
-    LAST.POS = DCOUNT(CS.TEMP,@AM)
-    CALLING.SUBR = CS.TEMP<LAST.POS>
+   CS.TEMP = CALLING.SUBR
+   CS.TEMP = CONVERT("/", @AM, CS.TEMP)
+   CS.TEMP = CONVERT("\", @AM, CS.TEMP)
+   LAST.POS = DCOUNT(CS.TEMP, @AM)
+   CALLING.SUBR = CS.TEMP<LAST.POS>
 
 *CRT LAST.POS
 *CRT CALLING.SUBR

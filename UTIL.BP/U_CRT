@@ -1,20 +1,20 @@
-SUBROUTINE U_CRT(TEXT,ACTION,CALLING.PROCESS)
+SUBROUTINE U_CRT(TEXT, ACTION, CALLING.PROCESS)
 ** INFORMATION ****************************************************************
 * Routine Name   : U_CRT
 *         Type   : SUBROUTINE
 *         Params : TEXT,ACTION,CALLING.PROCESS
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20200120 at 16.53.17 in MWT-QM-DEV by sales
+* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
 
-IN.TEXT = TEXT
-TEXT = CONVERT(@AM, "^", TEXT)
-TEXT = CONVERT(@VM, "]", TEXT)
-TEXT = CONVERT(@SM, "\", TEXT)
+   IN.TEXT = TEXT
+   TEXT = CONVERT(@AM, "^", TEXT)
+   TEXT = CONVERT(@VM, "]", TEXT)
+   TEXT = CONVERT(@SM, "\", TEXT)
 
    CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "outputMode", outputMode)
    dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
@@ -56,7 +56,7 @@ TEXT = CONVERT(@SM, "\", TEXT)
    END CASE
    DISPLAY @(U_CLEAR_LINE):OUTPUT.TEXT
 
-TEXT = IN.TEXT
+   TEXT = IN.TEXT
 
    RETURN
 END

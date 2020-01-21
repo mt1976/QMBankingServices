@@ -1,0 +1,22 @@
+EXECUTE
+20200121
+15.34.33
+sales
+
+0163abba-f359-4650-a730-d49693688126
+BASIC UTIL.BP U_OS.EXECUTE
+
+1
+U_OS.EXECUTE
+/dev/pts/1
+356
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BCC UTIL.BP U_OS.EXECUTE
+ldn-srv-ubnt01
+
+Linux
+
+
+
+U_OS.EXECUTE

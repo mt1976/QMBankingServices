@@ -5,7 +5,7 @@ SUBROUTINE U_CRT.RECORD(R.RECORD)
 *         Params : R.RECORD
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20200120 at 16.53.17 in MWT-QM-DEV by sales
+* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
@@ -14,11 +14,11 @@ $INCLUDE UTIL.BP I_UTIL.H
    NO.ROWS = DCOUNT(R.RECORD, @AM)
 
    CALLING.SUBR = ""
-   CALL  U_CRT.GET.CALLING.PROCESS(CALLING.SUBR,SYSTEM(1002),SYSTEM(33))
+   CALL U_CRT.GET.CALLING.PROCESS(CALLING.SUBR, SYSTEM(1002), SYSTEM(33))
 
    FOR I = 1 TO NO.ROWS
       ROW = "<":I:">"
-      CALL U_CRT(R.RECORD<I>,ROW,CALLING.SUBR)
+      CALL U_CRT(R.RECORD<I>, ROW, CALLING.SUBR)
    NEXT I
 
    RETURN

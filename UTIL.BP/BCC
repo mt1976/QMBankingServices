@@ -1,0 +1,39 @@
+PROGRAM BCC
+** INFORMATION ****************************************************************
+* Routine Name   : BCC
+*         Type   : SUBROUTINE
+*         Params :
+*         Loc    : UTIL.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+$INCLUDE UTIL.BP I_UTIL.H
+
+   PNM="GIT"
+   CALL U_START(PNM)
+   CALL U_HEADER("GIT")
+   CMD.STRING = CONVERT(SPACE(1), @AM, @SENTENCE)
+   IF CMD.STRING<2> = "" OR CMD.STRING<3> = "" THEN
+      CALL U_CRT.INFO("ERROR", "Parameters [BP FILE] [PROGRAM or *]")
+      CALL U_STOP(PNM)
+      STOP
+   END
+
+   DEL CMD.STRING<1>
+
+   CMD.STRING = CONVERT(@AM, SPACE(1), CMD.STRING)
+
+   STMTS = ""
+   STMTS<-1> = "FORMAT ":CMD.STRING
+   STMTS<-1> = "BASIC ":CMD.STRING
+   STMTS<-1> = "CATALOG ":CMD.STRING
+
+   NO.ACTIONS = DCOUNT(STMTS, @AM)
+   FOR K = 1 TO NO.ACTIONS
+      CALL U_OS.EXECUTE(STMTS<K>, @TRUE)
+   NEXT K
+
+   STOP
+END

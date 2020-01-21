@@ -1,0 +1,22 @@
+EXECUTE
+20200121
+15.32.50
+sales
+
+41de419a-69a5-4918-86fc-863faf1cf88e
+BASIC UTIL.BP U_OS.EXECUTE
+
+1
+U_OS.EXECUTE
+/dev/pts/1
+356
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BCC UTIL.BP U_OS.EXECUTE
+ldn-srv-ubnt01
+
+Linux
+
+
+
+U_OS.EXECUTE

@@ -2,10 +2,10 @@ PROGRAM U_TEST
 ** INFORMATION ****************************************************************
 * Routine Name   : U_TEST2
 *         Type   : PROGRAM
-*         Params : 
+*         Params :
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
-* Info Updated   : 20200120 at 16.53.17 in MWT-QM-DEV by sales
+* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
@@ -21,23 +21,23 @@ PROGRAM U_TEST
    CALL U_CRT.INFO("WHO", @WHO)
    CALL U_CRT.INFO("SYS(33)", SYSTEM(33))
    CALL U_CRT.INFO("SYS(1015)", SYSTEM(1015))
-   CALL U_CRT.INFO("IP",@IP.ADDR)
+   CALL U_CRT.INFO("IP", @IP.ADDR)
 
 
-SQL.FIELDS   = "name,colid"
-SQL.TABLE    = "syscolumns"
-SQL.DATABASE = ""
-SQL.WHERE    = "id=object_id(":SQUOTE("dbo.Book"):")"
-RES.COLUMNS  = ""
-RES.DATA     = ""
-RES.COUNT    = ""
+   SQL.FIELDS = "name,colid"
+   SQL.TABLE = "syscolumns"
+   SQL.DATABASE = ""
+   SQL.WHERE = "id=object_id(":SQUOTE("dbo.Book"):")"
+   RES.COLUMNS = ""
+   RES.DATA = ""
+   RES.COUNT = ""
 
-CALL U_MSSQL.SELECT(SQL.FIELDS, SQL.TABLE, SQL.DATABASE, SQL.WHERE, VERBOSE, ID.RESULT,RES.COLUMNS,RES.DATA,RES.COUNT)
+   CALL U_MSSQL.SELECT(SQL.FIELDS, SQL.TABLE, SQL.DATABASE, SQL.WHERE, VERBOSE, ID.RESULT, RES.COLUMNS, RES.DATA, RES.COUNT)
 
    CALL U_CRT.INFO("RESULT", ID.RESULT)
    CALL U_CRT.RECORD(RES.COLUMNS)
    CALL U_CRT.RECORD(RES.DATA)
-   CALL U_CRT.INFO("NO RECORDS",RES.COUNT)
+   CALL U_CRT.INFO("NO RECORDS", RES.COUNT)
 
    CALL U_STOP("")
    STOP
