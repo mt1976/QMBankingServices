@@ -2,7 +2,7 @@ PROGRAM GIT
 ** INFORMATION ****************************************************************
 * Routine Name   : GIT
 *         Type   : SUBROUTINE
-*         Params : 
+*         Params :
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
 * Info Updated   : 20200120 at 16.53.17 in MWT-QM-DEV by sales
@@ -23,8 +23,35 @@ $INCLUDE UTIL.BP I_UTIL.H
 
    DEL CMD.STRING<1>
    CMD.STRING = CONVERT(@AM, SPACE(1), CMD.STRING)
-   STMT.1 = "git ":CMD.STRING
-   CALL U_OS.COMMAND(STMT.1, @TRUE)
+   IF UPCASE(CMD.STRING) = "INSTALL" THEN
+
+   GOSUB AUTO.COMPILE
+
+   END ELSE
+     STMT.1 = "git ":CMD.STRING
+     CALL U_OS.COMMAND(STMT.1, @TRUE)
+   END
 
    STOP
+
+
+   AUTO.COMPILE:
+   BASIC.LIST = "" ; CATALOG.LIST = ""
+   CALL U_OS.GET.LIST("UTIL.CONFIG", "autoCompile", "BASIC", BASIC.LIST, NO.BASIC.ITEMS)
+   CALL U_OS.GET.LIST("UTIL.CONFIG", "autoCompile", "CATALOG", CATALOG.LIST, NO.CATALOG.ITEMS)
+
+   STMTS = ""
+   STMTS<-1> = "git pull"
+   FOR I = 1 TO NO.BASIC.ITEMS
+     STMTS<-1> = "BASIC ":BASIC.LIST<I>:" *"
+   NEXT I
+   FOR J = 1 TO NO.CATALOG.ITEMS
+     STMTS<-1> = "CATALOG ":CATLOG.LIST<J>:" *"
+   NEXT J
+
+   NO.ACTIONS = DCOUNT(STMTS,@AM)
+   FOR K = 1 TO NO.ACTIONS
+     CALL U_OS.COMMAND(STMTS<K>, @TRUE)
+   NEXT K
+   RETURN
 END
