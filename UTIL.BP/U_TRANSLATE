@@ -10,7 +10,7 @@ SUBROUTINE U_TRANSLATE(TYPE, IN.TEXT, FIELD.NO, OUT.TEXT)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-$INCLUDE UTIL.BP I_UTIL.TRANSLATE.H
+$INCLUDE UTIL.BP F_UTIL.TRANSLATE.H
    IF FIELD.NO<>"" THEN
       FN.TRANSLATE="UTIL.TRANSLATE"
       FV.TRANSLATE = ""

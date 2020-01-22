@@ -9,7 +9,7 @@ SUBROUTINE SIENA.ECB.HELPER(PROCESS.NAME)
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
-$INCLUDE UTIL.BP I_UTIL.TRANSLATE.H
+$INCLUDE UTIL.BP F_UTIL.TRANSLATE.H
 $INCLUDE UTIL.BP I_RATECSV.H
 
 * INITIALISE
@@ -53,14 +53,17 @@ $INCLUDE UTIL.BP I_RATECSV.H
    CALL U_CRT.INFO("seriesListID", seriesListID)
    CALL U_CRT.INFO("dateFormat", dateFormat)
    seriesList = ""
-   CALL U_READ(FV.SIENA.CONFIG, seriesListID, seriesList, STOP.ON.ERROR, ERROR.TEXT)
+  * CALL U_READ(FV.SIENA.CONFIG, seriesListID, seriesList, STOP.ON.ERROR, ERROR.TEXT)
+
+   CALL U_OS.GET.LIST("SIENA.CONFIG", seriesListID, "SERIES", seriesList, NO.SERIES)
+
 
    *  CALL U_CRT.RECORD(seriesList)
    DATE.START = OCONV(DATE()-2, dateFormat)
 
    DATE.STOP = OCONV(DATE()-1, dateFormat)
 
-   NO.SERIES = DCOUNT(seriesList, @AM)
+   *NO.SERIES = DCOUNT(seriesList, @AM)
    FOR THIS.SERIES = 1 TO NO.SERIES
       fetchSeries=seriesList<THIS.SERIES>
       CALL U_CRT.INFO("FETCH", fetchSeries)
