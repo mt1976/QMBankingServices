@@ -21,7 +21,7 @@ $INCLUDE UTIL.BP I_UTIL.H
 
    headerCMD="sh figlet -f small"
 
-   CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "headerCMD", headerCMD)
+   CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "headerCMD", headerCMD)
 
    STMT = headerCMD:" ":DQUOTE(TEXT)
 

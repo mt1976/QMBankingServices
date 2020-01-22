@@ -1,6 +1,6 @@
-SUBROUTINE U_OS.CLOSEFILE(FN.FILENAME,FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT)
+SUBROUTINE U_IO.CLOSEFILE(FN.FILENAME,FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_OS.OPENFILE
+* Routine Name   : U_IO.OPENFILE
 *         Type   : SUBROUTINE
 *         Params : FN.FILENAME, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT
 *         Loc    : UTIL.BP

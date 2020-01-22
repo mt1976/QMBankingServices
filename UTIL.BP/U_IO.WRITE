@@ -1,8 +1,8 @@
-SUBROUTINE U_OS.DELETE(FV.FILEVAR, ID.RECORD, STOP.ON.ERROR, ERROR.TEXT)
+SUBROUTINE U_IO.WRITE(FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_OS.DELETE
+* Routine Name   : U_IO.WRITE
 *         Type   : SUBROUTINE
-*         Params : FV.FILEVAR, ID.RECORD, STOP.ON.ERROR, ERROR.TEXT
+*         Params : FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
 * Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
@@ -10,7 +10,8 @@ SUBROUTINE U_OS.DELETE(FV.FILEVAR, ID.RECORD, STOP.ON.ERROR, ERROR.TEXT)
 * -----------------------------------------------------------------------------
 *
 
-   DELETE FV.FILEVAR, ID.RECORD
+   * CALL U_CRT.INFO("WRITE",ID.RECORD)
+   WRITE R.RECORD TO FV.FILEVAR, ID.RECORD
 
    RETURN
 

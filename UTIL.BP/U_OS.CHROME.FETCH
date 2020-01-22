@@ -19,8 +19,8 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
 * Get the location of the chrome executable;
    CHROME.LOCATION = "" ; CHROME.DEFAULTS = ""
-   CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "chromeLocation", CHROME.LOCATION)
-   CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "chromeDefaults", CHROME.DEFAULTS)
+   CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "chromeLocation", CHROME.LOCATION)
+   CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "chromeDefaults", CHROME.DEFAULTS)
 
    TIME.START = TIME()
 
