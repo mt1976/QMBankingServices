@@ -1,6 +1,6 @@
-SUBROUTINE U_OPENFILE(FN.FILENAME, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT)
+SUBROUTINE U_OS.OPENFILE(FN.FILENAME, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_OPENFILE
+* Routine Name   : U_OS.OPENFILE
 *         Type   : SUBROUTINE
 *         Params : FN.FILENAME, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT
 *         Loc    : UTIL.BP

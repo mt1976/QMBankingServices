@@ -1,8 +1,8 @@
-SUBROUTINE U_DELETE(FV.FILEVAR, ID.RECORD, STOP.ON.ERROR, ERROR.TEXT)
+SUBROUTINE U_OS.CLOSEFILE(FN.FILENAME,FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_DELETE
+* Routine Name   : U_OS.OPENFILE
 *         Type   : SUBROUTINE
-*         Params : FV.FILEVAR, ID.RECORD, STOP.ON.ERROR, ERROR.TEXT
+*         Params : FN.FILENAME, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
 * Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
@@ -10,7 +10,11 @@ SUBROUTINE U_DELETE(FV.FILEVAR, ID.RECORD, STOP.ON.ERROR, ERROR.TEXT)
 * -----------------------------------------------------------------------------
 *
 
-   DELETE FV.FILEVAR, ID.RECORD
+   *CALL U_CRT.INFO("CLOSING ",FN.FILENAME)
+
+   * CRT "CLOSE ":DQUOTE(FN.FILENAME)
+
+   CLOSE FV.FILEVAR
 
    RETURN
 

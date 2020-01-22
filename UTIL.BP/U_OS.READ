@@ -1,6 +1,6 @@
-SUBROUTINE U_READ(FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT)
+SUBROUTINE U_OS.READ(FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_READ
+* Routine Name   : U_OS.READ
 *         Type   : SUBROUTINE
 *         Params : FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT
 *         Loc    : UTIL.BP
