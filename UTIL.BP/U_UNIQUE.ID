@@ -10,10 +10,10 @@ SUBROUTINE U_UNIQUE.ID(UNIQUE.ID)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-
+ CRT "GEN UNIQUE ID"
    UID.FORMAT = ""
    CALL U_OS.GET.PROPERTY("UTIL.CONFIG", "util", "uniqueIDformat", UID.FORMAT)
-
+CRT "GOT UNIQUE.ID FORMAT ":UID.FORMAT
    IF UID.FORMAT = "" OR UID.FORMAT = "UUID" THEN
       UNIQUE.ID = SYSTEM(1047)
    END ELSE

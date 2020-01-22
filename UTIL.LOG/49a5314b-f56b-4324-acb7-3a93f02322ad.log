@@ -1,0 +1,884 @@
+OPEN "UTIL.LOG.CMD"
+OPEN "UTIL.LOG.EVENT"
+GEN UNIQUE ID
+READ util.properties uniqueIDformat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+GOT UNIQUE.ID FORMAT UUID
+HEADER
+READ util.properties headerCMD
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m               [m][━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m               [m][+-+-+-+-+ +-+-+ +-+ +-+-+-+-+]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m               [m][|t|h|i|s| |i|s| |a| |t|e|s|t|]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m               [m][+-+-+-+-+ +-+-+ +-+ +-+-+-+-+]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m               [m][━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━]
+OPENFILE
+OPEN "UTIL.CONFIG"
+ISSUE READ COMMAND
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+BACK FROM READ
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1mID             [m][util.properties]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1mLOCAL          [m][LDN-SRV-UBNT01!util.properties]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m<1>            [m][{"outputMode":"pretty","dateTimeFormat":"EISO8601T","csvChar":",","chromeLocation":"/usr/bin/google-chrome","chromeDefaults":"--headless --disable-gpu --dump-dom","headerCMD":"sh figlet -f digital","uniqueIDformat":"UUID","outputType":"INFO","timeZone":"UTC","path":"/home/sales/qm/account/mwt-QM-dev","writeWaitTime":"5","writeWaitRetries":"5"}]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m<1>            [m][outputMode]pretty]]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m<2>            [m][uniqueIDformat]UUID]]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m<3>            [m][dateTimeFormat]EISO8601T]]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m<4>            [m][outputType]INFO]]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m<5>            [m][timeZone]UTC]]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m<6>            [m][csvChar],]]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m<7>            [m][headerCMD]sh figlet -f digital]]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m<8>            [m][path]/home/sales/qm/account/mwt-QM-dev]]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m<9>            [m][chromeLocation]/usr/bin/google-chrome]]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m<10>           [m][chromeDefaults]--headless --disable-gpu --dump-dom]]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m<11>           [m][writeWaitTime]5]]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200122T144502[m][[1mINFO[m][[1mU_LOCAL.TEST        [m][[1m<12>           [m][writeWaitRetries]5]]
