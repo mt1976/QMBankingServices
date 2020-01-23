@@ -10,7 +10,7 @@ SUBROUTINE U_GET.EPOCH.DATE(THIS.DATE)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
+
 
    dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
    CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "dateTimeFormat", dateTimeFormat)

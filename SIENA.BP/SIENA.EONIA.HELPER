@@ -10,7 +10,7 @@ SUBROUTINE SIENA.EONIA.HELPER(PROCESS.NAME)
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
+
 
    CALL SIENA.MM.HELPER(PROCESS.NAME, "EONIA")
    RETURN

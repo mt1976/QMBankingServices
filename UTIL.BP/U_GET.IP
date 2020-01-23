@@ -1,0 +1,25 @@
+SUBROUTINE U_GET.IP(IP4.ADDRESS)
+** INFORMATION ****************************************************************
+* Routine Name   : U_LOG.EVENT
+*         Type   : SUBROUTINE
+*         Params : LOG.DATA, R.UTIL.LOG.EVENT
+*         Loc    : UTIL.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+$INCLUDE UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
+
+* CRT "U_GET.IP"
+
+   IP4.ADDRESS = ""
+   IP4.COMMAND = ""
+   CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "ip4", IP4.COMMAND)
+   CALL U_OS.COMMAND(IP4.COMMAND, @FALSE, IP4.ADDRESS,@TRUE)
+   IP4.ADDRESS = TRIM(IP4.ADDRESS)
+* CRT "U_GET.IP ":IP4.COMMAND:" ":IP4.ADDRESS
+
+   RETURN
+END

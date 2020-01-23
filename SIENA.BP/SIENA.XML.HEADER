@@ -10,7 +10,7 @@ SUBROUTINE SIENA.XML.HEADER(XML.REC, SIENA.ACTION, SIENA.TABLE.NAME)
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
+
 
    XML.REC = ''
    XML.REC<-1> = '<?xml version="1.0" encoding="UTF-8"?>'

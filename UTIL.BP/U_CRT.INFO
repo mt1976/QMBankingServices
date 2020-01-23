@@ -10,7 +10,7 @@ SUBROUTINE U_CRT.INFO(ACTION, TEXT)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
+
    IN.TEXT = TEXT
    CALLING.SUBR = ""
    CALL U_GET.CALLING.PROCESS.NAME(CALLING.SUBR, SYSTEM(1002), SYSTEM(33))

@@ -38946,3 +38946,396 @@ User limit reached
 User limit reached
 User limit reached
 User limit reached
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+[ QM Rev 3.4-14   Copyright Zumasys Inc., 2019 ]
+[ 0103035549  For personal use only ]
+STARTING PROCESSES
+GEN UNIQUE ID
+READ util.properties uniqueIDformat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+GOT UNIQUE.ID FORMAT UUID
+GOT A UNQUE ID 490698ac-b242-4b27-9ff0-8fc4e1e8037c
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+[24;1HPress RETURN to continue, A to abort, Q to Quit, S to suppress pagination
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[24;1HPress RETURN to continue, A to abort, Q to Quit, S to suppress pagination
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200123T114501[m][[1mINFO[m][[1mU_START             [m][[1mCOMO           [m][490698ac-b242-4b27-9ff0-8fc4e1e8037c]
+OPEN "UTIL.LOG.CMD"
+OPEN "UTIL.LOG.EVENT"
+GEN UNIQUE ID
+READ util.properties uniqueIDformat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+GOT UNIQUE.ID FORMAT UUID
+OPEN "UTIL.LOG.CMD"
+OPEN "UTIL.LOG.EVENT"
+GEN UNIQUE ID
+READ util.properties uniqueIDformat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+GOT UNIQUE.ID FORMAT UUID
+READ util.properties headerCMD
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+[24;1HPress RETURN to continue, A to abort, Q to Quit, S to suppress pagination
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[24;1HPress RETURN to continue, A to abort, Q to Quit, S to suppress pagination
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200123T114501[m][[1mINFO[m][[1mSIENA.DO            [m][[1m               [m][━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+[24;1HPress RETURN to continue, A to abort, Q to Quit, S to suppress pagination
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+[24;1HPress RETURN to continue, A to abort, Q to Quit, S to suppress pagination
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200123T114501[m][[1mINFO[m][[1mSIENA.DO            [m][[1m               [m][+-+-+-+-+-+-+-+-+]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+[24;1HPress RETURN to continue, A to abort, Q to Quit, S to suppress pagination
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+[24;1HPress RETURN to continue, A to abort, Q to Quit, S to suppress pagination
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200123T114501[m][[1mINFO[m][[1mSIENA.DO            [m][[1m               [m][|S|I|E|N|A|.|D|O|]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[24;1HPress RETURN to continue, A to abort, Q to Quit, S to suppress pagination
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+[24;1HPress RETURN to continue, A to abort, Q to Quit, S to suppress pagination
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200123T114501[m][[1mINFO[m][[1mSIENA.DO            [m][[1m               [m][+-+-+-+-+-+-+-+-+]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+[24;1HPress RETURN to continue, A to abort, Q to Quit, S to suppress pagination
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+[24;1HPress RETURN to continue, A to abort, Q to Quit, S to suppress pagination
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200123T114501[m][[1mINFO[m][[1mSIENA.DO            [m][[1m               [m][━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━]
+READ util.properties outputMode
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties outputType
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties csvChar
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+[24;1HPress RETURN to continue, A to abort, Q to Quit, S to suppress pagination
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties dateTimeFormat
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+READ util.properties timeZone
+FROM UTIL.CONFIG
+OPEN "UTIL.CONFIG"
+OPENED UTIL.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!util.properties]"
+READ DONE
+CLOSE "UTIL.CONFIG"
+[K[[1m20200123T114501[m][[1mINFO[m][[1mSIENA.DO            [m][[1mPROCESS        [m][FXFWD]
+[24;1HPress RETURN to continue, A to abort, Q to Quit, S to suppress pagination
+READ siena.properties FXFWD
+FROM SIENA.CONFIG
+OPEN "SIENA.CONFIG"
+OPENED SIENA.CONFIG
+INFO "Unable to read [LDN-SRV-UBNT01!siena.properties]"
+READ DONE
+CLOSE "SIENA.CONFIG"
+00000198: Unassigned variable 'U_PROP_SEP_ALTS' at line 39 of SIENA.DO
+User limit reached
+User limit reached
+User limit reached
+User limit reached
+[ QM Rev 3.4-14   Copyright Zumasys Inc., 2019 ]
+[ 0103035549  For personal use only ]
+000001FA: Redimensioning UTIL common to larger size (7, was 5, created by SIENA.DO) in U_INITIALISE
+User limit reached
+User limit reached

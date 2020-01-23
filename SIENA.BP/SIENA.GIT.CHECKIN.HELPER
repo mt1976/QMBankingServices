@@ -10,7 +10,7 @@ SUBROUTINE SIENA.GIT.CHECKIN.HELPER(PROCESS.NAME)
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
+
 
    CALL U_GIT.CHECKIN.HELPER(PROCESS.NAME)
 
