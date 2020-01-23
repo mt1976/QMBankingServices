@@ -1,0 +1,1 @@
+mssql-cli -S 194.128.145.37 -d rel_gateway_sal_prd_demo-sys-3 -U rob -P rob123 -i /home/sales/qm/account/mwt-QM-dev/UTIL.SQL.CMD/c4038438-6941-40cd-b2dc-b247eac5.sql -o /home/sales/qm/account/mwt-QM-dev/UTIL.SQL.RESPONSE/c4038438-6941-40cd-b2dc-b247eac5.out
