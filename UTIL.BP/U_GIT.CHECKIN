@@ -10,6 +10,7 @@ PROGRAM U_GIT.CHECKIN
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
+CALL U_INITIALISE("")
 
    PNM = "GIT.CHECKIN" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = "" ; VERBOSE=@TRUE
    CALL U_START(PNM)

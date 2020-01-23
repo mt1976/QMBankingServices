@@ -10,7 +10,7 @@ PROGRAM TEST
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-
+CALL U_INITIALISE("")
    CALL SIENA.FXSP.HELPER('FXSP')
 
    STOP

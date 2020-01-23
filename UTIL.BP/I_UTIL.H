@@ -1,4 +1,9 @@
 * UTIL.BP I_UTIL.H
+
+COMMON /UTIL/ U_INITIALISED,
+              FN.UTIL.CONFIG, FV.UTIL.CONFIG,
+              FN.UTIL.LOG.EVENT, FV.LOG.EVENT
+
 equate U_SEP to "~"
 equate U_SEP_ALT to "!"
 equate U_TRUNC to "-"

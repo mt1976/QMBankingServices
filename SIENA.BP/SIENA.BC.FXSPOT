@@ -9,6 +9,9 @@ PROGRAM SIENA.BC.FXSPOT
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
+$INSERT UTIL.BP I_UTIL.H
+
+CALL U_INITIALISE("")
 
    CALL SIENA.BC.FXSPOT.HELPER("BCFXSPOT")
 

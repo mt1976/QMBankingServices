@@ -10,6 +10,7 @@ PROGRAM U_BUILDFILES
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
+CALL U_INITIALISE("")
    PNM = "" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""
    CALL U_START(PNM)
    CALL U_HEADER("(RE)BUILD FILE(S)")

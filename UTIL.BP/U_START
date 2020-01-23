@@ -9,6 +9,9 @@ SUBROUTINE U_START(PROGRAM.NAME)
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
+$INSERT UTIL.BP I_UTIL.H
+
+CALL U_INITIALISE("")
 
    COMO.NAME = PROGRAM.NAME
    * CRT "STARTING PROCESSES"

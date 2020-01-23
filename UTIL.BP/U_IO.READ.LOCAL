@@ -10,6 +10,7 @@ SUBROUTINE U_IO.READ.LOCAL(FV_FILEVAR, ID_RECORD, R_RECORD, STOP.ON.ERROR, ERROR
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
+CALL U_INITIALISE("")
 
     ID_RECORD.LOCAL = UPCASE(SYSTEM(1015)):U_SEP_ALT:ID_RECORD
     R_RECORD.LOCAL  = ""

@@ -9,6 +9,8 @@ SUBROUTINE SIENA.XML.FIELD(XML.REC, FIELD.TYPE, FIELD.NAME, FIELD.DATA)
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
+$INSERT UTIL.BP I_UTIL.H
+CALL U_INITIALISE("")
 
    IF FIELD.DATA <> "" THEN
 

@@ -10,7 +10,7 @@ PROGRAM BCC
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-
+CALL U_INITIALISE("")
    PNM="GIT"
    CALL U_START(PNM)
    CALL U_HEADER("GIT")

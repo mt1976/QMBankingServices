@@ -1,0 +1,48 @@
+SUBROUTINE U_INITIALISE(DUMMY)
+** INFORMATION ****************************************************************
+* Routine Name   : U_START
+*         Type   : SUBROUTINE
+*         Params : PROGRAM.NAME
+*         Loc    : UTIL.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+$INCLUDE UTIL.BP I_UTIL.H
+
+  IF NOT(U_INITIALISED) THEN
+
+    FN.UTIL.CONFIG    = "UTIL.CONFIG"
+    FV.UTIL.CONFIG    = ""
+
+    OPEN FN.UTIL.CONFIG TO FV.UTIL.CONFIG ELSE
+      FN.FILENAME = FN.UTIL.CONFIG
+      GOSUB REPORT.ERROR
+    END
+
+    FN.UTIL.LOG.EVENT = "UTIL.LOG.EVENT"
+    FV.LOG.EVENT      = ""
+
+    OPEN FN.UTIL.LOG.EVENT TO FV.UTIL.LOG.EVENT ELSE
+      FN.FILENAME = FN.UTIL.LOG.EVENT
+      GOSUB REPORT.ERROR
+    END
+
+    U_INITIALISED=@TRUE
+
+  END
+
+RETURN
+
+REPORT.ERROR:
+
+  ERROR.TEXT = "!ERROR - Unable to Open - ":DQUOTE(FN.FILENAME)
+  LOGMSG ERROR.TEXT
+  IF STOP.ON.ERROR THEN
+    STOP ERROR.TEXT
+  END
+
+RETURN
+
+END

@@ -9,6 +9,8 @@ SUBROUTINE SIENA.XML.FOOTER(XML.REC)
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
+$INSERT UTIL.BP I_UTIL.H
+CALL U_INITIALISE("")
 
    XML.REC<-1>="</TABLE>"
    XML.REC<-1>="</TRANSACTION>"

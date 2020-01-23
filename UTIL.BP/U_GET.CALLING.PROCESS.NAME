@@ -10,6 +10,7 @@ SUBROUTINE U_GET.CALLING.PROCESS.NAME(CALLING.SUBR, THIS.CALL.STACK, THIS.PARENT
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
+CALL U_INITIALISE("")
 
    CALLING.SUBR = THIS.CALL.STACK<2, 1>
 

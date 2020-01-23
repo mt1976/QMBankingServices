@@ -9,6 +9,8 @@ PROGRAM SIENA.DELIVER.ALL
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
+$INSERT UTIL.BP I_UTIL.H
+CALL U_INITIALISE("")
 
    CALL SIENA.DELIVER.HELPER("DELIVER", "")
 

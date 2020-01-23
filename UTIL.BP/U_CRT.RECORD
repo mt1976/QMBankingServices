@@ -10,6 +10,7 @@ SUBROUTINE U_CRT.RECORD(R.RECORD)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
+CALL U_INITIALISE("")
 
    NO.ROWS = DCOUNT(R.RECORD, @AM)
 

@@ -9,6 +9,9 @@ SUBROUTINE U_IO.OPENFILE(FN.FILENAME, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT)
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
+$INSERT UTIL.BP I_UTIL.H
+
+CALL U_INITIALISE("")
 
    * CALL U_CRT.INFO("OPENING ",FN.FILENAME)
 

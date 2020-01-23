@@ -10,6 +10,7 @@ SUBROUTINE U_GET.UUID(UNIQUE.ID)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
+CALL U_INITIALISE("")
  * CRT "GEN UNIQUE ID"
    UID.FORMAT = ""
    CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "uniqueIDformat", UID.FORMAT)

@@ -12,6 +12,8 @@ SUBROUTINE U_OS.CHROME.FETCH(URI, VERBOSE, RESULT)
 $INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
+CALL U_INITIALISE("")
+
 * GOOGLE CHROME FETCH
 * -------------------
 * Uses a headless google-chrome instance to scrap fully rendered html & data from a uri

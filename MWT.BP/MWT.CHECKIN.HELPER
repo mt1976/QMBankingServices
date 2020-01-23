@@ -9,7 +9,8 @@ SUBROUTINE MWT.CHECKIN(FN.CHECKIN, ID.CHECKIN)
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
-$INCLUDE UTIL.BP I_UTIL.H
+$INSERT UTIL.BP I_UTIL.H
+CALL U_INITIALISE("")
 
    IF FN.CHECKIN # '' AND ID.CHECKIN # '' THEN
 

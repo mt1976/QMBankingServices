@@ -9,7 +9,8 @@ SUBROUTINE MWT.RESTORE(FN.RESTORE, ID.RESTORE)
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
-$INCLUDE UTIL.BP I_UTIL.H
+$INSERT UTIL.BP I_UTIL.H
+CALL U_INITIALISE("")
 
    IF FN.RESTORE # '' AND ID.RESTORE # '' THEN
 

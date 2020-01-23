@@ -10,6 +10,7 @@ SUBROUTINE U_CRT(TEXT, ACTION, CALLING.PROCESS)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
+CALL U_INITIALISE("")
 
    IN.TEXT = TEXT
    TEXT = CONVERT(@AM, "^", TEXT)

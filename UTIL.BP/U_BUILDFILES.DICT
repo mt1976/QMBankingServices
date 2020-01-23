@@ -10,6 +10,7 @@ SUBROUTINE U_BUILDFILES.DICT(PROCESS.FILE, DEF.ARRAY)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
+CALL U_INITIALISE("")
 
 *CALL U_CRT.INFO("PROCESS.FILE",PROCESS.FILE)
 *CALL U_CRT.INFO("DEFINITION",DEF.ARRAY)

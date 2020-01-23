@@ -9,6 +9,10 @@ PROGRAM U_TEST
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
+$INSERT UTIL.BP I_UTIL.H
+
+CALL U_INITIALISE("")
+
    CALL U_START("M.TEST")
    CALL U_HEADER("M.TEST")
 

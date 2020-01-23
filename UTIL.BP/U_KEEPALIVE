@@ -9,6 +9,10 @@ PROGRAM U_HEADER.TEST
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
+$INSERT UTIL.BP I_UTIL.H
+
+CALL U_INITIALISE("")
+
    PID = ""
    CALL U_START(PID)
    OUTPUT= "D=":DQUOTE(OCONV(DATE(), "D4"))

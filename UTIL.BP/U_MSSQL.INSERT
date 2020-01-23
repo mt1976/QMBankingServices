@@ -12,6 +12,8 @@ SUBROUTINE U_MSSQL.INSERT(SQL.TABLE, SQL.FIELDS, SQL.VALUES, SQL.DATABASE, VERBO
 $INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
+CALL U_INITIALISE("")
+
 * INSERT INTO dbo.account (account_name, account_start_date, account_address, account_type, account_create_timestamp, is_active)
 * VALUES ('Initech','2/19/1999','4120 Freidrich Ln.','LIVE',GETUTCDATE(),1);
 

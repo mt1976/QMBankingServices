@@ -10,6 +10,7 @@ SUBROUTINE U_HEADER(TEXT)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
+CALL U_INITIALISE("")
 
    SCREEN.WIDTH = @CRTWIDE
    SPAN.WIDTH = SCREEN.WIDTH - 6

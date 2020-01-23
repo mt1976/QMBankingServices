@@ -10,6 +10,7 @@ SUBROUTINE U_GIT.CHECKIN.HELPER(THIS.THING)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
+CALL U_INITIALISE("")
 
    THIS.DATE = "" ; VERBOSE=@TRUE
    CALL U_GET.EPOCH.DATE(THIS.DATE)

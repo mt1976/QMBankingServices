@@ -9,6 +9,9 @@ SUBROUTINE U_IO.WRITE.DRIP(FN.FILEVAR, FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
+$INSERT UTIL.BP I_UTIL.H
+
+CALL U_INITIALISE("")
 
 *  WRITE.WAIT.TIME = "" ; WRITE.RETRIES = ""
 *  CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "writeWaitTime", WRITE.WAIT.TIME)

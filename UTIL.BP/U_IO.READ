@@ -9,6 +9,10 @@ SUBROUTINE U_IO.READ(FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT)
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
+$INSERT UTIL.BP I_UTIL.H
+
+CALL U_INITIALISE("")
+
 ** FN.PD = "PROCESS.DIR" ; F.PD = "" ; PD.ID = ""
    ERROR.TEXT = ""
 *CRT "READ ":DQUOTE(ID.RECORD):" ":DQUOTE(STOP.ON.ERROR):" ":DQUOTE(ERROR.TEXT)

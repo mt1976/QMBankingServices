@@ -9,6 +9,10 @@ SUBROUTINE U_STOP(PROGRAM.NAME)
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
+$INSERT UTIL.BP I_UTIL.H
+
+CALL U_INITIALISE("")
+
    STMT = "COMO OFF"
    HUSH ON
    EXECUTE STMT

@@ -9,6 +9,8 @@ PROGRAM MWT.CHECKIN
 *                : on ldn-srv-ubnt01 (Linux)
 * -----------------------------------------------------------------------------
 *
+$INSERT UTIL.BP I_UTIL.H
+CALL U_INITIALISE("")
 
    CALL U_START("MWT.CHECKIN")
    CALL U_HEADER("Code & Data Checkin Processor")
