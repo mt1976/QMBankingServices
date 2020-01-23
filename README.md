@@ -42,55 +42,6 @@ After installation a number of new directories will have been created;
 ``` ls
 .
 ├── cat
-├── $COMO
-├── $HOLD
-├── $HOLD.DIC
-├── SIENA.BP
-├── SIENA.BP.DIC
-├── SIENA.BP.OUT
-├── SIENA.CONFIG
-├── SIENA.CONFIG.DIC
-├── SIENA.DEST
-├── SIENA.DEST.DIC
-├── SIENA.IN
-├── SIENA.IN.BK
-├── SIENA.IN.BK.DIC
-├── SIENA.IN.DIC
-├── SIENA.LOC1
-├── SIENA.LOC1.DIC
-├── SIENA.LOC2
-├── SIENA.LOC2.DIC
-├── SIENA.PROCESSED
-├── SIENA.PROCESSED.DIC
-├── SIENA.SCRIPTS
-├── SIENA.SCRIPTS.DIC
-├── SIENA.STAGING
-├── SIENA.STAGING.DIC
-├── SIENA.TEMP
-├── SIENA.TEMP.DIC
-├── stacks
-├── SUPPORT.DOCUMENTS
-├── $SVLISTS
-├── UTIL.BACKUP
-├── UTIL.BACKUP.DIC
-├── UTIL.BP
-├── UTIL.BP.DIC
-├── UTIL.BP.OUT
-├── UTIL.LOG.EVENT
-├── UTIL.LOG.EVENT.DIC
-├── UTIL.LOG.CMD
-├── UTIL.LOG.CMD.DIC
-├── UTIL.CONFIG
-├── UTIL.CONFIG.DIC
-├── UTIL.FILE.DEFINITIONS
-├── UTIL.FILE.DEFINITIONS.DIC
-├── UTIL.FILE.HELPER
-├── UTIL.LOG
-├── UTIL.LOG.DIC
-├── UTIL.TRANSFER
-├── UTIL.TRANSFER.DIC
-├── UTIL.TRANSLATE
-├── UTIL.TRANSLATE.DIC
 └── VOC
 ```
 NEVER delete VOC or any folder prefixed with a $ sign!
@@ -104,8 +55,9 @@ crontab -e
 ```
 
 ``` cron
-0 16 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXECB >> CRON_FXECB.log
-20 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO CHECKIN >> CRON_CHECKIN.log
-0,10,20,30,40,50 6-18 * * * cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO BCFXSP >> CRON_BCFXSP.log
-15,45 6-18 * * * cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXFWD >> CRON_BCFXFWD.log 
+27 16 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXECB >> CRON_FXECB.log
+0,10,20,30,40,50 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXCCYUPDATE >> CRON_FXCCYUPDATE.log
+5,15,25,35,45,55 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO BCFXSP >> CRON_BCFXSP.log
+2,37 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXFWD >> CRON_BCFXFWD.log
+29 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO CHECKIN >> CRON_CHECKIN.log
 ```
