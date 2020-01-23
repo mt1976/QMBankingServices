@@ -1,6 +1,6 @@
-SUBROUTINE U_LOG.CMD(LOG.DATA, R.UTIL.LOG.EVENT)
+SUBROUTINE U_LOG.EVENT(LOG.DATA, R.UTIL.LOG.EVENT)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_LOG.CMD
+* Routine Name   : U_LOG.EVENT
 *         Type   : SUBROUTINE
 *         Params : LOG.DATA, R.UTIL.LOG.EVENT
 *         Loc    : UTIL.BP

@@ -15,8 +15,8 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 * INITIALISE
   CALL U_START(PROCESS.NAME)
 * Setup some temp locations for input data
-  FN.SIENA.CONFIG = "SIENA.CONFIG" ; FV.SIENA.CONFIG = "" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""
-  CALL U_IO.OPENFILE(FN.SIENA.CONFIG, FV.SIENA.CONFIG, STOP.ON.ERROR, ERROR.TEXT)
+  FN.SIENA.TEMP = "SIENA.TEMP" ; FV.SIENA.TEMP = "" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""
+  CALL U_IO.OPENFILE(FN.SIENA.TEMP, FV.SIENA.TEMP, STOP.ON.ERROR, ERROR.TEXT)
   ID.SIENA.CONFIG = ""
 
   ERROR.TEXT = ""; STOP.ON.ERROR = @TRUE ; VERBOSE = @TRUE
@@ -59,12 +59,12 @@ UPDATE.LIST:
 
   ID.SIENA.CONFIG = "tmp_":SQL.KNOWN.AS:"_ccyPair.list"
 
-  R.NEW.LIST = ""
-  R.NEW.LIST<-1> = "#=----------------------------------------------------------------------------="
-  R.NEW.LIST<-1> = "#=AUTO GENERATED - FX SPOT & FORWARD CURVES TO FETCH="
-  R.NEW.LIST<-1> = "#=GENERATED at ":OCONV(TIME(),"MTS."):" on ":OCONV(DATE(),"D4/"):"="
-  R.NEW.LIST<-1> = "#=Temp file is ":ID.SIENA.CONFIG:" in SIENA.CONFIG="
-  R.NEW.LIST<-1> = "#=----------------------------------------------------------------------------="
+  *R.NEW.LIST = ""
+  *R.NEW.LIST<-1> = "#=----------------------------------------------------------------------------="
+  *R.NEW.LIST<-1> = "#=AUTO GENERATED - FX SPOT & FORWARD CURVES TO FETCH="
+  *R.NEW.LIST<-1> = "#=GENERATED at ":OCONV(TIME(),"MTS."):" on ":OCONV(DATE(),"D4/"):"="
+  *R.NEW.LIST<-1> = "#=Temp file is ":ID.SIENA.CONFIG:" in SIENA.CONFIG="
+  *R.NEW.LIST<-1> = "#=----------------------------------------------------------------------------="
 
   FOR THIS.PAIR.POS = 1 TO RES.COUNT
     CCY.PAIR = RES.DATA<THIS.PAIR.POS,1>:RES.DATA<THIS.PAIR.POS,2>
@@ -72,7 +72,7 @@ UPDATE.LIST:
     R.NEW.LIST<-1> = "X=":CCY.PAIR:"="
   NEXT THIS.PAIR.POS
 
-  CALL U_IO.WRITE(FV.SIENA.CONFIG, ID.SIENA.CONFIG, R.NEW.LIST, STOP.ON.ERROR, ERROR.TEXT)
+  CALL U_IO.WRITE(FV.SIENA.TEMP, ID.SIENA.CONFIG, R.NEW.LIST, STOP.ON.ERROR, ERROR.TEXT)
 
   R.UTIL.LOG.EVENT = ""
   R.UTIL.LOG.EVENT<U_LOG_EVENT> = 'REGENERATE'
@@ -80,7 +80,7 @@ UPDATE.LIST:
   R.UTIL.LOG.EVENT<U_LOG_ID>    = ID.SIENA.CONFIG
 
   CALL U_CRT.RECORD(R.NEW.LIST)
-  CALL U_LOG.CMD("", R.UTIL.LOG.EVENT)
+  CALL U_LOG.EVENT("", R.UTIL.LOG.EVENT)
 
 RETURN
 
