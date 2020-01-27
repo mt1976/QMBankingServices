@@ -1,8 +1,8 @@
-SUBROUTINE U_CRT(TEXT, ACTION, CALLING.PROCESS)
+SUBROUTINE U_CRT(TEXT, ITEM.NAME, CALLING.PROCESS)
 ** INFORMATION ****************************************************************
 * Routine Name   : U_CRT
 *         Type   : SUBROUTINE
-*         Params : TEXT,ACTION,CALLING.PROCESS
+*         Params : TEXT,ITEM.NAME,CALLING.PROCESS
 *         Loc    : UTIL.BP
 * -----------------------------------------------------------------------------
 * Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
@@ -13,19 +13,20 @@ $INCLUDE UTIL.BP I_UTIL.H
 
 
    IN.TEXT = TEXT
-   TEXT = CONVERT(@AM, "^", TEXT)
-   TEXT = CONVERT(@VM, "]", TEXT)
-   TEXT = CONVERT(@SM, "\", TEXT)
+   TEXT = CONVERT(@AM, U_CRT_AM, TEXT)
+   TEXT = CONVERT(@VM, U_CRT_VM, TEXT)
+   TEXT = CONVERT(@SM, U_CRT_SM, TEXT)
+
+   dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
 
    CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "outputMode", outputMode)
-   dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
    CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "outputType", outputType)
    CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "csvChar", csvChar)
    CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "timeZone", timeZone)
+
    OUTPUT.DATE = ""
    CALL U_GET.EPOCH.DATE(OUTPUT.DATE)
    OUTPUT.TEXT = ""
-
 
    BEGIN CASE
       CASE outputMode = U_OUTPUTMODE_log4j
@@ -37,7 +38,7 @@ $INCLUDE UTIL.BP I_UTIL.H
          OUTPUT.TEXT := OUTPUT.DATE
          OUTPUT.TEXT := " ":outputType
          OUTPUT.TEXT := " ":CALLING.PROCESS
-         OUTPUT.TEXT := " ":ACTION
+         OUTPUT.TEXT := " ":ITEM.NAME
          OUTPUT.TEXT := " ":TEXT
 
       CASE outputMode = U_OUTPUTMODE_csv
@@ -45,14 +46,20 @@ $INCLUDE UTIL.BP I_UTIL.H
          OUTPUT.TEXT := DQUOTE(OUTPUT.DATE)
          OUTPUT.TEXT := csvChar:DQUOTE(outputType)
          OUTPUT.TEXT := csvChar:DQUOTE(CALLING.PROCESS)
-         OUTPUT.TEXT := csvChar:DQUOTE(ACTION)
+         OUTPUT.TEXT := csvChar:DQUOTE(ITEM.NAME)
          OUTPUT.TEXT := csvChar:DQUOTE(TEXT)
+
+      CASE outputMode = U_OUTPUTMODE_simple
+        OUTPUT.TEXT := "[":@(U_BOLD_ON):OCONV(TIME(),"MTS."):@(U_BOLD_OFF):"]"
+        OUTPUT.TEXT := "[":@(U_BOLD_ON):CALLING.PROCESS"L#20":@(U_BOLD_OFF):"]"
+        OUTPUT.TEXT := "[":@(U_BOLD_ON):UPCASE(ITEM.NAME)"L#10":@(U_BOLD_OFF):"]"
+        OUTPUT.TEXT := "[":TEXT:"]"
 
       CASE 1
          OUTPUT.TEXT := "[":@(U_BOLD_ON):OUTPUT.DATE:@(U_BOLD_OFF):"]"
          OUTPUT.TEXT := "[":@(U_BOLD_ON):outputType:@(U_BOLD_OFF):"]"
          OUTPUT.TEXT := "[":@(U_BOLD_ON):CALLING.PROCESS"L#20":@(U_BOLD_OFF):"]"
-         OUTPUT.TEXT := "[":@(U_BOLD_ON):UPCASE(ACTION)"L#15":@(U_BOLD_OFF):"]"
+         OUTPUT.TEXT := "[":@(U_BOLD_ON):UPCASE(ITEM.NAME)"L#15":@(U_BOLD_OFF):"]"
          OUTPUT.TEXT := "[":TEXT:"]"
    END CASE
    DISPLAY @(U_CLEAR_LINE):OUTPUT.TEXT
