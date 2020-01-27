@@ -1,6 +1,6 @@
-SUBROUTINE SIENA.FXCCYUPDATE.POST(PROCESS.NAME)
+SUBROUTINE SIENA.FXREFRESH.POST(PROCESS.NAME)
 ** INFORMATION ****************************************************************
-* Routine Name   : SIENA.FXCCYUPDATE.HELPER
+* Routine Name   : SIENA.FXREFRESH.HELPER
 *         Type   : SUBROUTINE
 *         Params : PROCESS.NAME, SPECIFIC
 *         Loc    : SIENA.BP
