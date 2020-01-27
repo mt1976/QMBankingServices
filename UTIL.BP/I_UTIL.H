@@ -4,7 +4,8 @@ COMMON /UTIL/
               U_INITIALISED,
               FN.UTIL.CONFIG, FV.UTIL.CONFIG,
               FN.UTIL.LOG.EVENT, FV.UTIL.LOG.EVENT,
-              FN.UTIL.LOG.CMD, FV.UTIL.LOG.CMD
+              FN.UTIL.LOG.CMD, FV.UTIL.LOG.CMD,
+              U_PROCESS.START.TIME
 
 * Terminal
 equate U_BOLD_ON              to    -58
