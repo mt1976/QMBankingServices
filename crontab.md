@@ -1,0 +1,48 @@
+# Installation of Scheduled jobs
+## Background
+Below is the information about how to structure a 'cron' item.
+``` sh
+# Edit this file to introduce tasks to be run by cron.
+#
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+#
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').#
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+#
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+#
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+#
+# For more information see the manual pages of crontab(5) and cron(8)
+#
+# m h  dom mon dow   command
+```
+## ECB Benchmark Rates
+```
+27 16 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXECB NOPAGE >> LOGS/$(date +20%y%m%d%H%M)_ECB.log
+```
+## Fetch currency pairs from systems
+This is used to fetch the ccy pairs from multiple systems, collate them, and then use them to request rates per pair.
+``` sh
+13,27,43,58 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXREFRESH NOPAGE >> LOGS/$(date +20%y%m%d%H%M)_FXREFRESH.log
+```
+## Aquire FX Spot rates from Barchart.do
+``` sh
+0,15,30,45 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO BCFXSP NOPAGE >> LOGS/$(date +20%y%m%d%H%M)_FXSP.log
+```
+## Aquire FX Forward rates for defined tenors from Barchart.do
+``` sh
+7,37 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXFWD NOPAGE >> LOGS/$(date +20%y%m%d%H%M)_FXFWD.log
+```
+## Checks updates into the automated GIT repo
+``` sh
+14 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO CHECKIN NOPAGE >> LOGS/$(date +20%y%m%d%H%M)_GIT.log
+```
