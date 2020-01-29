@@ -25,24 +25,11 @@ Below is the information about how to structure a 'cron' item.
 #
 # m h  dom mon dow   command
 ```
-## ECB Benchmark Rates
-```
-27 16 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXECB NOPAGE >> LOGS/$(date +20%y%m%d%H%M)_ECB.log
-```
-## Fetch currency pairs from systems
-This is used to fetch the ccy pairs from multiple systems, collate them, and then use them to request rates per pair.
+## crontab data
 ``` sh
-13,27,43,58 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXREFRESH NOPAGE >> LOGS/$(date +20%y%m%d%H%M)_FXREFRESH.log
-```
-## Aquire FX Spot rates from Barchart.do
-``` sh
-0,15,30,45 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO BCFXSP NOPAGE >> LOGS/$(date +20%y%m%d%H%M)_FXSP.log
-```
-## Aquire FX Forward rates for defined tenors from Barchart.do
-``` sh
-7,37 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXFWD NOPAGE >> LOGS/$(date +20%y%m%d%H%M)_FXFWD.log
-```
-## Checks updates into the automated GIT repo
-``` sh
-14 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO CHECKIN NOPAGE >> LOGS/$(date +20%y%m%d%H%M)_GIT.log
+27 16 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXECB NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_ECB.log
+13,27,43,58 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXREFRESH NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_FXREFRESH.log
+0,15,30,45 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO BCFXSP NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_FXSP.log
+7,37 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXFWD NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_FXFWD.log
+14 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO CHECKIN NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_GIT.log
 ```
