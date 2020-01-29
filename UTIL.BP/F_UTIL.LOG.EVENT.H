@@ -28,3 +28,4 @@ equate U_LOG_STOP to 20
 equate U_LOG_ELAPSED to 21
 equate U_LOG_PROCESS to 22
 equate U_LOG_FILE to 23
+equate U_LOG_THREAD to 24
