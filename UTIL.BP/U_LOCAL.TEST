@@ -10,7 +10,7 @@ PROGRAM U_LOCAL.TEST
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
+CALL U_INITIALISE("U_LOCAL.TEST")
    PID = ""
    CRT "START"
    CALL U_START(PID)

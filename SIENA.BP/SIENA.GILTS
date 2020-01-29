@@ -10,7 +10,7 @@ PROGRAM SIENA.GILTS
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
+CALL U_INITIALISE("SIENA.GILTS")
    CALL SIENA.GILTS.HELPER('GILTS')
 
    STOP

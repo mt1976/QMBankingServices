@@ -10,7 +10,6 @@ SUBROUTINE SIENA.DELIVER.FILE(SIENA.RVFILE, SIENA.DROPOFF)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
 
 * INITIALISE
 * Setup some temp locations for input data

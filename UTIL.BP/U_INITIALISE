@@ -1,4 +1,4 @@
-SUBROUTINE U_INITIALISE(DUMMY)
+SUBROUTINE U_INITIALISE(THREAD.ID)
 ** INFORMATION ****************************************************************
 * Routine Name   : U_START
 *         Type   : SUBROUTINE
@@ -46,6 +46,8 @@ $INCLUDE UTIL.BP I_UTIL.H
   END ELSE
 *  CRT "ALREADY INIT"
   END
+
+  U_PROCESS.THREAD.ID = THREAD.ID
 
 RETURN
 

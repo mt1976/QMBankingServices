@@ -10,7 +10,7 @@ PROGRAM SIENA.FXSP
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
+CALL U_INITIALISE("SIENA.FXSP")
 
    CALL SIENA.FXSP.HELPER("FXSP")
 

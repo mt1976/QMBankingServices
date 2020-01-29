@@ -13,8 +13,8 @@ $INCLUDE UTIL.BP I_UTIL.H
 
 
    dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
-   CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "dateTimeFormat", dateTimeFormat)
-   CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "timeZone", timeZone)
+   CALL U_IO.GET.PROPERTY("util", "dateTimeFormat", dateTimeFormat)
+   CALL U_IO.GET.PROPERTY("util", "timeZone", timeZone)
 
    SET.TIMEZONE timeZone
    THIS.DATE = OCONV(EPOCH(), dateTimeFormat)

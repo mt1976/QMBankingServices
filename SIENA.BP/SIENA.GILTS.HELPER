@@ -25,16 +25,14 @@ $INCLUDE UTIL.BP F_UTIL.TRANSLATE.H
    FN.SIENA.STAGING = "SIENA.STAGING" ; FV.SIENA.STAGING = ""
    CALL U_IO.OPENFILE(FN.SIENA.STAGING, FV.SIENA.STAGING, STOP.ON.ERROR, ERROR.TEXT)
 
-   FN.SIENA.CONFIG = "SIENA.CONFIG" ; FV.SIENA.CONFIG = ""
-   CALL U_IO.OPENFILE(FN.SIENA.CONFIG, FV.SIENA.CONFIG, STOP.ON.ERROR, ERROR.TEXT)
 
    CALL U_HEADER("SIENA - Gilts")
 
-   * CALL U_IO.READ(FV.SIENA.CONFIG, "fetch.properties", R.SIENA.CONFIG, STOP.ON.ERROR, ERROR.TEXT)
-
-   * CALL U_CRT.RECORD(R.SIENA.CONFIG)
 ****
-   URI = "https://www.londonstockexchange.com/download/csv/tbLSEBondsDownloadCSV_en.csv"
+*   URI = "https://www.londonstockexchange.com/download/csv/tbLSEBondsDownloadCSV_en.csv"
+
+   CALL U_IO.GET.PROPERTY("siena", "giltsURI", URI)
+
    CSV.DATA = ""
    ID.SIENA.TEMP = ""
    CALL U_OS.CURL(URI, @TRUE, R.SIENA.TEMP, ID.SIENA.TEMP)

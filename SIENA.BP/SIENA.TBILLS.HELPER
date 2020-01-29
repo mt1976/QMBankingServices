@@ -23,9 +23,6 @@ $INSERT UTIL.BP I_UTIL.H
 * OPEN FILES
    FN.SIENA.STAGING = "SIENA.STAGING" ; FV.SIENA.STAGING = ""
    CALL U_IO.OPENFILE(FN.SIENA.STAGING, FV.SIENA.STAGING, STOP.ON.ERROR, ERROR.TEXT)
-   FN.SIENA.CONFIG = "SIENA.CONFIG" ; FV.SIENA.CONFIG = ""
-   CALL U_IO.OPENFILE(FN.SIENA.CONFIG, FV.SIENA.CONFIG, STOP.ON.ERROR, ERROR.TEXT)
-
 
    OUTPUT.DATA = ""
 
@@ -37,27 +34,26 @@ $INSERT UTIL.BP I_UTIL.H
    CALL U_HEADER("SIENA - ":PREFIX)
 
    API.KEY = ""
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "fred", "uri", URI)
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "fred", "uriSeries", SERIES.LABEL)
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "fred", "apiKey", API.KEY)
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "fred", "uriApiKey", API.LABEL)
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "fred", "uriStartDate", START.LABEL)
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "fred", "uriEndDate", END.LABEL)
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "fred", "uriFileType", FILE.LABEL)
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "fred", "filetype", FILE.TYPE)
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "fred", "seriesListID", seriesListID)
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "fred", "dateFormat", dateFormat)
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "fred", "uriObs", OBS.LABEL)
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "fred", "currency", CURRENCY)
+   CALL U_IO.GET.PROPERTY("siena_fred", "uri", URI)
+   CALL U_IO.GET.PROPERTY("siena_fred", "uriSeries", SERIES.LABEL)
+   CALL U_IO.GET.PROPERTY("siena_fred", "apiKey", API.KEY)
+   CALL U_IO.GET.PROPERTY("siena_fred", "uriApiKey", API.LABEL)
+   CALL U_IO.GET.PROPERTY("siena_fred", "uriStartDate", START.LABEL)
+   CALL U_IO.GET.PROPERTY("siena_fred", "uriEndDate", END.LABEL)
+   CALL U_IO.GET.PROPERTY("siena_fred", "uriFileType", FILE.LABEL)
+   CALL U_IO.GET.PROPERTY("siena_fred", "filetype", FILE.TYPE)
+   CALL U_IO.GET.PROPERTY("siena_fred", "seriesListID", seriesListID)
+   CALL U_IO.GET.PROPERTY("siena_fred", "dateFormat", dateFormat)
+   CALL U_IO.GET.PROPERTY("siena_fred", "uriObs", OBS.LABEL)
+   CALL U_IO.GET.PROPERTY("siena_fred", "currency", CURRENCY)
 
    CALL U_CRT.INFO("URI", URI)
    CALL U_CRT.INFO("APIKEY", API.KEY)
    CALL U_CRT.INFO("seriesListID", seriesListID)
    CALL U_CRT.INFO("dateFormat", dateFormat)
    seriesList = ""
-  * CALL U_IO.READ(FV.SIENA.CONFIG, seriesListID, seriesList, STOP.ON.ERROR, ERROR.TEXT)
 
-   CALL U_IO.GET.LIST("SIENA.CONFIG", seriesListID, "SERIES", seriesList, NO.SERIES)
+   CALL U_IO.GET.LIST(seriesListID, "SERIES", seriesList, NO.SERIES)
 
 
    *  CALL U_CRT.RECORD(seriesList)
