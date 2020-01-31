@@ -10,7 +10,7 @@ PROGRAM SIENA.LIBOR
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
+CALL U_INITIALISE("SIENA.LIBOR")
    CALL SIENA.LIBOR.HELPER('LIBOR')
 
    STOP

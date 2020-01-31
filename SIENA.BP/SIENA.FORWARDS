@@ -10,7 +10,7 @@ PROGRAM SIENA.FORWARDS
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
+CALL U_INITIALISE("SIENA.FORWARDS")
 
    CALL SIENA.FORWARDS.HELPER("FXFORWARDS")
 

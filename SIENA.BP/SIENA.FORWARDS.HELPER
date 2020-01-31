@@ -30,19 +30,19 @@ $INCLUDE UTIL.BP I_UTIL.H
    CALL U_HEADER("SIENA - FX FORWARDS")
 
    URI.PREFIX = "" ; URI.SUFFIX = "" ; RVTYPE = "" ; RVFRIG = ""
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "ccyPair", "uriPrefix", URI.PREFIX)
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "ccyPair", "uriSuffix", URI.SUFFIX)
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "ccyPair", "RVType", RVTYPE)
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "ccyPair", "RVFrig", RVFRIG)
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "ccyPair", "precision", precisionValue)
+   CALL U_IO.GET.PROPERTY("siena_ccyPair", "uriPrefix", URI.PREFIX)
+   CALL U_IO.GET.PROPERTY("siena_ccyPair", "uriSuffix", URI.SUFFIX)
+   CALL U_IO.GET.PROPERTY("siena_ccyPair", "RVType", RVTYPE)
+   CALL U_IO.GET.PROPERTY("siena_ccyPair", "RVFrig", RVFRIG)
+   CALL U_IO.GET.PROPERTY("siena_ccyPair", "precision", precisionValue)
 
    PRECISION precisionValue
 
    CCYPAIR.LIST = "" ; NO.PAIRS = -1
-   CALL U_IO.GET.LIST("SIENA.CONFIG", "ccyPair", "X", CCYPAIR.LIST, NO.PAIRS)
+   CALL U_IO.GET.LIST("siena_ccyPair", "X", CCYPAIR.LIST, NO.PAIRS)
 
    TENOR.LIST = "" ; NO.TENORS = -1
-   CALL U_IO.GET.LIST("SIENA.CONFIG", "ccyTenor", "TENOR", TENOR.LIST, NO.TENORS)
+   CALL U_IO.GET.LIST("siena_ccyTenor", "TENOR", TENOR.LIST, NO.TENORS)
 
    CALL U_CRT.INFO("NO PAIRS", NO.PAIRS)
    OUTPUT.DATA = ""

@@ -1,4 +1,4 @@
-PROGRAM SIENA.EONIS
+PROGRAM SIENA.EONIA
 ** INFORMATION ****************************************************************
 * Routine Name   : SIENA.EONIA
 *         Type   : PROGRAM
@@ -10,7 +10,7 @@ PROGRAM SIENA.EONIS
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
+CALL U_INITIALISE("SIENA.EONIA")
 
    CALL SIENA.EONIA.HELPER("EONIA")
 

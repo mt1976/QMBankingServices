@@ -19,10 +19,10 @@ $INCLUDE UTIL.BP I_UTIL.H
 
    dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
 
-   CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "outputMode", outputMode)
-   CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "outputType", outputType)
-   CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "csvChar", csvChar)
-   CALL U_IO.GET.PROPERTY("UTIL.CONFIG", "util", "timeZone", timeZone)
+   CALL U_IO.GET.PROPERTY("util", "outputMode", outputMode)
+   CALL U_IO.GET.PROPERTY("util", "outputType", outputType)
+   CALL U_IO.GET.PROPERTY("util", "csvChar", csvChar)
+   CALL U_IO.GET.PROPERTY("util", "timeZone", timeZone)
 
    OUTPUT.DATE = ""
    CALL U_GET.EPOCH.DATE(OUTPUT.DATE)

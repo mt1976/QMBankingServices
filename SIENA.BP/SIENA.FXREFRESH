@@ -10,7 +10,7 @@ PROGRAM SIENA.FXREFRESH
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
+CALL U_INITIALISE("SIENA.FXREFRESH")
 
    PROCESS.NAME = ""
    CALL U_START(PROCESS.NAME)

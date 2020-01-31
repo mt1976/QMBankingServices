@@ -10,7 +10,7 @@ PROGRAM SIENA.DELIVER
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
+CALL U_INITIALISE("SIENA.DELIVER")
    PROCESS.NAME = ""
    CALL U_START(PROCESS.NAME)
 
@@ -35,7 +35,7 @@ CALL U_INITIALISE("")
    DO.POSTPROCESS = ""
    DO.DELIVER = ""
 
-   CALL U_IO.GET.PROPERTY("SIENA.CONFIG", "siena_cron", DO.ITEM, DO.DATA)
+   CALL U_IO.GET.PROPERTY("siena", DO.ITEM, DO.DATA)
 
    DO.DATA = CONVERT(U_PROP_SEP_ALT, @AM, DO.DATA)
 
