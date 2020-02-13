@@ -1,0 +1,3 @@
+Inconsistency detected by ld.so: ../elf/dl-tls.c: 481: _dl_allocate_tls_init: Assertion `listp->slotinfo[cnt].gen <= GL(dl_tls_generation)' failed!
+[0100/000000.636105:ERROR:zygote_linux.cc(614)] Zygote could not fork: process_type renderer numfds 6 child_pid -1
+[0100/000000.636212:ERROR:zygote_linux.cc(646)] write: Broken pipe (32)
