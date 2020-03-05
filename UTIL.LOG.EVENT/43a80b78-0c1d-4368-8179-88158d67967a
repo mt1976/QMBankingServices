@@ -1,0 +1,24 @@
+MSSQL.EXECUTE
+20200305
+10.58.01
+sales
+select CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode from dbo.CurrencyPair where Active=1
+43a80b78-0c1d-4368-8179-88158d67967a
+mssql-cli -S 194.128.145.37 -d rel_gateway_sal_prd_demo-sys-3 -U rob -P rob123 -i /home/sales/qm/account/mwt-QM-dev/UTIL.SQL.CMD/fe2f773a-6c77-4212-9812-f76ffd24.sql -o /home/sales/qm/account/mwt-QM-dev/UTIL.SQL.RESPONSE/fe2f773a-6c77-4212-9812-f76ffd24.out
+
+0
+U_MSSQL.EXECUTE
+
+489
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO FXREFRESH NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+10.58.01
+10.58.01
+00.00.00
+U_MSSQL.EXECUTE
+
+SIENA.DELIVER
