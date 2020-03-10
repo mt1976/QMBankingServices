@@ -1,0 +1,24 @@
+EXECUTE
+20200305
+15.13.01
+sales
+
+
+COMO ON 6f284c0e-03cd-4a0f-8e32-38ac08b019a6
+
+0
+U_OS.EXECUTE
+
+536
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO FXREFRESH NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+
+
+
+U_OS.EXECUTE
+
+SIENA.DELIVER
