@@ -1,0 +1,28 @@
+PROGRAM U_PURGE
+** INFORMATION ****************************************************************
+* Routine Name   : U_TEST
+*         Type   : PROGRAM
+*         Params :
+*         Loc    : UTIL.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+$INSERT UTIL.BP I_UTIL.H
+
+   CALL U_INITIALISE("U_PURGE")
+   CALL U_START("U_PURGE")
+   CALL U_HEADER("U_PURGE")
+
+   CALL U_LOG.PURGE("LOGS")
+   CALL U_LOG.PURGE("SIENA.PROCESSED")
+   CALL U_LOG.PURGE("UTIL.LOG")
+   CALL U_LOG.PURGE("UTIL.LOG.CMD")
+   CALL U_LOG.PURGE("UTIL.LOG.EVENT")
+   CALL U_LOG.PURGE("UTIL.SQL.CMD")
+   CALL U_LOG.PURGE("UTIL.SQL.RESPONSE")
+   CALL U_STOP("U_PURGE")
+
+   STOP
+END
