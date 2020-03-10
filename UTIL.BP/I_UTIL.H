@@ -47,6 +47,7 @@ equate U_PREF                 to    "M "
 equate U_OUTPUTMODE_log4j     to    "log4j"
 equate U_OUTPUTMODE_csv       to    "csv"
 equate U_OUTPUTMODE_simple    to    "simple"
+equate U_MAXIDLEN           to    20
 * Standard's
 equate U_CRT_AM               to    "^"
 equate U_CRT_VM               to    "]"
