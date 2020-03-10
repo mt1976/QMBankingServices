@@ -4,7 +4,7 @@
 * NAME  : "F_UTIL.LOG.EVENT.H"
 * NAME  : "U_LOG_"
 * BUILT : 28 JAN 2020 at 10.07.52
-*
+* FORCE
 equate U_LOG_EVENT to 1
 equate U_LOG_DATE to 2
 equate U_LOG_TIME to 3
