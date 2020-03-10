@@ -1,0 +1,24 @@
+U_PURGE
+20200310
+16.05.31
+sales
+
+202002101107_FXFWD.log
+SELECT LOGS WITH CREATE.DATE < "20200303"
+
+2350
+U_PURGE
+/dev/pts/0
+102
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+U_TEST
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+
+
+
+U_LOG.PURGE
+LOGS
+U_TEST
