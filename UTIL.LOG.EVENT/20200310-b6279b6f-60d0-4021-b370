@@ -1,0 +1,24 @@
+EXECUTE
+20200310
+15.18.01
+sales
+
+
+COMO OFF
+
+-2
+U_OS.EXECUTE
+/dev/pts/0
+89
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BCC UTIL.BP *
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+
+
+
+U_OS.EXECUTE
+
+BCC
