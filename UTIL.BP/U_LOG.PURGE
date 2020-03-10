@@ -10,6 +10,7 @@ SUBROUTINE U_LOG.PURGE(PURGE.FILE)
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
 * property = purgeAfterDays
 
