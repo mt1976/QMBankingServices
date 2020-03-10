@@ -48,7 +48,7 @@ equate U_OUTPUTMODE_log4j     to    "log4j"
 equate U_OUTPUTMODE_csv       to    "csv"
 equate U_OUTPUTMODE_simple    to    "simple"
 equate U_MAXIDLEN             to    32
-* Standard's
+* PICK Standard's
 equate U_CRT_AM               to    "^"
 equate U_CRT_VM               to    "]"
 equate U_CRT_SM               to    "\"

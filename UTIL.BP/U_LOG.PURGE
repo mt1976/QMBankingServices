@@ -1,0 +1,31 @@
+SUBROUTINE U_LOG.PURGE(PURGE.FILE)
+** INFORMATION ****************************************************************
+* Routine Name   : U_LOG.EVENT
+*         Type   : SUBROUTINE
+*         Params : LOG.DATA, R.UTIL.LOG.EVENT
+*         Loc    : UTIL.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+$INCLUDE UTIL.BP I_UTIL.H
+
+
+R.EVENT                = ""
+R.EVENT<U_LOG_EVENT>   = "U_PURGE"
+R.EVENT<U_LOG_CMD>     = STMT.EX
+R.EVENT<U_LOG_MSG>     = ""
+R.EVENT<U_LOG_RETCD>   = @SYSTEM.RETURN.CODE
+R.EVENT<U_LOG_SUBR>    = "U_PURGE"
+R.EVENT<U_LOG_START>   = OCONV(TIME.START,"MTS.")
+R.EVENT<U_LOG_STOP>    = OCONV(TIME.STOP,"MTS.")
+R.EVENT<U_LOG_ELAPSED> = OCONV(TIME.ELAPSED,"MTS.")
+
+CALL U_LOG.EVENT("", R.EVENT)
+
+
+   CALL U_IO.WRITE(FV.UTIL.LOG.EVENT, ID.UTIL.LOG.CMD, R.UTIL.LOG.EVENT, STOP.ON.ERROR, ERROR.TEXT)
+
+   RETURN
+END
