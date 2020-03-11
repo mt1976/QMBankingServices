@@ -10,7 +10,7 @@ PROGRAM SIENA.EONIA
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("SIENA.EONIA")
+   CALL U_INITIALISE("SIENA.EONIA")
 
    CALL SIENA.EONIA.HELPER("EONIA")
 

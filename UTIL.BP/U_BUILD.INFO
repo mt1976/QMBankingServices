@@ -10,7 +10,7 @@ PROGRAM U_BUILD.INFO
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-CALL U_INITIALISE("U_BUILD.INFO")
+   CALL U_INITIALISE("U_BUILD.INFO")
 
    PNM="UPDATE.INFO"
    CMD.STRING = CONVERT(SPACE(1), @AM, @SENTENCE)

@@ -10,7 +10,7 @@ PROGRAM SIENA.RUN.SCRIPT
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-CALL U_INITIALISE("SIENA.RUN.SCRIPT")
+   CALL U_INITIALISE("SIENA.RUN.SCRIPT")
    PNM = "" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""
    CALL U_START(PNM)
    CALL U_HEADER("SIENA - RUN SCRIPT")

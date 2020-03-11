@@ -10,7 +10,7 @@ PROGRAM GIT
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-CALL U_INITIALISE("GIT")
+   CALL U_INITIALISE("GIT")
    PNM="GIT"
    CALL U_START(PNM)
    CALL U_HEADER("GIT")
@@ -29,7 +29,7 @@ CALL U_INITIALISE("GIT")
 
    END ELSE
       STMT.1 = "git ":CMD.STRING
-      CALL U_OS.COMMAND(STMT.1, @TRUE,"",@FALSE)
+      CALL U_OS.COMMAND(STMT.1, @TRUE, "", @FALSE)
    END
 
    STOP

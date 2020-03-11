@@ -10,7 +10,7 @@ PROGRAM SIENA.FEEDS
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("SIENA.FEEDS")
+   CALL U_INITIALISE("SIENA.FEEDS")
 
    CALL SIENA.SCRIPT.HELPER("fxSPfetch.sh")
    CALL SIENA.SCRIPT.HELPER("liborFetch.sh")

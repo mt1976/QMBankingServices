@@ -10,7 +10,7 @@ PROGRAM SIENA.ECB
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("SIENA.ECB")
+   CALL U_INITIALISE("SIENA.ECB")
 
    CALL SIENA.ECB.HELPER("ECB")
 

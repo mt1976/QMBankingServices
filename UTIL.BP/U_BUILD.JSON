@@ -10,7 +10,7 @@ PROGRAM U_BUILD.JSON
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("U_BUILD.JSON")
+   CALL U_INITIALISE("U_BUILD.JSON")
    PID = ""
    CALL U_START(PID)
    CALL U_HEADER("Convert Properties to JSON files")

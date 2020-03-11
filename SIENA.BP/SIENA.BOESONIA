@@ -1,0 +1,26 @@
+PROGRAM SIENA.BOESONIA
+** INFORMATION ****************************************************************
+* Routine Name   : SIENA.FXREFRESH
+*         Type   : PROGRAM
+*         Params :
+*         Loc    : SIENA.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20200121 at 15.43.53 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+$INSERT UTIL.BP I_UTIL.H
+   CALL U_INITIALISE("SIENA.BOESONIA")
+
+   PROCESS.NAME = ""
+   CALL U_START(PROCESS.NAME)
+
+   CALL U_HEADER("SIENA - BOE SONIA UPDATE(S)")
+
+   CALL SIENA.BOESONIA.HELPER("DELIVER")
+
+   STOP
+
+   CALL U_STOP(PROCESS.NAME)
+
+END

@@ -50,10 +50,10 @@ $INCLUDE UTIL.BP I_UTIL.H
          OUTPUT.TEXT := csvChar:DQUOTE(TEXT)
 
       CASE outputMode = U_OUTPUTMODE_simple
-        OUTPUT.TEXT := "[":@(U_BOLD_ON):OCONV(TIME(),"MTS."):@(U_BOLD_OFF):"]"
-        OUTPUT.TEXT := "[":@(U_BOLD_ON):CALLING.PROCESS"L#20":@(U_BOLD_OFF):"]"
-        OUTPUT.TEXT := "[":@(U_BOLD_ON):UPCASE(ITEM.NAME)"L#10":@(U_BOLD_OFF):"]"
-        OUTPUT.TEXT := "[":TEXT:"]"
+         OUTPUT.TEXT := "[":@(U_BOLD_ON):OCONV(TIME(), "MTS."):@(U_BOLD_OFF):"]"
+         OUTPUT.TEXT := "[":@(U_BOLD_ON):CALLING.PROCESS"L#20":@(U_BOLD_OFF):"]"
+         OUTPUT.TEXT := "[":@(U_BOLD_ON):UPCASE(ITEM.NAME)"L#10":@(U_BOLD_OFF):"]"
+         OUTPUT.TEXT := "[":TEXT:"]"
 
       CASE 1
          OUTPUT.TEXT := "[":@(U_BOLD_ON):OUTPUT.DATE:@(U_BOLD_OFF):"]"

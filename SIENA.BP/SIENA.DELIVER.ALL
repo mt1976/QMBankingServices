@@ -10,7 +10,7 @@ PROGRAM SIENA.DELIVER.ALL
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("SIENA.DELIVER.ALL")
+   CALL U_INITIALISE("SIENA.DELIVER.ALL")
 
    CALL SIENA.DELIVER.HELPER("DELIVER", "")
 

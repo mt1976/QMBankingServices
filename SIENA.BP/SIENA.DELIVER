@@ -10,7 +10,7 @@ PROGRAM SIENA.DELIVER
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("SIENA.DELIVER")
+   CALL U_INITIALISE("SIENA.DELIVER")
 
    PROCESS.NAME = ""
    CALL U_START(PROCESS.NAME)

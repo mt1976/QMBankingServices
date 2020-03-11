@@ -10,10 +10,10 @@ PROGRAM BCC
 * -----------------------------------------------------------------------------
 *
 $INCLUDE UTIL.BP I_UTIL.H
-CALL U_INITIALISE("BCC")
+   CALL U_INITIALISE("BCC")
    PNM="GIT"
    CALL U_START(PNM)
-   CALL U_HEADER("GIT")
+   CALL U_HEADER("COMPILE & CATALOG")
    CMD.STRING = CONVERT(SPACE(1), @AM, @SENTENCE)
    IF CMD.STRING<2> = "" OR CMD.STRING<3> = "" THEN
       CALL U_CRT.INFO("ERROR", "Parameters [BP FILE] [PROGRAM or *]")

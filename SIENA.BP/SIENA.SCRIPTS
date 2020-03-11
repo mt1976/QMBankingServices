@@ -10,7 +10,7 @@ PROGRAM SIENA.SCRIPTS
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("SIENA.SCRIPTS")
+   CALL U_INITIALISE("SIENA.SCRIPTS")
 
    CALL SIENA.SCRIPT.HELPER("SCRIPT")
 
