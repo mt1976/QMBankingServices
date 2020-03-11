@@ -1,0 +1,24 @@
+EXECUTE
+20200311
+07.00.01
+sales
+
+
+COMO ON 20200311-cf84d7ed-00de-40d1-85e6
+
+0
+U_OS.EXECUTE
+
+150
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO BCFXSP NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+
+
+
+U_OS.EXECUTE
+
+SIENA.DELIVER
