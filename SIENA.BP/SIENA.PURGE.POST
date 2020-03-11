@@ -1,0 +1,27 @@
+SUBROUTINE SIENA.PURGE.POST(PROCESS.NAME)
+** INFORMATION ****************************************************************
+* Routine Name   : SIENA.FXREFRESH.HELPER
+*         Type   : SUBROUTINE
+*         Params : PROCESS.NAME, SPECIFIC
+*         Loc    : SIENA.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20200121 at 15.43.53 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+$INCLUDE UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
+
+CALL U_START(PROCESS.NAME)
+CALL U_HEADER("PURGE")
+RETURN.LIST = ""
+NO.ITEMS    = ""
+CALL U_IO.GET.LIST("purgeFiles", "FILES", RETURN.LIST, NO.ITEMS)
+
+FOR I = 1 TO NO.ITEMS
+CALL U_LOG.PURGE(RETURN.LIST<I>)
+NEXT I
+CALL U_STOP(PROCESS.NAME)
+
+  RETURN
+END
