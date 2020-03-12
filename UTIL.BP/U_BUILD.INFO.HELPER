@@ -1,0 +1,58 @@
+PROGRAM U_BUILD.INFO.HELPER(FV.UTIL.BP,ID.UTIL.BP,R.UTIL.CONFIG)
+** INFORMATION ****************************************************************
+* Routine Name   : U_BUILD.INFO
+*         Type   : SUBROUTINE
+*         Params :
+*         Loc    : UTIL.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+$INCLUDE UTIL.BP I_UTIL.H
+
+   PARAM.LIST = ""
+R.UTIL.CONFIG_OLD = R.UTIL.CONFIG_OLD
+*** translate variables in text to values
+   R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<SOURCE.FILE>>", FN.UTIL.BP)
+   R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<DATE>>", OCONV(DATE(), "DX"))
+   R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<TIME>>", OCONV(TIME(), "MTS."))
+   R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<WHO>>", @WHO)
+   R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<USER>>", @USER)
+   R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<HOSTNAME>>", SYSTEM(1015))
+   R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<PLATFORM>>", SYSTEM(1010))
+   R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<YYYY>>", @YEAR4)
+***
+
+      IF ID.UTIL.BP[2] <> ".H" THEN
+         CALL U_IO.READ(FV.UTIL.BP, ID.UTIL.BP, R.UTIL.BP, STOP.ON.ERROR, ERROR.TEXT)
+* always ingore row one, it will have the subr or
+
+         PRG.TYPE = "PROGRAM"
+         FINDSTR "SUBROUTINE" IN R.UTIL.BP THEN
+            PRG.TYPE = "SUBROUTINE"
+         END
+         R.UTIL.CONFIG_OLD = R.UTIL.CONFIG
+         R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<TYPE>>", PRG.TYPE)
+         R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<ROUTINE>>", ID.UTIL.BP)
+         LINE1 = CHANGE(R.UTIL.BP<1>, "(", @AM)
+         LINE1 = CHANGE(LINE1, ")", @AM)
+         PARAM.LIST=LINE1<2>
+         R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<PARAMETERS>>", PARAM.LIST)
+
+         IF R.UTIL.BP<2> = R.UTIL.CONFIG<1> THEN
+* OVERWRITE
+            FOR J = 1 TO 10
+               INS.POS = J+1
+               R.UTIL.BP<INS.POS> = R.UTIL.CONFIG<J>
+            NEXT J
+         END ELSE
+            INS R.UTIL.CONFIG BEFORE R.UTIL.BP<2>
+         END
+         CALL U_IO.WRITE(FV.UTIL.BP, THIS.PROG, R.UTIL.BP, STOP.ON.ERROR, ERROR.TEXT)
+         * CALL U_CRT.RECORD(R.UTIL.BP)
+      END
+      R.UTIL.CONFIG = R.UTIL.CONFIG_OLD
+
+   RETURN
+END
