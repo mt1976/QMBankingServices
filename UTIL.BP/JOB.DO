@@ -1,16 +1,16 @@
 PROGRAM JOB.DO
 ** INFORMATION ****************************************************************
-* Routine Name   : SIENA.DO
+* Routine Name   : JOB.DO
 *         Type   : PROGRAM
 *         Params :
-*         Loc    : SIENA.BP
-* -----------------------------------------------------------------------------
-* Info Updated   : 20200121 at 15.43.53 in MWT-QM-DEV by sales
+*         Loc    : UTIL.BP
+** AUDIT **********************************************************************
+* Info Updated   : 20200312 at 16.22.19 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
-* -----------------------------------------------------------------------------
-*
+*******************************************************************************
+
 $INCLUDE UTIL.BP I_UTIL.H
-CALL U_INITIALISE("JOB.DO")
+   CALL U_INITIALISE("JOB.DO")
    PROCESS.NAME = ""
    CALL U_START(PROCESS.NAME)
 
@@ -57,11 +57,11 @@ CALL U_INITIALISE("JOB.DO")
       CALL U_CRT.INFO("DO DONE", DO.SUBN)
    END
    IF DO.POSTPROCESS <> "" THEN
-     PP.SUB.NAME = "SIENA.":DO.PROCESSOR:".POST"
-     DO.SUBN = SUB.NAME
-     CALL U_CRT.INFO("DO POST", DO.SUBN)
-     CALL @PP.SUB.NAME(PP.SUB.NAME)
-     CALL U_CRT.INFO("DO DONE", DO.SUBN)
+      PP.SUB.NAME = "SIENA.":DO.PROCESSOR:".POST"
+      DO.SUBN = SUB.NAME
+      CALL U_CRT.INFO("DO POST", DO.SUBN)
+      CALL @PP.SUB.NAME(PP.SUB.NAME)
+      CALL U_CRT.INFO("DO DONE", DO.SUBN)
    END
    IF DO.DELIVER <> "" THEN
       CALL U_CRT.INFO("DO DELIVER", DO.DELIVER)

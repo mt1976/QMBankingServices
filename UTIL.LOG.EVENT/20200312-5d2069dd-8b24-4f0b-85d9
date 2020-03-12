@@ -1,0 +1,24 @@
+EXECUTE
+20200312
+15.57.45
+sales
+
+
+CATALOG UTIL.BP U_IO.DELETE
+
+0
+U_OS.EXECUTE
+/dev/pts/0
+370
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BCC UTIL.BP *
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+
+
+
+U_OS.EXECUTE
+
+BCC

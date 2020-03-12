@@ -2,13 +2,13 @@ SUBROUTINE U_OS.COMMAND(STMT, VERBOSE, OUTPUT, SUPPRESS.LOG.EVENT)
 ** INFORMATION ****************************************************************
 * Routine Name   : U_OS.COMMAND
 *         Type   : SUBROUTINE
-*         Params : STMT, VERBOSE
+*         Params : STMT, VERBOSE, OUTPUT, SUPPRESS.LOG.EVENT
 *         Loc    : UTIL.BP
-* -----------------------------------------------------------------------------
-* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
+** AUDIT **********************************************************************
+* Info Updated   : 20200312 at 16.22.19 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
-* -----------------------------------------------------------------------------
-*
+*******************************************************************************
+
 $INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 

@@ -2,13 +2,13 @@ SUBROUTINE U_MSSQL.EXECUTE(SQL.STATEMENT, SQL.ADDRESS, SQL.DATABASE, VERBOSE, ID
 ** INFORMATION ****************************************************************
 * Routine Name   : U_MSSQL.EXECUTE
 *         Type   : SUBROUTINE
-*         Params : SQL.STATEMENT, SQL.DATABASE, VERBOSE, ID_UTIL.SQL.RESPONSE
+*         Params : SQL.STATEMENT, SQL.ADDRESS, SQL.DATABASE, VERBOSE, ID_UTIL.SQL.RESPONSE
 *         Loc    : UTIL.BP
-* -----------------------------------------------------------------------------
-* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
+** AUDIT **********************************************************************
+* Info Updated   : 20200312 at 16.22.19 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
-* -----------------------------------------------------------------------------
-*
+*******************************************************************************
+
 $INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 $INCLUDE UTIL.BP F_UTIL.SQL.CMD.H

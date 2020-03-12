@@ -1,14 +1,14 @@
 SUBROUTINE U_LOG.PURGE(PURGE.FILE)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_LOG.EVENT
+* Routine Name   : U_LOG.PURGE
 *         Type   : SUBROUTINE
-*         Params : LOG.DATA, R.UTIL.LOG.EVENT
+*         Params : PURGE.FILE
 *         Loc    : UTIL.BP
-* -----------------------------------------------------------------------------
-* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
+** AUDIT **********************************************************************
+* Info Updated   : 20200312 at 16.22.19 in MWT-QM-DEV by sales
 *                : on ldn-srv-ubnt01 (Linux)
-* -----------------------------------------------------------------------------
-*
+*******************************************************************************
+
 $INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
