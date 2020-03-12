@@ -1,0 +1,36 @@
+SUBROUTINE SIENA.CONFIGBACKUP.HELPER(PROCESS.NAME)
+** INFORMATION ****************************************************************
+* Routine Name   : SIENA.FXREFRESH.HELPER
+*         Type   : SUBROUTINE
+*         Params : PROCESS.NAME, SPECIFIC
+*         Loc    : SIENA.BP
+* -----------------------------------------------------------------------------
+* Info Updated   : 20200121 at 15.43.53 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+* -----------------------------------------------------------------------------
+*
+$INCLUDE UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
+* INITIALISE
+   CALL U_START(PROCESS.NAME)
+* Setup some temp locations for input data
+
+   ERROR.TEXT = ""; STOP.ON.ERROR = @TRUE ; VERBOSE = @TRUE
+* OPEN FILES
+
+   STMT = "crontab -l"
+   CALL U_OS.COMMAND(STMT, @FALSE, OUTPUT, @FALSE)
+   ID.UTIL.CONFIG="crontab.bk"
+   IF OUTPUT<>"" THEN
+      CALL U_IO.DELETE(FV.UTIL.CONFIG, ID.UTIL.CONFIG, STOP.ON.ERROR, ERROR.TEXT)
+      CALL U_IO.WRITE(FV.UTIL.CONFIG, ID.UTIL.CONFIG, OUTPUT, STOP.ON.ERROR, ERROR.TEXT)
+      CALL MWT.CHECKIN.HELPER(FN.UTIL.CONFIG, ID.UTIL.CONFIG)
+      CALL U_CRT.INFO("BACKUP", "crontab - OK")
+   END ELSE
+      CALL U_CRT.INFO("BACKUP", "crontab - Nothing Done")
+   END
+   CALL U_STOP(PROCESS.NAME)
+
+   RETURN
+
+END

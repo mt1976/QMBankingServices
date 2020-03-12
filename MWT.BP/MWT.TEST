@@ -10,7 +10,7 @@ PROGRAM MWT.TEST
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
+   CALL U_INITIALISE("")
 
    CALL U_CRT.INFO("MWT.TEST", "MWT.TEST")
    CALL U_CRT.INFO("SYSTEM-1047", SYSTEM(1047))

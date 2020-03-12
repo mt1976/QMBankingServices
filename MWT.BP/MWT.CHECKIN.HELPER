@@ -10,7 +10,7 @@ SUBROUTINE MWT.CHECKIN(FN.CHECKIN, ID.CHECKIN)
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
+   CALL U_INITIALISE("")
 
    IF FN.CHECKIN # '' AND ID.CHECKIN # '' THEN
 

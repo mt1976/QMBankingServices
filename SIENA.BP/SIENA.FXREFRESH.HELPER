@@ -33,7 +33,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
       SQL.FIELDS = "CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode"
       SQL.TABLE = "dbo.CurrencyPair"
-      SQL.WHERE = "Active=1"
+      SQL.WHERE = "Active=1 and SpotRerouteDataRerouteCurrency=''"
       RES.COLUMNS = ""
       RES.DATA = ""
       RES.COUNT = ""

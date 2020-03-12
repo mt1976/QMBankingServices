@@ -10,7 +10,7 @@ SUBROUTINE MWT.RESTORE(FN.RESTORE, ID.RESTORE)
 * -----------------------------------------------------------------------------
 *
 $INSERT UTIL.BP I_UTIL.H
-CALL U_INITIALISE("")
+   CALL U_INITIALISE("")
 
    IF FN.RESTORE # '' AND ID.RESTORE # '' THEN
 
