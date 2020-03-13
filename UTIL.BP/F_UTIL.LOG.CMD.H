@@ -3,6 +3,7 @@
 * FILE  : "UTIL.BP"
 * NAME  : "F_UTIL.LOG.CMD.H"
 * NAME  : "U_LC_"
-* BUILT : 10 MAR 2020 at 15.31.38
+* BUILT : 13 MAR 2020 at 10.57.08
 *
 equate U_LC_CMD to 1
+equate U_LC_ID to 0

@@ -40,7 +40,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
       NEXT
 
       IF RETURN.LIST = "" THEN
-         CRT "!ERROR - Could not find ":DQUOTE(IN.PROPERTY.NAME):" in ":ID.PROPERTIES
+         CRT "!ERROR - Could not find ":DQUOTE(IN.LIST.PREFIX):" in ":ID.PROPERTIES
       END
    END ELSE
       CRT "!ERROR - Not enough info to read list ":DQUOTE(IN.LIST.PREFIX):" ":DQUOTE(IN.LIST.NAME)
