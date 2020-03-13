@@ -1,0 +1,24 @@
+EXECUTE
+20200313
+13.27.05
+root
+
+
+CREATE-FILE SIENA.TEMP DIRECTORY
+
+-1
+U_OS.EXECUTE
+/dev/ttys000
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+U_CREATEFILES SIENA
+mercury.local
+192.168.1.42
+Mac
+
+
+
+U_OS.EXECUTE
+
+U_CREATEFILES

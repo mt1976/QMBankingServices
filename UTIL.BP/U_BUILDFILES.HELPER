@@ -5,8 +5,8 @@ SUBROUTINE U_BUILDFILES.HELPER(PROCESS.FILE, INSERT.FILE, PREFIX)
 *         Params : PROCESS.FILE, INSERT.FILE, PREFIX
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200312 at 16.22.19 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
+* Info Updated   : 20200313 at 13.44.54 in DEV by root
+*                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
@@ -53,7 +53,9 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
       FLD.NO = P.ROW<3>
       FLD.NAME = P.ROW<5>
       IF P.ROW<2> = "D" THEN
-         NEW.EQUATES<-1> = "equate ":PREFIX:FLD.NAME:" to ":FLD.NO
+         IF FLD.NO > 0 THEN
+            NEW.EQUATES<-1> = "equate ":PREFIX:FLD.NAME:" to ":FLD.NO
+         END
       END
 *     CALL U_CRT.INFO("DICT",PROCESS.FILE:DQUOTE(THIS.ROW))
       CALL U_BUILDFILES.DICT(PROCESS.FILE, THIS.ROW)

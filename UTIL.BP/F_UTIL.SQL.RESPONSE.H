@@ -3,7 +3,6 @@
 * FILE  : "UTIL.BP"
 * NAME  : "F_UTIL.SQL.RESPONSE.H"
 * NAME  : "U_SQLREP_"
-* BUILT : 13 MAR 2020 at 10.57.09
+* BUILT : 13 MAR 2020 at 13.29.39
 *
 equate U_SQLREP_OUTPUT to 1
-equate U_SQLREP_ID to 0

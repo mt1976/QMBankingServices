@@ -3,11 +3,10 @@
 * FILE  : "UTIL.BP"
 * NAME  : "F_UTIL.TRANSLATE.H"
 * NAME  : "U_TRNS."
-* BUILT : 13 MAR 2020 at 10.57.07
+* BUILT : 13 MAR 2020 at 13.29.37
 *
 equate U_TRNS.RVSERVER to 1
 equate U_TRNS.UKTDATA to 2
 equate U_TRNS.NIPART to 3
 equate U_TRNS.NINAME to 4
 equate U_TRNS.BARCHARTCOM to 5
-equate U_TRNS.ID to 0
