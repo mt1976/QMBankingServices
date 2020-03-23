@@ -1,0 +1,24 @@
+EXECUTE
+20200323
+15.04.18
+sales
+
+
+CATALOG SIENA.BP SIENA.FXREFRESH
+
+0
+U_OS.EXECUTE
+/dev/pts/0
+359
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BCC SIENA.BP *
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+
+
+
+U_OS.EXECUTE
+
+BCC
