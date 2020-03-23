@@ -1,14 +1,14 @@
 SUBROUTINE U_LOG.PURGE(PURGE.FILE)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_LOG.EVENT
+* Routine Name   : U_LOG.PURGE
 *         Type   : SUBROUTINE
-*         Params : LOG.DATA, R.UTIL.LOG.EVENT
+*         Params : PURGE.FILE
 *         Loc    : UTIL.BP
-* -----------------------------------------------------------------------------
-* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
-* -----------------------------------------------------------------------------
-*
+** AUDIT **********************************************************************
+* Info Updated   : 20200313 at 13.44.54 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
 $INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
@@ -18,7 +18,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
 
    FN.PURGE = PURGE.FILE ; FV.PURGE = ""
-   CALL U_IO.OPENFILE(FN.PURGE, FV.PURGE, STOP.ON.ERROR, ERROR.TEXT)
+   CALL U_IO.OPENFILE(FN.PURGE, FV.PURGE, @TRUE, "")
 
    PURGE.PERIOD = 10
    CALL U_IO.GET.PROPERTY("util", "purgeAfterDays", PURGE.PERIOD)

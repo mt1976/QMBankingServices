@@ -2,13 +2,13 @@ SUBROUTINE U_IO.GET.LIST(IN.LIST.NAME, IN.LIST.PREFIX, RETURN.LIST, NO.ITEMS)
 ** INFORMATION ****************************************************************
 * Routine Name   : U_IO.GET.LIST
 *         Type   : SUBROUTINE
-*         Params : IN.PROPERTIES.FILE, IN.LIST.NAME, IN.LIST.PREFIX, RETURN.LIST, NO.ITEMS
+*         Params : IN.LIST.NAME, IN.LIST.PREFIX, RETURN.LIST, NO.ITEMS
 *         Loc    : UTIL.BP
-* -----------------------------------------------------------------------------
-* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
-* -----------------------------------------------------------------------------
-*
+** AUDIT **********************************************************************
+* Info Updated   : 20200313 at 13.44.54 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
 $INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
@@ -40,7 +40,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
       NEXT
 
       IF RETURN.LIST = "" THEN
-         CRT "!ERROR - Could not find ":DQUOTE(IN.PROPERTY.NAME):" in ":ID.PROPERTIES
+         CRT "!ERROR - Could not find ":DQUOTE(IN.LIST.PREFIX):" in ":ID.PROPERTIES
       END
    END ELSE
       CRT "!ERROR - Not enough info to read list ":DQUOTE(IN.LIST.PREFIX):" ":DQUOTE(IN.LIST.NAME)

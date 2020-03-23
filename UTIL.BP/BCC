@@ -4,12 +4,17 @@ PROGRAM BCC
 *         Type   : SUBROUTINE
 *         Params :
 *         Loc    : UTIL.BP
-* -----------------------------------------------------------------------------
-* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
-* -----------------------------------------------------------------------------
-*
+** AUDIT **********************************************************************
+* Info Updated   : 20200313 at 13.44.54 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
 $INCLUDE UTIL.BP I_UTIL.H
+
+   STOP.ON.ERROR = @TRUE
+   ID.UTIL.CONFIG = "codeHeader.txt" ; R.UTIL.CONFIG = ""
+   CALL U_IO.READ(FV.UTIL.CONFIG, ID.UTIL.CONFIG, R.UTIL.CONFIG, STOP.ON.ERROR, ERROR.TEXT)
+
    CALL U_INITIALISE("BCC")
    PNM="GIT"
    CALL U_START(PNM)
@@ -22,41 +27,64 @@ $INCLUDE UTIL.BP I_UTIL.H
    END
 
    DEL CMD.STRING<1>
+
+   THIS.FILE = CMD.STRING<1>
+
+
+   FN.THIS.FILE = THIS.FILE ; FV.THIS.FILE = ""
+   CALL U_IO.OPENFILE(FN.THIS.FILE, FV.THIS.FILE, STOP.ON.ERROR, ERROR.TEXT)
+
    IF CMD.STRING<2> = "*" OR CMD.STRING="ALL" THEN
-      THIS.FILE = CMD.STRING<1>
+
+
       STMT.EX = "SELECT ":THIS.FILE
       CALL U_OS.EXECUTE(STMT.EX, @FALSE)
       PROCESS.LIST = ""
       LOOP
          READNEXT ID.TEMP ELSE EXIT
-         PROCESS.LIST<-1> = ID.TEMP
+         IF ID.TEMP[2]=".H" THEN
+         END ELSE
+            PROCESS.LIST<-1> = ID.TEMP
+         END
       REPEAT
       FOR I = 1 TO DCOUNT(PROCESS.LIST, @AM)
 
          IT.STMT = THIS.FILE:" ":PROCESS.LIST<I>
+         IT.RECORD.ID = PROCESS.LIST<I>
          GOSUB DO.IT
-
 
       NEXT I
 
    END ELSE
+      IT.RECORD.ID = CMD.STRING<2>
       CMD.STRING = CONVERT(@AM, SPACE(1), CMD.STRING)
       IT.STMT = CMD.STRING
       GOSUB DO.IT
+
+
    END
 
    STOP
 
 DO.IT:
-   STMTS = ""
-   STMTS<-1> = "FORMAT ":IT.STMT
-   STMTS<-1> = "BASIC ":IT.STMT
-   STMTS<-1> = "CATALOG ":IT.STMT
+   IF IT.RECORD.ID[1, 1]<>"." THEN
 
-   NO.ACTIONS = DCOUNT(STMTS, @AM)
-   FOR K = 1 TO NO.ACTIONS
-      CALL U_OS.EXECUTE(STMTS<K>, @TRUE)
-   NEXT K
+      CALL U_CRT.INFO("BCC-START", IT.STMT)
+
+      STMTS = ""
+      STMTS<-1> = "FORMAT ":IT.STMT
+      STMTS<-1> = "BASIC ":IT.STMT
+      STMTS<-1> = "CATALOG ":IT.STMT
+
+      CALL U_BUILD.INFO.HELPER(FN.THIS.FILE, FV.THIS.FILE, IT.RECORD.ID, R.UTIL.CONFIG)
+
+      NO.ACTIONS = DCOUNT(STMTS, @AM)
+      FOR K = 1 TO NO.ACTIONS
+         CALL U_OS.EXECUTE(STMTS<K>, @TRUE)
+      NEXT K
+
+      CALL U_CRT.INFO("BCC-STOP", IT.STMT)
+   END
    RETURN
 
 END

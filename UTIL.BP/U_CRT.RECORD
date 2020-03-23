@@ -4,11 +4,11 @@ SUBROUTINE U_CRT.RECORD(R.RECORD)
 *         Type   : SUBROUTINE
 *         Params : R.RECORD
 *         Loc    : UTIL.BP
-* -----------------------------------------------------------------------------
-* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
-* -----------------------------------------------------------------------------
-*
+** AUDIT **********************************************************************
+* Info Updated   : 20200313 at 13.44.54 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
 $INCLUDE UTIL.BP I_UTIL.H
 
 

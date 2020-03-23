@@ -1,0 +1,24 @@
+EXECUTE
+20200313
+13.51.41
+root
+
+
+FORMAT MWT.BP MWT.TEST.SUBR2
+
+0
+U_OS.EXECUTE
+/dev/ttys000
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC MWT.BP *
+mercury.local
+192.168.1.42
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

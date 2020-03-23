@@ -4,11 +4,11 @@ SUBROUTINE U_STOP(PROGRAM.NAME)
 *         Type   : SUBROUTINE
 *         Params : PROGRAM.NAME
 *         Loc    : UTIL.BP
-* -----------------------------------------------------------------------------
-* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
-* -----------------------------------------------------------------------------
-*
+** AUDIT **********************************************************************
+* Info Updated   : 20200313 at 13.44.54 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
 $INSERT UTIL.BP I_UTIL.H
 $INSERT UTIL.BP F_UTIL.LOG.EVENT.H
 

@@ -1,20 +1,20 @@
 PROGRAM U_PURGE
 ** INFORMATION ****************************************************************
-* Routine Name   : U_TEST
+* Routine Name   : U_PURGE
 *         Type   : PROGRAM
 *         Params :
 *         Loc    : UTIL.BP
-* -----------------------------------------------------------------------------
-* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
-* -----------------------------------------------------------------------------
-*
+** AUDIT **********************************************************************
+* Info Updated   : 20200313 at 13.44.54 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
 $INSERT UTIL.BP I_UTIL.H
 
 
    PROCESS.NAME="U_PURGE"
    CALL U_INITIALISE(PROCESS.NAME)
-  CALL SIENA.PURGE.POST(PROCESS.NAME)
+   CALL SIENA.PURGE.POST(PROCESS.NAME)
 
    STOP
 END

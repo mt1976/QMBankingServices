@@ -1,14 +1,14 @@
 SUBROUTINE SIENA.FXREFRESH.POST(PROCESS.NAME)
 ** INFORMATION ****************************************************************
-* Routine Name   : SIENA.FXREFRESH.HELPER
+* Routine Name   : SIENA.FXREFRESH.POST
 *         Type   : SUBROUTINE
-*         Params : PROCESS.NAME, SPECIFIC
+*         Params : PROCESS.NAME
 *         Loc    : SIENA.BP
-* -----------------------------------------------------------------------------
-* Info Updated   : 20200121 at 15.43.53 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
-* -----------------------------------------------------------------------------
-*
+** AUDIT **********************************************************************
+* Info Updated   : 20200313 at 13.49.07 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
 $INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 * INITIALISE

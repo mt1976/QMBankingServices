@@ -4,11 +4,11 @@ SUBROUTINE MWT.CHECKIN(FN.CHECKIN, ID.CHECKIN)
 *         Type   : SUBROUTINE
 *         Params : FN.CHECKIN, ID.CHECKIN
 *         Loc    : MWT.BP
-* -----------------------------------------------------------------------------
-* Info Updated   : 20200121 at 15.43.59 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
-* -----------------------------------------------------------------------------
-*
+** AUDIT **********************************************************************
+* Info Updated   : 20200313 at 13.51.39 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
 $INSERT UTIL.BP I_UTIL.H
    CALL U_INITIALISE("")
 

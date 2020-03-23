@@ -1,0 +1,24 @@
+U_PURGE
+20200313
+10.58.32
+root
+
+202003051543_FXREFRESH.log
+SELECT LOGS WITH CREATE.DATE < "20200306"
+
+432
+U_PURGE
+/dev/ttys000
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+SIENA.DO PURGE
+mercury.local
+192.168.1.42
+Mac
+
+
+
+U_LOG.PURGE
+LOGS
+SIENA.DELIVER

@@ -4,11 +4,11 @@ PROGRAM SIENA.DELIVER
 *         Type   : PROGRAM
 *         Params :
 *         Loc    : SIENA.BP
-* -----------------------------------------------------------------------------
-* Info Updated   : 20200121 at 15.43.53 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
-* -----------------------------------------------------------------------------
-*
+** AUDIT **********************************************************************
+* Info Updated   : 20200313 at 13.49.07 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
 $INCLUDE UTIL.BP I_UTIL.H
    CALL U_INITIALISE("SIENA.DELIVER")
    PROCESS.NAME = ""
@@ -57,7 +57,7 @@ $INCLUDE UTIL.BP I_UTIL.H
       CALL U_CRT.INFO("DO DONE", DO.SUBN)
    END
    IF DO.POSTPROCESS <> "" THEN
-      PP.SUB.NAME = "SIENA.":DO.PROCESSOR:".POST"
+      PP.SUB.NAME = "SIENA.":DO.POSTPROCESS:".POST"
       DO.SUBN = PP.SUB.NAME
       CALL U_CRT.INFO("DO POST", DO.SUBN)
       CALL @PP.SUB.NAME(PP.SUB.NAME)

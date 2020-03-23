@@ -4,11 +4,11 @@ SUBROUTINE SIENA.DELIVER.HELPER(PROCESS.NAME, SPECIFIC)
 *         Type   : SUBROUTINE
 *         Params : PROCESS.NAME, SPECIFIC
 *         Loc    : SIENA.BP
-* -----------------------------------------------------------------------------
-* Info Updated   : 20200121 at 15.43.53 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
-* -----------------------------------------------------------------------------
-*
+** AUDIT **********************************************************************
+* Info Updated   : 20200313 at 13.49.07 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
 $INCLUDE UTIL.BP I_UTIL.H
 
 * INITIALISE
@@ -23,7 +23,7 @@ $INCLUDE UTIL.BP I_UTIL.H
 
    CALL U_HEADER("SIENA - Deliver Data ":DQUOTE(SPECIFIC))
    R.UTIL.CONFIG = ""
-   CALL U_IO.READ(FV.UTIL.CONFIG, "siena_delivery.list", R.UTIL.CONFIG, STOP.ON.ERROR, ERROR.TEXT)
+   CALL U_IO.READ.LOCAL(FV.UTIL.CONFIG, "siena_delivery.list", R.UTIL.CONFIG, STOP.ON.ERROR, ERROR.TEXT)
 
    * CALL U_CRT.RECORD(R.UTIL.CONFIG)
 

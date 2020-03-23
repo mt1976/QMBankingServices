@@ -2,13 +2,13 @@ SUBROUTINE U_IO.READ.LOCAL(FV_FILEVAR, ID_RECORD, R_RECORD, STOP.ON.ERROR, ERROR
 ** INFORMATION ****************************************************************
 * Routine Name   : U_IO.READ.LOCAL
 *         Type   : SUBROUTINE
-*         Params : FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT
+*         Params : FV_FILEVAR, ID_RECORD, R_RECORD, STOP.ON.ERROR, ERROR.TEXT
 *         Loc    : UTIL.BP
-* -----------------------------------------------------------------------------
-* Info Updated   : 20200121 at 15.43.43 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
-* -----------------------------------------------------------------------------
-*
+** AUDIT **********************************************************************
+* Info Updated   : 20200313 at 13.44.54 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
 $INSERT UTIL.BP I_UTIL.H
 
 * CRT "U_IO.READ.LOCAL ":ID_RECORD:R_RECORD:STOP.ON.ERROR:ERROR.TEXT
