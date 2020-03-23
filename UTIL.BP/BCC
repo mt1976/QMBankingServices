@@ -5,12 +5,13 @@ PROGRAM BCC
 *         Params :
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200312 at 16.22.19 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
+* Info Updated   : 20200313 at 13.44.54 in DEV by root
+*                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
 
+   STOP.ON.ERROR = @TRUE
    ID.UTIL.CONFIG = "codeHeader.txt" ; R.UTIL.CONFIG = ""
    CALL U_IO.READ(FV.UTIL.CONFIG, ID.UTIL.CONFIG, R.UTIL.CONFIG, STOP.ON.ERROR, ERROR.TEXT)
 
@@ -60,23 +61,30 @@ $INCLUDE UTIL.BP I_UTIL.H
       IT.STMT = CMD.STRING
       GOSUB DO.IT
 
+
    END
 
    STOP
 
 DO.IT:
-   STMTS = ""
-   STMTS<-1> = "FORMAT ":IT.STMT
-   STMTS<-1> = "BASIC ":IT.STMT
-   STMTS<-1> = "CATALOG ":IT.STMT
+   IF IT.RECORD.ID[1, 1]<>"." THEN
 
-   CALL U_BUILD.INFO.HELPER(FN.THIS.FILE, FV.THIS.FILE, IT.RECORD.ID, R.UTIL.CONFIG)
+      CALL U_CRT.INFO("BCC-START", IT.STMT)
 
-   NO.ACTIONS = DCOUNT(STMTS, @AM)
-   FOR K = 1 TO NO.ACTIONS
-      CALL U_OS.EXECUTE(STMTS<K>, @TRUE)
-   NEXT K
+      STMTS = ""
+      STMTS<-1> = "FORMAT ":IT.STMT
+      STMTS<-1> = "BASIC ":IT.STMT
+      STMTS<-1> = "CATALOG ":IT.STMT
 
+      CALL U_BUILD.INFO.HELPER(FN.THIS.FILE, FV.THIS.FILE, IT.RECORD.ID, R.UTIL.CONFIG)
+
+      NO.ACTIONS = DCOUNT(STMTS, @AM)
+      FOR K = 1 TO NO.ACTIONS
+         CALL U_OS.EXECUTE(STMTS<K>, @TRUE)
+      NEXT K
+
+      CALL U_CRT.INFO("BCC-STOP", IT.STMT)
+   END
    RETURN
 
 END

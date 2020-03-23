@@ -1,0 +1,24 @@
+CHROME.FETCH
+20200313
+15.00.57
+root
+
+20200313-dc0b78fb-55f2-463b-8e2b
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5ENZDJPY/forward-rates
+https://www.barchart.com/forex/quotes/%5ENZDJPY/forward-rates
+0
+U_OS.CHROME.FETCH
+/dev/ttys000
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+SIENA.DO FXFWD
+mercury.local
+192.168.1.42
+Mac
+15.00.55
+15.00.57
+00.00.02
+U_OS.CHROME.FETCH
+
+SIENA.DELIVER

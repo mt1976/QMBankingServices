@@ -1,0 +1,24 @@
+EXECUTE
+20200313
+10.55.30
+root
+
+
+DELETE DICT UTIL.LOG.CMD CMD
+
+1
+U_OS.EXECUTE
+/dev/ttys000
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+U_BUILDFILES ALL
+mercury.local
+192.168.1.42
+Mac
+
+
+
+U_OS.EXECUTE
+
+U_BUILDFILES
