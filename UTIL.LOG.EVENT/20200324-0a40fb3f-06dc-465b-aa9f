@@ -1,0 +1,24 @@
+CHROME.FETCH
+20200324
+17.09.08
+sales
+
+20200324-0a40fb3f-06dc-465b-aa9f
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EEURRON/forward-rates
+https://www.barchart.com/forex/quotes/%5EEURRON/forward-rates
+0
+U_OS.CHROME.FETCH
+
+556
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO FXFWD NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+17.09.04
+17.09.08
+00.00.04
+U_OS.CHROME.FETCH
+
+SIENA.DELIVER
