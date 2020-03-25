@@ -1,0 +1,24 @@
+CHROME.FETCH
+20200325
+12.17.00
+sales
+
+20200325-e398acbb-9117-4ae6-bccd
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EEURSEK/overview
+https://www.barchart.com/forex/quotes/%5EEURSEK/overview
+0
+U_OS.CHROME.FETCH
+
+647
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO BCFXSP NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+12.16.55
+12.17.00
+00.00.05
+U_OS.CHROME.FETCH
+
+SIENA.DELIVER
