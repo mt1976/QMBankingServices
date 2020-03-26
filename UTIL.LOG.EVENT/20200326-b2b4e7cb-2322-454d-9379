@@ -1,0 +1,24 @@
+MSSQL.EXECUTE
+20200326
+06.43.02
+sales
+select CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode from dbo.CurrencyPair where Active=1 and SpotRerouteDataRerouteCurrency=''
+20200326-b2b4e7cb-2322-454d-9379
+mssql-cli -S LDN-SRV-BNK6 -d rel_gateway_sal_prd_demo-sys-3 -U siena -P siena123 -i /home/sales/qm/account/mwt-QM-dev/UTIL.SQL.CMD/20200326-3c62f689-7ea9-4c36-.sql -o /home/sales/qm/account/mwt-QM-dev/UTIL.SQL.RESPONSE/20200326-3c62f689-7ea9-4c36-.out
+
+0
+U_MSSQL.EXECUTE
+
+729
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO FXREFRESH NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+06.43.02
+06.43.02
+00.00.00
+U_MSSQL.EXECUTE
+
+SIENA.DELIVER
