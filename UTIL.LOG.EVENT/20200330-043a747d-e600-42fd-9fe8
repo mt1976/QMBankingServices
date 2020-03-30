@@ -1,0 +1,24 @@
+CHROME.FETCH
+20200330
+10.15.13
+sales
+
+20200330-043a747d-e600-42fd-9fe8
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EAUDJPY/overview
+https://www.barchart.com/forex/quotes/%5EAUDJPY/overview
+0
+U_OS.CHROME.FETCH
+
+34
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO BCFXSP NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+10.15.09
+10.15.12
+00.00.03
+U_OS.CHROME.FETCH
+
+SIENA.DELIVER
