@@ -75,6 +75,8 @@ PROCESS.IT:
             *CALL U_CRT.INFO("CLEAR", PROCESS.FILE)
             *CALL U_CRT.INFO("STMT", EX.STMT)
             CALL U_OS.EXECUTE(EX.STMT, @TRUE)
+            TOUCH.STMT = "touch ":PROCESS.FILE:"/.keep"
+            CALL U_OS.COMMAND(TOUCH.STMT, @TRUE, "", @TRUE)
          END
       NEXT THIS.FILE
 

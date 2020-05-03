@@ -73,6 +73,8 @@ PROCESS.IT:
             EX.STMT = "CREATE-FILE ":PROCESS.FILE:" DIRECTORY"
             CALL U_CRT.INFO("CREATE", PROCESS.FILE)
             CALL U_OS.EXECUTE(EX.STMT, @TRUE)
+            TOUCH.STMT = "touch ":PROCESS.FILE:"/.keep"
+            CALL U_OS.COMMAND(TOUCH.STMT, @TRUE, "", @TRUE)
          END
       NEXT THIS.FILE
 
