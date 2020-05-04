@@ -3,6 +3,6 @@
 * FILE  : "UTIL.BP"
 * NAME  : "F_UTIL.CSV.OUT.H"
 * NAME  : "U_CSVOUT_"
-* BUILT : 03 MAY 2020 at 13.10.10
+* BUILT : 04 MAY 2020 at 15.30.11
 *
 equate U_CSVOUT_DATA to 1
