@@ -52,7 +52,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
       END
 
    END ELSE
-      CRT "!ERROR - Not enough info to read list ":DQUOTE(IN.LIST.PREFIX):" ":DQUOTE(IN.LIST.NAME)
+      CRT "!ERROR - Not enough info to read list ":DQUOTE(ID.PROPERTIES):" ":DQUOTE(IN.PROPERTY.NAME)
 
    END
 
