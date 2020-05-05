@@ -3,6 +3,6 @@
 * FILE  : "UTIL.BP"
 * NAME  : "F_UTIL.CSV.TRANSLATE.H"
 * NAME  : "U_CSVTX_"
-* BUILT : 04 MAY 2020 at 18.51.30
+* BUILT : 05 MAY 2020 at 09.22.27
 *
 equate U_CSVTX_DATA to 1
