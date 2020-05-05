@@ -10,14 +10,14 @@ SUBROUTINE U_SOUNDEX(OUT_VALUE,IN_VALUE)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
-SDEX.NUMERIC.LEN= 4
-SDEX.MASK = '4"0"L'
+SDEX.NUMERIC.LEN= 6
+SDEX.MASK = '6"0"L'
 
 SDEX.MATRIX = ""
 * A E H I O U W Y are ignored
-SDEX.IGNORE   ="AEHIOUWY .&óéü":'"':'"':"()-"
+SDEX.IGNORE   ="AEHIOUWY? '.&óéü":'"':'"':"()-Ááİ�ø"
 SDEX.MATRIX<1>="BFPV"
-SDEX.MATRIX<2>="CGJKQSXZ"
+SDEX.MATRIX<2>="CGJKQSXZžć"
 SDEX.MATRIX<3>="DT"
 SDEX.MATRIX<4>="L"
 SDEX.MATRIX<5>="MN"
