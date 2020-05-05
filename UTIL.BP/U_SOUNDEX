@@ -13,7 +13,7 @@ $INCLUDE UTIL.BP I_UTIL.H
 
 SDEX.MATRIX = ""
 * A E H I O U W Y are ignored
-SDEX.IGNORE   ="AEHIOUWY ü":'"'
+SDEX.IGNORE   ="AEHIOUWY ü":'"()'
 SDEX.MATRIX<1>="B":@VM:"F":@VM:"P":@VM:"V"
 SDEX.MATRIX<2>="C":@VM:"G":@VM:"J":@VM:"K":@VM:"Q":@VM:"S":@VM:"X":@VM:"Z"
 SDEX.MATRIX<3>="D":@VM:"T"
