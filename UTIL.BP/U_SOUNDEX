@@ -1,0 +1,18 @@
+SUBROUTINE U_SOUNDEX(OUT_VALUE,IN_VALUE)
+** INFORMATION ****************************************************************
+* Routine Name   : U_CSV.DO.HELPER
+*         Type   : PROGRAM
+*         Params :
+*         Loc    : UTIL.BP
+** AUDIT **********************************************************************
+* Info Updated   : 20200323 at 15.04.38 in MWT-QM-DEV by sales
+*                : on ldn-srv-ubnt01 (Linux)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+IF IN_VALUE <> "" THEN
+CALL U_CRT.INFO("SOUNDEX", IN_VALUE)
+END
+RETURN
+
+END
