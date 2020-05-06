@@ -1,0 +1,24 @@
+EXECUTE
+20200506
+10.52.00
+root
+
+
+DELETE DICT CRM.CONTACTS PHONE.3
+
+1
+U_OS.EXECUTE
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+U_BUILDFILES CRM
+mercury.local
+192.168.1.42
+Mac
+
+
+
+U_OS.EXECUTE
+
+U_BUILDFILES
