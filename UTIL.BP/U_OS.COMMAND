@@ -5,7 +5,7 @@ SUBROUTINE U_OS.COMMAND(STMT, VERBOSE, OUTPUT, SUPPRESS.LOG.EVENT)
 *         Params : STMT, VERBOSE, OUTPUT, SUPPRESS.LOG.EVENT
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200507 at 08.01.44 in DEV by root
+* Info Updated   : 20200507 at 19.16.14 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

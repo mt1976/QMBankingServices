@@ -1,0 +1,24 @@
+EXECUTE
+20200507
+12.43.06
+root
+
+
+CATALOG UTIL.BP U_GIT.CHECKIN.HELPER
+
+0
+U_OS.EXECUTE
+/dev/ttys000
+4
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC UTIL.BP *
+mercury.local
+192.168.1.42
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

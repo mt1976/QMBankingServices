@@ -5,7 +5,7 @@ SUBROUTINE U_CSV.DO.HELPER(ID_UTIL.CSV.IN)
 *         Params : ID_UTIL.CSV.IN
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200507 at 08.01.44 in DEV by root
+* Info Updated   : 20200507 at 19.16.14 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -67,7 +67,7 @@ PROCESS.IT:
 
    FOR I = 2 TO NO_UTIL.CSV.IN.ROWS
 
-      PROCESS.ROW = CHANGE(TRIM(R_UTIL.CSV.IN<I>, ",", "T"), ",", @AM)
+      PROCESS.ROW = CHANGE(TRIM(R_UTIL.CSV.IN<I>, "|", "T"), "|", @AM)
       * CALL U_CRT.RECORD(PROCESS.ROW)
       R_UTIL.CSV.OUTPUT = ""
       FOR THIS.TX = 1 TO NO_TRANSLATIONS
