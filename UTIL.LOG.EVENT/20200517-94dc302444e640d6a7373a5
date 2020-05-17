@@ -1,0 +1,24 @@
+EXECUTE
+20200517
+18.59.01
+root
+
+
+FORMAT UTIL.BP U_CSV.DO.HELPER
+
+0
+U_OS.EXECUTE
+/dev/ttys000
+4
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC UTIL.BP U_CSV.DO.HELPER
+mercury.local
+192.168.1.42
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

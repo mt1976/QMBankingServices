@@ -5,7 +5,7 @@ SUBROUTINE U_CSV.DO.HELPER(ID_UTIL.CSV.IN)
 *         Params : ID_UTIL.CSV.IN
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200507 at 19.16.14 in DEV by root
+* Info Updated   : 20200517 at 19.01.09 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -105,6 +105,8 @@ PROCESS.IT:
 
       GOSUB AUTOGEN.SOUNDEX
 
+      GOSUB DOMAIN.NAME
+
       CALL U_IO.WRITE(FV_UTIL.CSV.OUTPUT, ID_UTIL.CSV.OUTPUT, R_UTIL.CSV.OUTPUT, @FALSE, "")
 
       FIRST.TIME = @FALSE
@@ -115,8 +117,48 @@ PROCESS.IT:
 
 
 
+DOMAIN.NAME:
+   IN.EMAIL = R_UTIL.CSV.OUTPUT<U_CSVOUT_EMAIL>
+   IN.WEB = R_UTIL.CSV.OUTPUT<U_CSVOUT_WEBSITE>
+   OUT.DOMAIN = ""
+
+   IF IN.EMAIL <> "" THEN
+      TMP = TRIM(CONVERT("@", @AM, IN.EMAIL))
+      OUT.DOMAIN = TMP<2>
+   END
+
+   IF OUT.DOMAIN = "" AND IN.WEB <> "" THEN
+      TMP = IN.WEB
+
+      RMV.PREFIX = "https://"; GOSUB REMOVE.PREFIX
+      RMV.PREFIX = "http://" ; GOSUB REMOVE.PREFIX
+      RMV.PREFIX = "http://"; GOSUB REMOVE.PREFIX
+
+      RMV.PREFIX = "www."; GOSUB REMOVE.PREFIX
+      RMV.PREFIX = "/www."; GOSUB REMOVE.PREFIX
 
 
+      OUT.DOMAIN = TMP
+   END
+
+   R_UTIL.CSV.OUTPUT<U_CSVOUT_DOMAIN> = OUT.DOMAIN
+   RETURN
+
+REMOVE.PREFIX:
+   IF RMV.PREFIX <> "" THEN
+      PREF.LEN = LEN(RMV.PREFIX)
+
+      CHK.VAL = TMP[1, PREF.LEN]
+      IF UPCASE(CHK.VAL) = UPCASE(RMV.PREFIX) THEN
+         TMP.LEN = LEN(TMP)
+         TMP.OUT = TMP[PREF.LEN, 99]
+      END ELSE
+         TMP.OUT = TMP
+      END
+      TMP = TMP.OUT
+   END
+
+   RETURN
 
 
 AUTOGEN.UPPER:

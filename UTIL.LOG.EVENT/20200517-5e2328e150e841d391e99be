@@ -1,0 +1,24 @@
+EXECUTE
+20200517
+18.46.12
+root
+
+
+CLEAR-FILE DATA CRM.DOMAIN.XREF
+
+0
+U_OS.EXECUTE
+/dev/ttys000
+4
+/Users/matttownsend/Development/qm/dev
+DEV
+U_CLEARFILES CRM
+mercury.local
+192.168.1.42
+Mac
+
+
+
+U_OS.EXECUTE
+
+U_CLEARFILES
