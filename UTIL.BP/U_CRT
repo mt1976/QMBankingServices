@@ -5,7 +5,7 @@ SUBROUTINE U_CRT(TEXT, ITEM.NAME, CALLING.PROCESS)
 *         Params : TEXT, ITEM.NAME, CALLING.PROCESS
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200517 at 18.56.09 in DEV by root
+* Info Updated   : 20200520 at 19.23.53 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -29,7 +29,7 @@ $INCLUDE UTIL.BP I_UTIL.H
    OUTPUT.TEXT = ""
 
    BEGIN CASE
-      CASE outputMode = U_OUTPUTMODE_log4j
+      CASE outputMode = U_LOGMODE_log4j
 
 
          * 20191203 UTC 16:15:39.089 INFO  NetClientImpl Client connecting on [localhost/127.0.0.1:7397]..
@@ -41,7 +41,7 @@ $INCLUDE UTIL.BP I_UTIL.H
          OUTPUT.TEXT := " ":ITEM.NAME
          OUTPUT.TEXT := " ":TEXT
 
-      CASE outputMode = U_OUTPUTMODE_csv
+      CASE outputMode = U_LOGMODE_csv
          * "20191203 UTC 16:15:39.089","INFO","NetClientImpl Client connecting on [localhost/127.0.0.1:7397]"
          OUTPUT.TEXT := DQUOTE(OUTPUT.DATE)
          OUTPUT.TEXT := csvChar:DQUOTE(outputType)
@@ -49,9 +49,9 @@ $INCLUDE UTIL.BP I_UTIL.H
          OUTPUT.TEXT := csvChar:DQUOTE(ITEM.NAME)
          OUTPUT.TEXT := csvChar:DQUOTE(TEXT)
 
-      CASE outputMode = U_OUTPUTMODE_simple
-         OUTPUT.TEXT := "[":@(U_BOLD_ON):OCONV(TIME(), "MTS."):@(U_BOLD_OFF):"]"
-         OUTPUT.TEXT := "[":@(U_BOLD_ON):CALLING.PROCESS"L#20":@(U_BOLD_OFF):"]"
+      CASE outputMode = U_LOGMODE_simple
+         OUTPUT.TEXT := "[":@(U_BOLD_ON):CONVERT(":", "", OCONV(TIME(), "MTS")):@(U_BOLD_OFF):"]"
+         OUTPUT.TEXT := "[":@(U_BOLD_ON):CALLING.PROCESS"L#15":@(U_BOLD_OFF):"]"
          OUTPUT.TEXT := "[":@(U_BOLD_ON):UPCASE(ITEM.NAME)"L#10":@(U_BOLD_OFF):"]"
          OUTPUT.TEXT := "[":TEXT:"]"
 
