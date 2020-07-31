@@ -5,8 +5,8 @@ PROGRAM U_BUILDFILES
 *         Params :
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200323 at 15.04.38 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
+* Info Updated   : 20200609 at 19.09.05 in DEV by root
+*                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
@@ -80,6 +80,7 @@ PROCESS.IT:
             CALL U_CRT.INFO("REBUILD", PROCESS.FILE)
             PF = PROCESS.LIST<THIS.PROPERTIES.FILE>
             INSERT.FILE = UPCASE(CONVERT(".", @AM, PF)<2>):".BP"
+            IF PF<>"SIENA" THEN INSERT.FILE = "UTIL.BP"
             *CALL U_CRT.INFO("IN", INSERT.FILE)
             CALL U_BUILDFILES.HELPER(PROCESS.FILE, INSERT.FILE, PREFIX)
          END

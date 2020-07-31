@@ -5,8 +5,8 @@ SUBROUTINE U_INITIALISE(THREAD.ID)
 *         Params : THREAD.ID
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200323 at 15.04.38 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
+* Info Updated   : 20200609 at 19.09.05 in DEV by root
+*                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
@@ -55,9 +55,7 @@ REPORT.ERROR:
 
    ERROR.TEXT = "!ERROR - Unable to Open - ":DQUOTE(FN.FILENAME)
    LOGMSG ERROR.TEXT
-   IF STOP.ON.ERROR THEN
-      STOP ERROR.TEXT
-   END
+   STOP ERROR.TEXT
 
    RETURN
 

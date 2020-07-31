@@ -44,9 +44,9 @@ equate U_TRUNC                to    "-"
 equate U_PROP_SEP             to    "="
 equate U_PROP_SEP_ALT         to    "|"
 equate U_PREF                 to    "M "
-equate U_OUTPUTMODE_log4j     to    "log4j"
-equate U_OUTPUTMODE_csv       to    "csv"
-equate U_OUTPUTMODE_simple    to    "simple"
+equate U_LOGMODE_log4j        to    "log4j"
+equate U_LOGMODE_csv          to    "csv"
+equate U_LOGMODE_simple       to    "simple"
 equate U_MAXIDLEN             to    32
 * PICK Standard's
 equate U_CRT_AM               to    "^"

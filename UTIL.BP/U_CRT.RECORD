@@ -5,8 +5,8 @@ SUBROUTINE U_CRT.RECORD(R.RECORD)
 *         Params : R.RECORD
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200323 at 15.04.38 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
+* Info Updated   : 20200609 at 19.09.05 in DEV by root
+*                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
@@ -19,7 +19,9 @@ $INCLUDE UTIL.BP I_UTIL.H
 
    FOR I = 1 TO NO.ROWS
       ROW = "<":I:">"
-      CALL U_CRT(R.RECORD<I>, ROW, CALLING.SUBR)
+      IF R.RECORD<I> <> "" THEN
+         CALL U_CRT(R.RECORD<I>, ROW, CALLING.SUBR)
+      END
    NEXT I
 
    RETURN

@@ -5,8 +5,8 @@ PROGRAM U_CREATEFILES
 *         Params :
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200323 at 15.04.38 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
+* Info Updated   : 20200609 at 19.09.05 in DEV by root
+*                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
@@ -73,6 +73,8 @@ PROCESS.IT:
             EX.STMT = "CREATE-FILE ":PROCESS.FILE:" DIRECTORY"
             CALL U_CRT.INFO("CREATE", PROCESS.FILE)
             CALL U_OS.EXECUTE(EX.STMT, @TRUE)
+            TOUCH.STMT = "touch ":PROCESS.FILE:"/.keep"
+            CALL U_OS.COMMAND(TOUCH.STMT, @TRUE, "", @TRUE)
          END
       NEXT THIS.FILE
 

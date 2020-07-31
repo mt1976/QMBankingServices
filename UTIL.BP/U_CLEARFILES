@@ -5,8 +5,8 @@ PROGRAM U_CLEARFILES
 *         Params :
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200323 at 15.04.38 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
+* Info Updated   : 20200609 at 19.09.05 in DEV by root
+*                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
@@ -72,9 +72,11 @@ PROCESS.IT:
          PROCESS.FILE = PROCESS.ITEM<2>
          IF PROCESS.WHAT = "FILE" THEN
             EX.STMT = "CLEAR-FILE DATA ":PROCESS.FILE
-            CALL U_CRT.INFO("CLEAR", PROCESS.FILE)
+            *CALL U_CRT.INFO("CLEAR", PROCESS.FILE)
             *CALL U_CRT.INFO("STMT", EX.STMT)
             CALL U_OS.EXECUTE(EX.STMT, @TRUE)
+            TOUCH.STMT = "touch ":PROCESS.FILE:"/.keep"
+            CALL U_OS.COMMAND(TOUCH.STMT, @TRUE, "", @TRUE)
          END
       NEXT THIS.FILE
 

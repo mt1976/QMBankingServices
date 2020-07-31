@@ -5,8 +5,8 @@ SUBROUTINE U_IO.GET.PROPERTY(IN.PROPERTIES, IN.PROPERTY.NAME, RETURN.VAL)
 *         Params : IN.PROPERTIES, IN.PROPERTY.NAME, RETURN.VAL
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200323 at 15.04.38 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
+* Info Updated   : 20200609 at 19.09.05 in DEV by root
+*                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
@@ -52,7 +52,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
       END
 
    END ELSE
-      CRT "!ERROR - Not enough info to read list ":DQUOTE(IN.LIST.PREFIX):" ":DQUOTE(IN.LIST.NAME)
+      CRT "!ERROR - Not enough info to read list ":DQUOTE(ID.PROPERTIES):" ":DQUOTE(IN.PROPERTY.NAME)
 
    END
 
