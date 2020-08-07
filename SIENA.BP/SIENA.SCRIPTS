@@ -1,6 +1,6 @@
-PROGRAM SIENA.SCRIPTS
+PROGRAM UTIL.SCRIPTS
 ** INFORMATION ****************************************************************
-* Routine Name   : SIENA.SCRIPTS
+* Routine Name   : UTIL.SCRIPTS
 *         Type   : PROGRAM
 *         Params :
 *         Loc    : SIENA.BP
@@ -10,7 +10,7 @@ PROGRAM SIENA.SCRIPTS
 *******************************************************************************
 
 $INSERT UTIL.BP I_UTIL.H
-   CALL U_INITIALISE("SIENA.SCRIPTS")
+   CALL U_INITIALISE("UTIL.SCRIPTS")
 
    CALL SIENA.SCRIPT.HELPER("SCRIPT")
 
