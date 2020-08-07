@@ -20,15 +20,15 @@ $INCLUDE UTIL.BP I_UTIL.H
 
    STMT.1 = "git add ."
    STMT.2 = "git commit -m ":DQUOTE("au":DOWNCASE(THIS.DATE))
-   STMT.2 = STMT.2:' -m"'
-   STMT.2 = STMT.2:"\n DATE :":OCONV(DATE(), "DX")
-   STMT.2 = STMT.2:"\n TIME :":OCONV(TIME(), "MTS.")
-   STMT.2 = STMT.2:"\n USER :":@USER
-   STMT.2 = STMT.2:"\n PATH :":@PATH
-   STMT.2 = STMT.2:"\n WHO  :":@WHO
-   STMT.2 = STMT.2:"\n IP   :":IP4.ADDRESS
-   STMT.2 = STMT.2:"\n HOST :":SYSTEM(1015)
-   STMT.2 = STMT.2:"\n OS   :":SYSTEM(1010)
+   STMT.2 = STMT.2:' -m" Automated Checkin '
+   STMT.2 = STMT.2:"DATE [":OCONV(DATE(), "DX"):"] "
+   STMT.2 = STMT.2:"TIME [":OCONV(TIME(), "MTS."):"] "
+   STMT.2 = STMT.2:"USER [":@USER:"] "
+   STMT.2 = STMT.2:"PATH [":@PATH:"] "
+   STMT.2 = STMT.2:"WHO [":@WHO:"] "
+   STMT.2 = STMT.2:"IP [":IP4.ADDRESS:"] "
+   STMT.2 = STMT.2:"HOST [":SYSTEM(1015):"] "
+   STMT.2 = STMT.2:"OS [":SYSTEM(1010):"] "
    STMT.2 = STMT.2:'"'
    STMT.3 = "git push"
 
