@@ -55,9 +55,11 @@ crontab -e
 ```
 
 ``` cron
-27 16 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXECB >> CRON_FXECB.log
-0,10,20,30,40,50 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXCCYUPDATE >> CRON_FXCCYUPDATE.log
-5,15,25,35,45,55 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO BCFXSP >> CRON_BCFXSP.log
-2,37 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXFWD >> CRON_BCFXFWD.log
-29 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO CHECKIN >> CRON_CHECKIN.log
+* 0 * * * cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO PURGE NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_PURGE.log
+* 1 * * * cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO CHECKIN NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_GIT.log
+25 16 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXECB NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_ECB.log
+0 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXREFRESH NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_FXREFRESH.log
+10,20,30,40,50 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO BCFXSP NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_FXSP.log
+30 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXFWD NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_FXFWD.log
+45 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO CHECKIN NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_GIT.log
 ```
