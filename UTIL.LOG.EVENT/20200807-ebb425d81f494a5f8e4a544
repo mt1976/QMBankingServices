@@ -1,0 +1,24 @@
+U_PURGE
+20200807
+10.43.00
+sales
+
+20200504-26f0ac16b8de45f4b6c4c43.log
+SELECT UTIL.LOG WITH CREATE.DATE < "20200804"
+
+12306
+U_PURGE
+/dev/pts/0
+669
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO PURGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+
+
+
+U_LOG.PURGE
+UTIL.LOG
+SIENA.DELIVER
