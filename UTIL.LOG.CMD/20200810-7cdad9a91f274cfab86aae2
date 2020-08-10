@@ -1,0 +1,3 @@
+Inconsistency detected by ld.so: ../elf/dl-tls.c: 481: _dl_allocate_tls_init: Assertion `listp->slotinfo[cnt].gen <= GL(dl_tls_generation)' failed!
+[0100/000000.284428:INFO:child_thread_impl.cc(847)] ChildThreadImpl::EnsureConnected()
+[0810/132933.296428:INFO:child_thread_impl.cc(847)] ChildThreadImpl::EnsureConnected()
