@@ -27,9 +27,11 @@ Below is the information about how to structure a 'cron' item.
 ```
 ## crontab data
 ``` sh
-27 16 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXECB NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_ECB.log
-13,27,43,58 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXREFRESH NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_FXREFRESH.log
-0,15,30,45 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO BCFXSP NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_FXSP.log
-7,37 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXFWD NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_FXFWD.log
-14 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO CHECKIN NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_GIT.log
+0 0 * * * cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO PURGE NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_PURGE.log
+0 1 * * * cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO CHECKIN NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_GIT.log
+25 16 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXECB NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_ECB.log 
+0,30 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXREFRESH NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_FXREFRESH.log 
+5,15,25,35,45,55 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO BCFXSP NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_FXSP.log 
+10,40 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXFWD NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_FXFWD.log
+20 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO CHECKIN NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_GIT.log
 ```
