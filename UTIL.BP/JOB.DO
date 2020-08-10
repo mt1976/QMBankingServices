@@ -1,11 +1,11 @@
 PROGRAM JOB.DO
 ** INFORMATION ****************************************************************
-* Routine Name   : SIENA.DO
+* Routine Name   : JOB.DO
 *         Type   : PROGRAM
 *         Params :
-*         Loc    : SIENA.BP
+*         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200507 at 08.02.01 in DEV by root
+* Info Updated   : 20200810 at 16.07.39 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
