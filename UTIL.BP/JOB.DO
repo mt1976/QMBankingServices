@@ -1,20 +1,20 @@
-PROGRAM U_BATCH.DO
+PROGRAM JOB.DO
 ** INFORMATION ****************************************************************
-* Routine Name   : U_BATCH.DO
+* Routine Name   : SIENA.DO
 *         Type   : PROGRAM
 *         Params :
-*         Loc    : UTIL.BP
+*         Loc    : SIENA.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200810 at 15.59.17 in DEV by root
+* Info Updated   : 20200507 at 08.02.01 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
-   CALL U_INITIALISE("U_BATCH.DO")
+   CALL U_INITIALISE("JOB.DO")
    PROCESS.NAME = ""
    CALL U_START(PROCESS.NAME)
 
-   CALL U_HEADER("U_BATCH.DO")
+   CALL U_HEADER("JOB.DO")
 
    CMD.STRING = CONVERT(SPACE(1), @AM, @SENTENCE)
    IF CMD.STRING<2> = "" THEN
@@ -22,37 +22,20 @@ $INCLUDE UTIL.BP I_UTIL.H
       CALL U_STOP(PROCESS.NAME)
       STOP
    END
-
 * remove the program name from the stack of cmds
    DEL CMD.STRING<1>
 * loop through the cmd strings
    THIS.CMD = 1
 
-   DO.BATCH = CMD.STRING<THIS.CMD>
-   CALL U_CRT.INFO("BATCH", DO.BATCH)
+   DO.ITEM = CMD.STRING<THIS.CMD>
+   CALL U_CRT.INFO("PROCESS", DO.ITEM)
 
    DO.SCRIPT = ""
    DO.PROCESSOR = ""
    DO.POSTPROCESS = ""
    DO.DELIVER = ""
 
-   * CALL U_IO.GET.PROPERTY("jobs", DO.BATCH, DO.DATA)
-   DO.DATA = ""
-   NO.ITEMS = 0
-
-   CALL U_IO.GET.LIST("jobs", DO.BATCH, DO.DATA, NO.ITEMS)
-
-   * CALL U_CRT.INFO("DATA", DO.DATA)
-   CALL U_CRT.INFO("ITEMS", NO.ITEMS)
-
-   FOR THIS.JOB = 1 TO NO.ITEMS
-
-      EX.STMT = "SIENA.DO ":DO.DATA<THIS.JOB>
-      CALL U_CRT.INFO("EXEC", EX.STMT)
-      CALL U_OS.EXECUTE(EX.STMT, @TRUE)
-
-   NEXT THIS.JOB
-
+   CALL U_JOB.DO.HELPER(DO.ITEM)
 
    CALL U_STOP(PROCESS.NAME)
 

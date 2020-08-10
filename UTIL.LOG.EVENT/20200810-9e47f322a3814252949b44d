@@ -1,0 +1,24 @@
+CHROME.FETCH
+20200810
+16.05.35
+root
+
+20200810-9e47f322a3814252949b44d
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EUSDHKD/overview
+https://www.barchart.com/forex/quotes/%5EUSDHKD/overview
+0
+U_OS.CHROME.FETCH
+/dev/ttys002
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+U_BATCH.DO TEST
+mercury.local
+
+Mac
+16.05.34
+16.05.35
+00.00.01
+U_OS.CHROME.FETCH
+
+U_JOB.DO.HELPER
