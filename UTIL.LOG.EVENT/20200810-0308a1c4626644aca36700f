@@ -1,0 +1,24 @@
+EXECUTE
+20200810
+00.39.02
+sales
+
+
+COMO ON 20200810-f43f73240af74a1493d92db
+
+0
+U_OS.EXECUTE
+
+280
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+SIENA.DO PURGE NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+
+
+
+U_OS.EXECUTE
+
+SIENA.DELIVER
