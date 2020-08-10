@@ -5,7 +5,7 @@ PROGRAM U_BATCH.DO
 *         Params :
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200810 at 15.54.15 in DEV by root
+* Info Updated   : 20200810 at 15.59.17 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -42,9 +42,13 @@ $INCLUDE UTIL.BP I_UTIL.H
 
    CALL U_IO.GET.LIST("jobs", DO.BATCH, DO.DATA, NO.ITEMS)
 
+   * CALL U_CRT.INFO("DATA", DO.DATA)
+   CALL U_CRT.INFO("ITEMS", NO.ITEMS)
+
    FOR THIS.JOB = 1 TO NO.ITEMS
 
-      EX.STMT = "SIENA.DO ":DO.DATA<NO.ITEMS>
+      EX.STMT = "SIENA.DO ":DO.DATA<THIS.JOB>
+      CALL U_CRT.INFO("EXEC", EX.STMT)
       CALL U_OS.EXECUTE(EX.STMT, @TRUE)
 
    NEXT THIS.JOB
