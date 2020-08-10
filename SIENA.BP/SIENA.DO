@@ -1,4 +1,4 @@
-PROGRAM SIENA.DELIVER
+PROGRAM SIENA.DO
 ** INFORMATION ****************************************************************
 * Routine Name   : SIENA.DO
 *         Type   : PROGRAM
@@ -10,7 +10,7 @@ PROGRAM SIENA.DELIVER
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
-   CALL U_INITIALISE("SIENA.DELIVER")
+   CALL U_INITIALISE("SIENA.DO")
    PROCESS.NAME = ""
    CALL U_START(PROCESS.NAME)
 
