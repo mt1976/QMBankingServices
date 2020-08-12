@@ -5,7 +5,7 @@ SUBROUTINE U_LOG.PURGE(PURGE.FILE)
 *         Params : PURGE.FILE
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200609 at 19.09.05 in DEV by root
+* Info Updated   : 20200810 at 16.07.39 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -34,7 +34,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
       CALL U_IO.DELETE(FV.PURGE, ID.PURGE, STOP.ON.ERROR, ERROR.TEXT)
 
-    *  CALL U_CRT.INFO("PURGEITEM", PURGE.FILE:SPACE(1):ID.PURGE)
+      *  CALL U_CRT.INFO("PURGEITEM", PURGE.FILE:SPACE(1):ID.PURGE)
 
       R.EVENT = ""
       R.EVENT<U_LOG_EVENT> = "U_PURGE"

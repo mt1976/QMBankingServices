@@ -1,20 +1,20 @@
-PROGRAM U_BATCH.DO
+PROGRAM BATCH.DO
 ** INFORMATION ****************************************************************
-* Routine Name   : U_BATCH.DO
+* Routine Name   : BATCH.DO
 *         Type   : PROGRAM
 *         Params :
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200810 at 16.04.03 in DEV by root
+* Info Updated   : 20200810 at 16.07.39 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
-   CALL U_INITIALISE("U_BATCH.DO")
+   CALL U_INITIALISE("BATCH.DO")
    PROCESS.NAME = ""
    CALL U_START(PROCESS.NAME)
 
-   CALL U_HEADER("U_BATCH.DO")
+   CALL U_HEADER("BATCH.DO")
 
    CMD.STRING = CONVERT(SPACE(1), @AM, @SENTENCE)
    IF CMD.STRING<2> = "" THEN
