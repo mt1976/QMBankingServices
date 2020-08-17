@@ -1,0 +1,4 @@
+Inconsistency detected by ld.so: ../elf/dl-tls.c: 481: _dl_allocate_tls_init: Assertion `listp->slotinfo[cnt].gen <= GL(dl_tls_generation)' failed!
+[0817/133630.405699:ERROR:broker_posix.cc(43)] Invalid node channel message
+[0100/000000.378952:INFO:child_thread_impl.cc(847)] ChildThreadImpl::EnsureConnected()
+[0817/133645.406113:INFO:child_thread_impl.cc(847)] ChildThreadImpl::EnsureConnected()
