@@ -32,7 +32,9 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
       THIS.SOURCE = CONVERT(U_PROP_SEP_ALT, @AM, THIS.SOURCE)
 
       SQL.FIELDS = "CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode"
-      SQL.TABLE = "dbo.CurrencyPair"
+*      SQL.TABLE = "dbo.CurrencyPair"
+      SQL.TABLE = "dbo.vwRateSourceCurrencyPair"
+
       SQL.WHERE = "Active=1 and SpotRerouteDataRerouteCurrency=''"
       RES.COLUMNS = ""
       RES.DATA = ""
