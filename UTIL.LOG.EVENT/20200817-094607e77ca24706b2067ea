@@ -1,0 +1,24 @@
+CHROME.FETCH
+20200817
+16.19.39
+sales
+
+20200817-094607e77ca24706b2067ea
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EGBPUSD/overview
+https://www.barchart.com/forex/quotes/%5EGBPUSD/overview
+0
+U_OS.CHROME.FETCH
+/dev/pts/0
+167
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BATCH.DO QUARTER
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+16.19.35
+16.19.38
+00.00.03
+U_OS.CHROME.FETCH
+
+U_JOB.DO.HELPER
