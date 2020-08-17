@@ -1,0 +1,24 @@
+CHROME.FETCH
+20200817
+18.31.48
+sales
+
+20200817-e4130a23f61b43d0aa742d6
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5ENZDUSD/forward-rates
+https://www.barchart.com/forex/quotes/%5ENZDUSD/forward-rates
+0
+U_OS.CHROME.FETCH
+
+202
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BATCH.DO HALFPAST NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+18.31.45
+18.31.48
+00.00.03
+U_OS.CHROME.FETCH
+
+U_JOB.DO.HELPER
