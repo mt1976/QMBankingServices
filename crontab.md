@@ -25,13 +25,13 @@ Below is the information about how to structure a 'cron' item.
 #
 # m h  dom mon dow   command
 ```
-## crontab data
-``` sh
-0 0 * * * cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO PURGE NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_PURGE.log
-0 1 * * * cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO CHECKIN NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_GIT.log
-25 16 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXECB NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_ECB.log 
-0,30 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXREFRESH NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_FXREFRESH.log 
-5,15,25,35,45,55 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO BCFXSP NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_FXSP.log 
-10,40 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXFWD NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_FXFWD.log
-20 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO CHECKIN NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_GIT.log
+# New Crontab
+``` cron
+* 4 * * * /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm BATCH.DO OVERNIGHT NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_OVERNIGHT.log
+0 6-18 * * 1-5 /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm BATCH.DO HOURLY NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_HOURLY.log
+30 6-18 * * 1-5 /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm BATCH.DO HALFPAST NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_HALFPAST.log
+15,45 6-18 * * 1-5 /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm BATCH.DO QUARTER NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_QUARTER.log
+5,10,20,25,35,40,50,55 6-18 * * 1-5 /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm BATCH.DO 05MINS NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_05MINS.log
+27 16 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXECB NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_ECB.log
+
 ```
