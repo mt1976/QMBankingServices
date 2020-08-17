@@ -1,0 +1,24 @@
+EXECUTE
+20200817
+17.10.01
+sales
+
+
+COMO ON 20200817-bd619011452846358d67bcc
+
+0
+U_OS.EXECUTE
+
+186
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BATCH.DO 05MINS NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+
+
+
+U_OS.EXECUTE
+
+U_JOB.DO.HELPER

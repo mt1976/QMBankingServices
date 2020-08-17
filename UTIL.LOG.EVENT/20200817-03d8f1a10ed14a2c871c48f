@@ -1,0 +1,24 @@
+CHROME.FETCH
+20200817
+17.31.59
+sales
+
+20200817-03d8f1a10ed14a2c871c48f
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EUSDHKD/forward-rates
+https://www.barchart.com/forex/quotes/%5EUSDHKD/forward-rates
+0
+U_OS.CHROME.FETCH
+
+190
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BATCH.DO HALFPAST NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+17.31.56
+17.31.59
+00.00.03
+U_OS.CHROME.FETCH
+
+U_JOB.DO.HELPER
