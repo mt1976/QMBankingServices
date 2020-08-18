@@ -3,6 +3,6 @@
 * FILE  : "UTIL.BP"
 * NAME  : "F_UTIL.SQL.CMD.H"
 * NAME  : "U_SQLCMD."
-* BUILT : 07 AUG 2020 at 13.22.56
+* BUILT : 18 AUG 2020 at 12.00.46
 *
 equate U_SQLCMD.COMMAND to 1

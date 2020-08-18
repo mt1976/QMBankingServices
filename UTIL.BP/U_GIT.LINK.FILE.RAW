@@ -16,7 +16,8 @@ PROGRAM U_GIT.LINK.FILE.RAW
 
    OPEN FN.VOC TO FV.VOC ELSE
 
-      ERROR.TEXT = "ERROR - Unable to Open ":DQUOTE(FN.VOC)
+      ERROR.TEXT = "ERROR   - Unable to Open ":DQUOTE(FN.VOC)
+
       STOP ERROR.TEXT
 
    END
@@ -25,25 +26,24 @@ PROGRAM U_GIT.LINK.FILE.RAW
    PN.LEN=LEN("U_GIT.LINK.FILE.RAW")+2
    ID.VOC = @SENTENCE[PN.LEN, 999]
 
-   CRT "CREATE - DICT ":DQUOTE(ID.VOC)
-
+   CRT "LINK    - ":DQUOTE(ID.VOC)
    STMT = "CREATE-FILE DICT ":ID.VOC:" DIRECTORY"
-   EXECUTE STMT
+   CRT "STMT    - ":DQUOTE(STMT)
+
+   EXECUTE STMT CAPTURING OUTPUT
+   CRT "OUTPUT  - ":DQUOTE(OUTPUT)
 
    READ R.VOC FROM FV.VOC, ID.VOC ELSE
-      ERROR.TEXT = "ERROR - Unable to read ":DQUOTE(ID.RECORD)
+      ERROR.TEXT = "ERROR   - Unable to read ":DQUOTE(ID.RECORD)
       STOP ERROR.TEXT
    END
 
    IF R.VOC<2> = "" THEN
       R.VOC<2> = ID.VOC
       WRITE R.VOC TO FV.VOC, ID.VOC
-     CRT "INFO - File link complete"
+      CRT "SUCCESS - ":DQUOTE("File link complete")
    END ELSE
-     CRT "INFO - File is already linked"
+      CRT "INFO    - ":DQUOTE("File already linked")
    END
-
-   CRT "DONE - ":DQUOTE(ID.VOC)
-
-   STOP
+   STOP "DONE    - ":DQUOTE(ID.VOC)
 END
