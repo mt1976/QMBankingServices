@@ -1,0 +1,42 @@
+OS.COMMAND
+20200818
+08.30.49
+sales
+[M] INITIALISE COMMON VARS - START
+20200818-5844a429e885434da11d6d7
+[M] JQ             = [/snap/bin/jq]
+[M] FIXERACCESSKEY = [c3811be81a6df1db0e14304d77b3a23d]
+1
+U_OS.COMMAND
+
+298
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BATCH.DO HALFPAST NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+[M] TODAY     = [20200818]
+[M] FETCH     = [2020-08-18]
+[M] API KEY   = [d4d50b886c05baa2795c363319ca64db]
+U_OS.COMMAND
+[M] OUT CCY   = [GBR]
+U_JOB.DO.HELPER
+[M] OUTPUT TO = [/home/sales/qm/account/mwt-QM-dev/SIENA.TEMP/fred_CPI_GBRCPIALLMINMEI_20200818.json]
+[M] request    = [https://api.stlouisfed.org/fred/series/observations?series_id=GBRCPIALLMINMEI&api_key=d4d50b886c05baa2795c363319ca64db&realtime_start=2020-08-18&realtime_end=2020-08-18&file_type=json]
+[M] No. Rates = [785]
+[M] Rate Date = ["2020-06-01"]
+[M] Rate Value = ["108.8"]
+[M] SERIES ID = [CPALCY01USQ661N]
+[M] OUT CCY   = [CPA]
+[M] OUT TENOR = [LC]
+[M] OUTPUT TO = [/home/sales/qm/account/mwt-QM-dev/SIENA.TEMP/fred_CPI_CPALCY01USQ661N_20200818.json]
+[M] request    = [https://api.stlouisfed.org/fred/series/observations?series_id=CPALCY01USQ661N&api_key=d4d50b886c05baa2795c363319ca64db&realtime_start=2020-08-18&realtime_end=2020-08-18&file_type=json]
+[M] No. Rates = [261]
+[M] Rate Date = ["2020-04-01"]
+[M] Rate Value = ["108.107402761635"]
++-+-+-+ +-+-+-+ +-+-+-+-+
+|[|M|]| |J|O|B| |D|O|N|E|
++-+-+-+ +-+-+-+ +-+-+-+-+
+
+bash /home/sales/qm/account/mwt-QM-dev/UTIL.SCRIPTS/cpiFetch.sh
