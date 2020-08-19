@@ -1,0 +1,24 @@
+CHROME.FETCH
+20200819
+10.20.09
+sales
+
+20200819-4f0432833ec040c3b8b687b
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EEURGBP/overview
+https://www.barchart.com/forex/quotes/%5EEURGBP/overview
+0
+U_OS.CHROME.FETCH
+
+537
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BATCH.DO 05MINS NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+10.20.05
+10.20.09
+00.00.04
+U_OS.CHROME.FETCH
+
+U_JOB.DO.HELPER
