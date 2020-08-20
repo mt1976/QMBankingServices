@@ -52,6 +52,7 @@ $INSERT UTIL.BP F_UTIL.LOG.EVENT.H
 
       CALL U_LOG.EVENT("", R.EVENT)
       CRT "!INFO - Done ":DQUOTE(THIS.PROCESS)
+      
 
    END
 
