@@ -1,0 +1,24 @@
+CHROME.FETCH
+20200820
+11.00.46
+sales
+
+20200820-e84f48f6dce144da8b1f53d
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EAUDUSD/forward-rates
+https://www.barchart.com/forex/quotes/%5EAUDUSD/forward-rates
+0
+U_OS.CHROME.FETCH
+
+762
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BATCH.DO HOURLY NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+11.00.42
+11.00.46
+00.00.04
+U_OS.CHROME.FETCH
+
+U_JOB.DO.HELPER
