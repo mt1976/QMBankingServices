@@ -1,0 +1,8 @@
+OPEN "UTIL.TRANSFER"
+OPEN "UTIL.BACKUP"
+OPEN "UTIL.CONFIG"
+[K[[1m20200820T042306[m][[1mi[m][[1mU_OS.EXECUTE        [m][[1mEXECUTE        [m][DELETE UTIL.TRANSFER "UTIL.CONFIG~LDN-SRV-UBNT01!crontab.bk"]
+[K[[1m20200820T042306[m][[1mi[m][[1mU_OS.EXECUTE        [m][[1m<1>            [m][1 record(s) deleted]
+[K[[1m20200820T042306[m][[1mi[m][[1mU_OS.EXECUTE        [m][[1mEXECUTE        [m][COPY FROM UTIL.CONFIG TO UTIL.TRANSFER "LDN-SRV-UBNT01!crontab.bk","UTIL.CONFIG~LDN-SRV-UBNT01!crontab.bk"]
+[K[[1m20200820T042306[m][[1mi[m][[1mU_OS.EXECUTE        [m][[1m<1>            [m][1 record(s) copied.]
+[K[[1m20200820T042306[m][[1mi[m][[1mSIENA.CONFIGBACKUP.H[m][[1mBACKUP         [m][crontab - OK]
