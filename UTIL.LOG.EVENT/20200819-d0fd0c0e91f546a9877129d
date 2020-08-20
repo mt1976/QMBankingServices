@@ -1,0 +1,24 @@
+CHROME.FETCH
+20200819
+18.35.26
+sales
+
+20200819-d0fd0c0e91f546a9877129d
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5ENZDUSD/overview
+https://www.barchart.com/forex/quotes/%5ENZDUSD/overview
+0
+U_OS.CHROME.FETCH
+
+637
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BATCH.DO 05MINS NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+18.35.23
+18.35.26
+00.00.03
+U_OS.CHROME.FETCH
+
+U_JOB.DO.HELPER
