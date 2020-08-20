@@ -1,0 +1,49 @@
+PROGRAM U_GIT.LINK.FILE.RAW
+** INFORMATION ****************************************************************
+* Routine Name   : U_GIT.LINK.FILE
+*         Type   : PROGRAM
+*         Params :
+*         Loc    : UTIL.BP
+** AUDIT **********************************************************************
+* Info Updated   : 20200810 at 16.07.39 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+   CRT "EXECUTE - ":DQUOTE(@SENTENCE)
+
+   FN.VOC = "VOC" ; FV.VOC = "" ; ID.VOC = "" ; R.VOC = "" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""
+   CALL U_IO.OPENFILE(FN.VOC, FV.VOC, STOP.ON.ERROR, ERROR.TEXT)
+
+   OPEN FN.VOC TO FV.VOC ELSE
+
+      ERROR.TEXT = "ERROR   - Unable to Open ":DQUOTE(FN.VOC)
+
+      STOP ERROR.TEXT
+
+   END
+
+
+   PN.LEN=LEN("U_GIT.LINK.FILE.RAW")+2
+   ID.VOC = @SENTENCE[PN.LEN, 999]
+
+   CRT "LINK    - ":DQUOTE(ID.VOC)
+   STMT = "CREATE-FILE DICT ":ID.VOC:" DIRECTORY"
+   CRT "STMT    - ":DQUOTE(STMT)
+
+   EXECUTE STMT CAPTURING OUTPUT
+   CRT "OUTPUT  - ":DQUOTE(OUTPUT)
+
+   READ R.VOC FROM FV.VOC, ID.VOC ELSE
+      ERROR.TEXT = "ERROR   - Unable to read ":DQUOTE(ID.RECORD)
+      STOP ERROR.TEXT
+   END
+
+   IF R.VOC<2> = "" THEN
+      R.VOC<2> = ID.VOC
+      WRITE R.VOC TO FV.VOC, ID.VOC
+      CRT "SUCCESS - ":DQUOTE("File link complete")
+   END ELSE
+      CRT "INFO    - ":DQUOTE("File already linked")
+   END
+   STOP "DONE    - ":DQUOTE(ID.VOC)
+END

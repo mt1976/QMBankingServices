@@ -1,0 +1,24 @@
+EXECUTE
+20200818
+12.35.08
+pi
+
+
+COMO ON 20200818-
+
+0
+U_OS.EXECUTE
+/dev/pts/1
+8
+/home/pi/dbs/mwt-QM-dev
+MWT-QM-DEV
+JOB.DO CHECKIN
+home
+192.168.1.69
+Rpi
+
+
+
+U_OS.EXECUTE
+
+U_JOB.DO.HELPER

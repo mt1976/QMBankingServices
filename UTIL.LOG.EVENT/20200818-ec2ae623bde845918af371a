@@ -1,0 +1,24 @@
+EXECUTE
+20200818
+12.00.49
+root
+
+
+DELETE DICT UTIL.CSV.OUTPUT SDEX.PARENT
+
+1
+U_OS.EXECUTE
+/dev/ttys002
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+U_BUILDFILES UTIL
+mercury.local
+
+Mac
+
+
+
+U_OS.EXECUTE
+
+U_BUILDFILES
