@@ -1,0 +1,24 @@
+OS.COMMAND
+20200820
+16.01.34
+sales
+To https://github.com/mt1976/mwt-QM-dev.git
+   bdfaf701ee..a69dba0f2b  master -> master
+
+git push
+0
+U_OS.COMMAND
+
+846
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BATCH.DO HOURLY NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+
+
+
+U_OS.COMMAND
+
+U_JOB.DO.HELPER
