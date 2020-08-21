@@ -1,13 +1,13 @@
-OS.COMMAND
+TIMING
 20200821
-12.52.48
+12:55:22.522
 root
-crontab: no crontab for r
+SIENA.PURGE.POST
 
-crontab -l
 
-0
-U_OS.COMMAND
+
+
+U_STOP
 /dev/ttys001
 1
 /Users/matttownsend/Development/qm/dev
@@ -16,9 +16,9 @@ BATCH.DO OVERNIGHT
 mercury.local
 
 Mac
-
-
-
-U_OS.COMMAND
+12.55.21
+12.55.22
+00.00.01
+U_STOP
 
 U_JOB.DO.HELPER

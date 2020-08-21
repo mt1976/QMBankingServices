@@ -1,13 +1,13 @@
-EXECUTE
+OS.COMMAND
 20200821
-12.52.48
+12:55:23.523
 root
+crontab: no crontab for r
 
-
-SELECT LOGS WITH CREATE.DATE < "20200819"
+crontab -l
 
 0
-U_OS.EXECUTE
+U_OS.COMMAND
 /dev/ttys001
 1
 /Users/matttownsend/Development/qm/dev
@@ -19,6 +19,6 @@ Mac
 
 
 
-U_OS.EXECUTE
+U_OS.COMMAND
 
 U_JOB.DO.HELPER
