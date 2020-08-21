@@ -1,0 +1,24 @@
+EXECUTE
+20200821
+09.30.48
+sales
+
+
+SELECT SIENA.IN WITH @ID LIKE mm_CPI_rates_...
+
+1
+U_OS.EXECUTE
+
+985
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BATCH.DO HALFPAST NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+
+
+
+U_OS.EXECUTE
+
+U_JOB.DO.HELPER
