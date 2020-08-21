@@ -5,7 +5,7 @@ SUBROUTINE U_START(PROGRAM.NAME)
 *         Params : PROGRAM.NAME
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200810 at 16.07.39 in DEV by root
+* Info Updated   : 20200821 at 12.52.22 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -26,19 +26,19 @@ $INSERT UTIL.BP F_UTIL.LOG.EVENT.H
    * CALL U_OS.EXECUTE("COMO OFF", @FALSE)
    * CALL U_OS.EXECUTE(STMT, @FALSE)
 
-  R.EVENT = ""
-  R.EVENT<U_LOG_EVENT>  = "BEGIN"
-  R.EVENT<U_LOG_CMD>    = ""
-  R.EVENT<U_LOG_ID>     = ""
-  R.EVENT<U_LOG_MSG>    = PROGRAM.NAME
-  R.EVENT<U_LOG_RETCD>  = ""
-  R.EVENT<U_LOG_SUBR>   = "U_START"
+   R.EVENT = ""
+   R.EVENT<U_LOG_EVENT> = "BEGIN"
+   R.EVENT<U_LOG_CMD> = ""
+   R.EVENT<U_LOG_ID> = ""
+   R.EVENT<U_LOG_MSG> = PROGRAM.NAME
+   R.EVENT<U_LOG_RETCD> = ""
+   R.EVENT<U_LOG_SUBR> = "U_START"
 
-  CALLING.SUBR = ""
-  CALL U_GET.CALLING.PROCESS.NAME(CALLING.SUBR, SYSTEM(1002), SYSTEM(33))
-  R.EVENT<U_LOG_PROCESS> = CALLING.SUBR
+   CALLING.SUBR = ""
+   CALL U_GET.CALLING.PROCESS.NAME(CALLING.SUBR, SYSTEM(1002), SYSTEM(33))
+   R.EVENT<U_LOG_PROCESS> = CALLING.SUBR
 
-  CALL U_LOG.EVENT("", R.EVENT)
+   CALL U_LOG.EVENT("", R.EVENT)
 
    PROGRAM.NAME = COMO.NAME
    RETURN

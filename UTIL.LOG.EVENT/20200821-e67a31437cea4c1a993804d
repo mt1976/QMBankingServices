@@ -1,13 +1,13 @@
-TIMING
+JOB-START
 20200821
-00:00:45.655
+12.52.49
 root
-U_JOB.DO.HELPER
+CHECKIN
 
 
 
 
-U_STOP
+U_START
 /dev/ttys001
 1
 /Users/matttownsend/Development/qm/dev
@@ -16,9 +16,9 @@ BATCH.DO OVERNIGHT
 mercury.local
 
 Mac
-12.40.55
-12.40.55
-00.00.00
-U_STOP
+
+
+
+U_INFO
 
 U_JOB.DO.HELPER

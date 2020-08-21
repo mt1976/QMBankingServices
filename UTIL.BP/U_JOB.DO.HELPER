@@ -5,7 +5,7 @@ SUBROUTINE U_JOB.DO.HELPER(DO.ITEM)
 *         Params : DO.ITEM
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200810 at 16.07.39 in DEV by root
+* Info Updated   : 20200821 at 12.52.22 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -35,34 +35,34 @@ $INCLUDE UTIL.BP I_UTIL.H
 
    IF DO.SCRIPT <> "" THEN
       CALL U_CRT.INFO("SCRIPT", DO.SCRIPT)
-      CALL U_INFO("ACT-START",DO.SCRIPT)
+      CALL U_INFO("ACT-START", DO.SCRIPT)
       CALL SIENA.SCRIPT.HELPER(DO.SCRIPT)
-      CALL U_INFO("ACT-END",DO.SCRIPT)
+      CALL U_INFO("ACT-END", DO.SCRIPT)
       CALL U_CRT.INFO("DONE", DO.SCRIPT)
    END
    IF DO.PROCESSOR <> "" THEN
       SUB.NAME = "SIENA.":DO.PROCESSOR:".HELPER"
       DO.SUBN = SUB.NAME
       CALL U_CRT.INFO("JOB", DO.SUBN)
-      CALL U_INFO("ACT-START",DO.SUBN)
+      CALL U_INFO("ACT-START", DO.SUBN)
       CALL @SUB.NAME(SUB.NAME)
-      CALL U_INFO("ACT-END",DO.SUBN)
+      CALL U_INFO("ACT-END", DO.SUBN)
       CALL U_CRT.INFO("DONE", DO.SUBN)
    END
    IF DO.POSTPROCESS <> "" THEN
       PP.SUB.NAME = "SIENA.":DO.POSTPROCESS:".POST"
       DO.SUBN = PP.SUB.NAME
       CALL U_CRT.INFO("POST", DO.SUBN)
-      CALL U_INFO("ACT-START",DO.SUBN)
+      CALL U_INFO("ACT-START", DO.SUBN)
       CALL @PP.SUB.NAME(PP.SUB.NAME)
-      CALL U_INFO("ACT-END",DO.SUBN)
+      CALL U_INFO("ACT-END", DO.SUBN)
       CALL U_CRT.INFO("DONE", DO.SUBN)
    END
    IF DO.DELIVER <> "" THEN
       CALL U_CRT.INFO("DELIVER", DO.DELIVER)
-      CALL U_INFO("ACT-START",DO.DELIVER)
+      CALL U_INFO("ACT-START", DO.DELIVER)
       CALL SIENA.DELIVER.HELPER(SUB.NAME, DO.DELIVER)
-      CALL U_INFO("ACT-END",DO.DELIVER)
+      CALL U_INFO("ACT-END", DO.DELIVER)
       CALL U_CRT.INFO("DONE", DO.DELIVER)
    END
 

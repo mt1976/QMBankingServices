@@ -3,6 +3,6 @@
 * FILE  : "UTIL.BP"
 * NAME  : "F_LOGS.H"
 * NAME  : "S_L_"
-* BUILT : 18 AUG 2020 at 12.32.38
+* BUILT : 21 AUG 2020 at 12.47.02
 *
 equate S_L_LOG to 1

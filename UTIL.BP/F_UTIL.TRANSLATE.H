@@ -3,7 +3,7 @@
 * FILE  : "UTIL.BP"
 * NAME  : "F_UTIL.TRANSLATE.H"
 * NAME  : "U_TRNS."
-* BUILT : 18 AUG 2020 at 12.32.36
+* BUILT : 21 AUG 2020 at 12.47.02
 *
 equate U_TRNS.RVSERVER to 1
 equate U_TRNS.UKTDATA to 2
