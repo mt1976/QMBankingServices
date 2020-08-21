@@ -1,0 +1,34 @@
+OS.COMMAND
+20200821
+04.42.02
+sales
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+0
+U_OS.COMMAND
+
+925
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BATCH.DO OVERNIGHT NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+U_OS.COMMAND
+# 
+U_JOB.DO.HELPER
+# 
+# m h  dom mon dow   command
+* 4 * * * cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm BATCH.DO OVERNIGHT NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_OVERNIGHT.log
+0 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm BATCH.DO HOURLY NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_HOURLY.log
+30 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm BATCH.DO HALFPAST NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_HALFPAST.log 
+15,45 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm BATCH.DO QUARTER NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_QUARTER.log
+5,10,20,25,35,40,50,55 6-18 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm BATCH.DO 05MINS NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_05MINS.log 
+27 16 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm JOB.DO FXECB NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_ECB.log 
+
+crontab -l
