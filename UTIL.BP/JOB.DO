@@ -5,13 +5,13 @@ PROGRAM JOB.DO
 *         Params :
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200810 at 16.07.39 in DEV by root
+* Info Updated   : 20200821 at 12.55.08 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
    CALL U_INITIALISE("JOB.DO")
-   PROCESS.NAME = ""
+   PROCESS.NAME = "JOB.DO"
    CALL U_START(PROCESS.NAME)
 
    CALL U_HEADER("JOB.DO")

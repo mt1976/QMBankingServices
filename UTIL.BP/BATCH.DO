@@ -5,13 +5,13 @@ PROGRAM BATCH.DO
 *         Params :
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200810 at 16.07.39 in DEV by root
+* Info Updated   : 20200821 at 12.55.08 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
    CALL U_INITIALISE("BATCH.DO")
-   PROCESS.NAME = ""
+   PROCESS.NAME = "BATCH.DO"
    CALL U_START(PROCESS.NAME)
 
    CALL U_HEADER("BATCH.DO")
@@ -30,7 +30,7 @@ $INCLUDE UTIL.BP I_UTIL.H
 
    DO.BATCH = CMD.STRING<THIS.CMD>
    CALL U_CRT.INFO("BATCH", DO.BATCH)
-
+   CALL U_INFO("BATCH-START", DO.BATCH)
    DO.SCRIPT = ""
    DO.PROCESSOR = ""
    DO.POSTPROCESS = ""
@@ -50,11 +50,14 @@ $INCLUDE UTIL.BP I_UTIL.H
 
       CALL U_CRT.INFO("EXEC", DO.DATA<THIS.JOB>)
       CALL U_HEADER(DO.DATA<THIS.JOB>)
+      CALL U_INFO("JOB-START", DO.DATA<THIS.JOB>)
       CALL U_JOB.DO.HELPER(DO.DATA<THIS.JOB>)
+      CALL U_INFO("JOB-END", DO.DATA<THIS.JOB>)
       CALL U_CRT.INFO("DONE", DO.DATA<THIS.JOB>)
 
    NEXT THIS.JOB
 
+   CALL U_INFO("BATCH-END", DO.BATCH)
 
    CALL U_STOP(PROCESS.NAME)
 

@@ -5,7 +5,7 @@ PROGRAM U_TEST
 *         Params :
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200810 at 16.07.39 in DEV by root
+* Info Updated   : 20200821 at 12.55.08 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -13,7 +13,7 @@ $INSERT UTIL.BP I_UTIL.H
 
    CALL U_INITIALISE("U_TEST2")
 
-   CALL U_START("M.TEST")
+   CALL U_START("U_TEST2")
    CALL U_HEADER("M.TEST")
 
    CALL U_CRT.INFO("COMMAND", @COMMAND)

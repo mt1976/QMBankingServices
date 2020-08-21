@@ -15,6 +15,7 @@ $INSERT UTIL.BP I_UTIL.H
 
 
 * INITIALISE
+   PROCESS.NAME = "SIENA.ECB.HELPER"
    PREFIX = PROCESS.NAME
    CALL U_START(PROCESS.NAME)
 * Setup some temp locations for input data

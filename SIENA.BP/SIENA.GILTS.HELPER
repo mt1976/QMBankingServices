@@ -15,7 +15,7 @@ $INCLUDE UTIL.BP F_UTIL.TRANSLATE.H
 *** https://www.londonstockexchange.com/download/csv/tbLSEBondsDownloadCSV_en.csv
 ***
 * INITIALISE
-
+   PROCESS.NAME = "SIENA.GILTS.HELPER"
    CALL U_START(PROCESS.NAME)
 * Setup some temp locations for input data
 

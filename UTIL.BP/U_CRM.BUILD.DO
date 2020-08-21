@@ -5,13 +5,13 @@ PROGRAM U_CRM.BUILD.DO
 *         Params :
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200810 at 16.07.39 in DEV by root
+* Info Updated   : 20200821 at 12.55.08 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
    CALL U_INITIALISE("U_CRM.BUILD.DO")
-   PNM = "" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""
+   PNM = "U_CRM.BUILD.DO" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""
    CALL U_START(PNM)
    CALL U_HEADER("(RE)BUILD FILE(S)")
 

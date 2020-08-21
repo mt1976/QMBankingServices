@@ -15,7 +15,7 @@ $INSERT UTIL.BP I_UTIL.H
 
 
 * INITIALISE
-   PROCESS.NAME = ""
+   PROCESS.NAME = "SIENA.SCRIPT.HELPER"
    CALL U_START(PROCESS.NAME)
 * Setup some temp locations for input data
 

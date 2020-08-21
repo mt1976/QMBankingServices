@@ -1,8 +1,8 @@
-SUBROUTINE U_START(PROGRAM.NAME)
+SUBROUTINE U_INFO(ACTION, PROGRAM.NAME)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_START
+* Routine Name   : U_INFO
 *         Type   : SUBROUTINE
-*         Params : PROGRAM.NAME
+*         Params : ACTION, PROGRAM.NAME
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
 * Info Updated   : 20200821 at 12.55.08 in DEV by root
@@ -15,19 +15,8 @@ $INSERT UTIL.BP F_UTIL.LOG.EVENT.H
 
    COMO.NAME = PROGRAM.NAME
 
-   U_PROCESS.START.TIME = TIME()
-
-   * CRT "STARTING PROCESSES"
-   * CALL U_GET.UUID(COMO.NAME)
-   * CRT "GOT A UNQUE ID ":COMO.NAME
-   * STMT = "COMO ON ":COMO.NAME
-   * CRT STMT
-   * CALL U_CRT.INFO("COMO", COMO.NAME)
-   * CALL U_OS.EXECUTE("COMO OFF", @FALSE)
-   * CALL U_OS.EXECUTE(STMT, @FALSE)
-
    R.EVENT = ""
-   R.EVENT<U_LOG_EVENT> = "BEGIN"
+   R.EVENT<U_LOG_EVENT> = ACTION
    R.EVENT<U_LOG_CMD> = ""
    R.EVENT<U_LOG_ID> = ""
    R.EVENT<U_LOG_MSG> = PROGRAM.NAME

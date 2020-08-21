@@ -5,13 +5,13 @@ PROGRAM U_LOCAL.TEST
 *         Params :
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200810 at 16.07.39 in DEV by root
+* Info Updated   : 20200821 at 12.55.08 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INSERT UTIL.BP I_UTIL.H
    CALL U_INITIALISE("U_LOCAL.TEST")
-   PID = ""
+   PID = "U_LOCAL.TEST"
    CRT "START"
    CALL U_START(PID)
    CRT "HEADER"

@@ -5,7 +5,7 @@ SUBROUTINE U_LOG.EVENT(LOG.DATA, R.UTIL.LOG.EVENT)
 *         Params : LOG.DATA, R.UTIL.LOG.EVENT
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200810 at 16.07.39 in DEV by root
+* Info Updated   : 20200821 at 12.55.08 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -18,15 +18,15 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
    ID.UTIL.LOG.EVENT = ""
    CALL U_GET.UUID(ID.UTIL.LOG.EVENT)
-  * IF LOG.DATA <> "" THEN
-    *  CALL U_IO.WRITE(FV.UTIL.LOG.CMD, ID.UTIL.LOG.EVENT, LOG.DATA, STOP.ON.ERROR, ERROR.TEXT)
-    *  R.UTIL.LOG.EVENT<U_LOG_ID> = ID.UTIL.LOG.EVENT
-  * END
+   * IF LOG.DATA <> "" THEN
+   *  CALL U_IO.WRITE(FV.UTIL.LOG.CMD, ID.UTIL.LOG.EVENT, LOG.DATA, STOP.ON.ERROR, ERROR.TEXT)
+   *  R.UTIL.LOG.EVENT<U_LOG_ID> = ID.UTIL.LOG.EVENT
+   * END
 
    IF R.UTIL.LOG.EVENT<U_LOG_EVENT> = "" THEN R.UTIL.LOG.EVENT<U_LOG_EVENT> = "UNKOWN"
 
    R.UTIL.LOG.EVENT<U_LOG_DATE> = OCONV(DATE(), "DX")
-   R.UTIL.LOG.EVENT<U_LOG_TIME> = OCONV(TIME(), "MTS.")
+   R.UTIL.LOG.EVENT<U_LOG_TIME> = OCONV(TIME(), "MTS"):".":RIGHT(OCONV(TIME(), "MTMS"), 3)
    R.UTIL.LOG.EVENT<U_LOG_USER> = @USER
    R.UTIL.LOG.EVENT<U_LOG_TTY> = @TTY
    R.UTIL.LOG.EVENT<U_LOG_USERNO> = @USERNO
