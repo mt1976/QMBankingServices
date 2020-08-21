@@ -1,13 +1,13 @@
-OS.COMMAND
+EXECUTE
 20200821
-11.29.40
+11.53.00
 root
-crontab: no crontab for root
 
-crontab -l
+
+SELECT UTIL.SQL.CMD WITH CREATE.DATE < "20200819"
 
 0
-U_OS.COMMAND
+U_OS.EXECUTE
 /dev/ttys001
 1
 /Users/matttownsend/Development/qm/dev
@@ -19,6 +19,6 @@ Mac
 
 
 
-U_OS.COMMAND
+U_OS.EXECUTE
 
 U_JOB.DO.HELPER

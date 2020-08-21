@@ -1,13 +1,13 @@
-EXECUTE
+TIMING
 20200821
-11.29.40
+11.53.01
 root
+U_JOB.DO.HELPER
 
 
-SELECT SIENA.PROCESSED WITH CREATE.DATE < "20200819"
 
-0
-U_OS.EXECUTE
+
+U_STOP
 /dev/ttys001
 1
 /Users/matttownsend/Development/qm/dev
@@ -16,9 +16,9 @@ BATCH.DO OVERNIGHT
 mercury.local
 
 Mac
-
-
-
-U_OS.EXECUTE
+11.53.00
+11.53.00
+00.00.00
+U_STOP
 
 U_JOB.DO.HELPER
