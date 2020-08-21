@@ -1,13 +1,13 @@
-TIMING
+EXECUTE
 20200821
-12.21.31
+12.27.02
 root
-U_JOB.DO.HELPER
 
 
+SELECT UTIL.LOG WITH CREATE.DATE < "20200819"
 
-
-U_STOP
+0
+U_OS.EXECUTE
 /dev/ttys001
 1
 /Users/matttownsend/Development/qm/dev
@@ -16,9 +16,9 @@ BATCH.DO OVERNIGHT
 mercury.local
 
 Mac
-12.21.30
-12.21.31
-00.00.01
-U_STOP
+
+
+
+U_OS.EXECUTE
 
 U_JOB.DO.HELPER
