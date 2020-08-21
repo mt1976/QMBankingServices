@@ -1,13 +1,13 @@
-JOB-START
+TIMING
 20200821
-12.33.52
+00:00:45.655
 root
-PURGE
+SIENA.CONFIGBACKUP.HELPER
 
 
 
 
-U_START
+U_STOP
 /dev/ttys001
 1
 /Users/matttownsend/Development/qm/dev
@@ -16,9 +16,9 @@ BATCH.DO OVERNIGHT
 mercury.local
 
 Mac
+12.40.55
+12.40.55
+00.00.00
+U_STOP
 
-
-
-U_INFO
-
-BATCH.DO
+U_JOB.DO.HELPER

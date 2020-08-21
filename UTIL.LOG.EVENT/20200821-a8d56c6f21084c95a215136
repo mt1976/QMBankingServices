@@ -1,13 +1,13 @@
-ACT-START
+OS.COMMAND
 20200821
-12.33.52
+00:00:45.655
 root
-SIENA.PURGE.POST
+crontab: no crontab for r
 
+crontab -l
 
-
-
-U_START
+0
+U_OS.COMMAND
 /dev/ttys001
 1
 /Users/matttownsend/Development/qm/dev
@@ -19,6 +19,6 @@ Mac
 
 
 
-U_INFO
+U_OS.COMMAND
 
 U_JOB.DO.HELPER
