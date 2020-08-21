@@ -1,0 +1,24 @@
+MSSQL.EXECUTE
+20200821
+14:27:18.038
+root
+mssql-cli -S LDN-SRV-BNK6 -d rel_gateway_sal_prd_demo-sys-3 -U siena -P siena123 -i /Users/matttownsend/Development/qm/dev/UTIL.SQL.CMD/20200821-142718038-61a3b6a1e.sql -o /Users/matttownsend/Development/qm/dev/UTIL.SQL.RESPONSE/20200821-142718038-61a3b6a1e.out
+
+select CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode from dbo.vwRateSourceCurrencyPair where Active=1 and SpotRerouteDataRerouteCurrency=''
+
+0
+U_MSSQL.EXECUTE
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+BATCH.DO QUARTER
+mercury.local
+
+Mac
+14.27.18
+14.27.18
+00.00.00
+U_MSSQL.EXECUTE
+
+U_JOB.DO.HELPER
