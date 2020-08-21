@@ -1,13 +1,13 @@
-EXECUTE
+TIMING
 20200821
-12:55:22.522
+13:02:12.932
 root
+U_JOB.DO.HELPER
 
 
-SELECT UTIL.LOG.EVENT WITH CREATE.DATE < "20200819"
 
-0
-U_OS.EXECUTE
+
+U_STOP
 /dev/ttys001
 1
 /Users/matttownsend/Development/qm/dev
@@ -16,9 +16,9 @@ BATCH.DO OVERNIGHT
 mercury.local
 
 Mac
-
-
-
-U_OS.EXECUTE
+13.02.12
+13.02.12
+00.00.00
+U_STOP
 
 U_JOB.DO.HELPER

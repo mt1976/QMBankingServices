@@ -1,13 +1,13 @@
-JOB-START
+EXECUTE
 20200821
-12:55:21.521
+13:02:12.932
 root
-PURGE
 
 
+SELECT UTIL.LOG.EVENT WITH CREATE.DATE < "20200819"
 
-
-U_START
+0
+U_OS.EXECUTE
 /dev/ttys001
 1
 /Users/matttownsend/Development/qm/dev
@@ -19,6 +19,6 @@ Mac
 
 
 
-U_INFO
+U_OS.EXECUTE
 
-BATCH.DO
+U_JOB.DO.HELPER
