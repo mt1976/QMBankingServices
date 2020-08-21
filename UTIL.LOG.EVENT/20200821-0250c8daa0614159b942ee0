@@ -1,13 +1,13 @@
-EXECUTE
+BEGIN
 20200821
-12.27.02
+12.33.52
 root
+SIENA.PURGE.POST
 
 
-SELECT UTIL.SQL.CMD WITH CREATE.DATE < "20200819"
 
-0
-U_OS.EXECUTE
+
+U_START
 /dev/ttys001
 1
 /Users/matttownsend/Development/qm/dev
@@ -19,6 +19,6 @@ Mac
 
 
 
-U_OS.EXECUTE
+U_START
 
 U_JOB.DO.HELPER
