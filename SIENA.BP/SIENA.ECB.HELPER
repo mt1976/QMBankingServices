@@ -16,6 +16,7 @@ $INSERT UTIL.BP I_UTIL.H
 
 
 * INITIALISE
+  PROCESS.NAME = "SIENA.ECB.HELPER"
    CALL U_START(PROCESS.NAME)
 * Setup some temp locations for input data
    CALL U_HEADER("SIENA - FX ECB SPOT")

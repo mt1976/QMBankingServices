@@ -1,13 +1,13 @@
-OS.COMMAND
+BEGIN
 20200821
-11.17.54
+11.29.38
 root
-crontab: no crontab for root
 
-crontab -l
 
-0
-U_OS.COMMAND
+
+
+
+U_START
 /dev/ttys001
 1
 /Users/matttownsend/Development/qm/dev
@@ -19,6 +19,6 @@ Mac
 
 
 
-U_OS.COMMAND
+U_START
 
-U_JOB.DO.HELPER
+BATCH.DO
