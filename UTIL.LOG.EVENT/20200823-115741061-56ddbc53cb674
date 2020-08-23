@@ -1,0 +1,24 @@
+PURGE
+20200823
+11:57:41.7
+root
+
+
+PURGED 0 FROM SIENA.PROCESSED
+
+0
+U_PURGE.LOG
+/dev/ttys003
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+BATCH.DO OVERNIGHT
+mercury.local
+
+Mac
+
+
+
+U_LOG.PURGE
+SIENA.PROCESSED
+U_JOB.DO.HELPER
