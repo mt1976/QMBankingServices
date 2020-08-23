@@ -5,7 +5,7 @@ SUBROUTINE U_GET.UUID(UNIQUE.ID)
 *         Params : UNIQUE.ID
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200821 at 12.55.08 in DEV by root
+* Info Updated   : 20200823 at 12.01.38 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -26,7 +26,7 @@ $INCLUDE UTIL.BP I_UTIL.H
    UNIQUE.ID = DOWNCASE(CONVERT(":", "", UNIQUE.ID))
    UNIQUE.ID = DOWNCASE(CONVERT("-", "", UNIQUE.ID))
 
-   PREFIX.DATE = OCONV(DATE(), "DX"):CONVERT(".","",U_TRUNC:OCONV(TIME(), "MTS."):".":RIGHT(OCONV(TIME(), "MTMS"), 3)):U_TRUNC
+   PREFIX.DATE = OCONV(DATE(), "DX"):CONVERT(".", "", U_TRUNC:OCONV(TIME(), "MTS."):".":RIGHT(OCONV(TIME(), "MTMS"), 3)):U_TRUNC
    LEN.PREFIX.DATE = LEN(PREFIX.DATE)
 
    UNIQUE.ID = PREFIX.DATE:UNIQUE.ID
