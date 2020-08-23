@@ -5,13 +5,13 @@ SUBROUTINE SIENA.PURGE.POST(PROCESS.NAME)
 *         Params : PROCESS.NAME
 *         Loc    : SIENA.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200810 at 16.07.52 in DEV by root
+* Info Updated   : 20200823 at 12.09.49 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
-PROCESS.NAME = "SIENA.PURGE.POST"
+   PROCESS.NAME = "SIENA.PURGE.POST"
    CALL U_START(PROCESS.NAME)
    CALL U_HEADER("PURGE")
    RETURN.LIST = ""

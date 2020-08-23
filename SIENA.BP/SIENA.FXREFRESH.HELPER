@@ -5,14 +5,14 @@ SUBROUTINE SIENA.FXREFRESH.HELPER(PROCESS.NAME)
 *         Params : PROCESS.NAME
 *         Loc    : SIENA.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200817 at 15.51.47 in MWT-QM-DEV by sales
-*                : on ldn-srv-ubnt01 (Linux)
+* Info Updated   : 20200823 at 12.09.49 in DEV by root
+*                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 * INITIALISE
-PROCESS.NAME = "SIENA.FXREFRESH.HELPER"
+   PROCESS.NAME = "SIENA.FXREFRESH.HELPER"
    CALL U_START(PROCESS.NAME)
 * Setup some temp locations for input data
    FN.SIENA.TEMP = "SIENA.TEMP" ; FV.SIENA.TEMP = "" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""

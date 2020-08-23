@@ -5,7 +5,7 @@ SUBROUTINE U_INITIALISE(THREAD.ID)
 *         Params : THREAD.ID
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200823 at 12.05.02 in DEV by root
+* Info Updated   : 20200823 at 12.09.37 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -42,13 +42,13 @@ $INCLUDE UTIL.BP I_UTIL.H
 
       U_PROCESS.START.TIME = ""
       U_INITIALISED=@TRUE
-
+      U_LOG.SEQ.NO = 0
    END ELSE
 *  CRT "ALREADY INIT"
    END
 
    U_PROCESS.THREAD.ID = THREAD.ID
-   U_LOG.SEQ.NO = 0
+
 
    RETURN
 
