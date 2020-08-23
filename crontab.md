@@ -27,11 +27,10 @@ Below is the information about how to structure a 'cron' item.
 ```
 # New Crontab
 ``` cron
-* 4 * * * /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm BATCH.DO OVERNIGHT NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_OVERNIGHT.log
+0 4 * * * /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm BATCH.DO OVERNIGHT NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_OVERNIGHT.log
 0 6-18 * * 1-5 /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm BATCH.DO HOURLY NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_HOURLY.log
 30 6-18 * * 1-5 /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm BATCH.DO HALFPAST NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_HALFPAST.log
 15,45 6-18 * * 1-5 /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm BATCH.DO QUARTER NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_QUARTER.log
 5,10,20,25,35,40,50,55 6-18 * * 1-5 /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm BATCH.DO 05MINS NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_05MINS.log
-27 16 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm SIENA.DO FXECB NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_ECB.log
-
+27 16 * * 1-5 cd /home/sales/qm/account/mwt-QM-dev && /usr/local/bin/qm JOB.DO FXECB NOPAGE >> LOGS/$(date +20\%y\%m\%d\%H\%M)_ECB.log
 ```
