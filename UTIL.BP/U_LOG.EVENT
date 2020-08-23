@@ -5,7 +5,7 @@ SUBROUTINE U_LOG.EVENT(LOG.DATA, R.UTIL.LOG.EVENT)
 *         Params : LOG.DATA, R.UTIL.LOG.EVENT
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200823 at 12.01.38 in DEV by root
+* Info Updated   : 20200823 at 12.02.47 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -30,7 +30,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
    R.UTIL.LOG.EVENT<U_LOG_DATE> = OCONV(DATE(), "DX")
    U_LOG.SEQ.NO += 1
-   R.UTIL.LOG.EVENT<U_LOG_TIME> = OCONV(TIME(), "MTS"):".":U_LOG.SEQ.NO"R#3"
+   R.UTIL.LOG.EVENT<U_LOG_TIME> = OCONV(TIME(), "MTS"):".":U_LOG.SEQ.NO"R#03"
    R.UTIL.LOG.EVENT<U_LOG_USER> = @USER
    R.UTIL.LOG.EVENT<U_LOG_TTY> = @TTY
    R.UTIL.LOG.EVENT<U_LOG_USERNO> = @USERNO

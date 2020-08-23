@@ -1,0 +1,24 @@
+PURGE
+20200823
+12:02:59. 13
+root
+
+
+PURGED 0 FROM UTIL.LOG.EVENT
+
+0
+U_PURGE.LOG
+/dev/ttys003
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+BATCH.DO OVERNIGHT
+mercury.local
+
+Mac
+
+
+
+U_LOG.PURGE
+UTIL.LOG.EVENT
+U_JOB.DO.HELPER
