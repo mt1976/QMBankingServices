@@ -5,7 +5,7 @@ SUBROUTINE U_LOG.EVENT(LOG.DATA, R.UTIL.LOG.EVENT)
 *         Params : LOG.DATA, R.UTIL.LOG.EVENT
 *         Loc    : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200821 at 12.55.08 in DEV by root
+* Info Updated   : 20200823 at 11.48.58 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -13,7 +13,7 @@ $INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
 * SLEEP FOR 1 MILLISECOND
-   NAP 10
+   NAP 100
 
    IP4.ADDRESS = ""
    CALL U_GET.IP(IP4.ADDRESS)
