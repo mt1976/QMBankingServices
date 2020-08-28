@@ -1,0 +1,24 @@
+EXECUTE
+20200828
+17:30:02.00007
+sales
+SSELECT UTIL.SCRIPTS LIKE ...liborFetch.sh...
+
+SSELECT UTIL.SCRIPTS LIKE ...liborFetch.sh...
+
+1
+U_OS.EXECUTE
+
+986
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BATCH.DO HALFPAST NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+
+
+
+U_OS.EXECUTE
+
+BATCH.DO
