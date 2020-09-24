@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<Collections>
+      <Collection>
+        <ParentExtRefNo>SGD.CUSTINSTA.CS0000</ParentExtRefNo>
+        <DealType>Customer Payment Instruction</DealType>
+        <MsgID>{{MSG.ID}}</MsgID>
+        <ExecType>1</ExecType>
+        <TradeDate>{{TODAY}}</TradeDate>
+        <ExtRefNo>{{EXT.REF}}</ExtRefNo>
+        <ExternalCustomer>{{COUNTERPARTY}}</ExternalCustomer>
+        <Direction>PAY</Direction>
+        <DealtCurrency>{{CURRENCY}}</DealtCurrency>
+        <Adjustment>{{AMOUNT}}</Adjustment>
+        <Book>{{BOOK}}</Book>
+        <InterestRate>Fixed</InterestRate>
+        <Notes>{{REASON}}</Notes>
+        <MandatedUser>DEFAULT</MandatedUser>
+        <LEI>{{RegTRDID}}</LEI>
+        <RedefaultValues>N</RedefaultValues>
+        <Portfolio>{{PORTFOLIO}}</Portfolio>
+      </Collection>
+</Collections>
