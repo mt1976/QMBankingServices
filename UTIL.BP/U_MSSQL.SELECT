@@ -1,11 +1,11 @@
 SUBROUTINE U_MSSQL.SELECT(SQL.FIELDS, SQL.TABLE, SQL.ADDRESS, SQL.DATABASE, SQL.WHERE, VERBOSE, ID.RESULT, RESULT.COLUMNS, RESULT.DATA, RESULT.COUNT)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_MSSQL.SELECT
-*         Type   : SUBROUTINE
+*   Routine Name : U_MSSQL.SELECT
+*           Type : SUBROUTINE
 *         Params : SQL.FIELDS, SQL.TABLE, SQL.ADDRESS, SQL.DATABASE, SQL.WHERE, VERBOSE, ID.RESULT, RESULT.COLUMNS, RESULT.DATA, RESULT.COUNT
-*         Loc    : UTIL.BP
+*            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200823 at 12.15.36 in DEV by root
+*   Info Updated : 20200922 at 17.39.44 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

@@ -1,0 +1,27 @@
+SUBROUTINE U_GET.NEXT.WORKING.DAY(IN.DATE, NEXT.WORKING.DAY)
+** INFORMATION ****************************************************************
+*   Routine Name : U_GET.NEXT.WORKING.DAY
+*           Type : SUBROUTINE
+*         Params : IN.DATE, NEXT.WORKING.DAY
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20200922 at 17.39.44 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+   IS.WORKING.DATE = @FALSE
+   WRK.DATE = IN.DATE
+   CALL U_IS.WORKING.DAY(WRK.DATE, IS.WORKING.DAY)
+   IF IS.WORKING.DAY = @FALSE THEN
+      LOOP UNTIL IS.WORKING.DAY DO
+         WRK.DATE += 1
+         CALL U_IS.WORKING.DAY(WRK.DATE, IS.WORKING.DAY)
+      REPEAT
+   END
+
+   NEXT.WORKING.DAY = WRK.DATE
+   RETURN
+
+
+END

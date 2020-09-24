@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><Collection>
+  <DealType>Account</DealType>
+  <MsgID>{{MSG.ID}}</MsgID>
+  <ExecType>0</ExecType>
+  <TradeDate>{{TODAY}}</TradeDate>
+  <ExtRefNo>AccountID100</ExtRefNo>
+  <ExternalCustomer>{{COUNTERPARTY}}</ExternalCustomer>
+  <MandatedUser>ClientA-AB</MandatedUser>
+  <PaymentSystem>123</PaymentSystem>
+  <OriginUser>User1</OriginUser>
+  <Broker>Imported</Broker>
+  <Direction>LOAN</Direction>
+  <Rate>5.1</Rate>
+  <MarketInterestRate>5.2</MarketInterestRate>
+  <DealtCurrency>{{CURRENCY}}</DealtCurrency>
+  <DealtAmount>+1000000.00</DealtAmount>
+  <Book>{{BOOK}}</Book>
+  <ValueDate>2018-12-03</ValueDate>
+  <MaturityDate/>
+  <InterestFrequency>3M</InterestFrequency>
+  <InterestRateType>LIBOR</InterestRateType>
+  <InterestRateType2>Fixed</InterestRateType2>
+  <FloatingRateMargin>1</FloatingRateMargin>
+  <FloatingRateMargin2>2</FloatingRateMargin2>
+  <InterestAction>1</InterestAction>
+  <Rate2>6.3</Rate2>
+  <InterestRateType2>Fixed</InterestRateType2>
+  <AccountName>Account Name 7</AccountName>
+  <AccountNumber>87651126</AccountNumber>
+  <CreditFrequency>1M</CreditFrequency>
+  <DebitFrequency>6M</DebitFrequency>
+  <Notes>Test Note</Notes>
+</Collection>

@@ -1,11 +1,11 @@
 PROGRAM U_TEST
 ** INFORMATION ****************************************************************
-* Routine Name   : U_TEST
-*         Type   : PROGRAM
+*   Routine Name : U_TEST
+*           Type : PROGRAM
 *         Params :
-*         Loc    : UTIL.BP
+*            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200823 at 12.15.36 in DEV by root
+*   Info Updated : 20200922 at 17.39.44 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -15,10 +15,15 @@ $INSERT UTIL.BP I_UTIL.H
    CALL U_START("U_TEST")
    CALL U_HEADER("U_TEST")
 
-   CALL U_LOG.PURGE("UTIL.LOG.CMD")
-   CALL U_LOG.PURGE("SIENA.PROCESSED")
-   CALL U_LOG.PURGE("LOGS")
-
+   TEST.DATE = DATE() ; IS.WORKING.DAY = @FALSE
+   CALL U_IS.WORKING.DAY(TEST.DATE, IS.WORKING.DAY)
+   CALL U_CRT.INFO("IS WORKING DAY", IS.WORKING.DAY)
+   NEXT.DATE = ""
+   CALL U_GET.NEXT.WORKING.DAY(TEST.DATE, NEXT.DATE)
+   CALL U_CRT.INFO("DATE", TEST.DATE)
+   CALL U_CRT.INFO("NEXT", NEXT.DATE)
+   CALL U_IS.WORKING.DAY(NEXT.DATE, IS.WORKING.DAY)
+   CALL U_CRT.INFO("IS NEXT WORKING DAY", IS.WORKING.DAY)
    CALL U_STOP("")
    STOP
 END

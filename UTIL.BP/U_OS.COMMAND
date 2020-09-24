@@ -1,11 +1,11 @@
 SUBROUTINE U_OS.COMMAND(STMT, VERBOSE, OUTPUT, SUPPRESS.LOG.EVENT)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_OS.COMMAND
-*         Type   : SUBROUTINE
+*   Routine Name : U_OS.COMMAND
+*           Type : SUBROUTINE
 *         Params : STMT, VERBOSE, OUTPUT, SUPPRESS.LOG.EVENT
-*         Loc    : UTIL.BP
+*            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200823 at 12.15.36 in DEV by root
+*   Info Updated : 20200922 at 17.39.44 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

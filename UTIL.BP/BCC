@@ -1,11 +1,11 @@
 PROGRAM BCC
 ** INFORMATION ****************************************************************
-* Routine Name   : BCC
-*         Type   : SUBROUTINE
+*   Routine Name : BCC
+*           Type : SUBROUTINE
 *         Params :
-*         Loc    : UTIL.BP
+*            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200823 at 12.15.36 in DEV by root
+*   Info Updated : 20200922 at 17.39.44 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -39,11 +39,11 @@ $INCLUDE UTIL.BP I_UTIL.H
    IF CMD.STRING<2> = "*" OR CMD.STRING="ALL" THEN
 
 
-      STMT.EX = "SELECT ":THIS.FILE
+      STMT.EX = "SELECT ":THIS.FILE:" TO ":@USERNO
       CALL U_OS.EXECUTE(STMT.EX, @FALSE)
       PROCESS.LIST = ""
       LOOP
-         READNEXT ID.TEMP ELSE EXIT
+         READNEXT ID.TEMP FROM @USERNO ELSE EXIT
          IF ID.TEMP[2]=".H" THEN
          END ELSE
             PROCESS.LIST<-1> = ID.TEMP
@@ -84,6 +84,8 @@ DO.IT:
       FOR K = 1 TO NO.ACTIONS
          CALL U_OS.EXECUTE(STMTS<K>, @TRUE)
       NEXT K
+
+
 
       CALL U_CRT.INFO("BCC-STOP", IT.STMT)
    END

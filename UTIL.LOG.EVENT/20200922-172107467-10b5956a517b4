@@ -1,0 +1,24 @@
+EXECUTE
+20200922
+17:21:07.05164
+root
+BASIC UTIL.BP U_GET.CALLING.PROCESS.NAME
+
+BASIC UTIL.BP U_GET.CALLING.PROCESS.NAME
+
+1
+U_OS.EXECUTE
+/dev/ttys001
+5
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC UTIL.BP *
+mercury.local
+
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

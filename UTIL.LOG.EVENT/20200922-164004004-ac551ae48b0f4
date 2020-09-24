@@ -1,0 +1,24 @@
+EXECUTE
+20200922
+16:40:04.03903
+root
+FORMAT UTIL.BP U_OS.CURL
+
+FORMAT UTIL.BP U_OS.CURL
+
+0
+U_OS.EXECUTE
+/dev/ttys001
+5
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC UTIL.BP *
+mercury.local
+
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

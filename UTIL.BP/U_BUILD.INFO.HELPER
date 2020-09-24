@@ -1,11 +1,11 @@
 SUBROUTINE U_BUILD.INFO.HELPER(FN.BP, FV.UTIL.BP, ID.UTIL.BP, R.UTIL.CONFIG)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_BUILD.INFO.HELPER
-*         Type   : SUBROUTINE
+*   Routine Name : U_BUILD.INFO.HELPER
+*           Type : SUBROUTINE
 *         Params : FN.BP, FV.UTIL.BP, ID.UTIL.BP, R.UTIL.CONFIG
-*         Loc    : UTIL.BP
+*            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200823 at 12.15.36 in DEV by root
+*   Info Updated : 20200922 at 17.39.44 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -22,8 +22,8 @@ SUBROUTINE U_BUILD.INFO.HELPER(FN.BP, FV.UTIL.BP, ID.UTIL.BP, R.UTIL.CONFIG)
    R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<PLATFORM>>", SYSTEM(1010))
    R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<YYYY>>", @YEAR4)
 ***
-
-   IF ID.UTIL.BP[2] <> ".H" THEN
+   STOP.ON.ERROR = @TRUE
+   IF ID.UTIL.BP[2] <> ".H" AND ID.UTIL.BP <> ".DS_Store" THEN
       CALL U_IO.READ(FV.UTIL.BP, ID.UTIL.BP, R.UTIL.BP, STOP.ON.ERROR, ERROR.TEXT)
 * always ingore row one, it will have the subr or
       CALL U_CRT.INFO("ADD BUILD INFO", FN.BP:" ":ID.UTIL.BP)

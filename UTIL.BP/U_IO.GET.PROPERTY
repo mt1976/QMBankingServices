@@ -1,11 +1,11 @@
 SUBROUTINE U_IO.GET.PROPERTY(IN.PROPERTIES, IN.PROPERTY.NAME, RETURN.VAL)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_IO.GET.PROPERTY
-*         Type   : SUBROUTINE
+*   Routine Name : U_IO.GET.PROPERTY
+*           Type : SUBROUTINE
 *         Params : IN.PROPERTIES, IN.PROPERTY.NAME, RETURN.VAL
-*         Loc    : UTIL.BP
+*            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200823 at 12.15.36 in DEV by root
+*   Info Updated : 20200922 at 17.39.44 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

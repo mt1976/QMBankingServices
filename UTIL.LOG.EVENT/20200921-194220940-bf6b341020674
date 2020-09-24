@@ -1,0 +1,24 @@
+EXECUTE
+20200921
+19:42:20.10017
+root
+FORMAT UTIL.BP U_KEEPALIVE
+
+FORMAT UTIL.BP U_KEEPALIVE
+
+0
+U_OS.EXECUTE
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC UTIL.BP *
+mercury.local
+
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

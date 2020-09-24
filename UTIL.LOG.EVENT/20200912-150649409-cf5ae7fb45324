@@ -1,0 +1,24 @@
+EXECUTE
+20200912
+15:06:49.02476
+root
+FORMAT UTIL.BP U_IO.GETTEMP
+
+FORMAT UTIL.BP U_IO.GETTEMP
+
+0
+U_OS.EXECUTE
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC UTIL.BP *
+mercury.local
+
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

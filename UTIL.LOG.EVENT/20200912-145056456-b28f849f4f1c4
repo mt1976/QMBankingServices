@@ -1,0 +1,24 @@
+EXECUTE
+20200912
+14:50:56.01213
+root
+FORMAT UTIL.BP U_LOG.EVENT
+
+FORMAT UTIL.BP U_LOG.EVENT
+
+0
+U_OS.EXECUTE
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC UTIL.BP *
+mercury.local
+
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

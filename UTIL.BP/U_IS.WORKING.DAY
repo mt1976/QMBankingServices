@@ -1,0 +1,40 @@
+SUBROUTINE U_IS.WORKING.DAY(IN.DATE, IS.WORKING.DAY)
+** INFORMATION ****************************************************************
+*   Routine Name : U_IS.WORKING.DAY
+*           Type : SUBROUTINE
+*         Params : IN.DATE, IS.WORKING.DAY
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20200922 at 17.39.44 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+
+   weekendDays = ""
+   CALL U_IO.GET.PROPERTY("util", "weekendDays", weekendDays)
+   weekendDays = CHANGE(weekendDays, U_PROP_SEP_ALT, @AM)
+
+   IS.WORKING.DAY = @TRUE
+
+   D.TYPE = "D4"
+   WRK.DATE = ICONV(OCONV(IN.DATE, D.TYPE ), D.TYPE )
+
+   DAY.NAME = OCONV(WRK.DATE, "DWA")
+*   CALL U_CRT.INFO("IN.DATE", IN.DATE)
+*   CALL U_CRT.INFO("WRK.DATE", WRK.DATE)
+*   CALL U_CRT.INFO("DAY", DAY.NAME)
+*   CALL U_CRT.RECORD(weekendDays)
+
+   LOCATE DAY.NAME IN weekendDays<1> SETTING A.POS THEN
+      IS.WORKING.DAY = @FALSE
+   END ELSE
+      IS.WORKING.DAY = @TRUE
+   END
+*   CALL U_CRT.INFO("A", A.POS)
+*   CALL U_CRT.INFO("IS.WORKING", IS.WORKING.DAY)
+
+   RETURN
+
+
+END

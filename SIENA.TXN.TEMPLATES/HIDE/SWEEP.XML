@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<Collections>
+<Collection>
+<ParentExtRefNo>0000200002</ParentExtRefNo>
+<DealType>Account Amendment</DealType>
+<ExecType>0</ExecType>
+<ValueDate>2017-08-31</ValueDate>
+<Adjustment>18385592.25</Adjustment>
+<Notes>NONREF</Notes>
+<ExtRefNo>TXFR160001</ExtRefNo>
+<StatementNotes>Transfer In</StatementNotes>
+<RedefaultValues>N</RedefaultValues>
+</Collection>
+<Collection>
+<ParentExtRefNo>0000300003</ParentExtRefNo>
+<DealType>Account Amendment</DealType>
+<ExecType>0</ExecType>
+<ValueDate>2017-08-31</ValueDate>
+<Adjustment>-18385592.25</Adjustment>
+<Notes>NONREF</Notes>
+<ExtRefNo>TXFR160001</ExtRefNo>
+<StatementNotes>Transfer Out</StatementNotes>
+<RedefaultValues>N</RedefaultValues>
+</Collection>
+</Collections>

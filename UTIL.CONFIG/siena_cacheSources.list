@@ -1,0 +1,11 @@
+#=----------------------------------------------------------------------------=
+#=which machines and db's to update pricing for=
+#=KNOWNAS|IP|DBNAME|Query|Criteria=
+#=In Criteria use ^ in place of '=' - SW will convert automatically.
+COUNTERPARTY=BNK6sys3|192.168.1.83|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerCounterparty|Active^1 and SpotRerouteDataRerouteCurrency^''|CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode=
+BOOK=BNK6sys3|192.168.1.83|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerBook|Active^1 and SpotRerouteDataRerouteCurrency^''|CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode=
+CURRENCY=BNK6sys3|192.168.1.83|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerCurrency|Active^1 and SpotRerouteDataRerouteCurrency^''|CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode=
+PAYMENT.SYSTEM=BNK6sys3|192.168.1.83|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerPaymentSystem|Active^1 and SpotRerouteDataRerouteCurrency^''|CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode=
+CURRENCY.PAIR=BNK6sys3|192.168.1.83|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerCurrencyPair|Active^1 and SpotRerouteDataRerouteCurrency^''|CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode=
+REASON=BNK6sys3|192.168.1.83|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerReason|Active^1 and SpotRerouteDataRerouteCurrency^''|CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode=
+PORTFOLIO=BNK6sys3|192.168.1.83|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerPortfolio|Active^1 and SpotRerouteDataRerouteCurrency^''|CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode=

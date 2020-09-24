@@ -1,11 +1,11 @@
 SUBROUTINE U_OS.CURL(URI, VERBOSE, R.UTIL.LOG.CMD, ID.UTIL.LOG.CMD)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_OS.CURL
-*         Type   : SUBROUTINE
+*   Routine Name : U_OS.CURL
+*           Type : SUBROUTINE
 *         Params : URI, VERBOSE, R.UTIL.LOG.CMD, ID.UTIL.LOG.CMD
-*         Loc    : UTIL.BP
+*            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200823 at 12.15.36 in DEV by root
+*   Info Updated : 20200922 at 17.39.44 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

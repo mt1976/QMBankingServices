@@ -1,0 +1,27 @@
+SUBROUTINE SIENA.CACHE_REASON.HELPER(PROCESS.NAME)
+** INFORMATION ****************************************************************
+*   Routine Name : SIENA.CACHE_REASON.HELPER
+*           Type : SUBROUTINE
+*         Params : PROCESS.NAME
+*            Loc : SIENA.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20200922 at 21.58.17 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
+* INITIALISE
+   PROCESS.NAME = "SIENA.CACHE_REASON.HELPER"
+   CALL U_START(PROCESS.NAME)
+* Setup some temp locations for input data
+
+   ERROR.TEXT = ""; STOP.ON.ERROR = @TRUE ; VERBOSE = @TRUE
+* OPEN FILES
+
+   CALL SIENA.CACHE_VALUE.HELPER("REASON")
+   CALL U_STOP(PROCESS.NAME)
+
+   RETURN
+
+END

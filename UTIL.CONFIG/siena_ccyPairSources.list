@@ -1,11 +1,10 @@
 #=----------------------------------------------------------------------------=
 #=which machines and db's to update pricing for=
-#=KNOWNAS|IP|DBNAME=
-#DBSOURCE=36sys1|194.128.145.36|rel_gateway_sal_prd_demo-sys-1=
+#=KNOWNAS|IP|DBNAME|Query|Criteria=
+#=In Criteria use ^ in place of '=' - SW will convert automatically.
 #DBSOURCE=36sys3|194.128.145.36|rel_gateway_sal_prd_demo-sys-3=
 #DBSOURCE=36sys5|194.128.145.36|rel_gateway_sal_prd_demo-sys-5=
 #DBSOURCE=36sys4|194.128.145.36|rel_gateway_sal_prd_demo-sys-4=
-#DBSOURCE=37sys1|194.128.145.37|rel_gateway_sal_prd_demo-sys-1=
-DBSOURCE=BNK6sys3|LDN-SRV-BNK6|rel_gateway_sal_prd_demo-sys-3=
-#DBSOURCE=37sys4|194.128.145.37|rel_gateway_sal_prd_demo-sys-4=
-#DBSOURCE=37sys5|194.128.145.37|rel_gateway_sal_prd_demo-sys-5=
+#DBSOURCE=BNK4sys1|194.128.145.36|rel_gateway_sal_prd_demo-sys-1=
+DBSOURCE=BNK6sys3|LDN-SRV-BNK6|ReportingDb_sal_prd_demo_sys-3|SRS.vwRateSourceCurrencyPair|Active^1 and SpotRerouteDataRerouteCurrency^''|CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode=
+DBSOURCE=BNK4sys1|194.128.145.36|ReportingDb-demo-sys-1|SRS.vwRateSourceCurrencyPair|Active^1 and SpotRerouteDataRerouteCurrency^''|CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode=

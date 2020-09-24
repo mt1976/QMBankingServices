@@ -1,11 +1,11 @@
 SUBROUTINE SIENA.FXREFRESH.HELPER(PROCESS.NAME)
 ** INFORMATION ****************************************************************
-* Routine Name   : SIENA.FXREFRESH.HELPER
-*         Type   : SUBROUTINE
+*   Routine Name : SIENA.FXREFRESH.HELPER
+*           Type : SUBROUTINE
 *         Params : PROCESS.NAME
-*         Loc    : SIENA.BP
+*            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200823 at 12.09.49 in DEV by root
+*   Info Updated : 20200922 at 21.58.17 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -33,21 +33,26 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
       THIS.SOURCE = CONVERT(U_PROP_SEP_ALT, @AM, THIS.SOURCE)
 
       SQL.FIELDS = "CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode"
-*      SQL.TABLE = "dbo.CurrencyPair"
-      SQL.TABLE = "dbo.vwRateSourceCurrencyPair"
+*     SQL.TABLE    = "dbo.CurrencyPair"
+*     SQL.TABLE    = "dbo.vwRateSourceCurrencyPair"
+      SQL.TABLE = THIS.SOURCE<4>
 
-      SQL.WHERE = "Active=1 and SpotRerouteDataRerouteCurrency=''"
+*     SQL.WHERE    = "Active=1 and SpotRerouteDataRerouteCurrency=''"
+      SQL.WHERE = CONVERT(U_PREF_SQL_EQ, "=", THIS.SOURCE<5>)
+
       RES.COLUMNS = ""
       RES.DATA = ""
       RES.COUNT = ""
       SQL.KNOWN.AS = THIS.SOURCE<1>
       SQL.ADDRESS = THIS.SOURCE<2>
       SQL.DATABASE = THIS.SOURCE<3>
+      SQL.FIELDS = THIS.SOURCE<6>
 
       CALL U_CRT.INFO("SOURCE", THIS.SOURCE)
 
       GOSUB UPDATE.LIST
    NEXT I
+
    CALL U_STOP(PROCESS.NAME)
 
    RETURN

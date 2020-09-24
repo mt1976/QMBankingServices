@@ -1,11 +1,11 @@
 SUBROUTINE U_CRT(TEXT, ITEM.NAME, CALLING.PROCESS)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_CRT
-*         Type   : SUBROUTINE
+*   Routine Name : U_CRT
+*           Type : SUBROUTINE
 *         Params : TEXT, ITEM.NAME, CALLING.PROCESS
-*         Loc    : UTIL.BP
+*            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200823 at 12.15.36 in DEV by root
+*   Info Updated : 20200922 at 17.39.44 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

@@ -1,30 +1,30 @@
 SUBROUTINE U_OS.EXECUTE(STMT, VERBOSE)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_OS.EXECUTE
-*         Type   : SUBROUTINE
+*   Routine Name : U_OS.EXECUTE
+*           Type : SUBROUTINE
 *         Params : STMT, VERBOSE
-*         Loc    : UTIL.BP
+*            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200823 at 12.15.36 in DEV by root
+*   Info Updated : 20200922 at 17.39.44 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
-
+   USE.STMT = STMT
 
    IF VERBOSE THEN
-      CALL U_CRT.INFO("EXECUTE", STMT)
+      CALL U_CRT.INFO("EXECUTE", USE.STMT)
 
    END ELSE
       HUSH ON
    END
 
    IF VERBOSE THEN
-      EXECUTE STMT CAPTURING OUTPUT
+      EXECUTE USE.STMT CAPTURING OUTPUT
    END ELSE
-      EXECUTE STMT SILENT
+      EXECUTE USE.STMT SILENT
    END
    IF VERBOSE THEN
       *  CALL U_CRT.INFO("OUTPUT", "")
@@ -34,8 +34,8 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
    END
    R.EVENT = ""
    R.EVENT<U_LOG_EVENT> = "EXECUTE"
-   R.EVENT<U_LOG_MSG> = STMT
-   R.EVENT<U_LOG_CMD> = STMT
+   R.EVENT<U_LOG_MSG> = USE.STMT
+   R.EVENT<U_LOG_CMD> = USE.STMT
    R.EVENT<U_LOG_RETCD> = @SYSTEM.RETURN.CODE
    R.EVENT<U_LOG_SUBR> = "U_OS.EXECUTE"
 

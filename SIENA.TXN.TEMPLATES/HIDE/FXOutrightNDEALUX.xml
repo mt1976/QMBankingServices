@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<TrdCaptRpt xmlns="http://www.fixprotocol.org/FIXML-5-0-SP1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Bk="JHB" Ccy="EUR" CntCcy="USD" CntLastQty="+1568280.00" DealingInf="Siena" ExecTyp="0" LastMkt="1.311288" LastPx="1.3069" LastQty="+1200000.00" MsgID="0000000101" SettlDt="2016-03-23" TrdDt="2016-02-19" TrdID="NDEALUXTRAD" TrdID2="000557" xsi:schemaLocation="http://www.fixprotocol.org/FIXML-5-0-SP1 fixml-tradecapture-base-5-0-SP1.xsd">
+	<Hdr Snt="2016-03-10T11:39:41"/>
+	<Instrmt CFI="FFCPN0" SubTyp="OT" Sym="EUR/USD"/>
+	<Undly ChlMgn="0.0" CxMktPts="0.0" Desc="SP" FxRate="1.3044" Mat="2016-02-23" MktFxRate="1.311" Px="-0.0066" QteBas="0" Sym="EUR/USD"/>
+	<Undly CFI="FFCPN0" Ccy="EUR" ChlMgn="0.0" CxMktPts="0.0" Desc="Leg1" FxRate="1.3069" Mat="2016-03-23" MktFxRate="1.311288" MktPts="+0.000288" Px="+0.002212" QteBas="0" Sym="EUR/USD"/>
+	<RptSide Side="1">
+		<Pty ID="Larry Jones" R="11"/>
+		<Pty ID="NDEALUX" R="13"/>
+		<Pty ID="103194" R="3"/>
+		<Pty ID="Super" R="31"/>
+		<Pty ID="SGD" R="53"/>
+		<SettlDetails>
+			<Pty ID="CHASUS33XXX"/>
+		</SettlDetails>
+		<SettlDetails>
+			<Pty ID="MIDLGB22XXX"/>
+		</SettlDetails>
+		<RegTRDID ID="1890.WIFA.WC.TKTMEDSGD6PJ0106"/>
+	</RptSide>
+</TrdCaptRpt>

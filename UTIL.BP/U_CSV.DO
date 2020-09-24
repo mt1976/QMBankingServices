@@ -1,11 +1,11 @@
 PROGRAM U_CSV.DO
 ** INFORMATION ****************************************************************
-* Routine Name   : U_CSV.DO
-*         Type   : PROGRAM
+*   Routine Name : U_CSV.DO
+*           Type : PROGRAM
 *         Params :
-*         Loc    : UTIL.BP
+*            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200823 at 12.15.36 in DEV by root
+*   Info Updated : 20200922 at 17.39.44 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

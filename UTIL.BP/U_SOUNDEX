@@ -1,11 +1,11 @@
 SUBROUTINE U_SOUNDEX(OUT_VALUE, IN_VALUE)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_SOUNDEX
-*         Type   : SUBROUTINE
+*   Routine Name : U_SOUNDEX
+*           Type : SUBROUTINE
 *         Params : OUT_VALUE, IN_VALUE
-*         Loc    : UTIL.BP
+*            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200823 at 12.15.36 in DEV by root
+*   Info Updated : 20200922 at 17.39.44 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

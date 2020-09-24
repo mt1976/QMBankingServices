@@ -1,11 +1,11 @@
 SUBROUTINE U_IO.CLOSEFILE(FN.FILENAME, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT)
 ** INFORMATION ****************************************************************
-* Routine Name   : U_IO.CLOSEFILE
-*         Type   : SUBROUTINE
+*   Routine Name : U_IO.CLOSEFILE
+*           Type : SUBROUTINE
 *         Params : FN.FILENAME, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT
-*         Loc    : UTIL.BP
+*            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-* Info Updated   : 20200823 at 12.15.36 in DEV by root
+*   Info Updated : 20200922 at 17.39.44 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
