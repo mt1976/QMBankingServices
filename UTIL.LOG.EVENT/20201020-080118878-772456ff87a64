@@ -1,0 +1,24 @@
+CHROME.FETCH
+20201020
+08:01:18.00045
+sales
+https://www.barchart.com/forex/quotes/%5EUSDHKD/forward-rates
+
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EUSDHKD/forward-rates
+https://www.barchart.com/forex/quotes/%5EUSDHKD/forward-rates
+0
+U_OS.CHROME.FETCH
+
+171
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BATCH.DO HOURLY NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+08.01.15
+08.01.18
+00.00.03
+U_OS.CHROME.FETCH
+
+BATCH.DO
