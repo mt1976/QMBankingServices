@@ -1,0 +1,1 @@
+select CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode from dbo.vwRateSourceCurrencyPair where Active=1 and SpotRerouteDataRerouteCurrency=''
