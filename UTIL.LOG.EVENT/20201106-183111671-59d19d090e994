@@ -1,0 +1,24 @@
+CHROME.FETCH
+20201106
+18:31:11.00081
+sales
+https://www.barchart.com/forex/quotes/%5EEURJPY/forward-rates
+
+/usr/bin/google-chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EEURJPY/forward-rates
+https://www.barchart.com/forex/quotes/%5EEURJPY/forward-rates
+0
+U_OS.CHROME.FETCH
+
+310
+/home/sales/qm/account/mwt-QM-dev
+MWT-QM-DEV
+BATCH.DO HALFPAST NOPAGE
+ldn-srv-ubnt01
+194.128.145.117
+Linux
+18.31.09
+18.31.11
+00.00.02
+U_OS.CHROME.FETCH
+
+BATCH.DO
