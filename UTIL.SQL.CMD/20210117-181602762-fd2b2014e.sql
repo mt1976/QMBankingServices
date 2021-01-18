@@ -1,0 +1,1 @@
+select CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode from SRS.vwRandomizerCurrency where Active=1 and SpotRerouteDataRerouteCurrency=''

@@ -105,6 +105,8 @@ HEADER INFORMATION UTIL.BP
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_TEST.md)  
 ## U_TEST2  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_TEST2.md)  
+## U_TEST3  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_TEST3.md)  
 # SUBROUTINES
 ## U_BUILD.INFO.HELPER  
 PARAMETERS : FN.BP, FV.UTIL.BP, ID.UTIL.BP, R.UTIL.CONFIG  
@@ -145,6 +147,9 @@ PARAMETERS : IP4.ADDRESS
 ## U_GET.LIST  
 PARAMETERS : STMT, PROCESS.LIST, NO.ITEMS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_GET.LIST.md)  
+## U_GET.NEXT.WORKING.DAY  
+PARAMETERS : IN.DATE, NEXT.WORKING.DAY  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_GET.NEXT.WORKING.DAY.md)  
 ## U_GET.UUID  
 PARAMETERS : UNIQUE.ID  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_GET.UUID.md)  
@@ -196,6 +201,9 @@ PARAMETERS : FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT
 ## U_IO.WRITE.DRIP  
 PARAMETERS : FN.FILEVAR, FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_IO.WRITE.DRIP.md)  
+## U_IS.WORKING.DAY  
+PARAMETERS : IN.DATE, IS.WORKING.DAY  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_IS.WORKING.DAY.md)  
 ## U_JOB.DO.HELPER  
 PARAMETERS : DO.ITEM  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_JOB.DO.HELPER.md)  
@@ -241,4 +249,10 @@ PARAMETERS : THIS.PROCESS
 ## U_TRANSLATE  
 PARAMETERS : TYPE, IN.TEXT, FIELD.NO, OUT.TEXT  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_TRANSLATE.md)  
+## U_XML.FIND  
+PARAMETERS : XML.TAG,XML.DOC,RESULT  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_XML.FIND.md)  
+## U_XML.SUBSTITUTE  
+PARAMETERS : SUBS.REPLACE,SUBS.VALUE,XML.DOC  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_XML.SUBSTITUTE.md)  
 FOOTER UTIL.BP root  

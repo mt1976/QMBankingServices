@@ -5,7 +5,7 @@ SUBROUTINE U_STOP(THIS.PROCESS)
 *         Params : THIS.PROCESS
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20200922 at 17.39.44 in DEV by root
+*   Info Updated : 20210115 at 12.52.27 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -51,7 +51,9 @@ $INSERT UTIL.BP F_UTIL.LOG.EVENT.H
       R.EVENT<U_LOG_PROCESS> = CALLING.SUBR
 
       CALL U_LOG.EVENT("", R.EVENT)
-      CRT "!INFO - Done ":DQUOTE(THIS.PROCESS)
+      ERROR.TEXT = "!INFO - Done ":DQUOTE(THIS.PROCESS)
+      CALL U_CRT.RAW(ERROR.TEXT, "INFO", THIS.PROCESS)
+
 
    END
 

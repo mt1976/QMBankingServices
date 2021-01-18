@@ -5,7 +5,7 @@ SUBROUTINE U_IO.OPENFILE(FN.FILENAME, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT)
 *         Params : FN.FILENAME, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20200922 at 17.39.44 in DEV by root
+*   Info Updated : 20210115 at 12.52.27 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -37,6 +37,7 @@ $INSERT UTIL.BP I_UTIL.H
 
          ERROR.TEXT = "!ERROR - Unable to Open [":FN.FILENAME:"]"
          LOGMSG ERROR.TEXT
+         CALL U_CRT.RAW(ERROR.TEXT, "ERROR", PROCESS.NAME)
          * CRT ERROR.TEXT
          *CALL U_CRT.INFO("ERROR", ERROR.TEXT)
          IF STOP.ON.ERROR THEN

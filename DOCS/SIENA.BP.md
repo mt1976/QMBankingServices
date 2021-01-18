@@ -21,8 +21,16 @@ HEADER INFORMATION SIENA.BP
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.FEEDS.md)  
 ## SIENA.FORWARDS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.FORWARDS.md)  
+## SIENA.FUNDS.CHECK.ACK  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.FUNDS.CHECK.ACK.md)  
+## SIENA.FUNDS.CHECK.NACK  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.FUNDS.CHECK.NACK.md)  
 ## SIENA.FXSP  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.FXSP.md)  
+## SIENA.GEN.ACCOUNTS  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.GEN.ACCOUNTS.md)  
+## SIENA.GEN.TXNS  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.GEN.TXNS.md)  
 ## SIENA.GILTS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.GILTS.md)  
 ## SIENA.LIBOR  
@@ -56,9 +64,18 @@ PARAMETERS : PROCESS.NAME
 ## SIENA.CACHE_CURRENCYPAIR.HELPER  
 PARAMETERS : PROCESS.NAME  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.CACHE_CURRENCYPAIR.HELPER.md)  
+## SIENA.CACHE_PORTFOLIO.HELPER  
+PARAMETERS : PROCESS.NAME  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.CACHE_PORTFOLIO.HELPER.md)  
 ## SIENA.CACHE_PSYSTEM.HELPER  
 PARAMETERS : PROCESS.NAME  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.CACHE_PSYSTEM.HELPER.md)  
+## SIENA.CACHE_REASON.HELPER  
+PARAMETERS : PROCESS.NAME  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.CACHE_REASON.HELPER.md)  
+## SIENA.CACHE_USER.HELPER  
+PARAMETERS : PROCESS.NAME  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.CACHE_USER.HELPER.md)  
 ## SIENA.CACHE_VALUE.HELPER  
 PARAMETERS : OBJECT.NAME  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.CACHE_VALUE.HELPER.md)  
@@ -92,6 +109,9 @@ PARAMETERS : PROCESS.NAME
 ## SIENA.FXSP.HELPER  
 PARAMETERS : PROCESS.NAME  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.FXSP.HELPER.md)  
+## SIENA.GEN.TXN.DATA  
+PARAMETERS : PROCESS.TYPE  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.GEN.TXN.DATA.md)  
 ## SIENA.GILTS.HELPER  
 PARAMETERS : PROCESS.NAME  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.GILTS.HELPER.md)  

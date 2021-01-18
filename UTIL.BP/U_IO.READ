@@ -5,7 +5,7 @@ SUBROUTINE U_IO.READ(FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT)
 *         Params : FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20200922 at 17.39.44 in DEV by root
+*   Info Updated : 20210117 at 18.11.00 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -16,10 +16,13 @@ $INSERT UTIL.BP I_UTIL.H
 
    READ R.RECORD FROM FV.FILEVAR, ID.RECORD ELSE
       ERROR.TEXT = "Unable to read [":ID.RECORD:"]"
+      *  CALL U_CRT.RAW(ERROR.TEXT, "ERROR", "U_IO.READ")
+
       LOGMSG ERROR.TEXT
 
       IF STOP.ON.ERROR THEN
-         STOP "!ERROR ":DQUOTE(ERROR.TEXT)
+         CALL U_CRT.RAW(ERROR.TEXT, "ERROR", "U_IO.READ")
+         STOP
       END
    END
 * CRT "DONE ":DQUOTE(R.RECORD)

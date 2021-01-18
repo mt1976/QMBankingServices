@@ -5,13 +5,13 @@ SUBROUTINE U_DOCUMENT.DO.HELPER(FN.ITEM, ID.ITEM, DO.TYPE, FV.ITEM, DOC.DETAIL)
 *         Params : FN.ITEM, ID.ITEM, DO.TYPE, FV.ITEM, DOC.DETAIL
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20200922 at 17.39.44 in DEV by root
+*   Info Updated : 20210115 at 12.52.27 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
 
-   PROCESS.NAME = "U_JOB.DO.HELPER"
+   PROCESS.NAME = "U_DOCUMENT.DO.HELPER"
 
 * USAGE Used to build markdown help files.
 
@@ -74,7 +74,7 @@ $INCLUDE UTIL.BP I_UTIL.H
    FV.DOCS.PAGES = ""
    CALL U_IO.OPENFILE(FN.DOCS.PAGES, FV.DOCS.PAGES, @TRUE, "")
 
-   CALL U_CRT.INFO("PROCESS", DO.TYPE:" ":ID.ITEM:" ":FN.ITEM)
+   CALL U_CRT.INFO("DOCUMENT", DO.TYPE:" ":FN.ITEM:" ":ID.ITEM)
    SNIPIT = "PROCESSED ":DO.TYPE:" ":ID.ITEM:" ":FN.ITEM
    R.REC = ""
    CALL U_IO.READ(FV.ITEM, ID.ITEM, R.REC, @TRUE, "")
@@ -146,12 +146,8 @@ $INCLUDE UTIL.BP I_UTIL.H
          PAGE.REC<-1> = MD$BR:MD$BR
    END CASE
 
-
-
    CALL U_IO.WRITE(FV.DOCS.PAGES, ID.PAGE, PAGE.REC, @TRUE, "")
 
-
-*   CALL U_STOP(PROCESS.NAME)
    RETURN
 
 
@@ -215,8 +211,6 @@ PROCESS.BODY:
 PROCESS.BODY.CALLS:
    FOR N = HEADER.END TO NO.LINES
       TEST.TXT = CHANGE(TRIM(R.REC<N>, SPACE(1), ""), SPACE(1), @AM)
-
-
 
       IF TEST.TXT<1> = MD$CALL THEN
          TEST.CALL = CHANGE(TEST.TXT<2>, "(", @AM)<1>

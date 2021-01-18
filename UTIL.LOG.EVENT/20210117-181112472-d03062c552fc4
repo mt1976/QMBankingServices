@@ -1,0 +1,24 @@
+MSSQL.EXECUTE
+20210117
+18:11:12.00050
+root
+mssql-cli -S 192.168.1.83 -d ReportingDb_sal_prd_demo_sys-3 -U siena -P siena123 -i /Users/matttownsend/Development/qm/dev/UTIL.SQL.CMD/20210117-181112472-f6018ce88.sql -o /Users/matttownsend/Development/qm/dev/UTIL.SQL.RESPONSE/20210117-181112472-f6018ce88.out
+
+select CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode from SRS.vwRandomizerPortfolio where Active=1 and SpotRerouteDataRerouteCurrency=''
+
+0
+U_MSSQL.EXECUTE
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO CACHE_FXMID
+mercury.local
+192.168.0.100
+Mac
+18.11.12
+18.11.12
+00.00.00
+U_MSSQL.EXECUTE
+
+JOB.DO

@@ -20,13 +20,14 @@
 *         Params : FN.FILENAME, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20200922 at 16.34.08 in DEV by root
+*   Info Updated : 20210115 at 12.52.27 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 ```
 ## BODY  
 ### EXTERNAL CALLS  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.RAW" width="25" />[U_CRT.RAW](../DOCS.PAGE/U_CRT.RAW.md)  
 ### INTERNAL CALLS  
  FN.PD = "PROCESS.DIR" ; F.PD = "" ; PD.ID = ""    
   

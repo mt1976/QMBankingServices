@@ -1,0 +1,1 @@
+select CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode from SRS.vwRandomizerCounterparty where Active=1 and SpotRerouteDataRerouteCurrency=''

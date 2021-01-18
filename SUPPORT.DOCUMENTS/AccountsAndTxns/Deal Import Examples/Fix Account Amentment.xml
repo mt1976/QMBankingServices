@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><TrdCaptRpt 
+  xmlns="http://www.fixprotocol.org/FIXML-5-0-SP2" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  ExecTyp="0" LastQty="-5000.00" MsgID="0000000114" 
+  TrdDt="2018-02-20" 
+  LinkID="AccountID100" TrdID2="000009"
+  xsi:schemaLocation="http://www.fixprotocol.org/FIXML-5-0-SP2 fixml-tradecapture-base-5-0-SP2.xsd">
+  <Hdr Snt="2018-07-09T14:03:07"/>
+  <Instrmt CFI="DYFXXX" SubTyp="ACCTA"/>
+  <FinDetls StartDt="2018-12-04"/>
+  <RptSide Side="F">
+    <Pty ID="456" R="16"/>
+  </RptSide>
+  <Nt Txt="some notes5"/>
+</TrdCaptRpt>

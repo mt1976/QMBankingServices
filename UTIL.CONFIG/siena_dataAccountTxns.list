@@ -1,0 +1,27 @@
+#=----------------------------------------------------------------------------=
+#=which machines and db's to update pricing for=
+#=KNOWNAS|IP|DBNAME|Query|Criteria=
+#=In Criteria use ^ in place of '=' - SW will convert automatically.
+MAP=DEAL.TYPE=1
+MAP=EXT.REF=2
+MAP=ACCOUNT.NAME=3
+MAP=COUNTERPARTY=4
+MAP=PAYMENT.SYSTEM=5
+MAP=CURRENCY=6
+MAP=AMOUNT=7
+MAP=BOOK=8
+MAP=NOTES=9
+MAP=MANDATED.USER=10
+#ACC=DealType|AccountNumber/ExternalRef|AccountName|Counterparty|PaymentSystem|Currency|Balance|Book|Notes|Mandated User=
+DATA=Account|10000001|GBP Customer Account|TELIA|SWIFT|GBP|0|ACCTS|Sample Note 1|Default=
+DATA=Account|10000002|EUR Customer Account|TELIA|SWIFT|EUR|0|ACCTS|Sample Note 2|Default=
+DATA=Account|10000003|USD Customer Account|TELIA|SWIFT|USD|0|ACCTS|Sample Note 3|Default=
+DATA=Account|20000001|GBP Margin Account|TELIA|SWIFT|GBP|0|ACCTS|Sample Note 4|Default=
+DATA=Account|20000002|EUR Margin Account|TELIA|SWIFT|EUR|0|ACCTS|Sample Note 5|Default=
+DATA=Account|20000003|USD Margin Account|TELIA|SWIFT|USD|0|ACCTS|Sample Note 6|Default=
+DATA=NOSTRO|90000001|NOSTRO0000001GBP|CS|SWIFT|GBP|0|TREASURY|Sample Note 7|Default=
+DATA=NOSTRO|90000002|NOSTRO0000002EUR|CS|SWIFT|EUR|0|TREASURY|Sample Note 8|Default=
+DATA=NOSTRO|90000003|NOSTRO0000003USD|CS|SWIFT|USD|0|TREASURY|Sample Note 9|Default=
+DATA=VOSTRO|80000001|VOSTRO0000001GBP|CS|SWIFT|GBP|0|TREASURY|Sample Note 10|Default=
+DATA=VOSTRO|80000002|VOSTRO0000002EUR|CS|SWIFT|EUR|0|TREASURY|Sample Note 11|Default=
+DATA=VOSTRO|80000003|VOSTRO0000003USD|CS|SWIFT|USD|0|TREASURY|Sample Note 12|Default=

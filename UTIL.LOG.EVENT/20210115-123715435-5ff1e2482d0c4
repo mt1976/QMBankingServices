@@ -1,0 +1,24 @@
+EXECUTE
+20210115
+12:37:15.01622
+root
+FORMAT UTIL.BP BATCH.DO
+
+FORMAT UTIL.BP BATCH.DO
+
+0
+U_OS.EXECUTE
+/dev/ttys000
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC UTIL.BP *
+mercury.local
+192.168.0.100
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC
