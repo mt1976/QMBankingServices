@@ -1,0 +1,54 @@
+SUBROUTINE SIENA.GET.CACHE.VALUE(FETCH.OBJECT, RESULT.VALUE)
+** INFORMATION ****************************************************************
+*   Routine Name : SIENA.GET.CACHE.VALUE
+*           Type : SUBROUTINE
+*         Params : FETCH.OBJECT,RESULT.VALUE
+*            Loc : SIENA.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210118 at 13.20.50 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
+$INCLUDE UTIL.BP F_SIENA.TXN.TEMPLATES.H
+$INCLUDE UTIL.BP F_SIENA.TXN.OUT.H
+$INCLUDE UTIL.BP F_SIENA.CACHE.H
+** INITIALISE
+   PROCESS.NAME = "SIENA.GET.CACHE.VALUE"
+   CALL U_START(PROCESS.NAME)
+* Setup some temp locations for input data
+
+   ERROR.TEXT = ""; STOP.ON.ERROR = @TRUE ; VERBOSE = @TRUE
+** Open Files
+
+   FN.SIENA.CACHE = S_CACHE_FILE.NAME ; FV.SIENA.CACHE = ""
+   CALL U_IO.OPENFILE(FN.SIENA.CACHE, FV.SIENA.CACHE, STOP.ON.ERROR, ERROR.TEXT)
+
+** Setup static
+   cacheSampleSize = 10 ; cacheSampleFreq = 10 ; generateNoItems = 10
+   amountRangeStart = 100
+   amountRangeEnd = 1000
+
+   CALL U_IO.GET.PROPERTY("randomizer", "cacheSampleSize", cacheSampleSize)
+   CALL U_IO.GET.PROPERTY("randomizer", "cacheSampleFreq", cacheSampleFreq)
+   CALL U_IO.GET.PROPERTY("randomizer", "generateNoItems", generateNoItems)
+   CALL U_IO.GET.PROPERTY("randomizer", "amountRangeStart", amountRangeStart)
+   CALL U_IO.GET.PROPERTY("randomizer", "amountRangeEnd", amountRangeEnd)
+
+
+   GET.VALUE.STMT = ""
+   GET.VALUE.STMT := "SELECT ":S_CACHE_FILE.NAME:" "
+   GET.VALUE.STMT := "WITH ":S_CACHE_OBJECT:" = ":DQUOTE(FETCH.OBJECT):" "
+   *GET.VALUE.STMT := "SAMPLED ":cacheSampleFreq:" "
+   GET.VALUE.STMT := "SAMPLE ":cacheSampleSize:" "
+   GET.VALUE.STMT := "SAVING UNIQUE ":S_CACHE_VALUE
+
+   CALL U_GET.LIST(GET.VALUE.STMT, GET.VALUE.LIST, NO.VALUE.ITEMS)
+   GET.VALUE.POS = 1
+   CALL U_RND.BETWEEN(GET.VALUE.POS, 1, NO.VALUE.ITEMS)
+   RESULT.VALUE = GET.VALUE.LIST<GET.VALUE.POS>
+
+   CALL U_STOP(PROCESS.NAME)
+
+   RETURN

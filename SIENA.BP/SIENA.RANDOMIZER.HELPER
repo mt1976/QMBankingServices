@@ -111,21 +111,7 @@ $INCLUDE UTIL.BP F_SIENA.CACHE.H
             CPARTY.ID = ""
             FOR REPLACE.SOFT = 1 TO NO.SOFT.ITEMS
                REPLACE.ITEM = SOFT.LIST<REPLACE.SOFT>
-               REPLACE.VALUE = "PH":REPLACE.ITEM
-
-               GET.VALUE.STMT = ""
-               GET.VALUE.STMT := "SELECT ":S_CACHE_FILE.NAME:" "
-               GET.VALUE.STMT := "WITH ":S_CACHE_OBJECT:" = ":DQUOTE(REPLACE.ITEM):" "
-               *GET.VALUE.STMT := "SAMPLED ":cacheSampleFreq:" "
-               GET.VALUE.STMT := "SAMPLE ":cacheSampleSize:" "
-               GET.VALUE.STMT := "SAVING UNIQUE ":S_CACHE_VALUE
-
-
-
-               CALL U_GET.LIST(GET.VALUE.STMT, GET.VALUE.LIST, NO.VALUE.ITEMS)
-               GET.VALUE.POS = 1
-               CALL U_RND.BETWEEN(GET.VALUE.POS, 1, NO.VALUE.ITEMS)
-               REPLACE.VALUE = GET.VALUE.LIST<GET.VALUE.POS>
+               CALL SIENA.GET.CACHE.VALUE(REPLACE.ITEM, REPLACE.VALUE)
                GOSUB REPLACE.IT
                IF REPLACE.ITEM = "COUNTERPARTY" THEN
                   CPARTY.ID = REPLACE.VALUE
