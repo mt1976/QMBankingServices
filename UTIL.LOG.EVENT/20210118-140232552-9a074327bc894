@@ -1,0 +1,24 @@
+MSSQL.EXECUTE
+20210118
+14:02:32.02237
+matt
+mssql-cli -S 127.0.0.1 -d ReportingDb_sal_prd_demo_sys-3 -U sql -P sql123 -i /mnt/d/dbs/mwt-QM-dev/UTIL.SQL.CMD/20210118-140220540-57bf367eb.sql -o /mnt/d/dbs/mwt-QM-dev/UTIL.SQL.RESPONSE/20210118-140220540-57bf367eb.out
+
+select BookName from SRS.vwRandomizerBook
+
+63
+U_MSSQL.EXECUTE
+/dev/pts/0
+1
+/mnt/d/dbs/mwt-QM-dev
+MWT-QM-DEV
+BATCH.DO REBUILD.CACHE NOPAGE
+TITAN
+TITAN titan
+Linux
+14.02.20
+14.02.32
+00.00.12
+U_MSSQL.EXECUTE
+
+BATCH.DO

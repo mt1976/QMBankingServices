@@ -21,11 +21,11 @@
 ** INFORMATION ****************************************************************
 *   Routine Name : SIENA.GET.CACHE.VALUE
 *           Type : SUBROUTINE
-*         Params : FETCH.OBJECT,RESULT.VALUE
+*         Params : FETCH.OBJECT, RESULT.VALUE
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210118 at 13.20.50 in DEV by root
-*                : on mercury.local (Mac)
+*   Info Updated : 20210118 at 13.39.20 in MWT-QM-DEV by matt
+*                : on TITAN (Linux)
 *******************************************************************************
 
 ```

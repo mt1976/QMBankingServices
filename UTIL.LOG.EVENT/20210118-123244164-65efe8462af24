@@ -1,0 +1,24 @@
+MSSQL.EXECUTE
+20210118
+12:32:44.01115
+matt
+mssql-cli -S 127.0.0.1 -d ReportingDb_sal_prd_demo_sys-3 -U sql -P sql123 -i /mnt/d/dbs/mwt-QM-dev/UTIL.SQL.CMD/20210118-123237157-c11e079cb.sql -o /mnt/d/dbs/mwt-QM-dev/UTIL.SQL.RESPONSE/20210118-123237157-c11e079cb.out
+
+select KeyImportID from SRS.vwRandomizerCounterparty
+
+0
+U_MSSQL.EXECUTE
+/dev/pts/0
+1
+/mnt/d/dbs/mwt-QM-dev
+MWT-QM-DEV
+BATCH.DO RANDOMIZER
+TITAN
+TITAN titan
+Linux
+12.32.37
+12.32.43
+00.00.06
+U_MSSQL.EXECUTE
+
+BATCH.DO
