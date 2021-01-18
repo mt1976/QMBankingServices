@@ -22,7 +22,7 @@
 *         Params : OBJECT.NAME
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20200921 at 20.21.03 in DEV by root
+*   Info Updated : 20210115 at 12.57.15 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -33,6 +33,10 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.OPENFILE" width="25" />[U_IO.OPENFILE](../DOCS.PAGE/U_IO.OPENFILE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.LIST" width="25" />[U_IO.GET.LIST](../DOCS.PAGE/U_IO.GET.LIST.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.UUID" width="25" />[U_GET.UUID](../DOCS.PAGE/U_GET.UUID.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_MSSQL.SELECT" width="25" />[U_MSSQL.SELECT](../DOCS.PAGE/U_MSSQL.SELECT.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.RECORD" width="25" />[U_CRT.RECORD](../DOCS.PAGE/U_CRT.RECORD.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_LOG.EVENT" width="25" />[U_LOG.EVENT](../DOCS.PAGE/U_LOG.EVENT.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.EXECUTE" width="25" />[U_OS.EXECUTE](../DOCS.PAGE/U_OS.EXECUTE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.DELETE" width="25" />[U_IO.DELETE](../DOCS.PAGE/U_IO.DELETE.md)  

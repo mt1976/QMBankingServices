@@ -1,0 +1,18 @@
+SUBROUTINE U_XML.SUBSTITUTE(SUBS.REPLACE, SUBS.VALUE, XML.DOC)
+** INFORMATION ****************************************************************
+*   Routine Name : U_XML.SUBSTITUTE
+*           Type : SUBROUTINE
+*         Params : SUBS.REPLACE, SUBS.VALUE, XML.DOC
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210115 at 12.52.27 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT UTIL.BP I_UTIL.H
+
+   SUBS.REPLACE.ITEM = SUB$PREFIX:SUBS.REPLACE:SUB$SUFFIX
+   XML.DOC = CHANGE(XML.DOC, SUBS.REPLACE.ITEM, SUBS.VALUE)
+
+   RETURN
+END

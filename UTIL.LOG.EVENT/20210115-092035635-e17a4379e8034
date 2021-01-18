@@ -1,0 +1,24 @@
+MSSQL.EXECUTE
+20210115
+09:20:35.01384
+root
+mssql-cli -S LDN-SRV-BNK6 -d ReportingDb_sal_prd_demo_sys-3 -U siena -P siena123 -i /Users/matttownsend/Development/qm/dev/UTIL.SQL.CMD/20210115-092035635-a070dc90b.sql -o /Users/matttownsend/Development/qm/dev/UTIL.SQL.RESPONSE/20210115-092035635-a070dc90b.out
+
+select CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode from SRS.vwRateSourceCurrencyPair where Active=1 and SpotRerouteDataRerouteCurrency=''
+
+0
+U_MSSQL.EXECUTE
+/dev/ttys000
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO FXREFRESH NOPAGE
+mercury.local
+192.168.0.100
+Mac
+09.20.35
+09.20.35
+00.00.00
+U_MSSQL.EXECUTE
+
+JOB.DO

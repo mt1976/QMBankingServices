@@ -1,0 +1,27 @@
+SUBROUTINE SIENA.CACHE_REASON.HELPER(PROCESS.NAME)
+** INFORMATION ****************************************************************
+*   Routine Name : SIENA.CACHE_MANDATED.HELPER
+*           Type : SUBROUTINE
+*         Params : PROCESS.NAME
+*            Loc : SIENA.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20200925 at 16.44.54 in MWT-QM-DEV by matt
+*                : on TITAN (Linux)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
+* INITIALISE
+   PROCESS.NAME = "SIENA.CACHE_USER.HELPER"
+   CALL U_START(PROCESS.NAME)
+* Setup some temp locations for input data
+
+   ERROR.TEXT = ""; STOP.ON.ERROR = @TRUE ; VERBOSE = @TRUE
+* OPEN FILES
+
+   CALL SIENA.CACHE_VALUE.HELPER("MANDATED.USER")
+   CALL U_STOP(PROCESS.NAME)
+
+   RETURN
+
+END

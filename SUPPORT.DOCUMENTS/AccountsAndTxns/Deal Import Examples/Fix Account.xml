@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><TrdCaptRpt 
+  xmlns="http://www.fixprotocol.org/FIXML-5-0-SP2" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  AccountName="Account Name 7" AccountNumber="87651126" Bk="Deal" Ccy="EUR" 
+  ExecTyp="0" LastMkt="5.2" LastMkt2="6.0" 
+  LastPx="5.1" LastPx2="6.3" LastQty="+1000000.00" MsgID="0000000099" 
+  RefIRTyp="LIBOR" RefIRTyp2="Fixed" RefIRMgn="1" RefIRMgn2="2"
+  TrdDt="2018-07-03" 
+  TrdID="AccountID100"
+  xsi:schemaLocation="http://www.fixprotocol.org/FIXML-5-0-SP2 fixml-tradecapture-base-5-0-SP2.xsd">
+  <Instrmt SubTyp="ACCT"/>
+  <FinDetls StartDt="2018-12-03"/>
+  <SprdBnchmkCurve CreditFrequency="1M" DebitFrequency="6M" IntAct="0" Point="3M"/>
+  <RptSide Side="F">
+    <Pty ID="789" R="13"/>
+    <Pty ID="ClientA-AB" R="11"/>
+    <Pty ID="123" R="16"/>
+    <Pty ID="User1" R="31"/>
+    <Pty ID="Imported" R="60"/>
+  </RptSide>
+  <Nt Txt="Test Note"/>
+</TrdCaptRpt>

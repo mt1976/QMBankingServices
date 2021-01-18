@@ -19,7 +19,7 @@
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20200922 at 16.34.08 in DEV by root
+*   Info Updated : 20210115 at 12.52.27 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -36,6 +36,8 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.EXECUTE" width="25" />[U_OS.EXECUTE](../DOCS.PAGE/U_OS.EXECUTE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_BUILD.INFO.HELPER" width="25" />[U_BUILD.INFO.HELPER](../DOCS.PAGE/U_BUILD.INFO.HELPER.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.READ" width="25" />[U_IO.READ](../DOCS.PAGE/U_IO.READ.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_DOCUMENT.DO.HELPER" width="25" />[U_DOCUMENT.DO.HELPER](../DOCS.PAGE/U_DOCUMENT.DO.HELPER.md)  
 ### INTERNAL CALLS  
 #### DO.IT:  
   

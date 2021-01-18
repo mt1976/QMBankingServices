@@ -16,10 +16,10 @@
 ** INFORMATION ****************************************************************
 *   Routine Name : U_TEST
 *           Type : PROGRAM
-*         Params : 
+*         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20200922 at 16.34.08 in DEV by root
+*   Info Updated : 20210115 at 12.52.27 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -29,7 +29,11 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_INITIALISE" width="25" />[U_INITIALISE](../DOCS.PAGE/U_INITIALISE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_START" width="25" />[U_START](../DOCS.PAGE/U_START.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_HEADER" width="25" />[U_HEADER](../DOCS.PAGE/U_HEADER.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_LOG.PURGE" width="25" />[U_LOG.PURGE](../DOCS.PAGE/U_LOG.PURGE.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IS.WORKING.DAY" width="25" />[U_IS.WORKING.DAY](../DOCS.PAGE/U_IS.WORKING.DAY.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.NEXT.WORKING.DAY" width="25" />[U_GET.NEXT.WORKING.DAY](../DOCS.PAGE/U_GET.NEXT.WORKING.DAY.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IS.WORKING.DAY" width="25" />[U_IS.WORKING.DAY](../DOCS.PAGE/U_IS.WORKING.DAY.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.PROPERTY" width="25" />[U_IO.GET.PROPERTY](../DOCS.PAGE/U_IO.GET.PROPERTY.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
 ### INTERNAL CALLS  
   
