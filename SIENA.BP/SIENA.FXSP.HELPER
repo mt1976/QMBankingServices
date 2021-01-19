@@ -5,7 +5,7 @@ SUBROUTINE SIENA.FXSP.HELPER(PROCESS.NAME)
 *         Params : PROCESS.NAME
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210115 at 12.57.15 in DEV by root
+*   Info Updated : 20210118 at 16.46.24 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -65,6 +65,18 @@ $INCLUDE UTIL.BP I_UTIL.H
             ROW.DATA = OUT.CCYTN:OUT.BUY:OUT.SEL
 * CALL U_CRT.INFO("OUTPUT",ROW.DATA)
             OUTPUT.DATA<-1> = ROW.DATA
+
+            * UPDATE BUY
+            OBJECT.NAME = "RATE":U_SEP:"FX":U_SEP:"B":U_SEP:"SP":CCYPAIR
+            OBJECT.VALUE = OUT.BUY
+            CALL SIENA.CACHE.CLEAR(OBJECT.NAME)
+            CALL SIENA.CACHE.UPDATE(OBJECT.NAME, "", OBJECT.VALUE)
+
+            * UPDATE SELL
+            OBJECT.NAME = "RATE":U_SEP:"FX":U_SEP:"O":U_SEP:"SP":CCYPAIR
+            OBJECT.VALUE = OUT.SEL
+            CALL SIENA.CACHE.CLEAR(OBJECT.NAME)
+            CALL SIENA.CACHE.UPDATE(OBJECT.NAME, "", OBJECT.VALUE)
 
          END
 * INPUT.DATA = CONVERT("!", @FM, ID.RESTORE)

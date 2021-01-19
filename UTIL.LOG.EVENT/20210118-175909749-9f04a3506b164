@@ -1,0 +1,24 @@
+WGET.FETCH
+20210118
+17:59:09.00646
+root
+https://www.barchart.com/forex/quotes/%5EUSDJPY/overview
+
+/usr/local/bin/wget -O "/tmp/20210118-175908748-3b83fcf8c75e4"   https://www.barchart.com/forex/quotes/%5EUSDJPY/overview
+https://www.barchart.com/forex/quotes/%5EUSDJPY/overview
+0
+U_WGET
+/dev/ttys001
+3
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO BCFXSP
+mercury.local
+192.168.0.100
+Mac
+17.59.08
+17.59.09
+00.00.01
+U_OS.WGET
+
+JOB.DO

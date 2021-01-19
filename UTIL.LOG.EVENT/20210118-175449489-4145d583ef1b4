@@ -1,0 +1,24 @@
+EXECUTE
+20210118
+17:54:49.00501
+root
+FORMAT UTIL.BP U_OS.WGET
+
+FORMAT UTIL.BP U_OS.WGET
+
+0
+U_OS.EXECUTE
+/dev/ttys001
+3
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC UTIL.BP U_OS.WGET
+mercury.local
+192.168.0.100
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

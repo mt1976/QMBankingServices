@@ -24,7 +24,7 @@
 *         Params : PROCESS.NAME
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210115 at 12.57.15 in DEV by root
+*   Info Updated : 20210118 at 16.46.24 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -42,6 +42,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.READ" width="25" />[U_IO.READ](../DOCS.PAGE/U_IO.READ.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.NEXT.WORKING.DAY" width="25" />[U_GET.NEXT.WORKING.DAY](../DOCS.PAGE/U_GET.NEXT.WORKING.DAY.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_RND.BETWEEN" width="25" />[U_RND.BETWEEN](../DOCS.PAGE/U_RND.BETWEEN.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.CACHE.FETCH" width="25" />[SIENA.CACHE.FETCH](../DOCS.PAGE/SIENA.CACHE.FETCH.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.UUID" width="25" />[U_GET.UUID](../DOCS.PAGE/U_GET.UUID.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.WRITE" width="25" />[U_IO.WRITE](../DOCS.PAGE/U_IO.WRITE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  

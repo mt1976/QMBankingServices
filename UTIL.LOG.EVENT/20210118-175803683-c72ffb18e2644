@@ -1,0 +1,24 @@
+WGET.FETCH
+20210118
+17:58:03.00603
+root
+https://www.barchart.com/forex/quotes/%5EAUDUSD/overview
+
+/usr/local/bin/wget -O="/tmp/20210118-175733653-df20f5e2fdcc4"   https://www.barchart.com/forex/quotes/%5EAUDUSD/overview
+https://www.barchart.com/forex/quotes/%5EAUDUSD/overview
+0
+U_WGET
+/dev/ttys001
+3
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO BCFXSP
+mercury.local
+192.168.0.100
+Mac
+17.57.33
+17.58.03
+00.00.30
+U_OS.WGET
+
+JOB.DO

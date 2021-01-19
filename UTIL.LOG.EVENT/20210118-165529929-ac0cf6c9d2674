@@ -1,0 +1,24 @@
+CHROME.FETCH
+20210118
+16:55:29.00256
+root
+https://www.barchart.com/forex/quotes/%5EUSDCHF/overview
+
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EUSDCHF/overview
+https://www.barchart.com/forex/quotes/%5EUSDCHF/overview
+0
+U_OS.CHROME.FETCH
+/dev/ttys001
+3
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO BCFXSP
+mercury.local
+192.168.0.100
+Mac
+16.55.28
+16.55.29
+00.00.01
+U_OS.CHROME.FETCH
+
+JOB.DO

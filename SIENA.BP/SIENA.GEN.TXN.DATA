@@ -5,7 +5,7 @@ SUBROUTINE SIENA.GEN.TXN.DATA(PROCESS.TYPE)
 *         Params : PROCESS.TYPE
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210115 at 12.57.15 in DEV by root
+*   Info Updated : 20210118 at 16.46.24 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -70,9 +70,9 @@ PROCESS.ROW:
    FOR THIS.MAPPING = 1 TO NO.MAPPINGS
       FIND.TAG = DATA.MAP<THIS.MAPPING>
       SUBS.DATA = SOURCE.DATA<THIS.MAPPING>
-      IF SUBS.DATA[1,1]="!" THEN
-        FETCH.OBJECT=TRIM(SUBS.DATA[2,99])
-        CALL SIENA.GET.CACHE.VALUE(FETCH.OBJECT, SUBS.DATA)
+      IF SUBS.DATA[1, 1]="!" THEN
+         FETCH.OBJECT=TRIM(SUBS.DATA[2, 99])
+         CALL SIENA.CACHE.FETCH(FETCH.OBJECT, SUBS.DATA)
       END
       CALL U_XML.SUBSTITUTE(FIND.TAG, SUBS.DATA, R.NEW.TXN)
    NEXT THIS.MAPPING

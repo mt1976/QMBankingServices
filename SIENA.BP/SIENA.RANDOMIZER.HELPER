@@ -5,7 +5,7 @@ SUBROUTINE SIENA.RANDOMIZER.HELPER(PROCESS.NAME)
 *         Params : PROCESS.NAME
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210115 at 12.57.15 in DEV by root
+*   Info Updated : 20210118 at 16.46.24 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -111,7 +111,7 @@ $INCLUDE UTIL.BP F_SIENA.CACHE.H
             CPARTY.ID = ""
             FOR REPLACE.SOFT = 1 TO NO.SOFT.ITEMS
                REPLACE.ITEM = SOFT.LIST<REPLACE.SOFT>
-               CALL SIENA.GET.CACHE.VALUE(REPLACE.ITEM, REPLACE.VALUE)
+               CALL SIENA.CACHE.FETCH(REPLACE.ITEM, REPLACE.VALUE)
                GOSUB REPLACE.IT
                IF REPLACE.ITEM = "COUNTERPARTY" THEN
                   CPARTY.ID = REPLACE.VALUE
