@@ -1,0 +1,1 @@
+select MandatedUserKeyUserName from SRS.vwRandomizerMandatedsUsers

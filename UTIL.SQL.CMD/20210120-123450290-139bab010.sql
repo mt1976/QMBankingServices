@@ -1,0 +1,1 @@
+select KeyImportID from SRS.vwRandomizerCounterparty
