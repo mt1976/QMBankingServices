@@ -1,17 +1,10 @@
-fundsCheckResponseTemplate=Response_FundsCheck.xml=
+# This file overrides siena_demo.properties propoerties values
 fundsCheckResponseDest=/home/matt/dbs/mwt-QM-dev/TEMP=
+
 fundsCheckSource=/home/matt/dbs/mwt-QM-dev/TEMP2=
 
-demo_tmpl_accounts=Template_Account.xml=
-demo_data_accounts=siena_dataAccounts=
 demo_dest_accounts=/home/matt/dbs/mwt-QM-dev/TEMP=
 
-
-demo_tmpl_poo=Template_AccountAmendment.xml=
-demo_data_poo=siena_dataAccountTxns=
 demo_dest_poo=/home/matt/dbs/mwt-QM-dev/TEMP=
-
-stdstdAccAmendmentList=siena_stdAccAmendments
-stdAccAmendmentTemplate=Template_AccountAmendment.xml=
 
 dealImporterDest=/home/matt/dbs/mwt-QM-dev/TEMP=
