@@ -15,7 +15,7 @@
 # ===================================================================
 #
 export qmHome=$PWD
-export jq="/snap/bin/jq"
+export jq="/usr/bin/jq"
 export fixerAccessKey="c3811be81a6df1db0e14304d77b3a23d"
 export fredAccessKey="d4d50b886c05baa2795c363319ca64db"
 export outputDir="SIENA.IN"
