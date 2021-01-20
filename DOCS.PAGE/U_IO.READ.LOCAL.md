@@ -5,7 +5,7 @@
 |TYPE|SUBROUTINE|
 |SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="UTIL.BP" width="25" />[UTIL.BP](../DOCS/UTIL.BP.md)|
 |ID|U_IO.READ.LOCAL|
-|PARAMETERS|FV_FILEVAR, ID_RECORD, R_RECORD, STOP.ON.ERROR, ERROR.TEXT|
+|PARAMETERS|FV_FILEVAR, ID_RECORD, R_RECORD, STOP.ON.ERROR, ERROR.TEXT, ACTION|
     
 ## USAGE  
   
@@ -17,10 +17,10 @@
 ** INFORMATION ****************************************************************
 *   Routine Name : U_IO.READ.LOCAL
 *           Type : SUBROUTINE
-*         Params : FV_FILEVAR, ID_RECORD, R_RECORD, STOP.ON.ERROR, ERROR.TEXT
+*         Params : FV_FILEVAR, ID_RECORD, R_RECORD, STOP.ON.ERROR, ERROR.TEXT, ACTION
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210115 at 12.52.27 in DEV by root
+*   Info Updated : 20210120 at 10.08.27 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

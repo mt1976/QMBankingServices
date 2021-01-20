@@ -1,0 +1,24 @@
+WGET.FETCH
+20210120
+11:53:47.02871
+root
+https://www.barchart.com/forex/quotes/USDCHF.G/overview
+
+/usr/local/bin/wget -O "/tmp/20210120-115346826-67bc13ad0f104" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.barchart.com/forex/quotes/USDCHF.G/overview
+https://www.barchart.com/forex/quotes/USDCHF.G/overview
+0
+U_WGET
+/dev/ttys001
+4
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO FXFWD NOPAGE
+mercury.local
+192.168.0.100
+Mac
+11.53.46
+11.53.47
+00.00.01
+U_OS.WGET
+
+JOB.DO

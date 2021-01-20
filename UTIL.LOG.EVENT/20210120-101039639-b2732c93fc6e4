@@ -1,0 +1,24 @@
+WGET.FETCH
+20210120
+10:10:39.01085
+root
+https://www.barchart.com/forex/quotes/%5EGBPUSD/forward-rates
+
+/usr/local/bin/wget -O "/tmp/20210120-101038638-6b6fd09032e44" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.barchart.com/forex/quotes/%5EGBPUSD/forward-rates
+https://www.barchart.com/forex/quotes/%5EGBPUSD/forward-rates
+0
+U_WGET
+/dev/ttys001
+4
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO FORWARDS
+mercury.local
+192.168.0.100
+Mac
+10.10.38
+10.10.39
+00.00.01
+U_OS.WGET
+
+JOB.DO

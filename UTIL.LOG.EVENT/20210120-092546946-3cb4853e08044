@@ -1,0 +1,24 @@
+WGET.FETCH
+20210120
+09:25:46.00514
+root
+https://www.barchart.com/forex/quotes/%5EUSDCAD/overview
+
+/usr/local/bin/wget -O "/tmp/20210120-092546946-104bcc105f174" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.barchart.com/forex/quotes/%5EUSDCAD/overview
+https://www.barchart.com/forex/quotes/%5EUSDCAD/overview
+1
+U_WGET
+/dev/ttys001
+4
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO BCFXSP
+mercury.local
+192.168.0.100
+Mac
+09.25.46
+09.25.46
+00.00.00
+U_OS.WGET
+
+JOB.DO

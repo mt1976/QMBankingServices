@@ -21,7 +21,7 @@
 *         Params : URI, VERBOSE, RESULT
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210119 at 13.02.00 in DEV by root
+*   Info Updated : 20210120 at 10.08.27 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -30,11 +30,9 @@
 ### EXTERNAL CALLS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.PROPERTY" width="25" />[U_IO.GET.PROPERTY](../DOCS.PAGE/U_IO.GET.PROPERTY.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GETTEMP" width="25" />[U_IO.GETTEMP](../DOCS.PAGE/U_IO.GETTEMP.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.OPENFILE" width="25" />[U_IO.OPENFILE](../DOCS.PAGE/U_IO.OPENFILE.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.OPENFILEPATH" width="25" />[U_IO.OPENFILEPATH](../DOCS.PAGE/U_IO.OPENFILEPATH.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.UUID" width="25" />[U_GET.UUID](../DOCS.PAGE/U_GET.UUID.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.READ" width="25" />[U_IO.READ](../DOCS.PAGE/U_IO.READ.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_LOG.EVENT" width="25" />[U_LOG.EVENT](../DOCS.PAGE/U_LOG.EVENT.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.DELETETEMP" width="25" />[U_IO.DELETETEMP](../DOCS.PAGE/U_IO.DELETETEMP.md)  
 ### INTERNAL CALLS  
   

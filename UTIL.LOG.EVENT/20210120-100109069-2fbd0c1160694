@@ -1,0 +1,24 @@
+CHROME.FETCH
+20210120
+10:01:09.00737
+root
+https://www.barchart.com/forex/quotes/%5EEURBTC/forward-rates
+
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu --dump-dom https://www.barchart.com/forex/quotes/%5EEURBTC/forward-rates
+https://www.barchart.com/forex/quotes/%5EEURBTC/forward-rates
+0
+U_OS.CHROME.FETCH
+/dev/ttys001
+4
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO FORWARDS
+mercury.local
+192.168.0.100
+Mac
+10.01.05
+10.01.09
+00.00.04
+U_OS.CHROME.FETCH
+
+JOB.DO

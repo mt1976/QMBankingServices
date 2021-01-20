@@ -20,7 +20,7 @@
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210115 at 12.52.27 in DEV by root
+*   Info Updated : 20210120 at 10.08.27 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -32,7 +32,6 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_HEADER" width="25" />[U_HEADER](../DOCS.PAGE/U_HEADER.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GETTEMP" width="25" />[U_IO.GETTEMP](../DOCS.PAGE/U_IO.GETTEMP.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.OPENFILE" width="25" />[U_IO.OPENFILE](../DOCS.PAGE/U_IO.OPENFILE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.EXECUTE" width="25" />[U_OS.EXECUTE](../DOCS.PAGE/U_OS.EXECUTE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.DELETETEMP" width="25" />[U_IO.DELETETEMP](../DOCS.PAGE/U_IO.DELETETEMP.md)  

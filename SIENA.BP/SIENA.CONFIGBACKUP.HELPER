@@ -5,7 +5,7 @@ SUBROUTINE SIENA.CONFIGBACKUP.HELPER(PROCESS.NAME)
 *         Params : PROCESS.NAME
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210118 at 16.46.24 in DEV by root
+*   Info Updated : 20210120 at 09.24.43 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -21,7 +21,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
    STMT = "crontab -l"
    CALL U_OS.COMMAND(STMT, @FALSE, OUTPUT, @FALSE)
-   ID.UTIL.CONFIG=UPCASE(SYSTEM(1015)):U_SEP_ALT:"crontab.bk"
+   ID.UTIL.CONFIG="crontab.bk":U_SEP_ALT:UPCASE(SYSTEM(1015))
    IF OUTPUT<>"" THEN
       CALL U_IO.DELETE(FV.UTIL.CONFIG, ID.UTIL.CONFIG, STOP.ON.ERROR, ERROR.TEXT)
       CALL U_IO.WRITE(FV.UTIL.CONFIG, ID.UTIL.CONFIG, OUTPUT, STOP.ON.ERROR, ERROR.TEXT)
@@ -56,7 +56,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
    RETURN
 
 BACKUP:
-   ID.MENU.BK=UPCASE(SYSTEM(1015)):U_SEP_ALT:ITEM.FILE:U_TRUNC:ITEM.NAME:".bk"
+   ID.MENU.BK=ITEM.FILE:U_TRUNC:ITEM.NAME:".bk":U_SEP_ALT:UPCASE(SYSTEM(1015))
    STMT = "COPY FROM ":ITEM.FILE:" TO UTIL.CONFIG ":DQUOTE(ITEM.NAME):",":DQUOTE(ID.MENU.BK):" OVERWRITING"
    CALL U_OS.EXECUTE(STMT, @TRUE)
    RETURN

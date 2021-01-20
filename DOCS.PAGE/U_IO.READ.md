@@ -20,7 +20,7 @@
 *         Params : FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210117 at 18.11.00 in DEV by root
+*   Info Updated : 20210120 at 10.08.27 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

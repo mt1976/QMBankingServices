@@ -1,0 +1,24 @@
+WGET.FETCH
+20210120
+11:51:41.02569
+root
+https://www.barchart.com/forex/quotes/EURJPY.6/overview
+
+/usr/local/bin/wget -O "/tmp/20210120-115141701-b532f3bcf47a4" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.barchart.com/forex/quotes/EURJPY.6/overview
+https://www.barchart.com/forex/quotes/EURJPY.6/overview
+1
+U_WGET
+/dev/ttys001
+4
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO FXFWD NOPAGE
+mercury.local
+192.168.0.100
+Mac
+11.51.41
+11.51.41
+00.00.00
+U_OS.WGET
+
+JOB.DO

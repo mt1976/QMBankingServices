@@ -1,0 +1,24 @@
+WGET.FETCH
+20210120
+11:49:42.02305
+root
+https://www.barchart.com/forex/quotes/%5EEURGBP/overview
+
+/usr/local/bin/wget -O "/tmp/20210120-114941581-d8e5385694094" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.barchart.com/forex/quotes/%5EEURGBP/overview
+https://www.barchart.com/forex/quotes/%5EEURGBP/overview
+0
+U_WGET
+/dev/ttys001
+4
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO BCFXSP NOPAGE
+mercury.local
+192.168.0.100
+Mac
+11.49.41
+11.49.42
+00.00.01
+U_OS.WGET
+
+JOB.DO

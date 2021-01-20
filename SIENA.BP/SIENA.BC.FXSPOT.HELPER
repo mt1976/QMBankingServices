@@ -5,7 +5,7 @@ SUBROUTINE SIENA.BC.FXSPOT.HELPER(PROCESS.NAME)
 *         Params : PROCESS.NAME
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210119 at 13.20.19 in DEV by root
+*   Info Updated : 20210120 at 09.55.28 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -118,17 +118,15 @@ ADD.RVDATA:
    OUTPUT.DATA<-1> = ROW.DATA
 
    * UPDATE BUY
-   OBJECT.NAME = "RATE":U_SEP:"FX":U_SEP:"SP":U_SEP:CURRENCY.PAIR:U_SEP:"B"
+   OBJECT.NAME = "FX":U_SEP_ID:"SP":U_SEP_ID:CURRENCY.PAIR:U_SEP_ID:"B"
    OBJECT.VALUE = BID.STRING+0
    CALL SIENA.CACHE.CLEAR(OBJECT.NAME)
-   CALL U_CRT.INFO(OBJECT.NAME, OBJECT.VALUE)
    CALL SIENA.CACHE.UPDATE(OBJECT.NAME, "", OBJECT.VALUE)
 
    * UPDATE SELL
-   OBJECT.NAME = "RATE":U_SEP:"FX":U_SEP:"SP":U_SEP:CURRENCY.PAIR:U_SEP:"O"
+   OBJECT.NAME = "FX":U_SEP_ID:"SP":U_SEP_ID:CURRENCY.PAIR:U_SEP_ID:"O"
    OBJECT.VALUE = ASK.STRING+0
    CALL SIENA.CACHE.CLEAR(OBJECT.NAME)
-   CALL U_CRT.INFO(OBJECT.NAME, OBJECT.VALUE)
    CALL SIENA.CACHE.UPDATE(OBJECT.NAME, "", OBJECT.VALUE)
 
 

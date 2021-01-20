@@ -1,0 +1,24 @@
+EXECUTE
+20210120
+11:55:01.03039
+root
+SELECT SIENA.CACHE WITH 1 = "FX.M10.USDJPY.O"
+
+SELECT SIENA.CACHE WITH 1 = "FX.M10.USDJPY.O"
+
+0
+U_OS.EXECUTE
+/dev/ttys001
+4
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO FXFWD NOPAGE
+mercury.local
+192.168.0.100
+Mac
+
+
+
+U_OS.EXECUTE
+
+JOB.DO

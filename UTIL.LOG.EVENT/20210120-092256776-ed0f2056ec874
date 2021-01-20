@@ -1,0 +1,24 @@
+EXECUTE
+20210120
+09:22:56.00171
+root
+BASIC SIENA.BP SIENA.DELIVER.FILE
+
+BASIC SIENA.BP SIENA.DELIVER.FILE
+
+1
+U_OS.EXECUTE
+/dev/ttys001
+4
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC SIENA.BP *
+mercury.local
+hostname: illegal option -- I
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

@@ -1,0 +1,24 @@
+WGET.FETCH
+20210120
+11:50:22.02400
+root
+https://www.barchart.com/forex/quotes/AUDUSD.X/overview
+
+/usr/local/bin/wget -O "/tmp/20210120-115022622-c67fc722b6b54" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.barchart.com/forex/quotes/AUDUSD.X/overview
+https://www.barchart.com/forex/quotes/AUDUSD.X/overview
+0
+U_WGET
+/dev/ttys001
+4
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO FXFWD NOPAGE
+mercury.local
+192.168.0.100
+Mac
+11.50.22
+11.50.22
+00.00.00
+U_OS.WGET
+
+JOB.DO

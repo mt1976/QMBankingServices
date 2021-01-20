@@ -15,8 +15,8 @@ MAP=NOTES=9
 MAP=MANDATED.USER=10
 MAP=TEST=11
 #ACC=DealType|AccountNumber/ExternalRef|AccountName|Counterparty|PaymentSystem|Currency|Balance|Book|Notes|Mandated User|Test=
-DATA=Account|10000001|GBP Customer Account|TELIA|SWIFT|GBP|0|ACCTS|Sample Note 1|Default|!RATE~FX~SP~GBPUSD~O=
-DATA=Account|10000002|EUR Customer Account|TELIA|SWIFT|EUR|0|ACCTS|Sample Note 2|Default|!RATE~FX~SP~USDCAD~B=
+DATA=Account|10000001|GBP Customer Account|TELIA|SWIFT|GBP|0|ACCTS|Sample Note 1|Default|!FX.SP.GBPUSD.O=
+DATA=Account|10000002|EUR Customer Account|TELIA|SWIFT|EUR|0|ACCTS|Sample Note 2|Default|!FX.SP.USDCAD.B=
 xDATA=Account|10000003|USD Customer Account|TELIA|SWIFT|USD|0|ACCTS|Sample Note 3|Default=
 xDATA=Account|20000001|GBP Margin Account|TELIA|SWIFT|GBP|0|ACCTS|Sample Note 4|Default=
 xDATA=Account|20000002|EUR Margin Account|TELIA|SWIFT|EUR|0|ACCTS|Sample Note 5|Default=

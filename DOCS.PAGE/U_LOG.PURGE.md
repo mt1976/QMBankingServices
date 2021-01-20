@@ -21,7 +21,7 @@
 *         Params : PURGE.FILE
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210115 at 12.52.27 in DEV by root
+*   Info Updated : 20210120 at 10.08.27 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
