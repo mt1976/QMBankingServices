@@ -1,0 +1,31 @@
+SUBROUTINE SIENA.EURIBOR.HELPER(PROCESS.NAME)
+** INFORMATION ****************************************************************
+*   Routine Name : SIENA.EURIBOR.HELPER
+*           Type : SUBROUTINE
+*         Params : PROCESS.NAME
+*            Loc : SIENA.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210122 at 13.33.56 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP F_UTIL.TRANSLATE.H
+$INCLUDE UTIL.BP I_RATECSV.H
+$INSERT UTIL.BP I_UTIL.H
+
+* INITIALISE
+   PROCESS.NAME = "SIENA.EURIBOR.HELPER"
+   CALL U_START(PROCESS.NAME)
+
+* Setup some temp locations for input data
+
+   ERROR.TEXT = ""; STOP.ON.ERROR = @TRUE ; VERBOSE = @TRUE
+
+* OPEN FILES
+
+   CALL SIENA.HOMEFINANCE.HELPER(PROCESS.NAME, "EURIBOR")
+
+   CALL U_CRT.INFO("PROCESSING", "COMPLETE")
+   CALL U_STOP(PROCESS.NAME)
+   RETURN
+END

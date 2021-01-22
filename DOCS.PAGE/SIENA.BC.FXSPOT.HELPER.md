@@ -22,7 +22,7 @@
 *         Params : PROCESS.NAME
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210120 at 09.55.28 in DEV by root
+*   Info Updated : 20210122 at 13.26.21 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -40,7 +40,6 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.WRITE" width="25" />[U_IO.WRITE](../DOCS.PAGE/U_IO.WRITE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.CACHE.CLEAR" width="25" />[SIENA.CACHE.CLEAR](../DOCS.PAGE/SIENA.CACHE.CLEAR.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.CACHE.UPDATE" width="25" />[SIENA.CACHE.UPDATE](../DOCS.PAGE/SIENA.CACHE.UPDATE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 ### INTERNAL CALLS  

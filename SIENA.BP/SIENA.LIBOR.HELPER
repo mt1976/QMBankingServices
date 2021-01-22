@@ -5,12 +5,27 @@ SUBROUTINE SIENA.LIBOR.HELPER(PROCESS.NAME)
 *         Params : PROCESS.NAME
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210120 at 09.22.46 in DEV by root
+*   Info Updated : 20210122 at 13.26.21 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
+$INCLUDE UTIL.BP F_UTIL.TRANSLATE.H
+$INCLUDE UTIL.BP I_RATECSV.H
 $INSERT UTIL.BP I_UTIL.H
 
-   CALL SIENA.MM.HELPER(PROCESS.NAME, "LIBOR")
+* INITIALISE
+   PROCESS.NAME = "SIENA.LIBOR.HELPER"
+   CALL U_START(PROCESS.NAME)
+
+* Setup some temp locations for input data
+
+   ERROR.TEXT = ""; STOP.ON.ERROR = @TRUE ; VERBOSE = @TRUE
+
+* OPEN FILES
+
+   CALL SIENA.HOMEFINANCE.HELPER(PROCESS.NAME, "LIBOR")
+
+   CALL U_CRT.INFO("PROCESSING", "COMPLETE")
+   CALL U_STOP(PROCESS.NAME)
    RETURN
 END

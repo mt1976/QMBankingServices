@@ -1,0 +1,17 @@
+PROGRAM SIENA.LIBOR
+** INFORMATION ****************************************************************
+*   Routine Name : SIENA.EURIBOR
+*           Type : PROGRAM
+*         Params :
+*            Loc : SIENA.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210122 at 13.26.21 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+   CALL U_INITIALISE("SIENA.LIBOR")
+   CALL SIENA.EURIBOR.HELPER('EURIBOR')
+
+   STOP
+END

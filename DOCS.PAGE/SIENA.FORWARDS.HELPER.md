@@ -22,7 +22,7 @@
 *         Params : PROCESS.NAME
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210120 at 11.42.08 in DEV by root
+*   Info Updated : 20210122 at 14.34.24 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -35,14 +35,14 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.PROPERTY" width="25" />[U_IO.GET.PROPERTY](../DOCS.PAGE/U_IO.GET.PROPERTY.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.LIST" width="25" />[U_IO.GET.LIST](../DOCS.PAGE/U_IO.GET.LIST.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.DELETE" width="25" />[U_IO.DELETE](../DOCS.PAGE/U_IO.DELETE.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.WRITE" width="25" />[U_IO.WRITE](../DOCS.PAGE/U_IO.WRITE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_TRANSLATE" width="25" />[U_TRANSLATE](../DOCS.PAGE/U_TRANSLATE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.WGET" width="25" />[U_OS.WGET](../DOCS.PAGE/U_OS.WGET.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.CACHE.CLEAR" width="25" />[SIENA.CACHE.CLEAR](../DOCS.PAGE/SIENA.CACHE.CLEAR.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.CACHE.UPDATE" width="25" />[SIENA.CACHE.UPDATE](../DOCS.PAGE/SIENA.CACHE.UPDATE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.DELETE" width="25" />[U_IO.DELETE](../DOCS.PAGE/U_IO.DELETE.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.WRITE" width="25" />[U_IO.WRITE](../DOCS.PAGE/U_IO.WRITE.md)  
 ### INTERNAL CALLS  
 #### PROCESS.TENORS:  
   

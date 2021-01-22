@@ -1,0 +1,24 @@
+WGET
+20210122
+14:40:10.05162
+root
+https://www.barchart.com/forex/quotes/USDHKD.3/overview
+
+/usr/local/bin/wget -O "/tmp/20210122-144008808-0532f00a5af44" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.barchart.com/forex/quotes/USDHKD.3/overview
+https://www.barchart.com/forex/quotes/USDHKD.3/overview
+0
+U_WGET
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO FORWARDS
+mercury.local
+192.168.0.100
+Mac
+14.40.08
+14.40.10
+00.00.02
+U_OS.WGET
+
+JOB.DO

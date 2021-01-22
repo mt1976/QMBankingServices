@@ -1,0 +1,24 @@
+WGET
+20210122
+14:10:03.03551
+root
+https://www.barchart.com/forex/quotes/NZDUSD.5/overview
+
+/usr/local/bin/wget -O "/tmp/20210122-141002002-9b155fc04c114" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.barchart.com/forex/quotes/NZDUSD.5/overview
+https://www.barchart.com/forex/quotes/NZDUSD.5/overview
+0
+U_WGET
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO FORWARDS
+mercury.local
+192.168.0.100
+Mac
+14.10.02
+14.10.03
+00.00.01
+U_OS.WGET
+
+JOB.DO

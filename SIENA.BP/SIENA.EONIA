@@ -5,14 +5,13 @@ PROGRAM SIENA.EONIA
 *         Params :
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210120 at 09.22.46 in DEV by root
+*   Info Updated : 20210122 at 14.02.06 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
-$INSERT UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP I_UTIL.H
    CALL U_INITIALISE("SIENA.EONIA")
-
-   CALL SIENA.EONIA.HELPER("EONIA")
+   CALL SIENA.EURIBOR.HELPER('EONIA')
 
    STOP
 END

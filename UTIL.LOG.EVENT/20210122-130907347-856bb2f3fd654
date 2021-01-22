@@ -1,0 +1,24 @@
+WGET
+20210122
+13:09:07.02506
+root
+https://www.homefinance.nl/english/international-interest-rates/libor/poundsterling/libor-rates-overnight-eur.asp
+
+/usr/local/bin/wget -O "/tmp/20210122-130906346-4b3b9db7c8144" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.homefinance.nl/english/international-interest-rates/libor/poundsterling/libor-rates-overnight-eur.asp
+https://www.homefinance.nl/english/international-interest-rates/libor/poundsterling/libor-rates-overnight-eur.asp
+1
+U_WGET
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO LIBOR
+mercury.local
+192.168.0.100
+Mac
+13.09.06
+13.09.07
+00.00.01
+U_OS.WGET
+
+JOB.DO

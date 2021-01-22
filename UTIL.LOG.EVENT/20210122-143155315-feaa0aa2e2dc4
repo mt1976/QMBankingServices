@@ -1,0 +1,24 @@
+WGET
+20210122
+14:31:55.04344
+root
+https://www.barchart.com/forex/quotes/EURBTC.C/overview
+
+/usr/local/bin/wget -O "/tmp/20210122-143154314-1e9efc9a316e4" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.barchart.com/forex/quotes/EURBTC.C/overview
+https://www.barchart.com/forex/quotes/EURBTC.C/overview
+1
+U_WGET
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO FORWARDS
+mercury.local
+192.168.0.100
+Mac
+14.31.54
+14.31.55
+00.00.01
+U_OS.WGET
+
+JOB.DO

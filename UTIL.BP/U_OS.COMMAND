@@ -5,7 +5,7 @@ SUBROUTINE U_OS.COMMAND(STMT, VERBOSE, OUTPUT, SUPPRESS.LOG.EVENT)
 *         Params : STMT, VERBOSE, OUTPUT, SUPPRESS.LOG.EVENT
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210120 at 10.08.27 in DEV by root
+*   Info Updated : 20210122 at 13.03.23 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -15,7 +15,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
 
    IF VERBOSE THEN
-      CALL U_CRT.INFO("OS.COMMAND", STMT)
+      CALL U_CRT.INFO("OS.COMMAND", @(U_BOLD_ON):STMT:@(U_BOLD_OFF))
    END ELSE
       *    HUSH ON
    END

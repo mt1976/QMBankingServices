@@ -1,0 +1,24 @@
+WGET
+20210122
+14:29:58.04199
+root
+https://www.barchart.com/forex/quotes/EURUSD.E/overview
+
+/usr/local/bin/wget -O "/tmp/20210122-142957197-6ae3e649090d4" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.barchart.com/forex/quotes/EURUSD.E/overview
+https://www.barchart.com/forex/quotes/EURUSD.E/overview
+0
+U_WGET
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO FORWARDS
+mercury.local
+192.168.0.100
+Mac
+14.29.57
+14.29.58
+00.00.01
+U_OS.WGET
+
+JOB.DO

@@ -5,7 +5,7 @@ SUBROUTINE U_OS.CHROME.FETCH(URI, VERBOSE, RESULT)
 *         Params : URI, VERBOSE, RESULT
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210120 at 10.08.27 in DEV by root
+*   Info Updated : 20210122 at 13.03.23 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -34,7 +34,8 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
    STMT = CHROME.LOCATION:SPACE(1):CHROME.DEFAULTS:SPACE(1):URI
 
-   CALL U_CRT.INFO("COMMAND", STMT)
+
+   CALL U_CRT.INFO("COMMAND", @(U_BOLD_ON):STMT:@(U_BOLD_OFF))
 
    OS.EXECUTE STMT CAPTURING RESULT
 

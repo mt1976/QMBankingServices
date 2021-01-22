@@ -1,0 +1,24 @@
+EXECUTE
+20210122
+10:02:40.00090
+root
+FORMAT SIENA.BP SIENA.TBILLS
+
+FORMAT SIENA.BP SIENA.TBILLS
+
+0
+U_OS.EXECUTE
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+bcc SIENA.BP *
+mercury.local
+192.168.0.100
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

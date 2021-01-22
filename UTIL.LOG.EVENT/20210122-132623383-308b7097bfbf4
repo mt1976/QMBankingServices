@@ -1,0 +1,24 @@
+EXECUTE
+20210122
+13:26:23.02593
+root
+BASIC SIENA.BP SIENA.DELIVER.HELPER
+
+BASIC SIENA.BP SIENA.DELIVER.HELPER
+
+1
+U_OS.EXECUTE
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC SIENA.BP *
+mercury.local
+192.168.0.100
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

@@ -1,0 +1,24 @@
+WGET
+20210122
+13:45:45.02901
+root
+https://www.homefinance.nl/english/international-interest-rates/euribor-rates-1-week.asp
+
+/usr/local/bin/wget -O "/tmp/20210122-134544544-82212bf114d74" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.homefinance.nl/english/international-interest-rates/euribor-rates-1-week.asp
+https://www.homefinance.nl/english/international-interest-rates/euribor-rates-1-week.asp
+0
+U_WGET
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO EURIBOR NOPAGE
+mercury.local
+192.168.0.100
+Mac
+13.45.44
+13.45.45
+00.00.01
+U_OS.WGET
+
+JOB.DO

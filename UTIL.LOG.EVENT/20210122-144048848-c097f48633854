@@ -1,0 +1,24 @@
+WGET
+20210122
+14:40:48.05229
+root
+https://www.barchart.com/forex/quotes/USDJPY.1/overview
+
+/usr/local/bin/wget -O "/tmp/20210122-144047847-55efa4ea2d804" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.barchart.com/forex/quotes/USDJPY.1/overview
+https://www.barchart.com/forex/quotes/USDJPY.1/overview
+0
+U_WGET
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO FORWARDS
+mercury.local
+192.168.0.100
+Mac
+14.40.47
+14.40.48
+00.00.01
+U_OS.WGET
+
+JOB.DO
