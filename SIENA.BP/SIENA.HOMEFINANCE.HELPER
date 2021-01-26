@@ -51,10 +51,11 @@ PROCESS.URI:
    END ELSE
       CALL U_CRT.INFO("RESPONSE", "RETURNED")
 
-      searchString = "" ; searchEnd = ""
+      searchString = "" ; searchEnd = "" ; extractPos = ""
 
       CALL U_IO.GET.PROPERTY(SOURCES, indexID:"_SearchString", searchString)
       CALL U_IO.GET.PROPERTY(SOURCES, indexID:"_SearchEnd", searchEnd)
+      CALL U_IO.GET.PROPERTY(SOURCES, indexID:"_Position", extractPos)
       CALL U_IO.GET.PROPERTY(SOURCES, "rateMask", rateMask)
 
 
@@ -64,7 +65,7 @@ PROCESS.URI:
       resultWget = CHANGE(resultWget, searchString, @AM)
       resultWget = CHANGE(resultWget, searchEnd, @AM)
 
-      indexRate = resultWget<4>
+      indexRate = resultWget<extractPos>
       *  CALL U_CRT.RECORD(resultWget)
       CALL U_CRT.INFO("RESULT", indexRate)
 
