@@ -15,7 +15,7 @@
 *       Filename : UTIL.LOG.CMD
 *         Prefix : U_LC_
 ** AUDIT **********************************************************************
-*   Info Updated : 20200921 at 19.43.19 in DEV by root
+*   Info Updated : 20210120 at 11.16.55 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 ```

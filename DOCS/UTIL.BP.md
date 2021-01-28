@@ -126,6 +126,9 @@ PARAMETERS : TEXT, ITEM.NAME, CALLING.PROCESS
 ## U_CRT.INFO  
 PARAMETERS : ACTION, TEXT  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_CRT.INFO.md)  
+## U_CRT.RAW  
+PARAMETERS : TEXT, ITEM.NAME, CALLING.PROCESS  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_CRT.RAW.md)  
 ## U_CRT.RECORD  
 PARAMETERS : R.RECORD  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_CRT.RECORD.md)  
@@ -138,6 +141,9 @@ PARAMETERS : FN.ITEM, ID.ITEM, DO.TYPE, FV.ITEM, DOC.DETAIL
 ## U_GET.CALLING.PROCESS.NAME  
 PARAMETERS : CALLING.SUBR, THIS.CALL.STACK, THIS.PARENT  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_GET.CALLING.PROCESS.NAME.md)  
+## U_GET.CLI.PARAMS  
+PARAMETERS : STARTING.PROCESS.NAME, PARAMETERS.LIST  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_GET.CLI.PARAMS.md)  
 ## U_GET.EPOCH.DATE  
 PARAMETERS : THIS.DATE  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_GET.EPOCH.DATE.md)  
@@ -193,7 +199,7 @@ PARAMETERS : FN.FILENAME, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT
 PARAMETERS : FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_IO.READ.md)  
 ## U_IO.READ.LOCAL  
-PARAMETERS : FV_FILEVAR, ID_RECORD, R_RECORD, STOP.ON.ERROR, ERROR.TEXT  
+PARAMETERS : FV_FILEVAR, ID_RECORD, R_RECORD, STOP.ON.ERROR, ERROR.TEXT, ACTION  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_IO.READ.LOCAL.md)  
 ## U_IO.WRITE  
 PARAMETERS : FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT  
@@ -234,6 +240,9 @@ PARAMETERS : STMT, VERBOSE
 ## U_OS.MSGBOX  
 PARAMETERS : MSG.TITLE, MSG.CONTENT, SUPPRESS.LOG.EVENT  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_OS.MSGBOX.md)  
+## U_OS.WGET  
+PARAMETERS : URI, VERBOSE, RESULT, URI.HEADER  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_OS.WGET.md)  
 ## U_RND.BETWEEN  
 PARAMETERS : RANDO, VALUE1, VALUE2  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_RND.BETWEEN.md)  
@@ -250,9 +259,9 @@ PARAMETERS : THIS.PROCESS
 PARAMETERS : TYPE, IN.TEXT, FIELD.NO, OUT.TEXT  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_TRANSLATE.md)  
 ## U_XML.FIND  
-PARAMETERS : XML.TAG,XML.DOC,RESULT  
+PARAMETERS : XML.TAG, XML.DOC, RESULT  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_XML.FIND.md)  
 ## U_XML.SUBSTITUTE  
-PARAMETERS : SUBS.REPLACE,SUBS.VALUE,XML.DOC  
+PARAMETERS : SUBS.REPLACE, SUBS.VALUE, XML.DOC  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_XML.SUBSTITUTE.md)  
 FOOTER UTIL.BP root  
