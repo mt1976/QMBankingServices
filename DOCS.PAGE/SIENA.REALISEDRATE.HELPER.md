@@ -22,7 +22,7 @@
 *         Params : processName, indexID
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210128 at 12.20.50 in DEV by root
+*   Info Updated : 20210128 at 13.54.19 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -36,7 +36,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_XML.SUBSTITUTE" width="25" />[U_XML.SUBSTITUTE](../DOCS.PAGE/U_XML.SUBSTITUTE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.WGET" width="25" />[U_OS.WGET](../DOCS.PAGE/U_OS.WGET.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.CURL" width="25" />[U_OS.CURL](../DOCS.PAGE/U_OS.CURL.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.RECORD" width="25" />[U_CRT.RECORD](../DOCS.PAGE/U_CRT.RECORD.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_TRANSLATE" width="25" />[U_TRANSLATE](../DOCS.PAGE/U_TRANSLATE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.CACHE.CLEAR" width="25" />[SIENA.CACHE.CLEAR](../DOCS.PAGE/SIENA.CACHE.CLEAR.md)  

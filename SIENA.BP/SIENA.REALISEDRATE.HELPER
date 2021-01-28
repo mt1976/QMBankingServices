@@ -5,7 +5,7 @@ SUBROUTINE SIENA.REALISEDRATE.HELPER(processName, indexID)
 *         Params : processName, indexID
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210128 at 12.20.50 in DEV by root
+*   Info Updated : 20210128 at 13.54.19 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -66,18 +66,20 @@ PROCESS.URI:
    CALL U_CRT.INFO("URI", thisURI)
    CALL U_CRT.INFO("HEADER", uriHeader)
    resultWget = ""
-   CALL U_OS.WGET(thisURI, @TRUE, resultWget, uriHeader)
+   * CALL U_OS.WGET(thisURI, @TRUE, resultWget, uriHeader)
+   CALL U_OS.CURL(thisURI, @TRUE, resultWget, "")
    IF resultWget = "" THEN
       CALL U_CRT.INFO("RESPONSE", "EMPTY")
    END ELSE
       CALL U_CRT.INFO("RESPONSE", "RETURNED")
+      resultWget = CHANGE(resultWget, @AM, "")
       CALL U_CRT.RECORD(resultWget)
 
+      jsonResult = COLLECTION()
       jsonResult = JPARSE(resultWget)
-      CALL U_CRT.INFO("jsonResult", jsonResult)
-
-      indexRateTmp = jsonResult{'all_in_rate'}
-      CALL U_CRT.INFO("indexRateTmp", indexRateTmp)
+      *CALL U_CRT.INFO("jsonResult", jsonResult)
+      indexRate = jsonResult{'all_in_rate'}
+      CALL U_CRT.INFO(indexID:" ":thisTenor, indexRate)
 
       *    searchString = "" ; searchEnd = "" ; extractPos = ""
 *
@@ -92,10 +94,8 @@ PROCESS.URI:
 *      resultWget = CHANGE(resultWget, searchEnd, @AM)
 
 *      indexRate = resultWget<extractPos>
-      indexRate="0"
-      *  CALL U_CRT.RECORD(resultWget)
-      CALL U_CRT.INFO("RESULT", indexRate)
 
+      *  CALL U_CRT.RECORD(resultWget)
       CCY=UPCASE(thisCCY)
 
       CALL U_CRT.INFO("CCY", CCY)

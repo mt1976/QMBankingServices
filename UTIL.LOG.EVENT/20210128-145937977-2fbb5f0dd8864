@@ -1,0 +1,24 @@
+WGET
+20210128
+14:59:37.01468
+root
+https://www.barchart.com/forex/quotes/USDSGD.A/overview
+
+/usr/local/bin/wget -O "/tmp/20210128-145936976-218d59e1c5524" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.barchart.com/forex/quotes/USDSGD.A/overview
+https://www.barchart.com/forex/quotes/USDSGD.A/overview
+0
+U_WGET
+/dev/ttys001
+5
+/Users/matttownsend/Development/qm/dev
+DEV
+BATCH.DO REFRESHRATES NOPAGE
+mercury.local
+192.168.0.100
+Mac
+14.59.36
+14.59.37
+00.00.01
+U_OS.WGET
+
+BATCH.DO

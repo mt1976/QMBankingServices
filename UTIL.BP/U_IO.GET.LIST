@@ -5,7 +5,7 @@ SUBROUTINE U_IO.GET.LIST(IN.LIST.NAME, IN.LIST.PREFIX, RETURN.LIST, NO.ITEMS)
 *         Params : IN.LIST.NAME, IN.LIST.PREFIX, RETURN.LIST, NO.ITEMS
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210128 at 10.26.08 in DEV by root
+*   Info Updated : 20210128 at 12.56.24 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -35,7 +35,8 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
          IF UP.TEST.LIST = UP.SEARCH.LIST THEN
             NO.ITEMS += 1
-            RETURN.LIST<-1> = TEST.VAL<2>
+            *  RETURN.LIST<-1> = TEST.VAL<2>
+            RETURN.LIST<-1> = CHANGE(TEST.VAL<2>, U_PREF_SQL_EQ, "=")
          END
       NEXT
 

@@ -5,7 +5,7 @@ SUBROUTINE U_OS.WGET(URI, VERBOSE, RESULT, URI.HEADER)
 *         Params : URI, VERBOSE, RESULT, URI.HEADER
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210128 at 10.26.08 in DEV by root
+*   Info Updated : 20210128 at 13.13.11 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -46,8 +46,11 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
    CALL U_GET.UUID(ID.TEMP)
    ID.TEMP.LOC=WGET.TEMP:ID.TEMP
 
-   STMT = WGET.LOCATION:SPACE(1):"-O ":DQUOTE(ID.TEMP.LOC):SPACE(1):WGET.DEFAULTS:SPACE(1):URI
-
+   IF URI.HEADER = "" THEN
+      STMT = WGET.LOCATION:SPACE(1):"-O ":DQUOTE(ID.TEMP.LOC):SPACE(1):WGET.DEFAULTS:SPACE(1):URI
+   END ELSE
+      STMT = WGET.LOCATION:SPACE(1):"-O ":DQUOTE(ID.TEMP.LOC):SPACE(1):WGET.DEFAULTS:SPACE(1):URI.HEADER:SPACE(1):URI
+   END
    CALL U_CRT.INFO("COMMAND", @(U_BOLD_ON):STMT:@(U_BOLD_OFF))
 
    OS.EXECUTE STMT CAPTURING RESULT

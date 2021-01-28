@@ -1,0 +1,24 @@
+WGET
+20210128
+14:54:51.01130
+root
+https://www.barchart.com/forex/quotes/NZDUSD.E/overview
+
+/usr/local/bin/wget -O "/tmp/20210128-145447687-1b96a41fccfe4" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.barchart.com/forex/quotes/NZDUSD.E/overview
+https://www.barchart.com/forex/quotes/NZDUSD.E/overview
+0
+U_WGET
+/dev/ttys001
+5
+/Users/matttownsend/Development/qm/dev
+DEV
+BATCH.DO REFRESHRATES NOPAGE
+mercury.local
+192.168.0.100
+Mac
+14.54.47
+14.54.51
+00.00.04
+U_OS.WGET
+
+BATCH.DO

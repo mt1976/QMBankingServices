@@ -1,0 +1,24 @@
+CURL
+20210128
+13:58:29.00390
+root
+sh curl -sL "https://www.realisedrate.com/api/v2/risk_free_rate?index=SOFR&start_date=2021-01-26&end_date=2021-01-27&reset_lag=0&reset_type=Lag&return_type=json"
+
+sh curl -sL "https://www.realisedrate.com/api/v2/risk_free_rate?index=SOFR&start_date=2021-01-26&end_date=2021-01-27&reset_lag=0&reset_type=Lag&return_type=json"
+https://www.realisedrate.com/api/v2/risk_free_rate?index=SOFR&start_date=2021-01-26&end_date=2021-01-27&reset_lag=0&reset_type=Lag&return_type=json
+0
+U_OS.CURL
+/dev/ttys001
+5
+/Users/matttownsend/Development/qm/dev
+DEV
+BATCH.DO REALISEDRATE NOPAGE
+mercury.local
+192.168.0.100
+Mac
+
+
+
+U_OS.CURL
+
+BATCH.DO

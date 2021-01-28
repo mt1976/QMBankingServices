@@ -5,7 +5,7 @@
 |TYPE|SUBROUTINE|
 |SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="UTIL.BP" width="25" />[UTIL.BP](../DOCS/UTIL.BP.md)|
 |ID|U_OS.CURL|
-|PARAMETERS|URI, VERBOSE, R.UTIL.LOG.CMD, ID.UTIL.LOG.CMD|
+|PARAMETERS|URI, VERBOSE, curlResult, spare01|
     
 ## USAGE  
   
@@ -18,10 +18,10 @@
 ** INFORMATION ****************************************************************
 *   Routine Name : U_OS.CURL
 *           Type : SUBROUTINE
-*         Params : URI, VERBOSE, R.UTIL.LOG.CMD, ID.UTIL.LOG.CMD
+*         Params : URI, VERBOSE, curlResult, spare01
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210128 at 10.26.08 in DEV by root
+*   Info Updated : 20210128 at 13.20.24 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

@@ -1,0 +1,24 @@
+WGET
+20210128
+15:00:51.01528
+root
+https://www.barchart.com/forex/quotes/XAUUSD.C/overview
+
+/usr/local/bin/wget -O "/tmp/20210128-150049049-d0c82ebb5e8c4" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.barchart.com/forex/quotes/XAUUSD.C/overview
+https://www.barchart.com/forex/quotes/XAUUSD.C/overview
+0
+U_WGET
+/dev/ttys001
+5
+/Users/matttownsend/Development/qm/dev
+DEV
+BATCH.DO REFRESHRATES NOPAGE
+mercury.local
+192.168.0.100
+Mac
+15.00.49
+15.00.51
+00.00.02
+U_OS.WGET
+
+BATCH.DO

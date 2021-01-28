@@ -1,0 +1,24 @@
+WGET
+20210128
+14:05:51.00554
+root
+https://www.homefinance.nl/english/international-interest-rates/libor/poundsterling/libor-rates-6-months-usd.asp
+
+/usr/local/bin/wget -O "/tmp/20210128-140550750-e7c929c5b48d4" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.homefinance.nl/english/international-interest-rates/libor/poundsterling/libor-rates-6-months-usd.asp
+https://www.homefinance.nl/english/international-interest-rates/libor/poundsterling/libor-rates-6-months-usd.asp
+0
+U_WGET
+/dev/ttys001
+5
+/Users/matttownsend/Development/qm/dev
+DEV
+BATCH.DO HOMEFINANCE NOPAGE
+mercury.local
+192.168.0.100
+Mac
+14.05.50
+14.05.51
+00.00.01
+U_OS.WGET
+
+BATCH.DO

@@ -5,7 +5,7 @@ SUBROUTINE U_IO.GET.PROPERTY(IN.PROPERTIES, IN.PROPERTY.NAME, RETURN.VAL)
 *         Params : IN.PROPERTIES, IN.PROPERTY.NAME, RETURN.VAL
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210128 at 10.26.08 in DEV by root
+*   Info Updated : 20210128 at 12.53.44 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -51,13 +51,13 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
       NEXT
 
       IF RETURN.VAL = "" THEN
-         ERROR.TEXT = "!ERROR - Could not find ":DQUOTE(IN.PROPERTY.NAME):" in ":ID.PROPERTIES
+         ERROR.TEXT = "Could not find ":DQUOTE(IN.PROPERTY.NAME):" in ":ID.PROPERTIES
          CALL U_CRT.RAW(ERROR.TEXT, "ERROR", PROCESS.NAME)
 
       END
 
    END ELSE
-      ERROR.TEXT = "!ERROR - Not enough info to read list ":DQUOTE(ID.PROPERTIES):" ":DQUOTE(IN.PROPERTY.NAME)
+      ERROR.TEXT = "Not enough info to read list ":DQUOTE(ID.PROPERTIES):" ":DQUOTE(IN.PROPERTY.NAME)
       CALL U_CRT.RAW(ERROR.TEXT, "ERROR", PROCESS.NAME)
 
    END

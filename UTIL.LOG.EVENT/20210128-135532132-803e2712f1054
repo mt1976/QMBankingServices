@@ -1,0 +1,24 @@
+WGET
+20210128
+13:55:32.00282
+root
+https://www.homefinance.nl/english/international-interest-rates/libor/poundsterling/libor-rates-1-month-jpy.asp
+
+/usr/local/bin/wget -O "/tmp/20210128-135530130-97b53d4c2c0a4" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.homefinance.nl/english/international-interest-rates/libor/poundsterling/libor-rates-1-month-jpy.asp
+https://www.homefinance.nl/english/international-interest-rates/libor/poundsterling/libor-rates-1-month-jpy.asp
+0
+U_WGET
+/dev/ttys001
+5
+/Users/matttownsend/Development/qm/dev
+DEV
+BATCH.DO HOMEFINANCE NOPAGE
+mercury.local
+192.168.0.100
+Mac
+13.55.30
+13.55.32
+00.00.02
+U_OS.WGET
+
+BATCH.DO

@@ -1,0 +1,24 @@
+WGET
+20210128
+14:06:23.00613
+root
+https://www.homefinance.nl/english/international-interest-rates/eonia-interest-rate.asp
+
+/usr/local/bin/wget -O "/tmp/20210128-140622782-a80a03ca0d974" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.homefinance.nl/english/international-interest-rates/eonia-interest-rate.asp
+https://www.homefinance.nl/english/international-interest-rates/eonia-interest-rate.asp
+0
+U_WGET
+/dev/ttys001
+5
+/Users/matttownsend/Development/qm/dev
+DEV
+BATCH.DO HOMEFINANCE NOPAGE
+mercury.local
+192.168.0.100
+Mac
+14.06.22
+14.06.23
+00.00.01
+U_OS.WGET
+
+BATCH.DO

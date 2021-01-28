@@ -1,0 +1,24 @@
+WGET
+20210128
+15:02:15.01737
+root
+https://www.homefinance.nl/english/international-interest-rates/euribor-rates-6-months.asp
+
+/usr/local/bin/wget -O "/tmp/20210128-150215135-05cb5a5720814" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.homefinance.nl/english/international-interest-rates/euribor-rates-6-months.asp
+https://www.homefinance.nl/english/international-interest-rates/euribor-rates-6-months.asp
+1
+U_WGET
+/dev/ttys001
+5
+/Users/matttownsend/Development/qm/dev
+DEV
+BATCH.DO REFRESHRATES NOPAGE
+mercury.local
+192.168.0.100
+Mac
+15.02.15
+15.02.15
+00.00.00
+U_OS.WGET
+
+BATCH.DO

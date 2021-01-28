@@ -1,0 +1,24 @@
+WGET
+20210128
+14:53:18.01052
+root
+https://www.barchart.com/forex/quotes/GBPUSD.B/overview
+
+/usr/local/bin/wget -O "/tmp/20210128-145308588-75fc3142ad594" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.barchart.com/forex/quotes/GBPUSD.B/overview
+https://www.barchart.com/forex/quotes/GBPUSD.B/overview
+0
+U_WGET
+/dev/ttys001
+5
+/Users/matttownsend/Development/qm/dev
+DEV
+BATCH.DO REFRESHRATES NOPAGE
+mercury.local
+192.168.0.100
+Mac
+14.53.08
+14.53.18
+00.00.10
+U_OS.WGET
+
+BATCH.DO
