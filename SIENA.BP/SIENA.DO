@@ -1,42 +1,25 @@
-PROGRAM SIENA.DO
+SUBROUTINE SIENA.DO(jobName)
 ** INFORMATION ****************************************************************
 *   Routine Name : SIENA.DO
-*           Type : PROGRAM
-*         Params :
+*           Type : SUBROUTINE
+*         Params : jobName
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210122 at 13.26.21 in DEV by root
+*   Info Updated : 20210128 at 12.20.50 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
-   CALL U_INITIALISE("SIENA.DO")
-   PROCESS.NAME = "SIENA.DO"
-   CALL U_START(PROCESS.NAME)
 
-   CALL U_HEADER("SIENA.DO")
+   IF jobName<>"" THEN
+      processName = "SIENA.":jobName
+      processHelper = processName:".HELPER"
 
-   CMD.STRING = CONVERT(SPACE(1), @AM, @SENTENCE)
-   IF CMD.STRING<2> = "" THEN
-      CALL U_CRT.INFO("ERROR", "Parameters [A specific type i.e. RVMARKET]")
-      CALL U_STOP(PROCESS.NAME)
-      STOP
+      CALL U_INITIALISE(processName)
+      CALL U_START(processName)
+      CALL U_HEADER(processName)
+      CALL @processHelper(jobName)
+      CALL U_STOP(processName)
+
    END
-* remove the program name from the stack of cmds
-   DEL CMD.STRING<1>
-* loop through the cmd strings
-   THIS.CMD = 1
-
-   DO.ITEM = CMD.STRING<THIS.CMD>
-   CALL U_CRT.INFO("PROCESS", DO.ITEM)
-
-   DO.SCRIPT = ""
-   DO.PROCESSOR = ""
-   DO.POSTPROCESS = ""
-   DO.DELIVER = ""
-
-   CALL U_JOB.DO.HELPER(DO.ITEM)
-
-   CALL U_STOP(PROCESS.NAME)
-
-END
+   RETURN

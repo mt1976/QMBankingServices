@@ -1,0 +1,24 @@
+WGET
+20210128
+11:34:32.00837
+root
+https://www.realisedrate.com/api/v2/risk_free_rate?index^ESTR&start_date^26/01/2021&end_date^27/01/2021&reset_lag^0&reset_type^Lag&return_type^json
+
+/usr/local/bin/wget -O "/tmp/20210128-113431671-2e39576ed1234" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.realisedrate.com/api/v2/risk_free_rate?index^ESTR&start_date^26/01/2021&end_date^27/01/2021&reset_lag^0&reset_type^Lag&return_type^json
+https://www.realisedrate.com/api/v2/risk_free_rate?index^ESTR&start_date^26/01/2021&end_date^27/01/2021&reset_lag^0&reset_type^Lag&return_type^json
+0
+U_WGET
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+SIENA.ESTR
+mercury.local
+192.168.0.100
+Mac
+11.34.31
+11.34.32
+00.00.01
+U_OS.WGET
+
+SIENA.ESTR

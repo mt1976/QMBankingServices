@@ -1,0 +1,17 @@
+SUBROUTINE SIENA.EONIA.HELPER(PROCESS.NAME)
+** INFORMATION ****************************************************************
+*   Routine Name : ZZZ.SIENA.EONIA.HELPER_OLD
+*           Type : SUBROUTINE
+*         Params : PROCESS.NAME
+*            Loc : SIENA.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210128 at 12.20.50 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT UTIL.BP I_UTIL.H
+
+
+   CALL SIENA.MM.HELPER(PROCESS.NAME, "EONIA")
+   RETURN
+END

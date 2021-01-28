@@ -1,11 +1,11 @@
-SUBROUTINE SIENA.ECB.HELPER(PROCESS.NAME)
+SUBROUTINE SIENA.TBILLS.HELPER(PROCESS.NAME)
 ** INFORMATION ****************************************************************
 *   Routine Name : SIENA.TBILLS.HELPER
 *           Type : SUBROUTINE
 *         Params : PROCESS.NAME
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210122 at 13.26.21 in DEV by root
+*   Info Updated : 20210128 at 12.20.50 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -15,7 +15,7 @@ $INSERT UTIL.BP I_UTIL.H
 
 
 * INITIALISE
-   PROCESS.NAME = "SIENA.ECB.HELPER"
+   PROCESS.NAME = "SIENA.TBILLS.HELPER"
    PREFIX = PROCESS.NAME
    CALL U_START(PROCESS.NAME)
 * Setup some temp locations for input data

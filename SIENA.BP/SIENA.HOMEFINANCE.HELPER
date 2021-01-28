@@ -5,7 +5,7 @@ SUBROUTINE SIENA.HOMEFINANCE.HELPER(PROCESS.NAME, indexID)
 *         Params : PROCESS.NAME, indexID
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210122 at 13.40.36 in DEV by root
+*   Info Updated : 20210128 at 12.20.50 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -45,7 +45,7 @@ $INSERT UTIL.BP I_UTIL.H
 PROCESS.URI:
    CALL U_CRT.INFO("URI", thisURI)
    resultWget = ""
-   CALL U_OS.WGET(thisURI, @TRUE, resultWget)
+   CALL U_OS.WGET(thisURI, @TRUE, resultWget, "")
    IF resultWget = "" THEN
       CALL U_CRT.INFO("RESPONSE", "EMPTY")
    END ELSE

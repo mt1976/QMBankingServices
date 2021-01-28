@@ -1,0 +1,21 @@
+SUBROUTINE SIENA.TONAR.HELPER(processName)
+** INFORMATION ****************************************************************
+*   Routine Name : SIENA.TONAR.HELPER
+*           Type : SUBROUTINE
+*         Params : processName
+*            Loc : SIENA.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210128 at 12.20.50 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT UTIL.BP I_UTIL.H
+
+   indexName = "TONAR"
+
+   CALL U_CRT.INFO("PROCESSING", "STARTS")
+   CALL SIENA.REALISEDRATE.HELPER(processName, indexName)
+   CALL U_CRT.INFO("PROCESSING", "COMPLETE")
+
+   RETURN
+END

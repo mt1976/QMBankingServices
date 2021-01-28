@@ -5,7 +5,7 @@
 |TYPE|SUBROUTINE|
 |SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="UTIL.BP" width="25" />[UTIL.BP](../DOCS/UTIL.BP.md)|
 |ID|U_OS.WGET|
-|PARAMETERS|URI, VERBOSE, RESULT|
+|PARAMETERS|URI, VERBOSE, RESULT, URI.HEADER|
     
 ## USAGE  
   
@@ -18,10 +18,10 @@
 ** INFORMATION ****************************************************************
 *   Routine Name : U_OS.WGET
 *           Type : SUBROUTINE
-*         Params : URI, VERBOSE, RESULT
+*         Params : URI, VERBOSE, RESULT, URI.HEADER
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210122 at 13.03.23 in DEV by root
+*   Info Updated : 20210128 at 10.26.08 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

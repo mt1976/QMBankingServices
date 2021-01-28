@@ -5,7 +5,7 @@ SUBROUTINE U_MSSQL.SELECT(SQL.FIELDS, SQL.TABLE, SQL.ADDRESS, SQL.DATABASE, SQL.
 *         Params : SQL.FIELDS, SQL.TABLE, SQL.ADDRESS, SQL.DATABASE, SQL.WHERE, VERBOSE, ID.RESULT, RESULT.COLUMNS, RESULT.DATA, RESULT.COUNT
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210122 at 13.03.23 in DEV by root
+*   Info Updated : 20210128 at 10.26.08 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

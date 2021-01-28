@@ -1,0 +1,5 @@
+LAYOUT=https://www.homefinance.nl/english/international-interest-rates/eonia-interest-rate.asp|EUR|ON=
+SONIA=https://www.realisedrate.com/api/v2/risk_free_rate?index^SONIA&start_date^{{startDate}}&end_date^{{endDate}}&reset_lag^0&reset_type^Lag&return_type^json|GBP|ON=
+SOFR=https://www.realisedrate.com/api/v2/risk_free_rate?index^SOFR&start_date^{{startDate}}&end_date^{{endDate}}&reset_lag^0&reset_type^Lag&return_type^json|USD|ON=
+ESTR=https://www.realisedrate.com/api/v2/risk_free_rate?index^ESTR&start_date^{{startDate}}&end_date^{{endDate}}&reset_lag^0&reset_type^Lag&return_type^json|EUR|ON=
+TONAR=https://www.realisedrate.com/api/v2/risk_free_rate?index^TONAR&start_date^{{startDate}}&end_date^{{endDate}}&reset_lag^0&reset_type^Lag&return_type^json|JPY|ON=

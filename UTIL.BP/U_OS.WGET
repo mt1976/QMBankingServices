@@ -1,11 +1,11 @@
-SUBROUTINE U_OS.WGET(URI, VERBOSE, RESULT)
+SUBROUTINE U_OS.WGET(URI, VERBOSE, RESULT, URI.HEADER)
 ** INFORMATION ****************************************************************
 *   Routine Name : U_OS.WGET
 *           Type : SUBROUTINE
-*         Params : URI, VERBOSE, RESULT
+*         Params : URI, VERBOSE, RESULT, URI.HEADER
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210122 at 13.03.23 in DEV by root
+*   Info Updated : 20210128 at 10.26.08 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -31,6 +31,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
    CALL U_CRT.INFO("TEMP", WGET.TEMP)
 
 
+
    CALL U_IO.OPENFILEPATH(WGET.TEMP, FV.TEMP.FILE, STOP.ON.ERROR, ERROR.TEXT)
 
 
@@ -38,7 +39,9 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
    CALL U_CRT.INFO("START", OCONV(TIME.START, "MTS."))
    CALL U_CRT.INFO("URI", URI)
-
+   IF URI.HEADER<>"" THEN
+      CALL U_CRT.INFO("HEADER", URI.HEADER)
+   END
    *HUSH ON
    CALL U_GET.UUID(ID.TEMP)
    ID.TEMP.LOC=WGET.TEMP:ID.TEMP

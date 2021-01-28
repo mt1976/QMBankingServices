@@ -5,22 +5,13 @@ PROGRAM SIENA.BOESONIA
 *         Params :
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210122 at 13.26.21 in DEV by root
+*   Info Updated : 20210128 at 12.20.50 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INSERT UTIL.BP I_UTIL.H
-   CALL U_INITIALISE("SIENA.BOESONIA")
 
-   PROCESS.NAME = "SIENA.BOESONIA"
-   CALL U_START(PROCESS.NAME)
+   CALL SIENA.DO("BOESONIA")
 
-   CALL U_HEADER("SIENA - BOE SONIA UPDATE(S)")
-
-   CALL SIENA.BOESONIA.HELPER("DELIVER")
-
-   STOP
-
-   CALL U_STOP(PROCESS.NAME)
 
 END

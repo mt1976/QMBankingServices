@@ -5,7 +5,7 @@ SUBROUTINE SIENA.BC.FXSPOT.HELPER(PROCESS.NAME)
 *         Params : PROCESS.NAME
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210122 at 13.26.21 in DEV by root
+*   Info Updated : 20210128 at 12.20.50 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -51,7 +51,7 @@ $INCLUDE UTIL.BP I_UTIL.H
       STMT.URI = URI.PREFIX:CURRENCY.PAIR:URI.SUFFIX
       *  CALL U_CRT.INFO("URI", STMT.URI)
       *CALL U_OS.CHROME.FETCH(STMT.URI, @TRUE, RESULT)
-      CALL U_OS.WGET(STMT.URI, @TRUE, RESULT)
+      CALL U_OS.WGET(STMT.URI, @TRUE, RESULT, "")
       IF RESULT<> "" THEN
          GOSUB PROCESS.HTML
       END ELSE

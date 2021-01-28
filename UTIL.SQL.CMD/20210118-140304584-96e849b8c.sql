@@ -1,1 +1,0 @@
-select Description1 from SRS.vwRandomizerPortfolio

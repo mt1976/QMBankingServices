@@ -5,14 +5,14 @@ PROGRAM SIENA.TBILLS
 *         Params :
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210122 at 13.26.21 in DEV by root
+*   Info Updated : 20210128 at 12.20.50 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INSERT UTIL.BP I_UTIL.H
-   CALL U_INITIALISE("SIENA.TBILLS")
 
-   CALL SIENA.TBILLS.HELPER("TBILLS")
+   CALL SIENA.DO("TBILLS")
+
 
    STOP
 END

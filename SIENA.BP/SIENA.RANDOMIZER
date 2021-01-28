@@ -5,13 +5,14 @@ PROGRAM SIENA.RANDOMIZER
 *         Params :
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210122 at 13.26.21 in DEV by root
+*   Info Updated : 20210128 at 12.20.50 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
-   CALL U_INITIALISE("SIENA.RANDOMIZER")
-   CALL SIENA.RANDOMIZER.HELPER('RANDOMIZER')
+
+   CALL SIENA.DO("RANDOMIZER")
+
 
    STOP
 END

@@ -1,0 +1,24 @@
+WGET
+20210128
+10:40:15.00494
+root
+https://www.realisedrate.com/api/v2/risk_free_rate?index^SONIA&start_date^19386&end_date^19387&reset_lag^0&reset_type^Lag&return_type^json
+
+/usr/local/bin/wget -O "/tmp/20210128-104015415-331a7d09e8324" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.realisedrate.com/api/v2/risk_free_rate?index^SONIA&start_date^19386&end_date^19387&reset_lag^0&reset_type^Lag&return_type^json
+https://www.realisedrate.com/api/v2/risk_free_rate?index^SONIA&start_date^19386&end_date^19387&reset_lag^0&reset_type^Lag&return_type^json
+0
+U_WGET
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO SONIA
+mercury.local
+192.168.0.100
+Mac
+10.40.15
+10.40.15
+00.00.00
+U_OS.WGET
+
+SIENA.SONIA
