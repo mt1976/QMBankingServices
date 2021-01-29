@@ -1,65 +1,65 @@
-SUBROUTINE SIENA.GEN.TXN.DATA(PROCESS.TYPE)
+SUBROUTINE SIENA.GEN.TXN.DATA(dataType)
 ** INFORMATION ****************************************************************
 *   Routine Name : SIENA.GEN.TXN.DATA
 *           Type : SUBROUTINE
-*         Params : PROCESS.TYPE
+*         Params : dataType
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210128 at 12.20.50 in DEV by root
+*   Info Updated : 20210129 at 13.57.51 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INSERT UTIL.BP I_UTIL.H
 
-   PROCESS.NAME = "SIENA.GEN.TXN.DATA-":UPCASE(PROCESS.TYPE)
+   PROCESS.NAME = "SIENA.GEN.TXN.DATA-":UPCASE(dataType)
    CALL U_INITIALISE(PROCESS.NAME)
-   CALL U_HEADER("GENERATING>>>":UPCASE(PROCESS.TYPE))
+   CALL U_HEADER("GENERATING>>>":UPCASE(dataType))
 
 *** OPENFILES STARTS
    FN.SIENA.TXN.TEMPLATES = "SIENA.TXN.TEMPLATES" ; FV.SIENA.TXN.TEMPLATES = ""
    CALL U_IO.OPENFILE(FN.SIENA.TXN.TEMPLATES, FV.SIENA.TXN.TEMPLATES, @FALSE, "")
 
-   CALL U_IO.GET.PROPERTY("siena_demo", "demo_data_":DOWNCASE(PROCESS.TYPE), DATA.MAP.FILE)
-   IF DATA.MAP.FILE = "" THEN
+   CALL U_IO.GET.PROPERTY("siena_demo", "demo_data_":DOWNCASE(dataType), dataMapFile)
+   IF dataMapFile = "" THEN
       CALL U_CRT.INFO("INFO", "No Data Mapping found, SKIPPING")
-      CALL U_CRT.INFO("INFO", "demo_data_":DOWNCASE(PROCESS.TYPE):".list not found in UTIL.CONFIG/siena_demo.properties")
+      CALL U_CRT.INFO("INFO", "demo_data_":DOWNCASE(dataType):".list not found in UTIL.CONFIG/siena_demo.properties")
 
       * NAUGHTY BUT WORKS
       RETURN
    END
 * GET FIELD MAP
-   DATA.MAP = "" ; NO.MAPPINGS = 0
-   CALL U_IO.GET.LIST(DATA.MAP.FILE, "MAP", DATA.MAP, NO.MAPPINGS)
+   dataMap= "" ; noMappings = 0
+   CALL U_IO.GET.LIST(dataMapFile, "MAP", dataMap, noMappings)
 
 * GET DATA TO LOAD
-   DATA.ARR = "" ; NO.TRANSACTIONS = 0
-   CALL U_IO.GET.LIST(DATA.MAP.FILE, "DATA", DATA.ARR, NO.TRANSACTIONS)
+   dataMapdataArray = "" ; noTransactions = 0
+   CALL U_IO.GET.LIST(dataMapFile, "DATA", dataMapdataArray, noTransactions)
 
    FP.DESTINATION = "" ; FV.DESTINATION = ""
-   CALL U_IO.GET.PROPERTY("siena_demo", "demo_dest_":LOWER(PROCESS.TYPE), FP.DESTINATION)
+   CALL U_IO.GET.PROPERTY("siena_demo", "demo_dest_":LOWER(dataType), FP.DESTINATION)
 *   CALL U_CRT.INFO("DELIVER", FP.DESTINATION)
    CALL U_IO.OPENFILEPATH(FP.DESTINATION, FV.DESTINATION, @TRUE, "")
 *** OPENFILES ENDS
 
 *** GET TEMPLATES
-   CALL U_IO.GET.PROPERTY("siena_demo", "demo_tmpl_":LOWER(PROCESS.TYPE), ID.SIENA.TXN.TEMPLATES)
+   CALL U_IO.GET.PROPERTY("siena_demo", "demo_tmpl_":LOWER(dataType), ID.SIENA.TXN.TEMPLATES)
 *   CALL U_CRT.INFO("TEMPLATE", ID.SIENA.TXN.TEMPLATES)
 
    CALL U_IO.READ(FV.SIENA.TXN.TEMPLATES, ID.SIENA.TXN.TEMPLATES, R.SIENA.TXN.TEMPLATES, @FALSE, "")
 *** GET TEMPLATES END
 
-*   CALL U_CRT.INFO("MAPS", NO.MAPPINGS)
-   CALL U_CRT.INFO("ROWS", NO.TRANSACTIONS)
+*   CALL U_CRT.INFO("MAPS", noMappings)
+*   CALL U_CRT.INFO("ROWS", noTransactions)
 
-*   CALL U_CRT.RECORD(DATA.MAP)
-*   CALL U_CRT.RECORD(DATA.ARR)
+*   CALL U_CRT.RECORD(dataMap)
+*   CALL U_CRT.RECORD(dataMapdataArray)
 
-   FOR THIS.DATA.ROW = 1 TO NO.TRANSACTIONS
-      SOURCE.DATA = CHANGE(DATA.ARR<THIS.DATA.ROW>, U_PROP_SEP_ALT, @AM)
-      *  CALL U_CRT.INFO("ITEM", THIS.DATA.ROW:"/":NO.TRANSACTIONS)
-      *    CALL U_CRT.RECORD(SOURCE.DATA)
+   FOR thisTransaction = 1 TO noTransactions
+      sourceData = CHANGE(dataMapdataArray<thisTransaction>, U_PROP_SEP_ALT, @AM)
+      *  CALL U_CRT.INFO("ITEM", thisTransaction:"/":noTransactions)
+      *    CALL U_CRT.RECORD(sourceData)
       GOSUB PROCESS.ROW
-   NEXT THIS.DATA.ROW
+   NEXT thisTransaction
 
    RETURN
 
@@ -67,15 +67,15 @@ PROCESS.ROW:
 
    R.NEW.TXN = R.SIENA.TXN.TEMPLATES
 
-   FOR THIS.MAPPING = 1 TO NO.MAPPINGS
-      FIND.TAG = DATA.MAP<THIS.MAPPING>
-      SUBS.DATA = SOURCE.DATA<THIS.MAPPING>
-      IF SUBS.DATA[1, 1]="!" THEN
-         FETCH.OBJECT=TRIM(SUBS.DATA[2, 99])
-         CALL SIENA.CACHE.FETCH(FETCH.OBJECT, SUBS.DATA)
+   FOR thisMapping = 1 TO noMappings
+      searchTag = dataMap<thisMapping>
+      substituteData = sourceData<thisMapping>
+      IF substituteData[1, 1]="!" THEN
+         cacheObject=TRIM(substituteData[2, 99])
+         CALL SIENA.CACHE.FETCH(cacheObject, substituteData)
       END
-      CALL U_XML.SUBSTITUTE(FIND.TAG, SUBS.DATA, R.NEW.TXN)
-   NEXT THIS.MAPPING
+      CALL U_XML.SUBSTITUTE(searchTag, substituteData, R.NEW.TXN)
+   NEXT thisMapping
 *   CALL U_CRT.INFO("START", "WILDCARD MAPPING")
 * YEAR, MONTH, DAY, HOURS, MINS, SECS
    CALL U_XML.SUBSTITUTE("YYYY", @YEAR4, R.NEW.TXN)
@@ -112,7 +112,7 @@ PROCESS.ROW:
    CALL U_GET.UUID(ID.RESPONSE)
    CALL U_XML.SUBSTITUTE("MSG.ID", ID.RESPONSE, R.NEW.TXN)
 
-   CALL U_CRT.INFO("PROCESSED", THIS.DATA.ROW:"/":NO.TRANSACTIONS:" ":DQUOTE(FP.DESTINATION:"/":ID.RESPONSE))
+   CALL U_CRT.INFO("PROCESSED", thisTransaction:"/":noTransactions:" ":DQUOTE(FP.DESTINATION:"/":ID.RESPONSE))
 *   CALL U_CRT.RECORD(R.NEW.TXN)
    CALL U_IO.WRITE(FV.DESTINATION, ID.RESPONSE, R.NEW.TXN, @FALSE, "")
 

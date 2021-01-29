@@ -5,7 +5,7 @@ PROGRAM SIENA.GEN.TXNS
 *         Params :
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210128 at 12.20.50 in DEV by root
+*   Info Updated : 20210129 at 13.59.26 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -16,8 +16,8 @@ $INSERT UTIL.BP I_UTIL.H
    CALL U_START(PROCESS.NAME)
    CALL U_HEADER(PROCESS.NAME)
 
-   CALL U_CRT.INFO("SENTENCE", @SENTENCE)
-   CALL U_CRT.INFO("COMMAND", @COMMAND)
+*   CALL U_CRT.INFO("SENTENCE", @SENTENCE)
+*   CALL U_CRT.INFO("COMMAND", @COMMAND)
 
    CALL U_GET.CLI.PARAMS(PROCESS.NAME, PARAMS)
 

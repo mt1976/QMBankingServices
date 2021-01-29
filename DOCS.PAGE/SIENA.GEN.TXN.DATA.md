@@ -5,7 +5,7 @@
 |TYPE|SUBROUTINE|
 |SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.BP" width="25" />[SIENA.BP](../DOCS/SIENA.BP.md)|
 |ID|SIENA.GEN.TXN.DATA|
-|PARAMETERS|PROCESS.TYPE|
+|PARAMETERS|dataType|
     
 ## USAGE  
   
@@ -17,10 +17,10 @@
 ** INFORMATION ****************************************************************
 *   Routine Name : SIENA.GEN.TXN.DATA
 *           Type : SUBROUTINE
-*         Params : PROCESS.TYPE
+*         Params : dataType
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210128 at 12.20.50 in DEV by root
+*   Info Updated : 20210129 at 13.57.51 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

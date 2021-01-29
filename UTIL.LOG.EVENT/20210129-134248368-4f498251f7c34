@@ -1,0 +1,24 @@
+WGET
+20210129
+13:42:48.01951
+root
+https://www.barchart.com/forex/quotes/%5EUSDCHF/overview
+
+/usr/local/bin/wget -O "/tmp/20210129-134247367-a1965978c64c4" --wait=2 --level=inf --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off https://www.barchart.com/forex/quotes/%5EUSDCHF/overview
+https://www.barchart.com/forex/quotes/%5EUSDCHF/overview
+1
+U_WGET
+/dev/ttys001
+5
+/Users/matttownsend/Development/qm/dev
+DEV
+JOB.DO FXSPOT
+mercury.local
+192.168.0.100
+Mac
+13.42.47
+13.42.48
+00.00.01
+U_OS.WGET
+
+JOB.DO
