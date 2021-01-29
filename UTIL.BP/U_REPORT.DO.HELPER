@@ -1,0 +1,50 @@
+SUBROUTINE U_REPORT.DO.HELPER(reportID)
+** INFORMATION ****************************************************************
+*   Routine Name : U_REPORT.DO.HELPER
+*           Type : SUBROUTINE
+*         Params : reportID
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210129 at 10.32.58 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+
+   processName = "U_REPORT.DO.HELPER"
+   CALL U_START(processName)
+
+   CALL U_CRT.INFO("REPORT", @(U_BOLD_ON):reportID:@(U_BOLD_OFF))
+
+   CALL U_IO.GET.PROPERTY("reports", reportID, reportCommand)
+   uniqueID = ""
+   CALL U_GET.UUID(uniqueID)
+
+   reportCommand = CONVERT(U_PROP_SEP_ALT, @AM, reportCommand)
+
+   processStmt = reportCommand<1>
+   processOutput = reportCommand<2>
+   processExtn = DOWNCASE(reportCommand<3>)
+   reportName = reportCommand<4>
+
+   IF processOutput = "" THEN processOutput = "DISPLAY"
+   IF processExtn = "" THEN processExtn = ".rpt"
+
+   outputFileName = DOWNCASE(reportID):U_SEP:uniqueID:".":processExtn
+
+   IF processOutput = "STORE" THEN
+      processStmt:= " AS $HOLD ":outputFileName
+   END ELSE
+      IF reportName<>"" THEN
+         CALL U_HEADER(reportName)
+      END ELSE
+         CALL U_HEADER(reportID)
+      END
+   END
+
+   CALL U_OS.EXECUTE(processStmt, @FALSE)
+   CALL U_CRT.INFO("REPORT", "COMPLETE - ":@(U_BOLD_ON):reportID:@(U_BOLD_OFF))
+
+   CALL U_STOP(processName)
+   RETURN
+END

@@ -1,0 +1,37 @@
+PROGRAM REPORT.DO
+** INFORMATION ****************************************************************
+*   Routine Name : REPORT.DO
+*           Type : PROGRAM
+*         Params :
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210129 at 10.02.02 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+   CALL U_INITIALISE("REPORT.DO")
+   PROCESS.NAME = "REPORT.DO"
+   CALL U_START(PROCESS.NAME)
+
+   CALL U_HEADER("JOB.DO")
+
+   CMD.STRING = CONVERT(SPACE(1), @AM, @SENTENCE)
+   IF CMD.STRING<2> = "" THEN
+      CALL U_CRT.INFO("ERROR", "Parameters [A specific type i.e. RVMARKET]")
+      CALL U_STOP(PROCESS.NAME)
+      STOP
+   END
+* remove the program name from the stack of cmds
+   DEL CMD.STRING<1>
+* loop through the cmd strings
+   THIS.CMD = 1
+
+   DO.ITEM = CMD.STRING<THIS.CMD>
+   CALL U_CRT.INFO("PROCESS", DO.ITEM)
+
+   CALL U_REPORT.DO.HELPER(DO.ITEM)
+
+   CALL U_STOP(PROCESS.NAME)
+
+END
