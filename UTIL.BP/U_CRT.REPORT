@@ -1,0 +1,36 @@
+SUBROUTINE U_CRT.REPORT(reportID)
+** INFORMATION ****************************************************************
+*   Routine Name : U_CRT.REPORT
+*           Type : SUBROUTINE
+*         Params : reportID
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210131 at 19.41.36 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+
+
+   activePath = ""
+   CALL U_IO.GET.PROPERTY("util", "path", activePath)
+   reportsFileName = ""
+   CALL U_IO.GET.PROPERTY("reports", "FILENAME", reportsFileName)
+
+   fullPath = activePath:"/":reportsFileName
+
+   FV.REPORTS = ""
+   CALL U_IO.OPENFILEPATH(fullPath, FV.REPORTS, @TRUE, "")
+
+   reportContent = ""
+   CALL U_IO.READ(FV.REPORTS, reportID, reportContent, @FALSE, "")
+   NO.LINES = DCOUNT(reportContent, @AM)
+   DISPLAY ""
+   DISPLAY @(U_CLEAR_LINE):@(U_BOLD_ON):reportID:@(U_BOLD_OFF)
+   DISPLAY ""
+   FOR I = 1 TO NO.LINES
+      DISPLAY @(U_CLEAR_LINE):reportContent<I>
+   NEXT I
+
+   RETURN
+END

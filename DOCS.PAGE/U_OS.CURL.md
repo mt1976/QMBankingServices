@@ -21,7 +21,7 @@
 *         Params : URI, VERBOSE, curlResult, spare01
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210128 at 13.20.24 in DEV by root
+*   Info Updated : 20210131 at 19.41.36 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

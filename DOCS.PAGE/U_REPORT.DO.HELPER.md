@@ -20,7 +20,7 @@
 *         Params : reportID
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210129 at 13.41.09 in DEV by root
+*   Info Updated : 20210131 at 21.22.54 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -32,7 +32,9 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.PROPERTY" width="25" />[U_IO.GET.PROPERTY](../DOCS.PAGE/U_IO.GET.PROPERTY.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.UUID" width="25" />[U_GET.UUID](../DOCS.PAGE/U_GET.UUID.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_HEADER" width="25" />[U_HEADER](../DOCS.PAGE/U_HEADER.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.RECORD" width="25" />[U_CRT.RECORD](../DOCS.PAGE/U_CRT.RECORD.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.EXECUTE" width="25" />[U_OS.EXECUTE](../DOCS.PAGE/U_OS.EXECUTE.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.REPORT" width="25" />[U_CRT.REPORT](../DOCS.PAGE/U_CRT.REPORT.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
 ### INTERNAL CALLS  
   

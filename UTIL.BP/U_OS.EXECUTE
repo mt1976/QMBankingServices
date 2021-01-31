@@ -1,11 +1,11 @@
-SUBROUTINE U_OS.EXECUTE(STMT, VERBOSE)
+SUBROUTINE U_OS.EXECUTE(STMT, ACTIONS)
 ** INFORMATION ****************************************************************
 *   Routine Name : U_OS.EXECUTE
 *           Type : SUBROUTINE
-*         Params : STMT, VERBOSE
+*         Params : STMT, ACTIONS
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210128 at 10.26.08 in DEV by root
+*   Info Updated : 20210131 at 21.49.55 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -14,24 +14,32 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
    USE.STMT = STMT
 
-   IF VERBOSE THEN
+*   CALL U_CRT.INFO("STMT", STMT)
+*   CALL U_CRT.RECORD(ACTIONS)
+   IF ACTIONS<1> = @TRUE THEN
       CALL U_CRT.INFO("EXECUTE", @(U_BOLD_ON):USE.STMT:@(U_BOLD_OFF))
-
-   END ELSE
-      HUSH ON
    END
 
-   IF VERBOSE THEN
-      EXECUTE USE.STMT CAPTURING OUTPUT
-   END ELSE
-      EXECUTE USE.STMT SILENT
-   END
-   IF VERBOSE THEN
-      *  CALL U_CRT.INFO("OUTPUT", "")
-      CALL U_CRT.RECORD(OUTPUT)
-   END ELSE
-      HUSH OFF
-   END
+   BEGIN CASE
+      CASE ACTIONS<1> = @TRUE
+         EXECUTE USE.STMT CAPTURING OUTPUT
+         CALL U_CRT.RECORD(OUTPUT)
+      CASE ACTIONS<1> = "STORE"
+         EXECUTE USE.STMT CAPTURING OUTPUT
+         filePath = ACTIONS<2>
+         fileID = ACTIONS<3>
+         FV.REPORTS = ""
+         CALL U_IO.OPENFILEPATH(filePath, FV.REPORTS, @TRUE, "")
+         CALL U_IO.WRITE(FV.REPORTS, fileID, OUTPUT, @TRUE, "")
+         CALL U_CRT.INFO("STORE", fileID)
+         CALL U_CRT.INFO("LOCATION", filePath)
+      CASE 1
+         HUSH ON
+         EXECUTE USE.STMT SILENT
+         HUSH OFF
+   END CASE
+
+
    R.EVENT = ""
    R.EVENT<U_LOG_EVENT> = "EXECUTE"
    R.EVENT<U_LOG_MSG> = USE.STMT

@@ -4,7 +4,7 @@
 *       Filename : UTIL.LOG
 *         Prefix : U_L_
 ** AUDIT **********************************************************************
-*   Info Updated : 20210120 at 11.16.54 in DEV by root
+*   Info Updated : 20210131 at 21.49.59 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate U_L_FILE.NAME to "UTIL.LOG"
