@@ -3,7 +3,7 @@
       <Collection>
         <DealType>Spot</DealType>
         <MsgID>{{MSG.ID}}</MsgID>
-        <ExecType>0</ExecType>
+        <ExecType>1</ExecType>
         <TradeDate>{{TODAY}}</TradeDate>
         <ExtRefNo>FX{{YYYY}}{{MM}}{{DD}}{{HH}}{{mm}}{{SS}}{{SEQ}}</ExtRefNo>
         <ExternalCustomer>{{CUSTOMER}}</ExternalCustomer>
