@@ -5,7 +5,7 @@ SUBROUTINE SIENA.GEN.TXN.DATA(dataType)
 *         Params : dataType
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210129 at 13.57.51 in DEV by root
+*   Info Updated : 20210201 at 09.00.58 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -48,6 +48,9 @@ $INSERT UTIL.BP I_UTIL.H
    CALL U_IO.READ(FV.SIENA.TXN.TEMPLATES, ID.SIENA.TXN.TEMPLATES, R.SIENA.TXN.TEMPLATES, @FALSE, "")
 *** GET TEMPLATES END
 
+   waitTime = ""
+   CALL U_IO.GET.PROPERTY("siena_demo", "demo_wait_":LOWER(dataType), waitTime)
+
 *   CALL U_CRT.INFO("MAPS", noMappings)
 *   CALL U_CRT.INFO("ROWS", noTransactions)
 
@@ -59,6 +62,16 @@ $INSERT UTIL.BP I_UTIL.H
       *  CALL U_CRT.INFO("ITEM", thisTransaction:"/":noTransactions)
       *    CALL U_CRT.RECORD(sourceData)
       GOSUB PROCESS.ROW
+
+      IF noTransactions > 1 THEN
+         IF waitTime <> "" AND waitTime <> 0 THEN
+            waitPeriod = ""
+            CALL U_RND.BETWEEN(waitPeriod, 0, waitTime)
+            CALL U_CRT.INFO("SLEEPING", waitPeriod:" Secs")
+            SLEEP waitPeriod
+         END
+      END
+
    NEXT thisTransaction
 
    RETURN

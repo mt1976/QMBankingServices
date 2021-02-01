@@ -20,7 +20,7 @@
 *         Params : dataType
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210129 at 13.57.51 in DEV by root
+*   Info Updated : 20210201 at 09.00.58 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -36,6 +36,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.PROPERTY" width="25" />[U_IO.GET.PROPERTY](../DOCS.PAGE/U_IO.GET.PROPERTY.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.OPENFILEPATH" width="25" />[U_IO.OPENFILEPATH](../DOCS.PAGE/U_IO.OPENFILEPATH.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.READ" width="25" />[U_IO.READ](../DOCS.PAGE/U_IO.READ.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_RND.BETWEEN" width="25" />[U_RND.BETWEEN](../DOCS.PAGE/U_RND.BETWEEN.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.CACHE.FETCH" width="25" />[SIENA.CACHE.FETCH](../DOCS.PAGE/SIENA.CACHE.FETCH.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_XML.SUBSTITUTE" width="25" />[U_XML.SUBSTITUTE](../DOCS.PAGE/U_XML.SUBSTITUTE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.NEXT.WORKING.DAY" width="25" />[U_GET.NEXT.WORKING.DAY](../DOCS.PAGE/U_GET.NEXT.WORKING.DAY.md)  

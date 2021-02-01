@@ -1,0 +1,20 @@
+#=----------------------------------------------------------------------------=
+#=which machines and db's to update pricing for=
+#=KNOWNAS|IP|DBNAME|Query|Criteria=
+#=In Criteria use ^ in place of '=' - SW will convert automatically.
+MAP=DEAL.TYPE=1
+MAP=EXT.REF=2
+MAP=ACCOUNT.NAME=3
+MAP=COUNTERPARTY=4
+MAP=PAYMENT.SYSTEM=5
+MAP=CURRENCY.PAIR=6
+MAP=AMOUNT=7
+MAP=BOOK=8
+MAP=NOTES=9
+MAP=MANDATED.USER=10
+MAP=PRICE=11
+MAP=USER=12
+MAP=CCY1=13
+MAP=CCY2=14
+#ACC=DealType|AccountNumber/ExternalRef|AccountName|Counterparty|PaymentSystem|Currency|Balance|Book|Notes|Mandated User|Price|USER|CCY1|CCY2=
+DATA=Account|10000001|GBP Customer Account|TELIA|SWIFT|EURUSD|50000|ACCTS|Sample Note 1|Default|!FX.1M.EURUSD.O|Super|EUR|USD=
