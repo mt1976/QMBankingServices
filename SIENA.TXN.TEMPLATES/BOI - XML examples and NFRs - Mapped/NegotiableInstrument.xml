@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<TRANSACTIONS>
+  <TRANSACTION type="IMPORT">
+    <TABLE name="NegotiableInstrument" classname="com.eurobase.siena.data.negotiableinstrument.NegotiableInstrument">
+      <RECORD>
+        <KEYFIELD name="key.name">UKT_4.50_07/03/19</KEYFIELD>
+        <FIELD name="type">GVT BOND</FIELD>
+        <FIELD name="currency.code">GBP</FIELD>
+        <FIELD name="issuer.firm">Q</FIELD>
+        <FIELD name="issuer.centre">LE</FIELD>
+        <FIELD name="acceptor.firm">acceptor.firm</FIELD>
+        <FIELD name="acceptor.centre">acceptor.centre</FIELD>
+        <FIELD name="issue.date">issue.date</FIELD>
+        <FIELD name="maturity.date">maturity.date</FIELD>
+        <FIELD name="rate.type">rate.type</FIELD>
+        <FIELD name="coupon.rate">coupon.rate</FIELD>
+        <FIELD name="interest.basis">interest.basis</FIELD>
+        <FIELD name="interest.frequency">interest.frequency</FIELD>
+        <FIELD name="clearing.system">clearing.system</FIELD>
+        <FIELD name="parent.deal.type">parent.deal.type</FIELD>
+        <FIELD name="securityID">GB00B39R3F84</FIELD>
+        <FIELD name="encumbered">encumbered</FIELD>
+        <FIELD name="marketable">marketable</FIELD>
+        <FIELD name="hypothecated">hypothecated</FIELD>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

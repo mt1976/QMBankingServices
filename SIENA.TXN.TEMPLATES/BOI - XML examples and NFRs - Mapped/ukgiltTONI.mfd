@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2017 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="22" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="17"/>
+					</targets>
+					<view ltx="127" lty="664" rbx="209" rby="678"/>
+					<data>
+						<constant value="encumbered" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="23" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="18"/>
+					</targets>
+					<view ltx="127" lty="681" rbx="204" rby="695"/>
+					<data>
+						<constant value="marketable" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="24" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="19"/>
+					</targets>
+					<view ltx="127" lty="698" rbx="215" rby="712"/>
+					<data>
+						<constant value="hypothecated" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="28" kind="23">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="266" lty="537" rbx="332" rby="568"/>
+					<data>
+						<wsdl/>
+						<valuemap>
+							<valuemapTable>
+								<entry from="3M" to="3m"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="41" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="105"/>
+					</targets>
+					<view ltx="144" lty="-16" rbx="174" rby="-2"/>
+					<data>
+						<constant value="0" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="44" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="129"/>
+					</targets>
+					<view ltx="144" lty="18" rbx="179" rby="32"/>
+					<data>
+						<constant value="99" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="42" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="110"/>
+					</targets>
+					<view ltx="144" lty="1" rbx="174" rby="15"/>
+					<data>
+						<constant value="2" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="27" kind="23">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="92"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="93"/>
+					</targets>
+					<view ltx="266" lty="613" rbx="332" rby="644"/>
+					<data>
+						<wsdl/>
+						<valuemap>
+							<valuemapTable>
+								<entry from="A360" to="Actual 360"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="21" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="16"/>
+					</targets>
+					<view ltx="127" lty="647" rbx="202" rby="661"/>
+					<data>
+						<constant value="securityID" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="47" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="137"/>
+					</targets>
+					<view ltx="165" lty="866" rbx="195" rby="880"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="substring" library="core" uid="43" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="126"/>
+						<datapoint pos="1" key="128"/>
+						<datapoint pos="2" key="127"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="125"/>
+					</targets>
+					<view ltx="436" lty="-4" rbx="496" rby="53"/>
+				</component>
+				<component name="skip-first-items" library="core" uid="46" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="134"/>
+						<datapoint pos="1" key="135"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="136"/>
+					</targets>
+					<view ltx="263" lty="812" rbx="349" rby="856"/>
+				</component>
+				<component name="value-map" library="core" uid="49" kind="23">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="138"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="139"/>
+					</targets>
+					<view ltx="289" lty="371" rbx="355" rby="402"/>
+					<data>
+						<wsdl/>
+						<valuemap>
+							<valuemapTable>
+								<entry from="GILT" to="UK GOVT"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="50" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="150"/>
+					</targets>
+					<view ltx="155" lty="456" rbx="209" rby="470"/>
+					<data>
+						<constant value="Fixed" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="155"/>
+					</targets>
+					<view ltx="294" lty="89" rbx="360" rby="103"/>
+					<data>
+						<constant value="IMPORT" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="52" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="156"/>
+					</targets>
+					<view ltx="294" lty="106" rbx="414" rby="120"/>
+					<data>
+						<constant value="NegotiableInstrument" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="53" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="157"/>
+					</targets>
+					<view ltx="294" lty="123" rbx="426" rby="137"/>
+					<data>
+						<constant value="com.eurobase.siena.data.negotiableinstrument.NegotiableInstrument" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="substring" library="core" uid="40" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="106"/>
+						<datapoint pos="1" key="107"/>
+						<datapoint pos="2" key="108"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="109"/>
+					</targets>
+					<view ltx="253" lty="-16" rbx="313" rby="41"/>
+				</component>
+				<component name="constant" library="core" uid="6" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="121" lty="235" rbx="175" rby="249"/>
+					<data>
+						<constant value="name" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="7" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="5"/>
+					</targets>
+					<view ltx="121" lty="252" rbx="171" rby="266"/>
+					<data>
+						<constant value="type" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="8" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view ltx="121" lty="269" rbx="211" rby="283"/>
+					<data>
+						<constant value="currencyCode" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="13" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="9"/>
+					</targets>
+					<view ltx="121" lty="399" rbx="194" rby="413"/>
+					<data>
+						<constant value="issueDate" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="14" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="48"/>
+					</targets>
+					<view ltx="121" lty="416" rbx="207" rby="430"/>
+					<data>
+						<constant value="maturityDate" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="15" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="10"/>
+					</targets>
+					<view ltx="120" lty="433" rbx="188" rby="447"/>
+					<data>
+						<constant value="rateType" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="16" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="11"/>
+					</targets>
+					<view ltx="121" lty="471" rbx="202" rby="485"/>
+					<data>
+						<constant value="couponRate" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="17" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="12"/>
+					</targets>
+					<view ltx="121" lty="503" rbx="206" rby="517"/>
+					<data>
+						<constant value="interestBasis" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="18" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="13"/>
+					</targets>
+					<view ltx="121" lty="520" rbx="228" rby="534"/>
+					<data>
+						<constant value="interestFrequency" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="19" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="14"/>
+					</targets>
+					<view ltx="121" lty="537" rbx="217" rby="551"/>
+					<data>
+						<constant value="clearingSystem" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="20" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="15"/>
+					</targets>
+					<view ltx="127" lty="630" rbx="224" rby="644"/>
+					<data>
+						<constant value="parentDealType" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="9" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="121" lty="286" rbx="197" rby="300"/>
+					<data>
+						<constant value="issuer.firm" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="10" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="45"/>
+					</targets>
+					<view ltx="121" lty="330" rbx="206" rby="344"/>
+					<data>
+						<constant value="issuer.centre" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="11" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="46"/>
+					</targets>
+					<view ltx="121" lty="347" rbx="208" rby="361"/>
+					<data>
+						<constant value="acceptor.firm" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="12" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="8"/>
+					</targets>
+					<view ltx="121" lty="382" rbx="217" rby="396"/>
+					<data>
+						<constant value="acceptor.centre" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="UK Gilt XML" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-129" lty="44" rbx="80" rby="845"/>
+					<data>
+						<root scrollposition="4149">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Response" expanded="1">
+										<entry name="ObjectData" expanded="1">
+											<entry name="summit_bondtrade" expanded="1">
+												<entry name="BOND_TR" expanded="1">
+													<entry name="Bond" expanded="1">
+														<entry name="BOND" expanded="1"/>
+													</entry>
+												</entry>
+												<entry name="TradeIndicator" expanded="1">
+													<entry name="DescList" expanded="1">
+														<entry name="Description" expanded="1"/>
+													</entry>
+												</entry>
+												<entry name="Products" expanded="1">
+													<entry name="Sec" expanded="1"/>
+												</entry>
+												<entry name="SEC" expanded="1">
+													<entry name="MatDate" outkey="85"/>
+												</entry>
+												<entry name="UNDERLYING" expanded="1">
+													<entry name="SEC" expanded="1">
+														<entry name="Sec" outkey="49"/>
+														<entry name="Type" outkey="50"/>
+														<entry name="Ccy" outkey="51"/>
+														<entry name="Issuer" outkey="52"/>
+														<entry name="Issue" expanded="1">
+															<entry name="SASSET" expanded="1">
+																<entry name="EffDate" outkey="99"/>
+																<entry name="INTEREST_Rate" expanded="1"/>
+																<entry name="INTEREST_Basis" outkey="87"/>
+																<entry name="INTEREST_Term" outkey="100"/>
+															</entry>
+														</entry>
+														<entry name="IdentifierList" expanded="1">
+															<entry name="SECIDNT" expanded="1">
+																<entry name="Identifier" outkey="101"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="YieldCalculator" expanded="1"/>
+												<entry name="SecLongDesc" expanded="1">
+													<entry name="Description" expanded="1">
+														<entry name="Rate" outkey="147" expanded="1"/>
+													</entry>
+												</entry>
+												<entry name="SecDescTooltip">
+													<entry name="Description" expanded="1">
+														<entry name="String" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="UK Gilt XML.xsd" inputinstance="UK Gilt XML.xml" outputinstance="UK Gilt XML.xml" instanceroot="{}Response"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="lowercase" library="lang" uid="38" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="94"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="95"/>
+					</targets>
+					<view ltx="266" lty="575" rbx="329" rby="606"/>
+				</component>
+				<component name="NegotiableInstrument" library="xml" uid="4" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="564" lty="13" rbx="818" rby="751"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="TRANSACTIONS" expanded="1">
+										<entry name="TRANSACTION" expanded="1">
+											<entry name="type" type="attribute" inpkey="152"/>
+											<entry name="TABLE" expanded="1">
+												<entry name="name" type="attribute" inpkey="153"/>
+												<entry name="classname" type="attribute" inpkey="154"/>
+												<entry name="RECORD" expanded="1">
+													<entry name="KEYFIELD" inpkey="2" expanded="1">
+														<entry name="name" type="attribute" inpkey="20"/>
+													</entry>
+													<entry name="FIELD" inpkey="21" expanded="1">
+														<entry name="name" type="attribute" inpkey="22"/>
+													</entry>
+													<entry name="FIELD" inpkey="23" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="24"/>
+													</entry>
+													<entry name="FIELD" inpkey="25" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="26"/>
+													</entry>
+													<entry name="FIELD" inpkey="27" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="28"/>
+													</entry>
+													<entry name="FIELD" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="29"/>
+													</entry>
+													<entry name="FIELD" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="31"/>
+													</entry>
+													<entry name="FIELD" inpkey="32" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="33"/>
+													</entry>
+													<entry name="FIELD" inpkey="80" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="34"/>
+													</entry>
+													<entry name="FIELD" inpkey="81" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="35"/>
+													</entry>
+													<entry name="FIELD" inpkey="146" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="36"/>
+													</entry>
+													<entry name="FIELD" inpkey="82" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="37"/>
+													</entry>
+													<entry name="FIELD" inpkey="102" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="38"/>
+													</entry>
+													<entry name="FIELD" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="39"/>
+													</entry>
+													<entry name="FIELD" inpkey="103" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="40"/>
+													</entry>
+													<entry name="FIELD" inpkey="104" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="41"/>
+													</entry>
+													<entry name="FIELD" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="42"/>
+													</entry>
+													<entry name="FIELD" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="43"/>
+													</entry>
+													<entry name="FIELD" expanded="1" clone="1">
+														<entry name="name" type="attribute" inpkey="44"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\tlate\NegotiableInstrument.xsd" inputinstance="..\..\tlate\NegotiableInstrument.xml" outputinstance="..\..\tlate\NegotiableInstrument.xml" instanceroot="{}TRANSACTIONS"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="20" edgekey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="22" edgekey="55"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="24" edgekey="56"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="26" edgekey="57"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="31" edgekey="58"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="33" edgekey="59"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="35" edgekey="60"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="36" edgekey="61"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="37" edgekey="111"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="38" edgekey="63"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="39" edgekey="64"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="40" edgekey="65"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="41" edgekey="66"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="42" edgekey="67"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="43" edgekey="68"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="44" edgekey="69"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="45">
+						<edges>
+							<edge vertexkey="28" edgekey="70"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="46">
+						<edges>
+							<edge vertexkey="29" edgekey="71"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="48">
+						<edges>
+							<edge vertexkey="34" edgekey="74"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="2" edgekey="140"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="50">
+						<edges>
+							<edge vertexkey="138" edgekey="141"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51">
+						<edges>
+							<edge vertexkey="23" edgekey="77"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="52">
+						<edges>
+							<edge vertexkey="106" edgekey="113"/>
+							<edge vertexkey="126" edgekey="130"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="85">
+						<edges>
+							<edge vertexkey="80" edgekey="89"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="87">
+						<edges>
+							<edge vertexkey="92" edgekey="114"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="93">
+						<edges>
+							<edge vertexkey="82" edgekey="115"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="95">
+						<edges>
+							<edge vertexkey="102" edgekey="116"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="99">
+						<edges>
+							<edge vertexkey="32" edgekey="119"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="100">
+						<edges>
+							<edge vertexkey="94" edgekey="120"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101">
+						<edges>
+							<edge vertexkey="134" edgekey="142"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="105">
+						<edges>
+							<edge vertexkey="107" edgekey="122"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="109">
+						<edges>
+							<edge vertexkey="25" edgekey="123"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="110">
+						<edges>
+							<edge vertexkey="108" edgekey="124"/>
+							<edge vertexkey="128" edgekey="131"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="125">
+						<edges>
+							<edge vertexkey="27" edgekey="132"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="129">
+						<edges>
+							<edge vertexkey="127" edgekey="133"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="136">
+						<edges>
+							<edge vertexkey="104" edgekey="143"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="137">
+						<edges>
+							<edge vertexkey="135" edgekey="144"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="139">
+						<edges>
+							<edge vertexkey="21" edgekey="145"/>
+							<edge vertexkey="103" edgekey="148"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="147">
+						<edges>
+							<edge vertexkey="146" edgekey="149"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="150">
+						<edges>
+							<edge vertexkey="81" edgekey="151"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="155">
+						<edges>
+							<edge vertexkey="152" edgekey="158"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="156">
+						<edges>
+							<edge vertexkey="153" edgekey="159"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="157">
+						<edges>
+							<edge vertexkey="154" edgekey="160"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

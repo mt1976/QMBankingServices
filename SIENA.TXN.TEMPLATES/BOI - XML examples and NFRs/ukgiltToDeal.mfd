@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2017 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1" blackbox="0">
+		<properties ShowLibraryNameInHeader="1" SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="4" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="580" lty="86" rbx="703" rby="104"/>
+					<data>
+						<constant value="0" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="template" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="734" rbx="942" rby="516"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Collections" expanded="1">
+										<entry name="Collection" expanded="1">
+											<entry name="DealType" inpkey="5"/>
+											<entry name="ExecType" inpkey="6"/>
+											<entry name="TradeDate" inpkey="7"/>
+											<entry name="ExtRefNo" inpkey="13"/>
+											<entry name="ExternalCustomer" inpkey="14"/>
+											<entry name="Direction" inpkey="19"/>
+											<entry name="Rate" inpkey="20"/>
+											<entry name="DealtCurrency" inpkey="21"/>
+											<entry name="DealtAmount" inpkey="22"/>
+											<entry name="Book" inpkey="23"/>
+											<entry name="ValueDate" inpkey="24"/>
+											<entry name="NI" inpkey="8"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="template.xsd" inputinstance="template.xml" outputinstance="template.xml" instanceroot="{}Collections"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="5" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="25"/>
+					</targets>
+					<view ltx="494" lty="178" rbx="656" rby="196"/>
+					<data>
+						<constant value="HOLDING" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="26"/>
+					</targets>
+					<view ltx="494" lty="319" rbx="638" rby="337"/>
+					<data>
+						<constant value="Demo" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="UK Gilt XML" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="249" rby="644"/>
+					<data>
+						<root scrollposition="3537">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Response" expanded="1">
+										<entry name="MethodResults" expanded="1">
+											<entry name="Method" expanded="1"/>
+										</entry>
+										<entry name="ObjectData" expanded="1">
+											<entry name="summit_bondtrade" expanded="1">
+												<entry name="BOND_TR" expanded="1">
+													<entry name="TradeType" outkey="2"/>
+													<entry name="Env" expanded="1">
+														<entry name="ENV" expanded="1">
+															<entry name="TradeId" outkey="15"/>
+															<entry name="Company" outkey="16"/>
+															<entry name="TradeDate" outkey="3"/>
+														</entry>
+													</entry>
+													<entry name="Back" expanded="1">
+														<entry name="BACK" expanded="1"/>
+													</entry>
+													<entry name="Bond" expanded="1">
+														<entry name="BOND" expanded="1">
+															<entry name="Sec" outkey="4"/>
+															<entry name="ValueDate" outkey="27"/>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="SEC" expanded="1">
+													<entry name="PriceLFORMAT" expanded="1">
+														<entry name="units" outkey="28"/>
+													</entry>
+													<entry name="Ccy" outkey="29"/>
+													<entry name="Rate" outkey="30" expanded="1"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="UK Gilt XML.xsd" inputinstance="UK Gilt XML.xml" outputinstance="UK Gilt XML.xml" instanceroot="{}Response"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="6" edgekey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="5" edgekey="10"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="7" edgekey="11"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="8" edgekey="12"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="13" edgekey="17"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="14" edgekey="18"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="19" edgekey="31"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="26">
+						<edges>
+							<edge vertexkey="23" edgekey="32"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="27">
+						<edges>
+							<edge vertexkey="24" edgekey="33"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="22" edgekey="34"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="29">
+						<edges>
+							<edge vertexkey="21" edgekey="35"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="30">
+						<edges>
+							<edge vertexkey="20" edgekey="36"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

@@ -1,0 +1,899 @@
+  <?xml version="1.0" ?> 
+- <Response>
+  <Status>ok</Status> 
+  <ObjectID>1</ObjectID> 
+- <ObjectData>
+- <summit_bondtrade>
+  <Dirty>false</Dirty> 
+  <AsOfDate>20160801</AsOfDate> 
+  <CurveID /> 
+  <MarketDataSetID /> 
+  <PricingGroupID /> 
+  <AssignToUsTransferor /> 
+  <AssignToUsEffDate /> 
+  <AssignToUsFeeDate /> 
+- <BOND_TR>
+  <TradeId>0000019552</TradeId> 
+  <TradeType>BOND</TradeType> 
+- <Env TYPE="EntList" SINGLE="Y">
+- <ENV>
+  <Audit_Id>00000SZD</Audit_Id> 
+  <Audit_Table>BOND_TR</Audit_Table> 
+  <Audit_Version TYPE="Numeric">2</Audit_Version> 
+  <Audit_Current>Y</Audit_Current> 
+  <Audit_EntityState>VER</Audit_EntityState> 
+  <Audit_Authorized>Y</Audit_Authorized> 
+  <Audit_PendingAction /> 
+  <Audit_PendingState /> 
+  <Audit_IsHistory>N</Audit_IsHistory> 
+  <Audit_User>user</Audit_User> 
+  <Audit_Action>MKLIVE</Audit_Action> 
+  <Audit_DateTime>20150409 11:27:45</Audit_DateTime> 
+  <Audit_ExtStateName>Verified</Audit_ExtStateName> 
+  <Audit_StateId TYPE="Numeric" /> 
+  <dmOwnerTable>BOND_TR</dmOwnerTable> 
+  <TradeId>0000019552</TradeId> 
+  <InputDate>20150409</InputDate> 
+  <InputTime>08:59:14</InputTime> 
+  <Cust>customer</Cust> 
+  <Company>BIGT</Company> 
+  <BookedBy /> 
+  <BookedFor /> 
+  <BookSpr TYPE="Numeric" /> 
+  <BookCcy /> 
+  <BookFee TYPE="Numeric" /> 
+  <BookFeeDate /> 
+  <RC /> 
+  <Book>FQTXX</Book> 
+  <RCSpread TYPE="Numeric" /> 
+  <Trader>FQE</Trader> 
+  <Broker /> 
+  <Contact /> 
+  <Desk>BOI</Desk> 
+  <Folder /> 
+  <DealId /> 
+  <TradeDate>20150409</TradeDate> 
+  <TradeStatus>VER</TradeStatus> 
+  <RCTrade>N</RCTrade> 
+  <ProductGroup /> 
+  <ProductType /> 
+  <BackDated>Y</BackDated> 
+  <FinalMaturity /> 
+  <ProjectId /> 
+  <IsMirror>N</IsMirror> 
+  <PayMethod /> 
+  <Comment1 /> 
+  <Comment2 /> 
+  <LastUpdate>20150409 11:27:45</LastUpdate> 
+  <MarketerId>FQE</MarketerId> 
+  <NumSSI TYPE="Numeric" /> 
+  <MirrorSchemeId /> 
+  <StructureId /> 
+  <ViewName /> 
+  <FacilityId /> 
+  <TrancheId /> 
+  <LoanId /> 
+  <LFType /> 
+  <LoanCcy /> 
+  <ParentOwnerTable /> 
+  <ParentTradeId /> 
+  <SyndicatedLoan>N</SyndicatedLoan> 
+  <Breakable>N</Breakable> 
+  <SsiInstr TYPE="EntList" SINGLE="N" /> 
+  <UltBeneficiary /> 
+  <CreditRisk>N</CreditRisk> 
+  <TradeEntryDate>20150409</TradeEntryDate> 
+  <FirstSaveTime>08:59:30</FirstSaveTime> 
+  <SuperCompany /> 
+  <Portfolio /> 
+  <ModifyingChildTradeId /> 
+  <IsMirrOffsetTrd>N</IsMirrOffsetTrd> 
+  <HOReference /> 
+  <cTaxonomy /> 
+  <cIsDepBacked>N</cIsDepBacked> 
+  <cLifeCycleEvent /> 
+  <cOrigCpty /> 
+  </ENV>
+  </Env>
+- <Back TYPE="EntList" SINGLE="Y">
+- <BACK>
+  <dmOwnerTable>BOND_TR</dmOwnerTable> 
+  <TradeId>0000019552</TradeId> 
+  <ExtTradeId /> 
+  <SummitId /> 
+  <OldId /> 
+  <Code /> 
+  <PendingUser>user</PendingUser> 
+  <PendingDate>20150409</PendingDate> 
+  <PendingTime>08:59:30</PendingTime> 
+  <DoneUser>user</DoneUser> 
+  <DoneDate>20150409</DoneDate> 
+  <DoneTime>08:59:30</DoneTime> 
+  <VerifyUser>user</VerifyUser> 
+  <VerifyDate>20150409</VerifyDate> 
+  <VerifyTime>11:27:45</VerifyTime> 
+  <CancelUser /> 
+  <CancelDate /> 
+  <CancelTime>00:00:00</CancelTime> 
+  <AmendUser>user</AmendUser> 
+  <AmendDate>20150409</AmendDate> 
+  <AmendTime>20150409 11:27:45</AmendTime> 
+  <ConfirmExec>N</ConfirmExec> 
+  <CollateralHeld>N</CollateralHeld> 
+  <CollateralAmt TYPE="Numeric" /> 
+  <TermTradeDate /> 
+  <TermEffDate /> 
+  <TermInputDate /> 
+  <OrigMatDate /> 
+  <OrigNotional TYPE="Numeric" /> 
+  <Street /> 
+  <NetSettle>Y</NetSettle> 
+  <TermAssignStatus /> 
+  <SchemaId /> 
+  <TrAcctType>TRADING</TrAcctType> 
+  <CommonRef /> 
+  <AssignTo /> 
+  <AssignFrom /> 
+  <Audit_Version TYPE="Numeric">2</Audit_Version> 
+  <TradeNetting>N</TradeNetting> 
+  <ThresholdCcy /> 
+  <ThresholdAmount TYPE="Numeric" /> 
+  <ExerciseTo /> 
+  <ExerciseOwnerTable /> 
+  <SecId /> 
+  <SecType /> 
+  <SecCcy /> 
+  <MergeTradeId /> 
+  <EuroConversionDate /> 
+  <OurSettlementCountry /> 
+  <CustSettlementCountry /> 
+  <PositionType /> 
+  <NetSettlement /> 
+  <NetCredit /> 
+  <MAFormat /> 
+  <MAStyle /> 
+  <ExternalUser /> 
+  <ExtSystem /> 
+  <SSIOpsCode /> 
+  <ContOpsCode /> 
+  <NavOpsCode /> 
+  <AggressorFlag /> 
+  <MatchingId /> 
+  <OrigEffectDate /> 
+  <ExtVersion TYPE="Numeric" /> 
+  <SsiByEvent>N</SsiByEvent> 
+  <CLSSettlement>N</CLSSettlement> 
+  <CSD /> 
+  <CSD_AuditId /> 
+  <IASAcctType /> 
+  <RollRepoType /> 
+- <CustomEventRules TYPE="EntList" SINGLE="Y">
+- <EVNTRULE>
+- <Rules>
+- <RULES>
+- <RULE>
+  <INTER /> 
+  <LEG /> 
+  <ROWID /> 
+  <EVENTS /> 
+  </RULE>
+  </RULES>
+  </Rules>
+  </EVNTRULE>
+  </CustomEventRules>
+  <OptingOut /> 
+  <AssignmentDetails TYPE="EntList" SINGLE="N" /> 
+  <PreTradeUser /> 
+  <PreTradeDate /> 
+  <PreTradeTime>00:00:00</PreTradeTime> 
+  <FinancialDataChange>CHANGE</FinancialDataChange> 
+  <CATradeLinkType>NORMAL</CATradeLinkType> 
+  <FairValueLevel /> 
+  <LastResetDate /> 
+  <TradedFXRates TYPE="EntList" SINGLE="N" /> 
+  <IsPnLTrade>Y</IsPnLTrade> 
+  <IsStreetTrade>Y</IsStreetTrade> 
+- <LoanIQ TYPE="EntList" SINGLE="Y">
+- <LOANIQ>
+  <dmOwnerTable /> 
+  <TradeId /> 
+  <ConfirmCOF>N</ConfirmCOF> 
+  <LinkageID /> 
+  <LoanType /> 
+  <StateCOF /> 
+  <TransactionRID /> 
+  <RepricingDate /> 
+  <LoanAlias /> 
+  <Portfolio /> 
+  <Branch /> 
+  <ExpenseCode /> 
+  </LOANIQ>
+  </LoanIQ>
+  <cHedgeItem /> 
+  <cHdgBook /> 
+  <cHdgBusUnit /> 
+  <cHdgCust /> 
+  <MirrorData TYPE="EntList" SINGLE="Y" /> 
+  </BACK>
+  </Back>
+- <Bond TYPE="EntList" SINGLE="Y">
+- <BOND>
+  <TradeId>0000019552</TradeId> 
+  <PorS>S</PorS> 
+  <SecType>FRN</SecType> 
+  <Ccy>EUR</Ccy> 
+  <Sec>BFCM_FRN_23/03/17</Sec> 
+  <Quote>CLEAN</Quote> 
+  <Price TYPE="Numeric">1.0005</Price> 
+  <Yield TYPE="Numeric">-0.00001249177256</Yield> 
+  <SettleDate>20150413</SettleDate> 
+  <Settlement TYPE="Numeric">13007971.17</Settlement> 
+  <ValueDate>20150413</ValueDate> 
+  <Notional TYPE="Numeric">13000000.0</Notional> 
+  <Brokerage TYPE="Numeric" /> 
+  <BrokDate /> 
+  <Code TYPE="Numeric" /> 
+  <Descrip /> 
+  <ClearingAgentID /> 
+  <Audit_Version TYPE="Numeric">2</Audit_Version> 
+  <SettleAccrual>Y</SettleAccrual> 
+  <ValidIssue>Y</ValidIssue> 
+  <Fees TYPE="EntList" SINGLE="N" /> 
+  <NumFees TYPE="Numeric" /> 
+  <SettleFXRate TYPE="Numeric">0.0</SettleFXRate> 
+  <BondMktType>SECOND</BondMktType> 
+  <IssueDetails TYPE="EntList" SINGLE="Y" /> 
+  <HasIssueDetails>N</HasIssueDetails> 
+  <Denom TYPE="EntList" SINGLE="N" /> 
+  <Spread TYPE="Numeric">sMAXDBL</Spread> 
+  <XDividend /> 
+  <ExCpnDate /> 
+  <EMULink /> 
+  <SplitSettlements TYPE="EntList" SINGLE="N" /> 
+  <PartialSettlements TYPE="EntList" SINGLE="N" /> 
+  <PurchaseType /> 
+  <InstStyle /> 
+  <CreditEvents TYPE="EntList" SINGLE="Y" /> 
+  <PastDueInterest>N</PastDueInterest> 
+  <Margin TYPE="Numeric">0.0</Margin> 
+  <Discount TYPE="Numeric">0.0</Discount> 
+  <PrinSettleCcy /> 
+  <PrinSettleFXRate TYPE="Numeric">0.0</PrinSettleFXRate> 
+  <CashSettle>N</CashSettle> 
+  <FixingDate /> 
+  <FixingPrice TYPE="Numeric" /> 
+  <SpreadMethod /> 
+  <QMethodSecId /> 
+  <QMethodCcy /> 
+  <QMethodIndex>EURIB</QMethodIndex> 
+  <QMethodTerm>6M</QMethodTerm> 
+  <PriceFixing /> 
+  <BondTradeInstStyle /> 
+  <PositionStyle /> 
+  <NetFlowId /> 
+  <NetFlowVersion TYPE="Numeric" /> 
+  <AccrStartDate /> 
+  <CleanPrice TYPE="Numeric">1.0005</CleanPrice> 
+  </BOND>
+  </Bond>
+  <TrSsiPairs TYPE="EntList" SINGLE="N" /> 
+  <SDTradeLink TYPE="EntList" SINGLE="Y" /> 
+  </BOND_TR>
+  <AuditLogDescription /> 
+- <TRADEINFO>
+  <Description>BOND 0000019552</Description> 
+  <Termination /> 
+  <Exercise /> 
+  <StatsCleared>true</StatsCleared> 
+  <VALUATION /> 
+  </TRADEINFO>
+  <IsExternalChildTrade>N</IsExternalChildTrade> 
+  <ParentTradeType>None</ParentTradeType> 
+  <IsMirrorWinAccessible>N</IsMirrorWinAccessible> 
+  <MirrorWinAccessComments>[This trade is not mirrored]</MirrorWinAccessComments> 
+  <IsCreateMirrorWinAccessible>Y</IsCreateMirrorWinAccessible> 
+  <CreateMirrorWinAccessComments /> 
+  <DiaryExists>N</DiaryExists> 
+  <IsCopyTradeAvailable>Y</IsCopyTradeAvailable> 
+  <CanImply>N</CanImply> 
+- <TradeIndicator>
+  <State /> 
+- <DescList>
+- <Description>
+  <ID>Trade Diary</ID> 
+  <Summary>NO</Summary> 
+  <Details>NO</Details> 
+  </Description>
+- <Description>
+  <ID /> 
+  <Summary /> 
+  <Details /> 
+  </Description>
+  </DescList>
+  </TradeIndicator>
+- <FinancialData>
+  <DocumentGeneration /> 
+  <PrevFinancialDataChange>Financial data changed by previous STD action.</PrevFinancialDataChange> 
+  <PrevDocumentGeneration /> 
+  </FinancialData>
+- <Products>
+- <Sec>
+  <ProductFormulaName /> 
+  <Description /> 
+  </Sec>
+  <ProductOutputs /> 
+  </Products>
+- <SEC>
+- <PriceLFORMAT>
+  <units TYPE="Numeric">100</units> 
+  <centunits TYPE="Numeric">1000000</centunits> 
+  <roundaccuracy TYPE="Numeric">8</roundaccuracy> 
+  <iorc /> 
+  <roundingmethod /> 
+  </PriceLFORMAT>
+  <Ccy>EUR</Ccy> 
+  <Type>FRN</Type> 
+  <SubType>CORP</SubType> 
+  <AutoPricing>Y</AutoPricing> 
+  <MatDate>20170323</MatDate> 
+  <Rate TYPE="Numeric">0.0</Rate> 
+  <Issuer>Q_UKB_IHJ_LO</Issuer> 
+  <Description>3mEUReur3s 0.17QUAR</Description> 
+  </SEC>
+- <UNDERLYING>
+- <SEC>
+  <Sec>BFCM_FRN_23/03/17</Sec> 
+  <Type>FRN</Type> 
+  <SubType>CORP</SubType> 
+  <Ccy>EUR</Ccy> 
+  <LongName1 /> 
+  <LongName2 /> 
+  <Ratio TYPE="Numeric">1.0</Ratio> 
+  <Issuer>Q_UKB_IHJ_LO</Issuer> 
+  <MinIssue TYPE="Numeric" /> 
+  <Collateral>N</Collateral> 
+  <COLL_NTL_Amount TYPE="Numeric">1000000.0</COLL_NTL_Amount> 
+  <COLL_NTL_Ccy>EUR</COLL_NTL_Ccy> 
+  <COLL_NTL_Date>20170323</COLL_NTL_Date> 
+  <COLL_NTL_Type /> 
+  <COLL_NTL_SecID /> 
+  <COLL_INT_Period /> 
+  <COLL_INT_Amount TYPE="Numeric" /> 
+  <COLL_INT_PctFace TYPE="Numeric">0.0</COLL_INT_PctFace> 
+  <COLL_INT_Type /> 
+  <COLL_INT_SecID /> 
+  <EqYieldFormula /> 
+  <Quote>CLEAN</Quote> 
+  <YieldFormula>GEN_P</YieldFormula> 
+  <PriceFormula>GEN_P</PriceFormula> 
+  <LFORMAT_PriceForm_Units TYPE="Numeric">100</LFORMAT_PriceForm_Units> 
+  <LFORMAT_PriceForm_CentUnits TYPE="Numeric">1000000</LFORMAT_PriceForm_CentUnits> 
+  <LFORMAT_PriceForm_Round TYPE="Numeric">8</LFORMAT_PriceForm_Round> 
+  <LFORMAT_PriceForm_IorC /> 
+  <LFORMAT_YieldForm_Units TYPE="Numeric">100</LFORMAT_YieldForm_Units> 
+  <LFORMAT_YieldForm_CentUnits TYPE="Numeric">100000</LFORMAT_YieldForm_CentUnits> 
+  <LFORMAT_YieldForm_Round TYPE="Numeric">8</LFORMAT_YieldForm_Round> 
+  <LFORMAT_YieldForm_IorC /> 
+  <XDIVIDEND_XDivRule /> 
+  <XDIVIDEND_XDivBDRule /> 
+  <XDIVIDEND_XDivDays TYPE="Numeric" /> 
+  <XDIVIDEND_CurXDate>20160923</XDIVIDEND_CurXDate> 
+  <DAYSRULE_Settle_Rule>BUS</DAYSRULE_Settle_Rule> 
+  <DAYSRULE_Settle_BDRule /> 
+  <DAYSRULE_Settle_Days TYPE="Numeric">2</DAYSRULE_Settle_Days> 
+  <DAYSRULE_Value_Rule>BUS</DAYSRULE_Value_Rule> 
+  <DAYSRULE_Value_BDRule /> 
+  <DAYSRULE_Value_Days TYPE="Numeric">2</DAYSRULE_Value_Days> 
+  <Partial>N</Partial> 
+  <OTRDate /> 
+  <YPSpread TYPE="Numeric">0.0</YPSpread> 
+  <Yield TYPE="Numeric">-0.00180946381102</Yield> 
+  <Price TYPE="Numeric">1.00041</Price> 
+  <RiskIndex>EURCP</RiskIndex> 
+  <FundIndex>EURCP</FundIndex> 
+  <FundSpread TYPE="Numeric">0.0</FundSpread> 
+  <RepoSpread TYPE="Numeric">0.0</RepoSpread> 
+  <Beta TYPE="Numeric">0.0</Beta> 
+  <SizeIssue TYPE="Numeric" /> 
+  <Active>Y</Active> 
+  <Remarks1 /> 
+  <Remarks2 /> 
+  <Callable>N</Callable> 
+  <CPSPECS_CallSpecs_Style /> 
+  <CPSPECS_CallSpecs_Quote /> 
+  <CPSPECS_CallSpecs_XDivRule /> 
+  <CPSPECS_CallSpecs_XDivBDRule /> 
+  <CPSPECS_CallSpecs_XDivDays TYPE="Numeric" /> 
+  <CPSPECS_CallSpecs_CurXDate /> 
+  <Puttable>N</Puttable> 
+  <CPSPECS_PutSpecs_Style /> 
+  <CPSPECS_PutSpecs_Quote /> 
+  <CPSPECS_PutSpecs_XDivRule /> 
+  <CPSPECS_PutSpecs_XDivBDRule /> 
+  <CPSPECS_PutSpecs_XDivDays TYPE="Numeric" /> 
+  <CPSPECS_PutSpecs_CurXDate /> 
+  <Exercise /> 
+  <IssuePrice TYPE="Numeric">1.0</IssuePrice> 
+  <RedemptionPrice TYPE="Numeric">1.0</RedemptionPrice> 
+  <Country /> 
+  <WitholdingTax>N</WitholdingTax> 
+  <WitholdingRate TYPE="Numeric">0.0</WitholdingRate> 
+  <PriceSource /> 
+  <QuoteMethod /> 
+  <FundingSpread /> 
+  <DAYSRULE_Rule /> 
+  <DAYSRULE_BDRule /> 
+  <DAYSRULE_Days TYPE="Numeric" /> 
+  <LiqDays TYPE="Numeric" /> 
+  <SecProdType /> 
+- <Issue TYPE="EntList" SINGLE="Y">
+- <SASSET>
+  <dmOwnerTable>SEC</dmOwnerTable> 
+  <TradeId /> 
+  <Type>EXOTIC</Type> 
+  <SubType /> 
+  <RC /> 
+  <Book /> 
+  <PorS>P</PorS> 
+  <EffDate>20150323</EffDate> 
+  <MatDate>20170323</MatDate> 
+  <Notional TYPE="Numeric">1000000.0</Notional> 
+  <NotExp /> 
+  <Ccy>EUR</Ccy> 
+  <STUB_Date1 /> 
+  <STUB_Rate1 TYPE="Numeric">0.0</STUB_Rate1> 
+  <STUB_Date2 /> 
+  <STUB_Rate2 TYPE="Numeric">0.0</STUB_Rate2> 
+  <STUB_StubType /> 
+  <STUB_Decomp /> 
+  <STUB_CompMode /> 
+  <STUB_Rounding TYPE="Numeric" /> 
+  <STUB_InterpStyle /> 
+  <STUB_StartTerm1 /> 
+  <STUB_StartTerm2 /> 
+  <STUB_EndTerm1 /> 
+  <STUB_EndTerm2 /> 
+  <ResetInStub>N</ResetInStub> 
+  <INTEREST_IndexForm /> 
+  <INTEREST_YldFreq /> 
+  <INTEREST_FixFloat>FLO</INTEREST_FixFloat> 
+  <INTEREST_Rate TYPE="Numeric">0.0</INTEREST_Rate> 
+  <INTEREST_Basis>A360</INTEREST_Basis> 
+  <INTEREST_dmIndex>EUR3S</INTEREST_dmIndex> 
+  <INTEREST_Ccy>EUR</INTEREST_Ccy> 
+  <INT_REF_OrgSource /> 
+  <INT_REF_Source>T248</INT_REF_Source> 
+  <INT_REF_NNearBy TYPE="Numeric">-200000</INT_REF_NNearBy> 
+  <INTEREST_Spread TYPE="Numeric">0.0017</INTEREST_Spread> 
+  <INTEREST_Term>3M</INTEREST_Term> 
+  <INT_AVG_Type /> 
+  <INT_AVG_Freq /> 
+  <INT_AVG_Compound>N</INT_AVG_Compound> 
+  <INT_AVG_AnnDay TYPE="Numeric">-200000</INT_AVG_AnnDay> 
+  <INT_AVG_Rule>MF</INT_AVG_Rule> 
+  <INT_AVG_Spread /> 
+  <INT_AVG_Time /> 
+  <INT_AVG_CutOffDays TYPE="Numeric" /> 
+  <INT_AVG_CorBGap>B</INT_AVG_CorBGap> 
+  <INTEREST_DType /> 
+  <INTEREST_Round /> 
+  <INTEREST_RoundDP TYPE="Numeric" /> 
+  <INT_RES_Rule /> 
+  <INT_RES_Time /> 
+  <INT_RES_Round /> 
+  <INT_RES_RoundDP TYPE="Numeric" /> 
+  <INT_RES_NTL_REF_OrgSource /> 
+  <INT_RES_NTL_REF_Source /> 
+  <INT_RES_NTL_REF_NNearBy TYPE="Numeric">-200000</INT_RES_NTL_REF_NNearBy> 
+  <INT_RES_NTL_Cal /> 
+  <INT_RES_NTL_Term /> 
+  <INT_RES_FX_REF_OrgSource /> 
+  <INT_RES_FX_REF_Source /> 
+  <INT_RES_FX_REF_NNearBy TYPE="Numeric" /> 
+  <INT_RES_FX_Cal /> 
+  <INT_RES_FX_Term /> 
+  <INT_RES_FxDomain /> 
+  <INT_ACC_AccCalc>N</INT_ACC_AccCalc> 
+  <INT_ACC_Method /> 
+  <INT_ACC_ForL /> 
+  <INT_ACC_Basis>A360</INT_ACC_Basis> 
+  <INTEREST_FwdDecomp>Y</INTEREST_FwdDecomp> 
+  <INT_DIV_Ratio TYPE="Numeric">0.0</INT_DIV_Ratio> 
+  <INT_DIV_ReInvest>N</INT_DIV_ReInvest> 
+  <INT_DIV_DivMethod /> 
+  <INTEREST_NRate TYPE="Numeric">0.0</INTEREST_NRate> 
+  <INTEREST_NonContig>N</INTEREST_NonContig> 
+  <INTEREST_UnderIndex>EUR3S</INTEREST_UnderIndex> 
+  <SCHED_Pay_Freq>Q</SCHED_Pay_Freq> 
+  <SCHED_Pay_AnnDay TYPE="Numeric">23</SCHED_Pay_AnnDay> 
+  <SCHED_Pay_Rule>MF</SCHED_Pay_Rule> 
+  <SCHED_Pay_IntRule>Y</SCHED_Pay_IntRule> 
+  <SCHED_Pay_Time>ARR</SCHED_Pay_Time> 
+  <SCHED_Pay_Cal>TAR</SCHED_Pay_Cal> 
+  <SCHED_Pay_DRule /> 
+  <SCHED_Reset_Freq>Q</SCHED_Reset_Freq> 
+  <SCHED_Reset_AnnDay TYPE="Numeric">23</SCHED_Reset_AnnDay> 
+  <SCHED_Reset_Rule>MF</SCHED_Reset_Rule> 
+  <SCHED_Reset_IntRule>Y</SCHED_Reset_IntRule> 
+  <SCHED_Reset_Time>ADV</SCHED_Reset_Time> 
+  <SCHED_Reset_Cal>TAR</SCHED_Reset_Cal> 
+  <SCHED_Reset_DRule /> 
+  <COMP_CompFreq /> 
+  <COMP_Mode /> 
+  <AMORT_Type /> 
+  <AMORT_Amount TYPE="Numeric" /> 
+  <AMORT_Start /> 
+  <AMORT_End /> 
+  <AMORT_Freq /> 
+  <Custom>STND</Custom> 
+  <CROSS_CCY_NotExch>BOTH</CROSS_CCY_NotExch> 
+  <CROSS_CCY_ForexRate TYPE="Numeric">0.0</CROSS_CCY_ForexRate> 
+  <OptionData>N</OptionData> 
+  <PModel /> 
+  <Style /> 
+  <OPForm /> 
+  <SubIndex>EURCP</SubIndex> 
+  <TermDate /> 
+  <ROLL_RollNature /> 
+  <ROLL_NoticeDays TYPE="Numeric" /> 
+  <ROLL_ReInvestAmt /> 
+  <FstCpEffect /> 
+  <NextFixing>20160921</NextFixing> 
+  <RiskId /> 
+  <INT_AVG_Conversion /> 
+  <INT_RES_RefixMode>AUTO</INT_RES_RefixMode> 
+  <INT_AVG_CutOffMeth /> 
+  <AMORT_NtlForm /> 
+  <AMORT_Sched_Freq /> 
+  <AMORT_Sched_AnnDay TYPE="Numeric">-200000</AMORT_Sched_AnnDay> 
+  <AMORT_Sched_Rule /> 
+  <AMORT_Sched_IntRule /> 
+  <AMORT_Sched_Time /> 
+  <AMORT_Sched_Cal /> 
+  <AMORT_Sched_DRuleID /> 
+  <INTEREST_FundIndex /> 
+  <INTEREST_FundSprd TYPE="Numeric">0.0</INTEREST_FundSprd> 
+  <MMType /> 
+  <LegRole>ALL</LegRole> 
+  <GroupNum TYPE="Numeric" /> 
+  <NumEve TYPE="Numeric">6</NumEve> 
+  <Formula TYPE="EntList" SINGLE="N" /> 
+- <Events TYPE="EntList" SINGLE="N">
+- <SEVENT>
+  <Date>20150323</Date> 
+  <ADate>20150319</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>FRC</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">0.00024</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric">2</EvStyle> 
+  <BDate>20150319</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </SEVENT>
+- <SEVENT>
+  <Date>20150623</Date> 
+  <ADate>20150619</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>FRC</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-0.00014</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric">2</EvStyle> 
+  <BDate>20150619</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </SEVENT>
+- <SEVENT>
+  <Date>20150923</Date> 
+  <ADate>20150921</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>FRC</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-0.00038</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric">2</EvStyle> 
+  <BDate>20150921</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </SEVENT>
+- <SEVENT>
+  <Date>20151223</Date> 
+  <ADate>20151221</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>FRC</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-0.0013</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric">2</EvStyle> 
+  <BDate>20151221</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </SEVENT>
+- <SEVENT>
+  <Date>20160323</Date> 
+  <ADate>20160321</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>FRC</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-0.0017</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric">2</EvStyle> 
+  <BDate>20160322</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </SEVENT>
+- <SEVENT>
+  <Date>20160623</Date> 
+  <ADate>20160621</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>FRC</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-0.0017</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric">2</EvStyle> 
+  <BDate>20160622</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </SEVENT>
+  </Events>
+  <CmdtyQuoteType /> 
+  <INT_DIV_PayDividend>RESET</INT_DIV_PayDividend> 
+  <INT_DIV_HedgeDivRatio TYPE="Numeric">1.0</INT_DIV_HedgeDivRatio> 
+  <INT_RES_AuxDomain /> 
+  <SCHED_Pay_GapDRule /> 
+  <SCHED_Reset_GapDRule /> 
+  <AMORT_Sched_GapDRuleID /> 
+  <AMORT_DRuleID /> 
+  <INT_AVG_Gap>0D</INT_AVG_Gap> 
+  <INT_RES_NTL_Gap>0D</INT_RES_NTL_Gap> 
+  <INT_RES_FX_Gap>0D</INT_RES_FX_Gap> 
+  <SCHED_Pay_Gap>0D</SCHED_Pay_Gap> 
+  <SCHED_Reset_Gap>-2D</SCHED_Reset_Gap> 
+  <AMORT_Sched_Gap /> 
+  <INT_DIV_Gap>0D</INT_DIV_Gap> 
+  <ProductName /> 
+  <AccrualFactors /> 
+  <STUB_StartCal>TAR</STUB_StartCal> 
+  <STUB_EndCal>TAR</STUB_EndCal> 
+  <STUB_StartSource1 /> 
+  <STUB_StartSource2 /> 
+  <STUB_EndSource1 /> 
+  <STUB_EndSource2 /> 
+  <INT_InterimRound /> 
+  <INT_InterimRoundDP TYPE="Numeric" /> 
+  <INT_RES_ConvRound /> 
+  <INT_RES_ConvRoundDP TYPE="Numeric" /> 
+  <INT_RES_PaymentReset /> 
+  <INT_RES_CutOffDays TYPE="Numeric" /> 
+  <INT_RES_NTL_PaymentReset /> 
+  <INT_RES_NTL_CutOffDays TYPE="Numeric" /> 
+  <INT_RES_FX_PaymentReset /> 
+  <INT_RES_FX_CutOffDays TYPE="Numeric" /> 
+  <INTEREST_OrgIndex /> 
+  <INTEREST_OrgCcy /> 
+  <INTEREST_OrgSource /> 
+  <OrigMatDate /> 
+  <GapDateRoll /> 
+  <INT_ACC_UseProj /> 
+  <FinNtlExchCal /> 
+  <FinCalAtPay /> 
+  <Deliverable /> 
+  <INT_RES_DorF /> 
+  <PayMethod /> 
+  <RedemFormula TYPE="EntList" SINGLE="N" /> 
+  <RedemProductName /> 
+  <CfRound /> 
+  <CfRoundDP TYPE="Numeric" /> 
+  <INTEREST_Method /> 
+  <DENOM_Type /> 
+  <DENOM_Amount TYPE="Numeric" /> 
+  <DENOM_Round /> 
+  <DENOM_RoundDP TYPE="Numeric">-200000</DENOM_RoundDP> 
+  <INT_ACC_RateType /> 
+  <LoanIntRule /> 
+  <LoanBasis /> 
+  <LoanRate TYPE="Numeric">0.0</LoanRate> 
+  <LoanStubType /> 
+  <LoanNtlAmortType /> 
+  <PayEvents TYPE="EntList" SINGLE="N" /> 
+  <AdjFstXNL /> 
+  <FreqDecompType /> 
+  <FreqDecompFreq /> 
+  <StubFreqDecompType /> 
+  <StubFreqDecompFreq /> 
+  <STUB_IgnoreHalfPeriodRule /> 
+  <BusMatDate>N</BusMatDate> 
+  <INTEREST_IntRateType>FLT</INTEREST_IntRateType> 
+  <ROLL_RolloverStatus /> 
+  <NotionalDaysGap /> 
+  <NotionalGapDRuleID /> 
+  <UseIntPayGapRules>Y</UseIntPayGapRules> 
+  <CompSource /> 
+  <INT_RES_RollWeekly /> 
+  <INT_ACC_DorF /> 
+  <INT_ACC_Round /> 
+  <INT_ACC_DP TYPE="Numeric" /> 
+  <SchedType /> 
+  <CompPayoffRate /> 
+  <INT_RES_AdjPayment>N</INT_RES_AdjPayment> 
+  <ProdData TYPE="EntList" SINGLE="Y" /> 
+  <RedemProdData TYPE="EntList" SINGLE="Y" /> 
+  </SASSET>
+  </Issue>
+  <LFORMAT_PriceForm_RndMethod /> 
+  <LFORMAT_YieldForm_RndMethod /> 
+  <DAYSRULE_Settle_DayAdj /> 
+  <DAYSRULE_Value_DayAdj /> 
+  <DAYSRULE_DayAdj /> 
+  <BondAmortType /> 
+  <PrmDiscountIndex>EURCP</PrmDiscountIndex> 
+  <QMethodIndex>EURIB</QMethodIndex> 
+  <QMethodCcy>EUR</QMethodCcy> 
+  <Exch>ERONXT</Exch> 
+  <ValidIssue>Y</ValidIssue> 
+  <CPSPECS_CallSpecs_IntAccrual>N</CPSPECS_CallSpecs_IntAccrual> 
+  <CPSPECS_CallSpecs_ThresType /> 
+  <CPSPECS_CallSpecs_ThresValue TYPE="Numeric">0.0</CPSPECS_CallSpecs_ThresValue> 
+  <CPSPECS_PutSpecs_IntAccrual>N</CPSPECS_PutSpecs_IntAccrual> 
+  <CPSPECS_PutSpecs_ThresType /> 
+  <CPSPECS_PutSpecs_ThresValue TYPE="Numeric">0.0</CPSPECS_PutSpecs_ThresValue> 
+  <ProductName /> 
+  <GroupType /> 
+  <OPForm /> 
+  <MinDenom TYPE="EntList" SINGLE="N" /> 
+  <Depository /> 
+  <RatingAgency /> 
+  <Listing1 /> 
+  <Listing2 /> 
+  <ReInvIndex /> 
+  <FaceValue TYPE="Numeric" /> 
+  <ConversionMethod /> 
+  <EMUEquivFaceValue TYPE="Numeric" /> 
+  <ConversionDate /> 
+  <ConvertedTo /> 
+  <ConvertedFrom /> 
+  <RiskWeighting /> 
+  <RiskCounterparty /> 
+  <DiscFRNRateType /> 
+  <SpecialXDiv_Rule /> 
+  <SpecialXDiv_BDRule /> 
+  <SpecialXDiv_Days TYPE="Numeric" /> 
+  <SpecialXDiv_CurXDate /> 
+  <AvgLife TYPE="EntList" SINGLE="N" /> 
+  <Servicer /> 
+  <EMURefAmount TYPE="Numeric" /> 
+  <PayProcCparty>OURDEP</PayProcCparty> 
+  <PosRetention>7D</PosRetention> 
+  <PayingAgent /> 
+  <DefProbCcy /> 
+  <DefProbIssuer /> 
+  <SrtyLevel /> 
+  <SyndicateList TYPE="EntList" SINGLE="N" /> 
+  <RegBody /> 
+  <AccrFactors /> 
+  <SecClass TYPE="EntList" SINGLE="N" /> 
+- <IdentifierList TYPE="EntList" SINGLE="N">
+- <SECIDNT>
+  <SecId>BFCM_FRN_23/03/17</SecId> 
+  <IdentifierType>ISIN</IdentifierType> 
+  <Identifier>XS1206509710</Identifier> 
+  <Exchange /> 
+  <DefaultIdent>Y</DefaultIdent> 
+  </SECIDNT>
+  </IdentifierList>
+  <SecConvType /> 
+  <FullyPositionable>Y</FullyPositionable> 
+  <MatchingAgent /> 
+  <SettleCarrier /> 
+  <PYNotional>BOND</PYNotional> 
+  <RefSecIdList TYPE="EntList" SINGLE="N" /> 
+  <AutoPricing>Y</AutoPricing> 
+  <Guarantor>I_BQE_FED_CM</Guarantor> 
+  <PrimObligor>I_BQE_FED_CM</PrimObligor> 
+  <CouponOwnerDate /> 
+  <Deliverable>Y</Deliverable> 
+  <NetCouponFlows>Y</NetCouponFlows> 
+  <IssuerSpread /> 
+  <SettleDateRule /> 
+  <IssueDate /> 
+  <CEName /> 
+  <CESeniority /> 
+  <CEDocClause /> 
+  <CECcy>EUR</CECcy> 
+  <LFORMAT_EqYieldForm_CentUnits TYPE="Numeric" /> 
+  <LFORMAT_EqYieldForm_IorC /> 
+  <LFORMAT_EqYieldForm_RndMethod /> 
+  <LFORMAT_EqYieldForm_Round TYPE="Numeric" /> 
+  <LFORMAT_EqYieldForm_Units TYPE="Numeric" /> 
+  <MPSecData TYPE="EntList" SINGLE="Y" /> 
+  <MPDefName /> 
+  <StepDebt>N</StepDebt> 
+  <FairValueLevel /> 
+  <UseSecSpread /> 
+  <ExternalSource>NONE</ExternalSource> 
+  <AutoUpdateFromExt>N</AutoUpdateFromExt> 
+  <ProdData TYPE="EntList" SINGLE="Y" /> 
+  </SEC>
+  </UNDERLYING>
+  <CleanAmount TYPE="Numeric">13006500.0</CleanAmount> 
+  <Accrued TYPE="Numeric">1471.16999999993</Accrued> 
+  <AccrualPerc TYPE="Numeric">0.000113166923077</AccrualPerc> 
+  <AccruedDays TYPE="Numeric">21</AccruedDays> 
+  <SpotDate>20160803</SpotDate> 
+  <SpotPrice TYPE="Numeric">1.00041</SpotPrice> 
+  <SpotYield TYPE="Numeric">-0.00180946381102</SpotYield> 
+  <SpotSpread TYPE="Numeric" /> 
+  <SpotDiscount TYPE="Numeric">0.0</SpotDiscount> 
+  <FwdDate>20160803</FwdDate> 
+  <FwdPrice TYPE="Numeric">1.00041</FwdPrice> 
+  <FwdYield TYPE="Numeric">-0.00180946381102</FwdYield> 
+  <FwdSpread TYPE="Numeric" /> 
+  <FwdDiscount TYPE="Numeric">0.0</FwdDiscount> 
+  <Funding TYPE="Numeric">0.0</Funding> 
+  <FundingSpread TYPE="Numeric">0.0</FundingSpread> 
+  <TheoValue TYPE="Numeric" /> 
+  <TheoPrice TYPE="Numeric" /> 
+  <TheoYield TYPE="Numeric">0.0</TheoYield> 
+  <CcySpread TYPE="Numeric" /> 
+  <YieldSpread TYPE="Numeric" /> 
+  <Delta TYPE="Numeric">2527.85846778459</Delta> 
+  <Convexity TYPE="Numeric">55.4830742955149</Convexity> 
+  <CcySpreadPerc TYPE="Numeric" /> 
+  <SettleCash TYPE="Numeric">13007971.17</SettleCash> 
+  <NextCpAmt TYPE="Numeric">6445.11</NextCpAmt> 
+  <NextCpDate>20150623</NextCpDate> 
+  <PrevCpDate>20150323</PrevCpDate> 
+  <XDivDate>20150623</XDivDate> 
+  <SpreadType>None</SpreadType> 
+- <YieldCalculator>
+  <YieldTerm /> 
+  <Yield TYPE="Numeric">-0.00001249177256</Yield> 
+  </YieldCalculator>
+- <SecLongDesc>
+- <Description>
+  <String>FRN</String> 
+  <Date>20170323</Date> 
+  <String spaces="1" /> 
+  <String>3m</String> 
+  <String>EUR</String> 
+  <String>eur3s</String> 
+  <Rate type="IR">0.17</Rate> 
+  <String>QUAR</String> 
+  <String>Quote(CLEAN)</String> 
+  <String>Disc EURCP EXCH</String> 
+  <String spaces="1" /> 
+  <String>T248</String> 
+  </Description>
+  </SecLongDesc>
+- <SecDescTooltip>
+- <Description>
+  <String>EUR/FRN/CORP/BFCM_FRN_23/03/17 Q_UKB_IHJ_LO</String> 
+  <Date>20170323</Date> 
+  <String spaces="1" /> 
+  <String>3m</String> 
+  <String>EUR</String> 
+  <String>eur3s</String> 
+  <Rate type="IR">0.17</Rate> 
+  <String>QUAR</String> 
+  <String>Quote(CLEAN)</String> 
+  <String>Disc EURCP EXCH</String> 
+  <String spaces="1" /> 
+  <String>T248</String> 
+  </Description>
+  </SecDescTooltip>
+  <Settle_SettleCcy>EUR</Settle_SettleCcy> 
+  <Settle_AccrCcy>EUR</Settle_AccrCcy> 
+  </summit_bondtrade>
+  </ObjectData>
+
+  <AvailableActions /> 
+  <ObjectNameKey>summit_bondtrade</ObjectNameKey> 
+  </Response>

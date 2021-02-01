@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xsi:noNamespaceSchemaLocation="file:///C:/Users/mtownsend/Desktop/tlate/NegotiableInstrument.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TRANSACTION type="IMPORT">
+		<TABLE name="NegotiableInstrument" classname="com.eurobase.siena.data.negotiableinstrument.NegotiableInstrument">
+			<RECORD>
+				<KEYFIELD name="name">UKT_4.50_07/03/19</KEYFIELD>
+				<FIELD name="type">UK GOVT</FIELD>
+				<FIELD name="currency.code">GBP</FIELD>
+				<FIELD name="issuer.firm">Q</FIELD>
+				<FIELD name="issuer.centre">_LE</FIELD>
+				<FIELD name="acceptor.firm"/>
+				<FIELD name="acceptor.centre"/>
+				<FIELD name="issue.date">20080926</FIELD>
+				<FIELD name="maturity.date">20190307</FIELD>
+				<FIELD name="rate.type">Fixed</FIELD>
+				<FIELD name="coupon.rate">4.5</FIELD>
+				<FIELD name="clearing.system"/>
+				<FIELD name="parent.deal.type">UK GOVT</FIELD>
+				<FIELD name="securityID">GB00B39R3F84</FIELD>
+				<FIELD name="encumbered"/>
+				<FIELD name="marketable"/>
+				<FIELD name="hypothecated"/>
+			</RECORD>
+		</TABLE>
+	</TRANSACTION>
+</TRANSACTIONS>

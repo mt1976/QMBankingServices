@@ -1,0 +1,7458 @@
+  <?xml version="1.0" ?> 
+- <Response>
+  <Status>ok</Status> 
+  <ObjectID>2</ObjectID> 
+- <MethodResults>
+- <Method>
+  <Name>Read</Name> 
+  <Status>ok</Status> 
+  </Method>
+  </MethodResults>
+- <ObjectData>
+- <summit_exotic>
+  <Dirty>false</Dirty> 
+  <AsOfDate>20160801</AsOfDate> 
+  <CurveID /> 
+  <MarketDataSetID /> 
+  <PricingGroupID /> 
+  <AssignToUsTransferor /> 
+  <AssignToUsEffDate /> 
+  <AssignToUsFeeDate /> 
+- <EXOTIC>
+  <TradeId>825631D</TradeId> 
+  <TradeType>EXOTIC</TradeType> 
+- <Env TYPE="EntList" SINGLE="Y">
+- <ENV>
+  <Audit_Id>00001DG4</Audit_Id> 
+  <Audit_Table>EXOTIC</Audit_Table> 
+  <Audit_Version TYPE="Numeric">455</Audit_Version> 
+  <Audit_Current>Y</Audit_Current> 
+  <Audit_EntityState>VER</Audit_EntityState> 
+  <Audit_Authorized>Y</Audit_Authorized> 
+  <Audit_PendingAction /> 
+  <Audit_PendingState /> 
+  <Audit_IsHistory>N</Audit_IsHistory> 
+  <Audit_User>User</Audit_User> 
+  <Audit_Action>IMPEDT</Audit_Action> 
+  <Audit_DateTime>20160729 16:41:08</Audit_DateTime> 
+  <Audit_ExtStateName>Verified</Audit_ExtStateName> 
+  <Audit_StateId TYPE="Numeric" /> 
+  <dmOwnerTable>EXOTIC</dmOwnerTable> 
+  <TradeId>825631D</TradeId> 
+  <InputDate>20151216</InputDate> 
+  <InputTime>13:43:44</InputTime> 
+  <Cust>Cust1</Cust> 
+  <Company>BIGT</Company> 
+  <BookedBy /> 
+  <BookedFor /> 
+  <BookSpr TYPE="Numeric" /> 
+  <BookCcy /> 
+  <BookFee TYPE="Numeric" /> 
+  <BookFeeDate /> 
+  <RC /> 
+  <Book>FFAXX</Book> 
+  <RCSpread TYPE="Numeric" /> 
+  <Trader>JNN</Trader> 
+  <Broker /> 
+  <Contact /> 
+  <Desk>BOI</Desk> 
+  <Folder /> 
+  <DealId>NON STAN</DealId> 
+  <TradeDate>20151216</TradeDate> 
+  <TradeStatus>VER</TradeStatus> 
+  <RCTrade>N</RCTrade> 
+  <ProductGroup /> 
+  <ProductType>EQTRX</ProductType> 
+  <BackDated>Y</BackDated> 
+  <FinalMaturity /> 
+  <ProjectId /> 
+  <IsMirror>N</IsMirror> 
+  <PayMethod /> 
+  <Comment1>HIM: I7=SWYCE, A1=QIU M9=IBBRVHZ EZTED</Comment1> 
+  <Comment2>WUE WYQQS DTLXXY QDOC</Comment2> 
+  <LastUpdate>20160729 16:41:08</LastUpdate> 
+  <MarketerId>JNN</MarketerId> 
+  <NumSSI TYPE="Numeric" /> 
+  <MirrorSchemeId /> 
+  <StructureId>NIPAF6</StructureId> 
+  <ViewName /> 
+  <FacilityId /> 
+  <TrancheId /> 
+  <LoanId /> 
+  <LFType /> 
+  <LoanCcy /> 
+  <ParentOwnerTable /> 
+  <ParentTradeId /> 
+  <SyndicatedLoan>N</SyndicatedLoan> 
+  <Breakable>N</Breakable> 
+  <SsiInstr TYPE="EntList" SINGLE="N" /> 
+  <UltBeneficiary /> 
+  <CreditRisk>N</CreditRisk> 
+  <TradeEntryDate>20151216</TradeEntryDate> 
+  <FirstSaveTime>14:02:05</FirstSaveTime> 
+  <SuperCompany /> 
+  <Portfolio /> 
+  <ModifyingChildTradeId /> 
+  <IsMirrOffsetTrd>N</IsMirrOffsetTrd> 
+  <HOReference /> 
+  <cTaxonomy>Equity:Swap:ParameterReturnDividend:Basket</cTaxonomy> 
+  <cIsDepBacked>N</cIsDepBacked> 
+  <cLifeCycleEvent /> 
+  <cOrigCpty /> 
+  </ENV>
+  </Env>
+- <Back TYPE="EntList" SINGLE="Y">
+- <BACK>
+  <dmOwnerTable>EXOTIC</dmOwnerTable> 
+  <TradeId>825631D</TradeId> 
+  <ExtTradeId /> 
+  <SummitId /> 
+  <OldId /> 
+  <Code /> 
+  <PendingUser>User</PendingUser> 
+  <PendingDate>20151216</PendingDate> 
+  <PendingTime>14:02:05</PendingTime> 
+  <DoneUser>User</DoneUser> 
+  <DoneDate>20151216</DoneDate> 
+  <DoneTime>16:37:08</DoneTime> 
+  <VerifyUser>User</VerifyUser> 
+  <VerifyDate>20151216</VerifyDate> 
+  <VerifyTime>17:12:04</VerifyTime> 
+  <CancelUser /> 
+  <CancelDate /> 
+  <CancelTime>00:00:00</CancelTime> 
+  <AmendUser>User</AmendUser> 
+  <AmendDate>20160729</AmendDate> 
+  <AmendTime>20160729 16:41:08</AmendTime> 
+  <ConfirmExec>N</ConfirmExec> 
+  <CollateralHeld>N</CollateralHeld> 
+  <CollateralAmt TYPE="Numeric" /> 
+  <TermTradeDate /> 
+  <TermEffDate /> 
+  <TermInputDate /> 
+  <OrigMatDate /> 
+  <OrigNotional TYPE="Numeric" /> 
+  <Street /> 
+  <NetSettle>Y</NetSettle> 
+  <TermAssignStatus /> 
+  <SchemaId /> 
+  <TrAcctType>HEDGING</TrAcctType> 
+  <CommonRef /> 
+  <AssignTo /> 
+  <AssignFrom /> 
+  <Audit_Version TYPE="Numeric">455</Audit_Version> 
+  <TradeNetting>N</TradeNetting> 
+  <ThresholdCcy /> 
+  <ThresholdAmount TYPE="Numeric" /> 
+  <ExerciseTo /> 
+  <ExerciseOwnerTable /> 
+  <SecId /> 
+  <SecType /> 
+  <SecCcy /> 
+  <MergeTradeId /> 
+  <EuroConversionDate /> 
+  <OurSettlementCountry /> 
+  <CustSettlementCountry /> 
+  <PositionType /> 
+  <NetSettlement /> 
+  <NetCredit /> 
+  <MAFormat /> 
+  <MAStyle /> 
+  <ExternalUser /> 
+  <ExtSystem /> 
+  <SSIOpsCode /> 
+  <ContOpsCode /> 
+  <NavOpsCode /> 
+  <AggressorFlag /> 
+  <MatchingId /> 
+  <OrigEffectDate /> 
+  <ExtVersion TYPE="Numeric" /> 
+  <SsiByEvent>N</SsiByEvent> 
+  <CLSSettlement>N</CLSSettlement> 
+  <CSD /> 
+  <CSD_AuditId /> 
+  <IASAcctType /> 
+  <RollRepoType /> 
+- <CustomEventRules TYPE="EntList" SINGLE="Y">
+- <EVNTRULE>
+- <Rules>
+- <RULES>
+- <RULE>
+  <INTER /> 
+  <LEG /> 
+  <ROWID /> 
+  <EVENTS /> 
+  </RULE>
+  </RULES>
+  </Rules>
+  </EVNTRULE>
+  </CustomEventRules>
+  <OptingOut /> 
+  <AssignmentDetails TYPE="EntList" SINGLE="N" /> 
+  <PreTradeUser /> 
+  <PreTradeDate /> 
+  <PreTradeTime>00:00:00</PreTradeTime> 
+  <FinancialDataChange>CHANGE</FinancialDataChange> 
+  <CATradeLinkType>NORMAL</CATradeLinkType> 
+  <FairValueLevel /> 
+  <LastResetDate>20160331</LastResetDate> 
+  <TradedFXRates TYPE="EntList" SINGLE="N" /> 
+  <IsPnLTrade>Y</IsPnLTrade> 
+  <IsStreetTrade>Y</IsStreetTrade> 
+- <LoanIQ TYPE="EntList" SINGLE="Y">
+- <LOANIQ>
+  <dmOwnerTable /> 
+  <TradeId /> 
+  <ConfirmCOF>N</ConfirmCOF> 
+  <LinkageID /> 
+  <LoanType /> 
+  <StateCOF /> 
+  <TransactionRID /> 
+  <RepricingDate /> 
+  <LoanAlias /> 
+  <Portfolio /> 
+  <Branch /> 
+  <ExpenseCode /> 
+  </LOANIQ>
+  </LoanIQ>
+  <cHedgeItem /> 
+  <cHdgBook /> 
+  <cHdgBusUnit /> 
+  <cHdgCust /> 
+  <MirrorData TYPE="EntList" SINGLE="Y" /> 
+  </BACK>
+  </Back>
+  <TrSsiPairs TYPE="EntList" SINGLE="N" /> 
+  <Option TYPE="EntList" SINGLE="Y" /> 
+- <Assets TYPE="EntList" SINGLE="N">
+- <ASSET>
+  <dmAssetId>00056LLX</dmAssetId> 
+  <dmOwnerTable>EXOTIC</dmOwnerTable> 
+  <TradeId>825631D</TradeId> 
+  <SchedEvents TYPE="EntList" SINGLE="N" /> 
+  <Type>EXOTIC</Type> 
+  <SubType /> 
+  <RC /> 
+  <Book>FFAXX</Book> 
+  <PorS>S</PorS> 
+  <EffDate>20160104</EffDate> 
+  <MatDate>20170104</MatDate> 
+  <Notional TYPE="Numeric">245969509.04</Notional> 
+  <NotExp /> 
+  <Ccy>EUR</Ccy> 
+  <STUB_Date1 /> 
+  <STUB_Rate1 TYPE="Numeric">0.0</STUB_Rate1> 
+  <STUB_Date2 /> 
+  <STUB_Rate2 TYPE="Numeric">0.0</STUB_Rate2> 
+  <STUB_StubType /> 
+  <STUB_Decomp>N</STUB_Decomp> 
+  <STUB_CompMode /> 
+  <STUB_Rounding TYPE="Numeric" /> 
+  <STUB_InterpStyle /> 
+  <STUB_StartTerm1 /> 
+  <STUB_StartTerm2 /> 
+  <STUB_EndTerm1 /> 
+  <STUB_EndTerm2 /> 
+  <ResetInStub>N</ResetInStub> 
+  <INTEREST_IndexForm /> 
+  <INTEREST_YldFreq /> 
+  <INTEREST_FixFloat>FIX</INTEREST_FixFloat> 
+  <INTEREST_Rate TYPE="Numeric">0.0</INTEREST_Rate> 
+  <INTEREST_Basis>30/360</INTEREST_Basis> 
+  <INTEREST_dmIndex>FIXED</INTEREST_dmIndex> 
+  <INTEREST_Ccy>EUR</INTEREST_Ccy> 
+  <INT_REF_OrgSource /> 
+  <INT_REF_Source /> 
+  <INT_REF_NNearBy TYPE="Numeric">-200000</INT_REF_NNearBy> 
+  <INTEREST_Spread TYPE="Numeric">0.0</INTEREST_Spread> 
+  <INTEREST_Term /> 
+  <INT_AVG_Type /> 
+  <INT_AVG_Freq /> 
+  <INT_AVG_Compound>N</INT_AVG_Compound> 
+  <INT_AVG_AnnDay TYPE="Numeric">-200000</INT_AVG_AnnDay> 
+  <INT_AVG_Rule /> 
+  <INT_AVG_Spread /> 
+  <INT_AVG_Time /> 
+  <INT_AVG_CutOffDays TYPE="Numeric" /> 
+  <INT_AVG_CorBGap /> 
+  <INTEREST_DType /> 
+  <INTEREST_Round /> 
+  <INTEREST_RoundDP TYPE="Numeric" /> 
+  <INT_RES_Rule /> 
+  <INT_RES_Time /> 
+  <INT_RES_Round /> 
+  <INT_RES_RoundDP TYPE="Numeric" /> 
+  <INT_RES_NTL_REF_OrgSource /> 
+  <INT_RES_NTL_REF_Source /> 
+  <INT_RES_NTL_REF_NNearBy TYPE="Numeric">-200000</INT_RES_NTL_REF_NNearBy> 
+  <INT_RES_NTL_Cal /> 
+  <INT_RES_NTL_Term /> 
+  <INT_RES_FX_REF_OrgSource /> 
+  <INT_RES_FX_REF_Source /> 
+  <INT_RES_FX_REF_NNearBy TYPE="Numeric" /> 
+  <INT_RES_FX_Cal /> 
+  <INT_RES_FX_Term /> 
+  <INT_RES_FxDomain /> 
+  <INT_ACC_AccCalc>N</INT_ACC_AccCalc> 
+  <INT_ACC_Method /> 
+  <INT_ACC_ForL /> 
+  <INT_ACC_Basis>30/360</INT_ACC_Basis> 
+  <INTEREST_FwdDecomp /> 
+  <INT_DIV_Ratio TYPE="Numeric">sMINDBL</INT_DIV_Ratio> 
+  <INT_DIV_ReInvest>N</INT_DIV_ReInvest> 
+  <INT_DIV_DivMethod /> 
+  <INTEREST_NRate TYPE="Numeric">0.0</INTEREST_NRate> 
+  <INTEREST_NonContig>N</INTEREST_NonContig> 
+  <INTEREST_UnderIndex>FIXED</INTEREST_UnderIndex> 
+  <SCHED_Pay_Freq>A</SCHED_Pay_Freq> 
+  <SCHED_Pay_AnnDay TYPE="Numeric">4</SCHED_Pay_AnnDay> 
+  <SCHED_Pay_Rule>MF</SCHED_Pay_Rule> 
+  <SCHED_Pay_IntRule>Y</SCHED_Pay_IntRule> 
+  <SCHED_Pay_Time>ARR</SCHED_Pay_Time> 
+  <SCHED_Pay_Cal>TAR</SCHED_Pay_Cal> 
+  <SCHED_Pay_DRule /> 
+  <SCHED_Reset_Freq /> 
+  <SCHED_Reset_AnnDay TYPE="Numeric">-200000</SCHED_Reset_AnnDay> 
+  <SCHED_Reset_Rule /> 
+  <SCHED_Reset_IntRule /> 
+  <SCHED_Reset_Time /> 
+  <SCHED_Reset_Cal /> 
+  <SCHED_Reset_DRule /> 
+  <COMP_CompFreq /> 
+  <COMP_Mode /> 
+  <AMORT_Type>CUST</AMORT_Type> 
+  <AMORT_Amount TYPE="Numeric" /> 
+  <AMORT_Start /> 
+  <AMORT_End /> 
+  <AMORT_Freq /> 
+  <Custom>STND</Custom> 
+  <CROSS_CCY_NotExch /> 
+  <CROSS_CCY_ForexRate TYPE="Numeric">0.0</CROSS_CCY_ForexRate> 
+  <OptionData>N</OptionData> 
+  <PModel /> 
+  <Style /> 
+  <OPForm /> 
+  <SubIndex>EURDE</SubIndex> 
+  <TermDate>SUN</TermDate> 
+  <ROLL_RollNature /> 
+  <ROLL_NoticeDays TYPE="Numeric">-200000</ROLL_NoticeDays> 
+  <ROLL_ReInvestAmt /> 
+  <FstCpEffect /> 
+  <NextFixing /> 
+  <RiskId /> 
+  <INT_AVG_Conversion /> 
+  <INT_RES_RefixMode /> 
+  <INT_AVG_CutOffMeth /> 
+  <Audit_Version TYPE="Numeric">455</Audit_Version> 
+  <AMORT_NtlForm /> 
+  <AMORT_Sched_Freq /> 
+  <AMORT_Sched_AnnDay TYPE="Numeric">-200000</AMORT_Sched_AnnDay> 
+  <AMORT_Sched_Rule /> 
+  <AMORT_Sched_IntRule /> 
+  <AMORT_Sched_Time /> 
+  <AMORT_Sched_Cal /> 
+  <AMORT_Sched_DRuleID /> 
+  <INTEREST_FundIndex /> 
+  <INTEREST_FundSprd TYPE="Numeric">0.0</INTEREST_FundSprd> 
+  <MMType /> 
+  <LegRole>ALL</LegRole> 
+  <GroupNum TYPE="Numeric" /> 
+  <NumEve TYPE="Numeric">146</NumEve> 
+  <Formula TYPE="EntList" SINGLE="N" /> 
+- <Events TYPE="EntList" SINGLE="N">
+- <EVENT>
+  <Date>20160106</Date> 
+  <ADate>20160106</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">244361509.04</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160107</Date> 
+  <ADate>20160107</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">244446375.9</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160108</Date> 
+  <ADate>20160108</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">245231388.28</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160111</Date> 
+  <ADate>20160108</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-477.61</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160112</Date> 
+  <ADate>20160112</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">245402503.93</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160112</Date> 
+  <ADate>20160112</ADate> 
+  <LinkEv TYPE="Numeric">1</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-4402.99</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160114</Date> 
+  <ADate>20160114</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">245212503.93</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160114</Date> 
+  <ADate>20160113</ADate> 
+  <LinkEv TYPE="Numeric">2</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-960.2</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160115</Date> 
+  <ADate>20160115</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">245291498.91</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160119</Date> 
+  <ADate>20160119</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">245751006.15</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160119</Date> 
+  <ADate>20160118</ADate> 
+  <LinkEv TYPE="Numeric">3</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-437.81</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160120</Date> 
+  <ADate>20160120</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">245853909.92</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160121</Date> 
+  <ADate>20160121</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">245964064.93</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160121</Date> 
+  <ADate>20160120</ADate> 
+  <LinkEv TYPE="Numeric">4</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-2557.21</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160122</Date> 
+  <ADate>20160122</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">246105905.33</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160122</Date> 
+  <ADate>20160121</ADate> 
+  <LinkEv TYPE="Numeric">5</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-567.16</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160125</Date> 
+  <ADate>20160122</ADate> 
+  <LinkEv TYPE="Numeric">6</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-611.94</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160126</Date> 
+  <ADate>20160126</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">246245924.42</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160126</Date> 
+  <ADate>20160125</ADate> 
+  <LinkEv TYPE="Numeric">7</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-791.04</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160127</Date> 
+  <ADate>20160127</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">245927924.42</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160128</Date> 
+  <ADate>20160128</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">245981637.23</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160128</Date> 
+  <ADate>20160127</ADate> 
+  <LinkEv TYPE="Numeric">8</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-781.09</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160129</Date> 
+  <ADate>20160129</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">245529637.23</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160201</Date> 
+  <ADate>20160201</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">244199637.23</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160201</Date> 
+  <ADate>20160129</ADate> 
+  <LinkEv TYPE="Numeric">9</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-298.51</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160202</Date> 
+  <ADate>20160202</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">244127637.23</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160203</Date> 
+  <ADate>20160203</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243713637.23</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160204</Date> 
+  <ADate>20160204</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243796311.3</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160205</Date> 
+  <ADate>20160205</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243869163.38</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160208</Date> 
+  <ADate>20160208</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243964205.13</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160208</Date> 
+  <ADate>20160205</ADate> 
+  <LinkEv TYPE="Numeric">10</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-457.71</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160209</Date> 
+  <ADate>20160209</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">244128696.08</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160209</Date> 
+  <ADate>20160208</ADate> 
+  <LinkEv TYPE="Numeric">11</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-402.99</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160210</Date> 
+  <ADate>20160210</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">244351422.35</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160210</Date> 
+  <ADate>20160209</ADate> 
+  <LinkEv TYPE="Numeric">12</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-522.39</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160211</Date> 
+  <ADate>20160210</ADate> 
+  <LinkEv TYPE="Numeric">13</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-900.5</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160212</Date> 
+  <ADate>20160211</ADate> 
+  <LinkEv TYPE="Numeric">14</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-1223.88</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160216</Date> 
+  <ADate>20160216</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243887422.35</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160217</Date> 
+  <ADate>20160217</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243764422.35</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160218</Date> 
+  <ADate>20160218</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243823717.67</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160219</Date> 
+  <ADate>20160219</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243182717.67</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160222</Date> 
+  <ADate>20160222</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243013717.67</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160222</Date> 
+  <ADate>20160219</ADate> 
+  <LinkEv TYPE="Numeric">15</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-328.36</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160223</Date> 
+  <ADate>20160223</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242824717.67</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160224</Date> 
+  <ADate>20160224</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243071861.57</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160225</Date> 
+  <ADate>20160225</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243195043.78</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160226</Date> 
+  <ADate>20160225</ADate> 
+  <LinkEv TYPE="Numeric">16</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-1363.18</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160229</Date> 
+  <ADate>20160226</ADate> 
+  <LinkEv TYPE="Numeric">17</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-681.59</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160301</Date> 
+  <ADate>20160301</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243307388.73</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160302</Date> 
+  <ADate>20160302</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243223388.73</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160303</Date> 
+  <ADate>20160303</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243373115.57</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160303</Date> 
+  <ADate>20160302</ADate> 
+  <LinkEv TYPE="Numeric">18</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-626.87</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160304</Date> 
+  <ADate>20160304</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243086115.57</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160307</Date> 
+  <ADate>20160307</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242965115.57</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160307</Date> 
+  <ADate>20160304</ADate> 
+  <LinkEv TYPE="Numeric">19</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-835.82</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160308</Date> 
+  <ADate>20160308</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243149940.59</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160309</Date> 
+  <ADate>20160309</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243267721.24</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160310</Date> 
+  <ADate>20160309</ADate> 
+  <LinkEv TYPE="Numeric">20</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-1029.85</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160311</Date> 
+  <ADate>20160311</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242847721.24</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160311</Date> 
+  <ADate>20160310</ADate> 
+  <LinkEv TYPE="Numeric">21</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-656.72</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160315</Date> 
+  <ADate>20160315</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242996582.07</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160317</Date> 
+  <ADate>20160316</ADate> 
+  <LinkEv TYPE="Numeric">22</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-830.85</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160318</Date> 
+  <ADate>20160318</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243052691.52</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160322</Date> 
+  <ADate>20160321</ADate> 
+  <LinkEv TYPE="Numeric">23</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-313.43</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160323</Date> 
+  <ADate>20160323</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242716691.52</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160330</Date> 
+  <ADate>20160330</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242807829.3</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160401</Date> 
+  <ADate>20160401</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242883559.56</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160401</Date> 
+  <ADate>20160331</ADate> 
+  <LinkEv TYPE="Numeric">24</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-507.46</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160404</Date> 
+  <ADate>20160404</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242651559.56</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160405</Date> 
+  <ADate>20160404</ADate> 
+  <LinkEv TYPE="Numeric">25</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-417.91</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160406</Date> 
+  <ADate>20160406</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242584559.56</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160407</Date> 
+  <ADate>20160407</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242738750.39</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160408</Date> 
+  <ADate>20160408</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242522750.39</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160411</Date> 
+  <ADate>20160408</ADate> 
+  <LinkEv TYPE="Numeric">26</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-845.77</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160412</Date> 
+  <ADate>20160412</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242576828.13</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160413</Date> 
+  <ADate>20160413</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242678414.74</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160414</Date> 
+  <ADate>20160413</ADate> 
+  <LinkEv TYPE="Numeric">27</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-298.51</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160415</Date> 
+  <ADate>20160415</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242780756.77</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160415</Date> 
+  <ADate>20160414</ADate> 
+  <LinkEv TYPE="Numeric">28</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-567.16</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160418</Date> 
+  <ADate>20160418</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242420756.77</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160419</Date> 
+  <ADate>20160419</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242561751.43</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160419</Date> 
+  <ADate>20160418</ADate> 
+  <LinkEv TYPE="Numeric">29</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-572.14</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160420</Date> 
+  <ADate>20160420</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242712774.21</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160421</Date> 
+  <ADate>20160421</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242786083.38</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160421</Date> 
+  <ADate>20160420</ADate> 
+  <LinkEv TYPE="Numeric">30</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-791.04</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160422</Date> 
+  <ADate>20160422</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243234648.75</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160422</Date> 
+  <ADate>20160421</ADate> 
+  <LinkEv TYPE="Numeric">31</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-850.75</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160425</Date> 
+  <ADate>20160425</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243356132.27</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160425</Date> 
+  <ADate>20160422</ADate> 
+  <LinkEv TYPE="Numeric">32</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-412.94</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160426</Date> 
+  <ADate>20160426</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243295132.27</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160426</Date> 
+  <ADate>20160425</ADate> 
+  <LinkEv TYPE="Numeric">33</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-2527.36</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160427</Date> 
+  <ADate>20160427</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">243365943.65</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160427</Date> 
+  <ADate>20160426</ADate> 
+  <LinkEv TYPE="Numeric">34</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-681.59</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160428</Date> 
+  <ADate>20160428</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242986943.65</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160429</Date> 
+  <ADate>20160428</ADate> 
+  <LinkEv TYPE="Numeric">35</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-398.01</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160506</Date> 
+  <ADate>20160506</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242707943.65</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160509</Date> 
+  <ADate>20160509</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242754936.22</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160510</Date> 
+  <ADate>20160510</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242817998.2</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160511</Date> 
+  <ADate>20160510</ADate> 
+  <LinkEv TYPE="Numeric">36</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-258.71</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160512</Date> 
+  <ADate>20160511</ADate> 
+  <LinkEv TYPE="Numeric">37</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-348.26</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160516</Date> 
+  <ADate>20160516</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242321998.2</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160517</Date> 
+  <ADate>20160517</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242254998.2</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160518</Date> 
+  <ADate>20160518</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242377595.57</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160518</Date> 
+  <ADate>20160517</ADate> 
+  <LinkEv TYPE="Numeric">38</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">0.0</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160519</Date> 
+  <ADate>20160519</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242622756.51</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160519</Date> 
+  <ADate>20160518</ADate> 
+  <LinkEv TYPE="Numeric">39</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">0.0</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160520</Date> 
+  <ADate>20160519</ADate> 
+  <LinkEv TYPE="Numeric">40</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-676.62</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160523</Date> 
+  <ADate>20160523</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242476756.51</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160523</Date> 
+  <ADate>20160520</ADate> 
+  <LinkEv TYPE="Numeric">41</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-1348.26</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160524</Date> 
+  <ADate>20160524</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242576086.32</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160526</Date> 
+  <ADate>20160526</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242422086.32</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160526</Date> 
+  <ADate>20160525</ADate> 
+  <LinkEv TYPE="Numeric">42</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-552.24</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160527</Date> 
+  <ADate>20160527</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242288086.32</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160531</Date> 
+  <ADate>20160531</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242586399.78</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160602</Date> 
+  <ADate>20160601</ADate> 
+  <LinkEv TYPE="Numeric">43</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-1666.67</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160603</Date> 
+  <ADate>20160603</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242509399.78</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160608</Date> 
+  <ADate>20160608</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242425899.78</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160609</Date> 
+  <ADate>20160609</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242187899.78</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160610</Date> 
+  <ADate>20160610</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">241922899.78</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160614</Date> 
+  <ADate>20160614</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">242296990.07</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160615</Date> 
+  <ADate>20160615</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">241999990.07</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160616</Date> 
+  <ADate>20160615</ADate> 
+  <LinkEv TYPE="Numeric">44</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-2034.83</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160617</Date> 
+  <ADate>20160617</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">241804990.07</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160621</Date> 
+  <ADate>20160621</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">241720990.07</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160622</Date> 
+  <ADate>20160622</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">241606990.07</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160623</Date> 
+  <ADate>20160623</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">241074990.07</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160624</Date> 
+  <ADate>20160624</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">240964990.07</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160627</Date> 
+  <ADate>20160627</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">240560990.07</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160628</Date> 
+  <ADate>20160628</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">240507990.07</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160629</Date> 
+  <ADate>20160629</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">239664990.07</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160630</Date> 
+  <ADate>20160630</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">239765178.89</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160701</Date> 
+  <ADate>20160701</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">239419178.89</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160704</Date> 
+  <ADate>20160701</ADate> 
+  <LinkEv TYPE="Numeric">45</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-547.26</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160705</Date> 
+  <ADate>20160705</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">239009178.89</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160706</Date> 
+  <ADate>20160706</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">238061178.89</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160707</Date> 
+  <ADate>20160707</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">238172801.0</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160708</Date> 
+  <ADate>20160708</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">237795801.0</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160711</Date> 
+  <ADate>20160711</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">237341801.0</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160711</Date> 
+  <ADate>20160708</ADate> 
+  <LinkEv TYPE="Numeric">46</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-606.97</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160712</Date> 
+  <ADate>20160712</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">237205801.0</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160713</Date> 
+  <ADate>20160713</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">236931801.0</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160714</Date> 
+  <ADate>20160714</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">236671801.0</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160715</Date> 
+  <ADate>20160715</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">236278801.0</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160720</Date> 
+  <ADate>20160720</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">236227801.0</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160722</Date> 
+  <ADate>20160722</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">236106801.0</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160726</Date> 
+  <ADate>20160726</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">235908801.0</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+  </Events>
+  <CmdtyQuoteType /> 
+  <INT_DIV_PayDividend>RESET</INT_DIV_PayDividend> 
+  <INT_DIV_HedgeDivRatio TYPE="Numeric">1.0</INT_DIV_HedgeDivRatio> 
+  <INT_RES_AuxDomain /> 
+  <SCHED_Pay_GapDRule /> 
+  <SCHED_Reset_GapDRule /> 
+  <AMORT_Sched_GapDRuleID /> 
+  <AMORT_DRuleID /> 
+  <INT_AVG_Gap>0D</INT_AVG_Gap> 
+  <INT_RES_NTL_Gap>0D</INT_RES_NTL_Gap> 
+  <INT_RES_FX_Gap>0D</INT_RES_FX_Gap> 
+  <SCHED_Pay_Gap>0D</SCHED_Pay_Gap> 
+  <SCHED_Reset_Gap /> 
+  <AMORT_Sched_Gap /> 
+  <INT_DIV_Gap>0D</INT_DIV_Gap> 
+  <ProductName /> 
+  <AccrualFactors /> 
+  <STUB_StartCal>TAR</STUB_StartCal> 
+  <STUB_EndCal>TAR</STUB_EndCal> 
+  <STUB_StartSource1 /> 
+  <STUB_StartSource2 /> 
+  <STUB_EndSource1 /> 
+  <STUB_EndSource2 /> 
+  <INT_InterimRound /> 
+  <INT_InterimRoundDP TYPE="Numeric" /> 
+  <INT_RES_ConvRound /> 
+  <INT_RES_ConvRoundDP TYPE="Numeric" /> 
+  <INT_RES_PaymentReset /> 
+  <INT_RES_CutOffDays TYPE="Numeric" /> 
+  <INT_RES_NTL_PaymentReset /> 
+  <INT_RES_NTL_CutOffDays TYPE="Numeric" /> 
+  <INT_RES_FX_PaymentReset /> 
+  <INT_RES_FX_CutOffDays TYPE="Numeric" /> 
+  <INTEREST_OrgIndex /> 
+  <INTEREST_OrgCcy /> 
+  <INTEREST_OrgSource /> 
+  <OrigMatDate /> 
+  <GapDateRoll /> 
+  <INT_ACC_UseProj /> 
+  <FinNtlExchCal /> 
+  <FinCalAtPay /> 
+  <Deliverable /> 
+  <INT_RES_DorF /> 
+  <PayMethod /> 
+  <RedemFormula TYPE="EntList" SINGLE="N" /> 
+  <RedemProductName /> 
+  <CfRound /> 
+  <CfRoundDP TYPE="Numeric" /> 
+  <INTEREST_Method /> 
+  <DENOM_Type /> 
+  <DENOM_Amount TYPE="Numeric" /> 
+  <DENOM_Round /> 
+  <DENOM_RoundDP TYPE="Numeric" /> 
+  <INT_ACC_RateType /> 
+  <LoanIntRule /> 
+  <LoanBasis /> 
+  <LoanRate TYPE="Numeric">0.0</LoanRate> 
+  <LoanStubType /> 
+  <LoanNtlAmortType /> 
+  <PayEvents TYPE="EntList" SINGLE="N" /> 
+  <AdjFstXNL /> 
+ 
+  <FreqDecompType /> 
+  <FreqDecompFreq /> 
+  <StubFreqDecompType /> 
+  <StubFreqDecompFreq /> 
+  <STUB_IgnoreHalfPeriodRule /> 
+  <BusMatDate /> 
+  <INTEREST_IntRateType>FIX</INTEREST_IntRateType> 
+  <ROLL_RolloverStatus /> 
+  <NotionalDaysGap /> 
+  <NotionalGapDRuleID /> 
+  <UseIntPayGapRules /> 
+  <CompSource /> 
+  <INT_RES_RollWeekly /> 
+  <INT_ACC_DorF /> 
+  <INT_ACC_Round /> 
+  <INT_ACC_DP TYPE="Numeric">-200000</INT_ACC_DP> 
+  <SchedType /> 
+  <CompPayoffRate /> 
+  <INT_RES_AdjPayment /> 
+  <ProdData TYPE="EntList" SINGLE="Y" /> 
+  <RedemProdData TYPE="EntList" SINGLE="Y" /> 
+  </ASSET>
+- <ASSET>
+  <dmAssetId>00056LLY</dmAssetId> 
+  <dmOwnerTable>EXOTIC</dmOwnerTable> 
+  <TradeId>825631D</TradeId> 
+  <SchedEvents TYPE="EntList" SINGLE="N" /> 
+  <Type>EXOTIC</Type> 
+  <SubType /> 
+  <RC /> 
+  <Book>FFAXX</Book> 
+  <PorS>P</PorS> 
+  <EffDate>20151230</EffDate> 
+  <MatDate>20161230</MatDate> 
+  <Notional TYPE="Numeric">274012984.7</Notional> 
+  <NotExp /> 
+  <Ccy>EUR</Ccy> 
+  <STUB_Date1 /> 
+  <STUB_Rate1 TYPE="Numeric">0.0</STUB_Rate1> 
+  <STUB_Date2 /> 
+  <STUB_Rate2 TYPE="Numeric">0.0</STUB_Rate2> 
+  <STUB_StubType /> 
+  <STUB_Decomp>N</STUB_Decomp> 
+  <STUB_CompMode /> 
+  <STUB_Rounding TYPE="Numeric" /> 
+  <STUB_InterpStyle /> 
+  <STUB_StartTerm1 /> 
+  <STUB_StartTerm2 /> 
+  <STUB_EndTerm1 /> 
+  <STUB_EndTerm2 /> 
+  <ResetInStub>N</ResetInStub> 
+  <INTEREST_IndexForm /> 
+  <INTEREST_YldFreq /> 
+  <INTEREST_FixFloat>FLO</INTEREST_FixFloat> 
+  <INTEREST_Rate TYPE="Numeric">0.0</INTEREST_Rate> 
+  <INTEREST_Basis /> 
+  <INTEREST_dmIndex>FORM</INTEREST_dmIndex> 
+  <INTEREST_Ccy>EUR</INTEREST_Ccy> 
+  <INT_REF_OrgSource /> 
+  <INT_REF_Source>T248</INT_REF_Source> 
+  <INT_REF_NNearBy TYPE="Numeric">-200000</INT_REF_NNearBy> 
+  <INTEREST_Spread TYPE="Numeric">0.0</INTEREST_Spread> 
+  <INTEREST_Term>1D</INTEREST_Term> 
+  <INT_AVG_Type /> 
+  <INT_AVG_Freq /> 
+  <INT_AVG_Compound>N</INT_AVG_Compound> 
+  <INT_AVG_AnnDay TYPE="Numeric">-200000</INT_AVG_AnnDay> 
+  <INT_AVG_Rule>MF</INT_AVG_Rule> 
+  <INT_AVG_Spread /> 
+  <INT_AVG_Time /> 
+  <INT_AVG_CutOffDays TYPE="Numeric" /> 
+  <INT_AVG_CorBGap /> 
+  <INTEREST_DType /> 
+  <INTEREST_Round /> 
+  <INTEREST_RoundDP TYPE="Numeric" /> 
+  <INT_RES_Rule /> 
+  <INT_RES_Time /> 
+  <INT_RES_Round /> 
+  <INT_RES_RoundDP TYPE="Numeric" /> 
+  <INT_RES_NTL_REF_OrgSource /> 
+  <INT_RES_NTL_REF_Source /> 
+  <INT_RES_NTL_REF_NNearBy TYPE="Numeric">-200000</INT_RES_NTL_REF_NNearBy> 
+  <INT_RES_NTL_Cal /> 
+  <INT_RES_NTL_Term /> 
+  <INT_RES_FX_REF_OrgSource /> 
+  <INT_RES_FX_REF_Source /> 
+  <INT_RES_FX_REF_NNearBy TYPE="Numeric" /> 
+  <INT_RES_FX_Cal /> 
+  <INT_RES_FX_Term /> 
+  <INT_RES_FxDomain /> 
+  <INT_ACC_AccCalc>N</INT_ACC_AccCalc> 
+  <INT_ACC_Method /> 
+  <INT_ACC_ForL /> 
+  <INT_ACC_Basis>A360</INT_ACC_Basis> 
+  <INTEREST_FwdDecomp>Y</INTEREST_FwdDecomp> 
+  <INT_DIV_Ratio TYPE="Numeric">sMINDBL</INT_DIV_Ratio> 
+  <INT_DIV_ReInvest>N</INT_DIV_ReInvest> 
+  <INT_DIV_DivMethod /> 
+  <INTEREST_NRate TYPE="Numeric">0.0</INTEREST_NRate> 
+  <INTEREST_NonContig>N</INTEREST_NonContig> 
+  <INTEREST_UnderIndex /> 
+  <SCHED_Pay_Freq>Z</SCHED_Pay_Freq> 
+  <SCHED_Pay_AnnDay TYPE="Numeric">30</SCHED_Pay_AnnDay> 
+  <SCHED_Pay_Rule>MF</SCHED_Pay_Rule> 
+  <SCHED_Pay_IntRule>Y</SCHED_Pay_IntRule> 
+  <SCHED_Pay_Time>ARR</SCHED_Pay_Time> 
+  <SCHED_Pay_Cal>TAR</SCHED_Pay_Cal> 
+  <SCHED_Pay_DRule /> 
+  <SCHED_Reset_Freq>Z</SCHED_Reset_Freq> 
+  <SCHED_Reset_AnnDay TYPE="Numeric">30</SCHED_Reset_AnnDay> 
+  <SCHED_Reset_Rule>MF</SCHED_Reset_Rule> 
+  <SCHED_Reset_IntRule>Y</SCHED_Reset_IntRule> 
+  <SCHED_Reset_Time>ARR</SCHED_Reset_Time> 
+  <SCHED_Reset_Cal>TAR</SCHED_Reset_Cal> 
+  <SCHED_Reset_DRule /> 
+  <COMP_CompFreq /> 
+  <COMP_Mode /> 
+  <AMORT_Type>CUST</AMORT_Type> 
+  <AMORT_Amount TYPE="Numeric" /> 
+  <AMORT_Start /> 
+  <AMORT_End /> 
+  <AMORT_Freq /> 
+  <Custom>STND</Custom> 
+  <CROSS_CCY_NotExch /> 
+  <CROSS_CCY_ForexRate TYPE="Numeric">0.0</CROSS_CCY_ForexRate> 
+  <OptionData>N</OptionData> 
+  <PModel /> 
+  <Style /> 
+  <OPForm /> 
+  <SubIndex>EURDE</SubIndex> 
+  <TermDate>SUN</TermDate> 
+  <ROLL_RollNature /> 
+  <ROLL_NoticeDays TYPE="Numeric">-200000</ROLL_NoticeDays> 
+  <ROLL_ReInvestAmt /> 
+  <FstCpEffect /> 
+  <NextFixing>20161228</NextFixing> 
+  <RiskId /> 
+  <INT_AVG_Conversion /> 
+  <INT_RES_RefixMode>AUTO</INT_RES_RefixMode> 
+  <INT_AVG_CutOffMeth /> 
+  <Audit_Version TYPE="Numeric">455</Audit_Version> 
+  <AMORT_NtlForm /> 
+  <AMORT_Sched_Freq /> 
+  <AMORT_Sched_AnnDay TYPE="Numeric">-200000</AMORT_Sched_AnnDay> 
+  <AMORT_Sched_Rule /> 
+  <AMORT_Sched_IntRule /> 
+  <AMORT_Sched_Time /> 
+  <AMORT_Sched_Cal /> 
+  <AMORT_Sched_DRuleID /> 
+  <INTEREST_FundIndex /> 
+  <INTEREST_FundSprd TYPE="Numeric">0.0</INTEREST_FundSprd> 
+  <MMType /> 
+  <LegRole>ALL</LegRole> 
+  <GroupNum TYPE="Numeric" /> 
+  <NumEve TYPE="Numeric">198</NumEve> 
+- <Formula TYPE="EntList" SINGLE="N">
+- <FORMULA>
+  <Date>20151230</Date> 
+  <FormulaId /> 
+  <Formula TYPE="ObjRef">MAN_EQTR( )</Formula> 
+  <RedempType /> 
+  </FORMULA>
+  </Formula>
+- <Events TYPE="EntList" SINGLE="N">
+- <EVENT>
+  <Date>20160108</Date> 
+  <ADate>20160108</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">272221653.4</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160108</Date> 
+  <ADate>20160107</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-23872.37</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160111</Date> 
+  <ADate>20160111</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">272316196.11</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160111</Date> 
+  <ADate>20160108</ADate> 
+  <LinkEv TYPE="Numeric">1</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">1971.2</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160112</Date> 
+  <ADate>20160112</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">273190709.32</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160112</Date> 
+  <ADate>20160112</ADate> 
+  <LinkEv TYPE="Numeric">2</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">21722.08</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160114</Date> 
+  <ADate>20160114</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">273381334.2</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160114</Date> 
+  <ADate>20160113</ADate> 
+  <LinkEv TYPE="Numeric">3</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">4569.3</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160118</Date> 
+  <ADate>20160118</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">273169671.92</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160118</Date> 
+  <ADate>20160115</ADate> 
+  <LinkEv TYPE="Numeric">4</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-5740.28</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160119</Date> 
+  <ADate>20160119</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">273257673.28</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160119</Date> 
+  <ADate>20160118</ADate> 
+  <LinkEv TYPE="Numeric">5</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">3469.14</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160121</Date> 
+  <ADate>20160121</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">273769569.87</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160121</Date> 
+  <ADate>20160120</ADate> 
+  <LinkEv TYPE="Numeric">6</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">17045.42</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160122</Date> 
+  <ADate>20160122</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">273884205.9</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160122</Date> 
+  <ADate>20160121</ADate> 
+  <LinkEv TYPE="Numeric">7</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">5321.46</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160125</Date> 
+  <ADate>20160125</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">274006919.9</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160125</Date> 
+  <ADate>20160122</ADate> 
+  <LinkEv TYPE="Numeric">8</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">4386.04</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160126</Date> 
+  <ADate>20160126</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">274164931.8</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160126</Date> 
+  <ADate>20160125</ADate> 
+  <LinkEv TYPE="Numeric">9</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">4830.37</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160128</Date> 
+  <ADate>20160128</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">274320914.75</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160128</Date> 
+  <ADate>20160127</ADate> 
+  <LinkEv TYPE="Numeric">10</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">4670.62</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160129</Date> 
+  <ADate>20160129</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">273966658.94</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160129</Date> 
+  <ADate>20160128</ADate> 
+  <LinkEv TYPE="Numeric">11</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-9913.65</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160201</Date> 
+  <ADate>20160201</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">274026495.65</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160201</Date> 
+  <ADate>20160129</ADate> 
+  <LinkEv TYPE="Numeric">12</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">2062.89</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160202</Date> 
+  <ADate>20160202</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">273522962.23</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160202</Date> 
+  <ADate>20160201</ADate> 
+  <LinkEv TYPE="Numeric">13</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-13005.4</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160203</Date> 
+  <ADate>20160203</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">272041326.27</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160203</Date> 
+  <ADate>20160202</ADate> 
+  <LinkEv TYPE="Numeric">14</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-40256.44</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160204</Date> 
+  <ADate>20160204</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">271961117.4</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160204</Date> 
+  <ADate>20160203</ADate> 
+  <LinkEv TYPE="Numeric">15</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-2662.56</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160205</Date> 
+  <ADate>20160205</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">271499916.43</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160205</Date> 
+  <ADate>20160204</ADate> 
+  <LinkEv TYPE="Numeric">16</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-17519.24</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160208</Date> 
+  <ADate>20160208</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">271592016.35</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160208</Date> 
+  <ADate>20160205</ADate> 
+  <LinkEv TYPE="Numeric">17</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">3582.93</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160209</Date> 
+  <ADate>20160209</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">271673174.43</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160209</Date> 
+  <ADate>20160208</ADate> 
+  <LinkEv TYPE="Numeric">18</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">3248.04</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160210</Date> 
+  <ADate>20160210</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">271779052.09</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160210</Date> 
+  <ADate>20160209</ADate> 
+  <LinkEv TYPE="Numeric">19</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">5125.79</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160211</Date> 
+  <ADate>20160211</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">271962296.98</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160211</Date> 
+  <ADate>20160210</ADate> 
+  <LinkEv TYPE="Numeric">20</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">9971.77</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160212</Date> 
+  <ADate>20160212</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">272210416.71</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160212</Date> 
+  <ADate>20160211</ADate> 
+  <LinkEv TYPE="Numeric">21</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">12100.27</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160218</Date> 
+  <ADate>20160218</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">271693515.15</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160218</Date> 
+  <ADate>20160217</ADate> 
+  <LinkEv TYPE="Numeric">22</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-22607.01</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160219</Date> 
+  <ADate>20160219</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">271556491.67</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160219</Date> 
+  <ADate>20160218</ADate> 
+  <LinkEv TYPE="Numeric">23</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-5192.44</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160222</Date> 
+  <ADate>20160222</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">271622547.37</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160222</Date> 
+  <ADate>20160219</ADate> 
+  <LinkEv TYPE="Numeric">24</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">2433.84</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160223</Date> 
+  <ADate>20160223</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270908465.67</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160223</Date> 
+  <ADate>20160222</ADate> 
+  <LinkEv TYPE="Numeric">25</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-28301.43</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160224</Date> 
+  <ADate>20160224</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270720197.65</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160224</Date> 
+  <ADate>20160223</ADate> 
+  <LinkEv TYPE="Numeric">26</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-6258.91</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160225</Date> 
+  <ADate>20160225</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270509649.38</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160225</Date> 
+  <ADate>20160225</ADate> 
+  <LinkEv TYPE="Numeric">27</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-7775.27</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160226</Date> 
+  <ADate>20160226</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270784970.65</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160226</Date> 
+  <ADate>20160225</ADate> 
+  <LinkEv TYPE="Numeric">28</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">11442.52</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160229</Date> 
+  <ADate>20160229</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270922197.11</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160229</Date> 
+  <ADate>20160226</ADate> 
+  <LinkEv TYPE="Numeric">29</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">5106.52</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160303</Date> 
+  <ADate>20160303</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">271047350.74</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160303</Date> 
+  <ADate>20160302</ADate> 
+  <LinkEv TYPE="Numeric">30</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">3231.27</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160304</Date> 
+  <ADate>20160304</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270953773.73</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160304</Date> 
+  <ADate>20160303</ADate> 
+  <LinkEv TYPE="Numeric">31</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-2275.9</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160307</Date> 
+  <ADate>20160307</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">271120571.23</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160307</Date> 
+  <ADate>20160304</ADate> 
+  <LinkEv TYPE="Numeric">32</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">4137.1</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160308</Date> 
+  <ADate>20160308</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270800849.78</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160308</Date> 
+  <ADate>20160307</ADate> 
+  <LinkEv TYPE="Numeric">33</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-7087.18</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160309</Date> 
+  <ADate>20160309</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270666054.33</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160309</Date> 
+  <ADate>20160308</ADate> 
+  <LinkEv TYPE="Numeric">34</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-3128.7</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160310</Date> 
+  <ADate>20160310</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270871951.62</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160310</Date> 
+  <ADate>20160309</ADate> 
+  <LinkEv TYPE="Numeric">35</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">5328.14</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160311</Date> 
+  <ADate>20160311</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">271003160.67</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160311</Date> 
+  <ADate>20160310</ADate> 
+  <LinkEv TYPE="Numeric">36</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">3244.62</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160315</Date> 
+  <ADate>20160315</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270535275.63</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160315</Date> 
+  <ADate>20160314</ADate> 
+  <LinkEv TYPE="Numeric">37</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-9673.02</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160317</Date> 
+  <ADate>20160317</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270701108.38</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160317</Date> 
+  <ADate>20160316</ADate> 
+  <LinkEv TYPE="Numeric">38</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">3638.16</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160322</Date> 
+  <ADate>20160322</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270763614.99</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160322</Date> 
+  <ADate>20160321</ADate> 
+  <LinkEv TYPE="Numeric">39</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">1270.6</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160329</Date> 
+  <ADate>20160329</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270389306.95</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160329</Date> 
+  <ADate>20160324</ADate> 
+  <LinkEv TYPE="Numeric">40</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-8042.5</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160401</Date> 
+  <ADate>20160401</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270490835.54</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160401</Date> 
+  <ADate>20160331</ADate> 
+  <LinkEv TYPE="Numeric">41</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">2164.89</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160405</Date> 
+  <ADate>20160405</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270575199.95</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160405</Date> 
+  <ADate>20160404</ADate> 
+  <LinkEv TYPE="Numeric">42</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">2720.84</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160406</Date> 
+  <ADate>20160406</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270316749.17</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160406</Date> 
+  <ADate>20160405</ADate> 
+  <LinkEv TYPE="Numeric">43</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-7861.78</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160408</Date> 
+  <ADate>20160408</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270242110.36</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160408</Date> 
+  <ADate>20160407</ADate> 
+  <LinkEv TYPE="Numeric">44</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-2745.33</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160411</Date> 
+  <ADate>20160411</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270413880.8</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160411</Date> 
+  <ADate>20160408</ADate> 
+  <LinkEv TYPE="Numeric">45</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">6810.3</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160412</Date> 
+  <ADate>20160412</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270173254.2</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160412</Date> 
+  <ADate>20160411</ADate> 
+  <LinkEv TYPE="Numeric">46</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-8484.91</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160414</Date> 
+  <ADate>20160414</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270233497.46</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160414</Date> 
+  <ADate>20160413</ADate> 
+  <LinkEv TYPE="Numeric">47</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">1836.7</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160415</Date> 
+  <ADate>20160415</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270346666.16</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160415</Date> 
+  <ADate>20160414</ADate> 
+  <LinkEv TYPE="Numeric">48</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">1876.3</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160419</Date> 
+  <ADate>20160419</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270460676.42</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160419</Date> 
+  <ADate>20160418</ADate> 
+  <LinkEv TYPE="Numeric">49</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">1683.12</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160420</Date> 
+  <ADate>20160420</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270059632.1</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160420</Date> 
+  <ADate>20160419</ADate> 
+  <LinkEv TYPE="Numeric">50</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-5793.12</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160421</Date> 
+  <ADate>20160421</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270216701.84</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160421</Date> 
+  <ADate>20160420</ADate> 
+  <LinkEv TYPE="Numeric">51</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">1614.53</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160422</Date> 
+  <ADate>20160422</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270384943.02</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160422</Date> 
+  <ADate>20160421</ADate> 
+  <LinkEv TYPE="Numeric">52</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">954.16</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160425</Date> 
+  <ADate>20160425</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270466610.32</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160425</Date> 
+  <ADate>20160422</ADate> 
+  <LinkEv TYPE="Numeric">53</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">459.72</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160426</Date> 
+  <ADate>20160426</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270966317.53</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160426</Date> 
+  <ADate>20160425</ADate> 
+  <LinkEv TYPE="Numeric">54</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">2651.47</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160427</Date> 
+  <ADate>20160427</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">271101651.63</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160427</Date> 
+  <ADate>20160426</ADate> 
+  <LinkEv TYPE="Numeric">55</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">1298.17</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160428</Date> 
+  <ADate>20160428</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">271033696.89</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160428</Date> 
+  <ADate>20160427</ADate> 
+  <LinkEv TYPE="Numeric">56</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-540.28</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160429</Date> 
+  <ADate>20160429</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">271112581.62</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160429</Date> 
+  <ADate>20160428</ADate> 
+  <LinkEv TYPE="Numeric">57</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">582.85</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160502</Date> 
+  <ADate>20160502</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270690371.07</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160502</Date> 
+  <ADate>20160429</ADate> 
+  <LinkEv TYPE="Numeric">58</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-3903.7</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160510</Date> 
+  <ADate>20160510</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270379561.73</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160510</Date> 
+  <ADate>20160509</ADate> 
+  <LinkEv TYPE="Numeric">59</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-10684.31</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160511</Date> 
+  <ADate>20160511</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270431912.01</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160511</Date> 
+  <ADate>20160510</ADate> 
+  <LinkEv TYPE="Numeric">60</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">1618.89</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160512</Date> 
+  <ADate>20160512</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270502163.81</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160512</Date> 
+  <ADate>20160511</ADate> 
+  <LinkEv TYPE="Numeric">61</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">1888.45</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160518</Date> 
+  <ADate>20160518</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">269949613.86</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160518</Date> 
+  <ADate>20160517</ADate> 
+  <LinkEv TYPE="Numeric">62</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-15519.34</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160519</Date> 
+  <ADate>20160519</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">269874975.05</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160519</Date> 
+  <ADate>20160518</ADate> 
+  <LinkEv TYPE="Numeric">63</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-2130.0</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160520</Date> 
+  <ADate>20160520</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270011550.0</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160520</Date> 
+  <ADate>20160519</ADate> 
+  <LinkEv TYPE="Numeric">64</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">3647.03</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160523</Date> 
+  <ADate>20160523</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270284662.22</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160523</Date> 
+  <ADate>20160520</ADate> 
+  <LinkEv TYPE="Numeric">65</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">8504.39</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160525</Date> 
+  <ADate>20160525</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270122016.47</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160525</Date> 
+  <ADate>20160524</ADate> 
+  <LinkEv TYPE="Numeric">66</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-4483.81</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160526</Date> 
+  <ADate>20160526</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270232671.08</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160526</Date> 
+  <ADate>20160525</ADate> 
+  <LinkEv TYPE="Numeric">67</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">1890.94</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160530</Date> 
+  <ADate>20160530</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270061113.23</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160530</Date> 
+  <ADate>20160527</ADate> 
+  <LinkEv TYPE="Numeric">68</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-1949.02</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160531</Date> 
+  <ADate>20160531</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">269911835.62</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160531</Date> 
+  <ADate>20160530</ADate> 
+  <LinkEv TYPE="Numeric">69</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-1415.58</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160602</Date> 
+  <ADate>20160602</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270244160.4</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160602</Date> 
+  <ADate>20160601</ADate> 
+  <LinkEv TYPE="Numeric">70</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">3552.62</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160607</Date> 
+  <ADate>20160607</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270158381.47</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160607</Date> 
+  <ADate>20160607</ADate> 
+  <LinkEv TYPE="Numeric">71</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-1638.48</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160610</Date> 
+  <ADate>20160610</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">270065361.47</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160610</Date> 
+  <ADate>20160609</ADate> 
+  <LinkEv TYPE="Numeric">72</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-1415.99</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160613</Date> 
+  <ADate>20160613</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">269800226.61</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160613</Date> 
+  <ADate>20160610</ADate> 
+  <LinkEv TYPE="Numeric">73</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-4997.52</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160614</Date> 
+  <ADate>20160614</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">269505013.43</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160614</Date> 
+  <ADate>20160613</ADate> 
+  <LinkEv TYPE="Numeric">74</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-8135.5</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160616</Date> 
+  <ADate>20160616</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">269921754.5</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160616</Date> 
+  <ADate>20160615</ADate> 
+  <LinkEv TYPE="Numeric">75</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">17929.4</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160617</Date> 
+  <ADate>20160617</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">269590892.94</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160617</Date> 
+  <ADate>20160616</ADate> 
+  <LinkEv TYPE="Numeric">76</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-12571.12</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160621</Date> 
+  <ADate>20160621</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">269373660.6</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160621</Date> 
+  <ADate>20160620</ADate> 
+  <LinkEv TYPE="Numeric">77</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-8150.22</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160623</Date> 
+  <ADate>20160623</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">269280083.59</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160623</Date> 
+  <ADate>20160622</ADate> 
+  <LinkEv TYPE="Numeric">78</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-1881.94</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160624</Date> 
+  <ADate>20160624</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">269153086.22</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160624</Date> 
+  <ADate>20160623</ADate> 
+  <LinkEv TYPE="Numeric">79</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-2413.49</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160627</Date> 
+  <ADate>20160627</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">268560431.84</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160627</Date> 
+  <ADate>20160624</ADate> 
+  <LinkEv TYPE="Numeric">80</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-8488.59</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160628</Date> 
+  <ADate>20160628</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">268437890.52</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160628</Date> 
+  <ADate>20160627</ADate> 
+  <LinkEv TYPE="Numeric">81</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-5048.78</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160629</Date> 
+  <ADate>20160629</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">267987829.67</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160629</Date> 
+  <ADate>20160628</ADate> 
+  <LinkEv TYPE="Numeric">82</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-23296.26</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160630</Date> 
+  <ADate>20160630</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">267928787.03</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160630</Date> 
+  <ADate>20160629</ADate> 
+  <LinkEv TYPE="Numeric">83</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-2728.02</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160701</Date> 
+  <ADate>20160701</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">266989674.92</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160701</Date> 
+  <ADate>20160630</ADate> 
+  <LinkEv TYPE="Numeric">84</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-37228.57</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160704</Date> 
+  <ADate>20160704</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">267101286.46</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160704</Date> 
+  <ADate>20160701</ADate> 
+  <LinkEv TYPE="Numeric">85</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">3932.51</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160705</Date> 
+  <ADate>20160705</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">266715838.31</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160705</Date> 
+  <ADate>20160704</ADate> 
+  <LinkEv TYPE="Numeric">86</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-13584.65</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160707</Date> 
+  <ADate>20160707</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">266259093.39</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160707</Date> 
+  <ADate>20160706</ADate> 
+  <LinkEv TYPE="Numeric">87</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-18005.15</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160708</Date> 
+  <ADate>20160708</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">265203010.02</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160708</Date> 
+  <ADate>20160707</ADate> 
+  <LinkEv TYPE="Numeric">88</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-44177.75</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160711</Date> 
+  <ADate>20160711</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">265327358.39</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160711</Date> 
+  <ADate>20160708</ADate> 
+  <LinkEv TYPE="Numeric">89</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">5053.69</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160712</Date> 
+  <ADate>20160712</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">264907375.86</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160712</Date> 
+  <ADate>20160711</ADate> 
+  <LinkEv TYPE="Numeric">90</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-15074.72</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160713</Date> 
+  <ADate>20160713</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">264401614.41</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160713</Date> 
+  <ADate>20160712</ADate> 
+  <LinkEv TYPE="Numeric">91</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-15480.49</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160714</Date> 
+  <ADate>20160714</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">264250108.78</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160714</Date> 
+  <ADate>20160713</ADate> 
+  <LinkEv TYPE="Numeric">92</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-4062.59</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160715</Date> 
+  <ADate>20160715</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">263944869.49</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160715</Date> 
+  <ADate>20160714</ADate> 
+  <LinkEv TYPE="Numeric">93</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-8860.89</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160718</Date> 
+  <ADate>20160718</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">263655226.37</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160718</Date> 
+  <ADate>20160715</ADate> 
+  <LinkEv TYPE="Numeric">94</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-7380.62</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160719</Date> 
+  <ADate>20160719</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">263217419.66</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160719</Date> 
+  <ADate>20160718</ADate> 
+  <LinkEv TYPE="Numeric">95</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-11318.01</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160722</Date> 
+  <ADate>20160722</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">263160605.05</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160722</Date> 
+  <ADate>20160721</ADate> 
+  <LinkEv TYPE="Numeric">96</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-1304.84</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160726</Date> 
+  <ADate>20160726</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">263025809.59</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160726</Date> 
+  <ADate>20160725</ADate> 
+  <LinkEv TYPE="Numeric">97</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-2946.23</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160728</Date> 
+  <ADate>20160728</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">262805235.22</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160728</Date> 
+  <ADate>20160727</ADate> 
+  <LinkEv TYPE="Numeric">98</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-4862.09</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+  </Events>
+  <CmdtyQuoteType /> 
+  <INT_DIV_PayDividend>RESET</INT_DIV_PayDividend> 
+  <INT_DIV_HedgeDivRatio TYPE="Numeric">1.0</INT_DIV_HedgeDivRatio> 
+  <INT_RES_AuxDomain /> 
+  <SCHED_Pay_GapDRule /> 
+  <SCHED_Reset_GapDRule /> 
+  <AMORT_Sched_GapDRuleID /> 
+  <AMORT_DRuleID /> 
+  <INT_AVG_Gap>0D</INT_AVG_Gap> 
+  <INT_RES_NTL_Gap>0D</INT_RES_NTL_Gap> 
+  <INT_RES_FX_Gap>0D</INT_RES_FX_Gap> 
+  <SCHED_Pay_Gap>0D</SCHED_Pay_Gap> 
+  <SCHED_Reset_Gap>-2D</SCHED_Reset_Gap> 
+  <AMORT_Sched_Gap /> 
+  <INT_DIV_Gap>0D</INT_DIV_Gap> 
+  <ProductName>MAN_EQTR</ProductName> 
+  <AccrualFactors /> 
+  <STUB_StartCal>TAR</STUB_StartCal> 
+  <STUB_EndCal>TAR</STUB_EndCal> 
+  <STUB_StartSource1 /> 
+  <STUB_StartSource2 /> 
+  <STUB_EndSource1 /> 
+  <STUB_EndSource2 /> 
+  <INT_InterimRound /> 
+  <INT_InterimRoundDP TYPE="Numeric" /> 
+  <INT_RES_ConvRound /> 
+  <INT_RES_ConvRoundDP TYPE="Numeric" /> 
+  <INT_RES_PaymentReset /> 
+  <INT_RES_CutOffDays TYPE="Numeric" /> 
+  <INT_RES_NTL_PaymentReset /> 
+  <INT_RES_NTL_CutOffDays TYPE="Numeric" /> 
+  <INT_RES_FX_PaymentReset /> 
+  <INT_RES_FX_CutOffDays TYPE="Numeric" /> 
+  <INTEREST_OrgIndex /> 
+  <INTEREST_OrgCcy /> 
+  <INTEREST_OrgSource /> 
+  <OrigMatDate /> 
+  <GapDateRoll /> 
+  <INT_ACC_UseProj /> 
+  <FinNtlExchCal /> 
+  <FinCalAtPay /> 
+  <Deliverable /> 
+  <INT_RES_DorF /> 
+  <PayMethod /> 
+  <RedemFormula TYPE="EntList" SINGLE="N" /> 
+  <RedemProductName /> 
+  <CfRound /> 
+  <CfRoundDP TYPE="Numeric" /> 
+  <INTEREST_Method /> 
+  <DENOM_Type /> 
+  <DENOM_Amount TYPE="Numeric" /> 
+  <DENOM_Round /> 
+  <DENOM_RoundDP TYPE="Numeric" /> 
+  <INT_ACC_RateType>ACC_EXT</INT_ACC_RateType> 
+  <LoanIntRule /> 
+  <LoanBasis /> 
+  <LoanRate TYPE="Numeric">0.0</LoanRate> 
+  <LoanStubType /> 
+  <LoanNtlAmortType /> 
+  <PayEvents TYPE="EntList" SINGLE="N" /> 
+  <AdjFstXNL /> 
+  <FreqDecompType /> 
+  <FreqDecompFreq /> 
+  <StubFreqDecompType /> 
+  <StubFreqDecompFreq /> 
+  <STUB_IgnoreHalfPeriodRule /> 
+  <BusMatDate /> 
+  <INTEREST_IntRateType>FLT</INTEREST_IntRateType> 
+  <ROLL_RolloverStatus /> 
+  <NotionalDaysGap /> 
+  <NotionalGapDRuleID /> 
+  <UseIntPayGapRules /> 
+  <CompSource /> 
+  <INT_RES_RollWeekly /> 
+  <INT_ACC_DorF /> 
+  <INT_ACC_Round /> 
+  <INT_ACC_DP TYPE="Numeric">-200000</INT_ACC_DP> 
+  <SchedType /> 
+  <CompPayoffRate /> 
+  <INT_RES_AdjPayment /> 
+- <ProdData TYPE="EntList" SINGLE="Y">
+- <cMAN_EQTR>
+  <PorS>P</PorS> 
+  <PorC>C</PorC> 
+  <Style>EURO</Style> 
+  <PayOffCcy>EUR</PayOffCcy> 
+  <BasketIndex>X3A</BasketIndex> 
+  <BasketCcy>X3A</BasketCcy> 
+  <Cal /> 
+- <IndexList TYPE="EntList" SINGLE="N">
+- <ET_INDEX>
+  <Ccy>EUR</Ccy> 
+  <Index>SX5T</Index> 
+  <Weight TYPE="Numeric">50.0</Weight> 
+  <InitValue TYPE="Numeric">6265.19</InitValue> 
+  </ET_INDEX>
+- <ET_INDEX>
+  <Ccy>GBP</Ccy> 
+  <Index>TUKXG</Index> 
+  <Weight TYPE="Numeric">10.0</Weight> 
+  <InitValue TYPE="Numeric">4915.48</InitValue> 
+  </ET_INDEX>
+- <ET_INDEX>
+  <Ccy>USD</Ccy> 
+  <Index>EEMUP</Index> 
+  <Weight TYPE="Numeric">5.0</Weight> 
+  <InitValue TYPE="Numeric">32.29</InitValue> 
+  </ET_INDEX>
+- <ET_INDEX>
+  <Ccy>JPY</Ccy> 
+  <Index>N225</Index> 
+  <Weight TYPE="Numeric">10.0</Weight> 
+  <InitValue TYPE="Numeric">19033.71</InitValue> 
+  </ET_INDEX>
+- <ET_INDEX>
+  <Ccy>USD</Ccy> 
+  <Index>SPXT</Index> 
+  <Weight TYPE="Numeric">25.0</Weight> 
+  <InitValue TYPE="Numeric">3857.8999</InitValue> 
+  </ET_INDEX>
+  </IndexList>
+  <Strike TYPE="Numeric">6493.603475</Strike> 
+  <Value TYPE="Numeric">-7155303.74</Value> 
+  <Percentage TYPE="Numeric">0.0</Percentage> 
+  <AsianStartDate /> 
+  <AsianAverageType /> 
+  <AsianAverageFreq /> 
+  <AsianAverageAnnDay TYPE="Numeric" /> 
+  <AsianAverageRule /> 
+  </cMAN_EQTR>
+  </ProdData>
+  <RedemProdData TYPE="EntList" SINGLE="Y" /> 
+  </ASSET>
+- <ASSET>
+  <dmAssetId>00056LLZ</dmAssetId> 
+  <dmOwnerTable>EXOTIC</dmOwnerTable> 
+  <TradeId>825631D</TradeId> 
+  <SchedEvents TYPE="EntList" SINGLE="N" /> 
+  <Type>EXOTIC</Type> 
+  <SubType /> 
+  <RC /> 
+  <Book>FFAXX</Book> 
+  <PorS>S</PorS> 
+  <EffDate>20160104</EffDate> 
+  <MatDate>20170104</MatDate> 
+  <Notional TYPE="Numeric">270490835.54</Notional> 
+  <NotExp /> 
+  <Ccy>EUR</Ccy> 
+  <STUB_Date1 /> 
+  <STUB_Rate1 TYPE="Numeric">0.0</STUB_Rate1> 
+  <STUB_Date2 /> 
+  <STUB_Rate2 TYPE="Numeric">0.0</STUB_Rate2> 
+  <STUB_StubType /> 
+  <STUB_Decomp /> 
+  <STUB_CompMode /> 
+  <STUB_Rounding TYPE="Numeric" /> 
+  <STUB_InterpStyle /> 
+  <STUB_StartTerm1 /> 
+  <STUB_StartTerm2 /> 
+  <STUB_EndTerm1 /> 
+  <STUB_EndTerm2 /> 
+  <ResetInStub>N</ResetInStub> 
+  <INTEREST_IndexForm /> 
+  <INTEREST_YldFreq /> 
+  <INTEREST_FixFloat>FLO</INTEREST_FixFloat> 
+  <INTEREST_Rate TYPE="Numeric">0.0</INTEREST_Rate> 
+  <INTEREST_Basis>A360</INTEREST_Basis> 
+  <INTEREST_dmIndex>EUR3S</INTEREST_dmIndex> 
+  <INTEREST_Ccy>EUR</INTEREST_Ccy> 
+  <INT_REF_OrgSource /> 
+  <INT_REF_Source>T248</INT_REF_Source> 
+  <INT_REF_NNearBy TYPE="Numeric">-200000</INT_REF_NNearBy> 
+  <INTEREST_Spread TYPE="Numeric">0.0</INTEREST_Spread> 
+  <INTEREST_Term>3M</INTEREST_Term> 
+  <INT_AVG_Type /> 
+  <INT_AVG_Freq /> 
+  <INT_AVG_Compound>N</INT_AVG_Compound> 
+  <INT_AVG_AnnDay TYPE="Numeric">-200000</INT_AVG_AnnDay> 
+  <INT_AVG_Rule>MF</INT_AVG_Rule> 
+  <INT_AVG_Spread /> 
+  <INT_AVG_Time /> 
+  <INT_AVG_CutOffDays TYPE="Numeric" /> 
+  <INT_AVG_CorBGap>B</INT_AVG_CorBGap> 
+  <INTEREST_DType /> 
+  <INTEREST_Round /> 
+  <INTEREST_RoundDP TYPE="Numeric" /> 
+  <INT_RES_Rule /> 
+  <INT_RES_Time /> 
+  <INT_RES_Round /> 
+  <INT_RES_RoundDP TYPE="Numeric" /> 
+  <INT_RES_NTL_REF_OrgSource /> 
+  <INT_RES_NTL_REF_Source /> 
+  <INT_RES_NTL_REF_NNearBy TYPE="Numeric">-200000</INT_RES_NTL_REF_NNearBy> 
+  <INT_RES_NTL_Cal /> 
+  <INT_RES_NTL_Term /> 
+  <INT_RES_FX_REF_OrgSource /> 
+  <INT_RES_FX_REF_Source /> 
+  <INT_RES_FX_REF_NNearBy TYPE="Numeric" /> 
+  <INT_RES_FX_Cal /> 
+  <INT_RES_FX_Term /> 
+  <INT_RES_FxDomain /> 
+  <INT_ACC_AccCalc>N</INT_ACC_AccCalc> 
+  <INT_ACC_Method /> 
+  <INT_ACC_ForL /> 
+  <INT_ACC_Basis>A360</INT_ACC_Basis> 
+  <INTEREST_FwdDecomp>Y</INTEREST_FwdDecomp> 
+  <INT_DIV_Ratio TYPE="Numeric">sMINDBL</INT_DIV_Ratio> 
+  <INT_DIV_ReInvest>N</INT_DIV_ReInvest> 
+  <INT_DIV_DivMethod /> 
+  <INTEREST_NRate TYPE="Numeric">0.0</INTEREST_NRate> 
+  <INTEREST_NonContig>N</INTEREST_NonContig> 
+  <INTEREST_UnderIndex>EUR3S</INTEREST_UnderIndex> 
+  <SCHED_Pay_Freq>Q</SCHED_Pay_Freq> 
+  <SCHED_Pay_AnnDay TYPE="Numeric">4</SCHED_Pay_AnnDay> 
+  <SCHED_Pay_Rule>MF</SCHED_Pay_Rule> 
+  <SCHED_Pay_IntRule>Y</SCHED_Pay_IntRule> 
+  <SCHED_Pay_Time>ARR</SCHED_Pay_Time> 
+  <SCHED_Pay_Cal>TAR</SCHED_Pay_Cal> 
+  <SCHED_Pay_DRule /> 
+  <SCHED_Reset_Freq>Q</SCHED_Reset_Freq> 
+  <SCHED_Reset_AnnDay TYPE="Numeric">4</SCHED_Reset_AnnDay> 
+  <SCHED_Reset_Rule>MF</SCHED_Reset_Rule> 
+  <SCHED_Reset_IntRule>Y</SCHED_Reset_IntRule> 
+  <SCHED_Reset_Time>ADV</SCHED_Reset_Time> 
+  <SCHED_Reset_Cal>TAR</SCHED_Reset_Cal> 
+  <SCHED_Reset_DRule /> 
+  <COMP_CompFreq /> 
+  <COMP_Mode /> 
+  <AMORT_Type>CUST</AMORT_Type> 
+  <AMORT_Amount TYPE="Numeric" /> 
+  <AMORT_Start /> 
+  <AMORT_End /> 
+  <AMORT_Freq /> 
+  <Custom>STND</Custom> 
+  <CROSS_CCY_NotExch /> 
+  <CROSS_CCY_ForexRate TYPE="Numeric">0.0</CROSS_CCY_ForexRate> 
+  <OptionData>N</OptionData> 
+  <PModel /> 
+  <Style /> 
+  <OPForm /> 
+  <SubIndex>EURDE</SubIndex> 
+  <TermDate>SUN</TermDate> 
+  <ROLL_RollNature /> 
+  <ROLL_NoticeDays TYPE="Numeric">-200000</ROLL_NoticeDays> 
+  <ROLL_ReInvestAmt /> 
+  <FstCpEffect /> 
+  <NextFixing>20160930</NextFixing> 
+  <RiskId /> 
+  <INT_AVG_Conversion /> 
+  <INT_RES_RefixMode>AUTO</INT_RES_RefixMode> 
+  <INT_AVG_CutOffMeth /> 
+  <Audit_Version TYPE="Numeric">455</Audit_Version> 
+  <AMORT_NtlForm /> 
+  <AMORT_Sched_Freq /> 
+  <AMORT_Sched_AnnDay TYPE="Numeric">-200000</AMORT_Sched_AnnDay> 
+  <AMORT_Sched_Rule /> 
+  <AMORT_Sched_IntRule /> 
+  <AMORT_Sched_Time /> 
+  <AMORT_Sched_Cal /> 
+  <AMORT_Sched_DRuleID /> 
+  <INTEREST_FundIndex /> 
+  <INTEREST_FundSprd TYPE="Numeric">0.0</INTEREST_FundSprd> 
+  <MMType /> 
+  <LegRole>ALL</LegRole> 
+  <GroupNum TYPE="Numeric" /> 
+  <NumEve TYPE="Numeric">104</NumEve> 
+  <Formula TYPE="EntList" SINGLE="N" /> 
+- <Events TYPE="EntList" SINGLE="N">
+- <EVENT>
+  <Date>20160104</Date> 
+  <ADate>20151230</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>FRC</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-0.00132</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric">2</EvStyle> 
+  <BDate>20151230</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160108</Date> 
+  <ADate>20160107</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">8.36</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160111</Date> 
+  <ADate>20160108</ADate> 
+  <LinkEv TYPE="Numeric">1</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">1.32</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160112</Date> 
+  <ADate>20160112</ADate> 
+  <LinkEv TYPE="Numeric">2</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">12.66</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160114</Date> 
+  <ADate>20160113</ADate> 
+  <LinkEv TYPE="Numeric">3</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">2.88</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160118</Date> 
+  <ADate>20160115</ADate> 
+  <LinkEv TYPE="Numeric">4</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-1.36</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160119</Date> 
+  <ADate>20160118</ADate> 
+  <LinkEv TYPE="Numeric">5</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">0.18</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160121</Date> 
+  <ADate>20160120</ADate> 
+  <LinkEv TYPE="Numeric">6</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">1.76</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160122</Date> 
+  <ADate>20160121</ADate> 
+  <LinkEv TYPE="Numeric">7</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">0.34</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160125</Date> 
+  <ADate>20160122</ADate> 
+  <LinkEv TYPE="Numeric">8</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">0.57</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160126</Date> 
+  <ADate>20160125</ADate> 
+  <LinkEv TYPE="Numeric">9</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">1.49</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160128</Date> 
+  <ADate>20160127</ADate> 
+  <LinkEv TYPE="Numeric">10</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">1.95</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160129</Date> 
+  <ADate>20160128</ADate> 
+  <LinkEv TYPE="Numeric">11</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-1.95</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160201</Date> 
+  <ADate>20160129</ADate> 
+  <LinkEv TYPE="Numeric">12</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-0.17</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160202</Date> 
+  <ADate>20160201</ADate> 
+  <LinkEv TYPE="Numeric">13</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">0.64</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160203</Date> 
+  <ADate>20160202</ADate> 
+  <LinkEv TYPE="Numeric">14</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-0.21</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160204</Date> 
+  <ADate>20160203</ADate> 
+  <LinkEv TYPE="Numeric">15</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">0.29</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160205</Date> 
+  <ADate>20160204</ADate> 
+  <LinkEv TYPE="Numeric">16</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">1.96</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160208</Date> 
+  <ADate>20160205</ADate> 
+  <LinkEv TYPE="Numeric">17</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-0.93</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160209</Date> 
+  <ADate>20160208</ADate> 
+  <LinkEv TYPE="Numeric">18</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-1.04</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160210</Date> 
+  <ADate>20160209</ADate> 
+  <LinkEv TYPE="Numeric">19</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-1.5</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160211</Date> 
+  <ADate>20160210</ADate> 
+  <LinkEv TYPE="Numeric">20</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-2.6</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160212</Date> 
+  <ADate>20160211</ADate> 
+  <LinkEv TYPE="Numeric">21</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-3.23</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160218</Date> 
+  <ADate>20160217</ADate> 
+  <LinkEv TYPE="Numeric">22</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">18.59</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160219</Date> 
+  <ADate>20160218</ADate> 
+  <LinkEv TYPE="Numeric">23</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">5.13</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160222</Date> 
+  <ADate>20160219</ADate> 
+  <LinkEv TYPE="Numeric">24</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-3.31</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160223</Date> 
+  <ADate>20160222</ADate> 
+  <LinkEv TYPE="Numeric">25</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">38.21</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160224</Date> 
+  <ADate>20160223</ADate> 
+  <LinkEv TYPE="Numeric">26</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">10.73</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160225</Date> 
+  <ADate>20160225</ADate> 
+  <LinkEv TYPE="Numeric">27</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">12.78</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160226</Date> 
+  <ADate>20160225</ADate> 
+  <LinkEv TYPE="Numeric">28</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-18.05</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160229</Date> 
+  <ADate>20160226</ADate> 
+  <LinkEv TYPE="Numeric">29</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-11.5</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160303</Date> 
+  <ADate>20160302</ADate> 
+  <LinkEv TYPE="Numeric">30</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-11.95</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160304</Date> 
+  <ADate>20160303</ADate> 
+  <LinkEv TYPE="Numeric">31</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">9.31</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160307</Date> 
+  <ADate>20160304</ADate> 
+  <LinkEv TYPE="Numeric">32</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-19.98</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160308</Date> 
+  <ADate>20160307</ADate> 
+  <LinkEv TYPE="Numeric">33</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">39.55</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160309</Date> 
+  <ADate>20160308</ADate> 
+  <LinkEv TYPE="Numeric">34</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">17.33</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160310</Date> 
+  <ADate>20160309</ADate> 
+  <LinkEv TYPE="Numeric">35</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-27.81</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160311</Date> 
+  <ADate>20160310</ADate> 
+  <LinkEv TYPE="Numeric">36</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-18.42</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160315</Date> 
+  <ADate>20160314</ADate> 
+  <LinkEv TYPE="Numeric">37</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">76.59</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160317</Date> 
+  <ADate>20160316</ADate> 
+  <LinkEv TYPE="Numeric">38</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-28.47</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160322</Date> 
+  <ADate>20160321</ADate> 
+  <LinkEv TYPE="Numeric">39</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-13.18</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160329</Date> 
+  <ADate>20160324</ADate> 
+  <LinkEv TYPE="Numeric">40</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">103.25</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160401</Date> 
+  <ADate>20160331</ADate> 
+  <LinkEv TYPE="Numeric">41</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-30.92</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160404</Date> 
+  <ADate>20160404</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">266715838.31</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160404</Date> 
+  <ADate>20160331</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>FRC</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-0.00244</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric">2</EvStyle> 
+  <BDate>20160331</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160405</Date> 
+  <ADate>20160404</ADate> 
+  <LinkEv TYPE="Numeric">42</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-28.15</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160406</Date> 
+  <ADate>20160405</ADate> 
+  <LinkEv TYPE="Numeric">43</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">1.59</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160408</Date> 
+  <ADate>20160407</ADate> 
+  <LinkEv TYPE="Numeric">44</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">0.58</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160411</Date> 
+  <ADate>20160408</ADate> 
+  <LinkEv TYPE="Numeric">45</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-3.74</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160412</Date> 
+  <ADate>20160411</ADate> 
+  <LinkEv TYPE="Numeric">46</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">5.84</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160414</Date> 
+  <ADate>20160413</ADate> 
+  <LinkEv TYPE="Numeric">47</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-1.78</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160415</Date> 
+  <ADate>20160414</ADate> 
+  <LinkEv TYPE="Numeric">48</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-3.91</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160419</Date> 
+  <ADate>20160418</ADate> 
+  <LinkEv TYPE="Numeric">49</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-6.06</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160420</Date> 
+  <ADate>20160419</ADate> 
+  <LinkEv TYPE="Numeric">50</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">23.45</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160421</Date> 
+  <ADate>20160420</ADate> 
+  <LinkEv TYPE="Numeric">51</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-9.71</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160422</Date> 
+  <ADate>20160421</ADate> 
+  <LinkEv TYPE="Numeric">52</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-11.32</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160425</Date> 
+  <ADate>20160422</ADate> 
+  <LinkEv TYPE="Numeric">53</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-6.7</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160426</Date> 
+  <ADate>20160425</ADate> 
+  <LinkEv TYPE="Numeric">54</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-43.89</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160427</Date> 
+  <ADate>20160426</ADate> 
+  <LinkEv TYPE="Numeric">55</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-12.41</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160428</Date> 
+  <ADate>20160427</ADate> 
+  <LinkEv TYPE="Numeric">56</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">6.5</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160429</Date> 
+  <ADate>20160428</ADate> 
+  <LinkEv TYPE="Numeric">57</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-8.16</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160502</Date> 
+  <ADate>20160429</ADate> 
+  <LinkEv TYPE="Numeric">58</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">49.12</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160510</Date> 
+  <ADate>20160509</ADate> 
+  <LinkEv TYPE="Numeric">59</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">48.79</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160511</Date> 
+  <ADate>20160510</ADate> 
+  <LinkEv TYPE="Numeric">60</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-8.5</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160512</Date> 
+  <ADate>20160511</ADate> 
+  <LinkEv TYPE="Numeric">61</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-11.79</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160518</Date> 
+  <ADate>20160517</ADate> 
+  <LinkEv TYPE="Numeric">62</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">112.17</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160519</Date> 
+  <ADate>20160518</ADate> 
+  <LinkEv TYPE="Numeric">63</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">15.62</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160520</Date> 
+  <ADate>20160519</ADate> 
+  <LinkEv TYPE="Numeric">64</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-29.28</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160523</Date> 
+  <ADate>20160520</ADate> 
+  <LinkEv TYPE="Numeric">65</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-63.96</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160525</Date> 
+  <ADate>20160524</ADate> 
+  <LinkEv TYPE="Numeric">66</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">40.33</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160526</Date> 
+  <ADate>20160525</ADate> 
+  <LinkEv TYPE="Numeric">67</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-28.1</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160530</Date> 
+  <ADate>20160527</ADate> 
+  <LinkEv TYPE="Numeric">68</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">49.12</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160531</Date> 
+  <ADate>20160530</ADate> 
+  <LinkEv TYPE="Numeric">69</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">43.87</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160602</Date> 
+  <ADate>20160601</ADate> 
+  <LinkEv TYPE="Numeric">70</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-102.79</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160607</Date> 
+  <ADate>20160607</ADate> 
+  <LinkEv TYPE="Numeric">71</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">30.2</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160610</Date> 
+  <ADate>20160609</ADate> 
+  <LinkEv TYPE="Numeric">72</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">35.3</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160613</Date> 
+  <ADate>20160610</ADate> 
+  <LinkEv TYPE="Numeric">73</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">108.34</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160614</Date> 
+  <ADate>20160613</ADate> 
+  <LinkEv TYPE="Numeric">74</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">123.39</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160616</Date> 
+  <ADate>20160615</ADate> 
+  <LinkEv TYPE="Numeric">75</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-181.85</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160617</Date> 
+  <ADate>20160616</ADate> 
+  <LinkEv TYPE="Numeric">76</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">148.0</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160621</Date> 
+  <ADate>20160620</ADate> 
+  <LinkEv TYPE="Numeric">77</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">105.52</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160623</Date> 
+  <ADate>20160622</ADate> 
+  <LinkEv TYPE="Numeric">78</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">47.29</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160624</Date> 
+  <ADate>20160623</ADate> 
+  <LinkEv TYPE="Numeric">79</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">65.46</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160627</Date> 
+  <ADate>20160624</ADate> 
+  <LinkEv TYPE="Numeric">80</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">323.15</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160628</Date> 
+  <ADate>20160627</ADate> 
+  <LinkEv TYPE="Numeric">81</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">68.07</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160629</Date> 
+  <ADate>20160628</ADate> 
+  <LinkEv TYPE="Numeric">82</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">255.47</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160630</Date> 
+  <ADate>20160629</ADate> 
+  <LinkEv TYPE="Numeric">83</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">34.1</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160701</Date> 
+  <ADate>20160630</ADate> 
+  <LinkEv TYPE="Numeric">84</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">551.93</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160704</Date> 
+  <ADate>20160704</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>NTL</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">262805235.22</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate>SUN</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160704</Date> 
+  <ADate>20160630</ADate> 
+  <LinkEv TYPE="Numeric" /> 
+  <Type>FRC</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-0.00286</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric">2</EvStyle> 
+  <BDate>20160630</BDate> 
+  <CDate>SUN</CDate> 
+  <EventCal /> 
+  <EventBDRule /> 
+  </EVENT>
+- <EVENT>
+  <Date>20160704</Date> 
+  <ADate>20160701</ADate> 
+  <LinkEv TYPE="Numeric">85</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-68.84</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160705</Date> 
+  <ADate>20160704</ADate> 
+  <LinkEv TYPE="Numeric">86</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">237.74</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160707</Date> 
+  <ADate>20160706</ADate> 
+  <LinkEv TYPE="Numeric">87</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">2.98</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160708</Date> 
+  <ADate>20160707</ADate> 
+  <LinkEv TYPE="Numeric">88</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">10.33</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160711</Date> 
+  <ADate>20160708</ADate> 
+  <LinkEv TYPE="Numeric">89</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">-3.1</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160712</Date> 
+  <ADate>20160711</ADate> 
+  <LinkEv TYPE="Numeric">90</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">12.98</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160713</Date> 
+  <ADate>20160712</ADate> 
+  <LinkEv TYPE="Numeric">91</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">18.68</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160714</Date> 
+  <ADate>20160713</ADate> 
+  <LinkEv TYPE="Numeric">92</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">6.52</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160715</Date> 
+  <ADate>20160714</ADate> 
+  <LinkEv TYPE="Numeric">93</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">12.26</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160718</Date> 
+  <ADate>20160715</ADate> 
+  <LinkEv TYPE="Numeric">94</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">17.16</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160719</Date> 
+  <ADate>20160718</ADate> 
+  <LinkEv TYPE="Numeric">95</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">30.65</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160722</Date> 
+  <ADate>20160721</ADate> 
+  <LinkEv TYPE="Numeric">96</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">4.62</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160726</Date> 
+  <ADate>20160725</ADate> 
+  <LinkEv TYPE="Numeric">97</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">14.39</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+- <EVENT>
+  <Date>20160728</Date> 
+  <ADate>20160727</ADate> 
+  <LinkEv TYPE="Numeric">98</LinkEv> 
+  <Type>FEE</Type> 
+  <Ccy>EUR</Ccy> 
+  <Amount TYPE="Numeric">26.24</Amount> 
+  <RiskId /> 
+  <EvStyle TYPE="Numeric" /> 
+  <BDate /> 
+  <CDate /> 
+  <EventCal>TAR</EventCal> 
+  <EventBDRule>MF</EventBDRule> 
+  </EVENT>
+  </Events>
+  <CmdtyQuoteType /> 
+  <INT_DIV_PayDividend>RESET</INT_DIV_PayDividend> 
+  <INT_DIV_HedgeDivRatio TYPE="Numeric">1.0</INT_DIV_HedgeDivRatio> 
+  <INT_RES_AuxDomain /> 
+  <SCHED_Pay_GapDRule /> 
+  <SCHED_Reset_GapDRule /> 
+  <AMORT_Sched_GapDRuleID /> 
+  <AMORT_DRuleID /> 
+  <INT_AVG_Gap>0D</INT_AVG_Gap> 
+  <INT_RES_NTL_Gap>0D</INT_RES_NTL_Gap> 
+  <INT_RES_FX_Gap>0D</INT_RES_FX_Gap> 
+  <SCHED_Pay_Gap>0D</SCHED_Pay_Gap> 
+  <SCHED_Reset_Gap>-2D</SCHED_Reset_Gap> 
+  <AMORT_Sched_Gap /> 
+  <INT_DIV_Gap>0D</INT_DIV_Gap> 
+  <ProductName /> 
+  <AccrualFactors /> 
+  <STUB_StartCal>TAR</STUB_StartCal> 
+  <STUB_EndCal>TAR</STUB_EndCal> 
+  <STUB_StartSource1 /> 
+  <STUB_StartSource2 /> 
+  <STUB_EndSource1 /> 
+  <STUB_EndSource2 /> 
+  <INT_InterimRound /> 
+  <INT_InterimRoundDP TYPE="Numeric" /> 
+  <INT_RES_ConvRound /> 
+  <INT_RES_ConvRoundDP TYPE="Numeric" /> 
+  <INT_RES_PaymentReset /> 
+  <INT_RES_CutOffDays TYPE="Numeric" /> 
+  <INT_RES_NTL_PaymentReset /> 
+  <INT_RES_NTL_CutOffDays TYPE="Numeric" /> 
+  <INT_RES_FX_PaymentReset /> 
+  <INT_RES_FX_CutOffDays TYPE="Numeric" /> 
+  <INTEREST_OrgIndex /> 
+  <INTEREST_OrgCcy /> 
+  <INTEREST_OrgSource /> 
+  <OrigMatDate /> 
+  <GapDateRoll /> 
+  <INT_ACC_UseProj /> 
+  <FinNtlExchCal /> 
+  <FinCalAtPay /> 
+  <Deliverable /> 
+  <INT_RES_DorF /> 
+  <PayMethod /> 
+  <RedemFormula TYPE="EntList" SINGLE="N" /> 
+  <RedemProductName /> 
+  <CfRound /> 
+  <CfRoundDP TYPE="Numeric" /> 
+  <INTEREST_Method /> 
+  <DENOM_Type /> 
+  <DENOM_Amount TYPE="Numeric" /> 
+  <DENOM_Round /> 
+  <DENOM_RoundDP TYPE="Numeric" /> 
+  <INT_ACC_RateType /> 
+  <LoanIntRule /> 
+  <LoanBasis /> 
+  <LoanRate TYPE="Numeric">0.0</LoanRate> 
+  <LoanStubType /> 
+  <LoanNtlAmortType /> 
+  <PayEvents TYPE="EntList" SINGLE="N" /> 
+  <AdjFstXNL /> 
+  <FreqDecompType /> 
+  <FreqDecompFreq /> 
+  <StubFreqDecompType /> 
+  <StubFreqDecompFreq /> 
+  <STUB_IgnoreHalfPeriodRule /> 
+  <BusMatDate /> 
+  <INTEREST_IntRateType>FLT</INTEREST_IntRateType> 
+  <ROLL_RolloverStatus /> 
+  <NotionalDaysGap /> 
+  <NotionalGapDRuleID /> 
+  <UseIntPayGapRules /> 
+  <CompSource /> 
+  <INT_RES_RollWeekly /> 
+  <INT_ACC_DorF /> 
+  <INT_ACC_Round /> 
+  <INT_ACC_DP TYPE="Numeric">-200000</INT_ACC_DP> 
+  <SchedType /> 
+  <CompPayoffRate /> 
+  <INT_RES_AdjPayment>N</INT_RES_AdjPayment> 
+  <ProdData TYPE="EntList" SINGLE="Y" /> 
+  <RedemProdData TYPE="EntList" SINGLE="Y" /> 
+  </ASSET>
+  </Assets>
+  <SDTradeLink TYPE="EntList" SINGLE="Y" /> 
+  <Break TYPE="EntList" SINGLE="Y" /> 
+  <TradeCorpActList TYPE="EntList" SINGLE="N" /> 
+  <TradeLinkList TYPE="EntList" SINGLE="N" /> 
+  <CollateralLinkList TYPE="EntList" SINGLE="N" /> 
+  </EXOTIC>
+  <AuditLogDescription /> 
+- <TRADEINFO>
+  <Description>EXOTIC 825631DCOMMERZBK_FT 16DEC15 VER</Description> 
+  <Termination /> 
+  <Exercise /> 
+  <StatsCleared>true</StatsCleared> 
+  <VALUATION /> 
+  </TRADEINFO>
+  <IsExternalChildTrade>N</IsExternalChildTrade> 
+  <ParentTradeType>None</ParentTradeType> 
+  <IsMirrorWinAccessible>N</IsMirrorWinAccessible> 
+  <MirrorWinAccessComments>[This trade is not mirrored]</MirrorWinAccessComments> 
+  <IsCreateMirrorWinAccessible>Y</IsCreateMirrorWinAccessible> 
+  <CreateMirrorWinAccessComments /> 
+  <DiaryExists>N</DiaryExists> 
+  <IsCopyTradeAvailable>Y</IsCopyTradeAvailable> 
+  <CanImply>Y</CanImply> 
+- <TradeIndicator>
+  <State /> 
+- <DescList>
+- <Description>
+  <ID>Trade Diary</ID> 
+  <Summary>NO</Summary> 
+  <Details>NO</Details> 
+  </Description>
+- <Description>
+  <ID>Pay</ID> 
+  <Summary>Disc EURDE AMORT FEE</Summary> 
+  <Details>Disc EURDE AMORT FEE</Details> 
+  </Description>
+- <Description>
+  <ID>Receive</ID> 
+  <Summary>RARR A360 Disc EURDE AMORT FEE</Summary> 
+  <Details>RARR A360 Disc EURDE AMORT FEE</Details> 
+  </Description>
+- <Description>
+  <ID>Pay</ID> 
+  <Summary>Disc EURDE AMORT FEE</Summary> 
+  <Details>Disc EURDE AMORT FEE</Details> 
+  </Description>
+  </DescList>
+  </TradeIndicator>
+- <FinancialData>
+  <DocumentGeneration /> 
+  <PrevFinancialDataChange>Financial data changed by previous STD action.</PrevFinancialDataChange> 
+  <PrevDocumentGeneration /> 
+  </FinancialData>
+  <EnableExternalPrice>N</EnableExternalPrice> 
+- <Products>
+- <Asset>
+- <Interest>
+  <ProductFormulaName /> 
+  <Description /> 
+  </Interest>
+- <Redemption>
+  <ProductFormulaName /> 
+  <Description /> 
+  </Redemption>
+  </Asset>
+- <Asset>
+- <Interest>
+  <ProductFormulaName>MAN_EQTR</ProductFormulaName> 
+  <Description>MAN_EQTR(X3A/X3A)</Description> 
+  </Interest>
+- <Redemption>
+  <ProductFormulaName /> 
+  <Description /> 
+  </Redemption>
+  </Asset>
+- <Asset>
+- <Interest>
+  <ProductFormulaName /> 
+  <Description /> 
+  </Interest>
+- <Redemption>
+  <ProductFormulaName /> 
+  <Description /> 
+  </Redemption>
+  </Asset>
+  <ProductOutputs /> 
+  </Products>
+- <ASSETS>
+- <Asset0>
+  <ProdEntry>true</ProdEntry> 
+  <Description>Pay</Description> 
+  <StatsCleared>true</StatsCleared> 
+  <VALUATION /> 
+  </Asset0>
+- <Asset1>
+  <ProdEntry>true</ProdEntry> 
+  <Description>Receive</Description> 
+  <StatsCleared>true</StatsCleared> 
+  <VALUATION /> 
+  </Asset1>
+- <Asset2>
+  <ProdEntry>true</ProdEntry> 
+  <Description>Pay</Description> 
+  <StatsCleared>true</StatsCleared> 
+  <VALUATION /> 
+  </Asset2>
+  </ASSETS>
+  <DispCcy>EUR</DispCcy> 
+- <AssetsList>
+- <Row>
+  <NoCol>1</NoCol> 
+  <IndicatorCol /> 
+  <TypeCol>Pay</TypeCol> 
+- <NotionalCol>
+- <Description>
+  <Amount>246.0M</Amount> 
+  </Description>
+  </NotionalCol>
+- <DetailsCol>
+- <Description>
+  <Rate type="IR" /> 
+  <String>EUR</String> 
+  <String>fixed</String> 
+  <String>ANNU</String> 
+  </Description>
+  </DetailsCol>
+  <IDCol>0</IDCol> 
+  <AssetIDCol>0</AssetIDCol> 
+  </Row>
+- <Row>
+  <NoCol>2</NoCol> 
+  <IndicatorCol /> 
+  <TypeCol>Receive</TypeCol> 
+- <NotionalCol>
+- <Description>
+  <Amount>274.0M</Amount> 
+  </Description>
+  </NotionalCol>
+- <DetailsCol>
+  <Description>MAN_EQTR(X3A/X3A)</Description> 
+  </DetailsCol>
+  <IDCol>1</IDCol> 
+  <AssetIDCol>1</AssetIDCol> 
+  </Row>
+- <Row>
+  <NoCol>3</NoCol> 
+  <IndicatorCol /> 
+  <TypeCol>Pay</TypeCol> 
+- <NotionalCol>
+- <Description>
+  <Amount>270.5M</Amount> 
+  </Description>
+  </NotionalCol>
+- <DetailsCol>
+- <Description>
+  <String>3m</String> 
+  <String>EUR</String> 
+  <String>eur3s</String> 
+  <String>QUAR</String> 
+  </Description>
+  </DetailsCol>
+  <IDCol>2</IDCol> 
+  <AssetIDCol>2</AssetIDCol> 
+  </Row>
+  </AssetsList>
+  </summit_exotic>
+  </ObjectData>
+- <AvailableActions>
+- <Action>
+  <ShortName>CANCEL</ShortName> 
+  <ExternalName>Cancel</ExternalName> 
+  <PrivateMktData>N</PrivateMktData> 
+  <WarningRequired>N</WarningRequired> 
+  </Action>
+- <Action>
+  <ShortName>SAVE</ShortName> 
+  <ExternalName>Save</ExternalName> 
+  <PrivateMktData>N</PrivateMktData> 
+  <WarningRequired>N</WarningRequired> 
+  </Action>
+- <Action>
+  <ShortName>SAVEAS</ShortName> 
+  <ExternalName>Save As</ExternalName> 
+  <PrivateMktData>N</PrivateMktData> 
+  <WarningRequired>N</WarningRequired> 
+  </Action>
+- <Action>
+  <ShortName>SSIASN</ShortName> 
+  <ExternalName>SSI Assignment</ExternalName> 
+  <PrivateMktData>N</PrivateMktData> 
+  <WarningRequired>N</WarningRequired> 
+  </Action>
+- <Action>
+  <ShortName>FTERM</ShortName> 
+  <ExternalName>Full Termination</ExternalName> 
+  <PrivateMktData>N</PrivateMktData> 
+  <WarningRequired>N</WarningRequired> 
+  </Action>
+- <Action>
+  <ShortName>MUNWND</ShortName> 
+  <ExternalName>Mat Unwind</ExternalName> 
+  <PrivateMktData>N</PrivateMktData> 
+  <WarningRequired>N</WarningRequired> 
+  </Action>
+- <Action>
+  <ShortName>PTERM</ShortName> 
+  <ExternalName>Partial Termination</ExternalName> 
+  <PrivateMktData>N</PrivateMktData> 
+  <WarningRequired>N</WarningRequired> 
+  </Action>
+- <Action>
+  <ShortName>PUNWND</ShortName> 
+  <ExternalName>Partial Unwind</ExternalName> 
+  <PrivateMktData>N</PrivateMktData> 
+  <WarningRequired>N</WarningRequired> 
+  </Action>
+- <Action>
+  <ShortName>THYASN</ShortName> 
+  <ExternalName>Their Assignment</ExternalName> 
+  <PrivateMktData>N</PrivateMktData> 
+  <WarningRequired>N</WarningRequired> 
+  </Action>
+- <Action>
+  <ShortName>TRDPRG</ShortName> 
+  <ExternalName>Trade Progress</ExternalName> 
+  <PrivateMktData>N</PrivateMktData> 
+  <WarningRequired>N</WarningRequired> 
+  </Action>
+- <Action>
+  <ShortName>UNWND</ShortName> 
+  <ExternalName>Unwind</ExternalName> 
+  <PrivateMktData>N</PrivateMktData> 
+  <WarningRequired>N</WarningRequired> 
+  </Action>
+- <Action>
+  <ShortName>WEASN</ShortName> 
+  <ExternalName>Our Assignment</ExternalName> 
+  <PrivateMktData>N</PrivateMktData> 
+  <WarningRequired>N</WarningRequired> 
+  </Action>
+  </AvailableActions>
+  <ObjectNameKey>summit_exotic</ObjectNameKey> 
+  </Response>

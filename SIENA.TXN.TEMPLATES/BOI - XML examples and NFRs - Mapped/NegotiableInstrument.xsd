@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="TRANSACTIONS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TRANSACTION">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TABLE">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="RECORD">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="KEYFIELD">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="name" use="required" type="xs:string"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="FIELD" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="name" use="required" type="xs:string"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="name" use="required" type="xs:string"/>
+									<xs:attribute name="classname" use="required" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="type" use="required" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

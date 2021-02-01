@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2017 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="4" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="331" lty="65" rbx="377" rby="83"/>
+					<data>
+						<constant value="0" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="5" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="331" lty="99" rbx="416" rby="117"/>
+					<data>
+						<constant value="HOLDING" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view ltx="331" lty="147" rbx="398" rby="165"/>
+					<data>
+						<constant value="Demo" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="FRN XML" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="189" rby="324"/>
+					<data>
+						<root scrollposition="783">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Response" expanded="1">
+										<entry name="ObjectData" expanded="1">
+											<entry name="summit_bondtrade" expanded="1">
+												<entry name="BOND_TR" expanded="1">
+													<entry name="Env" expanded="1">
+														<entry name="ENV" expanded="1">
+															<entry name="Company" outkey="22"/>
+															<entry name="TradeDate" outkey="23"/>
+														</entry>
+													</entry>
+													<entry name="Back" expanded="1">
+														<entry name="BACK" expanded="1"/>
+													</entry>
+													<entry name="Bond" expanded="1">
+														<entry name="BOND" expanded="1">
+															<entry name="Sec" outkey="8"/>
+															<entry name="ValueDate" outkey="13"/>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="SEC" expanded="1">
+													<entry name="PriceLFORMAT" expanded="1">
+														<entry name="units" outkey="14" expanded="1"/>
+													</entry>
+													<entry name="Ccy" outkey="15"/>
+													<entry name="Rate" outkey="24"/>
+												</entry>
+												<entry name="UNDERLYING" expanded="1">
+													<entry name="SEC" expanded="1">
+														<entry name="Issue" expanded="1">
+															<entry name="SASSET" expanded="1">
+																<entry name="TradeId" outkey="25"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="FRN XML.xsd" inputinstance="FRN XML.xml" outputinstance="FRN XML.xml" instanceroot="{}Response"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="template" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="579" lty="12" rbx="779" rby="344"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Collections" expanded="1">
+										<entry name="Collection" expanded="1">
+											<entry name="DealType" inpkey="26"/>
+											<entry name="ExecType" inpkey="3"/>
+											<entry name="TradeDate" inpkey="27"/>
+											<entry name="ExtRefNo" inpkey="28"/>
+											<entry name="ExternalCustomer" inpkey="29"/>
+											<entry name="Direction" inpkey="4"/>
+											<entry name="Rate" inpkey="30"/>
+											<entry name="DealtCurrency" inpkey="16"/>
+											<entry name="DealtAmount" inpkey="17"/>
+											<entry name="Book" inpkey="5"/>
+											<entry name="ValueDate" inpkey="18"/>
+											<entry name="NI" inpkey="6"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="template.xsd" inputinstance="template.xml" outputinstance="template.xml" instanceroot="{}Collections"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="7" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="31"/>
+					</targets>
+					<view ltx="451" lty="65" rbx="511" rby="83"/>
+					<data>
+						<constant value="FRN" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="4" edgekey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="5" edgekey="10"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="3" edgekey="11"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="6" edgekey="12"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="18" edgekey="19"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="17" edgekey="20"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="16" edgekey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="29" edgekey="32"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="23">
+						<edges>
+							<edge vertexkey="27" edgekey="33"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="30" edgekey="34"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="28" edgekey="35"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="26" edgekey="36"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

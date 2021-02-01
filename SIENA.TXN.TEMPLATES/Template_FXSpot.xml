@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<Collections>
+      <Collection>
+        <DealType>Spot</DealType>
+        <MsgID>{{MSG.ID}}</MsgID>
+        <ExecType>0</ExecType>
+        <TradeDate>{{TODAY}}</TradeDate>
+        <ExtRefNo>{{MSG.ID}}</ExtRefNo>
+        <ExternalCustomer>{{CUSTOMER}}</ExternalCustomer>
+        <Direction>{{DIRECTION}}</Direction>
+        <Rate>{{RATE}}</Rate>
+        <DealtCurrency>{{DEALTCCY}}</DealtCurrency>
+        <AgainstCurrency>{{AGAINSTCCY}}</AgainstCurrency>
+        <DealtAmount>{{AMOUNT}}</DealtAmount>
+        <AgainstAmount></AgainstAmount>
+        <Book>{{BOOK}}</Book>
+        <ValueDate>{{VALUE.DATE.SPOT}}</ValueDate>
+        <Notes>FX{{YYYY}}{{MM}}{{DD}}{{HH}}{{mm}}{{SS}}</Notes>
+        <MandatedUser>{{MANDATED.USER}}</MandatedUser>
+        <LEI>{{LEI}}</LEI>
+      </Collection>
+</Collections>

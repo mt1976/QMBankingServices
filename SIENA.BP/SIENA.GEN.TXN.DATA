@@ -5,7 +5,7 @@ SUBROUTINE SIENA.GEN.TXN.DATA(dataType)
 *         Params : dataType
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210201 at 10.30.55 in DEV by root
+*   Info Updated : 20210201 at 11.21.42 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -165,6 +165,11 @@ PROCESS.ROW:
    ID.RESPONSE = ""
    CALL U_GET.UUID(ID.RESPONSE)
    CALL U_XML.SUBSTITUTE("MSG.ID", ID.RESPONSE, R.NEW.TXN)
+
+   * dummy LEI
+   LEI = @YEAR4:@MONTH:@DAY:"6KQOMMVH":noTransactions'"0"R####'
+   CALL U_XML.SUBSTITUTE("LEI", LEI, R.NEW.TXN)
+
 
    CALL U_CRT.INFO("PROCESSED", thisTransaction:"/":noTransactions:" ":DQUOTE(FP.DESTINATION:"/":ID.RESPONSE))
 *   CALL U_CRT.RECORD(R.NEW.TXN)

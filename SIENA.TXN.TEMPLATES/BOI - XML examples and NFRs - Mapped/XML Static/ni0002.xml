@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xsi:noNamespaceSchemaLocation="file:///C:/Users/mtownsend/Desktop/tlate/NegotiableInstrument.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TRANSACTION type="IMPORT">
+		<TABLE name="NegotiableInstrument" classname="com.eurobase.siena.data.negotiableinstrument.NegotiableInstrument">
+			<RECORD>
+				<KEYFIELD name="name">BFCM_FRN_23/03/17</KEYFIELD>
+				<FIELD name="type">FRN</FIELD>
+				<FIELD name="currency.code">EUR</FIELD>
+				<FIELD name="issuer.firm">Q_UKB_IHJ</FIELD>
+				<FIELD name="issuer.centre">_LO</FIELD>
+				<FIELD name="acceptor.firm"/>
+				<FIELD name="acceptor.centre"/>
+				<FIELD name="issue.date">20150323</FIELD>
+				<FIELD name="maturity.date">20170323</FIELD>
+				<FIELD name="rate.type">LIBOR</FIELD>
+				<FIELD name="coupon.rate"/>
+				<FIELD name="interest.basis">Actual 360</FIELD>
+				<FIELD name="interest.frequency">3m</FIELD>
+				<FIELD name="clearing.system"/>
+				<FIELD name="parent.deal.type">FRN</FIELD>
+				<FIELD name="securityID">XS1206509710</FIELD>
+				<FIELD name="encumbered"/>
+				<FIELD name="marketable"/>
+				<FIELD name="hypothecated"/>
+			</RECORD>
+		</TABLE>
+	</TRANSACTION>
+</TRANSACTIONS>

@@ -1,0 +1,27 @@
+<Collections>
+  <Collection>
+      <DealType>Promissory Note</DealType>
+      <!-- Create = 0,  4 = cancel, 5 = replace -->
+      <ExecType>0</ExecType>
+      <!-- Deal entry date -->
+      <TradeDate>2009-04-06</TradeDate>
+      <!-- External reference number -->
+      <ExtRefNo>NYKMMTESTE01</ExtRefNo>
+      <!-- External customer view -->
+      <ExternalCustomer>030869384</ExternalCustomer>
+      <!-- Direction. HOLDING, SHORT or ISSUE-->
+      <Direction>HOLDING</Direction>
+      <!-- Yield Rate -->
+      <Rate>3</Rate>
+      <!-- Currency -->
+      <DealtCurrency>USD</DealtCurrency>
+      <!-- Amount -->
+      <DealtAmount>+123456.65</DealtAmount>
+	  <!-- An optional Siena book code -->
+      <Book>MM</Book>
+      <!-- Start date -->
+      <ValueDate>2013-07-02</ValueDate>
+	  <!-- Negotiable Instrument name (As in the Siena NegotiableInstrument table) -->
+      <NI>PROM</NI>
+    </Collection>
+</Collections>

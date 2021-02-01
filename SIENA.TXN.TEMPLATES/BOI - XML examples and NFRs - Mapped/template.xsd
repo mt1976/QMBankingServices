@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Collections">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Collection">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DealType" type="xs:string"/>
+							<xs:element name="ExecType" type="xs:string"/>
+							<xs:element name="TradeDate" type="xs:string"/>
+							<xs:element name="ExtRefNo" type="xs:string"/>
+							<xs:element name="ExternalCustomer" type="xs:string"/>
+							<xs:element name="Direction" type="xs:string"/>
+							<xs:element name="Rate" type="xs:string"/>
+							<xs:element name="DealtCurrency" type="xs:string"/>
+							<xs:element name="DealtAmount" type="xs:string"/>
+							<xs:element name="Book" type="xs:string"/>
+							<xs:element name="ValueDate" type="xs:string"/>
+							<xs:element name="NI" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
