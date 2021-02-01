@@ -19,7 +19,7 @@
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210131 at 19.41.36 in DEV by root
+*   Info Updated : 20210201 at 10.13.17 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -34,6 +34,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.NEXT.WORKING.DAY" width="25" />[U_GET.NEXT.WORKING.DAY](../DOCS.PAGE/U_GET.NEXT.WORKING.DAY.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IS.WORKING.DAY" width="25" />[U_IS.WORKING.DAY](../DOCS.PAGE/U_IS.WORKING.DAY.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.PROPERTY" width="25" />[U_IO.GET.PROPERTY](../DOCS.PAGE/U_IO.GET.PROPERTY.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_DATE.ADD" width="25" />[U_DATE.ADD](../DOCS.PAGE/U_DATE.ADD.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
 ### INTERNAL CALLS  
   

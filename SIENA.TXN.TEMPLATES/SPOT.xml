@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<TrdCaptRpt xmlns="http://www.fixprotocol.org/FIXML-5-0-SP1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Bk="{{BOOK}}" Ccy="{{CCY1}}" CntCcy="{{CCY2}}" ExecTyp="0" ExportCat="DEFAULT_CAT" LastMkt="{{PRICE}}" LastPx="{{PRICE}}" LastQty="{{AMOUNT}}" MsgID="{{MSG.ID}}" SettlDt="{{VALUE.DATE.SPOT}}" TrdDt="{{TODAY}}" TrdID="{{MSG.ID}}" TrdID2="{{MSG.ID}}" xsi:schemaLocation="http://www.fixprotocol.org/FIXML-5-0-SP1 fixml-tradecapture-base-5-0-SP1.xsd">
+<TrdCaptRpt xmlns="http://www.fixprotocol.org/FIXML-5-0-SP1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Bk="{{BOOK}}" Ccy="{{CCY1}}" CntCcy="{{CCY2}}" ExecTyp="0" ExportCat="DEFAULT_CAT" LastMkt="{{PRICE}}" LastPx="{{PRICE}}" LastQty="{{AMOUNT}}" MsgID="{{MSG.ID}}" SettlDt="{{VALUE.DATE.1M}}" TrdDt="{{TODAY}}" TrdID="{{MSG.ID}}" TrdID2="{{MSG.ID}}" xsi:schemaLocation="http://www.fixprotocol.org/FIXML-5-0-SP1 fixml-tradecapture-base-5-0-SP1.xsd">
   <Hdr Snt="{{TODAY}}T{{NOW}}"/>
   <Instrmt CFI="FFCPN0" SubTyp="OT" Sym="{{CURRENCY.PAIR}}"/>
   <Undly Desc="SP" Mat="{{VALUE.DATE.SPOT}}" QteBas="0" Sym="{{CURRENCY.PAIR}}"/>

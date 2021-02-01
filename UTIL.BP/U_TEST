@@ -5,7 +5,7 @@ PROGRAM U_TEST
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210131 at 19.41.36 in DEV by root
+*   Info Updated : 20210201 at 10.13.17 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -29,7 +29,11 @@ $INSERT UTIL.BP I_UTIL.H
    CALL U_IO.GET.PROPERTY("util", "cheese", OUTPUT.VAL)
    CALL U_CRT.INFO("util-cheese", OUTPUT.VAL)
 
-
+   *CALL U_DATE.ADD(DATE()+27, "", "", "")
+   *CALL U_DATE.ADD(DATE()+27, 2, "", "")
+   *CALL U_DATE.ADD(DATE()+27, "", 13, "")
+   *CALL U_DATE.ADD(DATE()+27, "", "", 10)
+   CALL U_DATE.ADD(DATE()+27, 3, 2, 1)
    CALL U_STOP("")
    STOP
 END
