@@ -5,7 +5,7 @@
         <MsgID>{{MSG.ID}}</MsgID>
         <ExecType>0</ExecType>
         <TradeDate>{{TODAY}}</TradeDate>
-        <ExtRefNo>{{MSG.ID}}</ExtRefNo>
+        <ExtRefNo>FX{{YYYY}}{{MM}}{{DD}}{{HH}}{{mm}}{{SS}}{{SEQ}}</ExtRefNo>
         <ExternalCustomer>{{CUSTOMER}}</ExternalCustomer>
         <Direction>{{DIRECTION}}</Direction>
         <Rate>{{RATE}}</Rate>
