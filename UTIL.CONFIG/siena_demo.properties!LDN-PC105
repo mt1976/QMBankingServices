@@ -1,10 +1,8 @@
 # This file overrides siena_demo.properties propoerties values
-fundsCheckResponseDest=/home/matt/dbs/mwt-QM-dev/TEMP=
+fundsCheckResponseDest=/mnt/sal-bnk6/sys-3/data/CashBalance_in=
+fundsCheckSource=/mnt/sal-bnk6/sys-3/data/CashBalance_out=
 
-fundsCheckSource=/home/matt/dbs/mwt-QM-dev/TEMP2=
-
-demo_dest_accounts=/home/mwt/mwt-QM-dev/TEMP=
-
-demo_dest_poo=/home/mwt/mwt-QM-dev/TEMP=
-demo_dest_spot=/home/mwt/mwt-QM-dev/TEMP=
-dealImporterDest=/home/mwt/mwt-QM-dev/TEMP=
+demo_dest_accounts=/mnt/sal-bnk6/sys-3/data/deal_import2_in=
+demo_dest_poo=/mnt/sal-bnk6/sys-3/data/deal_import2_in=
+demo_dest_spot=/mnt/sal-bnk6/sys-3/data/deal_import2_in=
+dealImporterDest=/mnt/sal-bnk6/sys-3/data/deal_import2_in=
