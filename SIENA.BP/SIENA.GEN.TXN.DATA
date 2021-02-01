@@ -5,7 +5,7 @@ SUBROUTINE SIENA.GEN.TXN.DATA(dataType)
 *         Params : dataType
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210201 at 11.21.42 in DEV by root
+*   Info Updated : 20210201 at 14.44.36 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -87,6 +87,12 @@ PROCESS.ROW:
          cacheObject=TRIM(substituteData[2, 99])
          CALL SIENA.CACHE.FETCH(cacheObject, substituteData)
       END
+
+      IF substituteData[1, 1]="@" THEN
+         substituteData=searchTag:".":TRIM(substituteData[2, 99])
+         substituteData=SUB$PREFIX:substituteData:SUB$SUFFIX
+      END
+
       CALL U_XML.SUBSTITUTE(searchTag, substituteData, R.NEW.TXN)
    NEXT thisMapping
 *   CALL U_CRT.INFO("START", "WILDCARD MAPPING")

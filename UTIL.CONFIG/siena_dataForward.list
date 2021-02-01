@@ -1,0 +1,18 @@
+#=----------------------------------------------------------------------------=
+#=which machines and db's to update pricing for=
+#=KNOWNAS|IP|DBNAME|Query|Criteria=
+#=In Criteria use ^ in place of '=' - SW will convert automatically.
+MAP=CUSTOMER=1
+MAP=DIRECTION=2
+MAP=RATE=3
+MAP=DEALTCCY=4
+MAP=AGAINSTCCY=5
+MAP=AMOUNT=6
+MAP=BOOK=7
+MAP=MANDATED.USER=8
+MAP=BROKER=9
+MAP=VALUE.DATE=10
+
+DATA=TELIA|Buy|!FX.1W.EURUSD.O|EUR|USD|10000|IMPORT|David J. Kim|IC|@1W=
+DATA=TELIA|Sell|!FX.1M.EURUSD.B|EUR|USD|22000|IMPORT|Default|KV|@1M=
+DATA=ABC|Sell|!FX.2M.EURGBP.B|EUR|GBP|33000|IMPORT|Default|IV|@2M=
