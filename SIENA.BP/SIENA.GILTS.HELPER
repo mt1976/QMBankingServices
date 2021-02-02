@@ -5,7 +5,7 @@ SUBROUTINE SIENA.GILTS.HELPER(PROCESS.NAME)
 *         Params : PROCESS.NAME
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210128 at 12.20.50 in DEV by root
+*   Info Updated : 20210201 at 19.19.01 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -25,6 +25,9 @@ $INCLUDE UTIL.BP F_UTIL.TRANSLATE.H
    FN.SIENA.STAGING = "SIENA.STAGING" ; FV.SIENA.STAGING = ""
    CALL U_IO.OPENFILE(FN.SIENA.STAGING, FV.SIENA.STAGING, STOP.ON.ERROR, ERROR.TEXT)
 
+   FP.dealImporter = "" ; FV.dealImporter = ""
+   CALL U_IO.GET.PROPERTY("siena_demo", "dealImporterDest", FP.dealImporter)
+   CALL U_IO.OPENFILEPATH(FP.dealImporter, FV.dealImporter, STOP.ON.ERROR, ERROR.TEXT)
 
    CALL U_HEADER("SIENA - Gilts")
 
@@ -58,7 +61,7 @@ $INCLUDE UTIL.BP F_UTIL.TRANSLATE.H
    FOR NO.ROW = 6 TO NO.ROWS
       * CALL U_CRT.INFO(ROW.NO,R.SIENA.TEMP<ROW.NO,UKTR_LONG.NAME>)
 
-      CALL U_CRT.INFO("PROGRESS", NO.ROW)
+      CALL U_CRT.INFO("PROGRESS", NO.ROW:"/":NO.ROWS)
       GOSUB DO.PROCESS.ROW
       IF MATURITY.DATE <> "" THEN
          GOSUB DO.CONTRACT.DEFINITION
@@ -68,7 +71,7 @@ $INCLUDE UTIL.BP F_UTIL.TRANSLATE.H
 
    CALL SIENA.XML.FOOTER(XML.REC)
    * CALL U_CRT.RECORD(XML.REC)
-   CALL U_IO.WRITE(FV.SIENA.STAGING, "SDI_NI.xml", XML.REC, STOP.ON.ERROR, ERROR.TEXT)
+   CALL U_IO.WRITE(FV.dealImporter, "SDI_NI.xml", XML.REC, STOP.ON.ERROR, ERROR.TEXT)
    CALL U_IO.WRITE(FV.SIENA.STAGING, "RVNI", PRICE.REC, STOP.ON.ERROR, ERROR.TEXT)
 
    CALL U_STOP(PROCESS.NAME)
@@ -195,26 +198,28 @@ DO.PRICE.INFO:
 *<td class="name">Var % (+/-)</td>
 *<td>
 
-      SEARCH.STRING = '<td class="name">Price&nbsp;(':TRADING.CURRENCY:')</td>'
-
+      *    SEARCH.STRING = '<td class="name">Price&nbsp;(':TRADING.CURRENCY:')</td>'
+      SEARCH.STRING = ' class="price-tag"><!----><!---->'
       *CALL U_CRT.INFO("SEARCH", SEARCH.STRING)
 
       SEARCH.DATA = CHANGE(RETURN.DATA, CHAR(10), "")
       SEARCH.DATA = CHANGE(SEARCH.DATA, @AM, "")
-      SEARCH.DATA = TRIM(CHANGE(SEARCH.DATA, CHAR(13), ""), " ")
+      SEARCH.DATA = CHANGE(SEARCH.DATA, CHAR(13), "")
 
       SEARCH.DATA = CHANGE(SEARCH.DATA, SEARCH.STRING, @AM)
-      SEARCH.DATA<2> = CHANGE(SEARCH.DATA<2>, "<td>", @VM)
-      SEARCH.DATA<2> = CHANGE(SEARCH.DATA<2>, "</td>", @VM)
-      * CALL U_CRT.INFO("EXTRACTPOS", SEARCH.DATA<2, 1>)
-      * CALL U_CRT.INFO("EXTRACTPOS", SEARCH.DATA<2, 2>)
-      * CALL U_CRT.INFO("EXTRACTPOS", SEARCH.DATA<2, 3>)
+      SEARCH.DATA = CHANGE(SEARCH.DATA<2>, "<!----><!----><!---->", @AM)
+      *CALL U_CRT.INFO("SD", "SEARCH DATA")
+      *CALL U_CRT.RECORD(SEARCH.DATA)
 
-      GILT.PRICE = SEARCH.DATA<2, 2>+0
+      GILT.PRICE = SEARCH.DATA<1>+0
       GILT.PRICE = GILT.PRICE"L#11"
       * CALL U_CRT.INFO("PRICE", GILT.PRICE)
 
       PRICE.REC<-1> = LONG.NAME"L#30":"+":GILT.PRICE:"+":GILT.PRICE
+      CALL U_CRT.INFO("PRICEREC", LONG.NAME"L#30":"+":GILT.PRICE:"+":GILT.PRICE)
+      OBJECTNAME="UKG.":ISIN
+      CALL SIENA.CACHE.CLEAR(OBJECTNAME)
+      CALL SIENA.CACHE.UPDATE(OBJECTNAME, LONG.NAME, GILT.PRICE)
 
    END
 

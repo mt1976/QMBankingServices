@@ -1,0 +1,16 @@
+<Collections xsi:noNamespaceSchemaLocation="file:///C:/Users/mtownsend/Desktop/arc/BOI%20-%20XML%20examples%20and%20NFRs/template.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Collection>
+		<DealType>Bond</DealType>
+		<ExecType>0</ExecType>
+		<TradeDate>{{TODAY}}</TradeDate>
+		<ExtRefNo>SC{{YYYY}}{{MM}}{{DD}}{{HH}}{{mm}}{{SS}}{{SEQ}}</ExtRefNo>
+		<ExternalCustomer>{{CUSTOMER}}</ExternalCustomer>
+		<Direction>{{DIRECTION}}</Direction>
+		<Rate>{{RATE}}</Rate>
+		<DealtCurrency>{{DEALTCCY}}</DealtCurrency>
+		<DealtAmount>{{AMOUNT}}</DealtAmount>
+		<Book>{{BOOK}}</Book>
+		<ValueDate>{{VALUE.DATE}}</ValueDate>
+		<NI>{{NI}}</NI>
+	</Collection>
+</Collections>

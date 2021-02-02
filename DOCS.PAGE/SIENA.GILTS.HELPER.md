@@ -22,7 +22,7 @@
 *         Params : PROCESS.NAME
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210128 at 12.20.50 in DEV by root
+*   Info Updated : 20210201 at 19.19.01 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -31,6 +31,8 @@
 ### EXTERNAL CALLS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_START" width="25" />[U_START](../DOCS.PAGE/U_START.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.OPENFILE" width="25" />[U_IO.OPENFILE](../DOCS.PAGE/U_IO.OPENFILE.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.PROPERTY" width="25" />[U_IO.GET.PROPERTY](../DOCS.PAGE/U_IO.GET.PROPERTY.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.OPENFILEPATH" width="25" />[U_IO.OPENFILEPATH](../DOCS.PAGE/U_IO.OPENFILEPATH.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_HEADER" width="25" />[U_HEADER](../DOCS.PAGE/U_HEADER.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.PROPERTY" width="25" />[U_IO.GET.PROPERTY](../DOCS.PAGE/U_IO.GET.PROPERTY.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.CURL" width="25" />[U_OS.CURL](../DOCS.PAGE/U_OS.CURL.md)  
@@ -44,6 +46,9 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.NI.NAME" width="25" />[SIENA.NI.NAME](../DOCS.PAGE/SIENA.NI.NAME.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.XML.FIELD" width="25" />[SIENA.XML.FIELD](../DOCS.PAGE/SIENA.XML.FIELD.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.CURL" width="25" />[U_OS.CURL](../DOCS.PAGE/U_OS.CURL.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.CACHE.CLEAR" width="25" />[SIENA.CACHE.CLEAR](../DOCS.PAGE/SIENA.CACHE.CLEAR.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.CACHE.UPDATE" width="25" />[SIENA.CACHE.UPDATE](../DOCS.PAGE/SIENA.CACHE.UPDATE.md)  
 ### INTERNAL CALLS  
 #### DO.PROCESS.ROW:  
   
