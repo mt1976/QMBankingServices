@@ -2,15 +2,15 @@
 #=which machines and db's to update pricing for=
 #=KNOWNAS|IP|DBNAME|Query|Criteria=
 #=In Criteria use ^ in place of '=' - SW will convert automatically.
-COUNTERPARTY=TITAN|127.0.0.1|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerCounterparty||KeyImportID=
-BOOK=TITAN|127.0.0.1|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerBook||BookName=
-CURRENCY=TITAN|127.0.0.1|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerCurrency||Code=
-PAYMENT.SYSTEM=TITAN|127.0.0.1|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerCounterparty||KeyImportID=
-CURRENCY.PAIR=TITAN|127.0.0.1|ReportingDb_sal_prd_demo_sys-3|SRS.vwRateSourceCurrencyPair||CODE1=
-REASON=TITAN|127.0.0.1|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerReason||Reason=
-PORTFOLIO=TITAN|127.0.0.1|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerPortfolio||Description1=
-USER=TITAN|127.0.0.1|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerUsers||UserName=
-MANDATED.USER=TITAN|127.0.0.1|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerMandatedsUsers||MandatedUserKeyUserName=
-SYSTEM.DATE=TITAN|127.0.0.1|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerSystemDate||CurrentDate=
-BROKER=TITAN|127.0.0.1|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerBrokers||Code=
-RATEFX=TITAN|127.0.0.1|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerBrokers||Code=
+COUNTERPARTY=BNK6|LDN-SRV-BNK6|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerCounterparty||KeyImportID=
+BOOK=BNK6|LDN-SRV-BNK6|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerBook||BookName=
+CURRENCY=BNK6|LDN-SRV-BNK6|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerCurrency||Code=
+PAYMENT.SYSTEM=BNK6|LDN-SRV-BNK6|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerCounterparty||KeyImportID=
+CURRENCY.PAIR=BNK6|LDN-SRV-BNK6|ReportingDb_sal_prd_demo_sys-3|SRS.vwRateSourceCurrencyPair||CODE1=
+REASON=BNK6|LDN-SRV-BNK6|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerReason||Reason=
+PORTFOLIO=BNK6|LDN-SRV-BNK6|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerPortfolio||Description1=
+USER=BNK6|LDN-SRV-BNK6|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerUsers||UserName=
+MANDATED.USER=BNK6|LDN-SRV-BNK6|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerMandatedsUsers||MandatedUserKeyUserName=
+SYSTEM.DATE=BNK6|LDN-SRV-BNK6|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerSystemDate||CurrentDate=
+BROKER=BNK6|LDN-SRV-BNK6|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerBrokers||Code=
+RATEFX=BNK6|LDN-SRV-BNK6|ReportingDb_sal_prd_demo_sys-3|SRS.vwRandomizerBrokers||Code=
