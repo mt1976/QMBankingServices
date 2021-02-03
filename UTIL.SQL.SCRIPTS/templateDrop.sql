@@ -1,0 +1,5 @@
+USE [{{SQL.DB}}]
+GO
+
+DROP VIEW [{{SQL.SCHEMA}}].[{{SQL.VIEW}}]
+GO

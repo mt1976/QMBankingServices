@@ -5,7 +5,7 @@ PROGRAM BCC
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210131 at 19.41.36 in DEV by root
+*   Info Updated : 20210203 at 10.14.43 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -17,6 +17,9 @@ $INCLUDE UTIL.BP I_UTIL.H
    ID.UTIL.CONFIG = "codeHeader.txt" ; HEADER.TXT = ""
 
    CALL U_IO.READ(FV.UTIL.CONFIG, ID.UTIL.CONFIG, HEADER.TXT, STOP.ON.ERROR, ERROR.TEXT)
+
+   isBuildMachine = @FALSE
+   CALL U_BUILD.MACHINE.CHECK(isbuildMachine)
 
    PNM="GIT"
    CALL U_START("BCC")
@@ -76,7 +79,9 @@ DO.IT:
       CALL U_BUILD.INFO.HELPER(FN.SOURCE.FILE, FV.SOURCE.FILE, SOURCE.RECORD.ID, HEADER.TXT)
 
       STMTS = "" ; MSG.TXT = ""
-      STMTS<-1> = "FORMAT ":SOURCE.FILE.AND.RECORD ; MSG.TXT<-1> = "LINT"
+      IF isBuildMachine THEN
+         STMTS<-1> = "FORMAT ":SOURCE.FILE.AND.RECORD ; MSG.TXT<-1> = "LINT"
+      END
       STMTS<-1> = "BASIC ":SOURCE.FILE.AND.RECORD ; MSG.TXT<-1> = "COMPILE"
       STMTS<-1> = "CATALOG ":SOURCE.FILE.AND.RECORD ; MSG.TXT<-1> = "CATALOG"
       *    STMTS<-1> = "U_DOCUMENT.DO ":SOURCE.FILE.AND.RECORD ; MSG.TXT<-1> = "DOCUMENT"
@@ -100,7 +105,7 @@ DO.IT:
       *  CALL U_CRT.INFO("SOURCE.FILE", FN.SOURCE.FILE)
       *  CALL U_CRT.INFO("SOURCE.RECORD.ID", SOURCE.RECORD.ID)
       *  CALL U_CRT.INFO("DO.TYPE", DO.TYPE)
-      IF DO.TYPE <> "" THEN
+      IF DO.TYPE <> "" AND isBuildMachine THEN
          CALL U_CRT.INFO("ACTION", "DOCUMENT")
          CALL U_DOCUMENT.DO.HELPER(FN.SOURCE.FILE, SOURCE.RECORD.ID, DO.TYPE, FV.SOURCE.FILE, "")
       END

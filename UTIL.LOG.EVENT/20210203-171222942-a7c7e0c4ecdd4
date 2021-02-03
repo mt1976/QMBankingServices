@@ -1,0 +1,30 @@
+MSSQL.EXECUTE
+20210203
+17:12:22.02966
+root
+mssql-cli -S TITAN -d ReportingDb_sal_prd_demo_sys-3 -U sql -P sql123 -i /Users/matttownsend/Development/qm/dev/UTIL.SQL.CMD/20210203-171222942-ea5b9dada.sql -o /Users/matttownsend/Development/qm/dev/UTIL.SQL.RESPONSE/20210203-171222942-ea5b9dada.out
+
+USE [ReportingDb_sal_prd_demo_sys-3]
+GO
+0
+U_MSSQL.EXECUTE
+/dev/ttys002
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+SIENA.MSSQL.INSTALL
+mercury.local
+192.168.0.100
+Mac
+17.12.22
+17.12.22
+00.00.00
+U_MSSQL.EXECUTE
+CREATE VIEW [SRS].[vwRandomizerMandatedUsers]
+SIENA.MSSQL.INSTALL
+
+SELECT        MandatedUserKeyUserName
+FROM            RG.MandatedUser
+WHERE        (InternalDeleted IS NULL) AND (Active = 1)}
+
+GO

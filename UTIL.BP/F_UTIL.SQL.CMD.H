@@ -4,7 +4,7 @@
 *       Filename : UTIL.SQL.CMD
 *         Prefix : U_SQLCMD.
 ** AUDIT **********************************************************************
-*   Info Updated : 20210131 at 21.49.59 in DEV by root
+*   Info Updated : 20210203 at 10.06.35 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate U_SQLCMD.FILE.NAME to "UTIL.SQL.CMD"

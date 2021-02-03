@@ -1,0 +1,30 @@
+MSSQL.EXECUTE
+20210203
+17:02:29.02904
+root
+mssql-cli -S TITAN -d ReportingDb_sal_prd_demo_sys-3 -U sql -P sql123 -i /Users/matttownsend/Development/qm/dev/UTIL.SQL.CMD/20210203-170229349-374ba6b4e.sql -o /Users/matttownsend/Development/qm/dev/UTIL.SQL.RESPONSE/20210203-170229349-374ba6b4e.out
+
+USE [ReportingDb_sal_prd_demo_sys-3]
+GO
+0
+U_MSSQL.EXECUTE
+/dev/ttys002
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+SIENA.MSSQL.INSTALL
+mercury.local
+192.168.0.100
+Mac
+17.02.29
+17.02.29
+00.00.00
+U_MSSQL.EXECUTE
+CREATE VIEW [SRS].[vwRandomizerPortfolio]
+SIENA.MSSQL.INSTALL
+
+SELECT        Description1
+FROM            RG.Portfolio
+WHERE        (InternalDeleted IS NULL)}
+
+GO

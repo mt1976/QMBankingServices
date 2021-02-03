@@ -21,7 +21,7 @@
 *         Params : PROCESS.FILE, INSERT.FILE, PREFIX
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210131 at 19.41.36 in DEV by root
+*   Info Updated : 20210203 at 10.14.43 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -34,7 +34,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_BUILDFILES.DICT" width="25" />[U_BUILDFILES.DICT](../DOCS.PAGE/U_BUILDFILES.DICT.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.WRITE" width="25" />[U_IO.WRITE](../DOCS.PAGE/U_IO.WRITE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.EXECUTE" width="25" />[U_OS.EXECUTE](../DOCS.PAGE/U_OS.EXECUTE.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.RECORD" width="25" />[U_CRT.RECORD](../DOCS.PAGE/U_CRT.RECORD.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_BUILD.MACHINE.CHECK" width="25" />[U_BUILD.MACHINE.CHECK](../DOCS.PAGE/U_BUILD.MACHINE.CHECK.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_LOG.EVENT" width="25" />[U_LOG.EVENT](../DOCS.PAGE/U_LOG.EVENT.md)  
 ### INTERNAL CALLS  
   

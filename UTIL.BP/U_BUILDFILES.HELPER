@@ -5,7 +5,7 @@ SUBROUTINE U_BUILDFILES.HELPER(PROCESS.FILE, INSERT.FILE, PREFIX)
 *         Params : PROCESS.FILE, INSERT.FILE, PREFIX
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210131 at 19.41.36 in DEV by root
+*   Info Updated : 20210203 at 10.14.43 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -95,8 +95,12 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
    CALL U_OS.EXECUTE(IT.STMT, @TRUE)
 
 *   CALL U_CRT.INFO("COMPLETE","EQUATES")
-   CALL U_CRT.RECORD(NEW.EQUATES)
-   CALL U_IO.WRITE(FV.INSERT.FILE, ID.INSERT.FILE, NEW.EQUATES, STOP.ON.ERROR, ERROR.TEXT)
+
+   isBuildMachine = @FALSE
+   CALL U_BUILD.MACHINE.CHECK(isbuildMachine)
+   IF isBuildMachine THEN
+      CALL U_IO.WRITE(FV.INSERT.FILE, ID.INSERT.FILE, NEW.EQUATES, STOP.ON.ERROR, ERROR.TEXT)
+   END
 
    R.EVENT = ""
    R.EVENT<U_LOG_EVENT> = "REBUILD"

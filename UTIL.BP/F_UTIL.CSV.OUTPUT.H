@@ -4,7 +4,7 @@
 *       Filename : UTIL.CSV.OUTPUT
 *         Prefix : U_CSVOUT_
 ** AUDIT **********************************************************************
-*   Info Updated : 20210131 at 21.50.00 in DEV by root
+*   Info Updated : 20210203 at 10.06.37 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate U_CSVOUT_FILE.NAME to "UTIL.CSV.OUTPUT"

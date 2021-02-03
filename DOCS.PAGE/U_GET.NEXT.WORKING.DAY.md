@@ -20,13 +20,15 @@
 *         Params : IN.DATE, NEXT.WORKING.DAY
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210131 at 19.41.36 in DEV by root
+*   Info Updated : 20210203 at 10.14.43 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 ```
 ## BODY  
 ### EXTERNAL CALLS  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IS.WORKING.DAY" width="25" />[U_IS.WORKING.DAY](../DOCS.PAGE/U_IS.WORKING.DAY.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_DATE.ADD" width="25" />[U_DATE.ADD](../DOCS.PAGE/U_DATE.ADD.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IS.WORKING.DAY" width="25" />[U_IS.WORKING.DAY](../DOCS.PAGE/U_IS.WORKING.DAY.md)  
 ### INTERNAL CALLS  
   
