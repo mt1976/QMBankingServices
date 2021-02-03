@@ -1,17 +1,5 @@
 HEADER INFORMATION UTIL.BP  
 # INSERTS
-## F_CONV.DATA.H  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_CONV.DATA.H.md)  
-## F_CRM.COMPANY.XREF.H  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_CRM.COMPANY.XREF.H.md)  
-## F_CRM.CONTACTS.H  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_CRM.CONTACTS.H.md)  
-## F_CRM.CONTACTS.XREF.H  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_CRM.CONTACTS.XREF.H.md)  
-## F_CRM.DOMAIN.XREF.H  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_CRM.DOMAIN.XREF.H.md)  
-## F_CRM.FULLNAME.XREF.H  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_CRM.FULLNAME.XREF.H.md)  
 ## F_LOGS.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_LOGS.H.md)  
 ## F_SIENA.CACHE.H  
@@ -24,24 +12,20 @@ HEADER INFORMATION UTIL.BP
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_SIENA.TXN.OUT.H.md)  
 ## F_SIENA.TXN.TEMPLATES.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_SIENA.TXN.TEMPLATES.H.md)  
-## F_UTIL.CSV.IN.H  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.CSV.IN.H.md)  
-## F_UTIL.CSV.OUTPUT.H  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.CSV.OUTPUT.H.md)  
-## F_UTIL.CSV.TRANSLATE.H  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.CSV.TRANSLATE.H.md)  
-## F_UTIL.LOG.CMD.H  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.LOG.CMD.H.md)  
 ## F_UTIL.LOG.EVENT.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.LOG.EVENT.H.md)  
 ## F_UTIL.LOG.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.LOG.H.md)  
+## F_UTIL.REPORTS.H  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.REPORTS.H.md)  
 ## F_UTIL.SCRIPTS.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.SCRIPTS.H.md)  
 ## F_UTIL.SQL.CMD.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.SQL.CMD.H.md)  
 ## F_UTIL.SQL.RESPONSE.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.SQL.RESPONSE.H.md)  
+## F_UTIL.SQL.SCRIPTS.H  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.SQL.SCRIPTS.H.md)  
 ## F_UTIL.TRANSLATE.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.TRANSLATE.H.md)  
 ## I_RATECSV.H  
@@ -57,12 +41,12 @@ HEADER INFORMATION UTIL.BP
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/BATCH.DO.md)  
 ## BCC  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/BCC.md)  
-## CONVERT.WEBM.TO.MP4  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/CONVERT.WEBM.TO.MP4.md)  
 ## GIT  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/GIT.md)  
 ## JOB.DO  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/JOB.DO.md)  
+## REPORT.DO  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/REPORT.DO.md)  
 ## U_BUILD.INFO  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILD.INFO.md)  
 ## U_BUILD.JSON  
@@ -73,10 +57,6 @@ HEADER INFORMATION UTIL.BP
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_CLEARFILES.md)  
 ## U_CREATEFILES  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_CREATEFILES.md)  
-## U_CRM.BUILD.DO  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_CRM.BUILD.DO.md)  
-## U_CSV.DO  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_CSV.DO.md)  
 ## U_DISPLAY  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_DISPLAY.md)  
 ## U_DISPLAY.RAW  
@@ -111,15 +91,15 @@ HEADER INFORMATION UTIL.BP
 ## U_BUILD.INFO.HELPER  
 PARAMETERS : FN.BP, FV.UTIL.BP, ID.UTIL.BP, R.UTIL.CONFIG  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILD.INFO.HELPER.md)  
+## U_BUILD.MACHINE.CHECK  
+PARAMETERS : isBuildMachine  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILD.MACHINE.CHECK.md)  
 ## U_BUILDFILES.DICT  
 PARAMETERS : PROCESS.FILE, DEF.ARRAY  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILDFILES.DICT.md)  
 ## U_BUILDFILES.HELPER  
 PARAMETERS : PROCESS.FILE, INSERT.FILE, PREFIX  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILDFILES.HELPER.md)  
-## U_CRM.BUILD.DO.HELPER  
-PARAMETERS : ID_UTIL.CSV.OUTPUT  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_CRM.BUILD.DO.HELPER.md)  
 ## U_CRT  
 PARAMETERS : TEXT, ITEM.NAME, CALLING.PROCESS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_CRT.md)  
@@ -132,9 +112,12 @@ PARAMETERS : TEXT, ITEM.NAME, CALLING.PROCESS
 ## U_CRT.RECORD  
 PARAMETERS : R.RECORD  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_CRT.RECORD.md)  
-## U_CSV.DO.HELPER  
-PARAMETERS : ID_UTIL.CSV.IN  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_CSV.DO.HELPER.md)  
+## U_CRT.REPORT  
+PARAMETERS : reportID  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_CRT.REPORT.md)  
+## U_DATE.ADD  
+PARAMETERS : baseDate, addDays, addMonths, addYears  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_DATE.ADD.md)  
 ## U_DOCUMENT.DO.HELPER  
 PARAMETERS : FN.ITEM, ID.ITEM, DO.TYPE, FV.ITEM, DOC.DETAIL  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_DOCUMENT.DO.HELPER.md)  
@@ -228,14 +211,20 @@ PARAMETERS : SQL.TABLE, SQL.FIELDS, SQL.VALUES, SQL.DATABASE, VERBOSE
 ## U_MSSQL.SELECT  
 PARAMETERS : SQL.FIELDS, SQL.TABLE, SQL.ADDRESS, SQL.DATABASE, SQL.WHERE, VERBOSE, ID.RESULT, RESULT.COLUMNS, RESULT.DATA, RESULT.COUNT  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_MSSQL.SELECT.md)  
+## U_MSSQL.VIEW.CREATE  
+PARAMETERS : ID.UTIL.SQL.SCRIPTS, SQL.DATABASE, VERBOSE  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_MSSQL.VIEW.CREATE.md)  
+## U_MSSQL.VIEW.DROP  
+PARAMETERS : ID.UTIL.SQL.SCRIPTS, SQL.DATABASE, VERBOSE  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_MSSQL.VIEW.DROP.md)  
 ## U_OS.COMMAND  
 PARAMETERS : STMT, VERBOSE, OUTPUT, SUPPRESS.LOG.EVENT  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_OS.COMMAND.md)  
 ## U_OS.CURL  
-PARAMETERS : URI, VERBOSE, R.UTIL.LOG.CMD, ID.UTIL.LOG.CMD  
+PARAMETERS : URI, VERBOSE, curlResult, spare01  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_OS.CURL.md)  
 ## U_OS.EXECUTE  
-PARAMETERS : STMT, VERBOSE  
+PARAMETERS : STMT, ACTIONS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_OS.EXECUTE.md)  
 ## U_OS.MSGBOX  
 PARAMETERS : MSG.TITLE, MSG.CONTENT, SUPPRESS.LOG.EVENT  
@@ -243,6 +232,9 @@ PARAMETERS : MSG.TITLE, MSG.CONTENT, SUPPRESS.LOG.EVENT
 ## U_OS.WGET  
 PARAMETERS : URI, VERBOSE, RESULT, URI.HEADER  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_OS.WGET.md)  
+## U_REPORT.DO.HELPER  
+PARAMETERS : reportID  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_REPORT.DO.HELPER.md)  
 ## U_RND.BETWEEN  
 PARAMETERS : RANDO, VALUE1, VALUE2  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_RND.BETWEEN.md)  

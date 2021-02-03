@@ -5,7 +5,7 @@ SUBROUTINE U_LOG.EVENT(LOG.DATA, R.UTIL.LOG.EVENT)
 *         Params : LOG.DATA, R.UTIL.LOG.EVENT
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210203 at 10.14.43 in DEV by root
+*   Info Updated : 20210203 at 21.04.00 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -14,18 +14,11 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
 * SLEEP FOR 1 MILLISECOND
 
-
-
    IP4.ADDRESS = ""
    CALL U_GET.IP(IP4.ADDRESS)
 
    ID.UTIL.LOG.EVENT = ""
    CALL U_GET.UUID(ID.UTIL.LOG.EVENT)
-   * IF LOG.DATA <> "" THEN
-   *  CALL U_IO.WRITE(FV.UTIL.LOG.CMD, ID.UTIL.LOG.EVENT, LOG.DATA, STOP.ON.ERROR, ERROR.TEXT)
-   *  R.UTIL.LOG.EVENT<U_LOG_ID> = ID.UTIL.LOG.EVENT
-   * END
-
    IF R.UTIL.LOG.EVENT<U_LOG_EVENT> = "" THEN R.UTIL.LOG.EVENT<U_LOG_EVENT> = "UNKOWN"
    IF R.UTIL.LOG.EVENT<U_LOG_CMD> = "" THEN R.UTIL.LOG.EVENT<U_LOG_CMD> = R.UTIL.LOG.EVENT<U_LOG_MSG>
    IF R.UTIL.LOG.EVENT<U_LOG_MSG> = "" THEN R.UTIL.LOG.EVENT<U_LOG_MSG> = R.UTIL.LOG.EVENT<U_LOG_CMD>

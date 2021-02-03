@@ -15,7 +15,7 @@ COMMON /UTIL/
               U_INITIALISED,
               FN.UTIL.CONFIG, FV.UTIL.CONFIG,
               FN.UTIL.LOG.EVENT, FV.UTIL.LOG.EVENT,
-              FN.UTIL.LOG.CMD, FV.UTIL.LOG.CMD,
               U_PROCESS.START.TIME, U_PROCESS.THREAD.ID,U_LOG.SEQ.NO
 
+* Terminal
 ```
