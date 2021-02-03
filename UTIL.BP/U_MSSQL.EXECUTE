@@ -5,21 +5,22 @@ SUBROUTINE U_MSSQL.EXECUTE(SQL.STATEMENT, SQL.ADDRESS, SQL.DATABASE, VERBOSE, ID
 *         Params : SQL.STATEMENT, SQL.ADDRESS, SQL.DATABASE, VERBOSE, ID_UTIL.SQL.RESPONSE
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210203 at 21.04.00 in DEV by root
+*   Info Updated : 20210203 at 22.59.27 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 $INCLUDE UTIL.BP F_UTIL.SQL.CMD.H
-
+$INCLUDE UTIL.BP F_UTIL.SQL.SCRIPTS.H
+$INCLUDE UTIL.BP F_UTIL.SQL.RESPONSE.H
 
 
 * SQL SERVER
 * -------------------
 * Uses a headless MS SQL server commandline to scrape fully rendered results from MS SQL Server
 * OPEN FILES START
-   FN_UTIL.SQL.CMD = "UTIL.SQL.CMD"
+   FN_UTIL.SQL.CMD = U_SQLCMD.FILE.NAME
    FV_UTIL.SQL.CMD = ""
    FP_UTIL.SQL.CMD = ""
    STOP.ON.ERROR = @TRUE
@@ -27,7 +28,7 @@ $INCLUDE UTIL.BP F_UTIL.SQL.CMD.H
    CALL U_IO.OPENFILE(FN_UTIL.SQL.CMD, FV_UTIL.SQL.CMD, STOP.ON.ERROR, ERROR.TEXT)
    CALL U_OS.FILE.PATH(FV_UTIL.SQL.CMD, FP_UTIL.SQL.CMD)
    CALL U_CRT.INFO(FN_UTIL.SQL.CMD, FP_UTIL.SQL.CMD)
-   FN_UTIL.SQL.RESPONSE = "UTIL.SQL.RESPONSE"
+   FN_UTIL.SQL.RESPONSE = U_SQLREP_FILE.NAME
    FV_UTIL.SQL.RESPONSE = ""
    FP_UTIL.SQL.RESPONSE = ""
    STOP.ON.ERROR = @TRUE

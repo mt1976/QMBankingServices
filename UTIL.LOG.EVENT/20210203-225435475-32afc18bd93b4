@@ -1,0 +1,24 @@
+EXECUTE
+20210203
+22:54:35.77760
+root
+FORMAT UTIL.BP U_IO.GET.LIST
+
+FORMAT UTIL.BP U_IO.GET.LIST
+
+0
+U_OS.EXECUTE
+/dev/ttys002
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC UTIL.BP *
+mercury.local
+192.168.0.100
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

@@ -11,6 +11,8 @@
   
 ## REQUIRES  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="I_UTIL.H" width="25" />[I_UTIL.H](../DOCS.PAGE/I_UTIL.H.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="F_UTIL.SQL.SCRIPTS.H" width="25" />[F_UTIL.SQL.SCRIPTS.H](../DOCS.PAGE/F_UTIL.SQL.SCRIPTS.H.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="F_UTIL.SQL.RESPONSE.H" width="25" />[F_UTIL.SQL.RESPONSE.H](../DOCS.PAGE/F_UTIL.SQL.RESPONSE.H.md)  
     
 ## HEADER INFORMATION  
 ```javascript
@@ -20,7 +22,7 @@
 *         Params : ID.UTIL.SQL.SCRIPTS, SQL.DATABASE, VERBOSE
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210203 at 21.04.00 in DEV by root
+*   Info Updated : 20210203 at 22.55.58 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

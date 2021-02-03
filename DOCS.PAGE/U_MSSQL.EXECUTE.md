@@ -13,6 +13,8 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="I_UTIL.H" width="25" />[I_UTIL.H](../DOCS.PAGE/I_UTIL.H.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="F_UTIL.LOG.EVENT.H" width="25" />[F_UTIL.LOG.EVENT.H](../DOCS.PAGE/F_UTIL.LOG.EVENT.H.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="F_UTIL.SQL.CMD.H" width="25" />[F_UTIL.SQL.CMD.H](../DOCS.PAGE/F_UTIL.SQL.CMD.H.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="F_UTIL.SQL.SCRIPTS.H" width="25" />[F_UTIL.SQL.SCRIPTS.H](../DOCS.PAGE/F_UTIL.SQL.SCRIPTS.H.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="F_UTIL.SQL.RESPONSE.H" width="25" />[F_UTIL.SQL.RESPONSE.H](../DOCS.PAGE/F_UTIL.SQL.RESPONSE.H.md)  
     
 ## HEADER INFORMATION  
 ```javascript
@@ -22,7 +24,7 @@
 *         Params : SQL.STATEMENT, SQL.ADDRESS, SQL.DATABASE, VERBOSE, ID_UTIL.SQL.RESPONSE
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210203 at 21.04.00 in DEV by root
+*   Info Updated : 20210203 at 22.59.27 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
