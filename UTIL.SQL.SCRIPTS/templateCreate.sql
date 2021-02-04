@@ -1,7 +1,6 @@
 USE [{{SQL.DB}}]
 GO
 
-/****** Object:  View [dbo].[vwRateSourceCurrencyPair]    Script Date: 26/08/2020 10:11:54 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -16,7 +15,5 @@ GO
 
 CREATE VIEW [{{SQL.SCHEMA}}].[{{SQL.VIEW}}]
 AS
-
-{{SQL.BODY}}}
-
+{{SQL.BODY}}
 GO
