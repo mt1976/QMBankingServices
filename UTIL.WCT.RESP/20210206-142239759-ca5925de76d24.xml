@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wctResponse>
+  <!-- Request Information -->
+  <requestID>example</requestID>
+  <requestFileName>test.xml</requestFileName>
+  <requestFilePath>/Users/matttownsend/Development/qm/dev/UTIL.WCT.RECV</requestFilePath>
+  <requestFileType>xml</requestFileType>
+  <requestConsumed>20210206T142239</requestConsumed>
+  <requestAction>JOB</requestAction>
+  <requestItem>TONAR</requestItem>
+  <requestParameters></requestParameters>
+  <!-- Response Header -->
+  <responseID>20210206-142239759-ca5925de76d24</responseID>
+  <responseFileName>20210206-142239759-ca5925de76d24.xml</responseFileName>
+  <responseFilePath>/Users/matttownsend/Development/qm/dev/UTIL.WCT.RESP</responseFilePath>
+  <responseFileType>xml</responseFileType>
+  <responseEjected>20210206T142242</responseEjected>
+
+
+
+  <!-- Payload from the Request -->
+  <requestPayload><![CDATA[<?xml version='1.0' encoding='UTF-8'?>
+<wctRequest>
+  <requestID>example</requestID>
+  <requestAction>JOB</requestAction>
+  <requestItem>TONAR</requestItem>
+  <requestParameters></requestParameters>
+</wctRequest>]]></requestPayload>
+</wctResponse>

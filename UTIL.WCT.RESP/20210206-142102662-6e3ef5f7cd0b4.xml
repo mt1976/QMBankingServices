@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wctResponse>
+  <!-- Request Information -->
+  <requestID>example</requestID>
+  <requestFileName>test.xml</requestFileName>
+  <requestFilePath>/Users/matttownsend/Development/qm/dev/UTIL.WCT.RECV</requestFilePath>
+  <requestFileType>xml</requestFileType>
+  <requestConsumed>20210206T142102</requestConsumed>
+  <requestAction>COMPILE</requestAction>
+  <requestItem>SIENA.BP</requestItem>
+  <requestParameters>SIENA.TONAR</requestParameters>
+  <!-- Response Header -->
+  <responseID>20210206-142102662-6e3ef5f7cd0b4</responseID>
+  <responseFileName>20210206-142102662-6e3ef5f7cd0b4.xml</responseFileName>
+  <responseFilePath>/Users/matttownsend/Development/qm/dev/UTIL.WCT.RESP</responseFilePath>
+  <responseFileType>xml</responseFileType>
+  <responseEjected>20210206T142105</responseEjected>
+
+
+
+  <!-- Payload from the Request -->
+  <requestPayload><![CDATA[<?xml version='1.0' encoding='UTF-8'?>
+<wctRequest>
+  <requestID>example</requestID>
+  <requestAction>COMPILE</requestAction>
+  <requestItem>SIENA.BP</requestItem>
+  <requestParameters>SIENA.TONAR</requestParameters>
+</wctRequest>]]></requestPayload>
+</wctResponse>

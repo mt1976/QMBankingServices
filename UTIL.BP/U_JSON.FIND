@@ -1,0 +1,27 @@
+SUBROUTINE U_JSON.FIND(JSON.TAG, JSON.DOC, RESULT)
+** INFORMATION ****************************************************************
+*   Routine Name : U_JSON.FIND
+*           Type : SUBROUTINE
+*         Params : JSON.TAG, JSON.DOC, RESULT
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210206 at 14.12.47 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT UTIL.BP I_UTIL.H
+
+   RESULT = ""
+
+*   CRT JSON.TAG
+*   CRT JSON.DOC
+
+   jsonResult = COLLECTION() ; jsonResult = JPARSE(CHANGE(JSON.DOC, @AM, ""))
+   searchResult = jsonResult{JSON.TAG}
+
+*   CALL U_CRT.INFO(JSON.TAG, searchResult)
+
+   RESULT = searchResult
+
+   RETURN
+END

@@ -1,6 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<wct_response>
+<wctResponse>
+  <!-- Request Information -->
   <requestID>{{requestID}}</requestID>
-  <reponseID>{{responseID}}</responseID>
+  <requestFileName>{{requestFileName}}</requestFileName>
+  <requestFilePath>{{requestFilePath}}</requestFilePath>
+  <requestFileType>{{requestFileType}}</requestFileType>
+  <requestConsumed>{{requestConsumed}}</requestConsumed>
+  <requestAction>{{requestAction}}</requestAction>
+  <requestItem>{{requestItem}}</requestItem>
+  <requestParameters>{{requestParameters}}</requestParameters>
+  <!-- Response Header -->
+  <responseID>{{responseID}}</responseID>
+  <responseFileName>{{responseFileName}}</responseFileName>
+  <responseFilePath>{{responseFilePath}}</responseFilePath>
+  <responseFileType>{{responseFileType}}</responseFileType>
+  <responseEjected>{{responseEjected}}</responseEjected>
+
+
+
+  <!-- Payload from the Request -->
   <requestPayload><![CDATA[{{requestPayload}}]]></requestPayload>
-</wct_response>
+</wctResponse>
