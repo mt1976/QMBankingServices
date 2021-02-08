@@ -5,7 +5,7 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210208 at 17.22.49 in DEV by root
+*   Info Updated : 20210208 at 19.34.40 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -165,6 +165,10 @@ PROCESS.ACTION:
          CALL W_LOGIN(applicationToken, userName, userPassword, sessionToken, responseCode, responseMessage)
          responseStatus = responseCode
          responseContent = responseMessage
+      CASE UPCASE(requestAction) = "LOGOUT"
+         * TODO
+      CASE UPCASE(requestAction) = "SERVICES"
+         CALL W_SERVICES(responseStatus, responseContent)
 
       CASE 1
          GOSUB PROCESS.CLI.COMMAND

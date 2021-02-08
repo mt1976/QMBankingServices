@@ -74,3 +74,7 @@ equate U_CRT_AM               to    "^"
 equate U_CRT_VM               to    "]"
 equate U_CRT_SM               to    "\"
 equate U_SEP_ID               to    "."
+* Response Codes
+equate RS$SUCCESS to 200
+equate RS$FAIL to 300
+equate RS$NO.DATA to 700 
