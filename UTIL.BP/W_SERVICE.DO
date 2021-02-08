@@ -5,7 +5,7 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210208 at 10.43.39 in DEV by root
+*   Info Updated : 20210208 at 17.22.49 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -14,6 +14,7 @@ $INCLUDE UTIL.BP F_UTIL.WCT.RECV.H
 $INCLUDE UTIL.BP F_UTIL.WCT.RESP.H
 $INCLUDE UTIL.BP F_UTIL.WCT.TEMPLATES.H
 $INCLUDE UTIL.BP F_UTIL.WORKFILE.H
+$INCLUDE UTIL.BP F_UTIL.WCT.TOKENS.H
 
    PROCESS.NAME = "W_SERVICE.DO"
    wct_Properties = "wct_connect"
@@ -99,6 +100,10 @@ PROCESS.QUEUE.ITEM:
       requestAction = "" ; searchProperty = "requestAction" ; GOSUB GET.SEARCH.PROPERTY ; requestAction=searchResult
       requestItem = "" ; searchProperty = "requestItem" ; GOSUB GET.SEARCH.PROPERTY ; requestItem=searchResult
       requestParameters = "" ; searchProperty = "requestParameters" ; GOSUB GET.SEARCH.PROPERTY ; requestParameters=searchResult
+      sessionToken = "" ; searchProperty = "sessionToken" ; GOSUB GET.SEARCH.PROPERTY ; sessionToken=searchResult
+      applicationToken = "" ; searchProperty = "appToken" ; GOSUB GET.SEARCH.PROPERTY ; applicationToken=searchResult
+      userName = "" ; searchProperty = "userName" ; GOSUB GET.SEARCH.PROPERTY ; userName=searchResult
+      userPassword = "" ; searchProperty = "userPassword" ; GOSUB GET.SEARCH.PROPERTY ; userPassword=searchResult
 
       responseStatus = ""
       responseContent = ""
@@ -155,6 +160,11 @@ PROCESS.ACTION:
       CASE UPCASE(requestAction) = "TEST"
          responseStatus = "200"
          responseContent<1> = "POO HOLE!"
+      CASE UPCASE(requestAction) = "LOGIN"
+         responseCode = "" ; responseMessage = ""
+         CALL W_LOGIN(applicationToken, userName, userPassword, sessionToken, responseCode, responseMessage)
+         responseStatus = responseCode
+         responseContent = responseMessage
 
       CASE 1
          GOSUB PROCESS.CLI.COMMAND
@@ -272,7 +282,7 @@ GET.REQUEST.ID:
 
 GET.SEARCH.PROPERTY:
 
-   searchID = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, searchProperty, searchID)
+   searchID = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "tag_":searchProperty, searchID)
    searchResult = ""
 
    IF requestFileType = "json" THEN

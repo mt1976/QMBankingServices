@@ -1,0 +1,24 @@
+EXECUTE
+20210208
+17:15:05.86388
+root
+FORMAT UTIL.BP W_SERVICE.DO
+
+FORMAT UTIL.BP W_SERVICE.DO
+
+0
+U_OS.EXECUTE
+/dev/ttys002
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+bcc UTIL.BP W_SERVICE.DO
+mercury.local
+192.168.0.100
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

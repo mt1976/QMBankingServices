@@ -14,6 +14,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="F_UTIL.WCT.RESP.H" width="25" />[F_UTIL.WCT.RESP.H](../DOCS.PAGE/F_UTIL.WCT.RESP.H.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="F_UTIL.WCT.TEMPLATES.H" width="25" />[F_UTIL.WCT.TEMPLATES.H](../DOCS.PAGE/F_UTIL.WCT.TEMPLATES.H.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="F_UTIL.WORKFILE.H" width="25" />[F_UTIL.WORKFILE.H](../DOCS.PAGE/F_UTIL.WORKFILE.H.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="F_UTIL.WCT.TOKENS.H" width="25" />[F_UTIL.WCT.TOKENS.H](../DOCS.PAGE/F_UTIL.WCT.TOKENS.H.md)  
     
 ## HEADER INFORMATION  
 ```javascript
@@ -23,7 +24,7 @@
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210208 at 10.43.39 in DEV by root
+*   Info Updated : 20210208 at 17.22.49 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -42,6 +43,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_XML.SUBSTITUTE" width="25" />[U_XML.SUBSTITUTE](../DOCS.PAGE/U_XML.SUBSTITUTE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.WRITE" width="25" />[U_IO.WRITE](../DOCS.PAGE/U_IO.WRITE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.DELETE" width="25" />[U_IO.DELETE](../DOCS.PAGE/U_IO.DELETE.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="W_LOGIN" width="25" />[W_LOGIN](../DOCS.PAGE/W_LOGIN.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="!FINDPROG" width="25" />[!FINDPROG](../DOCS.PAGE/!FINDPROG.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="@CALLOUT.ROUTINE" width="25" />[@CALLOUT.ROUTINE](../DOCS.PAGE/@CALLOUT.ROUTINE.md)  

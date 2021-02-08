@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wctResponse>
+  <!-- Request Information -->
+  <requestID>example</requestID>
+  <requestFileName>test.json</requestFileName>
+  <requestFilePath>/Users/matttownsend/Development/qm/dev/UTIL.WCT.RECV</requestFilePath>
+  <requestFileType>json</requestFileType>
+  <requestConsumed>20210208T171958</requestConsumed>
+  <requestAction>LOGIN</requestAction>
+  <requestItem>UTIL.BP</requestItem>
+  <requestParameters>U_CRT.INFO</requestParameters>
+  <!-- Response Header -->
+  <responseID>20210208-171958398-ef8eedaf29054</responseID>
+  <responseFileName>20210208-171958398-ef8eedaf29054.xml</responseFileName>
+  <responseFilePath>/Users/matttownsend/Development/qm/dev/UTIL.WCT.RESP</responseFilePath>
+  <responseFileType>xml</responseFileType>
+  <responseEjected>20210208T171958</responseEjected>
+  <!-- Response Data -->
+  <responseContentCount>1</responseContentCount>
+  <responseStatus>300</responseStatus>
+  <responseContent>
+    <responseContentRow>SECURITY VIOLATION</responseContentRow>
+  </responseContent>
+
+  <!-- Payload from the Request -->
+  <requestPayloadCount>10</requestPayloadCount>
+  <!-- Payload Data -->
+  <requestPayload>
+    <requestPayloadRow>{</requestPayloadRow>
+<requestPayloadRow>  &quot;wctRequest&quot;: {</requestPayloadRow>
+<requestPayloadRow>    &quot;applicationToken&quot;: &quot;133ae0e051744715b9a70ee75e46c0a8&quot;,</requestPayloadRow>
+<requestPayloadRow>    &quot;sessionToken&quot;: &quot;&quot;,</requestPayloadRow>
+<requestPayloadRow>    &quot;requestID&quot;: &quot;example&quot;,</requestPayloadRow>
+<requestPayloadRow>    &quot;requestAction&quot;: &quot;LOGIN&quot;,</requestPayloadRow>
+<requestPayloadRow>    &quot;requestItem&quot;: &quot;UTIL.BP&quot;,</requestPayloadRow>
+<requestPayloadRow>    &quot;requestParameters&quot;: &quot;U_CRT.INFO&quot;</requestPayloadRow>
+<requestPayloadRow>  }</requestPayloadRow>
+<requestPayloadRow>}</requestPayloadRow>
+  </requestPayload>
+
+</wctResponse>

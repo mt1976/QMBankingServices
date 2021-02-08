@@ -4,7 +4,7 @@
 *       Filename : UTIL.SCRIPTS
 *         Prefix : U_SCRIPTS.
 ** AUDIT **********************************************************************
-*   Info Updated : 20210207 at 15.50.55 in DEV by root
+*   Info Updated : 20210208 at 16.23.22 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate U_SCRIPTS.FILE.NAME to "UTIL.SCRIPTS"

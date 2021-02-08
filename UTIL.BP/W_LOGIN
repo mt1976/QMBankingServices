@@ -1,0 +1,67 @@
+SUBROUTINE W_LOGIN(applicationToken, userName, userPassword, sessionToken, responseCode, responseMessage)
+** INFORMATION ****************************************************************
+*   Routine Name : W_LOGIN
+*           Type : SUBROUTINE
+*         Params : applicationToken, userName, userPassword, sessionToken, responseCode, responseMessage
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210208 at 17.23.17 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+** INFORMATION ****************************************************************
+*   Routine Name : W_SERVICE.DO
+*           Type : PROGRAM
+*         Params :
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210208 at 10.43.39 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP F_UTIL.WCT.TOKENS.H
+
+   PROCESS.NAME = "W_SERVICE.DO"
+   wct_Properties = "wct_connect"
+
+   CALL U_CRT.INFO("applicationToken", applicationToken)
+   CALL U_CRT.INFO("userName", userName)
+   CALL U_CRT.INFO("userPassword", userPassword)
+   CALL U_CRT.INFO("sessionToken", sessionToken)
+   CALL U_CRT.INFO("responseCode", responseCode)
+   CALL U_CRT.INFO("responseMessage", responseMessage)
+
+   STOP.ON.ERROR = @TRUE ; FV.TOKEN="" ; R.TOKEN=""
+   CALL U_IO.OPENFILE(W$TOKEN.FILE.NAME, FV.TOKEN, STOP.ON.ERROR, "")
+
+   masterAppToken = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "appToken", masterAppToken)
+
+   IF applicationToken = masterAppToken THEN
+
+      R.TOKEN<W$TOKEN.APP.TOKEN> = masterAppToken
+      R.TOKEN<W$TOKEN.CREATE.DATE> = DATE()
+      R.TOKEN<W$TOKEN.CREATE.TIME> = TIME()
+
+      sessionToken = "" ; CALL U_GEN.TOKEN(sessionToken)
+
+      ID.TOKEN = sessionToken
+      CALL U_IO.WRITE(FV.TOKEN, ID.TOKEN, R.TOKEN, STOP.ON.ERROR, ERROR.TEXT)
+
+      responseCode="200"
+      responseMessage=sessionToken
+
+   END ELSE
+      responseCode="300"
+      responseMessage="SECURITY VIOLATION"
+   END
+
+   CALL U_CRT.INFO("applicationToken", applicationToken)
+   CALL U_CRT.INFO("userName", userName)
+   CALL U_CRT.INFO("userPassword", userPassword)
+   CALL U_CRT.INFO("sessionToken", sessionToken)
+   CALL U_CRT.INFO("responseCode", responseCode)
+   CALL U_CRT.INFO("responseMessage", responseMessage)
+
+   RETURN
+END
