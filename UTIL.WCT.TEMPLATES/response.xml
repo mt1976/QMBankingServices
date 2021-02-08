@@ -15,9 +15,18 @@
   <responseFilePath>{{responseFilePath}}</responseFilePath>
   <responseFileType>{{responseFileType}}</responseFileType>
   <responseEjected>{{responseEjected}}</responseEjected>
-
-
+  <!-- Response Data -->
+  <responseContentCount>{{responseContentCount}}</responseContentCount>
+  <responseStatus>{{responseStatus}}</responseStatus>
+  <responseContent>
+    {{responseContent}}
+  </responseContent>
 
   <!-- Payload from the Request -->
-  <requestPayload><![CDATA[{{requestPayload}}]]></requestPayload>
+  <requestPayloadCount>{{requestPayloadCount}}</requestPayloadCount>
+  <!-- Payload Data -->
+  <requestPayload>
+    {{requestPayload}}
+  </requestPayload>
+
 </wctResponse>

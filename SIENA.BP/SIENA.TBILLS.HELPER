@@ -5,7 +5,7 @@ SUBROUTINE SIENA.TBILLS.HELPER(PROCESS.NAME)
 *         Params : PROCESS.NAME
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210203 at 21.04.21 in DEV by root
+*   Info Updated : 20210208 at 09.21.58 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -151,28 +151,28 @@ DO.PRICE:
 DO.CONTRACT:
    XML.REC<-1>="<RECORD>"
 
-   CALL SIENA.XML.FIELD(XML.REC, "KEYFIELD", "name", LONG.NAME)
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "status", "Active")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "type", "TREASURY BILL")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "currencyCode", "USD")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "issuer.firm", "UKTR")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "issuer.centre", "LON")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "acceptor.firm", "")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "acceptor.centre", "")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "issueDate", "")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "maturityDate", "")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "rateType", "Fixed")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "couponRate", RATE)
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "interestBasis", "Actual 365")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "interestFrequency", "None")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "clearingSystem", "")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "parentDealType", "Treasury Bill")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "securityID", fetchSeries)
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "encumbered", "")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "marketable", "")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "hypothecated", "")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "repoFactor", "100.00")
-   CALL SIENA.XML.FIELD(XML.REC, "FIELD", "lotSize", 1)
+   CALL U_BUILD.XML.FIELD(XML.REC, "KEYFIELD", "name", LONG.NAME)
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "status", "Active")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "type", "TREASURY BILL")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "currencyCode", "USD")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "issuer.firm", "UKTR")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "issuer.centre", "LON")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "acceptor.firm", "")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "acceptor.centre", "")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "issueDate", "")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "maturityDate", "")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "rateType", "Fixed")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "couponRate", RATE)
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "interestBasis", "Actual 365")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "interestFrequency", "None")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "clearingSystem", "")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "parentDealType", "Treasury Bill")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "securityID", fetchSeries)
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "encumbered", "")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "marketable", "")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "hypothecated", "")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "repoFactor", "100.00")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "lotSize", 1)
 *CALL U_CRT.RECORD(XML.REC)
    XML.REC<-1>="</RECORD>"
    RETURN

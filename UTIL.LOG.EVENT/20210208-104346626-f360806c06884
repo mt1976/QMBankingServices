@@ -1,0 +1,24 @@
+EXECUTE
+20210208
+10:43:46.85948
+root
+BASIC UTIL.BP U_GIT.LINK.FILE.RAW
+
+BASIC UTIL.BP U_GIT.LINK.FILE.RAW
+
+1
+U_OS.EXECUTE
+/dev/ttys002
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC UTIL.BP *
+mercury.local
+192.168.0.100
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

@@ -4,7 +4,7 @@
 *       Filename : UTIL.TRANSLATE
 *         Prefix : U_TRNS.
 ** AUDIT **********************************************************************
-*   Info Updated : 20210206 at 10.46.26 in DEV by root
+*   Info Updated : 20210207 at 15.50.56 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate U_TRNS.FILE.NAME to "UTIL.TRANSLATE"

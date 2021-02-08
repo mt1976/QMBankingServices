@@ -1,0 +1,20 @@
+SUBROUTINE U_BUILD.JSON.FIELD.REPEATING(JSON.REC, FIELD.DATA)
+** INFORMATION ****************************************************************
+*   Routine Name : U_BUILD.JSON.FIELD.REPEATING
+*           Type : SUBROUTINE
+*         Params : JSON.REC, FIELD.DATA
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210208 at 10.43.39 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT UTIL.BP I_UTIL.H
+
+   IF JSON.REC<> "" THEN
+      JSON.REC:= ","
+   END
+   JSON.REC<-1> = DQUOTE(FIELD.DATA)
+
+   RETURN
+END

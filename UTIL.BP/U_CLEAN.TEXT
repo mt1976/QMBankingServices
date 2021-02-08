@@ -1,0 +1,45 @@
+SUBROUTINE U_CLEAN.TEXT(text)
+** INFORMATION ****************************************************************
+*   Routine Name : U_CLEAN.TEXT
+*           Type : SUBROUTINE
+*         Params : text
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210208 at 10.43.39 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+
+   text = OCONV(text, "HD")
+
+
+   text = CHANGE(text, "[K[H[J", "|")
+   text = CHANGE(text, "[m", "|")
+   text = CHANGE(text, "[K", "|")
+   text = CHANGE(text, "[[1m", "|")
+   text = CHANGE(text, "|1m", "|")
+   text = CHANGE(text, "1m", "|")
+   text = CHANGE(text, "[H[J", "|")
+   text = CHANGE(text, "", "")
+   text = CHANGE(text, @VM, "")
+   text = CHANGE(text, @SM, "")
+
+   text = CHANGE(text, "[", "")
+   text = CHANGE(text, "]", "")
+
+   text = CHANGE(text, @(U_BOLD_ON), "")
+   text = CHANGE(text, @(U_BOLD_OFF), "")
+   text = CHANGE(text, @(U_BLINK_ON), "")
+   text = CHANGE(text, @(U_BLINK_OFF), "")
+   text = CHANGE(text, @(U_REVERSE_ON), "")
+   text = CHANGE(text, @(U_REVERSE_OFF), "")
+   text = CHANGE(text, @(U_UNDERLINE_ON), "")
+   text = CHANGE(text, @(U_UNDERLINE_OFF), "")
+   text = CHANGE(text, @(U_CLEAR_SCREEN), "")
+   text = CHANGE(text, @(U_CLEAR_LINE), "")
+   text = CHANGE(text, @(U_SET_FG_COLOUR), "")
+   text = CHANGE(text, @(U_SET_BG_COLOUR), "")
+
+   RETURN
+END

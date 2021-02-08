@@ -5,7 +5,7 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210206 at 14.18.43 in DEV by root
+*   Info Updated : 20210208 at 10.43.39 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -13,40 +13,40 @@ $INCLUDE UTIL.BP I_UTIL.H
 $INCLUDE UTIL.BP F_UTIL.WCT.RECV.H
 $INCLUDE UTIL.BP F_UTIL.WCT.RESP.H
 $INCLUDE UTIL.BP F_UTIL.WCT.TEMPLATES.H
+$INCLUDE UTIL.BP F_UTIL.WORKFILE.H
 
    PROCESS.NAME = "W_SERVICE.DO"
+   wct_Properties = "wct_connect"
 
-   STOP.ON.ERROR = @TRUE ; FV.RECEIVE="" ; FV.RESPONSE="" ; FV.TEMPLATES = ""
+   STOP.ON.ERROR = @TRUE ; FV.RECEIVE="" ; FV.RESPONSE="" ; FV.TEMPLATES = "" ; FV.REPORTS = ""
 
    CALL U_IO.OPENFILE(W$RECV.FILE.NAME, FV.RECEIVE, STOP.ON.ERROR, "")
    CALL U_IO.OPENFILE(W$RESP.FILE.NAME, FV.RESPONSE, STOP.ON.ERROR, "")
    CALL U_IO.OPENFILE(W$TEMPLATE.FILE.NAME, FV.TEMPLATES, STOP.ON.ERROR, "")
+   CALL U_IO.OPENFILE(U$WRK.FILE.NAME, FV.REPORTS, STOP.ON.ERROR, "")
 
    requestFilePath = "" ; CALL U_OS.FILE.PATH(FV.RECEIVE, requestFilePath)
    responseFilePath = "" ; CALL U_OS.FILE.PATH(FV.RESPONSE, responseFilePath)
-
-   responseType = "" ; CALL U_IO.GET.PROPERTY("connect", "responseType", responseType)
-
-
+   activePath = "" ; CALL U_IO.GET.PROPERTY("util", "path", activePath)
+   responseType = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "responseType", responseType)
    responseTemplate = "" ; responseTemplateID = "response.":responseType
+
    CALL U_IO.READ(FV.TEMPLATES, responseTemplateID, responseTemplate, STOP.ON.ERROR, "")
 
-
-   waitTime = 0 ; CALL U_IO.GET.PROPERTY("connect", "waitTime", waitTime)
-   shutdownChar = 0 ; CALL U_IO.GET.PROPERTY("connect", "shutdownChar", shutdownChar)
+   waitTime = 0 ; CALL U_IO.GET.PROPERTY(wct_Properties, "waitTime", waitTime)
+   shutdownChar = 0 ; CALL U_IO.GET.PROPERTY(wct_Properties, "shutdownChar", shutdownChar)
 
    CALL U_INITIALISE(PROCESS.NAME)
    CALL U_START(PROCESS.NAME)
    CALL U_HEADER(PROCESS.NAME)
 
-   CALL U_CRT.INFO("shutdownChar", shutdownChar:",":upcase(shutdownChar))
+   CALL U_CRT.INFO("QUIT CHAR", shutdownChar:",":upcase(shutdownChar))
 
    breakLoop = @FALSE ; chkVar = ""
    LOOP
    UNTIL breakLoop
 
       GOSUB CHECK.QUEUE
-
 
       INPUT chkVar, 1:_ TIMEOUT waitTime
       IF chkVar = shutdownChar or chkVar = upcase(shutdownChar) THEN
@@ -61,23 +61,25 @@ $INCLUDE UTIL.BP F_UTIL.WCT.TEMPLATES.H
 
 
 CHECK.QUEUE:
+
    STMT = "SELECT ":W$RECV.FILE.NAME:" WITH @ID UNLIKE ":DQUOTE(".keep")
    requestList = "" ; noRequests = 0
    CALL U_GET.LIST(STMT, requestList, noRequests)
-   CALL U_CRT.INFO("REQUESTS", noRequests)
+   * CALL U_CRT.INFO("REQUESTS", noRequests)
    IF noRequests>0 THEN
       FOR requestListItem = 1 TO noRequests
          requestFileName=requestList<requestListItem>
          GOSUB PROCESS.QUEUE.ITEM
       NEXT requestListItem
    END
+
    RETURN
 
 PROCESS.QUEUE.ITEM:
    OK.TO.CONTINUE = @TRUE
-   CALL U_CRT.INFO("REQUEST", requestFileName)
+*   CALL U_CRT.INFO("REQUEST", requestFileName)
    responseID = "" ; CALL U_GET.UUID(responseID) ; responseFileName=responseID:".":responseType
-   CALL U_CRT.INFO("RESPONSE", responseID)
+*   CALL U_CRT.INFO("RESPONSE", responseID)
    request = "" ; response = ""
 
    requestConsumed = "" ; CALL U_GET.EPOCH.DATE(requestConsumed)
@@ -98,6 +100,9 @@ PROCESS.QUEUE.ITEM:
       requestItem = "" ; searchProperty = "requestItem" ; GOSUB GET.SEARCH.PROPERTY ; requestItem=searchResult
       requestParameters = "" ; searchProperty = "requestParameters" ; GOSUB GET.SEARCH.PROPERTY ; requestParameters=searchResult
 
+      responseStatus = ""
+      responseContent = ""
+
       CALL U_XML.SUBSTITUTE("requestFileName", requestFileName, response)
       CALL U_XML.SUBSTITUTE("requestID", requestID, response)
       CALL U_XML.SUBSTITUTE("requestFilePath", requestFilePath, response)
@@ -113,12 +118,22 @@ PROCESS.QUEUE.ITEM:
       CALL U_XML.SUBSTITUTE("responseFilePath", responseFilePath, response)
 
       CALL U_XML.SUBSTITUTE("responseFileType", responseType, response)
-      CALL U_XML.SUBSTITUTE("requestPayload", request, response)
+
+      GOSUB GET.REQUEST.DATA
+
+      CALL U_XML.SUBSTITUTE("requestPayloadCount", requestPayloadCount, response)
+      CALL U_XML.SUBSTITUTE("requestPayload", requestPayload, response)
 
       GOSUB PROCESS.ACTION
 
       responseEjected = "" ; CALL U_GET.EPOCH.DATE(responseEjected)
       CALL U_XML.SUBSTITUTE("responseEjected", responseEjected, response)
+
+      CALL U_XML.SUBSTITUTE("responseContentCount", responseContentCount, response)
+      CALL U_XML.SUBSTITUTE("responseContent", responseContent, response)
+      CALL U_XML.SUBSTITUTE("responseStatus", responseStatus, response)
+
+
       CALL U_IO.WRITE(FV.RESPONSE, responseFileName, response, STOP.ON.ERROR, ERROR.TEXT)
    END
    CALL U_IO.DELETE(FV.RECEIVE, requestFileName, STOP.ON.ERROR, ERROR.TEXT)
@@ -126,9 +141,51 @@ PROCESS.QUEUE.ITEM:
    RETURN
 
 PROCESS.ACTION:
+* SUBRS MUST RETURN responseContent
+   responseContent = ""
+
+   CALL U_CRT.INFO("requestAction", requestAction)
+   CALL U_CRT.INFO("requestItem", requestItem)
+
+
+   BEGIN CASE
+
+      CASE UPCASE(requestAction)[1, 1] = "@"
+         GOSUB PROCESS.CALLOUT
+      CASE UPCASE(requestAction) = "TEST"
+         responseStatus = "200"
+         responseContent<1> = "POO HOLE!"
+
+      CASE 1
+         GOSUB PROCESS.CLI.COMMAND
+
+   END CASE
+
+   GOSUB PROCESS.RESPONSE.CONTENT
+
+   RETURN
+
+PROCESS.CALLOUT:
+   CALLOUT.ROUTINE = "W_SERVICE.":CHANGE(requestAction, "@", "")
+   CALL U_CRT.INFO("EXTERNAL", CALLOUT.ROUTINE)
+
+   fsResult = ""
+   CALL !FINDPROG(fsResult, CALLOUT.ROUTINE)
+   CALL U_CRT.INFO("FINGPROG", fsResult)
+   IF fsResult <> "" THEN
+      CALL @CALLOUT.ROUTINE(requestItem, requestParameters, responseContent, responseStatus)
+   END ELSE
+      responseStatus = "500"
+      responseContent = DQUOTE(CALLOUT.ROUTINE):" cannot be found"
+   END
+
+
+   RETURN
+
+PROCESS.CLI.COMMAND:
    statement = ""
    commandLineAction = ""
-   commandLineAction = "" ; CALL U_IO.GET.PROPERTY("connect", "requestAction$":UPCASE(requestAction), commandLineAction)
+   commandLineAction = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "requestAction$":UPCASE(requestAction), commandLineAction)
    IF commandLineAction <> "" THEN
       statement = commandLineAction
       IF requestItem <> "" THEN
@@ -140,11 +197,60 @@ PROCESS.ACTION:
    END
    IF statement <> "" THEN
       CALL U_CRT.INFO("EXECUTE", statement)
-      CALL U_OS.EXECUTE(statement, @TRUE)
+
+      processExtn = "wct"
+      outputFileName = responseID:U_TRUNC:DOWNCASE(requestAction):".":processExtn
+
+      CMD = ""
+      CMD<1> = "STORE"
+      CMD<2> = activePath:"/":U$WRK.FILE.NAME:"/"
+      CMD<3> = outputFileName
+
+      CALL U_OS.EXECUTE(statement, CMD)
+
+      * GET response Data
+      GOSUB GET.RESPONSE.DATA
 
    END
+   RETURN
+
+GET.RESPONSE.DATA:
+
+   temp_responseContent = "" ; responseContent = ""
+   CALL U_IO.READ(FV.REPORTS, outputFileName, responseContent, @FALSE, "")
+   CALL U_CLEAN.TEXT(responseContent)
+   responseStatus = "200"
+
+   RETURN
+
+PROCESS.RESPONSE.CONTENT:
+   responseContentCount = 100
+   responseContentCount = DCOUNT(responseContent, @AM)
+   temp_responseContent = responseContent ; responseContent = ""
+   FOR I = 1 TO responseContentCount
+      IF responseType = "xml" THEN
+         CALL U_BUILD.XML.FIELD(responseContent, "responseContentRow", "", temp_responseContent<I>)
+      END
+      IF responseType = "json" THEN
+         CALL U_BUILD.JSON.FIELD.REPEATING(responseContent, temp_responseContent<I>)
+      END
+   NEXT I
+   RETURN
 
 
+GET.REQUEST.DATA:
+   requestPayload = ""
+   tmpRequest = request ; CALL U_CLEAN.TEXT(tmpRequest)
+   requestPayloadCount = DCOUNT(tmpRequest, @AM)
+
+   FOR I = 1 TO requestPayloadCount
+      IF responseType = "xml" THEN
+         CALL U_BUILD.XML.FIELD(requestPayload, "requestPayloadRow", "", tmpRequest<I>)
+      END
+      IF responseType = "json" THEN
+         CALL U_BUILD.JSON.FIELD.REPEATING(requestPayload, tmpRequest<I>)
+      END
+   NEXT I
 
    RETURN
 
@@ -155,7 +261,7 @@ GET.REQUEST.ID:
    searchProperty = "requestID"
    GOSUB GET.SEARCH.PROPERTY
    requestID=searchResult
-   CALL U_CRT.INFO("SRCH_RESULT", requestID)
+   * CALL U_CRT.INFO("SRCH_RESULT", requestID)
 
 * If we can't find the request ID in the message use its file/record name.
    IF requestID = "" THEN
@@ -166,7 +272,7 @@ GET.REQUEST.ID:
 
 GET.SEARCH.PROPERTY:
 
-   searchID = "" ; CALL U_IO.GET.PROPERTY("connect", searchProperty, searchID)
+   searchID = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, searchProperty, searchID)
    searchResult = ""
 
    IF requestFileType = "json" THEN

@@ -1,15 +1,30 @@
 {
-  "wctResponse": {
-    "requestID": "{{requestID}}",
-    "requestFileName": "{{requestFileName}}",
-    "requestFilePath": "{{requestFilePath}}",
-    "requestFileType": "{{requestFileType}}",
-    "requestConsumed": "{{requestConsumed}}",
-    "responseID": "{{responseID}}",
-    "responseFileName": "{{responseFileName}}",
-    "responseFilePath": "{{responseFilePath}}",
-    "responseFileType": "{{responseFileType}}",
-    "responseEjected": "{{responseEjected}}",
-    "requestPayload": "{{requestPayload}}"
-  }
+    "wctResponse": {
+        "requestID": "{{requestID}}",
+        "requestFileName": "{{requestFileName}}",
+        "requestFilePath": "{{requestFilePath}}",
+        "requestFileType": "{{requestFileType}}",
+        "requestConsumed": "{{requestConsumed}}",
+        "requestAction": "{{requestAction}}",
+        "requestItem": "{{requestItem}}",
+        "requestParameters": "{{requestParameters}}",
+        "responseID": "{{responseID}}",
+        "responseFileName": "{{responseFileName}}",
+        "responseFilePath": "{{responseFilePath}}",
+        "responseFileType": "{{responseFileType}}",
+        "responseEjected": "{{responseEjected}}",
+        "responseContentCount": "{{responseContentCount}}",
+        "responseStatus": "{{responseStatus}}",
+        "responseContent": {
+            "responseContentRow": [
+              {{responseContent}}
+            ]
+        },
+        "requestPayloadCount": "{{requestPayloadCount}}",
+        "requestPayload": {
+            "requestPayloadRow": [
+              {{requestPayload}}
+            ]
+        }
+    }
 }
