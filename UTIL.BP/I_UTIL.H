@@ -77,4 +77,5 @@ equate U_SEP_ID               to    "."
 * Response Codes
 equate RS$SUCCESS to 200
 equate RS$FAIL to 300
-equate RS$NO.DATA to 700 
+equate RS$NO.DATA to 700
+equate U$ID.SEP                  to    "-"

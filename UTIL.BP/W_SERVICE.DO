@@ -5,7 +5,7 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210209 at 11.18.42 in DEV by root
+*   Info Updated : 20210209 at 12.13.18 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -102,7 +102,7 @@ PROCESS.QUEUE.ITEM:
       requestParameters = "" ; searchProperty = "requestParameters" ; GOSUB GET.SEARCH.PROPERTY ; requestParameters=searchResult
       sessionToken = "" ; searchProperty = "sessionToken" ; GOSUB GET.SEARCH.PROPERTY ; sessionToken=searchResult
       applicationToken = "" ; searchProperty = "appToken" ; GOSUB GET.SEARCH.PROPERTY ; applicationToken=searchResult
-      userName = "" ; searchProperty = "userName" ; GOSUB GET.SEARCH.PROPERTY ; userName=searchResult
+      uniqueID = "" ; searchProperty = "uniqueID" ; GOSUB GET.SEARCH.PROPERTY ; uniqueID=searchResult
       userPassword = "" ; searchProperty = "userPassword" ; GOSUB GET.SEARCH.PROPERTY ; userPassword=searchResult
 
       responseStatus = ""
@@ -162,7 +162,7 @@ PROCESS.ACTION:
          responseContent<1> = "POO HOLE!"
       CASE UPCASE(requestAction) = "LOGIN"
          responseCode = "" ; responseMessage = ""
-         CALL W_LOGIN(applicationToken, userName, userPassword, sessionToken, responseCode, responseMessage)
+         CALL W_SERVICE.LOGIN(applicationToken, uniqueID, "", sessionToken, responseCode, responseMessage)
          responseStatus = responseCode
          responseContent = responseMessage
       CASE UPCASE(requestAction) = "LOGOUT"

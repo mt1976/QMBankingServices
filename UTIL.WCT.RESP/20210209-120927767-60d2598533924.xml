@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wctResponse>
+  <!-- Request Information -->
+  <requestID>example</requestID>
+  <requestFileName>test.xml</requestFileName>
+  <requestFilePath>/Users/matttownsend/Development/qm/dev/UTIL.WCT.RECV</requestFilePath>
+  <requestFileType>xml</requestFileType>
+  <requestConsumed>20210209T120927</requestConsumed>
+  <requestAction>LOGIN</requestAction>
+  <requestItem></requestItem>
+  <requestParameters></requestParameters>
+  <!-- Response Header -->
+  <responseID>20210209-120927767-60d2598533924</responseID>
+  <responseFileName>20210209-120927767-60d2598533924.xml</responseFileName>
+  <responseFilePath>/Users/matttownsend/Development/qm/dev/UTIL.WCT.RESP</responseFilePath>
+  <responseFileType>xml</responseFileType>
+  <responseEjected>20210209T120927</responseEjected>
+  <!-- Response Data -->
+  <responseContentCount>1</responseContentCount>
+  <responseStatus>200</responseStatus>
+  <responseContent>
+    <responseContentRow>a5cd1368ff9848f38fc2889d74e13905</responseContentRow>
+  </responseContent>
+
+  <!-- Payload from the Request -->
+  <requestPayloadCount>10</requestPayloadCount>
+  <!-- Payload Data -->
+  <requestPayload>
+    <requestPayloadRow>&lt;?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39;?&gt;</requestPayloadRow>
+<requestPayloadRow>&lt;wctRequest&gt;</requestPayloadRow>
+<requestPayloadRow>  &lt;appToken&gt;133ae0e051744715b9a70ee75e46c0a8&lt;/appToken&gt;</requestPayloadRow>
+<requestPayloadRow>  &lt;sessionToken&gt;&lt;/sessionToken&gt;</requestPayloadRow>
+<requestPayloadRow>  &lt;requestID&gt;example&lt;/requestID&gt;</requestPayloadRow>
+<requestPayloadRow>  &lt;requestAction&gt;LOGIN&lt;/requestAction&gt;</requestPayloadRow>
+<requestPayloadRow>  &lt;requestItem&gt;&lt;/requestItem&gt;</requestPayloadRow>
+<requestPayloadRow>  &lt;requestParameters&gt;&lt;/requestParameters&gt;</requestPayloadRow>
+<requestPayloadRow>  &lt;uniqueID&gt;3141592&lt;/uniqueID&gt;</requestPayloadRow>
+<requestPayloadRow>&lt;/wctRequest&gt;</requestPayloadRow>
+  </requestPayload>
+
+</wctResponse>

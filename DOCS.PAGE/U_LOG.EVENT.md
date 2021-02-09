@@ -21,7 +21,7 @@
 *         Params : LOG.DATA, R.UTIL.LOG.EVENT
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210209 at 11.18.42 in DEV by root
+*   Info Updated : 20210209 at 12.13.18 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

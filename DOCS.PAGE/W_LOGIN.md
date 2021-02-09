@@ -5,7 +5,7 @@
 |TYPE|SUBROUTINE|
 |SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="UTIL.BP" width="25" />[UTIL.BP](../DOCS/UTIL.BP.md)|
 |ID|W_LOGIN|
-|PARAMETERS|applicationToken, userName, userPassword, sessionToken, responseCode, responseMessage|
+|PARAMETERS|applicationToken, uniqueID, spare01, sessionToken, responseCode, responseMessage|
     
 ## USAGE  
   
@@ -18,10 +18,10 @@
 ** INFORMATION ****************************************************************
 *   Routine Name : W_LOGIN
 *           Type : SUBROUTINE
-*         Params : applicationToken, userName, userPassword, sessionToken, responseCode, responseMessage
+*         Params : applicationToken, uniqueID, spare01, sessionToken, responseCode, responseMessage
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210209 at 11.18.42 in DEV by root
+*   Info Updated : 20210209 at 12.09.10 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
