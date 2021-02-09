@@ -82,15 +82,6 @@ PARAMETERS : PROCESS.NAME
 ## SIENA.CACHE_DATE.HELPER  
 PARAMETERS : PROCESS.NAME  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.CACHE_DATE.HELPER.md)  
-## SIENA.CACHE_FXBID.HELPER  
-PARAMETERS : PROCESS.NAME  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.CACHE_FXBID.HELPER.md)  
-## SIENA.CACHE_FXMID.HELPER  
-PARAMETERS : PROCESS.NAME  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.CACHE_FXMID.HELPER.md)  
-## SIENA.CACHE_FXOFFER.HELPER  
-PARAMETERS : PROCESS.NAME  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.CACHE_FXOFFER.HELPER.md)  
 ## SIENA.CACHE_MANDATED.HELPER  
 PARAMETERS : PROCESS.NAME  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.CACHE_MANDATED.HELPER.md)  
@@ -193,9 +184,6 @@ PARAMETERS : PROCESS.NAME
 ## SIENA.TONAR.HELPER  
 PARAMETERS : processName  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.TONAR.HELPER.md)  
-## SIENA.XML.FIELD  
-PARAMETERS : XML.REC, FIELD.TYPE, FIELD.NAME, FIELD.DATA  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.XML.FIELD.md)  
 ## SIENA.XML.FOOTER  
 PARAMETERS : XML.REC  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.XML.FOOTER.md)  

@@ -20,7 +20,7 @@
 *         Params : dataType
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210208 at 09.21.58 in DEV by root
+*   Info Updated : 20210209 at 11.19.11 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -38,7 +38,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.READ" width="25" />[U_IO.READ](../DOCS.PAGE/U_IO.READ.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_RND.BETWEEN" width="25" />[U_RND.BETWEEN](../DOCS.PAGE/U_RND.BETWEEN.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.CACHE.FETCH" width="25" />[SIENA.CACHE.FETCH](../DOCS.PAGE/SIENA.CACHE.FETCH.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_XML.SUBSTITUTE" width="25" />[U_XML.SUBSTITUTE](../DOCS.PAGE/U_XML.SUBSTITUTE.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_WILDCARD.SUBSTITUTE" width="25" />[U_WILDCARD.SUBSTITUTE](../DOCS.PAGE/U_WILDCARD.SUBSTITUTE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.NEXT.WORKING.DAY" width="25" />[U_GET.NEXT.WORKING.DAY](../DOCS.PAGE/U_GET.NEXT.WORKING.DAY.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_DATE.ADD" width="25" />[U_DATE.ADD](../DOCS.PAGE/U_DATE.ADD.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.NEXT.WORKING.DAY" width="25" />[U_GET.NEXT.WORKING.DAY](../DOCS.PAGE/U_GET.NEXT.WORKING.DAY.md)  

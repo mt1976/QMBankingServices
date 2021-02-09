@@ -1,0 +1,24 @@
+EXECUTE
+20210209
+11:19:21.87118
+root
+CATALOG SIENA.BP SIENA.RUN.SCRIPT
+
+CATALOG SIENA.BP SIENA.RUN.SCRIPT
+
+0
+U_OS.EXECUTE
+/dev/ttys002
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC SIENA.BP * NOPAGE
+mercury.local
+192.168.0.100
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

@@ -22,7 +22,7 @@
 *         Params : processName, indexID
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210208 at 09.21.58 in DEV by root
+*   Info Updated : 20210209 at 11.19.11 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -33,7 +33,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.OPENFILE" width="25" />[U_IO.OPENFILE](../DOCS.PAGE/U_IO.OPENFILE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.PROPERTY" width="25" />[U_IO.GET.PROPERTY](../DOCS.PAGE/U_IO.GET.PROPERTY.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.LIST" width="25" />[U_IO.GET.LIST](../DOCS.PAGE/U_IO.GET.LIST.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_XML.SUBSTITUTE" width="25" />[U_XML.SUBSTITUTE](../DOCS.PAGE/U_XML.SUBSTITUTE.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_WILDCARD.SUBSTITUTE" width="25" />[U_WILDCARD.SUBSTITUTE](../DOCS.PAGE/U_WILDCARD.SUBSTITUTE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.CURL" width="25" />[U_OS.CURL](../DOCS.PAGE/U_OS.CURL.md)  

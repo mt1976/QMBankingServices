@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wctResponse>
+  <!-- Request Information -->
+  <requestID>example</requestID>
+  <requestFileName>test.xml</requestFileName>
+  <requestFilePath>/Users/matttownsend/Development/qm/dev/UTIL.WCT.RECV</requestFilePath>
+  <requestFileType>xml</requestFileType>
+  <requestConsumed>20210209T102814</requestConsumed>
+  <requestAction>SERVICES</requestAction>
+  <requestItem></requestItem>
+  <requestParameters></requestParameters>
+  <!-- Response Header -->
+  <responseID>20210209-102814694-df437f5341164</responseID>
+  <responseFileName>20210209-102814694-df437f5341164.xml</responseFileName>
+  <responseFilePath>/Users/matttownsend/Development/qm/dev/UTIL.WCT.RESP</responseFilePath>
+  <responseFileType>xml</responseFileType>
+  <responseEjected>20210209T102814</responseEjected>
+  <!-- Response Data -->
+  <responseContentCount>34</responseContentCount>
+  <responseStatus>200</responseStatus>
+  <responseContent>
+    <responseContentRow>Funds Check</responseContentRow>
+<responseContentRow>ACK|SIENA.FUNDS.CHECK.ACK||NOPAGE|ACK's outstanding funds checks</responseContentRow>
+<responseContentRow>NACK|SIENA.FUNDS.CHECK.NACK||NOPAGE|NACK's funds checks</responseContentRow>
+<responseContentRow>Transaction Generation</responseContentRow>
+<responseContentRow>Accounts|SIENA.GEN.TXNS|ACCOUNTS|NOPAGE|</responseContentRow>
+<responseContentRow>FX Spot|SIENA.GEN.TXNS|SPOT|NOPAGE|</responseContentRow>
+<responseContentRow>FX Forwards|SIENA.GEN.TXNS|FORWARD|NOPAGE|</responseContentRow>
+<responseContentRow>Bonds/UK Gilts|SIENA.GEN.TXNS|BOND|NOPAGE|</responseContentRow>
+<responseContentRow>Scheduled Events</responseContentRow>
+<responseContentRow>Refresh FX Spot|JOB.DO|FXSPOT|NOPAGE|</responseContentRow>
+<responseContentRow>Refresh FX Forwards|JOB.DO|FXFWD|NOPAGE|</responseContentRow>
+<responseContentRow>Libor|JOB.DO|LIBOR|NOPAGE|</responseContentRow>
+<responseContentRow>CPI|JOB.DO|CPI|NOPAGE|</responseContentRow>
+<responseContentRow>FX Currency Pairs|JOB.DO|FXREFRESH|NOPAGE|Fetch active pairs from Siena</responseContentRow>
+<responseContentRow>UK Gilts|SIENA.GILTS||NOPAGE|</responseContentRow>
+<responseContentRow>Data Caches</responseContentRow>
+<responseContentRow>ALL|BATCH.DO|REBUILD.CACHE|NOPAGE|</responseContentRow>
+<responseContentRow>Books|JOB.DO|CACHE_BOOK|NOPAGE|</responseContentRow>
+<responseContentRow>System Date(s)|JOB.DO|CACHE_DATE|NOPAGE|</responseContentRow>
+<responseContentRow>Users|JOB.DO|CACHE_USER|NOPAGE|</responseContentRow>
+<responseContentRow>Mandated Users|JOB.DO|CACHE_MANDATE|NOPAGE|</responseContentRow>
+<responseContentRow>Currency|JOB.DO|CACHE_CURRENCY|NOPAGE|</responseContentRow>
+<responseContentRow>Currency Pairs|JOB.DO|CACHE_CURRENCYPAIR|NOPAGE|</responseContentRow>
+<responseContentRow>Counterparties|JOB.DO|CACHE_CPARTY|NOPAGE|</responseContentRow>
+<responseContentRow>Payment Systems|JOB.DO|CACHE_PSYSTEM|NOPAGE|</responseContentRow>
+<responseContentRow>Portfolios|JOB.DO|CACHE_PORTFOLIO|NOPAGE|</responseContentRow>
+<responseContentRow>Brokers|JOB.DO|CACHE_BROKER|NOPAGE|</responseContentRow>
+<responseContentRow>Queries</responseContentRow>
+<responseContentRow>Spot Prices|SORT|SIENA.CACHE|WITH OBJECT LIKE FX.SP... BY OBJECT OBJECT VALUE ID-SUPP NOPAGE|</responseContentRow>
+<responseContentRow>FX Prices by CCYPAIR|SORT|SIENA.CACHE|WITH OBJECT LIKE FX...<<CCY PAIR>>... BY OBJECT OBJECT VALUE ID-SUPP NOPAGE|</responseContentRow>
+<responseContentRow>Gilts Prices|REPORT.DO|GILTS|NOPAGE|</responseContentRow>
+<responseContentRow>Installation</responseContentRow>
+<responseContentRow>Install MS SQLServer views|JOB.DO|MSSQL.INSTALL|NOPAGE|</responseContentRow>
+<responseContentRow>Rebuild Service Catalog|U_BUILD.SERVICE.CATALOG||NOPAGE|Rebuilds the service catalog</responseContentRow>
+  </responseContent>
+
+  <!-- Payload from the Request -->
+  <requestPayloadCount>9</requestPayloadCount>
+  <!-- Payload Data -->
+  <requestPayload>
+    <requestPayloadRow>&lt;?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39;?&gt;</requestPayloadRow>
+<requestPayloadRow>&lt;wctRequest&gt;</requestPayloadRow>
+<requestPayloadRow>  &lt;appToken&gt;&lt;/appToken&gt;</requestPayloadRow>
+<requestPayloadRow>  &lt;sessionToken&gt;&lt;/sessionToken&gt;</requestPayloadRow>
+<requestPayloadRow>  &lt;requestID&gt;example&lt;/requestID&gt;</requestPayloadRow>
+<requestPayloadRow>  &lt;requestAction&gt;SERVICES&lt;/requestAction&gt;</requestPayloadRow>
+<requestPayloadRow>  &lt;requestItem&gt;&lt;/requestItem&gt;</requestPayloadRow>
+<requestPayloadRow>  &lt;requestParameters&gt;&lt;/requestParameters&gt;</requestPayloadRow>
+<requestPayloadRow>&lt;/wctRequest&gt;</requestPayloadRow>
+  </requestPayload>
+
+</wctResponse>

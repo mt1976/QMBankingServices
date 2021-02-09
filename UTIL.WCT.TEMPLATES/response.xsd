@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="wctResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="requestID" type="xs:string" />
+        <xs:element minOccurs="0" name="requestFileName" type="xs:string" />
+        <xs:element minOccurs="0" name="requestFilePath" type="xs:string" />
+        <xs:element minOccurs="0" name="requestFileType" type="xs:string" />
+        <xs:element minOccurs="0" name="requestConsumed" type="xs:string" />
+        <xs:element minOccurs="0" name="requestAction" type="xs:string" />
+        <xs:element minOccurs="0" name="requestItem" type="xs:string" />
+        <xs:element minOccurs="0" name="requestParameters" type="xs:string" />
+        <xs:element minOccurs="0" name="responseID" type="xs:string" />
+        <xs:element minOccurs="0" name="responseFileName" type="xs:string" />
+        <xs:element minOccurs="0" name="responseFilePath" type="xs:string" />
+        <xs:element minOccurs="0" name="responseFileType" type="xs:string" />
+        <xs:element minOccurs="0" name="responseEjected" type="xs:string" />
+        <xs:element minOccurs="0" name="responseContentCount" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="responseStatus" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="responseContent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="responseContentRow" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="requestPayloadCount" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="requestPayload">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="requestPayloadRow" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

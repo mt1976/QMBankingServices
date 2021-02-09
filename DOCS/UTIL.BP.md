@@ -6,18 +6,18 @@ HEADER INFORMATION UTIL.BP
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_SIENA.CACHE.H.md)  
 ## F_SIENA.DEST.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_SIENA.DEST.H.md)  
+## F_SIENA.IN.H  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_SIENA.IN.H.md)  
 ## F_SIENA.PROCESSED.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_SIENA.PROCESSED.H.md)  
+## F_SIENA.TEMP.H  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_SIENA.TEMP.H.md)  
 ## F_SIENA.TXN.OUT.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_SIENA.TXN.OUT.H.md)  
 ## F_SIENA.TXN.TEMPLATES.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_SIENA.TXN.TEMPLATES.H.md)  
 ## F_UTIL.LOG.EVENT.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.LOG.EVENT.H.md)  
-## F_UTIL.LOG.H  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.LOG.H.md)  
-## F_UTIL.WORKFILE.H  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.WORKFILE.H.md)  
 ## F_UTIL.SCRIPTS.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.SCRIPTS.H.md)  
 ## F_UTIL.SQL.CMD.H  
@@ -28,14 +28,22 @@ HEADER INFORMATION UTIL.BP
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.SQL.SCRIPTS.H.md)  
 ## F_UTIL.TRANSLATE.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.TRANSLATE.H.md)  
+## F_UTIL.WCT.RECV.H  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.WCT.RECV.H.md)  
+## F_UTIL.WCT.RESP.H  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.WCT.RESP.H.md)  
+## F_UTIL.WCT.TEMPLATES.H  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.WCT.TEMPLATES.H.md)  
+## F_UTIL.WCT.TOKENS.H  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.WCT.TOKENS.H.md)  
+## F_UTIL.WORKFILE.H  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.WORKFILE.H.md)  
 ## I_RATECSV.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/I_RATECSV.H.md)  
 ## I_UKTREASURY.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/I_UKTREASURY.H.md)  
 ## I_UTIL.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/I_UTIL.H.md)  
-## I_UTIL.SQL.CMD.H  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/I_UTIL.SQL.CMD.H.md)  
 # PROGRAMS
 ## BATCH.DO  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/BATCH.DO.md)  
@@ -51,6 +59,8 @@ HEADER INFORMATION UTIL.BP
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILD.INFO.md)  
 ## U_BUILD.JSON  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILD.JSON.md)  
+## U_BUILD.SERVICE.CATALOG  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILD.SERVICE.CATALOG.md)  
 ## U_BUILDFILES  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILDFILES.md)  
 ## U_CLEARFILES  
@@ -87,19 +97,30 @@ HEADER INFORMATION UTIL.BP
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_TEST2.md)  
 ## U_TEST3  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_TEST3.md)  
+## W_SERVICE.DO  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.DO.md)  
 # SUBROUTINES
 ## U_BUILD.INFO.HELPER  
 PARAMETERS : FN.BP, FV.UTIL.BP, ID.UTIL.BP, R.UTIL.CONFIG  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILD.INFO.HELPER.md)  
+## U_BUILD.JSON.FIELD.REPEATING  
+PARAMETERS : JSON.REC, FIELD.DATA  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILD.JSON.FIELD.REPEATING.md)  
 ## U_BUILD.MACHINE.CHECK  
 PARAMETERS : isBuildMachine  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILD.MACHINE.CHECK.md)  
+## U_BUILD.XML.FIELD  
+PARAMETERS : XML.REC, FIELD.TYPE, FIELD.NAME, FIELD.DATA  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILD.XML.FIELD.md)  
 ## U_BUILDFILES.DICT  
 PARAMETERS : PROCESS.FILE, DEF.ARRAY  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILDFILES.DICT.md)  
 ## U_BUILDFILES.HELPER  
 PARAMETERS : PROCESS.FILE, INSERT.FILE, PREFIX  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILDFILES.HELPER.md)  
+## U_CLEAN.TEXT  
+PARAMETERS : text  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_CLEAN.TEXT.md)  
 ## U_CRT  
 PARAMETERS : TEXT, ITEM.NAME, CALLING.PROCESS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_CRT.md)  
@@ -121,6 +142,9 @@ PARAMETERS : baseDate, addDays, addMonths, addYears
 ## U_DOCUMENT.DO.HELPER  
 PARAMETERS : FN.ITEM, ID.ITEM, DO.TYPE, FV.ITEM, DOC.DETAIL  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_DOCUMENT.DO.HELPER.md)  
+## U_GEN.TOKEN  
+PARAMETERS : tokenValue  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_GEN.TOKEN.md)  
 ## U_GET.CALLING.PROCESS.NAME  
 PARAMETERS : CALLING.SUBR, THIS.CALL.STACK, THIS.PARENT  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_GET.CALLING.PROCESS.NAME.md)  
@@ -196,6 +220,9 @@ PARAMETERS : IN.DATE, IS.WORKING.DAY
 ## U_JOB.DO.HELPER  
 PARAMETERS : DO.ITEM  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_JOB.DO.HELPER.md)  
+## U_JSON.FIND  
+PARAMETERS : JSON.TAG, JSON.DOC, RESULT  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_JSON.FIND.md)  
 ## U_LOG.EVENT  
 PARAMETERS : LOG.DATA, R.UTIL.LOG.EVENT  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_LOG.EVENT.md)  
@@ -250,10 +277,19 @@ PARAMETERS : THIS.PROCESS
 ## U_TRANSLATE  
 PARAMETERS : TYPE, IN.TEXT, FIELD.NO, OUT.TEXT  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_TRANSLATE.md)  
+## U_WILDCARD.SUBSTITUTE  
+PARAMETERS : SUBS.REPLACE, SUBS.VALUE, XML.DOC  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_WILDCARD.SUBSTITUTE.md)  
 ## U_XML.FIND  
 PARAMETERS : XML.TAG, XML.DOC, RESULT  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_XML.FIND.md)  
-## U_XML.SUBSTITUTE  
-PARAMETERS : SUBS.REPLACE, SUBS.VALUE, XML.DOC  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_XML.SUBSTITUTE.md)  
+## W_LOGIN  
+PARAMETERS : applicationToken, userName, userPassword, sessionToken, responseCode, responseMessage  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_LOGIN.md)  
+## W_SERVICE.CONFIG  
+PARAMETERS : requestItem, requestParameters, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.CONFIG.md)  
+## W_SERVICE.SERVICES  
+PARAMETERS : responseCode, responseContent  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.SERVICES.md)  
 FOOTER UTIL.BP root  

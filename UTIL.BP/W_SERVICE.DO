@@ -5,7 +5,7 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210208 at 19.34.40 in DEV by root
+*   Info Updated : 20210209 at 11.18.42 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -108,35 +108,35 @@ PROCESS.QUEUE.ITEM:
       responseStatus = ""
       responseContent = ""
 
-      CALL U_XML.SUBSTITUTE("requestFileName", requestFileName, response)
-      CALL U_XML.SUBSTITUTE("requestID", requestID, response)
-      CALL U_XML.SUBSTITUTE("requestFilePath", requestFilePath, response)
-      CALL U_XML.SUBSTITUTE("requestFileType", requestFileType, response)
-      CALL U_XML.SUBSTITUTE("requestConsumed", requestConsumed, response)
+      CALL U_WILDCARD.SUBSTITUTE("requestFileName", requestFileName, response)
+      CALL U_WILDCARD.SUBSTITUTE("requestID", requestID, response)
+      CALL U_WILDCARD.SUBSTITUTE("requestFilePath", requestFilePath, response)
+      CALL U_WILDCARD.SUBSTITUTE("requestFileType", requestFileType, response)
+      CALL U_WILDCARD.SUBSTITUTE("requestConsumed", requestConsumed, response)
 
-      CALL U_XML.SUBSTITUTE("requestAction", requestAction, response)
-      CALL U_XML.SUBSTITUTE("requestItem", requestItem, response)
-      CALL U_XML.SUBSTITUTE("requestParameters", requestParameters, response)
+      CALL U_WILDCARD.SUBSTITUTE("requestAction", requestAction, response)
+      CALL U_WILDCARD.SUBSTITUTE("requestItem", requestItem, response)
+      CALL U_WILDCARD.SUBSTITUTE("requestParameters", requestParameters, response)
 
-      CALL U_XML.SUBSTITUTE("responseID", responseID, response)
-      CALL U_XML.SUBSTITUTE("responseFileName", responseFileName, response)
-      CALL U_XML.SUBSTITUTE("responseFilePath", responseFilePath, response)
+      CALL U_WILDCARD.SUBSTITUTE("responseID", responseID, response)
+      CALL U_WILDCARD.SUBSTITUTE("responseFileName", responseFileName, response)
+      CALL U_WILDCARD.SUBSTITUTE("responseFilePath", responseFilePath, response)
 
-      CALL U_XML.SUBSTITUTE("responseFileType", responseType, response)
+      CALL U_WILDCARD.SUBSTITUTE("responseFileType", responseType, response)
 
       GOSUB GET.REQUEST.DATA
 
-      CALL U_XML.SUBSTITUTE("requestPayloadCount", requestPayloadCount, response)
-      CALL U_XML.SUBSTITUTE("requestPayload", requestPayload, response)
+      CALL U_WILDCARD.SUBSTITUTE("requestPayloadCount", requestPayloadCount, response)
+      CALL U_WILDCARD.SUBSTITUTE("requestPayload", requestPayload, response)
 
       GOSUB PROCESS.ACTION
 
       responseEjected = "" ; CALL U_GET.EPOCH.DATE(responseEjected)
-      CALL U_XML.SUBSTITUTE("responseEjected", responseEjected, response)
+      CALL U_WILDCARD.SUBSTITUTE("responseEjected", responseEjected, response)
 
-      CALL U_XML.SUBSTITUTE("responseContentCount", responseContentCount, response)
-      CALL U_XML.SUBSTITUTE("responseContent", responseContent, response)
-      CALL U_XML.SUBSTITUTE("responseStatus", responseStatus, response)
+      CALL U_WILDCARD.SUBSTITUTE("responseContentCount", responseContentCount, response)
+      CALL U_WILDCARD.SUBSTITUTE("responseContent", responseContent, response)
+      CALL U_WILDCARD.SUBSTITUTE("responseStatus", responseStatus, response)
 
 
       CALL U_IO.WRITE(FV.RESPONSE, responseFileName, response, STOP.ON.ERROR, ERROR.TEXT)
@@ -168,7 +168,7 @@ PROCESS.ACTION:
       CASE UPCASE(requestAction) = "LOGOUT"
          * TODO
       CASE UPCASE(requestAction) = "SERVICES"
-         CALL W_SERVICES(responseStatus, responseContent)
+         CALL W_SERVICE.SERVICES(responseStatus, responseContent)
 
       CASE 1
          GOSUB PROCESS.CLI.COMMAND

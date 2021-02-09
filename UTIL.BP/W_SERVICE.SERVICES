@@ -1,0 +1,32 @@
+SUBROUTINE W_SERVICE.SERVICES(responseCode, responseContent)
+** INFORMATION ****************************************************************
+*   Routine Name : W_SERVICE.SERVICES
+*           Type : SUBROUTINE
+*         Params : responseCode, responseContent
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210209 at 11.18.42 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+
+   wct_Properties = "wct_connect"
+
+   serviceID = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "serviceID", serviceID)
+   serviceCatalogID = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "serviceCatalogID", serviceCatalogID)
+   servicesList = "" ; serviceCount = 0
+   CALL U_IO.GET.LIST(serviceCatalogID, serviceID, servicesList, servicesCount)
+   IF servicesList <> "" THEN
+      responseCode = RS$SUCCESS
+      CALL U_CLEAN.TEXT(servicesList)
+      responseContent=servicesList
+   END ELSE
+      responseCode = RS$NO.DATA
+      responseContent = ""
+   END
+   CALL U_CRT.INFO("responseCode", responseCode)
+   CALL U_CRT.INFO("responseContent", responseContent)
+
+   RETURN
+END

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="wctRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="applicationToken" />
+        <xs:element minOccurs="0" name="uniqueID" />
+        <xs:element minOccurs="0" name="sessionToken" />
+        <xs:element minOccurs="0" name="requestID" type="xs:string" />
+        <xs:element minOccurs="0" name="requestAction" type="xs:string" />
+        <xs:element minOccurs="0" name="requestItem" type="xs:string" />
+        <xs:element minOccurs="0" name="requestParameters" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

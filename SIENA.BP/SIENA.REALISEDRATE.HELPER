@@ -5,7 +5,7 @@ SUBROUTINE SIENA.REALISEDRATE.HELPER(processName, indexID)
 *         Params : processName, indexID
 *            Loc : SIENA.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210208 at 09.21.58 in DEV by root
+*   Info Updated : 20210209 at 11.19.11 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -49,8 +49,8 @@ $INSERT UTIL.BP I_UTIL.H
    listURI=1;listCCY=2;listTenor=3
    FOR thisURI.POS = 1 TO NO.URIS
       thisURI = URI.LIST<thisURI.POS, listURI>
-      CALL U_XML.SUBSTITUTE("startDate", startDate, thisURI)
-      CALL U_XML.SUBSTITUTE("endDate", endDate, thisURI)
+      CALL U_WILDCARD.SUBSTITUTE("startDate", startDate, thisURI)
+      CALL U_WILDCARD.SUBSTITUTE("endDate", endDate, thisURI)
       thisCCY = URI.LIST<thisURI.POS, listCCY>
       thisTenor = URI.LIST<thisURI.POS, listTenor>
       GOSUB PROCESS.URI
