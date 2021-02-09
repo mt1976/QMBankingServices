@@ -1,9 +1,33 @@
-#TODO
-## Randomizer
-* Move data-load out of loop to start of loop, then do lookup into array.
-* Create a new job - PayloadControl - with in/out folders, this allows variables such as batch size/sample number to be setup.
-* Create a new job - PayloadRunner  - allows user to drop in a file with commands in "BATCH.DO/JOB.DO" format
-* Expose SIENA.TXN.TEMPLATES through SAMBA - Allow users to defined templates to use to generate data
-* Expost PayloadControl_IN through SAMBA - Allows users to setup batch sizes etc.
-* Expose PayloadRunner_IN through SAMBA - Runs a BATCH/JOB.DO job - "JOB.DO RANDOMIZER"
-* Expose SIENA.TXN.OUT though SAMBA - Destination Path for output dat
+# TODO
+
+Demo webapp, single page, collapsible sections. 
+
+## Confguration
+Field | Value | Note | tag
+--- | --- | --- | ---
+Out|/mnt/sal-bnk6/sys-3/request/|*Where the webapp will drop request files*|N/A
+Response|/mnt/sal-bnk6/sys-3/response/|*Where the webapp will monitor for reqposes from the wvt server*|N/A
+Token|133ae0e051744715b9a70ee75e46c0a8|*An app token defined in the wvt server instance*|`appToken`
+ID|bnk6abc|*A ID used to ensure all requests are unique*|`uniqueID`
+
+[test connection] [save config] [get actions] 
+
+## Actions / Service Catalog 
+Service|Execute|`requestAction`|`requestItem`|`requestParameters`|HelpText
+---|---|---|---|---|---
+**Funds Check** 
+  ACK| [DO] |SIENA.FUNDS.CHECK.ACK||NOPAGE|ACK&#39;s outstanding funds checks
+  NACK | [DO]|SIENA.FUNDS.CHECK.NACK||NOPAGE|NACK&#39;s funds checks
+**Transaction Generation**
+  Accounts | [DO] |SIENA.GEN.TXNS|ACCOUNTS|NOPAGE|
+  FX Spot| [DO] |SIENA.GEN.TXNS|SPOT|NOPAGE|
+  FX Forwards| [DO]|SIENA.GEN.TXNS|FORWARD|NOPAGE|
+  Bonds/UK Gilts| [DO]|SIENA.GEN.TXNS|BOND|NOPAGE|
+### Other Examples
+Service|Execute|`requestAction`|`requestItem`|`requestParameters`|HelpText
+---|---|---|---|---|---
+ Spot Prices|[do]|SORT|SIENA.CACHE|WITH OBJECT LIKE FX.SP... BY OBJECT OBJECT VALUE ID-SUPP NOPAGE|
+ FX Prices by CCYPAIR|[do]|SORT|SIENA.CACHE|WITH OBJECT LIKE FX...&lt;&lt;CCY PAIR&gt;&gt;... BY OBJECT OBJECT VALUE ID-SUPP NOPAGE|
+## Response
++  Details response from server
+
