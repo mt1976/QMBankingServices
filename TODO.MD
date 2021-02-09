@@ -1,7 +1,7 @@
-[do]: https://github.com/mt1976/mwt-QM-dev/blob/master/.resources/themes/unicons-line-6563ff/play.svg "Logo Title Text 2"
-[test]: https://github.com/mt1976/mwt-QM-dev/blob/master/.resources/themes/unicons-line-6563ff/cloud-question.svg "Logo Title Text 2"
-[save]: https://github.com/mt1976/mwt-QM-dev/blob/master/.resources/themes/unicons-line-6563ff/save.svg "Logo Title Text 2"
-[actions]: https://github.com/mt1976/mwt-QM-dev/blob/master/.resources/themes/unicons-line-6563ff/file-question-alt.svg "Logo Title Text 2"
+[do]: https://github.com/mt1976/mwt-QM-dev/blob/master/.resources/themes/unicons-line-6563ff/play.svg "Execute Action"
+[test]: https://github.com/mt1976/mwt-QM-dev/blob/master/.resources/themes/unicons-line-6563ff/cloud-question.svg "Test Configuration"
+[save]: https://github.com/mt1976/mwt-QM-dev/blob/master/.resources/themes/unicons-line-6563ff/save.svg "Save Current Config"
+[actions]: https://github.com/mt1976/mwt-QM-dev/blob/master/.resources/themes/unicons-line-6563ff/file-question-alt.svg "Refresh Service Catalog"
 
 
 # TODO
@@ -31,11 +31,9 @@ Service|`requestAction`|`requestItem`|`requestParameters`|HelpText|Go
   FX Spot|SIENA.GEN.TXNS|SPOT|NOPAGE||![DO]
   FX Forwards|SIENA.GEN.TXNS|FORWARD|NOPAGE||![DO]
   Bonds/UK Gilts|SIENA.GEN.TXNS|BOND|NOPAGE||![DO]
-### Other Examples
-Service|Execute|`requestAction`|`requestItem`|`requestParameters`|HelpText
----|---|---|---|---|---
- Spot Prices|![do]|SORT|SIENA.CACHE|WITH OBJECT LIKE FX.SP... BY OBJECT OBJECT VALUE ID-SUPP NOPAGE|
- FX Prices by CCYPAIR|![do]|SORT|SIENA.CACHE|WITH OBJECT LIKE FX...&lt;&lt;CCY PAIR&gt;&gt;... BY OBJECT OBJECT VALUE ID-SUPP NOPAGE|
+**Other Examples**
+ Spot Prices|SORT|SIENA.CACHE|WITH OBJECT LIKE FX.SP... BY OBJECT OBJECT VALUE ID-SUPP NOPAGE||![DO]
+ FX Prices by CCYPAIR|SORT|SIENA.CACHE|WITH OBJECT LIKE FX...&lt;&lt;CCY PAIR&gt;&gt;... BY OBJECT OBJECT VALUE ID-SUPP NOPAGE||![DO]
 ## Response
 +  Details response from server
 
