@@ -1,3 +1,5 @@
+[logo]: https://raw.githubusercontent.com/mt1976/mwt-QM-dev/07fd171af14e4fe91c8cd82980093cd571fed67e/.resources/themes/unicons-line-6563ff/comment-verify.svg?token=AHNDHX4TRIR5C7XKYGWQYETAEKGI2 "Logo Title Text 2"
+
 # TODO
 
 Demo webapp, single page, collapsible sections. 
@@ -16,7 +18,7 @@ ID|bnk6abc|*A ID used to ensure all requests are unique*|`uniqueID`
 Service|Execute|`requestAction`|`requestItem`|`requestParameters`|HelpText
 ---|---|---|---|---|---
 **Funds Check** 
-  ACK| [DO] |SIENA.FUNDS.CHECK.ACK||NOPAGE|ACK&#39;s outstanding funds checks
+  ACK|![alt text][logo]|SIENA.FUNDS.CHECK.ACK||NOPAGE|ACK&#39;s outstanding funds checks
   NACK | [DO]|SIENA.FUNDS.CHECK.NACK||NOPAGE|NACK&#39;s funds checks
 **Transaction Generation**
   Accounts | [DO] |SIENA.GEN.TXNS|ACCOUNTS|NOPAGE|
