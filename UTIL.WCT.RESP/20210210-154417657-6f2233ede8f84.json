@@ -1,0 +1,63 @@
+{
+    "wctResponse": {
+        "requestID": "e7ca3004-54d9-4364-bd04-28b51826aa03",
+        "requestFileName": "e7ca3004-54d9-4364-bd04-28b51826aa03.json",
+        "requestFilePath": "/Users/matttownsend/Development/qm/dev/UTIL.WCT.RECV",
+        "requestFileType": "json",
+        "requestConsumed": "20210210T154417",
+        "requestAction": "SERVICES",
+        "requestItem": "",
+        "requestParameters": "",
+        "responseID": "20210210-154417657-6f2233ede8f84",
+        "responseFileName": "20210210-154417657-6f2233ede8f84.json",
+        "responseFilePath": "/Users/matttownsend/Development/qm/dev/UTIL.WCT.RESP",
+        "responseFileType": "json",
+        "responseEjected": "20210210T154417",
+        "responseContentCount": "34",
+        "responseStatus": "200",
+        "responseContent": {
+            "responseContentRow": [
+              "Funds Check",
+"ACK|SIENA.FUNDS.CHECK.ACK||NOPAGE|ACK&#39;s outstanding funds checks",
+"NACK|SIENA.FUNDS.CHECK.NACK||NOPAGE|NACK&#39;s funds checks",
+"Transaction Generation",
+"Accounts|SIENA.GEN.TXNS|ACCOUNTS|NOPAGE|",
+"FX Spot|SIENA.GEN.TXNS|SPOT|NOPAGE|",
+"FX Forwards|SIENA.GEN.TXNS|FORWARD|NOPAGE|",
+"Bonds/UK Gilts|SIENA.GEN.TXNS|BOND|NOPAGE|",
+"Scheduled Events",
+"Refresh FX Spot|JOB.DO|FXSPOT|NOPAGE|",
+"Refresh FX Forwards|JOB.DO|FXFWD|NOPAGE|",
+"Libor|JOB.DO|LIBOR|NOPAGE|",
+"CPI|JOB.DO|CPI|NOPAGE|",
+"FX Currency Pairs|JOB.DO|FXREFRESH|NOPAGE|Fetch active pairs from Siena",
+"UK Gilts|SIENA.GILTS||NOPAGE|",
+"Data Caches",
+"ALL|BATCH.DO|REBUILD.CACHE|NOPAGE|",
+"Books|JOB.DO|CACHE_BOOK|NOPAGE|",
+"System Date(s)|JOB.DO|CACHE_DATE|NOPAGE|",
+"Users|JOB.DO|CACHE_USER|NOPAGE|",
+"Mandated Users|JOB.DO|CACHE_MANDATE|NOPAGE|",
+"Currency|JOB.DO|CACHE_CURRENCY|NOPAGE|",
+"Currency Pairs|JOB.DO|CACHE_CURRENCYPAIR|NOPAGE|",
+"Counterparties|JOB.DO|CACHE_CPARTY|NOPAGE|",
+"Payment Systems|JOB.DO|CACHE_PSYSTEM|NOPAGE|",
+"Portfolios|JOB.DO|CACHE_PORTFOLIO|NOPAGE|",
+"Brokers|JOB.DO|CACHE_BROKER|NOPAGE|",
+"Queries",
+"Spot Prices|SORT|SIENA.CACHE|WITH OBJECT LIKE FX.SP... BY OBJECT OBJECT VALUE ID-SUPP NOPAGE|",
+"FX Prices by CCYPAIR|SORT|SIENA.CACHE|WITH OBJECT LIKE FX...&lt;&lt;CCY PAIR&gt;&gt;... BY OBJECT OBJECT VALUE ID-SUPP NOPAGE|",
+"Gilts Prices|REPORT.DO|GILTS|NOPAGE|",
+"Installation",
+"Install MS SQLServer views|JOB.DO|MSSQL.INSTALL|NOPAGE|",
+"Rebuild Service Catalog|U_BUILD.SERVICE.CATALOG||NOPAGE|Rebuilds the service catalog"
+            ]
+        },
+        "requestPayloadCount": "1",
+        "requestPayload": {
+            "requestPayloadRow": [
+              "{&quot;wctRequest&quot;:{&quot;appToken&quot;:&quot;133ae0e051744715b9a70ee75e46c0a8&quot;,&quot;sessionToken&quot;:&quot;&quot;,&quot;requestID&quot;:&quot;e7ca3004-54d9-4364-bd04-28b51826aa03&quot;,&quot;requestAction&quot;:&quot;SERVICES&quot;,&quot;requestItem&quot;:&quot;&quot;,&quot;requestParameters&quot;:&quot;&quot;,&quot;uniqueID&quot;:&quot;mwtgodev&quot;,&quot;requestResponseFormat&quot;:&quot;json&quot;}}"
+            ]
+        }
+    }
+}

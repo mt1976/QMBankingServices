@@ -1,11 +1,11 @@
 <img src="../.resources/themes/unicons-line-6563ff/corner-up-left-alt.svg" alt="BACK" width="25" />[BACK](../DOCS/UTIL.BP.md)  
-# W_SERVICE.SERVICES  
+# W_SERVICE.TEST  
 |DATA|VALUE|
 | --- | --- |
 |TYPE|SUBROUTINE|
 |SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="UTIL.BP" width="25" />[UTIL.BP](../DOCS/UTIL.BP.md)|
-|ID|W_SERVICE.SERVICES|
-|PARAMETERS|responseCode, responseContent|
+|ID|W_SERVICE.TEST|
+|PARAMETERS|requestItem, requestParameters, responseContent, responseStatus|
     
 ## USAGE  
   
@@ -15,19 +15,19 @@
 ## HEADER INFORMATION  
 ```javascript
 ** INFORMATION ****************************************************************
-*   Routine Name : W_SERVICE.SERVICES
+*   Routine Name : W_SERVICE.TEST
 *           Type : SUBROUTINE
-*         Params : responseCode, responseContent
+*         Params : requestItem, requestParameters, responseContent, responseStatus
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210210 at 09.09.22 in DEV by root
+*   Info Updated : 20210210 at 09.00.07 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 ```
 ## BODY  
 ### EXTERNAL CALLS  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.LIST" width="25" />[U_IO.GET.LIST](../DOCS.PAGE/U_IO.GET.LIST.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CLEAN.TEXT" width="25" />[U_CLEAN.TEXT](../DOCS.PAGE/U_CLEAN.TEXT.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_TRANSLATE" width="25" />[U_TRANSLATE](../DOCS.PAGE/U_TRANSLATE.md)  
 ### INTERNAL CALLS  
   

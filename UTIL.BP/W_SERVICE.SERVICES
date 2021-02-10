@@ -5,7 +5,7 @@ SUBROUTINE W_SERVICE.SERVICES(responseCode, responseContent)
 *         Params : responseCode, responseContent
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210209 at 12.13.18 in DEV by root
+*   Info Updated : 20210210 at 09.09.22 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -25,8 +25,8 @@ $INCLUDE UTIL.BP I_UTIL.H
       responseCode = RS$NO.DATA
       responseContent = ""
    END
-   CALL U_CRT.INFO("responseCode", responseCode)
-   CALL U_CRT.INFO("responseContent", responseContent)
+   * CALL U_CRT.INFO("responseCode", responseCode)
+   * CALL U_CRT.INFO("responseContent", responseContent)
 
    RETURN
 END

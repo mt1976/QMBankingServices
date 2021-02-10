@@ -21,16 +21,16 @@
 *         Params : applicationToken, uniqueID, spare01, sessionToken, responseCode, responseMessage
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210209 at 12.13.18 in DEV by root
+*   Info Updated : 20210210 at 09.11.47 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 ```
 ## BODY  
 ### EXTERNAL CALLS  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.OPENFILE" width="25" />[U_IO.OPENFILE](../DOCS.PAGE/U_IO.OPENFILE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.WRITE" width="25" />[U_IO.WRITE](../DOCS.PAGE/U_IO.WRITE.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 ### INTERNAL CALLS  
  INFORMATION ****************************************************************    
   

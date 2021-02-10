@@ -15,6 +15,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="F_UTIL.WCT.TEMPLATES.H" width="25" />[F_UTIL.WCT.TEMPLATES.H](../DOCS.PAGE/F_UTIL.WCT.TEMPLATES.H.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="F_UTIL.WORKFILE.H" width="25" />[F_UTIL.WORKFILE.H](../DOCS.PAGE/F_UTIL.WORKFILE.H.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="F_UTIL.WCT.TOKENS.H" width="25" />[F_UTIL.WCT.TOKENS.H](../DOCS.PAGE/F_UTIL.WCT.TOKENS.H.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="F_UTIL.LOG.EVENT.H" width="25" />[F_UTIL.LOG.EVENT.H](../DOCS.PAGE/F_UTIL.LOG.EVENT.H.md)  
     
 ## HEADER INFORMATION  
 ```javascript
@@ -24,7 +25,7 @@
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210209 at 12.13.18 in DEV by root
+*   Info Updated : 20210210 at 15.44.15 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -43,7 +44,9 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_WILDCARD.SUBSTITUTE" width="25" />[U_WILDCARD.SUBSTITUTE](../DOCS.PAGE/U_WILDCARD.SUBSTITUTE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.WRITE" width="25" />[U_IO.WRITE](../DOCS.PAGE/U_IO.WRITE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.DELETE" width="25" />[U_IO.DELETE](../DOCS.PAGE/U_IO.DELETE.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_LOG.EVENT" width="25" />[U_LOG.EVENT](../DOCS.PAGE/U_LOG.EVENT.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="W_SERVICE.LOGIN" width="25" />[W_SERVICE.LOGIN](../DOCS.PAGE/W_SERVICE.LOGIN.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="W_SERVICE.TEST" width="25" />[W_SERVICE.TEST](../DOCS.PAGE/W_SERVICE.TEST.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="W_SERVICE.SERVICES" width="25" />[W_SERVICE.SERVICES](../DOCS.PAGE/W_SERVICE.SERVICES.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="!FINDPROG" width="25" />[!FINDPROG](../DOCS.PAGE/!FINDPROG.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
@@ -61,6 +64,8 @@
 #### CHECK.QUEUE:  
   
 #### PROCESS.QUEUE.ITEM:  
+  
+#### PROCESS.REQUEST.LOG.EVENT:  
   
 #### PROCESS.ACTION:  
   

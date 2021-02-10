@@ -5,7 +5,7 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210209 at 12.13.18 in DEV by root
+*   Info Updated : 20210210 at 15.44.15 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -15,6 +15,7 @@ $INCLUDE UTIL.BP F_UTIL.WCT.RESP.H
 $INCLUDE UTIL.BP F_UTIL.WCT.TEMPLATES.H
 $INCLUDE UTIL.BP F_UTIL.WORKFILE.H
 $INCLUDE UTIL.BP F_UTIL.WCT.TOKENS.H
+$INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
    PROCESS.NAME = "W_SERVICE.DO"
    wct_Properties = "wct_connect"
@@ -29,10 +30,11 @@ $INCLUDE UTIL.BP F_UTIL.WCT.TOKENS.H
    requestFilePath = "" ; CALL U_OS.FILE.PATH(FV.RECEIVE, requestFilePath)
    responseFilePath = "" ; CALL U_OS.FILE.PATH(FV.RESPONSE, responseFilePath)
    activePath = "" ; CALL U_IO.GET.PROPERTY("util", "path", activePath)
-   responseType = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "responseType", responseType)
-   responseTemplate = "" ; responseTemplateID = "response.":responseType
 
-   CALL U_IO.READ(FV.TEMPLATES, responseTemplateID, responseTemplate, STOP.ON.ERROR, "")
+   defaultResponseType = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "responseType", defaultResponseType)
+   defaultResponseTemplate = "" ; defaultResponseTemplateID = "response.":defaultResponseType
+
+   CALL U_IO.READ(FV.TEMPLATES, defaultResponseTemplateID, defaultResponseTemplate, STOP.ON.ERROR, "")
 
    waitTime = 0 ; CALL U_IO.GET.PROPERTY(wct_Properties, "waitTime", waitTime)
    shutdownChar = 0 ; CALL U_IO.GET.PROPERTY(wct_Properties, "shutdownChar", shutdownChar)
@@ -54,7 +56,7 @@ $INCLUDE UTIL.BP F_UTIL.WCT.TOKENS.H
          breakLoop=@TRUE
       END
 * for debugging
-      breakLoop=@TRUE
+*      breakLoop=@TRUE
 
    REPEAT
    CALL U_STOP(PROCESS.NAME)
@@ -79,13 +81,12 @@ CHECK.QUEUE:
 PROCESS.QUEUE.ITEM:
    OK.TO.CONTINUE = @TRUE
 *   CALL U_CRT.INFO("REQUEST", requestFileName)
-   responseID = "" ; CALL U_GET.UUID(responseID) ; responseFileName=responseID:".":responseType
+   responseID = "" ; CALL U_GET.UUID(responseID)
 *   CALL U_CRT.INFO("RESPONSE", responseID)
    request = "" ; response = ""
 
    requestConsumed = "" ; CALL U_GET.EPOCH.DATE(requestConsumed)
    CALL U_IO.READ(FV.RECEIVE, requestFileName, request, STOP.ON.ERROR, "")
-   response = responseTemplate
 
    requestFileType = "" ; requestFileType = CHANGE(requestFileName[4], ".", "")
 
@@ -94,8 +95,22 @@ PROCESS.QUEUE.ITEM:
       CALL U_CRT.INFO("ERROR", requestFileType:" cannot be procsessed skipping")
    END
 
+
    IF OK.TO.CONTINUE THEN
       GOSUB GET.REQUEST.ID
+
+      requestResponseFormat = "" ; searchProperty = "requestResponseFormat" ; GOSUB GET.SEARCH.PROPERTY ; requestResponseFormat=searchResult
+
+      IF requestResponseFormat <> defaultResponseType THEN
+         requestResponseTemplateID = "response.":requestResponseFormat
+         CALL U_IO.READ(FV.TEMPLATES, requestResponseTemplateID, response, STOP.ON.ERROR, "")
+         responseFileName=responseID:".":requestResponseFormat
+         responseType = requestResponseFormat
+      END ELSE
+         response = defaultResponseTemplate
+         responseFileName=responseID:".":defaultResponseType
+         responseType = defaultResponseType
+      END
 
       requestAction = "" ; searchProperty = "requestAction" ; GOSUB GET.SEARCH.PROPERTY ; requestAction=searchResult
       requestItem = "" ; searchProperty = "requestItem" ; GOSUB GET.SEARCH.PROPERTY ; requestItem=searchResult
@@ -104,6 +119,7 @@ PROCESS.QUEUE.ITEM:
       applicationToken = "" ; searchProperty = "appToken" ; GOSUB GET.SEARCH.PROPERTY ; applicationToken=searchResult
       uniqueID = "" ; searchProperty = "uniqueID" ; GOSUB GET.SEARCH.PROPERTY ; uniqueID=searchResult
       userPassword = "" ; searchProperty = "userPassword" ; GOSUB GET.SEARCH.PROPERTY ; userPassword=searchResult
+
 
       responseStatus = ""
       responseContent = ""
@@ -138,11 +154,22 @@ PROCESS.QUEUE.ITEM:
       CALL U_WILDCARD.SUBSTITUTE("responseContent", responseContent, response)
       CALL U_WILDCARD.SUBSTITUTE("responseStatus", responseStatus, response)
 
+      GOSUB PROCESS.REQUEST.LOG.EVENT
 
       CALL U_IO.WRITE(FV.RESPONSE, responseFileName, response, STOP.ON.ERROR, ERROR.TEXT)
    END
    CALL U_IO.DELETE(FV.RECEIVE, requestFileName, STOP.ON.ERROR, ERROR.TEXT)
 
+   RETURN
+
+PROCESS.REQUEST.LOG.EVENT:
+   LOG.DATA = response
+   R.EVENT = ""
+   R.EVENT<U_LOG_EVENT> = "WCT_REQUEST"
+   R.EVENT<U_LOG_CMD> = requestAction
+   R.EVENT<U_LOG_MSG> = requestItem:" ":requestParameters
+   R.EVENT<U_LOG_SUBR> = "W_SERVICE.DO"
+   CALL U_LOG.EVENT(LOG.DATA, R.EVENT)
    RETURN
 
 PROCESS.ACTION:
@@ -153,16 +180,19 @@ PROCESS.ACTION:
    CALL U_CRT.INFO("requestItem", requestItem)
 
 
+
    BEGIN CASE
 
       CASE UPCASE(requestAction)[1, 1] = "@"
          GOSUB PROCESS.CALLOUT
-      CASE UPCASE(requestAction) = "TEST"
-         responseStatus = "200"
-         responseContent<1> = "POO HOLE!"
       CASE UPCASE(requestAction) = "LOGIN"
          responseCode = "" ; responseMessage = ""
          CALL W_SERVICE.LOGIN(applicationToken, uniqueID, "", sessionToken, responseCode, responseMessage)
+         responseStatus = responseCode
+         responseContent = responseMessage
+      CASE UPCASE(requestAction) = "TEST"
+         responseCode = "" ; responseMessage = ""
+         CALL W_SERVICE.TEST(requestItem, requestParameters, responseCode, responseMessage)
          responseStatus = responseCode
          responseContent = responseMessage
       CASE UPCASE(requestAction) = "LOGOUT"
@@ -176,6 +206,8 @@ PROCESS.ACTION:
    END CASE
 
    GOSUB PROCESS.RESPONSE.CONTENT
+
+
 
    RETURN
 

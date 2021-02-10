@@ -1,0 +1,25 @@
+SUBROUTINE W_SERVICE.TEST(requestItem, requestParameters, responseContent, responseStatus)
+** INFORMATION ****************************************************************
+*   Routine Name : W_SERVICE.TEST
+*           Type : SUBROUTINE
+*         Params : requestItem, requestParameters, responseContent, responseStatus
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210210 at 09.00.07 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+
+  * CALL U_CRT.INFO("requestItem", requestItem)
+  * CALL U_CRT.INFO("requestParameters", requestParameters)
+
+   responseStatus = "200"
+
+   MESSAGE.TEXT = "SUCCESS"
+   CALL U_TRANSLATE("UTIL", MESSAGE.TEXT, 1, MESSAGE.TEXT)
+
+   responseContent=MESSAGE.TEXT
+
+
+END
