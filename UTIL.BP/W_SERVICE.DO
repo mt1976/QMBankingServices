@@ -5,7 +5,7 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210210 at 15.44.15 in DEV by root
+*   Info Updated : 20210211 at 17.01.39 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -92,7 +92,7 @@ PROCESS.QUEUE.ITEM:
 
 
    IF requestFileType <> "xml" AND requestFileType <> "json" THEN
-      CALL U_CRT.INFO("ERROR", requestFileType:" cannot be procsessed skipping")
+      CALL U_CRT.INFO("ERROR", requestFileType:" cannot be processed skipping")
    END
 
 
@@ -101,14 +101,18 @@ PROCESS.QUEUE.ITEM:
 
       requestResponseFormat = "" ; searchProperty = "requestResponseFormat" ; GOSUB GET.SEARCH.PROPERTY ; requestResponseFormat=searchResult
 
+      requestAction = "" ; searchProperty = "requestAction" ; GOSUB GET.SEARCH.PROPERTY ; requestAction=searchResult
+
+
+
       IF requestResponseFormat <> defaultResponseType THEN
          requestResponseTemplateID = "response.":requestResponseFormat
          CALL U_IO.READ(FV.TEMPLATES, requestResponseTemplateID, response, STOP.ON.ERROR, "")
-         responseFileName=responseID:".":requestResponseFormat
+         responseFileName=requestID:".":requestResponseFormat
          responseType = requestResponseFormat
       END ELSE
          response = defaultResponseTemplate
-         responseFileName=responseID:".":defaultResponseType
+         responseFileName=requestID:".":defaultResponseType
          responseType = defaultResponseType
       END
 
@@ -313,6 +317,8 @@ GET.REQUEST.ID:
    IF requestID = "" THEN
       requestID = requestFileName
    END
+
+   requestID = CHANGE(CHANGE(requestID, ".xml", ""), ".json", "")
 
    RETURN
 
