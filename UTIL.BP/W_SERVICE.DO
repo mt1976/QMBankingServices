@@ -5,7 +5,7 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210211 at 17.01.39 in DEV by root
+*   Info Updated : 20210214 at 22.52.15 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -98,6 +98,7 @@ PROCESS.QUEUE.ITEM:
 
    IF OK.TO.CONTINUE THEN
       GOSUB GET.REQUEST.ID
+      responseID = requestID
 
       requestResponseFormat = "" ; searchProperty = "requestResponseFormat" ; GOSUB GET.SEARCH.PROPERTY ; requestResponseFormat=searchResult
 
@@ -181,6 +182,7 @@ PROCESS.ACTION:
    responseContent = ""
 
    CALL U_CRT.INFO("requestAction", requestAction)
+   CALL U_CRT.INFO("ra(last)", requestAction[1, 1])
    CALL U_CRT.INFO("requestItem", requestItem)
 
 
@@ -189,6 +191,8 @@ PROCESS.ACTION:
 
       CASE UPCASE(requestAction)[1, 1] = "@"
          GOSUB PROCESS.CALLOUT
+      CASE UPCASE(requestAction)[1, 1] = "!"
+         GOSUB PROCESS.DIRECT.CLI.COMMAND
       CASE UPCASE(requestAction) = "LOGIN"
          responseCode = "" ; responseMessage = ""
          CALL W_SERVICE.LOGIN(applicationToken, uniqueID, "", sessionToken, responseCode, responseMessage)
@@ -236,6 +240,38 @@ PROCESS.CLI.COMMAND:
    statement = ""
    commandLineAction = ""
    commandLineAction = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "requestAction$":UPCASE(requestAction), commandLineAction)
+   IF commandLineAction <> "" THEN
+      statement = commandLineAction
+      IF requestItem <> "" THEN
+         statement := SPACE(1):requestItem
+         IF requestParameters <> "" THEN
+            statement := SPACE(1):ICONV(requestParameters,"HD")
+         END
+      END
+   END
+   IF statement <> "" THEN
+      CALL U_CRT.INFO("EXECUTE", statement)
+
+      processExtn = "wct"
+      outputFileName = responseID:U_TRUNC:DOWNCASE(requestAction):".":processExtn
+
+      CMD = ""
+      CMD<1> = "STORE"
+      CMD<2> = activePath:"/":U$WRK.FILE.NAME:"/"
+      CMD<3> = outputFileName
+
+      CALL U_OS.EXECUTE(statement, CMD)
+
+      * GET response Data
+      GOSUB GET.RESPONSE.DATA
+
+   END
+   RETURN
+
+PROCESS.DIRECT.CLI.COMMAND:
+   statement = ""
+   commandLineAction = ""
+   commandLineAction = CHANGE(UPCASE(requestAction), "!", "")
    IF commandLineAction <> "" THEN
       statement = commandLineAction
       IF requestItem <> "" THEN

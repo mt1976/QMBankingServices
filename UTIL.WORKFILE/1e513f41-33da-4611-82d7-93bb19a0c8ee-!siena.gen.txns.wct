@@ -1,0 +1,23 @@
+[K[1m+-+-+-+-+-+-+-+-+-+-+-+-+-+-+[m
+[K[1m|S|I|E|N|A|.|G|E|N|.|T|X|N|S|[m
+[K[1m+-+-+-+-+-+-+-+-+-+-+-+-+-+-+[m
+[K[[1m233910[m|[1mSIENA.GEN.TXNS [m|[1mPROCESSING[m][SPOT]
+[K[1m+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+[m
+[K[1m|G|E|N|E|R|A|T|I|N|G|>|>|>|S|P|O|T|[m
+[K[1m+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+[m
+[K[[1m233910[m|[1mU_OS.EXECUTE   [m|[1mEXECUTE   [m][[1mSELECT SIENA.CACHE WITH 1 = "FX.SP.EURUSD.O" SAMPLE 10 SAVING UNIQUE 3 TO 2[m]
+[K[[1m233910[m|[1mU_OS.EXECUTE   [m|[1m<1>       [m][Sample of 1 record(s) selected to list 2]
+[K[[1m233910[m|[1mSIENA.CACHE.FET[m|[1mINFO      [m][COMPLETE - SIENA.CACHE.FETCH]
+[K[[1m233910[m|[1mSIENA.GEN.TXN.D[m|[1mPROCESSED [m][1/3 "/Users/matttownsend/Development/qm/dev/TEMP/20210214-233910150-aa57aeb90adc4"]
+[K[[1m233910[m|[1mSIENA.GEN.TXN.D[m|[1mSLEEPING  [m][3 Secs]
+[K[[1m233913[m|[1mU_OS.EXECUTE   [m|[1mEXECUTE   [m][[1mSELECT SIENA.CACHE WITH 1 = "FX.SP.EURUSD.B" SAMPLE 10 SAVING UNIQUE 3 TO 2[m]
+[K[[1m233913[m|[1mU_OS.EXECUTE   [m|[1m<1>       [m][Sample of 1 record(s) selected to list 2]
+[K[[1m233913[m|[1mSIENA.CACHE.FET[m|[1mINFO      [m][COMPLETE - SIENA.CACHE.FETCH]
+[K[[1m233913[m|[1mSIENA.GEN.TXN.D[m|[1mPROCESSED [m][2/3 "/Users/matttownsend/Development/qm/dev/TEMP/20210214-233913153-44a8fd541ba24"]
+[K[[1m233913[m|[1mSIENA.GEN.TXN.D[m|[1mSLEEPING  [m][9 Secs]
+[K[[1m233922[m|[1mU_OS.EXECUTE   [m|[1mEXECUTE   [m][[1mSELECT SIENA.CACHE WITH 1 = "FX.SP.EURGBP.B" SAMPLE 10 SAVING UNIQUE 3 TO 2[m]
+[K[[1m233922[m|[1mU_OS.EXECUTE   [m|[1m<1>       [m][Sample of 1 record(s) selected to list 2]
+[K[[1m233922[m|[1mSIENA.CACHE.FET[m|[1mINFO      [m][COMPLETE - SIENA.CACHE.FETCH]
+[K[[1m233922[m|[1mSIENA.GEN.TXN.D[m|[1mPROCESSED [m][3/3 "/Users/matttownsend/Development/qm/dev/TEMP/20210214-233922162-bfd57bc90a7c4"]
+[K[[1m233922[m|[1mSIENA.GEN.TXN.D[m|[1mSLEEPING  [m][8 Secs]
+DONE

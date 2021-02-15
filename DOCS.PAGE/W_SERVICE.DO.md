@@ -25,7 +25,7 @@
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210211 at 17.01.39 in DEV by root
+*   Info Updated : 20210214 at 22.52.15 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -72,6 +72,8 @@
 #### PROCESS.CALLOUT:  
   
 #### PROCESS.CLI.COMMAND:  
+  
+#### PROCESS.DIRECT.CLI.COMMAND:  
   
 #### GET.RESPONSE.DATA:  
   

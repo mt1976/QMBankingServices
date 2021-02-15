@@ -20,7 +20,7 @@
 *         Params : responseCode, responseContent
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210210 at 09.09.22 in DEV by root
+*   Info Updated : 20210214 at 23.11.30 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -28,6 +28,7 @@
 ## BODY  
 ### EXTERNAL CALLS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.LIST" width="25" />[U_IO.GET.LIST](../DOCS.PAGE/U_IO.GET.LIST.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CLEAN.TEXT" width="25" />[U_CLEAN.TEXT](../DOCS.PAGE/U_CLEAN.TEXT.md)  
 ### INTERNAL CALLS  
   

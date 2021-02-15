@@ -5,7 +5,7 @@ SUBROUTINE W_SERVICE.SERVICES(responseCode, responseContent)
 *         Params : responseCode, responseContent
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210210 at 09.09.22 in DEV by root
+*   Info Updated : 20210214 at 23.11.30 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -17,10 +17,31 @@ $INCLUDE UTIL.BP I_UTIL.H
    serviceCatalogID = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "serviceCatalogID", serviceCatalogID)
    servicesList = "" ; serviceCount = 0
    CALL U_IO.GET.LIST(serviceCatalogID, serviceID, servicesList, servicesCount)
+   newList = CHANGE(servicesList, U_PROP_SEP_ALT, @VM)
+   CALL U_CRT.INFO("newlist", newList)
+   outputList = ""
+   PREFIX = ""
    IF servicesList <> "" THEN
+      CALL U_CRT.INFO("info", "got service list")
+      outputstr = ""
+      FOR I = 1 TO servicesCount
+         IF newList<I, 1> <> "" THEN
+            IF newList<I, 2> = "" AND newList<I, 3> = "" THEN
+               PREFIX = newList<I, 1>
+            END ELSE
+               outputstr<1> = PREFIX:" - ":newList<I, 1>
+               outputstr<2> = newList<I, 2>
+               outputstr<3> = newList<I, 3>
+               outputstr<4> = newList<I, 4>
+               outputstr<5> = newList<I, 5>
+               outputList<-1> = CHANGE(outputstr, @AM, U_PROP_SEP_ALT)
+            END
+         END
+      NEXT I
+      CALL U_CRT.INFO("SL", outputList)
       responseCode = RS$SUCCESS
-      CALL U_CLEAN.TEXT(servicesList)
-      responseContent=servicesList
+      CALL U_CLEAN.TEXT(outputList)
+      responseContent=outputList
    END ELSE
       responseCode = RS$NO.DATA
       responseContent = ""
