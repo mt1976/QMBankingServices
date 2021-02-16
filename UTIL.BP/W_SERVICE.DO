@@ -5,7 +5,7 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210214 at 22.52.15 in DEV by root
+*   Info Updated : 20210215 at 17.06.18 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -245,7 +245,7 @@ PROCESS.CLI.COMMAND:
       IF requestItem <> "" THEN
          statement := SPACE(1):requestItem
          IF requestParameters <> "" THEN
-            statement := SPACE(1):ICONV(requestParameters,"HD")
+            statement := SPACE(1):ICONV(requestParameters, "HD")
          END
       END
    END

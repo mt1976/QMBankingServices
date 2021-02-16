@@ -19,7 +19,7 @@
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210214 at 22.36.32 in DEV by root
+*   Info Updated : 20210216 at 15.53.23 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -36,7 +36,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.PROPERTY" width="25" />[U_IO.GET.PROPERTY](../DOCS.PAGE/U_IO.GET.PROPERTY.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_DATE.ADD" width="25" />[U_DATE.ADD](../DOCS.PAGE/U_DATE.ADD.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GEN.TOKEN" width="25" />[U_GEN.TOKEN](../DOCS.PAGE/U_GEN.TOKEN.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="W_SERVICES" width="25" />[W_SERVICES](../DOCS.PAGE/W_SERVICES.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="W_SERVICE.CONFIG" width="25" />[W_SERVICE.CONFIG](../DOCS.PAGE/W_SERVICE.CONFIG.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
 ### INTERNAL CALLS  
   

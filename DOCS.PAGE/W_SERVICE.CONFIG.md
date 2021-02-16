@@ -20,7 +20,7 @@
 *         Params : requestItem, requestParameters, responseContent, responseStatus
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210214 at 22.36.32 in DEV by root
+*   Info Updated : 20210216 at 16.35.29 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -28,6 +28,7 @@
 ## BODY  
 ### EXTERNAL CALLS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.PROPERTY" width="25" />[U_IO.GET.PROPERTY](../DOCS.PAGE/U_IO.GET.PROPERTY.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.IP" width="25" />[U_GET.IP](../DOCS.PAGE/U_GET.IP.md)  
 ### INTERNAL CALLS  
   
