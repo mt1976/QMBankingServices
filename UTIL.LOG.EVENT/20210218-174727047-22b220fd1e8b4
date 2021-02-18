@@ -1,0 +1,24 @@
+EXECUTE
+20210218
+17:47:27.03512
+root
+FORMAT UTIL.BP U_IO.DELETE
+
+FORMAT UTIL.BP U_IO.DELETE
+
+0
+U_OS.EXECUTE
+/dev/ttys002
+10
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC UTIL.BP *
+mercury.local
+192.168.0.100
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC

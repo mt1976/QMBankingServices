@@ -1,0 +1,35 @@
+SUBROUTINE W_SERVICE.CONFIGURATION_VIEW(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
+** INFORMATION ****************************************************************
+*   Routine Name : W_SERVICE.CONFIGURATION_VIEW
+*           Type : SUBROUTINE
+*         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210218 at 17.47.21 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+
+   PROCESS.NAME="W_SERVICE.CONFIGURATION_VIEW"
+   CALL U_START(PROCESS.NAME)
+
+   CALL U_CRT.INFO(PROCESS.NAME, PROCESS.NAME)
+   CALL U_CRT.INFO("requestItem", requestItem)
+   CALL U_CRT.INFO("requestParameters", requestParameters)
+
+   IF requestParameters <> "" THEN
+      ERROR.TEXT = ""
+      CALL U_IO.READ(FV.UTIL.CONFIG, requestParameters, responseContent, @TRUE, ERROR.TEXT)
+      IF ERROR.TEXT <> "" THEN
+         responseStatus = RS$FAIL
+         CALL U_TRANSLATE("WCT", "NO DATA ":SQUOTE(requestItem:"-":requestParameters), 1, responseContent)
+      END
+
+   END ELSE
+      responseStatus = RS$NO.DATA
+      CALL U_TRANSLATE("WCT", "NO DATA ":SQUOTE(requestItem:"-":requestParameters), 1, responseContent)
+   END
+   CALL U_STOP(PROCESS.NAME)
+   RETURN
+END

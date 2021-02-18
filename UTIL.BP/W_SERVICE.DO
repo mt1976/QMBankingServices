@@ -5,7 +5,7 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210215 at 17.06.18 in DEV by root
+*   Info Updated : 20210218 at 17.47.21 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -18,6 +18,11 @@ $INCLUDE UTIL.BP F_UTIL.WCT.TOKENS.H
 $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
    PROCESS.NAME = "W_SERVICE.DO"
+
+   CALL U_INITIALISE(PROCESS.NAME)
+   CALL U_START(PROCESS.NAME)
+   CALL U_HEADER(PROCESS.NAME)
+
    wct_Properties = "wct_connect"
 
    STOP.ON.ERROR = @TRUE ; FV.RECEIVE="" ; FV.RESPONSE="" ; FV.TEMPLATES = "" ; FV.REPORTS = ""
@@ -39,9 +44,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
    waitTime = 0 ; CALL U_IO.GET.PROPERTY(wct_Properties, "waitTime", waitTime)
    shutdownChar = 0 ; CALL U_IO.GET.PROPERTY(wct_Properties, "shutdownChar", shutdownChar)
 
-   CALL U_INITIALISE(PROCESS.NAME)
-   CALL U_START(PROCESS.NAME)
-   CALL U_HEADER(PROCESS.NAME)
+
 
    CALL U_CRT.INFO("QUIT CHAR", shutdownChar:",":upcase(shutdownChar))
 
@@ -124,6 +127,7 @@ PROCESS.QUEUE.ITEM:
       applicationToken = "" ; searchProperty = "appToken" ; GOSUB GET.SEARCH.PROPERTY ; applicationToken=searchResult
       uniqueID = "" ; searchProperty = "uniqueID" ; GOSUB GET.SEARCH.PROPERTY ; uniqueID=searchResult
       userPassword = "" ; searchProperty = "userPassword" ; GOSUB GET.SEARCH.PROPERTY ; userPassword=searchResult
+      msgPayload = "" ; searchProperty = "requestData" ; GOSUB GET.SEARCH.PROPERTY ; msgPayload=searchResult
 
 
       responseStatus = ""
@@ -200,7 +204,7 @@ PROCESS.ACTION:
          responseContent = responseMessage
       CASE UPCASE(requestAction) = "TEST"
          responseCode = "" ; responseMessage = ""
-         CALL W_SERVICE.TEST(requestItem, requestParameters, responseCode, responseMessage)
+         CALL W_SERVICE.TEST(requestItem, requestParameters, msgPayload, responseCode, responseMessage)
          responseStatus = responseCode
          responseContent = responseMessage
       CASE UPCASE(requestAction) = "LOGOUT"
@@ -227,7 +231,7 @@ PROCESS.CALLOUT:
    CALL !FINDPROG(fsResult, CALLOUT.ROUTINE)
    CALL U_CRT.INFO("FINGPROG", fsResult)
    IF fsResult <> "" THEN
-      CALL @CALLOUT.ROUTINE(requestItem, requestParameters, responseContent, responseStatus)
+      CALL @CALLOUT.ROUTINE(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
    END ELSE
       responseStatus = "500"
       responseContent = DQUOTE(CALLOUT.ROUTINE):" cannot be found"

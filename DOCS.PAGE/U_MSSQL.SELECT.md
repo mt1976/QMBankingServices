@@ -21,7 +21,7 @@
 *         Params : SQL.FIELDS, SQL.TABLE, SQL.ADDRESS, SQL.DATABASE, SQL.WHERE, VERBOSE, ID.RESULT, RESULT.COLUMNS, RESULT.DATA, RESULT.COUNT
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210214 at 22.36.32 in DEV by root
+*   Info Updated : 20210218 at 17.47.21 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

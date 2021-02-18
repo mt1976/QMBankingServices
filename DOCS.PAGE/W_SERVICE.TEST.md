@@ -5,7 +5,7 @@
 |TYPE|SUBROUTINE|
 |SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="UTIL.BP" width="25" />[UTIL.BP](../DOCS/UTIL.BP.md)|
 |ID|W_SERVICE.TEST|
-|PARAMETERS|requestItem, requestParameters, responseContent, responseStatus|
+|PARAMETERS|requestItem, requestParameters, msgPayload, responseContent, responseStatus|
     
 ## USAGE  
   
@@ -17,10 +17,10 @@
 ** INFORMATION ****************************************************************
 *   Routine Name : W_SERVICE.TEST
 *           Type : SUBROUTINE
-*         Params : requestItem, requestParameters, responseContent, responseStatus
+*         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210214 at 22.36.32 in DEV by root
+*   Info Updated : 20210218 at 17.47.21 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
