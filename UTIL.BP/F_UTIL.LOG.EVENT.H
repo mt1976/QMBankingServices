@@ -4,7 +4,7 @@
 *       Filename : UTIL.LOG.EVENT
 *         Prefix : U_LOG_
 ** AUDIT **********************************************************************
-*   Info Updated : 20210217 at 17.40.19 in DEV by root
+*   Info Updated : 20210220 at 13.16.36 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate U_LOG_FILE.NAME to "UTIL.LOG.EVENT"
@@ -32,3 +32,5 @@ equate U_LOG_ELAPSED to 21
 equate U_LOG_PROCESS to 22
 equate U_LOG_FILE to 23
 equate U_LOG_THREAD to 24
+equate U_LOG_SESSIONTOKEN to 25
+equate U_LOG_SESSIONUSER to 26

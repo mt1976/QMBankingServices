@@ -1,0 +1,25 @@
+{
+	? "wctResponse" : {
+		? "requestID" : "21d19afb-bd68-4fd6-8266-13658d91fe04",
+		? "requestFileName" : "21d19afb-bd68-4fd6-8266-13658d91fe04.json",
+		? "requestFilePath" : "/Users/matttownsend/Development/qm/dev/UTIL.WCT.RECV",
+		? "requestFileType" : "json",
+		? "requestConsumed" : "20210220T142706",
+		? "requestAction" : "SERVICES",
+		? "requestItem" : "",
+		? "requestParameters" : "",
+		? "responseID" : "21d19afb-bd68-4fd6-8266-13658d91fe04",
+		? "responseFileName" : "21d19afb-bd68-4fd6-8266-13658d91fe04.json",
+		? "responseFilePath" : "/Users/matttownsend/Development/qm/dev/UTIL.WCT.RESP",
+		? "responseFileType" : "json",
+		? "responseEjected" : "20210220T142706",
+		? "responseContentCount" : "29",
+		? "responseStatus" : "200",
+		? "responseContent" : {
+			? "responseContentRow" : [ ? "Funds Check - ACK|!SIENA.FUNDS.CHECK.ACK||NOPAGE|ACK&amp;#39;s outstanding funds checks", ? "Funds Check - NACK|!SIENA.FUNDS.CHECK.NACK||NOPAGE|NACK&amp;#39;s funds checks", ? "Transaction Generation - Accounts|!SIENA.GEN.TXNS|ACCOUNTS|NOPAGE|", ? "Transaction Generation - FX Spot|!SIENA.GEN.TXNS|SPOT|NOPAGE|", ? "Transaction Generation - FX Forwards|!SIENA.GEN.TXNS|FORWARD|NOPAGE|", ? "Transaction Generation - Bonds/UK Gilts|!SIENA.GEN.TXNS|BOND|NOPAGE|", ? "Scheduled Events - Refresh FX Spot|JOB.DO|FXSPOT|NOPAGE|", ? "Scheduled Events - Refresh FX Forwards|JOB.DO|FXFWD|NOPAGE|", ? "Scheduled Events - Libor|JOB.DO|LIBOR|NOPAGE|", ? "Scheduled Events - CPI|JOB.DO|CPI|NOPAGE|", ? "Scheduled Events - FX Currency Pairs|JOB.DO|FXREFRESH|NOPAGE|Fetch active pairs from Siena", ? "Scheduled Events - UK Gilts|SIENA.GILTS||NOPAGE|", ? "Data Caches - ALL|BATCH.DO|REBUILD.CACHE|NOPAGE|", ? "Data Caches - Books|JOB.DO|CACHE_BOOK|NOPAGE|", ? "Data Caches - System Date(s)|JOB.DO|CACHE_DATE|NOPAGE|", ? "Data Caches - Users|JOB.DO|CACHE_USER|NOPAGE|", ? "Data Caches - Mandated Users|JOB.DO|CACHE_MANDATE|NOPAGE|", ? "Data Caches - Currency|JOB.DO|CACHE_CURRENCY|NOPAGE|", ? "Data Caches - Currency Pairs|JOB.DO|CACHE_CURRENCYPAIR|NOPAGE|", ? "Data Caches - Counterparties|JOB.DO|CACHE_CPARTY|NOPAGE|", ? "Data Caches - Payment Systems|JOB.DO|CACHE_PSYSTEM|NOPAGE|", ? "Data Caches - Portfolios|JOB.DO|CACHE_PORTFOLIO|NOPAGE|", ? "Data Caches - Brokers|JOB.DO|CACHE_BROKER|NOPAGE|", ? "Queries - Spot Prices|SORT|SIENA.CACHE|WITH OBJECT LIKE FX.SP... BY OBJECT OBJECT VALUE ID-SUPP NOPAGE|", ? "Queries - FX Prices by CCYPAIR|SORT|SIENA.CACHE|WITH OBJECT LIKE FX...&amp;lt;&amp;lt;CCY PAIR&amp;gt;&amp;gt;... BY OBJECT OBJECT VALUE ID-SUPP NOPAGE|", ? "Queries - Gilts Prices|REPORT.DO|GILTS|NOPAGE|", ? "Installation and Admin - Install MS SQLServer views|JOB.DO|MSSQL.INSTALL|NOPAGE|", ? "Installation and Admin - Rebuild Service Catalog|JOB.DO|BUILD.SERVICE.CATALOG|NOPAGE|Rebuilds the service catalog", ? "Installation and Admin - Clear Queues|!U_CLEARFILES|WCT|NOPAGE|Clears down the App Server Request &amp;amp; Response Queues" ? ] ?
+		},
+		? "requestPayloadCount" : "1",
+		? "requestPayload" : {
+			? "requestPayloadRow" : [ ? "{&quot;wctRequest&quot;:{&quot;appToken&quot;:&quot;133ae0e051744715b9a70ee75e46c0a8&quot;,&quot;sessionToken&quot;:&quot;&quot;,&quot;requestID&quot;:&quot;21d19afb-bd68-4fd6-8266-13658d91fe04&quot;,&quot;requestAction&quot;:&quot;SERVICES&quot;,&quot;requestItem&quot;:&quot;&quot;,&quot;requestParameters&quot;:&quot;&quot;,&quot;uniqueID&quot;:&quot;mwtgodev&quot;,&quot;requestResponseFormat&quot;:&quot;json&quot;,&quot;requestData&quot;:&quot;&quot;}}" ? ] ?
+		} ?
+	}

@@ -5,7 +5,7 @@ SUBROUTINE U_OS.EXECUTE(STMT, ACTIONS)
 *         Params : STMT, ACTIONS
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210218 at 17.47.21 in DEV by root
+*   Info Updated : 20210220 at 13.30.37 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -40,15 +40,15 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
          HUSH OFF
    END CASE
 
-
-   R.EVENT = ""
-   R.EVENT<U_LOG_EVENT> = "EXECUTE"
-   R.EVENT<U_LOG_MSG> = USE.STMT
-   R.EVENT<U_LOG_CMD> = USE.STMT
-   R.EVENT<U_LOG_RETCD> = @SYSTEM.RETURN.CODE
-   R.EVENT<U_LOG_SUBR> = "U_OS.EXECUTE"
-
-   CALL U_LOG.EVENT("", R.EVENT)
+   IF ACTIONS<1> <> "SILENT" THEN
+      R.EVENT = ""
+      R.EVENT<U_LOG_EVENT> = "EXECUTE"
+      R.EVENT<U_LOG_MSG> = USE.STMT
+      R.EVENT<U_LOG_CMD> = USE.STMT
+      R.EVENT<U_LOG_RETCD> = @SYSTEM.RETURN.CODE
+      R.EVENT<U_LOG_SUBR> = "U_OS.EXECUTE"
+      CALL U_LOG.EVENT("", R.EVENT)
+   END
 
    RETURN
 END

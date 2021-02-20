@@ -1,0 +1,26 @@
+WCT_REQUEST
+20210220
+15:37:18.04422
+root
+"{"wctRequest":{"appToken":"133ae0e051744715b9a70ee75e46c0a8","sessionToken":"","requestID":"1d7d2de9-4e02-4ca0-88d3-a8b242286ca3","requestAction":"!SIENA.GEN.TXNS","requestItem":"ACCOUNTS","requestParameters":"NOPAGE","uniqueID":"mwtgodev","requestResponseFormat":"json","requestData":""}}"
+
+!SIENA.GEN.TXNS ACCOUNTS NOPAGE
+
+
+W_SERVICE.DO
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+W_SERVICE.DO
+mercury.local
+192.168.0.100
+Mac
+
+
+
+W_SERVICE.DO
+
+SIENA.GEN.TXN.DATA-ACCOUNTS
+SIENA.GEN.TXN.DATA-ACCOUNTS
+mwtgodev@DEV

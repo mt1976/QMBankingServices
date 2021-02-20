@@ -5,14 +5,14 @@ SUBROUTINE U_GET.LIST(STMT, PROCESS.LIST, NO.ITEMS)
 *         Params : STMT, PROCESS.LIST, NO.ITEMS
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210218 at 17.47.21 in DEV by root
+*   Info Updated : 20210220 at 13.26.38 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
 
    USE.STMT = STMT:" TO ":@USERNO
-   CALL U_OS.EXECUTE(USE.STMT, @TRUE)
+   CALL U_OS.EXECUTE(USE.STMT, @FALSE)
 
    PROCESS.LIST = "" ; NO.ITEMS = 0
    LOOP

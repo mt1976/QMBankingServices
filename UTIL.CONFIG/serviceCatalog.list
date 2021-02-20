@@ -1,7 +1,7 @@
 #Where ^ is used in properties, it will be replaced by an = char in the resolved property
 SERVICE=Funds Check||||=
-SERVICE=ACK|!SIENA.FUNDS.CHECK.ACK||NOPAGE|ACK's outstanding funds checks=
-SERVICE=NACK|!SIENA.FUNDS.CHECK.NACK||NOPAGE|NACK's funds checks=
+SERVICE=ACK|!SIENA.FUNDS.CHECK.ACK||NOPAGE|ACK&amp;#39;s outstanding funds checks=
+SERVICE=NACK|!SIENA.FUNDS.CHECK.NACK||NOPAGE|NACK&amp;#39;s funds checks=
 SERVICE=Transaction Generation||||=
 SERVICE=Accounts|!SIENA.GEN.TXNS|ACCOUNTS|NOPAGE|=
 SERVICE=FX Spot|!SIENA.GEN.TXNS|SPOT|NOPAGE|=
@@ -28,9 +28,11 @@ SERVICE=Portfolios|JOB.DO|CACHE_PORTFOLIO|NOPAGE|=
 SERVICE=Brokers|JOB.DO|CACHE_BROKER|NOPAGE|=
 SERVICE=Queries||||=
 SERVICE=Spot Prices|SORT|SIENA.CACHE|WITH OBJECT LIKE FX.SP... BY OBJECT OBJECT VALUE ID-SUPP NOPAGE|=
-SERVICE=FX Prices by CCYPAIR|SORT|SIENA.CACHE|WITH OBJECT LIKE FX...<<CCY PAIR>>... BY OBJECT OBJECT VALUE ID-SUPP NOPAGE|=
+SERVICE=FX Prices by CCYPAIR|SORT|SIENA.CACHE|WITH OBJECT LIKE FX...&amp;lt;&amp;lt;CCY PAIR&amp;gt;&amp;gt;... BY OBJECT OBJECT VALUE ID-SUPP NOPAGE|=
 SERVICE=Gilts Prices|REPORT.DO|GILTS|NOPAGE|=
+SERVICE=App Server Events|REPORT.DO|WEBEVENTS|NOPAGE|=
 SERVICE=Installation and Admin||||=
 SERVICE=Install MS SQLServer views|JOB.DO|MSSQL.INSTALL|NOPAGE|=
 SERVICE=Rebuild Service Catalog|JOB.DO|BUILD.SERVICE.CATALOG|NOPAGE|Rebuilds the service catalog=
-SERVICE=Clear Queues|!U_CLEARFILES|WCT|NOPAGE|Clears down the App Server Request & Response Queues=
+SERVICE=Clear Queues|!U_CLEARFILES|WCT|NOPAGE|Clears down the App Server Request &amp;amp; Response Queues=
+SERVICE=Clear App Sever Logs|!CLEAR-FILE|UTIL.LOG.EVENT||Clears the App Server Logfiles

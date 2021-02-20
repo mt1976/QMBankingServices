@@ -1,20 +1,21 @@
-SUBROUTINE U_BUILD.JSON.FIELD.REPEATING(JSON.REC, FIELD.DATA)
+SUBROUTINE U_BUILD.JSON.FIELD.REPEATING(inJSON_obj, FIELD.DATA)
 ** INFORMATION ****************************************************************
 *   Routine Name : U_BUILD.JSON.FIELD.REPEATING
 *           Type : SUBROUTINE
-*         Params : JSON.REC, FIELD.DATA
+*         Params : inJSON_obj, FIELD.DATA
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210218 at 17.47.21 in DEV by root
+*   Info Updated : 20210220 at 14.25.33 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INSERT UTIL.BP I_UTIL.H
 
-   IF JSON.REC<> "" THEN
-      JSON.REC:= ","
+   IF inJSON_obj<> "" THEN
+      inJSON_obj:= ","
    END
-   JSON.REC<-1> = DQUOTE(FIELD.DATA)
+   CALL U_CLEAN.JSON(FIELD.DATA)
+   inJSON_obj<-1> = DQUOTE(TRIM(FIELD.DATA))
 
    RETURN
 END

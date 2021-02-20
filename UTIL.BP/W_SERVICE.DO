@@ -5,7 +5,7 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210218 at 17.47.21 in DEV by root
+*   Info Updated : 20210220 at 14.36.10 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -70,7 +70,7 @@ CHECK.QUEUE:
 
    STMT = "SELECT ":W$RECV.FILE.NAME:" WITH @ID UNLIKE ":DQUOTE(".keep")
    requestList = "" ; noRequests = 0
-   CALL U_GET.LIST(STMT, requestList, noRequests)
+   CALL U_GET.LIST.SILENT(STMT, requestList, noRequests)
    * CALL U_CRT.INFO("REQUESTS", noRequests)
    IF noRequests>0 THEN
       FOR requestListItem = 1 TO noRequests
@@ -163,7 +163,17 @@ PROCESS.QUEUE.ITEM:
       CALL U_WILDCARD.SUBSTITUTE("responseContent", responseContent, response)
       CALL U_WILDCARD.SUBSTITUTE("responseStatus", responseStatus, response)
 
+      IF responseType = "json" THEN
+        * CALL U_CLEAN.JSON(response)
+      END
+
       GOSUB PROCESS.REQUEST.LOG.EVENT
+
+      *  CALL !VIEW(response, 'X', KEY)
+      CRT "8888888888"
+      CRT response
+      CRT "9999999999"
+
 
       CALL U_IO.WRITE(FV.RESPONSE, responseFileName, response, STOP.ON.ERROR, ERROR.TEXT)
    END
@@ -173,11 +183,18 @@ PROCESS.QUEUE.ITEM:
 
 PROCESS.REQUEST.LOG.EVENT:
    LOG.DATA = response
+
+   text = CHANGE(requestPayload, @AM, U_CRT_AM)
+   text = CHANGE(text, @VM, U_CRT_VM)
+   text = CHANGE(text, @SM, U_CRT_SM)
+
    R.EVENT = ""
    R.EVENT<U_LOG_EVENT> = "WCT_REQUEST"
-   R.EVENT<U_LOG_CMD> = requestAction
-   R.EVENT<U_LOG_MSG> = requestItem:" ":requestParameters
+   R.EVENT<U_LOG_CMD> = requestAction:" - ":requestItem:" - ":requestParameters
+   R.EVENT<U_LOG_MSG> = ICONV(text, "HD")
    R.EVENT<U_LOG_SUBR> = "W_SERVICE.DO"
+   R.EVENT<U_LOG_SESSIONTOKEN> = sessionToken
+   R.EVENT<U_LOG_SESSIONUSER> = uniqueID
    CALL U_LOG.EVENT(LOG.DATA, R.EVENT)
    RETURN
 
@@ -185,9 +202,9 @@ PROCESS.ACTION:
 * SUBRS MUST RETURN responseContent
    responseContent = ""
 
-   CALL U_CRT.INFO("requestAction", requestAction)
-   CALL U_CRT.INFO("ra(last)", requestAction[1, 1])
-   CALL U_CRT.INFO("requestItem", requestItem)
+  * CALL U_CRT.INFO("requestAction", requestAction)
+  * CALL U_CRT.INFO("ra(last)", requestAction[1, 1])
+  * CALL U_CRT.INFO("requestItem", requestItem)
 
 
 
@@ -318,11 +335,12 @@ PROCESS.RESPONSE.CONTENT:
    responseContentCount = DCOUNT(responseContent, @AM)
    temp_responseContent = responseContent ; responseContent = ""
    FOR I = 1 TO responseContentCount
+      temp_responseValue = OCONV(temp_responseContent<I>, "HD")
       IF responseType = "xml" THEN
-         CALL U_BUILD.XML.FIELD(responseContent, "responseContentRow", "", temp_responseContent<I>)
+         CALL U_BUILD.XML.FIELD(responseContent, "responseContentRow", "", temp_responseValue)
       END
       IF responseType = "json" THEN
-         CALL U_BUILD.JSON.FIELD.REPEATING(responseContent, temp_responseContent<I>)
+         CALL U_BUILD.JSON.FIELD.REPEATING(responseContent, temp_responseValue)
       END
    NEXT I
    RETURN
@@ -347,7 +365,6 @@ GET.REQUEST.DATA:
 GET.REQUEST.ID:
    requestID = ""
 * Interogate Inbound FILE
-
    searchProperty = "requestID"
    GOSUB GET.SEARCH.PROPERTY
    requestID=searchResult
