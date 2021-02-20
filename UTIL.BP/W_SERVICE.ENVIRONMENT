@@ -1,11 +1,11 @@
-SUBROUTINE W_SERVICE.CONFIG(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
+SUBROUTINE W_SERVICE.ENVIRONMENT(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
 ** INFORMATION ****************************************************************
 *   Routine Name : W_SERVICE.ENVIRONMENT
 *           Type : SUBROUTINE
 *         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210220 at 13.26.38 in DEV by root
+*   Info Updated : 20210220 at 22.24.30 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -16,23 +16,45 @@ $INCLUDE UTIL.BP I_UTIL.H
 
    waitTime=""
    shutdownChar=""
+   releaseID = ""
+   releaseLevel = ""
+   releaseNumber = ""
+   uptime=""
+
+   CALL U_OS.COMMAND("uptime", @FALSE, uptime, @TRUE)
 
    CALL U_IO.GET.PROPERTY("wct_connect", "waitTime", waitTime)
    CALL U_IO.GET.PROPERTY("wct_connect", "shutdownChar", shutdownChar)
 
-   responseStatus = "200"
-   responseContent<-1> = "OSUser":U_PROP_SEP_ALT:@LOGNAME
-   responseContent<-1> = "AppServer_Date":U_PROP_SEP_ALT:OCONV(DATE(), "D4/")
-   responseContent<-1> = "AppServer_Time":U_PROP_SEP_ALT:OCONV(TIME(), "MTS.")
-   responseContent<-1> = "AppServer_PollingInterval (s)":U_PROP_SEP_ALT:waitTime
-   responseContent<-1> = "AppServer_ShutdownChar":U_PROP_SEP_ALT:UPCASE(shutdownChar):shutdownChar
-   responseContent<-1> = "AppServer_SudoID":U_PROP_SEP_ALT:@USERNO
-   responseContent<-1> = "AppServer_Path":U_PROP_SEP_ALT:@PATH
-   responseContent<-1> = "AppServer_Name":U_PROP_SEP_ALT:SYSTEM(1015)
 
+   CALL U_IO.GET.PROPERTY("util", "releaseID", releaseID)
+   CALL U_IO.GET.PROPERTY("util", "releaseLevel", releaseLevel)
+   CALL U_IO.GET.PROPERTY("util", "releaseNumber", releaseNumber)
+
+   responseStatus = "200"
+
+   responseContent<-1> = "Name":U_PROP_SEP_ALT:SYSTEM(1015)
    IP4.ADDRESS = ""
    CALL U_GET.IP(IP4.ADDRESS)
-   responseContent<-1> = "AppServer_IP":U_PROP_SEP_ALT:IP4.ADDRESS
+   responseContent<-1> = "IP Address":U_PROP_SEP_ALT:IP4.ADDRESS
+   responseContent<-1> = "Path":U_PROP_SEP_ALT:@PATH
+   responseContent<-1> = "Uptime":U_PROP_SEP_ALT:uptime
+
+   responseContent<-1> = "User":U_PROP_SEP_ALT:@LOGNAME:"@":@WHO
+   responseContent<-1> = "UserNo":U_PROP_SEP_ALT:@USERNO
+
+   responseContent<-1> = "Date":U_PROP_SEP_ALT:OCONV(DATE(), "D4/")
+   responseContent<-1> = "Time":U_PROP_SEP_ALT:OCONV(TIME(), "MTS.")
+
+   responseContent<-1> = "Polling Interval (s)":U_PROP_SEP_ALT:waitTime
+   responseContent<-1> = "ShutdownChar":U_PROP_SEP_ALT:UPCASE(shutdownChar):shutdownChar
+
+   responseContent<-1> = "Release ID":U_PROP_SEP_ALT:releaseID
+   responseContent<-1> = "Release Level":U_PROP_SEP_ALT:releaseLevel
+   responseContent<-1> = "Release No":U_PROP_SEP_ALT:releaseNumber
+   responseContent<-1> = "Release Name":U_PROP_SEP_ALT:releaseID:" [r":releaseLevel:"-":releaseNumber:"]"
+
+
 
    RETURN
 END
