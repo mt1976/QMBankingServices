@@ -16,10 +16,10 @@
 ** INFORMATION ****************************************************************
 *   Routine Name : U_TEST
 *           Type : PROGRAM
-*         Params :
+*         Params : 
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210220 at 22.12.41 in DEV by root
+*   Info Updated : 20210221 at 17.23.08 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -37,6 +37,8 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_DATE.ADD" width="25" />[U_DATE.ADD](../DOCS.PAGE/U_DATE.ADD.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GEN.TOKEN" width="25" />[U_GEN.TOKEN](../DOCS.PAGE/U_GEN.TOKEN.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="W_SERVICE.ENVIRONMENT" width="25" />[W_SERVICE.ENVIRONMENT](../DOCS.PAGE/W_SERVICE.ENVIRONMENT.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.LIST" width="25" />[U_IO.GET.LIST](../DOCS.PAGE/U_IO.GET.LIST.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="W_SERVICE.DATAMAP" width="25" />[W_SERVICE.DATAMAP](../DOCS.PAGE/W_SERVICE.DATAMAP.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
 ### INTERNAL CALLS  
   

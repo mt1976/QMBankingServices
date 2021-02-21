@@ -5,7 +5,7 @@ SUBROUTINE U_IO.GET.LIST(IN.LIST.NAME, IN.LIST.PREFIX, RETURN.LIST, NO.ITEMS)
 *         Params : IN.LIST.NAME, IN.LIST.PREFIX, RETURN.LIST, NO.ITEMS
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210220 at 13.26.38 in DEV by root
+*   Info Updated : 20210221 at 16.20.13 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -41,7 +41,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
       NEXT
 
       IF RETURN.LIST = "" THEN
-         ERROR.TEXT = "!ERROR - Could not find ":DQUOTE(IN.LIST.PREFIX):" in ":ID.PROPERTIES
+         ERROR.TEXT = "!ERROR - Could not find list ":DQUOTE(IN.LIST.PREFIX):" in ":ID.PROPERTIES
          CALL U_CRT.RAW(ERROR.TEXT, "ERROR", PROCESS.NAME)
       END
    END ELSE

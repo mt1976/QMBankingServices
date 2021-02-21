@@ -79,3 +79,5 @@ equate RS$SUCCESS to 200
 equate RS$FAIL to 300
 equate RS$NO.DATA to 700
 equate U$ID.SEP                  to    "-"
+equate W$SEP to "|"
+equate W$CRLF to "\n"

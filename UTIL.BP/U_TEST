@@ -2,10 +2,10 @@ PROGRAM U_TEST
 ** INFORMATION ****************************************************************
 *   Routine Name : U_TEST
 *           Type : PROGRAM
-*         Params :
+*         Params : 
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210220 at 22.12.41 in DEV by root
+*   Info Updated : 20210221 at 17.23.08 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -49,6 +49,39 @@ $INSERT UTIL.BP I_UTIL.H
    CALL W_SERVICE.ENVIRONMENT("", "", "", responseContent, responseStatus)
    CALL U_CRT.INFO("responseCode", responseCode)
    CALL U_CRT.INFO("responseContent", responseContent)
+
+   CALL U_CRT.INFO("SYS-45", SYSTEM(45))
+   CALL U_CRT.INFO("SYS-1012", SYSTEM(1012))
+
+   CALL U_IO.GET.LIST("wct_helper", SYSTEM(45), RETURN.LIST, NO.ITEMS)
+
+   FIND "SAVE" IN RETURN.LIST SETTING POS THEN
+      CALL U_CRT.INFO("FOUND SAVE", POS)
+   END ELSE
+      CALL U_CRT.INFO("FOUND SAVE", "NOT FOUND")
+   END
+
+   responseContent = "" ; responseCode = ""
+
+   CALL W_SERVICE.DATAMAP("LIST", "Accounts", "", responseContent, responseStatus)
+   CALL U_CRT.INFO("responseCode", responseCode)
+   CALL U_CRT.INFO("responseContent", responseContent)
+
+   NO.ITEMS = DCOUNT(responseContent,@AM)
+   FOR I = 1 TO NO.ITEMS
+   CALL U_CRT.INFO("rc_":I, responseContent<I>)
+
+   rowData = CHANGE(responseContent<I>,W$SEP,@AM)
+   thisresponseContent = "" ; thisresponseCode = ""
+
+   CALL W_SERVICE.DATAMAP("VIEW", rowData<2>, "", thisresponseContent, thisresponseStatus)
+   CALL U_CRT.INFO("responseCode", thisresponseCode)
+   CALL U_CRT.INFO("responseContent", thisresponseContent)
+
+   NEXT I
+
+
+
 
    CALL U_STOP("")
    STOP

@@ -1,0 +1,26 @@
+WCT_REQUEST
+20210221
+02:18:39.04859
+root
+"{"wctRequest":{"appToken":"133ae0e051744715b9a70ee75e46c0a8","sessionToken":"","requestID":"82efbd12-5294-4ef5-9f45-8e2ddee57486","requestAction":"!U_CLEARFILES","requestItem":"WCT","requestParameters":"NOPAGE","uniqueID":"authorAdjust","requestResponseFormat":"json","requestData":""}}"
+
+!U_CLEARFILES WCT NOPAGE
+
+
+W_SERVICE.DO
+/dev/ttys001
+1
+/Users/matttownsend/Development/qm/dev
+DEV
+W_SERVICE.DO
+mercury.local
+192.168.0.100
+Mac
+
+
+
+W_SERVICE.DO
+
+U_CLEARFILES
+U_CLEARFILES
+authorAdjust@DEV

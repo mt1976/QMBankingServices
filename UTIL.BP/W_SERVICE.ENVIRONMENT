@@ -5,7 +5,7 @@ SUBROUTINE W_SERVICE.ENVIRONMENT(requestItem, requestParameters, msgPayload, res
 *         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210220 at 22.24.30 in DEV by root
+*   Info Updated : 20210221 at 15.59.31 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -48,6 +48,9 @@ $INCLUDE UTIL.BP I_UTIL.H
 
    responseContent<-1> = "Polling Interval (s)":U_PROP_SEP_ALT:waitTime
    responseContent<-1> = "ShutdownChar":U_PROP_SEP_ALT:UPCASE(shutdownChar):shutdownChar
+
+   responseContent<-1> = "DB Release No":U_PROP_SEP_ALT:SYSTEM(1012)
+
 
    responseContent<-1> = "Release ID":U_PROP_SEP_ALT:releaseID
    responseContent<-1> = "Release Level":U_PROP_SEP_ALT:releaseLevel
