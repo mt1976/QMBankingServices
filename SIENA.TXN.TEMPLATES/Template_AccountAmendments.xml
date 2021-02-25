@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><Collection>
+  <DealType>Account Amendment</DealType>
+  <MsgID>{{MSG.ID}}</MsgID>
+  <ExecType>0</ExecType>
+  <TradeDate>{{TODAY}}</TradeDate>
+  <ParentExtRefNo>{{EXT.REF}}</ParentExtRefNo>
+  <PaymentSystem>{{PAYMENT.SYSTEM}}</PaymentSystem>
+  <Direction>LOAN</Direction>
+  <Adjustment>{{AMOUNT}}</Adjustment>
+  <ValueDate>{{VALUE.DATE.SPOT}}</ValueDate>
+  <MaturityDate/>
+  <Notes>{{NOTES}}</Notes>
+  <test>{{TEST}}</test>
+</Collection>

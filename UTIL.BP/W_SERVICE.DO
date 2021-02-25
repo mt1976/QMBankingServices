@@ -5,7 +5,7 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210220 at 14.36.10 in DEV by root
+*   Info Updated : 20210222 at 16.50.26 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -164,15 +164,15 @@ PROCESS.QUEUE.ITEM:
       CALL U_WILDCARD.SUBSTITUTE("responseStatus", responseStatus, response)
 
       IF responseType = "json" THEN
-        * CALL U_CLEAN.JSON(response)
+         * CALL U_CLEAN.JSON(response)
       END
 
       GOSUB PROCESS.REQUEST.LOG.EVENT
 
       *  CALL !VIEW(response, 'X', KEY)
-      CRT "8888888888"
-      CRT response
-      CRT "9999999999"
+*      CRT "8888888888"
+*      CRT response
+*      CRT "9999999999"
 
 
       CALL U_IO.WRITE(FV.RESPONSE, responseFileName, response, STOP.ON.ERROR, ERROR.TEXT)
@@ -202,9 +202,9 @@ PROCESS.ACTION:
 * SUBRS MUST RETURN responseContent
    responseContent = ""
 
-  * CALL U_CRT.INFO("requestAction", requestAction)
-  * CALL U_CRT.INFO("ra(last)", requestAction[1, 1])
-  * CALL U_CRT.INFO("requestItem", requestItem)
+   * CALL U_CRT.INFO("requestAction", requestAction)
+   * CALL U_CRT.INFO("ra(last)", requestAction[1, 1])
+   * CALL U_CRT.INFO("requestItem", requestItem)
 
 
 
@@ -228,6 +228,12 @@ PROCESS.ACTION:
          * TODO
       CASE UPCASE(requestAction) = "SERVICES"
          CALL W_SERVICE.SERVICES(responseStatus, responseContent)
+      CASE UPCASE(requestAction) = "SHUTDOWN"
+         responseStatus = RS$SUCCESS
+         responseContent = "SHUTDOWN IN PROGRESS"
+         chkVar = shutdownChar
+         CALL U_CRT.INFO("INFORMATION",responseContent)
+
 
       CASE 1
          GOSUB PROCESS.CLI.COMMAND

@@ -5,22 +5,24 @@ SUBROUTINE U_CLEAN.TEXT(text)
 *         Params : text
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210220 at 13.26.38 in DEV by root
+*   Info Updated : 20210222 at 16.50.26 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
 
+   text = ICONV(text, "HD")
    text = OCONV(text, "HD")
+   text = ICONV(text, "HD")
 
-
-   text = CHANGE(text, "[K[H[J", "|")
-   text = CHANGE(text, "[m", "|")
-   text = CHANGE(text, "[K", "|")
-   text = CHANGE(text, "[[1m", "|")
-   text = CHANGE(text, "|1m", "|")
-   text = CHANGE(text, "1m", "|")
-   text = CHANGE(text, "[H[J", "|")
+   text = CHANGE(text, "[K[H[J", "")
+   text = CHANGE(text, "[m", "")
+   text = CHANGE(text, "[K", "")
+   text = CHANGE(text, "[[1m", "")
+   text = CHANGE(text, "|1m", "")
+   text = CHANGE(text, "|1m", "")
+   text = CHANGE(text, "1m", "")
+   text = CHANGE(text, "[H[J", "")
    text = CHANGE(text, "", "")
    text = CHANGE(text, @VM, "")
    text = CHANGE(text, @SM, "")
@@ -40,6 +42,6 @@ $INCLUDE UTIL.BP I_UTIL.H
    text = CHANGE(text, @(U_CLEAR_LINE), "")
    text = CHANGE(text, @(U_SET_FG_COLOUR), "")
    text = CHANGE(text, @(U_SET_BG_COLOUR), "")
-
+   text = OCONV(text, "HD")
    RETURN
 END

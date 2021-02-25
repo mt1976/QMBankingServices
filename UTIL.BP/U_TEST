@@ -2,10 +2,10 @@ PROGRAM U_TEST
 ** INFORMATION ****************************************************************
 *   Routine Name : U_TEST
 *           Type : PROGRAM
-*         Params : 
+*         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210221 at 17.23.08 in DEV by root
+*   Info Updated : 20210223 at 12.42.51 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -67,19 +67,22 @@ $INSERT UTIL.BP I_UTIL.H
    CALL U_CRT.INFO("responseCode", responseCode)
    CALL U_CRT.INFO("responseContent", responseContent)
 
-   NO.ITEMS = DCOUNT(responseContent,@AM)
+   NO.ITEMS = DCOUNT(responseContent, @AM)
    FOR I = 1 TO NO.ITEMS
-   CALL U_CRT.INFO("rc_":I, responseContent<I>)
+*      CALL U_CRT.INFO("rc_":I, responseContent<I>)
 
-   rowData = CHANGE(responseContent<I>,W$SEP,@AM)
-   thisresponseContent = "" ; thisresponseCode = ""
+      rowData = CHANGE(responseContent<I>, W$SEP, @AM)
+      thisresponseContent = "" ; thisresponseCode = ""
 
-   CALL W_SERVICE.DATAMAP("VIEW", rowData<2>, "", thisresponseContent, thisresponseStatus)
-   CALL U_CRT.INFO("responseCode", thisresponseCode)
-   CALL U_CRT.INFO("responseContent", thisresponseContent)
+*      CALL W_SERVICE.DATAMAP("VIEW", rowData<2>, "", thisresponseContent, thisresponseStatus)
+*      CALL U_CRT.INFO("responseCode", thisresponseCode)
+*      CALL U_CRT.INFO("responseContent", thisresponseContent)
 
    NEXT I
 
+   CALL W_SERVICE.UPLOAD("DO", "UTIL.BP", "up1.txt", thisresponseContent, thisresponseStatus)
+
+   CALL W_SERVICE.UPLOAD("DO", "/Users/matttownsend/Development/qm/dev/TEMP2", "up2.txt", thisresponseContent, thisresponseStatus)
 
 
 

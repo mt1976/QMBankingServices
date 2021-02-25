@@ -5,7 +5,7 @@
 |TYPE|SUBROUTINE|
 |SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="UTIL.BP" width="25" />[UTIL.BP](../DOCS/UTIL.BP.md)|
 |ID|U_BUILD.JSON.FIELD.REPEATING|
-|PARAMETERS|JSON.REC, FIELD.DATA|
+|PARAMETERS|inJSON_obj, FIELD.DATA|
     
 ## USAGE  
   
@@ -17,15 +17,16 @@
 ** INFORMATION ****************************************************************
 *   Routine Name : U_BUILD.JSON.FIELD.REPEATING
 *           Type : SUBROUTINE
-*         Params : JSON.REC, FIELD.DATA
+*         Params : inJSON_obj, FIELD.DATA
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210220 at 14.25.33 in DEV by root
+*   Info Updated : 20210222 at 16.50.26 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 ```
 ## BODY  
 ### EXTERNAL CALLS  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CLEAN.JSON" width="25" />[U_CLEAN.JSON](../DOCS.PAGE/U_CLEAN.JSON.md)  
 ### INTERNAL CALLS  
   

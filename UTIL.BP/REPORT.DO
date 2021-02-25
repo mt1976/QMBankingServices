@@ -5,16 +5,16 @@ PROGRAM REPORT.DO
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210220 at 13.26.38 in DEV by root
+*   Info Updated : 20210222 at 16.50.26 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
-   CALL U_INITIALISE("REPORT.DO")
-   PROCESS.NAME = "REPORT.DO"
-   CALL U_START(PROCESS.NAME)
 
-   CALL U_HEADER("JOB.DO")
+   PROCESS.NAME = SYSTEM(45)
+   CALL U_INITIALISE(PROCESS.NAME)
+   CALL U_START(PROCESS.NAME)
+   * CALL U_HEADER(PROCESS.NAME)
 
    CMD.STRING = CONVERT(SPACE(1), @AM, @SENTENCE)
    IF CMD.STRING<2> = "" THEN
@@ -28,10 +28,10 @@ $INCLUDE UTIL.BP I_UTIL.H
    THIS.CMD = 1
 
    DO.ITEM = CMD.STRING<THIS.CMD>
-   CALL U_CRT.INFO("PROCESS", DO.ITEM)
+   * CALL U_CRT.INFO("PROCESS", DO.ITEM)
 
    CALL U_REPORT.DO.HELPER(DO.ITEM)
-
+   HUSH ON
    CALL U_STOP(PROCESS.NAME)
-
+   HUSH OFF
 END

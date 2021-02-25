@@ -1,0 +1,19 @@
+#=----------------------------------------------------------------------------=
+#=which machines and db's to update pricing for=
+#=KNOWNAS|IP|DBNAME|Query|Criteria=
+#=In Criteria use ^ in place of '=' - SW will convert automatically.
+#=IN DATA SECTION IF VALUE IS PREFIX WITH "!" THEN DATA WILL BE FOUND FROM THE SIENA.CACHE
+MAP=DEAL.TYPE=1
+MAP=EXT.REF=2
+MAP=ACCOUNT.NAME=3
+MAP=COUNTERPARTY=4
+MAP=PAYMENT.SYSTEM=5
+MAP=CURRENCY=6
+MAP=AMOUNT=7
+MAP=BOOK=8
+MAP=NOTES=9
+MAP=MANDATED.USER=10
+MAP=TEST=11
+#ACC=DealType|AccountNumber/ExternalRef|AccountName|Counterparty|PaymentSystem|Currency|Balance|Book|Notes|Mandated User|Test=
+DATA=Account|10000001|GBP Customer Account|TELIA|SWIFT|GBP|0|ACCTS|Sample Note 1|Default|!FX.SP.GBPUSD.O=
+DATA=Account|10000002|EUR Customer Account|TELIA|SWIFT|EUR|0|ACCTS|Sample Note 2|Default|!FX.SP.USDCAD.B=

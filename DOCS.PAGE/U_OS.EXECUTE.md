@@ -21,7 +21,7 @@
 *         Params : STMT, ACTIONS
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210220 at 13.30.37 in DEV by root
+*   Info Updated : 20210222 at 16.50.26 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -31,6 +31,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.RECORD" width="25" />[U_CRT.RECORD](../DOCS.PAGE/U_CRT.RECORD.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.OPENFILEPATH" width="25" />[U_IO.OPENFILEPATH](../DOCS.PAGE/U_IO.OPENFILEPATH.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CLEAN.TEXT" width="25" />[U_CLEAN.TEXT](../DOCS.PAGE/U_CLEAN.TEXT.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.WRITE" width="25" />[U_IO.WRITE](../DOCS.PAGE/U_IO.WRITE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_LOG.EVENT" width="25" />[U_LOG.EVENT](../DOCS.PAGE/U_LOG.EVENT.md)  
 ### INTERNAL CALLS  
