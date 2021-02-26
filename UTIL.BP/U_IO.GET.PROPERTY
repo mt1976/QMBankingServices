@@ -5,7 +5,7 @@ SUBROUTINE U_IO.GET.PROPERTY(IN.PROPERTIES, IN.PROPERTY.NAME, RETURN.VAL)
 *         Params : IN.PROPERTIES, IN.PROPERTY.NAME, RETURN.VAL
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210222 at 16.50.26 in DEV by root
+*   Info Updated : 20210226 at 12.15.14 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -51,8 +51,9 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
       NEXT
 
       IF RETURN.VAL = "" THEN
+
          ERROR.TEXT = "Could not find ":DQUOTE(IN.PROPERTY.NAME):" in ":ID.PROPERTIES
-         CALL U_CRT.RAW(ERROR.TEXT, "ERROR", PROCESS.NAME)
+         *     CALL U_CRT.RAW(ERROR.TEXT, "ERROR", PROCESS.NAME)
 
       END
 

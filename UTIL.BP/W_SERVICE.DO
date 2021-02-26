@@ -5,7 +5,7 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210222 at 16.50.26 in DEV by root
+*   Info Updated : 20210226 at 12.15.14 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -232,7 +232,7 @@ PROCESS.ACTION:
          responseStatus = RS$SUCCESS
          responseContent = "SHUTDOWN IN PROGRESS"
          chkVar = shutdownChar
-         CALL U_CRT.INFO("INFORMATION",responseContent)
+         CALL U_CRT.INFO("INFORMATION", responseContent)
 
 
       CASE 1

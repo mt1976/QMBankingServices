@@ -21,7 +21,7 @@
 *         Params : THIS.PROCESS
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210222 at 16.50.26 in DEV by root
+*   Info Updated : 20210226 at 12.15.14 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -30,6 +30,5 @@
 ### EXTERNAL CALLS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.CALLING.PROCESS.NAME" width="25" />[U_GET.CALLING.PROCESS.NAME](../DOCS.PAGE/U_GET.CALLING.PROCESS.NAME.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_LOG.EVENT" width="25" />[U_LOG.EVENT](../DOCS.PAGE/U_LOG.EVENT.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.RAW" width="25" />[U_CRT.RAW](../DOCS.PAGE/U_CRT.RAW.md)  
 ### INTERNAL CALLS  
   

@@ -5,7 +5,7 @@ SUBROUTINE W_SERVICE.DATAMAP_VIEW(requestItem, requestParameters, msgPayload, re
 *         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210222 at 16.50.26 in DEV by root
+*   Info Updated : 20210226 at 12.15.14 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -13,8 +13,8 @@ $INCLUDE UTIL.BP I_UTIL.H
 
 ** DO NOT CHANGE
    PROCESS.NAME=SYSTEM(45) ; ERROR.TEXT = "" ; CALL U_START(PROCESS.NAME)
-   CALL U_CRT.INFO(PROCESS.NAME, PROCESS.NAME)
-   CALL U_CRT.INFO("requestItem", requestItem) ; CALL U_CRT.INFO("requestParameters", requestParameters)
+   * CALL U_CRT.INFO(PROCESS.NAME, PROCESS.NAME)
+   * CALL U_CRT.INFO("requestItem", requestItem) ; CALL U_CRT.INFO("requestParameters", requestParameters)
 ** DO NOT CHANGE
 
    IF requestParameters <> "" THEN
@@ -27,40 +27,42 @@ $INCLUDE UTIL.BP I_UTIL.H
       mapDataList=""
       CALL U_IO.GET.PROPERTY("util", "dataMapData", mapDataList)
 
-      CALL U_CRT.INFO("mapFile", mapFile)
-      CALL U_CRT.INFO("mapMapList", mapMapList)
-      CALL U_CRT.INFO("mapDataList", mapDataList)
+      *    CALL U_CRT.INFO("mapFile", mapFile)
+      *    CALL U_CRT.INFO("mapMapList", mapMapList)
+      *    CALL U_CRT.INFO("mapDataList", mapDataList)
 
       mappings.list = "" ; noMappings = 0
       CALL U_IO.GET.LIST(mapFile, mapMapList, mappings.list, noMappings)
-      CALL U_CRT.INFO("noMappings", noMappings)
-      CALL U_CRT.INFO("mappings.list", mappings.list)
+      *    CALL U_CRT.INFO("noMappings", noMappings)
+      *    CALL U_CRT.INFO("mappings.list", mappings.list)
 
       data.list = "" ; noData = 0
       CALL U_IO.GET.LIST(mapFile, mapDataList, data.list, noData)
-      CALL U_CRT.INFO("noData", noData)
-      CALL U_CRT.INFO("data.list", data.list)
+      *    CALL U_CRT.INFO("noData", noData)
+      *    CALL U_CRT.INFO("data.list", data.list)
 
-      CALL U_CRT.INFO("create", noMappings:"x":noData:" matrix")
+      *    CALL U_CRT.INFO("create", noMappings:"x":noData:" matrix")
 
       outputMatrix = ""
       outputMatrix <-1> = CHANGE(mappings.list, @AM, W$SEP)
       outputMatrix <-1> = data.list
-      CALL U_CRT.INFO("outputMatrix", outputMatrix)
+      *    CALL U_CRT.INFO("outputMatrix", outputMatrix)
 
 
 
       IF ERROR.TEXT <> "" THEN
          responseStatus = RS$FAIL
-         CALL U_TRANSLATE("WCT", "NO DATA ":SQUOTE(requestItem:"-":requestParameters), 1, responseContent)
+         responseContent = "[{{1}}] No Data Found '{{2}}' '{{3}}'"
+         CALL U_MSG(responseContent, RS$FAIL:@AM:requestItem:@AM:requestParameters)
       END ELSE
          responseStatus = RS$SUCCESS
          responseContent = outputMatrix
       END
 
    END ELSE
-      responseStatus = RS$NO.DATA
-      CALL U_TRANSLATE("WCT", "NO DATA ":SQUOTE(requestItem:"-":requestParameters), 1, responseContent)
+      responseStatus = RS$FAIL
+      responseContent = "[{{1}}] No Data Specified '{{2}}' '{{3}}'"
+      CALL U_MSG(responseContent, RS$NO.DATA:@AM:requestItem:@AM:requestParameters)
    END
    CALL U_STOP(PROCESS.NAME)
    RETURN

@@ -1,0 +1,53 @@
+SUBROUTINE W_SERVICE.DATAMAP_VIEW(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
+** INFORMATION ****************************************************************
+*   Routine Name : W_SERVICE.DATAXML_VIEW
+*           Type : SUBROUTINE
+*         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210226 at 12.15.14 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+
+$INCLUDE UTIL.BP F_SIENA.TXN.TEMPLATES.H
+** DO NOT CHANGE
+   PROCESS.NAME=SYSTEM(45) ; ERROR.TEXT = "" ; CALL U_START(PROCESS.NAME)
+   CALL U_CRT.INFO(PROCESS.NAME, PROCESS.NAME)
+   CALL U_CRT.INFO("requestItem", requestItem) ; CALL U_CRT.INFO("requestParameters", requestParameters)
+** DO NOT CHANGE
+   FV.txnTemplate = "" ; txnTemplate.ID = ""; txnTemplate.REC = ""
+   CALL U_IO.OPENFILE(S_TXN_TEMPLATE_FILE.NAME, FV.txnTemplate, @TRUE, "")
+
+
+   IF requestParameters <> "" THEN
+
+      CALL W_SERVICE.DATAXML.GETID(requestParameters, txnTemplate.ID)
+
+      CALL U_CRT.INFO("txnTemplate.ID", txnTemplate.ID)
+
+      CALL U_IO.READ(FV.txnTemplate, txnTemplate.ID, txnTemplate.REC, @FALSE, ERROR.TEXT)
+      CALL U_CRT.INFO("ERROR", ERROR.TEXT)
+      CALL U_CRT.INFO("txnTemplate.REC", txnTemplate.REC)
+
+      outputMatrix = txnTemplate.REC
+
+      IF ERROR.TEXT <> "" THEN
+         responseStatus = RS$FAIL
+         responseContent = "[{{1}}] Template Data Found '{{2}}' '{{3}}'"
+         CALL U_MSG(responseContent, RS$NO.FAIL:@AM:requestItem:@AM:requestParameters)
+         responseContent<-1> = ERROR.TEXT
+      END ELSE
+         responseStatus = RS$SUCCESS
+         responseContent = outputMatrix
+      END
+
+   END ELSE
+      responseStatus = RS$NO.DATA
+      responseContent = "[{{1}}] No Data Found '{{2}}' '{{3}}'"
+      CALL U_MSG(responseContent, RS$NO.DATA:@AM:requestItem:@AM:requestParameters)
+   END
+   CALL U_STOP(PROCESS.NAME)
+   RETURN
+END

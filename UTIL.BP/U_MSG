@@ -1,0 +1,30 @@
+SUBROUTINE U_MSG(TEXT, WILDCARDS)
+** INFORMATION ****************************************************************
+*   Routine Name : U_MSG
+*           Type : SUBROUTINE
+*         Params : TEXT, WILDCARDS
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210226 at 12.15.14 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+
+* EXAMPLE INPUT
+*  TEXT = "NO DATA ({{1}}-{{2}})"
+* WILDCARDS<1> = "ITEM"
+* WILDCARDS<2> = "ITEMVALUE"
+*
+
+   CALL U_TRANSLATE("MSG", TEXT, 1, TEXT)
+   IF WILDCARDS # "" THEN
+      FOR I = 1 TO 10
+
+         CALL U_WILDCARD.SUBSTITUTE(I, WILDCARDS<I>, TEXT)
+
+      NEXT I
+   END
+
+   RETURN
+END

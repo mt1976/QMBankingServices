@@ -5,7 +5,7 @@ SUBROUTINE W_SERVICE.UPLOAD(requestItem, requestParameters, msgPayload, response
 *         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210223 at 10.13.23 in DEV by root
+*   Info Updated : 20210226 at 12.15.14 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -38,7 +38,8 @@ $INCLUDE UTIL.BP I_UTIL.H
       CASE 1
 
          responseStatus =RS$FAIL
-         CALL U_TRANSLATE("WCT", "Invalid Action ":SQUOTE(requestItem), 1, responseContent)
+         responseContent = "Invalid Action '{{1}}'"
+         CALL U_MSG(responseContent, requestItem)
 
    END CASE
    CALL U_STOP(PROCESS.NAME)
