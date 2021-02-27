@@ -1,0 +1,26 @@
+WCT_REQUEST
+20210227
+14:27:52.02293
+root
+"{"wctRequest":{"appToken":"133ae0e051744715b9a70ee75e46c0a8","sessionToken":"","requestID":"f888fcdd-8ee1-4d16-b013-9daf1d7fb792","requestAction":"@DATAMAP","requestItem":"SAVE","requestParameters":"Test","uniqueID":"authorAdjust","requestResponseFormat":"json","requestData":"#=----------------------------------------------------------------------------= \\r\\n#=which machines and db\\u0026amp;amp;amp;#39;s to update pricing for= \\r\\nFDADFASDFA \\r\\n#=KNOWNAS|IP|DBNAME|Query|Criteria= \\r\\n#=In Criteria use ^ in place of \\u0026amp;amp;amp;#39;=\\u0026amp;amp;amp;#39; - SW will convert automatically. \\r\\n#=IN DATA SECTION IF VALUE IS PREFIX WITH \\u0026amp;amp;amp;quot;!\\u0026amp;amp;amp;quot; THEN DATA WILL BE FOUND FROM THE SIENA.CACHE \\r\\nMAP=DEAL.TYPE=1 \\r\\nMAP=EXT.REF=2 \\r\\nMAP=ACCOUNT.NAME=3 \\r\\nMAP=COUNTERPARTY=4 \\r\\nMAP=PAYMENT.SYSTEM=5 \\r\\n#ACC=DealType|AccountNumber/ExternalRef|AccountName|Counterparty|PaymentSystem= \\r\\nDATA=Account|10000001|GBP Customer Account|TELIA|SWIFT= \\r\\nDATA=Account|10000002|EUR Customer Account|TELIA|SWIFT=\\r\\nDATA=Account|10000003|USD Customer Account|HSBC|SWIFT="}}"
+
+@DATAMAP - SAVE - Test
+
+
+W_SERVICE.DO
+/dev/ttys001
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+W_SERVICE.DO
+mercury.local
+192.168.0.100
+Mac
+
+
+
+W_SERVICE.DO
+
+W_SERVICE.DO
+W_SERVICE.DO
+authorAdjust@DEV

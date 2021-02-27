@@ -1,0 +1,26 @@
+WCT_REQUEST
+20210227
+14:56:48.03156
+root
+"{"wctRequest":{"appToken":"133ae0e051744715b9a70ee75e46c0a8","sessionToken":"","requestID":"31a0376b-ef67-49a1-8b21-5dd7854b9db1","requestAction":"@DATAMAP","requestItem":"SAVE","requestParameters":"Test","uniqueID":"authorAdjust","requestResponseFormat":"json","requestData":"#=----------------------------------------------------------------------------= \\r\\n#=which machines and db\\u0026#39;s to update pricing for= ee\\r\\n#=KNOWNAS|IP|DBNAME|Query|Criteria= \\r\\n#=In Criteria use ^ in place of \\u0026#39;=\\u0026#39; - SW will convert automatically. \\r\\n#=IN DATA SECTION IF VALUE IS PREFIX WITH \\u0026quot;!\\u0026quot; THEN DATA WILL BE FOUND FROM THE SIENA.CACHE \\r\\nMAP=DEAL.TYPE=1 \\r\\nMAP=EXT.REF=2 \\r\\nMAP=ACCOUNT.NAME=3 \\r\\nMAP=COUNTERPARTY=4 \\r\\nMAP=PAYMENT.SYSTEM=5 \\r\\n#ACC=DealType|AccountNumber/ExternalRef|AccountName|Counterparty|PaymentSystem= \\r\\nDATA=Account|10000001|GBP Customer Account|TELIA|SWIFT= \\r\\nDATA=Account|10000002|EUR Customer Account|TELIA|SWIFT="}}"
+
+@DATAMAP - SAVE - Test
+
+
+W_SERVICE.DO
+/dev/ttys001
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+W_SERVICE.DO NOPAGE
+mercury.local
+192.168.0.100
+Mac
+
+
+
+W_SERVICE.DO
+
+W_SERVICE.DO
+W_SERVICE.DO
+authorAdjust@DEV

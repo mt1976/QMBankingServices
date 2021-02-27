@@ -1,0 +1,26 @@
+WCT_REQUEST
+20210227
+15:15:27.03772
+root
+"{"wctRequest":{"appToken":"133ae0e051744715b9a70ee75e46c0a8","sessionToken":"","requestID":"5e5cec9c-a75c-4273-bbc3-c740a795cd5f","requestAction":"@CONFIGURATION","requestItem":"SAVE","requestParameters":"Test","uniqueID":"authorAdjust","requestResponseFormat":"json","requestData":"\\u003c?xml version=\\"1.0\\" encoding=\\"ISO-8859-1\\" standalone=\\"no\\"?\\u003e\\u003cCollection\\u003e \\r\\n\\u003cDealType\\u003eAccount Amendment Nipples\\u003c/DealType\\u003e \\r\\n\\u003cMsgID\\u003e{{MSG.ID}}\\u003c/MsgID\\u003e \\r\\n\\u003cExecType\\u003e0\\u003c/ExecType\\u003e \\r\\n\\u003cTradeDate\\u003e{{TODAY}}\\u003c/TradeDate\\u003e \\r\\n\\u003cParentExtRefNo\\u003e{{EXT.REF}}\\u003c/ParentExtRefNo\\u003e \\r\\n\\u003cPaymentSystem\\u003e{{PAYMENT.SYSTEM}}\\u003c/PaymentSystem\\u003e \\r\\n\\u003cDirection\\u003eLOAN\\u003c/Direction\\u003e \\r\\n\\u003cAdjustment\\u003e{{AMOUNT}}\\u003c/Adjustment\\u003e \\r\\n\\u003cValueDate\\u003e{{VALUE.DATE.SPOT}}\\u003c/ValueDate\\u003e \\r\\n\\u003cMaturityDate/\\u003e \\r\\n\\u003cNotes\\u003e{{NOTES}}\\u003c/Notes\\u003e \\r\\n\\u003ctest\\u003e{{TEST}}\\u003c/test\\u003e \\r\\n\\u003c/Collection\\u003e"}}"
+
+@CONFIGURATION - SAVE - Test
+
+
+W_SERVICE.DO
+/dev/ttys001
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+W_SERVICE.DO NOPAGE
+mercury.local
+192.168.0.100
+Mac
+
+
+
+W_SERVICE.DO
+
+W_SERVICE.DO
+W_SERVICE.DO
+authorAdjust@DEV

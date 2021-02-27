@@ -5,7 +5,7 @@ PROGRAM U_TEST
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210226 at 12.16.45 in DEV by root
+*   Info Updated : 20210227 at 15.40.33 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -87,19 +87,7 @@ $INSERT UTIL.BP I_UTIL.H
    CALL U_CRT.INFO("NEXT", "W_SERVICE.DATAXML")
 
    responseContent = "" ; responseCode = ""
-   CALL W_SERVICE.DATAXML("VIEW", "Bond", "", thisresponseContent, thisresponseStatus)
-   CALL U_CRT.INFO("responseCode", thisresponseContent)
-   CALL U_CRT.INFO("responseContent", thisresponseStatus)
-   thisresponseContent<-1>="TEST-":DATE()
-   CALL W_SERVICE.DATAXML("SAVE", "Bond", thisresponseContent, thisresponseContent, thisresponseStatus)
-   CALL U_CRT.INFO("responseCode", thisresponseContent)
-   CALL U_CRT.INFO("responseContent", thisresponseStatus)
-   CALL W_SERVICE.DATAXML("SAVE", "Chickpeas", thisresponseContent, thisresponseContent, thisresponseStatus)
-   CALL U_CRT.INFO("responseCode", thisresponseContent)
-   CALL U_CRT.INFO("responseContent", thisresponseStatus)
-   CALL W_SERVICE.DATAXML("Fart", "Chickpeas", thisresponseContent, thisresponseContent, thisresponseStatus)
-   CALL U_CRT.INFO("responseCode", thisresponseContent)
-   CALL U_CRT.INFO("responseContent", thisresponseStatus)
+
    TEXT = "NO DATA ({{1}}-{{2}})"
    WILDCARDS=""
    WILDCARDS<1> = "ITEM"
@@ -107,6 +95,13 @@ $INSERT UTIL.BP I_UTIL.H
    CALL U_MSG(TEXT, WILDCARDS)
 
    CALL U_CRT.INFO("MSG", TEXT)
+
+
+
+   responseContent = "" ; responseCode = ""
+   CALL W_SERVICE.DATAMAP("NEW", "MWT Bum", "Payload Data as Deecriptopn", thisresponseContent, thisresponseStatus)
+   CALL U_CRT.INFO("responseCode", thisresponseContent)
+   CALL U_CRT.INFO("responseContent", thisresponseStatus)
 
    CALL U_STOP("")
    STOP

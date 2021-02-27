@@ -1,0 +1,26 @@
+EXECUTE
+20210227
+14:00:17.01192
+root
+BASIC UTIL.BP U_PURGE
+
+BASIC UTIL.BP U_PURGE
+
+1
+U_OS.EXECUTE
+/dev/ttys001
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC UTIL.BP * NOPAGE
+mercury.local
+192.168.0.100
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC
+BCC
+root@DEV

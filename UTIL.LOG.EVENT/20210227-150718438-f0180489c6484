@@ -1,0 +1,26 @@
+WCT_REQUEST
+20210227
+15:07:18.03307
+root
+"{"wctRequest":{"appToken":"133ae0e051744715b9a70ee75e46c0a8","sessionToken":"","requestID":"45ac1e4d-5907-4a6a-9276-238a9f9e6cc8","requestAction":"@DATAMAP","requestItem":"SAVE","requestParameters":"Test","uniqueID":"authorAdjust","requestResponseFormat":"json","requestData":"#=----------------------------------------------------------------------------= CRLF#=which machines and db\\u0026amp;#39;s to update pricing for= *CRLF#=KNOWNAS|IP|DBNAME|Query|Criteria= CRLF#=In Criteria use ^ in place of \\u0026amp;#39;=\\u0026amp;#39; - SW will convert automatically. CRLF#=IN DATA SECTION IF VALUE IS PREFIX WITH \\u0026amp;quot;!\\u0026amp;quot; THEN DATA WILL BE FOUND FROM THE SIENA.CACHE CRLFMAP=DEAL.TYPE=1 CRLFMAP=EXT.REF=2 CRLFMAP=ACCOUNT.NAME=3 CRLFMAP=COUNTERPARTY=4 CRLFMAP=PAYMENT.SYSTEM=5 CRLF#ACC=DealType|AccountNumber/ExternalRef|AccountName|Counterparty|PaymentSystem= CRLFDATA=Account|10000001|GBP Customer Account|TELIA|SWIFT= CRLFDATA=Account|10000002|EUR Customer Account|TELIA|SWIFT= \\r\\n#=----------------------------------------------------------------------------= CRLF#=which machines and db\\u0026amp;#39;s to update pricing for= *CRLF#=KNOWNAS|IP|DBNAME|Query|Criteria= CRLF#=In Criteria use ^ in place of \\u0026amp;#39;=\\u0026amp;#39; - SW will convert automatically. CRLF#=IN DATA SECTION IF VALUE IS PREFIX WITH \\u0026amp;quot;!\\u0026amp;quot; THEN DATA WILL BE FOUND FROM THE SIENA.CACHE CRLFMAP=DEAL.TYPE=1 CRLFMAP=EXT.REF=2 CRLFMAP=ACCOUNT.NAME=3 CRLFMAP=COUNTERPARTY=4 CRLFMAP=PAYMENT.SYSTEM=5 CRLF#ACC=DealType|AccountNumber/ExternalRef|AccountName|Counterparty|PaymentSystem= CRLFDATA=Account|10000001|GBP Customer Account|TELIA|SWIFT= CRLFDATA=Account|10000002|EUR Customer Account|TELIA|SWIFT=dsadasdasd\\r\\ndasdasda"}}"
+
+@DATAMAP - SAVE - Test
+
+
+W_SERVICE.DO
+/dev/ttys001
+2
+/Users/matttownsend/Development/qm/dev
+DEV
+W_SERVICE.DO NOPAGE
+mercury.local
+192.168.0.100
+Mac
+
+
+
+W_SERVICE.DO
+
+W_SERVICE.DO
+W_SERVICE.DO
+authorAdjust@DEV

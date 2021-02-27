@@ -1,11 +1,11 @@
-SUBROUTINE W_SERVICE.DATAMAP_SAVE(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
+SUBROUTINE W_SERVICE.DATAXML_SAVE(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
 ** INFORMATION ****************************************************************
 *   Routine Name : W_SERVICE.DATAXML_SAVE
 *           Type : SUBROUTINE
 *         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210226 at 12.15.14 in DEV by root
+*   Info Updated : 20210227 at 15.13.35 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -23,6 +23,8 @@ $INCLUDE UTIL.BP F_SIENA.TXN.TEMPLATES.H
    IF requestParameters # "" AND msgPayload # "" THEN
 
       CALL W_SERVICE.DATAXML.GETID(requestParameters, txnTemplate.ID)
+
+      CALL W_CLEAN.PAYLOAD(msgPayload)
 
       CALL U_IO.WRITE(FV.txnTemplate, txnTemplate.ID, msgPayload, @FALSE, "")
 
