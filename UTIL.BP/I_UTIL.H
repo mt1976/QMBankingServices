@@ -1,3 +1,12 @@
+** INFORMATION ****************************************************************
+*    Insert Name : I_UTIL.H - UTIL.BP
+*           Type : INSERT
+*       Filename : n/a
+*         Prefix : n/a
+** AUDIT **********************************************************************
+*   Info Created : YYYYMMDD at HH.MM.SS in DEV by MANUALLY
+*                : MANUALLY CREATED
+*******************************************************************************
 * UTIL.BP I_UTIL.H
 * Common Block
 COMMON /UTIL/
@@ -36,7 +45,7 @@ equate U_COL_BRIGHT_RED       to    12
 equate U_COL_BRIGHT_MAGENTA   to    13
 equate U_COL_YELLOW           to    14
 equate U_COL_BRIGHT_WHITE     to    15
-* Static's
+* General Static's
 equate U_SEP                  to    "~"
 equate U_SEP_ALT              to    "!"
 equate U_TRUNC                to    "-"
@@ -48,6 +57,7 @@ equate U_LOGMODE_csv          to    "csv"
 equate U_LOGMODE_simple       to    "simple"
 equate U_MAXIDLEN             to    32
 equate U_PREF_SQL_EQ          to    "^"
+* Auto Generating Documentation
 equate MD$BR                  to    "  "
 equate MD$SUBR                to    "SUBROUTINE"
 equate MD$HEADER              to    "INSERT"
@@ -67,17 +77,19 @@ equate MD$CODE.START          to    "```javascript"
 equate MD$CODE.END            to    "```"
 equate MD$SUFFIX              to    ".md"
 equate MD$CALL                to    "CALL"
+* Wildcard Processing
 equate SUB$PREFIX             to    "{{"
 equate SUB$SUFFIX             to    "}}"
+* WCT Static
+equate U$ID.SEP               to    "-"
+equate W$SEP                  to    "|"
+equate W$CRLF                 to    " & "
 * PICK Standard's
 equate U_CRT_AM               to    "^"
 equate U_CRT_VM               to    "]"
 equate U_CRT_SM               to    "\"
 equate U_SEP_ID               to    "."
 * Response Codes
-equate RS$SUCCESS to 200
-equate RS$FAIL to 300
-equate RS$NO.DATA to 700
-equate U$ID.SEP                  to    "-"
-equate W$SEP to "|"
-equate W$CRLF to " & "
+equate RS$SUCCESS             to    200
+equate RS$FAIL                to    300
+equate RS$NO.DATA             to    700

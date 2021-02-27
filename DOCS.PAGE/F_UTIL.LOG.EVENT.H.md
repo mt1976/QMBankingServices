@@ -21,14 +21,6 @@
 ```
 ## BODY  
 ```javascript
-** INFORMATION ****************************************************************
-*    Insert Name : F_UTIL.LOG.EVENT.H - UTIL.BP
-*           Type : INSERT
-*       Filename : UTIL.LOG.EVENT
-*         Prefix : U_LOG_
-** AUDIT **********************************************************************
-*   Info Updated : 20210220 at 13.16.36 in DEV by root
-*                : on mercury.local (Mac)
 *******************************************************************************
 equate U_LOG_FILE.NAME to "UTIL.LOG.EVENT"
 equate U_LOG_EVENT to 1

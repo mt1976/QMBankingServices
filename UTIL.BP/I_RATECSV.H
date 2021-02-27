@@ -1,6 +1,12 @@
 * UTIL.BP I_RATECSV.H
 * Generated MANUALLY at 16:42:49 on 27 May 2019
 
+
+
+
+
+
+
 equate RATE.TYPE  to 3
 equate RATE.TENOR to 4
 equate RATE.CCY1  to 7

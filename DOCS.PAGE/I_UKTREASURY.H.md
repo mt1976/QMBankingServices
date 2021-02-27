@@ -11,17 +11,16 @@
 ```javascript
 * BP I_UKTREASURY.H
 
-equate UKTR_LONG.NAME to "1"
-equate UKTR_ISIN to "2"
-equate UKTR_TIDM to "3"
-equate UKTR_SEDOL to "4"
-equate UKTR_ISSUE.DATE to "5"
-equate UKTR_MATURITY.DATE to "6"
-equate UKTR_COUPON.VALUE to "7"
+
+
+
+
+
+
+
 ```
 ## BODY  
 ```javascript
-* BP I_UKTREASURY.H
 
 equate UKTR_LONG.NAME to "1"
 equate UKTR_ISIN to "2"
