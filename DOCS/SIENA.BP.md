@@ -58,6 +58,9 @@ PARAMETERS : PROCESS.NAME
 ## SIENA.BOESONIA.HELPER  
 PARAMETERS : PROCESS.NAME  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.BOESONIA.HELPER.md)  
+## SIENA.BUILD.SERVICE.CATALOG.HELPER  
+PARAMETERS : PROCESS.NAME  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.BUILD.SERVICE.CATALOG.HELPER.md)  
 ## SIENA.CACHE.CLEAR  
 PARAMETERS : OBJECT.NAME  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/SIENA.CACHE.CLEAR.md)  

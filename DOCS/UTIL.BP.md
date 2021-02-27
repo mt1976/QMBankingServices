@@ -16,6 +16,8 @@ HEADER INFORMATION UTIL.BP
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_SIENA.TXN.OUT.H.md)  
 ## F_SIENA.TXN.TEMPLATES.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_SIENA.TXN.TEMPLATES.H.md)  
+## F_UTIL.CONFIG.H  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.CONFIG.H.md)  
 ## F_UTIL.LOG.EVENT.H  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/F_UTIL.LOG.EVENT.H.md)  
 ## F_UTIL.SCRIPTS.H  
@@ -104,11 +106,14 @@ HEADER INFORMATION UTIL.BP
 PARAMETERS : FN.BP, FV.UTIL.BP, ID.UTIL.BP, R.UTIL.CONFIG  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILD.INFO.HELPER.md)  
 ## U_BUILD.JSON.FIELD.REPEATING  
-PARAMETERS : JSON.REC, FIELD.DATA  
+PARAMETERS : inJSON_obj, FIELD.DATA  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILD.JSON.FIELD.REPEATING.md)  
 ## U_BUILD.MACHINE.CHECK  
 PARAMETERS : isBuildMachine  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILD.MACHINE.CHECK.md)  
+## U_BUILD.SERVICE.CATALOG.HELPER  
+PARAMETERS : SPARE01  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILD.SERVICE.CATALOG.HELPER.md)  
 ## U_BUILD.XML.FIELD  
 PARAMETERS : XML.REC, FIELD.TYPE, FIELD.NAME, FIELD.DATA  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILD.XML.FIELD.md)  
@@ -118,6 +123,9 @@ PARAMETERS : PROCESS.FILE, DEF.ARRAY
 ## U_BUILDFILES.HELPER  
 PARAMETERS : PROCESS.FILE, INSERT.FILE, PREFIX  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_BUILDFILES.HELPER.md)  
+## U_CLEAN.JSON  
+PARAMETERS : inJSON_content  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_CLEAN.JSON.md)  
 ## U_CLEAN.TEXT  
 PARAMETERS : text  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_CLEAN.TEXT.md)  
@@ -160,6 +168,9 @@ PARAMETERS : IP4.ADDRESS
 ## U_GET.LIST  
 PARAMETERS : STMT, PROCESS.LIST, NO.ITEMS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_GET.LIST.md)  
+## U_GET.LIST.SILENT  
+PARAMETERS : STMT, PROCESS.LIST, NO.ITEMS  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_GET.LIST.SILENT.md)  
 ## U_GET.NEXT.WORKING.DAY  
 PARAMETERS : IN.DATE, NEXT.WORKING.DAY  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_GET.NEXT.WORKING.DAY.md)  
@@ -229,6 +240,9 @@ PARAMETERS : LOG.DATA, R.UTIL.LOG.EVENT
 ## U_LOG.PURGE  
 PARAMETERS : PURGE.FILE  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_LOG.PURGE.md)  
+## U_MSG  
+PARAMETERS : TEXT, WILDCARDS  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_MSG.md)  
 ## U_MSSQL.EXECUTE  
 PARAMETERS : SQL.STATEMENT, SQL.ADDRESS, SQL.DATABASE, VERBOSE, ID_UTIL.SQL.RESPONSE  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_MSSQL.EXECUTE.md)  
@@ -283,13 +297,70 @@ PARAMETERS : SUBS.REPLACE, SUBS.VALUE, XML.DOC
 ## U_XML.FIND  
 PARAMETERS : XML.TAG, XML.DOC, RESULT  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/U_XML.FIND.md)  
-## W_LOGIN  
-PARAMETERS : applicationToken, userName, userPassword, sessionToken, responseCode, responseMessage  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_LOGIN.md)  
-## W_SERVICE.CONFIG  
-PARAMETERS : requestItem, requestParameters, responseContent, responseStatus  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.CONFIG.md)  
+## W_CLEAN.PAYLOAD  
+PARAMETERS : text  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_CLEAN.PAYLOAD.md)  
+## W_SERVICE.CONFIGURATION  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.CONFIGURATION.md)  
+## W_SERVICE.CONFIGURATION_LIST  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.CONFIGURATION_LIST.md)  
+## W_SERVICE.CONFIGURATION_SAVE  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.CONFIGURATION_SAVE.md)  
+## W_SERVICE.CONFIGURATION_VIEW  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.CONFIGURATION_VIEW.md)  
+## W_SERVICE.DATAMAP  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.DATAMAP.md)  
+## W_SERVICE.DATAMAP_DELETE  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.DATAMAP_DELETE.md)  
+## W_SERVICE.DATAMAP_LIST  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.DATAMAP_LIST.md)  
+## W_SERVICE.DATAMAP_NEW  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.DATAMAP_NEW.md)  
+## W_SERVICE.DATAMAP_RAW  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.DATAMAP_RAW.md)  
+## W_SERVICE.DATAMAP_SAVE  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.DATAMAP_SAVE.md)  
+## W_SERVICE.DATAMAP_VIEW  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.DATAMAP_VIEW.md)  
+## W_SERVICE.DATAXML  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.DATAXML.md)  
+## W_SERVICE.DATAXML.GETID  
+PARAMETERS : inValue, txnTemplate.ID  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.DATAXML.GETID.md)  
+## W_SERVICE.DATAXML_SAVE  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.DATAXML_SAVE.md)  
+## W_SERVICE.DATAXML_VIEW  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.DATAXML_VIEW.md)  
+## W_SERVICE.ENVIRONMENT  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.ENVIRONMENT.md)  
+## W_SERVICE.LOGIN  
+PARAMETERS : applicationToken, uniqueID, spare01, sessionToken, responseCode, responseMessage  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.LOGIN.md)  
 ## W_SERVICE.SERVICES  
 PARAMETERS : responseCode, responseContent  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.SERVICES.md)  
+## W_SERVICE.TEST  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.TEST.md)  
+## W_SERVICE.UPLOAD  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.UPLOAD.md)  
+## W_SERVICE.UPLOAD_DO  
+PARAMETERS : requestItem, requestParameters, msgPayload, responseContent, responseStatus  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="DETAILS" width="25" />[DETAILS](../DOCS.PAGE/W_SERVICE.UPLOAD_DO.md)  
 FOOTER UTIL.BP root  

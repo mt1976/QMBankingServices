@@ -13,7 +13,7 @@ $INCLUDE UTIL.BP I_UTIL.H
 
    PROCESS.NAME="W_SERVICE.CONFIGURATION"
    CALL U_START(PROCESS.NAME)
-
+** Routes Configuration Data Traffic
    *CALL U_CRT.INFO("requestItem", requestItem)
    *CALL U_CRT.INFO("requestParameters", requestParameters)
 

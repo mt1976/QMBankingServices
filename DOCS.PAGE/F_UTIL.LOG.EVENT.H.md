@@ -15,7 +15,7 @@
 *       Filename : UTIL.LOG.EVENT
 *         Prefix : U_LOG_
 ** AUDIT **********************************************************************
-*   Info Updated : 20210208 at 16.23.19 in DEV by root
+*   Info Updated : 20210220 at 13.16.36 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 ```

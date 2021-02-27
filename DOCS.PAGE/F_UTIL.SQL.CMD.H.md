@@ -15,7 +15,7 @@
 *       Filename : UTIL.SQL.CMD
 *         Prefix : U_SQLCMD.
 ** AUDIT **********************************************************************
-*   Info Updated : 20210208 at 16.23.22 in DEV by root
+*   Info Updated : 20210220 at 13.16.38 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 ```
