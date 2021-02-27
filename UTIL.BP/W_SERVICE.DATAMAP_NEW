@@ -5,7 +5,7 @@ SUBROUTINE W_SERVICE.DATAMAP_NEW(requestItem, requestParameters, msgPayload, res
 *         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 16.34.10 in DEV by root
+*   Info Updated : 20210227 at 22.42.00 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -89,7 +89,7 @@ $INCLUDE UTIL.BP F_SIENA.TXN.TEMPLATES.H
       properties.NEW<-1> = dataMapDest:DOWNCASE(new.ID):"=":dealImporterDest:"="
       properties.NEW<-1> = dataMapWait:DOWNCASE(new.ID):"=":0:"="
       properties.NEW<-1> = ""
-
+      properties.NEW<-1> = "# DO NOT DELETE THE FOLLOWING LINE!!!!!"
       SUBS.REPLACE.ITEM = "#":dataMapPropWildcard
       properties.NEW<-1> = SUBS.REPLACE.ITEM
 

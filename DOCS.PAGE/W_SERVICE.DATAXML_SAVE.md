@@ -21,7 +21,7 @@
 *         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 15.13.35 in DEV by root
+*   Info Updated : 20210227 at 22.42.00 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -32,6 +32,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.OPENFILE" width="25" />[U_IO.OPENFILE](../DOCS.PAGE/U_IO.OPENFILE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="W_SERVICE.DATAXML.GETID" width="25" />[W_SERVICE.DATAXML.GETID](../DOCS.PAGE/W_SERVICE.DATAXML.GETID.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="W_CLEAN.PAYLOAD" width="25" />[W_CLEAN.PAYLOAD](../DOCS.PAGE/W_CLEAN.PAYLOAD.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.WRITE" width="25" />[U_IO.WRITE](../DOCS.PAGE/U_IO.WRITE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_MSG" width="25" />[U_MSG](../DOCS.PAGE/U_MSG.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
 ### INTERNAL CALLS  
