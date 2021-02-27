@@ -27,7 +27,7 @@
 ```
 ## BODY  
 ### EXTERNAL CALLS  
-### INTERNAL CALLS  
+### NOTES  
 ####    DISPLAY @(U_CLEAR_LINE):@(U_BOLD_ON):U_PREF:@(U_BOLD_OFF):QUESTION:" ":  
   
   

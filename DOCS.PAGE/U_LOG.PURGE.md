@@ -34,5 +34,5 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.EXECUTE" width="25" />[U_OS.EXECUTE](../DOCS.PAGE/U_OS.EXECUTE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.DELETE" width="25" />[U_IO.DELETE](../DOCS.PAGE/U_IO.DELETE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_LOG.EVENT" width="25" />[U_LOG.EVENT](../DOCS.PAGE/U_LOG.EVENT.md)  
-### INTERNAL CALLS  
+### NOTES  
   

@@ -35,7 +35,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.EXECUTE" width="25" />[U_OS.EXECUTE](../DOCS.PAGE/U_OS.EXECUTE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.DELETE" width="25" />[U_IO.DELETE](../DOCS.PAGE/U_IO.DELETE.md)  
-### INTERNAL CALLS  
+### NOTES  
 #### MERGE.FILES:  
   
 #### PRE.PROCESS.FILE:  

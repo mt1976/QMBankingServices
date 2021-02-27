@@ -33,5 +33,5 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_MSSQL.SELECT" width="25" />[U_MSSQL.SELECT](../DOCS.PAGE/U_MSSQL.SELECT.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.RECORD" width="25" />[U_CRT.RECORD](../DOCS.PAGE/U_CRT.RECORD.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
-### INTERNAL CALLS  
+### NOTES  
   

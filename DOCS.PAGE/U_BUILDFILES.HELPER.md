@@ -36,5 +36,5 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.EXECUTE" width="25" />[U_OS.EXECUTE](../DOCS.PAGE/U_OS.EXECUTE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_BUILD.MACHINE.CHECK" width="25" />[U_BUILD.MACHINE.CHECK](../DOCS.PAGE/U_BUILD.MACHINE.CHECK.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_LOG.EVENT" width="25" />[U_LOG.EVENT](../DOCS.PAGE/U_LOG.EVENT.md)  
-### INTERNAL CALLS  
+### NOTES  
   

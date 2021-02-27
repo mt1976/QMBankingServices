@@ -33,7 +33,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.WRITE" width="25" />[U_IO.WRITE](../DOCS.PAGE/U_IO.WRITE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_MSG" width="25" />[U_MSG](../DOCS.PAGE/U_MSG.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
-### INTERNAL CALLS  
+### NOTES  
  DO NOT CHANGE    
   
  DO NOT CHANGE    

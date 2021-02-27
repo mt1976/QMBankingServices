@@ -35,7 +35,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.EXECUTE" width="25" />[U_OS.EXECUTE](../DOCS.PAGE/U_OS.EXECUTE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.READ" width="25" />[U_IO.READ](../DOCS.PAGE/U_IO.READ.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_BUILDFILES.HELPER" width="25" />[U_BUILDFILES.HELPER](../DOCS.PAGE/U_BUILDFILES.HELPER.md)  
-### INTERNAL CALLS  
+### NOTES  
 #### PROCESS.IT:  
   
   

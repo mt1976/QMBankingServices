@@ -31,5 +31,5 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.LIST" width="25" />[U_GET.LIST](../DOCS.PAGE/U_GET.LIST.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_MSG" width="25" />[U_MSG](../DOCS.PAGE/U_MSG.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
-### INTERNAL CALLS  
+### NOTES  
   

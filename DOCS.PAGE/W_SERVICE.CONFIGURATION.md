@@ -33,7 +33,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="W_SERVICE.CONFIGURATION_SAVE" width="25" />[W_SERVICE.CONFIGURATION_SAVE](../DOCS.PAGE/W_SERVICE.CONFIGURATION_SAVE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_MSG" width="25" />[U_MSG](../DOCS.PAGE/U_MSG.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
-### INTERNAL CALLS  
+### NOTES  
  Routes Configuration Data Traffic    
   
   

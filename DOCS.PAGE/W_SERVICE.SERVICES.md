@@ -30,5 +30,5 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.LIST" width="25" />[U_IO.GET.LIST](../DOCS.PAGE/U_IO.GET.LIST.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CLEAN.TEXT" width="25" />[U_CLEAN.TEXT](../DOCS.PAGE/U_CLEAN.TEXT.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_MSG" width="25" />[U_MSG](../DOCS.PAGE/U_MSG.md)  
-### INTERNAL CALLS  
+### NOTES  
   

@@ -30,5 +30,5 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.OPENFILE" width="25" />[U_IO.OPENFILE](../DOCS.PAGE/U_IO.OPENFILE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.CLOSEFILE" width="25" />[U_IO.CLOSEFILE](../DOCS.PAGE/U_IO.CLOSEFILE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.DELETE" width="25" />[U_IO.DELETE](../DOCS.PAGE/U_IO.DELETE.md)  
-### INTERNAL CALLS  
+### NOTES  
   

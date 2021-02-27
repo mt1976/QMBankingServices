@@ -31,5 +31,5 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_HEADER" width="25" />[U_HEADER](../DOCS.PAGE/U_HEADER.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.GEN.TXN.DATA" width="25" />[SIENA.GEN.TXN.DATA](../DOCS.PAGE/SIENA.GEN.TXN.DATA.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
-### INTERNAL CALLS  
+### NOTES  
   

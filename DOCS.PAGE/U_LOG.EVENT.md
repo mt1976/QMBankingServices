@@ -32,5 +32,5 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.UUID" width="25" />[U_GET.UUID](../DOCS.PAGE/U_GET.UUID.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.CALLING.PROCESS.NAME" width="25" />[U_GET.CALLING.PROCESS.NAME](../DOCS.PAGE/U_GET.CALLING.PROCESS.NAME.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.WRITE" width="25" />[U_IO.WRITE](../DOCS.PAGE/U_IO.WRITE.md)  
-### INTERNAL CALLS  
+### NOTES  
   

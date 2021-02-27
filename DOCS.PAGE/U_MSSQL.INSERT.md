@@ -30,5 +30,5 @@
 ### EXTERNAL CALLS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_MSSQL.EXECUTE" width="25" />[U_MSSQL.EXECUTE](../DOCS.PAGE/U_MSSQL.EXECUTE.md)  
-### INTERNAL CALLS  
+### NOTES  
   

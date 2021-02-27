@@ -30,5 +30,5 @@
 ### EXTERNAL CALLS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_TRANSLATE" width="25" />[U_TRANSLATE](../DOCS.PAGE/U_TRANSLATE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
-### INTERNAL CALLS  
+### NOTES  
   

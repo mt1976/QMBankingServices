@@ -36,7 +36,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.READ" width="25" />[U_IO.READ](../DOCS.PAGE/U_IO.READ.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.EXECUTE" width="25" />[U_OS.EXECUTE](../DOCS.PAGE/U_OS.EXECUTE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.COMMAND" width="25" />[U_OS.COMMAND](../DOCS.PAGE/U_OS.COMMAND.md)  
-### INTERNAL CALLS  
+### NOTES  
 #### PROCESS.IT:  
   
   

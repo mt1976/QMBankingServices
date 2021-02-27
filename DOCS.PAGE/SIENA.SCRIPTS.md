@@ -28,5 +28,5 @@
 ### EXTERNAL CALLS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_INITIALISE" width="25" />[U_INITIALISE](../DOCS.PAGE/U_INITIALISE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.SCRIPT.HELPER" width="25" />[SIENA.SCRIPT.HELPER](../DOCS.PAGE/SIENA.SCRIPT.HELPER.md)  
-### INTERNAL CALLS  
+### NOTES  
   

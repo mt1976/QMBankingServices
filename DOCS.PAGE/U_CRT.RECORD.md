@@ -29,5 +29,5 @@
 ### EXTERNAL CALLS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.CALLING.PROCESS.NAME" width="25" />[U_GET.CALLING.PROCESS.NAME](../DOCS.PAGE/U_GET.CALLING.PROCESS.NAME.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT" width="25" />[U_CRT](../DOCS.PAGE/U_CRT.md)  
-### INTERNAL CALLS  
+### NOTES  
   

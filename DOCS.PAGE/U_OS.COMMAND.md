@@ -31,5 +31,5 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.RECORD" width="25" />[U_CRT.RECORD](../DOCS.PAGE/U_CRT.RECORD.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_LOG.EVENT" width="25" />[U_LOG.EVENT](../DOCS.PAGE/U_LOG.EVENT.md)  
-### INTERNAL CALLS  
+### NOTES  
   

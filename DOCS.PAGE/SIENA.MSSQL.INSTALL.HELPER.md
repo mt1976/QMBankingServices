@@ -32,5 +32,5 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.LIST" width="25" />[U_GET.LIST](../DOCS.PAGE/U_GET.LIST.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_MSSQL.VIEW.DROP" width="25" />[U_MSSQL.VIEW.DROP](../DOCS.PAGE/U_MSSQL.VIEW.DROP.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_MSSQL.VIEW.CREATE" width="25" />[U_MSSQL.VIEW.CREATE](../DOCS.PAGE/U_MSSQL.VIEW.CREATE.md)  
-### INTERNAL CALLS  
+### NOTES  
   

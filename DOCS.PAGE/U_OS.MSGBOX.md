@@ -29,5 +29,5 @@
 ## BODY  
 ### EXTERNAL CALLS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_LOG.EVENT" width="25" />[U_LOG.EVENT](../DOCS.PAGE/U_LOG.EVENT.md)  
-### INTERNAL CALLS  
+### NOTES  
   

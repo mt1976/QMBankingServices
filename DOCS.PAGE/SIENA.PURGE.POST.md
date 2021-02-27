@@ -33,5 +33,5 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.LIST" width="25" />[U_IO.GET.LIST](../DOCS.PAGE/U_IO.GET.LIST.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_LOG.PURGE" width="25" />[U_LOG.PURGE](../DOCS.PAGE/U_LOG.PURGE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
-### INTERNAL CALLS  
+### NOTES  
   

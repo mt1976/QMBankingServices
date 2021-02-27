@@ -30,5 +30,5 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.EPOCH.DATE" width="25" />[U_GET.EPOCH.DATE](../DOCS.PAGE/U_GET.EPOCH.DATE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.IP" width="25" />[U_GET.IP](../DOCS.PAGE/U_GET.IP.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.COMMAND" width="25" />[U_OS.COMMAND](../DOCS.PAGE/U_OS.COMMAND.md)  
-### INTERNAL CALLS  
+### NOTES  
   

@@ -30,5 +30,5 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IS.WORKING.DAY" width="25" />[U_IS.WORKING.DAY](../DOCS.PAGE/U_IS.WORKING.DAY.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_DATE.ADD" width="25" />[U_DATE.ADD](../DOCS.PAGE/U_DATE.ADD.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IS.WORKING.DAY" width="25" />[U_IS.WORKING.DAY](../DOCS.PAGE/U_IS.WORKING.DAY.md)  
-### INTERNAL CALLS  
+### NOTES  
   

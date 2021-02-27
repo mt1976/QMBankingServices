@@ -28,5 +28,5 @@
 ## BODY  
 ### EXTERNAL CALLS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GIT.CHECKIN.HELPER" width="25" />[U_GIT.CHECKIN.HELPER](../DOCS.PAGE/U_GIT.CHECKIN.HELPER.md)  
-### INTERNAL CALLS  
+### NOTES  
   

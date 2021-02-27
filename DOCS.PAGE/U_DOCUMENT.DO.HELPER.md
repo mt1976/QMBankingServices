@@ -21,7 +21,7 @@
 *         Params : FN.ITEM, ID.ITEM, DO.TYPE, FV.ITEM, DOC.DETAIL
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 22.42.00 in DEV by root
+*   Info Updated : 20210227 at 23.41.03 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -34,7 +34,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.READ" width="25" />[U_IO.READ](../DOCS.PAGE/U_IO.READ.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.WRITE" width="25" />[U_IO.WRITE](../DOCS.PAGE/U_IO.WRITE.md)  
-### INTERNAL CALLS  
+### NOTES  
 #### PROCESS.INSERTS:  
   
  Process inserts, if line is prefixed $INSERT or $INCLUDE build output.    

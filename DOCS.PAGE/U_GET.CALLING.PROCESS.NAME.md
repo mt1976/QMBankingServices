@@ -27,7 +27,7 @@
 ```
 ## BODY  
 ### EXTERNAL CALLS  
-### INTERNAL CALLS  
+### NOTES  
  USAGE Used to get the current process name from the call stack.    
   
  Get calling process name from current call stack.    

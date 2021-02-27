@@ -5,7 +5,7 @@ SUBROUTINE U_DOCUMENT.DO.HELPER(FN.ITEM, ID.ITEM, DO.TYPE, FV.ITEM, DOC.DETAIL)
 *         Params : FN.ITEM, ID.ITEM, DO.TYPE, FV.ITEM, DOC.DETAIL
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 22.42.00 in DEV by root
+*   Info Updated : 20210227 at 23.41.03 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -32,6 +32,7 @@ $INCLUDE UTIL.BP I_UTIL.H
    TXT.USAGE=""
    TXT.CALLS=""
    TXT.INTERNAL=""
+   TXT.NOTES=""
 
    CALL U_TRANSLATE("docs", "DATA", 1, TXT.DATA)
    CALL U_TRANSLATE("docs", "VALUE", 1, TXT.VALUE)
@@ -47,6 +48,9 @@ $INCLUDE UTIL.BP I_UTIL.H
    CALL U_TRANSLATE("docs", "USAGE", 1, TXT.USAGE)
    CALL U_TRANSLATE("docs", "CALLS", 1, TXT.CALLS)
    CALL U_TRANSLATE("docs", "INTERNAL CALLS", 1, TXT.INTERNAL)
+   CALL U_TRANSLATE("docs", "NOTES", 1, TXT.NOTES)
+
+
 
    *             CALL U_TRANSLATE("docs", "DATA", 1, TXT.DATA)
 
@@ -193,7 +197,7 @@ PROCESS.BODY:
    PAGE.REC<-1> = MD$H2:TXT.BODY:MD$BR
    PAGE.REC<-1> = MD$H3:TXT.CALLS:MD$BR
    GOSUB PROCESS.BODY.CALLS
-   PAGE.REC<-1> = MD$H3:TXT.INTERNAL:MD$BR
+   PAGE.REC<-1> = MD$H3:TXT.NOTES:MD$BR
    LEN.DOC_COMMENT = LEN(DOC_COMMENT)
    FOR L = HEADER.END TO NO.LINES
       IF RIGHT(R.REC<L>, 1) = ":" THEN

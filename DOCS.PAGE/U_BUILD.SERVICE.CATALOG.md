@@ -32,5 +32,5 @@
 ## BODY  
 ### EXTERNAL CALLS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_BUILD.SERVICE.CATALOG.HELPER" width="25" />[U_BUILD.SERVICE.CATALOG.HELPER](../DOCS.PAGE/U_BUILD.SERVICE.CATALOG.HELPER.md)  
-### INTERNAL CALLS  
+### NOTES  
   

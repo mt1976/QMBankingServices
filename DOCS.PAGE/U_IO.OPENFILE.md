@@ -28,7 +28,7 @@
 ## BODY  
 ### EXTERNAL CALLS  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.RAW" width="25" />[U_CRT.RAW](../DOCS.PAGE/U_CRT.RAW.md)  
-### INTERNAL CALLS  
+### NOTES  
  FN.PD = "PROCESS.DIR" ; F.PD = "" ; PD.ID = ""    
   
   

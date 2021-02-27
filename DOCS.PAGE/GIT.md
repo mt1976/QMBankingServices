@@ -34,7 +34,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.COMMAND" width="25" />[U_OS.COMMAND](../DOCS.PAGE/U_OS.COMMAND.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.LIST" width="25" />[U_IO.GET.LIST](../DOCS.PAGE/U_IO.GET.LIST.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_OS.EXECUTE" width="25" />[U_OS.EXECUTE](../DOCS.PAGE/U_OS.EXECUTE.md)  
-### INTERNAL CALLS  
+### NOTES  
 #### AUTO.COMPILE:  
   
   

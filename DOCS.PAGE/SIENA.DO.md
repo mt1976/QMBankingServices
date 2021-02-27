@@ -32,5 +32,5 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_HEADER" width="25" />[U_HEADER](../DOCS.PAGE/U_HEADER.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="@processHelper" width="25" />[@processHelper](../DOCS.PAGE/@processHelper.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
-### INTERNAL CALLS  
+### NOTES  
   

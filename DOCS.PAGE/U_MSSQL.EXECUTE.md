@@ -40,5 +40,5 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_GET.UUID" width="25" />[U_GET.UUID](../DOCS.PAGE/U_GET.UUID.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.WRITE" width="25" />[U_IO.WRITE](../DOCS.PAGE/U_IO.WRITE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_LOG.EVENT" width="25" />[U_LOG.EVENT](../DOCS.PAGE/U_LOG.EVENT.md)  
-### INTERNAL CALLS  
+### NOTES  
   

@@ -38,7 +38,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_BUILD.INFO.HELPER" width="25" />[U_BUILD.INFO.HELPER](../DOCS.PAGE/U_BUILD.INFO.HELPER.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.READ" width="25" />[U_IO.READ](../DOCS.PAGE/U_IO.READ.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_DOCUMENT.DO.HELPER" width="25" />[U_DOCUMENT.DO.HELPER](../DOCS.PAGE/U_DOCUMENT.DO.HELPER.md)  
-### INTERNAL CALLS  
+### NOTES  
 #### DO.IT:  
   
   
