@@ -21,7 +21,7 @@
 *         Params : FN.ITEM, ID.ITEM, DO.TYPE, FV.ITEM, DOC.DETAIL
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 23.41.03 in DEV by root
+*   Info Updated : 20210227 at 23.47.08 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
