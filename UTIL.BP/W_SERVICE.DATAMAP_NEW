@@ -5,7 +5,7 @@ SUBROUTINE W_SERVICE.DATAMAP_NEW(requestItem, requestParameters, msgPayload, res
 *         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 16.22.30 in DEV by root
+*   Info Updated : 20210227 at 16.34.10 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -23,7 +23,7 @@ $INCLUDE UTIL.BP F_SIENA.TXN.TEMPLATES.H
    IF requestParameters <> "" THEN
       dataMap.ID = ""
       CALL U_IO.GET.PROPERTY("util", "dataMapPrefix", dataMap.ID)
-
+      dataMapPrefix=dataMap.ID
       mapMapList=""
       CALL U_IO.GET.PROPERTY("util", "dataMapMap", mapMapList)
       mapDataList=""
@@ -45,7 +45,7 @@ $INCLUDE UTIL.BP F_SIENA.TXN.TEMPLATES.H
 *dataMapWait=demo_wait_=
 
       dataMapTmpl="" ; CALL U_IO.GET.PROPERTY("util", "dataMapTmpl", dataMapTmpl)
-      dataMapData="" ; CALL U_IO.GET.PROPERTY("util", "dataMapData", dataMapData)
+      dataMapData="" ; CALL U_IO.GET.PROPERTY("util", "dataMapDataPrefix", dataMapData)
       dataMapDest="" ; CALL U_IO.GET.PROPERTY("util", "dataMapDest", dataMapDest)
       dataMapWait="" ; CALL U_IO.GET.PROPERTY("util", "dataMapWait", dataMapWait)
       dealImporterDest="" ; CALL U_IO.GET.PROPERTY("siena_demo", "dealImporterDest", dealImporterDest)
@@ -85,7 +85,7 @@ $INCLUDE UTIL.BP F_SIENA.TXN.TEMPLATES.H
       properties.NEW<-1> = "# ":msgPayload
       properties.NEW<-1> = "# Auto Generated : ":OCONV(DATE(), "D4/"):" at ":OCONV(TIME(), "MTS.")
       properties.NEW<-1> = dataMapTmpl:DOWNCASE(new.ID):"=":template.ID:"="
-      properties.NEW<-1> = dataMapData:DOWNCASE(new.ID):"=":dataMap.ID:"="
+      properties.NEW<-1> = dataMapData:DOWNCASE(new.ID):"=":dataMapPrefix:new.ID:"="
       properties.NEW<-1> = dataMapDest:DOWNCASE(new.ID):"=":dealImporterDest:"="
       properties.NEW<-1> = dataMapWait:DOWNCASE(new.ID):"=":0:"="
       properties.NEW<-1> = ""
