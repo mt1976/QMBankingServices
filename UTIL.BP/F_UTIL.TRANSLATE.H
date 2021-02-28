@@ -4,11 +4,11 @@
 *       Filename : UTIL.TRANSLATE
 *         Prefix : U_TRNS.
 ** AUDIT **********************************************************************
-*   Info Updated : 20210220 at 13.16.38 in DEV by root
+*   Info Updated : 20210228 at 00.36.28 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate U_TRNS.FILE.NAME to "UTIL.TRANSLATE"
-equate U_TRNS.RVSERVER to 1
+equate U_TRNS.MESSAGE to 1
 equate U_TRNS.UKTDATA to 2
 equate U_TRNS.NIPART to 3
 equate U_TRNS.NINAME to 4

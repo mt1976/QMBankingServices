@@ -76,9 +76,9 @@ PROCESS.URI:
 
       outCCY = "" ; outCCY = SPACE(3):CCY
       outTenor = "" ; extTenor = ""
-      CALL U_TRANSLATE("TENOR", thisTenor, U_TRNS.RVSERVER, outTenor)
+      CALL U_TRANSLATE("TENOR", thisTenor, U_TRNS.MESSAGE, outTenor)
       CALL U_TRANSLATE("TENOR", thisTenor, U_TRNS.SIENA_BC, extTenor)
-      CALL U_TRANSLATE("RATETYPE", indexID, U_TRNS.RVSERVER, rvType)
+      CALL U_TRANSLATE("RATETYPE", indexID, U_TRNS.MESSAGE, rvType)
 
       outCCYTenor = rvType[1, 1]:outCCY"L#6":outTenor
       *    CALL U_CRT.INFO("outCCYTenor", outCCYTenor)
