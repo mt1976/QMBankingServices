@@ -1,0 +1,49 @@
+PROGRAM U_LOCAL.TEST
+** INFORMATION ****************************************************************
+*   Routine Name : U_LOCAL.TEST
+*           Type : PROGRAM
+*         Params :
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+   CALL U_INITIALISE("U_LOCAL.TEST")
+   PID = "U_LOCAL.TEST"
+   CRT "START"
+   CALL U_START(PID)
+   CRT "HEADER"
+   CALL U_HEADER("this is a test")
+   CRT "OPENFILE"
+   FN.FILENAME = "UTIL.CONFIG" ; FV.FILEVAR = ""
+   CALL U_IO.OPENFILE(FN.FILENAME, FV.FILEVAR, @FALSE, "")
+   CRT "ISSUE READ COMMAND"
+   ID.RECORD = "util.properties"
+   CALL U_IO.READ.LOCAL(FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT, "OVERRIDE")
+   CRT "BACK FROM READ"
+   CALL U_CRT.INFO("ID", ID.RECORD)
+   LOCAL.ID.RECORD = UPCASE(SYSTEM(1015)):U$SEP.ALT:ID.RECORD
+
+   NEW.PROPERTIES = COLLECTION()
+   NO.PROPERTIES = DCOUNT(R.RECORD, @AM)
+   R.RECORD = CHANGE(R.RECORD, U$SEP.CFG, @VM)
+   FOR I = 1 TO NO.PROPERTIES
+
+      THIS.PROP = R.RECORD<I, 1>
+      THIS.VALU = R.RECORD<I, 2>
+
+      NEW.PROPERTIES{THIS.PROP} = THIS.VALU
+
+   NEXT I
+
+   JS.VERSION = JBUILD(NEW.PROPERTIES)
+
+   CALL U_CRT.INFO("LOCAL", LOCAL.ID.RECORD)
+   * CALL U_CRT.INFO("COLLC",NEW.PROPERTIES)
+   CALL U_CRT.RECORD(JS.VERSION)
+   CALL U_CRT.RECORD(R.RECORD)
+   CALL U_STOP(PID)
+   STOP "DONE"
+END

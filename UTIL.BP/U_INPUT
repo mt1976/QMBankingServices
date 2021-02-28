@@ -5,16 +5,15 @@ SUBROUTINE U_INPUT(QUESTION, RESPONSE)
 *         Params : QUESTION, RESPONSE
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210228 at 00.39.40 in DEV by root
+*   Info Updated : 20210228 at 13.26.47 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
 
 
-   DISPLAY @(T$CLEARLINE):@(T$BOLD_ON):U_PREF:@(T$BOLD_OFF):QUESTION:" ":
-
-   INPUT RESPONSE, 20:_
+   DISPLAY @(T$CLEARLINE):@(T$BOLD_ON):T$INPUT.PREFIX:@(T$BOLD_OFF):QUESTION:" ":
+   INPUT RESPONSE, -1
    CRT
    RETURN
 END

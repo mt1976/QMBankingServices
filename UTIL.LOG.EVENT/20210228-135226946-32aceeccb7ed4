@@ -1,0 +1,26 @@
+WCT_REQUEST
+20210228
+13:52:26.00103
+root
+"{"wctRequest":{"appToken":"133ae0e051744715b9a70ee75e46c0a8","sessionToken":"","requestID":"888f4ee2-22bc-4dd6-85c7-0c13375837d5","requestAction":"!SIENA.FUNDS.CHECK.NACK","requestItem":"","requestParameters":"NOPAGE","uniqueID":"authorAdjust","requestResponseFormat":"json","requestData":""}}"
+
+!SIENA.FUNDS.CHECK.NACK -  - NOPAGE
+
+
+W_SERVICE.DO
+/dev/ttys002
+3
+/Users/matttownsend/Development/qm/dev
+DEV
+W_SERVICE.DO
+mercury.local
+192.168.0.100
+Mac
+
+
+
+W_SERVICE.DO
+
+SIENA.NACK.FUNDS.CHECK
+SIENA.NACK.FUNDS.CHECK
+authorAdjust@DEV

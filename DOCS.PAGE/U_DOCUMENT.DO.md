@@ -1,14 +1,14 @@
-<img src="../.resources/themes/unicons-line-6563ff/corner-up-left-alt.svg" alt="BACK" width="25" />[BACK](../DOCS/UTIL.BP.md)  
+<img src="../.resources/themes/unicons-line-6563ff/corner-up-left-alt.svg" alt="BACK" width="25" />[BACK](../DOCS/BP.md)  
 # U_DOCUMENT.DO  
 |DATA|VALUE|
 | --- | --- |
 |TYPE|PROGRAM|
-|SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="UTIL.BP" width="25" />[UTIL.BP](../DOCS/UTIL.BP.md)|
+|SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="BP" width="25" />[BP](../DOCS/BP.md)|
 |ID|U_DOCUMENT.DO|
     
 ## USAGE  
 *  U_DOCUMENT.DO <<Parameters>>  
-*  Parameters [A specific file i.e. UTIL.BP]  
+*  Parameters [A specific file i.e. BP]  
   
 ## REQUIRES  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="I_UTIL.H" width="25" />[I_UTIL.H](../DOCS.PAGE/I_UTIL.H.md)  
@@ -19,9 +19,9 @@
 *   Routine Name : U_DOCUMENT.DO
 *           Type : PROGRAM
 *         Params :
-*            Loc : UTIL.BP
+*            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210228 at 00.39.40 in DEV by root
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

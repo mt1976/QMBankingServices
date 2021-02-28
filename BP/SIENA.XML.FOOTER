@@ -1,0 +1,20 @@
+SUBROUTINE SIENA.XML.FOOTER(XML.REC)
+** INFORMATION ****************************************************************
+*   Routine Name : SIENA.XML.FOOTER
+*           Type : SUBROUTINE
+*         Params : XML.REC
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+
+
+   XML.REC<-1>="</TABLE>"
+   XML.REC<-1>="</TRANSACTION>"
+   XML.REC<-1>="</TRANSACTIONS>"
+
+   RETURN
+END

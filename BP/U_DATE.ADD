@@ -1,0 +1,111 @@
+SUBROUTINE U_DATE.ADD(baseDate, addDays, addMonths, addYears)
+** INFORMATION ****************************************************************
+*   Routine Name : U_DATE.ADD
+*           Type : SUBROUTINE
+*         Params : baseDate, addDays, addMonths, addYears
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+
+
+
+
+   DAY = OCONV(baseDate, "DD")
+   MONTH = OCONV(baseDate, "DM")
+   YEAR = OCONV(baseDate, "DY")
+
+   addDays+=0
+   addMonths+=0
+   addYears+=0
+
+   DAYS.IN.MONTH = ""
+   DAYS.IN.MONTH<1> = 31
+   DAYS.IN.MONTH<2> = 28
+   DAYS.IN.MONTH<3> = 31
+   DAYS.IN.MONTH<4> = 30
+   DAYS.IN.MONTH<5> = 31
+   DAYS.IN.MONTH<6> = 30
+   DAYS.IN.MONTH<7> = 31
+   DAYS.IN.MONTH<8> = 31
+   DAYS.IN.MONTH<9> = 30
+   DAYS.IN.MONTH<10> = 31
+   DAYS.IN.MONTH<11> = 30
+   DAYS.IN.MONTH<12> = 31
+
+   DAYS.IN.YEAR = SUM(DAYS.IN.MONTH)
+
+   *CALL U_CRT.INFO("baseDate", baseDate)
+
+   *CALL U_CRT.INFO("addDays", addDays)
+   *CALL U_CRT.INFO("addMonths", addMonths)
+   *CALL U_CRT.INFO("addYears", addYears)
+   *CALL U_CRT.INFO("DAY", DAY)
+   *CALL U_CRT.INFO("MONTH", MONTH)
+   *CALL U_CRT.INFO("YEAR", YEAR)
+   *CALL U_CRT.INFO("DAYS.IN.MONTH", DAYS.IN.MONTH)
+   *CALL U_CRT.INFO("DAYS.IN.YEAR", DAYS.IN.YEAR)
+
+   addTheseDays = 0
+
+   IF addDays>0 THEN
+      GOSUB ADD.DAYS
+   END
+   IF addMonths>0 THEN
+      GOSUB ADD.MONTHS
+   END
+   IF addYears>0 THEN
+      GOSUB ADD.YEARS
+   END
+
+   FULL.DATE = DAY:"/":MONTH:"/":YEAR
+   *CALL U_CRT.INFO("OUT>IN", FULL.DATE)
+   baseDate = ICONV(FULL.DATE, "D4/")
+   *CALL U_CRT.INFO("baseDate", baseDate)
+
+   DAY = OCONV(baseDate, "DD")
+   MONTH = OCONV(baseDate, "DM")
+   YEAR = OCONV(baseDate, "DY")
+
+   *CALL U_CRT.INFO("DAY", DAY)
+   *CALL U_CRT.INFO("MONTH", MONTH)
+   *CALL U_CRT.INFO("YEAR", YEAR)
+
+   RETURN
+
+ADD.DAYS:
+   *CALL U_CRT.INFO("INFO", "ADD.DAYS ":addDays)
+   FULL.DATE = DAY:"/":MONTH:"/":YEAR
+   INT_FULL.DATE = ICONV(FULL.DATE, "D4/")
+   INT_FULL.DATE = INT_FULL.DATE + addDays
+
+   DAY = OCONV(INT_FULL.DATE, "DD")
+   MONTH = OCONV(INT_FULL.DATE, "DM")
+   YEAR = OCONV(INT_FULL.DATE, "DY")
+
+   RETURN
+
+ADD.MONTHS:
+   *CALL U_CRT.INFO("INFO", "ADD.MONTHS ":addMonths)
+
+   FOR I = 1 TO addMonths
+      IF MONTH = 12 THEN
+         MONTH = 0
+         addYears+=1
+      END
+      MONTH+=1
+   NEXT I
+
+   RETURN
+
+ADD.YEARS:
+   *CALL U_CRT.INFO("INFO", "ADD.YEARS ":addYears)
+
+   YEAR+= addYears
+
+   RETURN
+
+END

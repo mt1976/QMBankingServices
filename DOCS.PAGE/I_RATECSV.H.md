@@ -1,16 +1,16 @@
-<img src="../.resources/themes/unicons-line-6563ff/corner-up-left-alt.svg" alt="BACK" width="25" />[BACK](../DOCS/UTIL.BP.md)  
+<img src="../.resources/themes/unicons-line-6563ff/corner-up-left-alt.svg" alt="BACK" width="25" />[BACK](../DOCS/BP.md)  
 # I_RATECSV.H  
 |DATA|VALUE|
 | --- | --- |
 |TYPE|INSERT|
-|SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="UTIL.BP" width="25" />[UTIL.BP](../DOCS/UTIL.BP.md)|
+|SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="BP" width="25" />[BP](../DOCS/BP.md)|
 |ID|I_RATECSV.H|
     
     
 ## HEADER INFORMATION  
 ```javascript
 ** INFORMATION ****************************************************************
-*    Insert Name : I_RATECSV.H - UTIL.BP
+*    Insert Name : I_RATECSV.H - BP
 *           Type : INSERT
 *       Filename : n/a
 *         Prefix : n/a

@@ -10,7 +10,7 @@ SUBROUTINE W_SERVICE.UPLOAD(requestItem, requestParameters, msgPayload, response
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
-
+$INCLUDE UTIL.BP I_HTTP.H
    PROCESS.NAME = SYSTEM(45)
    CALL U_START(PROCESS.NAME)
 
@@ -37,7 +37,7 @@ $INCLUDE UTIL.BP I_UTIL.H
 
       CASE 1
 
-         responseStatus =RS$FAIL
+         responseStatus =RC$BAD.REQUEST
          responseContent = "Invalid Action '{{1}}'"
          CALL U_MSG(responseContent, requestItem)
 

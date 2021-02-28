@@ -28,6 +28,7 @@ equate T$CLEARSCREEN          to    -1
 equate T$CLEARLINE            to    -4
 equate T$FOREGROUND           to    -37  ;* Set foreground colour
 equate T$BACKGROUND           to    -38  ;* Set background colour
+equate T$INPUT.PREFIX         to    "M "
 * Colours
 equate C$BLACK                to     0
 equate C$BLUE                 to     1
@@ -46,17 +47,19 @@ equate C$BRIGHT_MAGENTA       to    13
 equate C$YELLOW               to    14
 equate C$BRIGHT_WHITE         to    15
 * General Static's
-equate U_SEP                  to    "~"
-equate U_SEP_ALT              to    "!"
-equate U_TRUNC                to    "-"
-equate U_PROP_SEP             to    "="
-equate U_PROP_SEP_ALT         to    "|"
-equate U_PREF                 to    "M "
-equate U_LOGMODE_log4j        to    "log4j"
-equate U_LOGMODE_csv          to    "csv"
-equate U_LOGMODE_simple       to    "simple"
-equate U_MAXIDLEN             to    32
-equate U_PREF_SQL_EQ          to    "^"
+equate U$SEP                  to    "~"
+equate U$SEP.ALT              to    "!"
+equate U$SEP.ID               to    "."
+equate U$SEP.CFG              to    "="
+equate U$SEP.CFG.DATA         to    "|"
+equate U$ID.MAXLEN            to    32
+equate U$ID.SEP               to    "-"
+* SQL - Used to 'escape' the = char when stored in a WCT properties file
+equate SQL$EQUALS             to    "^"
+* Logging
+equate L$MODE.log4j           to    "log4j"
+equate L$MODE.csv             to    "csv"
+equate L$MODE.simple          to    "simple"
 * Auto Generating Documentation
 equate MD$BR                  to    "  "
 equate MD$SUBR                to    "SUBROUTINE"
@@ -81,15 +84,9 @@ equate MD$CALL                to    "CALL"
 equate WC$PREFIX              to    "{{"
 equate WC$SUFFIX              to    "}}"
 * WCT Static
-equate U$ID.SEP               to    "-"
 equate W$SEP                  to    "|"
 equate W$CRLF                 to    " & "
 * PICK Standard's
-equate U_CRT_AM               to    "^"
-equate U_CRT_VM               to    "]"
-equate U_CRT_SM               to    "\"
-equate U_SEP_ID               to    "."
-* Response Codes
-equate RS$SUCCESS             to    200
-equate RS$FAIL                to    300
-equate RS$NO.DATA             to    700
+equate T$AM                   to    "^"
+equate T$VM                   to    "]"
+equate T$SM                   to    "\"

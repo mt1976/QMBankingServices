@@ -1,0 +1,23 @@
+SUBROUTINE U_GET.EPOCH.DATE(THIS.DATE)
+** INFORMATION ****************************************************************
+*   Routine Name : U_GET.EPOCH.DATE
+*           Type : SUBROUTINE
+*         Params : THIS.DATE
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+
+
+   dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
+   CALL U_IO.GET.PROPERTY("util", "dateTimeFormat", dateTimeFormat)
+   CALL U_IO.GET.PROPERTY("util", "timeZone", timeZone)
+
+   SET.TIMEZONE timeZone
+   THIS.DATE = OCONV(EPOCH(), dateTimeFormat)
+
+   RETURN
+END

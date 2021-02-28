@@ -1,0 +1,25 @@
+PROGRAM U_GIT.CHECKIN
+** INFORMATION ****************************************************************
+*   Routine Name : U_GIT.CHECKIN
+*           Type : PROGRAM
+*         Params :
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+   CALL U_INITIALISE("U_GIT.CHECKIN")
+
+   PNM = "U_GIT.CHECKIN" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = "" ; VERBOSE=@TRUE
+   CALL U_START(PNM)
+
+   CALL U_HEADER("GIT CHECKIN")
+
+   CALL U_GIT.CHECKIN.HELPER(PNM)
+
+   CALL U_STOP(PNM)
+
+   STOP
+END

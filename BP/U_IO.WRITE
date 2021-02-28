@@ -1,0 +1,21 @@
+SUBROUTINE U_IO.WRITE(FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT)
+** INFORMATION ****************************************************************
+*   Routine Name : U_IO.WRITE
+*           Type : SUBROUTINE
+*         Params : FV.FILEVAR, ID.RECORD, R.RECORD, STOP.ON.ERROR, ERROR.TEXT
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+
+   * CALL U_CRT.INFO("ID",ID.RECORD)
+   * CALL U_CRT.RECORD(R.RECORD)
+
+   WRITE R.RECORD TO FV.FILEVAR, ID.RECORD
+
+   RETURN
+
+END

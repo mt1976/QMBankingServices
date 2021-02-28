@@ -1,0 +1,20 @@
+SUBROUTINE SIENA.LIBOR.HELPER(PROCESS.NAME)
+** INFORMATION ****************************************************************
+*   Routine Name : SIENA.LIBOR.HELPER
+*           Type : SUBROUTINE
+*         Params : PROCESS.NAME
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+
+   indexName = "LIBOR"
+
+   CALL U_CRT.INFO("PROCESSING", "STARTS")
+   CALL SIENA.HOMEFINANCE.HELPER(processName, indexName)
+   CALL U_CRT.INFO("PROCESSING", "COMPLETE")
+   RETURN
+END

@@ -10,7 +10,7 @@ SUBROUTINE W_SERVICE.CONFIGURATION_DO(requestItem, requestParameters, msgPayload
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
-
+$INCLUDE UTIL.BP I_HTTP.H
    PROCESS.NAME=SYSTEM(45)
    CALL U_START(PROCESS.NAME)
 

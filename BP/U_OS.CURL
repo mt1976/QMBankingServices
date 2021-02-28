@@ -1,0 +1,35 @@
+SUBROUTINE U_OS.CURL(URI, VERBOSE, curlResult, spare01)
+** INFORMATION ****************************************************************
+*   Routine Name : U_OS.CURL
+*           Type : SUBROUTINE
+*         Params : URI, VERBOSE, curlResult, spare01
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP F_UTIL.LOG.EVENT.H
+
+
+
+   STMT = "sh curl -sL ":DQUOTE(URI)
+   curlResult = ""
+   IF VERBOSE THEN
+      CALL U_CRT.INFO("CURL", @(T$BOLD_ON):STMT:@(T$BOLD_OFF))
+   END
+
+   EXECUTE STMT CAPTURING curlResult
+
+   R.EVENT = ""
+   R.EVENT<U_LOG_EVENT> = "CURL"
+   R.EVENT<U_LOG_CMD> = STMT
+   R.EVENT<U_LOG_URI> = URI
+   R.EVENT<U_LOG_RETCD> = @SYSTEM.RETURN.CODE
+   R.EVENT<U_LOG_SUBR> = "U_OS.CURL"
+
+   CALL U_LOG.EVENT(curlResult, R.EVENT)
+
+   RETURN
+END

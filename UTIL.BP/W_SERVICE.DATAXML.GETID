@@ -10,7 +10,7 @@ SUBROUTINE W_SERVICE.DATAMAP.GETID(inValue, txnTemplate.ID)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
-
+$INCLUDE UTIL.BP I_HTTP.H
 $INCLUDE UTIL.BP F_SIENA.TXN.TEMPLATES.H
 ** DO NOT CHANGE
    PROCESS.NAME=SYSTEM(45) ; ERROR.TEXT = "" ; CALL U_START(PROCESS.NAME)

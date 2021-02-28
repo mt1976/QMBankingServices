@@ -1,0 +1,26 @@
+EXECUTE
+20210228
+14:27:54.00463
+root
+FORMAT BP U_GET.NEXT.WORKING.DAY
+
+FORMAT BP U_GET.NEXT.WORKING.DAY
+
+0
+U_OS.EXECUTE
+/dev/ttys001
+4
+/Users/matttownsend/Development/qm/dev
+DEV
+BCC BP *
+mercury.local
+192.168.0.100
+Mac
+
+
+
+U_OS.EXECUTE
+
+BCC
+BCC
+root@DEV

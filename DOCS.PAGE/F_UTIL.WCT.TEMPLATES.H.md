@@ -1,21 +1,21 @@
-<img src="../.resources/themes/unicons-line-6563ff/corner-up-left-alt.svg" alt="BACK" width="25" />[BACK](../DOCS/UTIL.BP.md)  
+<img src="../.resources/themes/unicons-line-6563ff/corner-up-left-alt.svg" alt="BACK" width="25" />[BACK](../DOCS/BP.md)  
 # F_UTIL.WCT.TEMPLATES.H  
 |DATA|VALUE|
 | --- | --- |
 |TYPE|INSERT|
-|SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="UTIL.BP" width="25" />[UTIL.BP](../DOCS/UTIL.BP.md)|
+|SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="BP" width="25" />[BP](../DOCS/BP.md)|
 |ID|F_UTIL.WCT.TEMPLATES.H|
     
     
 ## HEADER INFORMATION  
 ```javascript
 ** INFORMATION ****************************************************************
-*    Insert Name : F_UTIL.WCT.TEMPLATES.H - UTIL.BP
+*    Insert Name : F_UTIL.WCT.TEMPLATES.H - BP
 *           Type : INSERT
 *       Filename : UTIL.WCT.TEMPLATES
 *         Prefix : W$TEMPLATE.
 ** AUDIT **********************************************************************
-*   Info Updated : 20210220 at 13.16.40 in DEV by root
+*   Info Updated : 20210228 at 14.11.30 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 ```

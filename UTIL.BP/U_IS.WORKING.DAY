@@ -13,7 +13,7 @@ $INCLUDE UTIL.BP I_UTIL.H
 
    weekendDays = ""
    CALL U_IO.GET.PROPERTY("util", "weekendDays", weekendDays)
-   weekendDays = CHANGE(weekendDays, U_PROP_SEP_ALT, @AM)
+   weekendDays = CHANGE(weekendDays, U$SEP.CFG.DATA, @AM)
 
    IS.WORKING.DAY = @TRUE
 

@@ -1,0 +1,20 @@
+SUBROUTINE U_IO.DELETE(FV.FILEVAR, ID.RECORD, STOP.ON.ERROR, ERROR.TEXT)
+** INFORMATION ****************************************************************
+*   Routine Name : U_IO.DELETE
+*           Type : SUBROUTINE
+*         Params : FV.FILEVAR, ID.RECORD, STOP.ON.ERROR, ERROR.TEXT
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+
+
+
+   DELETE FV.FILEVAR, ID.RECORD
+
+   RETURN
+
+END

@@ -1,0 +1,35 @@
+SUBROUTINE U_XML.FIND(XML.TAG, XML.DOC, RESULT)
+** INFORMATION ****************************************************************
+*   Routine Name : U_XML.FIND
+*           Type : SUBROUTINE
+*         Params : XML.TAG, XML.DOC, RESULT
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+
+   ORIG.SEARCH.DATA = XML.DOC
+   ORIG.SEARCH.DATA = CHANGE(ORIG.SEARCH.DATA, @AM, "")
+   ORIG.SEARCH.DATA = CHANGE(ORIG.SEARCH.DATA, @VM, "")
+   ORIG.SEARCH.DATA = CHANGE(ORIG.SEARCH.DATA, @SM, "")
+
+   RESULT = ""
+
+   SEARCH.VAL = "<":XML.TAG:">"
+   SEARCH.END = "</":XML.TAG:">"
+
+*CALL U_CRT.INFO("SEARCH FOR",SEARCH.VAL)
+
+   SEARCH.DATA = CHANGE(ORIG.SEARCH.DATA, SEARCH.VAL, @AM)
+   SEARCH.DATA = CHANGE(SEARCH.DATA, SEARCH.END, @AM)
+
+
+*CALL U_CRT.RECORD(SEARCH.DATA<2>)
+
+   RESULT = SEARCH.DATA<2>
+
+   RETURN
+END

@@ -1,0 +1,63 @@
+SUBROUTINE W_SERVICE.ENVIRONMENT(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
+** INFORMATION ****************************************************************
+*   Routine Name : W_SERVICE.ENVIRONMENT
+*           Type : SUBROUTINE
+*         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP I_HTTP.H
+   CALL U_CRT.INFO("requestItem", requestItem)
+   CALL U_CRT.INFO("requestParameters", requestParameters)
+
+   waitTime=""
+   shutdownChar=""
+   releaseID = ""
+   releaseLevel = ""
+   releaseNumber = ""
+   uptime=""
+
+   CALL U_OS.COMMAND("uptime", @FALSE, uptime, @TRUE)
+
+   CALL U_IO.GET.PROPERTY("wct_connect", "waitTime", waitTime)
+   CALL U_IO.GET.PROPERTY("wct_connect", "shutdownChar", shutdownChar)
+
+
+   CALL U_IO.GET.PROPERTY("util", "releaseID", releaseID)
+   CALL U_IO.GET.PROPERTY("util", "releaseLevel", releaseLevel)
+   CALL U_IO.GET.PROPERTY("util", "releaseNumber", releaseNumber)
+
+   responseStatus = RC$OK
+
+   responseContent<-1> = "Name":U$SEP.CFG.DATA:SYSTEM(1015)
+   IP4.ADDRESS = ""
+   CALL U_GET.IP(IP4.ADDRESS)
+   responseContent<-1> = "IP Address":U$SEP.CFG.DATA:IP4.ADDRESS
+   responseContent<-1> = "Path":U$SEP.CFG.DATA:@PATH
+   responseContent<-1> = "Uptime":U$SEP.CFG.DATA:uptime
+
+   responseContent<-1> = "User":U$SEP.CFG.DATA:@LOGNAME:"@":@WHO
+   responseContent<-1> = "UserNo":U$SEP.CFG.DATA:@USERNO
+
+   responseContent<-1> = "Date":U$SEP.CFG.DATA:OCONV(DATE(), "D4/")
+   responseContent<-1> = "Time":U$SEP.CFG.DATA:OCONV(TIME(), "MTS.")
+
+   responseContent<-1> = "Polling Interval (s)":U$SEP.CFG.DATA:waitTime
+   responseContent<-1> = "ShutdownChar":U$SEP.CFG.DATA:UPCASE(shutdownChar):shutdownChar
+
+   responseContent<-1> = "DB Release No":U$SEP.CFG.DATA:SYSTEM(1012)
+
+
+   responseContent<-1> = "Release ID":U$SEP.CFG.DATA:releaseID
+   responseContent<-1> = "Release Level":U$SEP.CFG.DATA:releaseLevel
+   responseContent<-1> = "Release No":U$SEP.CFG.DATA:releaseNumber
+   responseContent<-1> = "Release Name":U$SEP.CFG.DATA:releaseID:" [r":releaseLevel:"-":releaseNumber:"]"
+
+
+
+   RETURN
+END

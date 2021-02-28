@@ -1,16 +1,16 @@
-<img src="../.resources/themes/unicons-line-6563ff/corner-up-left-alt.svg" alt="BACK" width="25" />[BACK](../DOCS/UTIL.BP.md)  
+<img src="../.resources/themes/unicons-line-6563ff/corner-up-left-alt.svg" alt="BACK" width="25" />[BACK](../DOCS/BP.md)  
 # W_SERVICE.LOGIN  
 |DATA|VALUE|
 | --- | --- |
 |TYPE|SUBROUTINE|
-|SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="UTIL.BP" width="25" />[UTIL.BP](../DOCS/UTIL.BP.md)|
+|SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="BP" width="25" />[BP](../DOCS/BP.md)|
 |ID|W_SERVICE.LOGIN|
 |PARAMETERS|applicationToken, uniqueID, spare01, sessionToken, responseCode, responseMessage|
     
 ## USAGE  
   
 ## REQUIRES  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="I_UTIL.H" width="25" />[I_UTIL.H](../DOCS.PAGE/I_UTIL.H.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="I_HTTP.H" width="25" />[I_HTTP.H](../DOCS.PAGE/I_HTTP.H.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="F_UTIL.WCT.TOKENS.H" width="25" />[F_UTIL.WCT.TOKENS.H](../DOCS.PAGE/F_UTIL.WCT.TOKENS.H.md)  
     
 ## HEADER INFORMATION  
@@ -19,9 +19,9 @@
 *   Routine Name : W_SERVICE.LOGIN
 *           Type : SUBROUTINE
 *         Params : applicationToken, uniqueID, spare01, sessionToken, responseCode, responseMessage
-*            Loc : UTIL.BP
+*            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210228 at 00.39.40 in DEV by root
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -33,10 +33,4 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_MSG" width="25" />[U_MSG](../DOCS.PAGE/U_MSG.md)  
 ### NOTES  
- INFORMATION ****************************************************************    
-  
-#### *         Params :  
-  
- AUDIT **********************************************************************    
-  
   

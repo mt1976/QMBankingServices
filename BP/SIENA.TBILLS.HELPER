@@ -1,0 +1,180 @@
+SUBROUTINE SIENA.TBILLS.HELPER(PROCESS.NAME)
+** INFORMATION ****************************************************************
+*   Routine Name : SIENA.TBILLS.HELPER
+*           Type : SUBROUTINE
+*         Params : PROCESS.NAME
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP F_UTIL.TRANSLATE.H
+$INCLUDE BP I_RATECSV.H
+$INSERT BP I_UTIL.H
+
+
+* INITIALISE
+   PROCESS.NAME = "SIENA.TBILLS.HELPER"
+   PREFIX = PROCESS.NAME
+   CALL U_START(PROCESS.NAME)
+* Setup some temp locations for input data
+
+   ERROR.TEXT = ""; STOP.ON.ERROR = @TRUE ; VERBOSE = @TRUE
+* OPEN FILES
+   FN.SIENA.STAGING = "SIENA.STAGING" ; FV.SIENA.STAGING = ""
+   CALL U_IO.OPENFILE(FN.SIENA.STAGING, FV.SIENA.STAGING, STOP.ON.ERROR, ERROR.TEXT)
+
+   OUTPUT.DATA = ""
+
+   XML.REC = ""
+   SIENA.ACTION = "IMPORT"
+   SIENA.TABLE.NAME = "NegotiableInstrument"
+   CALL SIENA.XML.HEADER(XML.REC, SIENA.ACTION, SIENA.TABLE.NAME)
+
+   CALL U_HEADER("SIENA - ":PREFIX)
+
+   API.KEY = ""
+   CALL U_IO.GET.PROPERTY("siena_fred", "uri", URI)
+   CALL U_IO.GET.PROPERTY("siena_fred", "uriSeries", SERIES.LABEL)
+   CALL U_IO.GET.PROPERTY("siena_fred", "apiKey", API.KEY)
+   CALL U_IO.GET.PROPERTY("siena_fred", "uriApiKey", API.LABEL)
+   CALL U_IO.GET.PROPERTY("siena_fred", "uriStartDate", START.LABEL)
+   CALL U_IO.GET.PROPERTY("siena_fred", "uriEndDate", END.LABEL)
+   CALL U_IO.GET.PROPERTY("siena_fred", "uriFileType", FILE.LABEL)
+   CALL U_IO.GET.PROPERTY("siena_fred", "filetype", FILE.TYPE)
+   CALL U_IO.GET.PROPERTY("siena_fred", "seriesListID", seriesListID)
+   CALL U_IO.GET.PROPERTY("siena_fred", "dateFormat", dateFormat)
+   CALL U_IO.GET.PROPERTY("siena_fred", "uriObs", OBS.LABEL)
+   CALL U_IO.GET.PROPERTY("siena_fred", "currency", CURRENCY)
+
+   CALL U_CRT.INFO("URI", URI)
+   CALL U_CRT.INFO("APIKEY", API.KEY)
+   CALL U_CRT.INFO("seriesListID", seriesListID)
+   CALL U_CRT.INFO("dateFormat", dateFormat)
+   seriesList = ""
+
+   CALL U_IO.GET.LIST(seriesListID, "SERIES", seriesList, NO.SERIES)
+
+
+   *  CALL U_CRT.RECORD(seriesList)
+   DATE.START = OCONV(DATE()-2, dateFormat)
+
+   DATE.STOP = OCONV(DATE()-1, dateFormat)
+
+   *NO.SERIES = DCOUNT(seriesList, @AM)
+   FOR THIS.SERIES = 1 TO NO.SERIES
+      fetchSeries=seriesList<THIS.SERIES>
+      CALL U_CRT.INFO("FETCH", fetchSeries)
+
+      uri1=URI
+      uri2=SERIES.LABEL:"=":fetchSeries
+      uri3="&api_key=":API.KEY
+      uri4="&":START.LABEL:"=":DATE.START
+      uri5="&":END.LABEL:"=":DATE.STOP
+      uri6="&":FILE.LABEL:"=":FILE.TYPE
+
+      request_cmd=uri1:uri2:uri3:uri4:uri5:uri6
+
+      * CRT request_cmd
+      *    CALL U_CRT.INFO("REQUEST",request_cmd)
+
+      CALL U_OS.CURL(request_cmd, VERBOSE, R.SIENA.TEMP, ID.SIENA.TEMP)
+
+      JSON.OBJ = JPARSE(R.SIENA.TEMP)
+      NO.OBS = JSON.OBJ {'count'}
+
+      SIZE = INMAT(JSON.OBJ{'observations'})
+
+      LAST.RATE = JSON.OBJ{'observations', SIZE, 'value'}
+      *OBSERVATIONS = EXPAND(JSON.OBJ{'observations'})
+      *CRT OBSERVATIONS
+      *LAST.RATE = OBSERVATIONS{'value', 10}
+
+
+      CALL U_CRT.INFO("NO.OBS", NO.OBS:"*":SIZE)
+      CALL U_CRT.INFO("LAST.RATE", LAST.RATE)
+      *CALL U_CRT.INFO("RETURNID",ID.SIENA.TEMP)
+      *CALL U_CRT.RECORD(R.SIENA.TEMP)
+
+
+      RATE = LAST.RATE
+
+      IF CURRENCY <> "" AND RATE <> "" THEN
+
+         CALL U_CRT.INFO(CURRENCY, RATE)
+         CALL U_TRANSLATE("FEDNAME", fetchSeries, U_TRNS.MESSAGE, LONG.NAME)
+         TMP.TENOR=""
+         CALL U_TRANSLATE("FEDTENOR", fetchSeries, U_TRNS.MESSAGE, TMP.TENOR)
+         CALL SIENA.NI.NAME(LONG.NAME, "", TMP.TENOR)
+
+
+
+         GOSUB DO.CONTRACT
+         GOSUB DO.PRICE
+
+
+      END
+
+
+
+   NEXT THIS.SERIES
+
+   IF OUTPUT.DATA <> "" THEN
+
+
+      CALL SIENA.XML.FOOTER(XML.REC)
+      ID.SIENA.STAGING.XML=PREFIX:"_NI.xml"
+      CALL U_CRT.INFO("DELETE", ID.SIENA.STAGING.XML)
+      CALL U_IO.DELETE(FV.SIENA.STAGING, ID.SIENA.STAGING.XML, STOP.ON.ERROR, ERROR.TEXT)
+      CALL U_IO.WRITE(FV.SIENA.STAGING, ID.SIENA.STAGING.XML, XML.REC, STOP.ON.ERROR, ERROR.TEXT)
+
+      ID.SIENA.STAGING.RV = "RV":PREFIX
+      CALL U_CRT.INFO("DELETE", ID.SIENA.STAGING.RV)
+      CALL U_IO.DELETE(FV.SIENA.STAGING, ID.SIENA.STAGING.RV, STOP.ON.ERROR, ERROR.TEXT)
+      CALL U_CRT.INFO("STORE", ID.SIENA.STAGING.RV)
+      CALL U_IO.WRITE(FV.SIENA.STAGING, ID.SIENA.STAGING.RV, OUTPUT.DATA, STOP.ON.ERROR, ERROR.TEXT)
+   END
+
+   CALL U_CRT.INFO("PROCESSING", "COMPLETE")
+   CALL U_STOP(PROCESS.NAME)
+   RETURN
+
+DO.PRICE:
+
+   GILT.PRICE = RATE+0
+   GILT.PRICE = GILT.PRICE"L#11"
+   OUTPUT.DATA<-1> = LONG.NAME"L#30":"+":GILT.PRICE:"+":GILT.PRICE
+
+   RETURN
+
+DO.CONTRACT:
+   XML.REC<-1>="<RECORD>"
+
+   CALL U_BUILD.XML.FIELD(XML.REC, "KEYFIELD", "name", LONG.NAME)
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "status", "Active")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "type", "TREASURY BILL")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "currencyCode", "USD")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "issuer.firm", "UKTR")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "issuer.centre", "LON")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "acceptor.firm", "")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "acceptor.centre", "")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "issueDate", "")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "maturityDate", "")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "rateType", "Fixed")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "couponRate", RATE)
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "interestBasis", "Actual 365")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "interestFrequency", "None")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "clearingSystem", "")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "parentDealType", "Treasury Bill")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "securityID", fetchSeries)
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "encumbered", "")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "marketable", "")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "hypothecated", "")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "repoFactor", "100.00")
+   CALL U_BUILD.XML.FIELD(XML.REC, "FIELD", "lotSize", 1)
+*CALL U_CRT.RECORD(XML.REC)
+   XML.REC<-1>="</RECORD>"
+   RETURN
+
+END

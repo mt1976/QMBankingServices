@@ -1,0 +1,87 @@
+PROGRAM U_CLEARFILES
+** INFORMATION ****************************************************************
+*   Routine Name : U_CLEARFILES
+*           Type : PROGRAM
+*         Params :
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+   CALL U_INITIALISE("U_CLEARFILES")
+   PNM = "U_CLEARFILES" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""
+   CALL U_START(PNM)
+   CALL U_HEADER("CLEAR FILE(S)")
+
+   CMD.STRING = CONVERT(SPACE(1), @AM, @SENTENCE)
+   IF CMD.STRING<2> = "" THEN
+      CALL U_CRT.INFO("ERROR", "Parameters [ALL, or specific i.e. UTILS/SIENA]")
+      CALL U_STOP(PNM)
+      STOP
+   END
+
+   * remove the program name from the stack of cmds
+   DEL CMD.STRING<1>
+   * loop through the cmd strings
+   NO.CMDS = DCOUNT(CMD.STRING, @AM)
+
+   CALL U_CRT.INFO("NO PROCESSES", NO.CMDS)
+   FOR THIS.CMD = 1 TO NO.CMDS
+      DELIVERY.TYPE = CMD.STRING<THIS.CMD>
+      CALL U_CRT.INFO("PROCESS", DELIVERY.TYPE)
+      STMT = "SELECT ":FN.UTIL.CONFIG:" LIKE clear.":DOWNCASE(DELIVERY.TYPE):".properties"
+      IF DELIVERY.TYPE = "ALL" THEN
+         STMT = "SELECT ":FN.UTIL.CONFIG:" LIKE clear":"...":"properties"
+      END
+      GOSUB PROCESS.IT
+   NEXT THIS.CMD
+
+
+   CALL U_STOP(PNM)
+
+   STOP
+PROCESS.IT:
+   CALL U_CRT.INFO('STMT', STMT)
+
+   CALL U_OS.EXECUTE(STMT, @TRUE)
+
+   PROCESS.LIST = ""
+   LOOP
+      READNEXT ID.FILE ELSE EXIT
+      PROCESS.LIST<-1> = ID.FILE
+   REPEAT
+
+   NO.PROPERTIES.FILES = DCOUNT(PROCESS.LIST, @AM)
+   CALL U_CRT.INFO("NO PROPERTIES", NO.PROPERTIES.FILES)
+   CALL U_CRT.RECORD(PROCESS.LIST)
+
+   FOR THIS.PROPERTIES.FILE = 1 TO NO.PROPERTIES.FILES
+      CALL U_CRT.INFO("PROPERTIES", PROCESS.LIST<THIS.PROPERTIES.FILE>)
+      R.UTIL.CONFIG=""
+      CALL U_IO.READ(FV.UTIL.CONFIG, PROCESS.LIST<THIS.PROPERTIES.FILE>, R.UTIL.CONFIG, STOP.ON.ERROR, ERROR.TEXT)
+      NO.FILES.TO.CLEAR = DCOUNT(R.UTIL.CONFIG, @AM)
+      CALL U_CRT.INFO("FILES", NO.FILES.TO.CLEAR)
+      CALL U_CRT.RECORD(R.UTIL.CONFIG)
+
+      FOR THIS.FILE = 1 TO NO.FILES.TO.CLEAR
+
+         PROCESS.ITEM = CONVERT(U$SEP.CFG, @AM, R.UTIL.CONFIG<THIS.FILE>)
+         PROCESS.WHAT = PROCESS.ITEM<1>
+         PROCESS.FILE = PROCESS.ITEM<2>
+         IF PROCESS.WHAT = "FILE" THEN
+            EX.STMT = "CLEAR-FILE DATA ":PROCESS.FILE
+            *CALL U_CRT.INFO("CLEAR", PROCESS.FILE)
+            *CALL U_CRT.INFO("STMT", EX.STMT)
+            CALL U_OS.EXECUTE(EX.STMT, @TRUE)
+            TOUCH.STMT = "touch ":PROCESS.FILE:"/.keep"
+            CALL U_OS.COMMAND(TOUCH.STMT, @TRUE, "", @TRUE)
+         END
+      NEXT THIS.FILE
+
+   NEXT THIS.PROPERTIES.FILE
+   RETURN
+
+
+END

@@ -1,0 +1,28 @@
+SUBROUTINE SIENA.XML.HEADER(XML.REC, SIENA.ACTION, SIENA.TABLE.NAME)
+** INFORMATION ****************************************************************
+*   Routine Name : SIENA.XML.HEADER
+*           Type : SUBROUTINE
+*         Params : XML.REC, SIENA.ACTION, SIENA.TABLE.NAME
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+
+
+   XML.REC = ''
+   XML.REC<-1> = '<?xml version="1.0" encoding="UTF-8"?>'
+
+   XML.REC<-1> = '<TRANSACTIONS xsi:noNamespaceSchemaLocation="file:///C:/Users/mtownsend/Desktop/tlate/NegotiableInstrument.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">'
+   XML.REC<-1> = '<TRANSACTION type="':SIENA.ACTION:'">'
+
+   SIENA.TABLE.NAME = "NegotiableInstrument"
+   SIENA.CLASS.NAME = "com.eurobase.siena.data.negotiableinstrument.NegotiableInstrument"
+
+   XML.REC<-1> = '<TABLE name="':SIENA.TABLE.NAME:'" classname="':SIENA.CLASS.NAME:'">'
+
+
+   RETURN
+END

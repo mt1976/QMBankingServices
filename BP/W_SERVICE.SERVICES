@@ -1,0 +1,54 @@
+SUBROUTINE W_SERVICE.SERVICES(responseCode, responseContent)
+** INFORMATION ****************************************************************
+*   Routine Name : W_SERVICE.SERVICES
+*           Type : SUBROUTINE
+*         Params : responseCode, responseContent
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP I_HTTP.H
+   wct_Properties = "wct_connect"
+
+   serviceID = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "serviceID", serviceID)
+   serviceCatalogID = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "serviceCatalogID", serviceCatalogID)
+   servicesList = "" ; serviceCount = 0
+   CALL U_IO.GET.LIST(serviceCatalogID, serviceID, servicesList, servicesCount)
+   newList = CHANGE(servicesList, U$SEP.CFG.DATA, @VM)
+   * CALL U_CRT.INFO("newlist", newList)
+   outputList = ""
+   PREFIX = ""
+   IF servicesList <> "" THEN
+      *  CALL U_CRT.INFO("info", "got service list")
+      outputstr = ""
+      FOR I = 1 TO servicesCount
+         IF newList<I, 1> <> "" THEN
+            IF newList<I, 2> = "" AND newList<I, 3> = "" THEN
+               PREFIX = newList<I, 1>
+            END ELSE
+               outputstr<1> = PREFIX:" - ":newList<I, 1>
+               outputstr<2> = newList<I, 2>
+               outputstr<3> = newList<I, 3>
+               outputstr<4> = newList<I, 4>
+               outputstr<5> = newList<I, 5>
+               outputList<-1> = CHANGE(outputstr, @AM, U$SEP.CFG.DATA)
+            END
+         END
+      NEXT I
+      *CALL U_CRT.INFO("SL", outputList)
+      responseCode = RC$OK
+      CALL U_CLEAN.TEXT(outputList)
+      responseContent=outputList
+   END ELSE
+      responseCode = RC$NO.DATA
+      responseContent = "[{{1}}] No Properties Data Found '{{2}}'"
+      CALL U_MSG(responseContent, RC$NO.DATA:@AM:"wct_connect")
+   END
+   * CALL U_CRT.INFO("responseCode", responseCode)
+   * CALL U_CRT.INFO("responseContent", responseContent)
+
+   RETURN
+END

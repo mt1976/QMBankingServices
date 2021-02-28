@@ -1,0 +1,32 @@
+SUBROUTINE U_IO.GETTEMP(FILE.PATH, FN.FILENAME, STOP.ON.ERROR, ERROR.TEXT)
+** INFORMATION ****************************************************************
+*   Routine Name : U_IO.GETTEMP
+*           Type : SUBROUTINE
+*         Params : FILE.PATH, FN.FILENAME, STOP.ON.ERROR, ERROR.TEXT
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+* CRT "OPF ":U_INITIALISED:" ":FN.FILENAME
+*** OPEN A TEMP FILE - BASED ON A PATH PROVIDED - DOESNT OPEN THE FILE, LEAVE THAT FOR U_IO.OPENFILE JUST PASS BACK THE FILENAME ETC.
+
+   FN.VOC = "VOC" ; FV.VOC = ""
+   CALL U_IO.OPENFILE(FN.VOC, FV.VOC, STOP.ON.ERROR, ERROR.TEXT)
+
+   UNIQUE.ID = ""
+   CALL U_GET.UUID(UNIQUE.ID)
+   FN.FILENAME = "TMP-":UNIQUE.ID
+   ID.VOC = FN.FILENAME
+   R.VOC = ""
+   R.VOC<1> = "F"
+   R.VOC<2> = FILE.PATH
+   R.VOC<3> = "@QMSYS/VOC.DIC"
+
+   CALL U_IO.WRITE(FV.VOC, ID.VOC, R.VOC, STOP.ON.ERROR, ERROR.TEXT)
+
+   RETURN
+
+END

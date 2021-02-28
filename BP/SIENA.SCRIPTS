@@ -1,0 +1,18 @@
+PROGRAM UTIL.SCRIPTS
+** INFORMATION ****************************************************************
+*   Routine Name : SIENA.SCRIPTS
+*           Type : PROGRAM
+*         Params :
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+   CALL U_INITIALISE("UTIL.SCRIPTS")
+
+   CALL SIENA.SCRIPT.HELPER("SCRIPT")
+
+   STOP
+END

@@ -1,0 +1,20 @@
+SUBROUTINE U_CRT.INFO(ACTION, TEXT)
+** INFORMATION ****************************************************************
+*   Routine Name : U_CRT.INFO
+*           Type : SUBROUTINE
+*         Params : ACTION, TEXT
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+
+   IN.TEXT = TEXT
+   CALLING.SUBR = ""
+   CALL U_GET.CALLING.PROCESS.NAME(CALLING.SUBR, SYSTEM(1002), SYSTEM(33))
+   CALL U_CRT(TEXT, ACTION, CALLING.SUBR)
+   TEXT = IN.TEXT
+   RETURN
+END

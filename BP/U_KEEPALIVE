@@ -1,0 +1,23 @@
+PROGRAM U_HEADER.TEST
+** INFORMATION ****************************************************************
+*   Routine Name : U_KEEPALIVE
+*           Type : PROGRAM
+*         Params :
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+
+   CALL U_INITIALISE("U_KEEPALIVE")
+
+   PID = "U_KEEPALIVE"
+   CALL U_START(PID)
+   OUTPUT= "D=":DQUOTE(OCONV(DATE(), "D4"))
+   OUTPUT:= ",T=":DQUOTE(OCONV(TIME(), "MTS."))
+   CALL U_CRT.INFO("KEEPALIVE", OUTPUT)
+   CALL U_STOP(PID)
+   STOP "DONE"
+END

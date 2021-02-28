@@ -1,0 +1,24 @@
+SUBROUTINE U_MSG.HTTP(TEXT, WILDCARDS)
+** INFORMATION ****************************************************************
+*   Routine Name : U_MSG.HTTP
+*           Type : SUBROUTINE
+*         Params : TEXT, WILDCARDS
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 12.37.45 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP I_HTTP.H
+
+* EXAMPLE INPUT
+*  TEXT = "NO DATA ({{1}}-{{2}})"
+* WILDCARDS<1> = "ITEM"
+* WILDCARDS<2> = "ITEMVALUE"
+*
+
+   CALL U_MSG.CLASS(RC$LOOKUP, TEXT, WILDCARDS)
+
+   RETURN
+END

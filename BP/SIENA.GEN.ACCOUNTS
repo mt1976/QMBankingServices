@@ -1,0 +1,25 @@
+PROGRAM SIENA.GEN.ACCOUNTS
+** INFORMATION ****************************************************************
+*   Routine Name : SIENA.GEN.ACCOUNTS
+*           Type : PROGRAM
+*         Params :
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+
+   PROCESS.NAME = "SIENA.GEN.ACCOUNTS"
+   CALL U_INITIALISE(PROCESS.NAME)
+   CALL U_START(PROCESS.NAME)
+   CALL U_HEADER(PROCESS.NAME)
+
+   CALL SIENA.GEN.TXN.DATA("accounts")
+   CALL SIENA.GEN.TXN.DATA("POO")
+
+   CALL U_STOP("")
+   STOP "DONE"
+
+END

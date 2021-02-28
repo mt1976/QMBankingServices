@@ -10,6 +10,7 @@ SUBROUTINE W_SERVICE.DATAMAP.LIST(requestItem, requestParameters, msgPayload, re
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP I_HTTP.H
 
 ** DO NOT CHANGE
    PROCESS.NAME=SYSTEM(45) ; ERROR.TEXT = "" ; CALL U_START(PROCESS.NAME)
@@ -29,7 +30,7 @@ $INCLUDE UTIL.BP I_UTIL.H
    PROCESS.LIST = ""
    CALL U_GET.LIST(STMT, PROCESS.LIST, NO.ITEMS)
    IF NO.ITEMS > 0 THEN
-      responseStatus = RS$SUCCESS
+      responseStatus = RC$OK
       FOR I = 1 TO NO.ITEMS
          cleanID = CHANGE(CHANGE(PROCESS.LIST<I>, dataMapPrefix, ""), dataMapSuffix, "")
 * GET DESCRIPTION IF THERE IS ONE
@@ -50,9 +51,9 @@ $INCLUDE UTIL.BP I_UTIL.H
          responseContent<-1> = I:W$SEP:cleanID:W$SEP:PROCESS.LIST<I>:W$SEP:descriptionText<1>:W$SEP:dataMapTemplateID
       NEXT I
    END ELSE
-      responseStatus = RS$NO.DATA
+      responseStatus = RC$NO.DATA
       responseContent = "[{{1}}] No Data Found '{{2}}' '{{3}}'"
-      CALL U_MSG(responseContent, RS$NO.DATA:@AM:requestItem:@AM:requestParameters)
+      CALL U_MSG(responseContent, RC$NO.DATA:@AM:requestItem:@AM:requestParameters)
    END
 
    CALL U_STOP(PROCESS.NAME)

@@ -45,7 +45,7 @@ $INSERT UTIL.BP I_UTIL.H
 * get Process List
 
    CALL U_IO.GET.LIST(sourceID, indexID, URI.LIST, NO.URIS)
-   URI.LIST = CHANGE(URI.LIST, U_PROP_SEP_ALT, @VM)
+   URI.LIST = CHANGE(URI.LIST, U$SEP.CFG.DATA, @VM)
    listURI=1;listCCY=2;listTenor=3
    FOR thisURI.POS = 1 TO NO.URIS
       thisURI = URI.LIST<thisURI.POS, listURI>
@@ -116,12 +116,12 @@ PROCESS.URI:
 
       *    CALL U_CRT.INFO("outputData", outputData)
 
-      cacheName = indexID:U_SEP_ID:extTenor:U_SEP_ID:TRIM(CCY)
+      cacheName = indexID:U$SEP.ID:extTenor:U$SEP.ID:TRIM(CCY)
       cacheValue = outBuy
       CALL SIENA.CACHE.CLEAR(cacheName)
       CALL SIENA.CACHE.UPDATE(cacheName, "", cacheValue)
 
-      ID.SIENA.STAGING = "RV":UPCASE(indexID):U_SEP_ALT:TRIM(CCY):extTenor
+      ID.SIENA.STAGING = "RV":UPCASE(indexID):U$SEP.ALT:TRIM(CCY):extTenor
       CALL U_CRT.INFO("DELETE", ID.SIENA.STAGING)
       CALL U_IO.DELETE(FV.SIENA.STAGING, ID.SIENA.STAGING, STOP.ON.ERROR, ERROR.TEXT)
       CALL U_CRT.INFO("STORE", ID.SIENA.STAGING)

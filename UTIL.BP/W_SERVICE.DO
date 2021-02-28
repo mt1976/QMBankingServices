@@ -5,11 +5,12 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210228 at 00.39.40 in DEV by root
+*   Info Updated : 20210228 at 13.58.07 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP I_HTTP.H
 $INCLUDE UTIL.BP F_UTIL.WCT.RECV.H
 $INCLUDE UTIL.BP F_UTIL.WCT.RESP.H
 $INCLUDE UTIL.BP F_UTIL.WCT.TEMPLATES.H
@@ -21,6 +22,9 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
    CALL U_INITIALISE(PROCESS.NAME)
    CALL U_START(PROCESS.NAME)
+
+   CRT @(T$CLEARSCREEN)
+
    CALL U_HEADER(PROCESS.NAME)
 
    wct_Properties = "wct_connect"
@@ -54,9 +58,14 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
 
       GOSUB CHECK.QUEUE
 
+      PROMPT = ""
+      *CRT @CRTWIDE:",":@CRTHIGH
       INPUT chkVar, 1:_ TIMEOUT waitTime
+      PROMPT = "?"
       IF chkVar = shutdownChar or chkVar = upcase(shutdownChar) THEN
          breakLoop=@TRUE
+         CRT @SYS.BELL
+
       END
 * for debugging
 *      breakLoop=@TRUE
@@ -184,9 +193,9 @@ PROCESS.QUEUE.ITEM:
 PROCESS.REQUEST.LOG.EVENT:
    LOG.DATA = response
 
-   text = CHANGE(requestPayload, @AM, U_CRT_AM)
-   text = CHANGE(text, @VM, U_CRT_VM)
-   text = CHANGE(text, @SM, U_CRT_SM)
+   text = CHANGE(requestPayload, @AM, T$AM)
+   text = CHANGE(text, @VM, T$VM)
+   text = CHANGE(text, @SM, T$SM)
 
    R.EVENT = ""
    R.EVENT<U_LOG_EVENT> = "WCT_REQUEST"
@@ -229,7 +238,7 @@ PROCESS.ACTION:
       CASE UPCASE(requestAction) = "SERVICES"
          CALL W_SERVICE.SERVICES(responseStatus, responseContent)
       CASE UPCASE(requestAction) = "SHUTDOWN"
-         responseStatus = RS$SUCCESS
+         responseStatus = RC$OK
          responseContent = "SHUTDOWN IN PROGRESS"
          chkVar = shutdownChar
          CALL U_CRT.INFO("INFORMATION", responseContent)
@@ -277,10 +286,11 @@ PROCESS.CLI.COMMAND:
       END
    END
    IF statement <> "" THEN
+      CALL U_CRT.NEWLINE("")
       CALL U_CRT.INFO("EXECUTE", statement)
 
       processExtn = "wct"
-      outputFileName = responseID:U_TRUNC:DOWNCASE(requestAction):".":processExtn
+      outputFileName = responseID:U$ID.SEP:DOWNCASE(requestAction):".":processExtn
 
       CMD = ""
       CMD<1> = "STORE"
@@ -312,7 +322,7 @@ PROCESS.DIRECT.CLI.COMMAND:
       CALL U_CRT.INFO("EXECUTE", statement)
 
       processExtn = "wct"
-      outputFileName = responseID:U_TRUNC:DOWNCASE(requestAction):".":processExtn
+      outputFileName = responseID:U$ID.SEP:DOWNCASE(requestAction):".":processExtn
 
       CMD = ""
       CMD<1> = "STORE"
@@ -332,7 +342,7 @@ GET.RESPONSE.DATA:
    temp_responseContent = "" ; responseContent = ""
    CALL U_IO.READ(FV.REPORTS, outputFileName, responseContent, @FALSE, "")
    CALL U_CLEAN.TEXT(responseContent)
-   responseStatus = "200"
+   responseStatus = RC$OK
 
    RETURN
 

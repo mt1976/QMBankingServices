@@ -1,0 +1,38 @@
+SUBROUTINE W_SERVICE.CONFIGURATION_VIEW(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
+** INFORMATION ****************************************************************
+*   Routine Name : W_SERVICE.CONFIGURATION_VIEW
+*           Type : SUBROUTINE
+*         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP I_HTTP.H
+
+   PROCESS.NAME="W_SERVICE.CONFIGURATION_VIEW"
+   CALL U_START(PROCESS.NAME)
+
+   * CALL U_CRT.INFO(PROCESS.NAME, PROCESS.NAME)
+   * CALL U_CRT.INFO("requestItem", requestItem)
+   * CALL U_CRT.INFO("requestParameters", requestParameters)
+
+   IF requestParameters <> "" THEN
+      ERROR.TEXT = ""
+      CALL U_IO.READ(FV.UTIL.CONFIG, requestParameters, responseContent, @TRUE, ERROR.TEXT)
+      IF ERROR.TEXT <> "" THEN
+         responseStatus = RC$BAD.REQUEST
+         responseContent = "[{{1}}] No Config Data Found '{{2}}' '{{3}}'"
+         CALL U_MSG(responseContent, RC$BAD.REQUEST:@AM:requestParameters)
+      END
+
+   END ELSE
+      responseStatus = RC$BAD.REQUEST
+      responseContent = "[{{1}}] No Config File Specified '{{2}}'"
+      CALL U_MSG(responseContent, RC$BAD.REQUEST:@AM:requestItem:@AM:requestParameters)
+   END
+   CALL U_STOP(PROCESS.NAME)
+   RETURN
+END

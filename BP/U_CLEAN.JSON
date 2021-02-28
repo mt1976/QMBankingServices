@@ -1,0 +1,18 @@
+SUBROUTINE U_CLEAN.JSON(inJSON_content)
+** INFORMATION ****************************************************************
+*   Routine Name : U_CLEAN.JSON
+*           Type : SUBROUTINE
+*         Params : inJSON_content
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+
+   inJSON_content = OCONV(inJSON_content, "XJS")
+
+
+   RETURN
+END

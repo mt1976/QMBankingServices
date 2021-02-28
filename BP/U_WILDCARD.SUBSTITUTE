@@ -1,0 +1,18 @@
+SUBROUTINE U_WILDCARD.SUBSTITUTE(SUBS.REPLACE, SUBS.VALUE, XML.DOC)
+** INFORMATION ****************************************************************
+*   Routine Name : U_WILDCARD.SUBSTITUTE
+*           Type : SUBROUTINE
+*         Params : SUBS.REPLACE, SUBS.VALUE, XML.DOC
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+
+   SUBS.REPLACE.ITEM = WC$PREFIX:SUBS.REPLACE:WC$SUFFIX
+   XML.DOC = CHANGE(XML.DOC, SUBS.REPLACE.ITEM, SUBS.VALUE)
+
+   RETURN
+END

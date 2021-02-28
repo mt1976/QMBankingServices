@@ -26,7 +26,7 @@ $INCLUDE UTIL.BP I_UTIL.H
    uniqueID = ""
    CALL U_GET.UUID(uniqueID)
 
-   reportCommand = CONVERT(U_PROP_SEP_ALT, @AM, reportCommand)
+   reportCommand = CONVERT(U$SEP.CFG.DATA, @AM, reportCommand)
 
    processStmt = reportCommand<1>
    processOutput = reportCommand<2>
@@ -36,7 +36,7 @@ $INCLUDE UTIL.BP I_UTIL.H
    IF processOutput = "" THEN processOutput = "DISPLAY"
    IF processExtn = "" THEN processExtn = ".rpt"
 
-   outputFileName = uniqueID:U_TRUNC:DOWNCASE(reportID):".":processExtn
+   outputFileName = uniqueID:U$ID.SEP:DOWNCASE(reportID):".":processExtn
 
    *processStmt:= " AS ":DQUOTE(activePath:"/":reportsFileName:"/":outputFileName)
    IF reportName<>"" THEN

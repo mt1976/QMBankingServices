@@ -10,6 +10,7 @@ SUBROUTINE W_SERVICE.DATAMAP_DELETE(requestItem, requestParameters, msgPayload, 
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP I_HTTP.H
 $INCLUDE UTIL.BP F_SIENA.TXN.TEMPLATES.H
 
 ** DO NOT CHANGE
@@ -82,18 +83,18 @@ $INCLUDE UTIL.BP F_SIENA.TXN.TEMPLATES.H
 
       outputMatrix = ""
       IF ERROR.TEXT <> "" THEN
-         responseStatus = RS$FAIL
+         responseStatus = RC$BAD.REQUEST
          responseContent = "[{{1}}] No Data Found '{{2}}' '{{3}}'"
-         CALL U_MSG(responseContent, RS$FAIL:@AM:requestItem:@AM:requestParameters)
+         CALL U_MSG(responseContent, RC$BAD.REQUEST:@AM:requestItem:@AM:requestParameters)
       END ELSE
-         responseStatus = RS$SUCCESS
+         responseStatus = RC$OK
          responseContent = outputMatrix
       END
 
    END ELSE
-      responseStatus = RS$FAIL
+      responseStatus = RC$BAD.REQUEST
       responseContent = "[{{1}}] No Data Specified '{{2}}' '{{3}}'"
-      CALL U_MSG(responseContent, RS$NO.DATA:@AM:requestItem:@AM:requestParameters)
+      CALL U_MSG(responseContent, RC$NO.DATA:@AM:requestItem:@AM:requestParameters)
    END
    CALL U_STOP(PROCESS.NAME)
    RETURN

@@ -1,0 +1,42 @@
+SUBROUTINE U_HEADER(TEXT)
+** INFORMATION ****************************************************************
+*   Routine Name : U_HEADER
+*           Type : SUBROUTINE
+*         Params : TEXT
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+
+
+   SCREEN.WIDTH = @CRTWIDE
+   SPAN.WIDTH = SCREEN.WIDTH - 6
+*   CALL U_CRT.INFO("SCR.WIDTH",SCREEN.WIDTH)
+*   CALL U_CRT.INFO("SPAN",SPAN.WIDTH)
+
+   BAR = STR("━", SPAN.WIDTH)
+   CALLING.SUBR = SYSTEM(1002)<2, 1>
+
+   headerCMD="sh figlet -f small"
+
+   CALL U_IO.GET.PROPERTY("util", "headerCMD", headerCMD)
+
+   STMT = headerCMD:" ":DQUOTE(TEXT)
+
+   * HUSH ON
+   EXECUTE STMT CAPTURING OUTPUT
+   * HUSH OFF
+
+   NO.ROWS = DCOUNT(OUTPUT, @FM)
+
+   *CALL U_CRT(BAR, "", CALLING.SUBR)
+   FOR POS.ROW = 1 TO NO.ROWS
+      CRT @(-4):@(T$BOLD_ON):OUTPUT<POS.ROW>:@(T$BOLD_OFF)
+   NEXT POS.ROW
+   *CALL U_CRT(BAR, "", CALLING.SUBR)
+
+   RETURN
+END

@@ -1,0 +1,107 @@
+SUBROUTINE W_SERVICE.DATAMAP_DELETE(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
+** INFORMATION ****************************************************************
+*   Routine Name : W_SERVICE.DATAMAP_DELETE
+*           Type : SUBROUTINE
+*         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP I_HTTP.H
+$INCLUDE BP F_SIENA.TXN.TEMPLATES.H
+
+** DO NOT CHANGE
+   PROCESS.NAME=SYSTEM(45) ; ERROR.TEXT = "" ; CALL U_START(PROCESS.NAME)
+   CALL U_CRT.INFO(PROCESS.NAME, PROCESS.NAME)
+   CALL U_CRT.INFO("requestItem", requestItem) ; CALL U_CRT.INFO("requestParameters", requestParameters)
+** DO NOT CHANGE
+   FV.txnTemplate = "" ; txnTemplate.ID = ""; txnTemplate.REC = ""
+   CALL U_IO.OPENFILE(S_TXN_TEMPLATE_FILE.NAME, FV.txnTemplate, @TRUE, "")
+
+   IF requestParameters <> "" THEN
+      dataMap.ID = ""
+      CALL U_IO.GET.PROPERTY("util", "dataMapPrefix", dataMap.ID)
+      dataMapPrefix=dataMap.ID
+      mapMapList=""
+      CALL U_IO.GET.PROPERTY("util", "dataMapMap", mapMapList)
+      mapDataList=""
+      CALL U_IO.GET.PROPERTY("util", "dataMapData", mapDataList)
+      mapDataRemark = ""
+      mapRemarkList=""
+      CALL U_IO.GET.PROPERTY("util", "dataMapRemark", mapRemarkList)
+
+      dataMapExtn="" ; CALL U_IO.GET.PROPERTY("util", "dataMapExtn", dataMapExtn)
+
+      dataMapTemplatePrefix="" ; CALL U_IO.GET.PROPERTY("util", "dataMapTemplatePrefix", dataMapTemplatePrefix)
+
+      dataMapTemplateSuffix="" ;CALL U_IO.GET.PROPERTY("util", "dataMapTemplateSuffix", dataMapTemplateSuffix)
+
+* get more dataMap
+*dataMapTmpl=demo_tmpl_=
+*dataMapData=demo_data_=
+*dataMapDest=demo_dest_=
+*dataMapWait=demo_wait_=
+
+      dataMapTmpl="" ; CALL U_IO.GET.PROPERTY("util", "dataMapTmpl", dataMapTmpl)
+      dataMapData="" ; CALL U_IO.GET.PROPERTY("util", "dataMapDataPrefix", dataMapData)
+      dataMapDest="" ; CALL U_IO.GET.PROPERTY("util", "dataMapDest", dataMapDest)
+      dataMapWait="" ; CALL U_IO.GET.PROPERTY("util", "dataMapWait", dataMapWait)
+      dealImporterDest="" ; CALL U_IO.GET.PROPERTY("siena_demo", "dealImporterDest", dealImporterDest)
+      dataMapPropWildcard = "" ; CALL U_IO.GET.PROPERTY("util", "dataMapPropWildcard", dataMapPropWildcard)
+      txnTemplate.ID = ""
+
+      new.ID = CHANGE(requestParameters, " ", "_")
+      dataMap.ID:= new.ID:dataMapExtn
+      CALL U_CRT.INFO("CONFIG", dataMap.ID)
+      CALL U_IO.DELETE(FV.UTIL.CONFIG, dataMap.ID, @FALSE, ERROR.TEXT)
+
+      template.ID = dataMapTemplatePrefix:CHANGE(requestParameters, " ", "_"):dataMapTemplateSuffix
+      CALL U_CRT.INFO("template.ID", template.ID)
+
+      CALL U_IO.DELETE(FV.txnTemplate, template.ID, @FALSE, ERROR.TEXT)
+
+      properties.ID = "siena_demo.properties"
+      CALL U_IO.READ(FV.UTIL.CONFIG, properties.ID, properties.REC, @FALSE, ERROR.TEXT)
+
+      replaceIT = dataMapTmpl:DOWNCASE(new.ID); GOSUB COMMENT.IT
+      replaceIT = dataMapData:DOWNCASE(new.ID); GOSUB COMMENT.IT
+      replaceIT = dataMapDest:DOWNCASE(new.ID); GOSUB COMMENT.IT
+      replaceIT = dataMapWait:DOWNCASE(new.ID); GOSUB COMMENT.IT
+
+      CALL U_CRT.INFO("PROPERTIES", properties.REC)
+      CALL U_IO.WRITE(FV.UTIL.CONFIG, properties.ID, properties.REC, @FALSE, ERROR.TEXT)
+
+** need to insert the following data for this to work;
+*demo_tmpl_accounts=Template_Account.xml=
+*demo_data_accounts=siena_dataAccounts=
+*demo_dest_accounts=/Users/matttownsend/Development/qm/dev/TEMP=
+*demo_wait_accounts=0=
+**
+
+      outputMatrix = ""
+      IF ERROR.TEXT <> "" THEN
+         responseStatus = RC$BAD.REQUEST
+         responseContent = "[{{1}}] No Data Found '{{2}}' '{{3}}'"
+         CALL U_MSG(responseContent, RC$BAD.REQUEST:@AM:requestItem:@AM:requestParameters)
+      END ELSE
+         responseStatus = RC$OK
+         responseContent = outputMatrix
+      END
+
+   END ELSE
+      responseStatus = RC$BAD.REQUEST
+      responseContent = "[{{1}}] No Data Specified '{{2}}' '{{3}}'"
+      CALL U_MSG(responseContent, RC$NO.DATA:@AM:requestItem:@AM:requestParameters)
+   END
+   CALL U_STOP(PROCESS.NAME)
+   RETURN
+
+COMMENT.IT:
+   withThis = "#SOFTDELETE-":OCONV(DATE(), "D4/"):"-":OCONV(TIME(), "MTS"):"-":replaceIT
+   properties.REC = CHANGE(properties.REC, replaceIT, withThis)
+   RETURN
+
+END

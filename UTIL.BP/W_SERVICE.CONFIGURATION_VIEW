@@ -10,6 +10,7 @@ SUBROUTINE W_SERVICE.CONFIGURATION_VIEW(requestItem, requestParameters, msgPaylo
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP I_HTTP.H
 
    PROCESS.NAME="W_SERVICE.CONFIGURATION_VIEW"
    CALL U_START(PROCESS.NAME)
@@ -22,15 +23,15 @@ $INCLUDE UTIL.BP I_UTIL.H
       ERROR.TEXT = ""
       CALL U_IO.READ(FV.UTIL.CONFIG, requestParameters, responseContent, @TRUE, ERROR.TEXT)
       IF ERROR.TEXT <> "" THEN
-         responseStatus = RS$FAIL
+         responseStatus = RC$BAD.REQUEST
          responseContent = "[{{1}}] No Config Data Found '{{2}}' '{{3}}'"
-         CALL U_MSG(responseContent, RS$FAIL:@AM:requestParameters)
+         CALL U_MSG(responseContent, RC$BAD.REQUEST:@AM:requestParameters)
       END
 
    END ELSE
-      responseStatus = RS$FAIL
+      responseStatus = RC$BAD.REQUEST
       responseContent = "[{{1}}] No Config File Specified '{{2}}'"
-      CALL U_MSG(responseContent, RS$FAIL:@AM:requestItem:@AM:requestParameters)
+      CALL U_MSG(responseContent, RC$BAD.REQUEST:@AM:requestItem:@AM:requestParameters)
    END
    CALL U_STOP(PROCESS.NAME)
    RETURN

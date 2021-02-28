@@ -1,9 +1,9 @@
-<img src="../.resources/themes/unicons-line-6563ff/corner-up-left-alt.svg" alt="BACK" width="25" />[BACK](../DOCS/UTIL.BP.md)  
+<img src="../.resources/themes/unicons-line-6563ff/corner-up-left-alt.svg" alt="BACK" width="25" />[BACK](../DOCS/BP.md)  
 # U_MSSQL.EXECUTE  
 |DATA|VALUE|
 | --- | --- |
 |TYPE|SUBROUTINE|
-|SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="UTIL.BP" width="25" />[UTIL.BP](../DOCS/UTIL.BP.md)|
+|SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="BP" width="25" />[BP](../DOCS/BP.md)|
 |ID|U_MSSQL.EXECUTE|
 |PARAMETERS|SQL.STATEMENT, SQL.ADDRESS, SQL.DATABASE, VERBOSE, ID_UTIL.SQL.RESPONSE|
     
@@ -22,9 +22,9 @@
 *   Routine Name : U_MSSQL.EXECUTE
 *           Type : SUBROUTINE
 *         Params : SQL.STATEMENT, SQL.ADDRESS, SQL.DATABASE, VERBOSE, ID_UTIL.SQL.RESPONSE
-*            Loc : UTIL.BP
+*            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210228 at 00.39.40 in DEV by root
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 

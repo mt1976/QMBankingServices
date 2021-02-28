@@ -13,9 +13,9 @@ $INCLUDE UTIL.BP I_UTIL.H
 
 
    IN.TEXT = TEXT
-   TEXT = CONVERT(@AM, U_CRT_AM, TEXT)
-   TEXT = CONVERT(@VM, U_CRT_VM, TEXT)
-   TEXT = CONVERT(@SM, U_CRT_SM, TEXT)
+   TEXT = CONVERT(@AM, T$AM, TEXT)
+   TEXT = CONVERT(@VM, T$VM, TEXT)
+   TEXT = CONVERT(@SM, T$SM, TEXT)
 
    dateTimeFormat = "" ; outputType = ""; timeZone = "" ; csvChar = ","
 
@@ -29,7 +29,7 @@ $INCLUDE UTIL.BP I_UTIL.H
    OUTPUT.TEXT = ""
 
    BEGIN CASE
-      CASE outputMode = U_LOGMODE_log4j
+      CASE outputMode = L$MODE.log4j
 
 
          * 20191203 UTC 16:15:39.089 INFO  NetClientImpl Client connecting on [localhost/127.0.0.1:7397]..
@@ -41,7 +41,7 @@ $INCLUDE UTIL.BP I_UTIL.H
          OUTPUT.TEXT := " ":ITEM.NAME
          OUTPUT.TEXT := " ":TEXT
 
-      CASE outputMode = U_LOGMODE_csv
+      CASE outputMode = L$MODE.csv
          * "20191203 UTC 16:15:39.089","INFO","NetClientImpl Client connecting on [localhost/127.0.0.1:7397]"
          OUTPUT.TEXT := DQUOTE(OUTPUT.DATE)
          OUTPUT.TEXT := csvChar:DQUOTE(outputType)
@@ -49,7 +49,7 @@ $INCLUDE UTIL.BP I_UTIL.H
          OUTPUT.TEXT := csvChar:DQUOTE(ITEM.NAME)
          OUTPUT.TEXT := csvChar:DQUOTE(TEXT)
 
-      CASE outputMode = U_LOGMODE_simple
+      CASE outputMode = L$MODE.simple
          OUTPUT.TEXT := "[":@(T$BOLD_ON):CONVERT(":", "", OCONV(TIME(), "MTS")):@(T$BOLD_OFF)
          OUTPUT.TEXT := "|":@(T$BOLD_ON):CALLING.PROCESS"L#15":@(T$BOLD_OFF)
          OUTPUT.TEXT := "|":@(T$BOLD_ON):UPCASE(ITEM.NAME)"L#10":@(T$BOLD_OFF)

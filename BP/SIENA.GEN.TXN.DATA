@@ -1,0 +1,195 @@
+SUBROUTINE SIENA.GEN.TXN.DATA(dataType)
+** INFORMATION ****************************************************************
+*   Routine Name : SIENA.GEN.TXN.DATA
+*           Type : SUBROUTINE
+*         Params : dataType
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+
+   PROCESS.NAME = "SIENA.GEN.TXN.DATA-":UPCASE(dataType)
+   CALL U_INITIALISE(PROCESS.NAME)
+   CALL U_HEADER("GENERATING>>>":UPCASE(dataType))
+
+*** OPENFILES STARTS
+   FN.SIENA.TXN.TEMPLATES = "SIENA.TXN.TEMPLATES" ; FV.SIENA.TXN.TEMPLATES = ""
+   CALL U_IO.OPENFILE(FN.SIENA.TXN.TEMPLATES, FV.SIENA.TXN.TEMPLATES, @FALSE, "")
+
+   CALL U_IO.GET.PROPERTY("siena_demo", "demo_data_":DOWNCASE(dataType), dataMapFile)
+   IF dataMapFile = "" THEN
+      CALL U_CRT.INFO("INFO", "No Data Mapping found, SKIPPING")
+      CALL U_CRT.INFO("INFO", "demo_data_":DOWNCASE(dataType):".list not found in UTIL.CONFIG/siena_demo.properties")
+
+      * NAUGHTY BUT WORKS
+      RETURN
+   END
+* GET FIELD MAP
+   dataMap= "" ; noMappings = 0
+   CALL U_IO.GET.LIST(dataMapFile, "MAP", dataMap, noMappings)
+
+* GET DATA TO LOAD
+   dataMapdataArray = "" ; noTransactions = 0
+   CALL U_IO.GET.LIST(dataMapFile, "DATA", dataMapdataArray, noTransactions)
+
+   FP.DESTINATION = "" ; FV.DESTINATION = ""
+   CALL U_IO.GET.PROPERTY("siena_demo", "demo_dest_":LOWER(dataType), FP.DESTINATION)
+*   CALL U_CRT.INFO("DELIVER", FP.DESTINATION)
+   CALL U_IO.OPENFILEPATH(FP.DESTINATION, FV.DESTINATION, @TRUE, "")
+*** OPENFILES ENDS
+
+*** GET TEMPLATES
+   CALL U_IO.GET.PROPERTY("siena_demo", "demo_tmpl_":LOWER(dataType), ID.SIENA.TXN.TEMPLATES)
+*   CALL U_CRT.INFO("TEMPLATE", ID.SIENA.TXN.TEMPLATES)
+
+   CALL U_IO.READ(FV.SIENA.TXN.TEMPLATES, ID.SIENA.TXN.TEMPLATES, R.SIENA.TXN.TEMPLATES, @FALSE, "")
+*** GET TEMPLATES END
+
+   waitTime = ""
+   CALL U_IO.GET.PROPERTY("siena_demo", "demo_wait_":LOWER(dataType), waitTime)
+
+*   CALL U_CRT.INFO("MAPS", noMappings)
+*   CALL U_CRT.INFO("ROWS", noTransactions)
+
+*   CALL U_CRT.RECORD(dataMap)
+*   CALL U_CRT.RECORD(dataMapdataArray)
+
+   FOR thisTransaction = 1 TO noTransactions
+      sourceData = CHANGE(dataMapdataArray<thisTransaction>, U$SEP.CFG.DATA, @AM)
+      *  CALL U_CRT.INFO("ITEM", thisTransaction:"/":noTransactions)
+      *    CALL U_CRT.RECORD(sourceData)
+      GOSUB PROCESS.ROW
+
+      IF noTransactions > 1 THEN
+         IF waitTime <> "" AND waitTime <> 0 THEN
+            waitPeriod = ""
+            CALL U_RND.BETWEEN(waitPeriod, 0, waitTime)
+            CALL U_CRT.INFO("SLEEPING", waitPeriod:" Secs")
+            SLEEP waitPeriod
+         END
+      END
+
+   NEXT thisTransaction
+
+   RETURN
+
+PROCESS.ROW:
+
+   R.NEW.TXN = R.SIENA.TXN.TEMPLATES
+
+   FOR thisMapping = 1 TO noMappings
+      searchTag = dataMap<thisMapping>
+      substituteData = sourceData<thisMapping>
+      IF substituteData[1, 1]="!" THEN
+         cacheObject=TRIM(substituteData[2, 99])
+         CALL SIENA.CACHE.FETCH(cacheObject, substituteData)
+      END
+
+      IF substituteData[1, 1]="@" THEN
+         substituteData=searchTag:".":TRIM(substituteData[2, 99])
+         substituteData=WC$PREFIX:substituteData:WC$SUFFIX
+      END
+
+      CALL U_WILDCARD.SUBSTITUTE(searchTag, substituteData, R.NEW.TXN)
+   NEXT thisMapping
+*   CALL U_CRT.INFO("START", "WILDCARD MAPPING")
+* YEAR, MONTH, DAY, HOURS, MINS, SECS
+   CALL U_WILDCARD.SUBSTITUTE("YYYY", @YEAR4, R.NEW.TXN)
+   CALL U_WILDCARD.SUBSTITUTE("MM", @MONTH, R.NEW.TXN)
+   CALL U_WILDCARD.SUBSTITUTE("DD", @DAY, R.NEW.TXN)
+   CALL U_WILDCARD.SUBSTITUTE("HH", OCONV(TIME(), "MTS.")[1, 2], R.NEW.TXN)
+   CALL U_WILDCARD.SUBSTITUTE("mm", OCONV(TIME(), "MTS.")[4, 2], R.NEW.TXN)
+   CALL U_WILDCARD.SUBSTITUTE("SS", OCONV(TIME(), "MTS.")[7, 2], R.NEW.TXN)
+*     <!-- Result. 1 means OK -->
+*   CALL U_WILDCARD.SUBSTITUTE("RESULTCODE", "1", R.NEW.TXN)
+
+* FIRST WORKING DAY OF YEAR
+   NEW.DATE = @YEAR4-1:"12":"31"
+   NEW.DATE = ICONV(NEW.DATE+1, "DX")
+   CALL U_GET.NEXT.WORKING.DAY(NEW.DATE, INT.DATE)
+   GOSUB FMT.SIENA.DATA
+   CALL U_WILDCARD.SUBSTITUTE("FIRST.WD.OF.YEAR", SIENA.DATE, R.NEW.TXN)
+
+   REPLACE.ITEM = "TODAY"
+   INT.DATE = DATE() ; GOSUB FMT.SIENA.DATA
+   CALL U_WILDCARD.SUBSTITUTE(REPLACE.ITEM, SIENA.DATE, R.NEW.TXN)
+
+   REPLACE.ITEM = "VALUE.DATE.SPOT"
+   VDATE = DATE()+2 ; NEXT.WORKING.DAY=""
+   CALL U_GET.NEXT.WORKING.DAY(VDATE, INT.DATE)
+   GOSUB FMT.SIENA.DATA
+   CALL U_WILDCARD.SUBSTITUTE(REPLACE.ITEM, SIENA.DATE, R.NEW.TXN)
+
+   REPLACE.ITEM = "VALUE.DATE.TOM"
+   VDATE = DATE()
+   CALL U_DATE.ADD(VDATE, 1, 0, 0)
+   CALL U_GET.NEXT.WORKING.DAY(VDATE, INT.DATE)
+   GOSUB FMT.SIENA.DATA
+   CALL U_WILDCARD.SUBSTITUTE(REPLACE.ITEM, SIENA.DATE, R.NEW.TXN)
+
+   REPLACE.ITEM = "VALUE.DATE.ON"
+   VDATE = DATE()
+   CALL U_DATE.ADD(VDATE, 0, 0, 0)
+   CALL U_GET.NEXT.WORKING.DAY(VDATE, INT.DATE)
+   GOSUB FMT.SIENA.DATA
+   CALL U_WILDCARD.SUBSTITUTE(REPLACE.ITEM, SIENA.DATE, R.NEW.TXN)
+
+   FOR I = 1 TO 10
+      REPLACE.ITEM = "VALUE.DATE.":I:"W"
+      VDATE = DATE()
+      CALL U_DATE.ADD(VDATE, I*7, 0, 0)
+      CALL U_GET.NEXT.WORKING.DAY(VDATE, INT.DATE)
+      GOSUB FMT.SIENA.DATA
+      CALL U_WILDCARD.SUBSTITUTE(REPLACE.ITEM, SIENA.DATE, R.NEW.TXN)
+   NEXT I
+
+   FOR I = 1 TO 11
+      REPLACE.ITEM = "VALUE.DATE.":I:"M"
+      VDATE = DATE()
+      CALL U_DATE.ADD(VDATE, 0, I, 0)
+      CALL U_GET.NEXT.WORKING.DAY(VDATE, INT.DATE)
+      GOSUB FMT.SIENA.DATA
+      CALL U_WILDCARD.SUBSTITUTE(REPLACE.ITEM, SIENA.DATE, R.NEW.TXN)
+   NEXT I
+
+   FOR I = 1 TO 5
+      REPLACE.ITEM = "VALUE.DATE.":I:"Y"
+      VDATE = DATE()
+      CALL U_DATE.ADD(VDATE, 0, 0, I)
+      CALL U_GET.NEXT.WORKING.DAY(VDATE, INT.DATE)
+      GOSUB FMT.SIENA.DATA
+      CALL U_WILDCARD.SUBSTITUTE(REPLACE.ITEM, SIENA.DATE, R.NEW.TXN)
+   NEXT I
+
+   REPLACE.ITEM = "NOW"
+   REPLACE.VALUE = OCONV(TIME(), "MTS")
+   CALL U_WILDCARD.SUBSTITUTE(REPLACE.ITEM, REPLACE.VALUE, R.NEW.TXN)
+
+   ID.RESPONSE = ""
+   CALL U_GET.UUID(ID.RESPONSE)
+   CALL U_WILDCARD.SUBSTITUTE("MSG.ID", ID.RESPONSE, R.NEW.TXN)
+
+   * dummy LEI
+   LEI = @YEAR4:@MONTH:@DAY:"6KQOMMVH":thisTransaction'"0"R####'
+   CALL U_WILDCARD.SUBSTITUTE("LEI", LEI, R.NEW.TXN)
+
+   * Sequence Number
+   CALL U_WILDCARD.SUBSTITUTE("SEQ", thisTransaction, R.NEW.TXN)
+
+   CALL U_CRT.INFO("PROCESSED", thisTransaction:"/":noTransactions:" ":DQUOTE(FP.DESTINATION:"/":ID.RESPONSE))
+*   CALL U_CRT.RECORD(R.NEW.TXN)
+   CALL U_IO.WRITE(FV.DESTINATION, ID.RESPONSE, R.NEW.TXN, @FALSE, "")
+
+   RETURN
+
+FMT.SIENA.DATA:
+   SIENA.DATE = ""
+   SIENA.DATE = CHANGE(OCONV(INT.DATE, "DYMD[4,2,2]"), " ", "-")
+   INT.DATE = ""
+   RETURN
+
+
+END

@@ -30,7 +30,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
    FOR I = 1 TO NO.SOURCES
 
       THIS.SOURCE = SOURCES.LIST<I>
-      THIS.SOURCE = CONVERT(U_PROP_SEP_ALT, @AM, THIS.SOURCE)
+      THIS.SOURCE = CONVERT(U$SEP.CFG.DATA, @AM, THIS.SOURCE)
 
       SQL.FIELDS = "CodeMajorCurrencyIsoCode,CodeMinorCurrencyIsoCode"
 *     SQL.TABLE    = "dbo.CurrencyPair"
@@ -38,7 +38,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
       SQL.TABLE = THIS.SOURCE<4>
 
 *     SQL.WHERE    = "Active=1 and SpotRerouteDataRerouteCurrency=''"
-      SQL.WHERE = CONVERT(U_PREF_SQL_EQ, "=", THIS.SOURCE<5>)
+      SQL.WHERE = CONVERT(SQL$EQUALS, "=", THIS.SOURCE<5>)
 
       RES.COLUMNS = ""
       RES.DATA = ""

@@ -10,7 +10,7 @@ SUBROUTINE W_SERVICE.ENVIRONMENT(requestItem, requestParameters, msgPayload, res
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
-
+$INCLUDE UTIL.BP I_HTTP.H
    CALL U_CRT.INFO("requestItem", requestItem)
    CALL U_CRT.INFO("requestParameters", requestParameters)
 
@@ -31,31 +31,31 @@ $INCLUDE UTIL.BP I_UTIL.H
    CALL U_IO.GET.PROPERTY("util", "releaseLevel", releaseLevel)
    CALL U_IO.GET.PROPERTY("util", "releaseNumber", releaseNumber)
 
-   responseStatus = "200"
+   responseStatus = RC$OK
 
-   responseContent<-1> = "Name":U_PROP_SEP_ALT:SYSTEM(1015)
+   responseContent<-1> = "Name":U$SEP.CFG.DATA:SYSTEM(1015)
    IP4.ADDRESS = ""
    CALL U_GET.IP(IP4.ADDRESS)
-   responseContent<-1> = "IP Address":U_PROP_SEP_ALT:IP4.ADDRESS
-   responseContent<-1> = "Path":U_PROP_SEP_ALT:@PATH
-   responseContent<-1> = "Uptime":U_PROP_SEP_ALT:uptime
+   responseContent<-1> = "IP Address":U$SEP.CFG.DATA:IP4.ADDRESS
+   responseContent<-1> = "Path":U$SEP.CFG.DATA:@PATH
+   responseContent<-1> = "Uptime":U$SEP.CFG.DATA:uptime
 
-   responseContent<-1> = "User":U_PROP_SEP_ALT:@LOGNAME:"@":@WHO
-   responseContent<-1> = "UserNo":U_PROP_SEP_ALT:@USERNO
+   responseContent<-1> = "User":U$SEP.CFG.DATA:@LOGNAME:"@":@WHO
+   responseContent<-1> = "UserNo":U$SEP.CFG.DATA:@USERNO
 
-   responseContent<-1> = "Date":U_PROP_SEP_ALT:OCONV(DATE(), "D4/")
-   responseContent<-1> = "Time":U_PROP_SEP_ALT:OCONV(TIME(), "MTS.")
+   responseContent<-1> = "Date":U$SEP.CFG.DATA:OCONV(DATE(), "D4/")
+   responseContent<-1> = "Time":U$SEP.CFG.DATA:OCONV(TIME(), "MTS.")
 
-   responseContent<-1> = "Polling Interval (s)":U_PROP_SEP_ALT:waitTime
-   responseContent<-1> = "ShutdownChar":U_PROP_SEP_ALT:UPCASE(shutdownChar):shutdownChar
+   responseContent<-1> = "Polling Interval (s)":U$SEP.CFG.DATA:waitTime
+   responseContent<-1> = "ShutdownChar":U$SEP.CFG.DATA:UPCASE(shutdownChar):shutdownChar
 
-   responseContent<-1> = "DB Release No":U_PROP_SEP_ALT:SYSTEM(1012)
+   responseContent<-1> = "DB Release No":U$SEP.CFG.DATA:SYSTEM(1012)
 
 
-   responseContent<-1> = "Release ID":U_PROP_SEP_ALT:releaseID
-   responseContent<-1> = "Release Level":U_PROP_SEP_ALT:releaseLevel
-   responseContent<-1> = "Release No":U_PROP_SEP_ALT:releaseNumber
-   responseContent<-1> = "Release Name":U_PROP_SEP_ALT:releaseID:" [r":releaseLevel:"-":releaseNumber:"]"
+   responseContent<-1> = "Release ID":U$SEP.CFG.DATA:releaseID
+   responseContent<-1> = "Release Level":U$SEP.CFG.DATA:releaseLevel
+   responseContent<-1> = "Release No":U$SEP.CFG.DATA:releaseNumber
+   responseContent<-1> = "Release Name":U$SEP.CFG.DATA:releaseID:" [r":releaseLevel:"-":releaseNumber:"]"
 
 
 

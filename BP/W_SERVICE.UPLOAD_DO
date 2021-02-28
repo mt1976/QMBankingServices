@@ -1,0 +1,78 @@
+SUBROUTINE W_SERVICE.CONFIGURATION_DO(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
+** INFORMATION ****************************************************************
+*   Routine Name : W_SERVICE.UPLOAD_DO
+*           Type : SUBROUTINE
+*         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP I_HTTP.H
+   PROCESS.NAME=SYSTEM(45)
+   CALL U_START(PROCESS.NAME)
+
+   CALL U_CRT.INFO("requestItem", requestItem)
+   CALL U_CRT.INFO("requestParameters", requestParameters)
+   CALL U_CRT.INFO("msgPayload", msgPayload)
+
+   sourcePath = "" ; CALL U_IO.GET.PROPERTY("wct_connect", "uploadPath", sourcePath)
+
+   * REQUEST PARAMETERS SHOULD BE THE DESTINATION AS EITHER FILENAME OR FILEPATH
+   * MESSAGEPAYLOAD = the filename to txre
+
+   targetLocation = CHANGE(requestParameters, " ", @AM)<1>
+   CALL U_CRT.INFO("targetLocation", targetLocation)
+
+   itemID = CHANGE(msgPayload, " ", @AM)<1>
+   CALL U_CRT.INFO("itemID", itemID)
+
+   FINDSTR "/" IN targetLocation SETTING POS THEN
+      targetPath = targetLocation
+      CALL U_CRT.INFO("IS_PATH", "YES")
+   END ELSE
+      targetPath = @PATH:"/":targetLocation
+      CALL U_CRT.INFO("IS PATH", "NO")
+   END
+
+   CALL U_CRT.INFO("targetPath", targetPath)
+
+   FV.SOURCE = "" ; CALL U_IO.OPENFILEPATH(sourcePath, FV.SOURCE, @FALSE, "")
+   FV.TARGET = "" ; CALL U_IO.OPENFILEPATH(targetPath, FV.TARGET, @FALSE, "")
+
+   ID.VOC.SOURCE = @USERNO:".SOURCE.TEMP" ; ID.VOC.TARGET = @USERNO:".TARGET.TEMP"
+
+   R.VOC.SOURCE = "" ; R.VOC.TARGET = ""
+   R.VOC.SOURCE<1> = "F" ; R.VOC.TARGET<1> = "F"
+   R.VOC.SOURCE<2> = sourcePath ; R.VOC.TARGET<2> = targetPath
+   R.VOC.SOURCE<3> = "@QMSYS/VOC.DIC" ; R.VOC.TARGET<3> = "@QMSYS/VOC.DIC"
+
+   CALL U_CRT.INFO("ID.VOC.SOURCE ", ID.VOC.SOURCE )
+   CALL U_CRT.INFO("ID.VOC.TARGET", ID.VOC.TARGET)
+
+   CALL U_CRT.INFO("R.VOC.SOURCE ", R.VOC.SOURCE)
+   CALL U_CRT.INFO("R.VOC.TARGET", R.VOC.TARGET)
+
+   CALL U_IO.WRITE(@VOC, ID.VOC.SOURCE, R.VOC.SOURCE, @FALSE, "")
+   CALL U_IO.WRITE(@VOC, ID.VOC.TARGET, R.VOC.TARGET, @FALSE, "")
+
+* COPY FROM SOURCE TO TARGET FILENAME BINARY
+   STMT = "COPY FROM ":ID.VOC.SOURCE
+   STMT := " TO ":ID.VOC.TARGET
+   STMT := " ":itemID
+   STMT := " BINARY OVERWRITING"
+
+   CALL U_CRT.INFO("STMT", STMT)
+
+   CALL U_OS.EXECUTE(STMT, @TRUE)
+
+   CALL U_IO.DELETE(FV.SOURCE, itemID, @FALSE, "")
+
+   CALL U_IO.DELETE(@VOC, ID.VOC.SOURCE, @FALSE, "")
+   CALL U_IO.DELETE(@VOC, ID.VOC.TARGET, @FALSE, "")
+
+   CALL U_STOP(PROCESS.NAME)
+   RETURN
+END

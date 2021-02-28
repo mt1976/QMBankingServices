@@ -1,0 +1,54 @@
+SUBROUTINE U_LOG.PURGE(PURGE.FILE)
+** INFORMATION ****************************************************************
+*   Routine Name : U_LOG.PURGE
+*           Type : SUBROUTINE
+*         Params : PURGE.FILE
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP F_UTIL.LOG.EVENT.H
+
+* property = purgeAfterDays
+
+   CALL U_CRT.INFO("PURGE", @(T$BOLD_ON):PURGE.FILE:@(T$BOLD_OFF))
+
+
+   FN.PURGE = PURGE.FILE ; FV.PURGE = ""
+   CALL U_IO.OPENFILE(FN.PURGE, FV.PURGE, @TRUE, "")
+
+   PURGE.PERIOD = 10
+   CALL U_IO.GET.PROPERTY("util", "purgeAfterDays", PURGE.PERIOD)
+
+   CURRENT.DATE = DATE()
+   PURGE.DATE = CURRENT.DATE - PURGE.PERIOD
+   PURGE.STMT = "SELECT ":PURGE.FILE:" WITH CREATE.DATE < ":DQUOTE(OCONV(PURGE.DATE, "DX"))
+
+   CALL U_OS.EXECUTE(PURGE.STMT, @TRUE)
+   PROCESS.LIST = ""
+   NO.ITEMS.PURGED = DCOUNT(PROCESS.LIST, @AM)
+   LOOP
+      READNEXT ID.PURGE ELSE EXIT
+
+      CALL U_IO.DELETE(FV.PURGE, ID.PURGE, STOP.ON.ERROR, ERROR.TEXT)
+
+      *  CALL U_CRT.INFO("PURGEITEM", PURGE.FILE:SPACE(1):ID.PURGE)
+
+   REPEAT
+
+   R.EVENT = ""
+   R.EVENT<U_LOG_EVENT> = "PURGE"
+   R.EVENT<U_LOG_CMD> = "PURGED ":NO.ITEMS.PURGED:" FROM ":PURGE.FILE
+   R.EVENT<U_LOG_MSG> = ""
+   R.EVENT<U_LOG_FILE> = PURGE.FILE
+   R.EVENT<U_LOG_ID> = ""
+   R.EVENT<U_LOG_RETCD> = @SYSTEM.RETURN.CODE
+   R.EVENT<U_LOG_SUBR> = "U_PURGE.LOG"
+
+   CALL U_LOG.EVENT("", R.EVENT)
+
+   RETURN
+END

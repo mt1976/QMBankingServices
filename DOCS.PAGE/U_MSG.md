@@ -1,9 +1,9 @@
-<img src="../.resources/themes/unicons-line-6563ff/corner-up-left-alt.svg" alt="BACK" width="25" />[BACK](../DOCS/UTIL.BP.md)  
+<img src="../.resources/themes/unicons-line-6563ff/corner-up-left-alt.svg" alt="BACK" width="25" />[BACK](../DOCS/BP.md)  
 # U_MSG  
 |DATA|VALUE|
 | --- | --- |
 |TYPE|SUBROUTINE|
-|SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="UTIL.BP" width="25" />[UTIL.BP](../DOCS/UTIL.BP.md)|
+|SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="BP" width="25" />[BP](../DOCS/BP.md)|
 |ID|U_MSG|
 |PARAMETERS|TEXT, WILDCARDS|
     
@@ -18,16 +18,15 @@
 *   Routine Name : U_MSG
 *           Type : SUBROUTINE
 *         Params : TEXT, WILDCARDS
-*            Loc : UTIL.BP
+*            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210228 at 00.39.40 in DEV by root
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 ```
 ## BODY  
 ### EXTERNAL CALLS  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_TRANSLATE" width="25" />[U_TRANSLATE](../DOCS.PAGE/U_TRANSLATE.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_WILDCARD.SUBSTITUTE" width="25" />[U_WILDCARD.SUBSTITUTE](../DOCS.PAGE/U_WILDCARD.SUBSTITUTE.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_MSG.CLASS" width="25" />[U_MSG.CLASS](../DOCS.PAGE/U_MSG.CLASS.md)  
 ### NOTES  
   

@@ -1,0 +1,58 @@
+SUBROUTINE U_BUILD.INFO.HELPER(FN.BP, FV.BP, ID.BP, R.UTIL.CONFIG)
+** INFORMATION ****************************************************************
+*   Routine Name : U_BUILD.INFO.HELPER
+*           Type : SUBROUTINE
+*         Params : FN.BP, FV.BP, ID.BP, R.UTIL.CONFIG
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+
+   PARAM.LIST = ""
+   R.UTIL.CONFIG_OLD = R.UTIL.CONFIG
+*** translate variables in text to values
+   R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<SOURCE.FILE>>", FN.BP)
+   R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<DATE>>", OCONV(DATE(), "DX"))
+   R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<TIME>>", OCONV(TIME(), "MTS."))
+   R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<WHO>>", @WHO)
+   R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<USER>>", @USER)
+   R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<HOSTNAME>>", SYSTEM(1015))
+   R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<PLATFORM>>", SYSTEM(1010))
+   R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<YYYY>>", @YEAR4)
+***
+   STOP.ON.ERROR = @TRUE
+   IF ID.BP[2] <> ".H" AND ID.BP <> ".DS_Store" THEN
+      CALL U_IO.READ(FV.BP, ID.BP, R.BP, STOP.ON.ERROR, ERROR.TEXT)
+* always ingore row one, it will have the subr or
+      CALL U_CRT.INFO("BUILDINFO", FN.BP:" ":ID.BP)
+
+      PRG.TYPE = "PROGRAM"
+      FINDSTR "SUBROUTINE" IN R.BP THEN
+         PRG.TYPE = "SUBROUTINE"
+      END
+      R.UTIL.CONFIG_OLD = R.UTIL.CONFIG
+      R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<TYPE>>", PRG.TYPE)
+      R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<ROUTINE>>", ID.BP)
+      LINE1 = CHANGE(R.BP<1>, "(", @AM)
+      LINE1 = CHANGE(LINE1, ")", @AM)
+      PARAM.LIST=LINE1<2>
+      R.UTIL.CONFIG = CHANGE(R.UTIL.CONFIG, "<<PARAMETERS>>", PARAM.LIST)
+
+      IF R.BP<2> = R.UTIL.CONFIG<1> THEN
+* OVERWRITE
+         FOR J = 1 TO 10
+            INS.POS = J+1
+            R.BP<INS.POS> = R.UTIL.CONFIG<J>
+         NEXT J
+      END ELSE
+         INS R.UTIL.CONFIG BEFORE R.BP<2>
+      END
+      CALL U_IO.WRITE(FV.BP, ID.BP, R.BP, STOP.ON.ERROR, ERROR.TEXT)
+      * CALL U_CRT.RECORD(R.BP)
+   END
+   R.UTIL.CONFIG = R.UTIL.CONFIG_OLD
+
+   RETURN
+END

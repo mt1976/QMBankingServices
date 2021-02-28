@@ -58,7 +58,7 @@ $INSERT UTIL.BP I_UTIL.H
 *   CALL U_CRT.RECORD(dataMapdataArray)
 
    FOR thisTransaction = 1 TO noTransactions
-      sourceData = CHANGE(dataMapdataArray<thisTransaction>, U_PROP_SEP_ALT, @AM)
+      sourceData = CHANGE(dataMapdataArray<thisTransaction>, U$SEP.CFG.DATA, @AM)
       *  CALL U_CRT.INFO("ITEM", thisTransaction:"/":noTransactions)
       *    CALL U_CRT.RECORD(sourceData)
       GOSUB PROCESS.ROW

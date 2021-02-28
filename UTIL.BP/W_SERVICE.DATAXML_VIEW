@@ -10,7 +10,7 @@ SUBROUTINE W_SERVICE.DATAMAP_VIEW(requestItem, requestParameters, msgPayload, re
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
-
+$INCLUDE UTIL.BP I_HTTP.H
 $INCLUDE UTIL.BP F_SIENA.TXN.TEMPLATES.H
 ** DO NOT CHANGE
    PROCESS.NAME=SYSTEM(45) ; ERROR.TEXT = "" ; CALL U_START(PROCESS.NAME)
@@ -34,19 +34,19 @@ $INCLUDE UTIL.BP F_SIENA.TXN.TEMPLATES.H
       outputMatrix = txnTemplate.REC
 
       IF ERROR.TEXT <> "" THEN
-         responseStatus = RS$FAIL
+         responseStatus = RC$BAD.REQUEST
          responseContent = "[{{1}}] Template Data Found '{{2}}' '{{3}}'"
-         CALL U_MSG(responseContent, RS$FAIL:@AM:requestItem:@AM:requestParameters)
+         CALL U_MSG(responseContent, RC$BAD.REQUEST:@AM:requestItem:@AM:requestParameters)
          responseContent<-1> = ERROR.TEXT
       END ELSE
-         responseStatus = RS$SUCCESS
+         responseStatus = RC$OK
          responseContent = outputMatrix
       END
 
    END ELSE
-      responseStatus = RS$NO.DATA
+      responseStatus = RC$NO.DATA
       responseContent = "[{{1}}] No Data Found '{{2}}' '{{3}}'"
-      CALL U_MSG(responseContent, RS$NO.DATA:@AM:requestItem:@AM:requestParameters)
+      CALL U_MSG(responseContent, RC$NO.DATA:@AM:requestItem:@AM:requestParameters)
    END
    CALL U_CRT.INFO("responseStatus", responseStatus)
    CALL U_CRT.INFO("responseContent", responseContent)

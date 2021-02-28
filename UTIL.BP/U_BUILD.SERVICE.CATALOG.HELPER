@@ -31,7 +31,7 @@ $INCLUDE UTIL.BP F_UTIL.WCT.TOKENS.H
 
    CALL U_IO.GET.LIST(serviceCatalogID, serviceID, servicesList, servicesCount)
 
-   servicesList = CHANGE(servicesList, U_PROP_SEP_ALT, @VM)
+   servicesList = CHANGE(servicesList, U$SEP.CFG.DATA, @VM)
 
    R.MENU = ""
    R.MENU<1> = "M"

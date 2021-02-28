@@ -1,0 +1,109 @@
+SUBROUTINE SIENA.HOMEFINANCE.HELPER(PROCESS.NAME, indexID)
+** INFORMATION ****************************************************************
+*   Routine Name : SIENA.HOMEFINANCE.HELPER
+*           Type : SUBROUTINE
+*         Params : PROCESS.NAME, indexID
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP F_UTIL.TRANSLATE.H
+$INCLUDE BP I_RATECSV.H
+$INSERT BP I_UTIL.H
+
+* INITIALISE
+   PROCESS.NAME = "SIENA.HOMEFINANCE.HELPER"
+   CALL U_START(PROCESS.NAME)
+
+   FN.SIENA.STAGING = "SIENA.STAGING" ; FV.SIENA.STAGING = ""
+   CALL U_IO.OPENFILE(FN.SIENA.STAGING, FV.SIENA.STAGING, STOP.ON.ERROR, ERROR.TEXT)
+
+* Setup some temp locations for input data
+
+   ERROR.TEXT = ""; STOP.ON.ERROR = @TRUE ; VERBOSE = @TRUE
+
+* OPEN FILES
+   URI.LIST = "" ; NO.URIS = ""
+   SOURCES = "siena_homefinance_idxs"
+   CALL U_IO.GET.LIST(SOURCES, indexID, URI.LIST, NO.URIS)
+   URI.LIST = CHANGE(URI.LIST, U$SEP.CFG.DATA, @VM)
+   listURI=1;listCCY=2;listTenor=3
+   FOR thisURI.POS = 1 TO NO.URIS
+      thisURI = URI.LIST<thisURI.POS, listURI>
+      thisCCY = URI.LIST<thisURI.POS, listCCY>
+      thisTenor = URI.LIST<thisURI.POS, listTenor>
+      GOSUB PROCESS.URI
+   NEXT thisURI.POS
+
+   CALL U_CRT.INFO("PROCESSING", "COMPLETE")
+   CALL U_STOP(PROCESS.NAME)
+   RETURN
+
+
+PROCESS.URI:
+   CALL U_CRT.INFO("URI", thisURI)
+   resultWget = ""
+   CALL U_OS.WGET(thisURI, @TRUE, resultWget, "")
+   IF resultWget = "" THEN
+      CALL U_CRT.INFO("RESPONSE", "EMPTY")
+   END ELSE
+      CALL U_CRT.INFO("RESPONSE", "RETURNED")
+
+      searchString = "" ; searchEnd = "" ; extractPos = ""
+
+      CALL U_IO.GET.PROPERTY(SOURCES, indexID:"_SearchString", searchString)
+      CALL U_IO.GET.PROPERTY(SOURCES, indexID:"_SearchEnd", searchEnd)
+      CALL U_IO.GET.PROPERTY(SOURCES, indexID:"_Position", extractPos)
+      CALL U_IO.GET.PROPERTY(SOURCES, "rateMask", rateMask)
+
+
+      *    CALL U_CRT.INFO("searchString", searchString)
+      *    CALL U_CRT.INFO("searchEnd", searchEnd)
+
+      resultWget = CHANGE(resultWget, searchString, @AM)
+      resultWget = CHANGE(resultWget, searchEnd, @AM)
+
+      indexRate = resultWget<extractPos>
+      *  CALL U_CRT.RECORD(resultWget)
+      CALL U_CRT.INFO("RESULT", indexRate)
+
+      CCY=UPCASE(thisCCY)
+
+      CALL U_CRT.INFO("CCY", CCY)
+      CALL U_CRT.INFO("TENOR", thisTenor)
+
+      outCCY = "" ; outCCY = SPACE(3):CCY
+      outTenor = "" ; extTenor = ""
+      CALL U_TRANSLATE("TENOR", thisTenor, U_TRNS.MESSAGE, outTenor)
+      CALL U_TRANSLATE("TENOR", thisTenor, U_TRNS.SIENA_BC, extTenor)
+      CALL U_TRANSLATE("RATETYPE", indexID, U_TRNS.MESSAGE, rvType)
+
+      outCCYTenor = rvType[1, 1]:outCCY"L#6":outTenor
+      *    CALL U_CRT.INFO("outCCYTenor", outCCYTenor)
+
+      outBuy = CONVERT('"', '', indexRate) rateMask
+      outSell = CONVERT('"', '', indexRate) rateMask
+      outputData = outCCYTenor:"D":outBuy:"D":outSell
+
+      *    CALL U_CRT.INFO("outputData", outputData)
+
+      cacheName = indexID:U$SEP.ID:extTenor:U$SEP.ID:TRIM(CCY)
+      cacheValue = outBuy+0
+      CALL SIENA.CACHE.CLEAR(cacheName)
+      CALL SIENA.CACHE.UPDATE(cacheName, "", cacheValue)
+
+      ID.SIENA.STAGING = "RV":UPCASE(indexID):U$SEP.ALT:TRIM(CCY):extTenor
+      CALL U_CRT.INFO("DELETE", ID.SIENA.STAGING)
+      CALL U_IO.DELETE(FV.SIENA.STAGING, ID.SIENA.STAGING, STOP.ON.ERROR, ERROR.TEXT)
+      CALL U_CRT.INFO("STORE", ID.SIENA.STAGING)
+      CALL U_IO.WRITE(FV.SIENA.STAGING, ID.SIENA.STAGING, outputData, STOP.ON.ERROR, ERROR.TEXT)
+
+   END
+
+
+
+   RETURN
+
+END

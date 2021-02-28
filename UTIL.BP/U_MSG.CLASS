@@ -1,0 +1,26 @@
+SUBROUTINE U_MSG.CLASS(TYPE, TEXT, WILDCARDS)
+** INFORMATION ****************************************************************
+*   Routine Name : U_MSG.CLASS
+*           Type : SUBROUTINE
+*         Params : TYPE, TEXT, WILDCARDS
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 12.48.31 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE UTIL.BP I_UTIL.H
+
+* EXAMPLE INPUT
+*  TEXT = "NO DATA ({{1}}-{{2}})"
+* WILDCARDS<1> = "ITEM"
+* WILDCARDS<2> = "ITEMVALUE"
+*
+   CALL U_TRANSLATE(TYPE, TEXT, 1, TEXT)
+   FOR I = 1 TO 10
+      CALL U_WILDCARD.SUBSTITUTE(I, WILDCARDS<I>, TEXT)
+   NEXT I
+   TEXT = TRIM(TEXT)
+
+   RETURN
+END

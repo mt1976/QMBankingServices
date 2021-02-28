@@ -1,0 +1,20 @@
+SUBROUTINE U_RND.BETWEEN(RANDO, VALUE1, VALUE2)
+** INFORMATION ****************************************************************
+*   Routine Name : U_RND.BETWEEN
+*           Type : SUBROUTINE
+*         Params : RANDO, VALUE1, VALUE2
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP F_UTIL.LOG.EVENT.H
+   RANDO = ""
+
+   RANGE.SIZE = VALUE2 - VALUE1
+   RANDO = RND(RANGE.SIZE) + VALUE1
+
+   RETURN
+END

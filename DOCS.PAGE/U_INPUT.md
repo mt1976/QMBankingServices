@@ -1,9 +1,9 @@
-<img src="../.resources/themes/unicons-line-6563ff/corner-up-left-alt.svg" alt="BACK" width="25" />[BACK](../DOCS/UTIL.BP.md)  
+<img src="../.resources/themes/unicons-line-6563ff/corner-up-left-alt.svg" alt="BACK" width="25" />[BACK](../DOCS/BP.md)  
 # U_INPUT  
 |DATA|VALUE|
 | --- | --- |
 |TYPE|SUBROUTINE|
-|SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="UTIL.BP" width="25" />[UTIL.BP](../DOCS/UTIL.BP.md)|
+|SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="BP" width="25" />[BP](../DOCS/BP.md)|
 |ID|U_INPUT|
 |PARAMETERS|QUESTION, RESPONSE|
     
@@ -18,9 +18,9 @@
 *   Routine Name : U_INPUT
 *           Type : SUBROUTINE
 *         Params : QUESTION, RESPONSE
-*            Loc : UTIL.BP
+*            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210228 at 00.39.40 in DEV by root
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -28,6 +28,6 @@
 ## BODY  
 ### EXTERNAL CALLS  
 ### NOTES  
-####    DISPLAY @(T$CLEARLINE):@(T$BOLD_ON):U_PREF:@(T$BOLD_OFF):QUESTION:" ":  
+####    DISPLAY @(T$CLEARLINE):@(T$BOLD_ON):T$INPUT.PREFIX:@(T$BOLD_OFF):QUESTION:" ":  
   
   

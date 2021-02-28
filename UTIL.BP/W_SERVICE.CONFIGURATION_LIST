@@ -10,6 +10,7 @@ SUBROUTINE W_SERVICE.CONFIGURATION_LIST(requestItem, requestParameters, msgPaylo
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP I_HTTP.H
 
    PROCESS.NAME="W_SERVICE.CONFIGURATION_LIST"
    CALL U_START(PROCESS.NAME)
@@ -22,12 +23,12 @@ $INCLUDE UTIL.BP I_UTIL.H
    PROCESS.LIST = ""
    CALL U_GET.LIST(STMT, PROCESS.LIST, NO.ITEMS)
    IF NO.ITEMS > 0 THEN
-      responseStatus = RS$SUCCESS
+      responseStatus = RC$OK
       responseContent = PROCESS.LIST
    END ELSE
-      responseStatus = RS$NO.DATA
+      responseStatus = RC$NO.DATA
       responseContent = "[{{1}}] No Data Found '{{2}}' '{{3}}'"
-      CALL U_MSG(responseContent, RS$NO.DATA:@AM:requestItem:@AM:requestParameters)
+      CALL U_MSG(responseContent, RC$NO.DATA:@AM:requestItem:@AM:requestParameters)
    END
 
    CALL U_STOP(PROCESS.NAME)

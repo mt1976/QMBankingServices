@@ -1,0 +1,47 @@
+SUBROUTINE W_SERVICE.UPLOAD(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
+** INFORMATION ****************************************************************
+*   Routine Name : W_SERVICE.UPLOAD
+*           Type : SUBROUTINE
+*         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP I_HTTP.H
+   PROCESS.NAME = SYSTEM(45)
+   CALL U_START(PROCESS.NAME)
+
+   CALL U_CRT.INFO("requestItem", requestItem)
+   CALL U_CRT.INFO("requestParameters", requestParameters)
+
+   CALL U_IO.GET.LIST("wct_helper", SYSTEM(45), validActions.list, NO.ITEMS)
+
+   externalSubr = ""
+   FIND requestItem IN validActions.list SETTING POS THEN
+      CALL U_CRT.INFO("FOUND":requestItem, POS)
+      externalSubr = SYSTEM(45):"_":requestItem
+      CALL U_CRT.INFO("SUBR", externalSubr)
+
+   END ELSE
+      CALL U_CRT.INFO("FOUND SAVE", "NOT FOUND")
+   END
+
+
+   BEGIN CASE
+
+      CASE externalSubr <> ""
+         CALL @externalSubr(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
+
+      CASE 1
+
+         responseStatus =RC$BAD.REQUEST
+         responseContent = "Invalid Action '{{1}}'"
+         CALL U_MSG(responseContent, requestItem)
+
+   END CASE
+   CALL U_STOP(PROCESS.NAME)
+   RETURN
+END

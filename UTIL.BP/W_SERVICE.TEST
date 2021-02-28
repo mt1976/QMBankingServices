@@ -10,13 +10,13 @@ SUBROUTINE W_SERVICE.TEST(requestItem, requestParameters, msgPayload, responseCo
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
-
+$INCLUDE UTIL.BP I_HTTP.H
    * CALL U_CRT.INFO("requestItem", requestItem)
    * CALL U_CRT.INFO("requestParameters", requestParameters)
 
-   responseStatus = RS$SUCCESS
+   responseStatus = RC$OK
    responseContent = "[{{1}}] SUCCESS"
-   CALL U_MSG(responseContent, RS$SUCCESS)
+   CALL U_MSG(responseContent, RC$OK)
 
 
 END

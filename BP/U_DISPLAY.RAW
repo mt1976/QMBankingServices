@@ -1,0 +1,18 @@
+PROGRAM U_DISPLAY.RAW
+** INFORMATION ****************************************************************
+*   Routine Name : U_DISPLAY.RAW
+*           Type : PROGRAM
+*         Params :
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+
+
+   PN.LEN=LEN("U_DISPLAY.RAW")+2
+   OP.STRING = @SENTENCE[PN.LEN, 999]
+   STOP "INFO    - ":DQUOTE(OP.STRING)
+
+END

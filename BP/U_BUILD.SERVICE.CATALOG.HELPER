@@ -1,0 +1,73 @@
+SUBROUTINE U_BUILD.SERVICE.CATALOG.HELPER(SPARE01)
+** INFORMATION ****************************************************************
+*   Routine Name : U_BUILD.SERVICE.CATALOG.HELPER
+*           Type : SUBROUTINE
+*         Params : SPARE01
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP F_UTIL.WCT.RECV.H
+$INCLUDE BP F_UTIL.WCT.RESP.H
+$INCLUDE BP F_UTIL.WCT.TEMPLATES.H
+$INCLUDE BP F_UTIL.WORKFILE.H
+$INCLUDE BP F_UTIL.WCT.TOKENS.H
+
+   PROCESS.NAME = "U_BUILD.SERVICE.CATALOG"
+   wct_Properties = "wct_connect"
+   FN.VOC = "VOC" ; FV.VOC = "" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""
+   CALL U_IO.OPENFILE(FN.VOC, FV.VOC, STOP.ON.ERROR, ERROR.TEXT)
+
+   serviceCatalogID = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "serviceCatalogID", serviceCatalogID)
+   serviceID = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "serviceID", serviceID)
+   menuID = "" ; CALL U_IO.GET.PROPERTY("util", "vocMenu", menuID)
+
+
+   servicesList = ""
+   servicesCount = 0
+
+   CALL U_IO.GET.LIST(serviceCatalogID, serviceID, servicesList, servicesCount)
+
+   servicesList = CHANGE(servicesList, U$SEP.CFG.DATA, @VM)
+
+   R.MENU = ""
+   R.MENU<1> = "M"
+   MENU.HEADING = "Service Catalog"
+   CALL U_TRANSLATE("UTIL", MENU.HEADING, 1, MENU.HEADING)
+   R.MENU<2> = MENU.HEADING
+
+   menuOptionName = 3 ; servicesName = 1
+   menuCommand = 4 ; servicesCommand = 2 ; servicesItem = 3 ; servicesOptions = 4
+   menuHelptext = 5 ; serviceHelptext = 5
+   FOR I = 1 TO servicesCount
+      IF servicesList<I, servicesCommand>[1] # "@" THEN
+         R.MENU<menuOptionName, I> = servicesList<I, servicesName>
+         thisCommand = ""
+         thisCommand = CHANGE(servicesList<I, servicesCommand>, "!", "")
+         IF servicesList<I, servicesItem> <> "" THEN
+            thisCommand := " ":servicesList<I, servicesItem>
+         END
+         IF servicesList<I, servicesOptions> <> "" THEN
+            thisCommand := " ":servicesList<I, servicesOptions>
+         END
+         IF thisCommand <> "" THEN
+            thisCommand := ";"
+         END
+         R.MENU<menuCommand, I> = thisCommand
+         R.MENU<menuHelptext, I> = servicesList<I, serviceHelptext>
+      END
+   NEXT I
+
+   * CALL U_CRT.INFO("menu", R.MENU)
+
+   CALL U_IO.WRITE(FV.VOC, menuID, R.MENU, STOP.ON.ERROR, ERROR.TEXT)
+
+   *CALL U_CRT.INFO("NOSERV", servicesCount)
+   CALL U_CRT.INFO("REBUILD", "Menu rebuilt from ":DQUOTE(serviceCatalogID):" as ":DQUOTE(menuID))
+
+   CALL U_STOP(PROCESS.NAME)
+   STOP
+END

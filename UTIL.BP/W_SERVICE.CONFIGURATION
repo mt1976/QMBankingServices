@@ -10,6 +10,7 @@ SUBROUTINE W_SERVICE.CONFIGURATION(requestItem, requestParameters, msgPayload, r
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP I_HTTP.H
 
    PROCESS.NAME="W_SERVICE.CONFIGURATION"
    CALL U_START(PROCESS.NAME)
@@ -27,9 +28,9 @@ $INCLUDE UTIL.BP I_UTIL.H
          CALL W_SERVICE.CONFIGURATION_SAVE(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
       CASE 1
 
-         responseStatus =RS$FAIL
+         responseStatus =RC$BAD.REQUEST
          responseContent = "[{{1}}] Invalid Action '{{2}}'"
-         CALL U_MSG(responseContent, RS$FAIL:@AM:requestItem)
+         CALL U_MSG(responseContent, RC$BAD.REQUEST:@AM:requestItem)
 
    END CASE
    CALL U_STOP(PROCESS.NAME)

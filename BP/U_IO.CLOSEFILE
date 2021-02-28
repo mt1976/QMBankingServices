@@ -1,0 +1,24 @@
+SUBROUTINE U_IO.CLOSEFILE(FN.FILENAME, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT)
+** INFORMATION ****************************************************************
+*   Routine Name : U_IO.CLOSEFILE
+*           Type : SUBROUTINE
+*         Params : FN.FILENAME, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+
+
+
+   *CALL U_CRT.INFO("CLOSING ",FN.FILENAME)
+
+   * CRT "CLOSE ":DQUOTE(FN.FILENAME)
+
+   CLOSE FV.FILEVAR
+
+   RETURN
+
+END

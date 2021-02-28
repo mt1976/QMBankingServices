@@ -1,0 +1,25 @@
+SUBROUTINE U_GET.CALLING.PROCESS.NAME(CALLING.SUBR, THIS.CALL.STACK, THIS.PARENT)
+** INFORMATION ****************************************************************
+*   Routine Name : U_GET.CALLING.PROCESS.NAME
+*           Type : SUBROUTINE
+*         Params : CALLING.SUBR, THIS.CALL.STACK, THIS.PARENT
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+** USAGE Used to get the current process name from the call stack.
+
+** Get calling process name from current call stack.
+   CALLING.SUBR = THIS.CALL.STACK<2, 1>
+
+   CS.TEMP = CALLING.SUBR
+   CS.TEMP = CONVERT("/", @AM, CS.TEMP)
+   CS.TEMP = CONVERT("\", @AM, CS.TEMP)
+   LAST.POS = DCOUNT(CS.TEMP, @AM)
+   CALLING.SUBR = CS.TEMP<LAST.POS>
+
+   RETURN
+END

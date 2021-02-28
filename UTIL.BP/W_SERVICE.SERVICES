@@ -10,14 +10,14 @@ SUBROUTINE W_SERVICE.SERVICES(responseCode, responseContent)
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
-
+$INCLUDE UTIL.BP I_HTTP.H
    wct_Properties = "wct_connect"
 
    serviceID = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "serviceID", serviceID)
    serviceCatalogID = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "serviceCatalogID", serviceCatalogID)
    servicesList = "" ; serviceCount = 0
    CALL U_IO.GET.LIST(serviceCatalogID, serviceID, servicesList, servicesCount)
-   newList = CHANGE(servicesList, U_PROP_SEP_ALT, @VM)
+   newList = CHANGE(servicesList, U$SEP.CFG.DATA, @VM)
    * CALL U_CRT.INFO("newlist", newList)
    outputList = ""
    PREFIX = ""
@@ -34,18 +34,18 @@ $INCLUDE UTIL.BP I_UTIL.H
                outputstr<3> = newList<I, 3>
                outputstr<4> = newList<I, 4>
                outputstr<5> = newList<I, 5>
-               outputList<-1> = CHANGE(outputstr, @AM, U_PROP_SEP_ALT)
+               outputList<-1> = CHANGE(outputstr, @AM, U$SEP.CFG.DATA)
             END
          END
       NEXT I
       *CALL U_CRT.INFO("SL", outputList)
-      responseCode = RS$SUCCESS
+      responseCode = RC$OK
       CALL U_CLEAN.TEXT(outputList)
       responseContent=outputList
    END ELSE
-      responseCode = RS$NO.DATA
+      responseCode = RC$NO.DATA
       responseContent = "[{{1}}] No Properties Data Found '{{2}}'"
-      CALL U_MSG(responseContent, RS$NO.DATA:@AM:"wct_connect")
+      CALL U_MSG(responseContent, RC$NO.DATA:@AM:"wct_connect")
    END
    * CALL U_CRT.INFO("responseCode", responseCode)
    * CALL U_CRT.INFO("responseContent", responseContent)

@@ -1,0 +1,23 @@
+SUBROUTINE U_MSG(TEXT, WILDCARDS)
+** INFORMATION ****************************************************************
+*   Routine Name : U_MSG
+*           Type : SUBROUTINE
+*         Params : TEXT, WILDCARDS
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+
+* EXAMPLE INPUT
+*  TEXT = "NO DATA ({{1}}-{{2}})"
+* WILDCARDS<1> = "ITEM"
+* WILDCARDS<2> = "ITEMVALUE"
+*
+
+   CALL U_MSG.CLASS("MSG", TEXT, WILDCARDS)
+
+   RETURN
+END

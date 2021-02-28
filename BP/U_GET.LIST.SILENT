@@ -1,0 +1,37 @@
+SUBROUTINE U_GET.LIST.SILENT(STMT, PROCESS.LIST, NO.ITEMS)
+** INFORMATION ****************************************************************
+*   Routine Name : U_GET.LIST.SILENT
+*           Type : SUBROUTINE
+*         Params : STMT, PROCESS.LIST, NO.ITEMS
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP F_UTIL.LOG.EVENT.H
+
+   USE.STMT = STMT:" TO ":@USERNO
+   CALL U_OS.EXECUTE(USE.STMT, "SILENT")
+
+   PROCESS.LIST = "" ; NO.ITEMS = 0
+   LOOP
+      READNEXT ID.FILE FROM @USERNO ELSE EXIT
+      PROCESS.LIST<-1> = ID.FILE
+   REPEAT
+   NO.ITEMS = DCOUNT(PROCESS.LIST, @AM)
+
+   IF NO.ITEMS>0 THEN
+      * ONLY LOG IF ITEMS FOUND, IF NOT JUST CONTINUE SILENTLY
+      R.EVENT = ""
+      R.EVENT<U_LOG_EVENT> = "EXECUTE"
+      R.EVENT<U_LOG_MSG> = USE.STMT
+      R.EVENT<U_LOG_CMD> = USE.STMT
+      R.EVENT<U_LOG_RETCD> = @SYSTEM.RETURN.CODE
+      R.EVENT<U_LOG_SUBR> = "U_OS.EXECUTE"
+      CALL U_LOG.EVENT("", R.EVENT)
+   END
+
+   RETURN
+END

@@ -1,0 +1,21 @@
+PROGRAM U_HEADER.TEST
+** INFORMATION ****************************************************************
+*   Routine Name : U_HEADER.TEST
+*           Type : PROGRAM
+*         Params :
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+
+   CALL U_INITIALISE("U_HEADER.TEST")
+
+   PID = "U_HEADER.TEST"
+   CALL U_START(PID)
+   CALL U_HEADER("this is a test")
+   CALL U_STOP(PID)
+   STOP "DONE"
+END

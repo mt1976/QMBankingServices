@@ -1,0 +1,26 @@
+PROGRAM U_TEST
+** INFORMATION ****************************************************************
+*   Routine Name : U_TEST5
+*           Type : PROGRAM
+*         Params :
+*            Loc : UTIL.BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 13.22.18 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT UTIL.BP I_UTIL.H
+$INSERT UTIL.BP I_HTTP.H
+$INSERT UTIL.BP F_UTIL.TRANSLATE.H
+
+   PN=SYSTEM(45)
+   CALL U_INITIALISE(PN)
+   CALL U_START(PN)
+   CALL U_HEADER(PN)
+   QUESTION = "WHY" ; RESPONSE = ""
+   CALL U_INPUT(QUESTION, RESPONSE)
+   CALL U_CRT.INFO(QUESTION, RESPONSE)
+
+   CALL U_STOP(PN)
+   STOP
+END

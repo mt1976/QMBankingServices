@@ -10,6 +10,7 @@ SUBROUTINE W_SERVICE.CONFIGURATION_SAVE(requestItem, requestParameters, msgPaylo
 *******************************************************************************
 
 $INCLUDE UTIL.BP I_UTIL.H
+$INCLUDE UTIL.BP I_HTTP.H
 
    PROCESS.NAME="W_SERVICE.CONFIGURATION_SAVE"
    CALL U_START(PROCESS.NAME)
@@ -20,7 +21,7 @@ $INCLUDE UTIL.BP I_UTIL.H
 
    CALL U_IO.WRITE(FV.UTIL.CONFIG, requestParameters, msgPayload, @FALSE, "")
 
-   responseStatus = RS$SUCCESS
+   responseStatus = RC$OK
    responseContent = ""
    CALL U_STOP(PROCESS.NAME)
    RETURN

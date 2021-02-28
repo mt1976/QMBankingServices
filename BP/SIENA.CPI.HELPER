@@ -1,0 +1,19 @@
+SUBROUTINE SIENA.CPI.HELPER(PROCESS.NAME)
+** INFORMATION ****************************************************************
+*   Routine Name : SIENA.CPI.HELPER
+*           Type : SUBROUTINE
+*         Params : PROCESS.NAME
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+
+
+
+   CALL SIENA.MM.HELPER(PROCESS.NAME, "CPI")
+
+   RETURN
+END

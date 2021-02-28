@@ -1,0 +1,43 @@
+SUBROUTINE U_CRT.RAW(TEXT, ITEM.NAME, CALLING.PROCESS)
+** INFORMATION ****************************************************************
+*   Routine Name : U_CRT.RAW
+*           Type : SUBROUTINE
+*         Params : TEXT, ITEM.NAME, CALLING.PROCESS
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+
+   IF UNASSIGNED(TEXT) THEN
+      TEXT="UNASSIGNED"
+   END
+   IF UNASSIGNED(ITEM.NAME) THEN
+      ITEM.NAME="UNASSIGNED"
+   END
+   IF UNASSIGNED(CALLING.PROCESS) THEN
+      CALLING.PROCESS="UNASSIGNED"
+   END
+
+   IN.TEXT = TEXT
+   TEXT = CONVERT(@AM, T$AM, TEXT)
+   TEXT = CONVERT(@VM, T$VM, TEXT)
+   TEXT = CONVERT(@SM, T$SM, TEXT)
+
+
+
+   OUTPUT.TEXT = ""
+
+   OUTPUT.TEXT := "[":@(T$BOLD_ON):CONVERT(":", "", OCONV(TIME(), "MTS")):@(T$BOLD_OFF)
+   OUTPUT.TEXT := "|":@(T$BOLD_ON):CALLING.PROCESS"L#15":@(T$BOLD_OFF)
+   OUTPUT.TEXT := "|":@(T$BOLD_ON):UPCASE(ITEM.NAME)"L#10":@(T$BOLD_OFF)
+   OUTPUT.TEXT := "][":TEXT:"]"
+
+   DISPLAY @(T$CLEARLINE):OUTPUT.TEXT
+
+   TEXT = IN.TEXT
+
+   RETURN
+END

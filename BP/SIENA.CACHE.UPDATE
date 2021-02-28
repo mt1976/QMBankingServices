@@ -1,0 +1,30 @@
+SUBROUTINE SIENA.CACHE.UPDATE(OBJECT.NAME, OBJECT.FIELD, OBJECT.VALUE)
+** INFORMATION ****************************************************************
+*   Routine Name : SIENA.CACHE.UPDATE
+*           Type : SUBROUTINE
+*         Params : OBJECT.NAME, OBJECT.FIELD, OBJECT.VALUE
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP F_SIENA.CACHE.H
+
+   FV.SIENA.CACHE = "" ; FN.SIENA.CACHE = S_CACHE_FILE.NAME
+   CALL U_IO.OPENFILE(FN.SIENA.CACHE, FV.SIENA.CACHE, @TRUE, "")
+
+   NEW.ID="" ; CALL U_GET.UUID(NEW.ID)
+   NEW.REC=""
+   NEW.REC<S_CACHE_OBJECT>=OBJECT.NAME
+   NEW.REC<S_CACHE_FIELD>=OBJECT.FIELD
+   NEW.REC<S_CACHE_VALUE>=OBJECT.VALUE
+   NEW.REC<S_CACHE_DATE> = DATE()
+   NEW.REC<S_CACHE_TIME> = TIME()
+   NEW.REC<S_CACHE_USER> = @USER
+   CALL U_IO.WRITE(FV.SIENA.CACHE, NEW.ID, NEW.REC, STOP.ON.ERROR, ERROR.TEXT)
+
+   RETURN
+
+END

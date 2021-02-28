@@ -1,0 +1,27 @@
+SUBROUTINE U_IO.OPENFILEPATH(FP.FILEPATH, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT)
+** INFORMATION ****************************************************************
+*   Routine Name : U_IO.OPENFILEPATH
+*           Type : SUBROUTINE
+*         Params : FP.FILEPATH, FV.FILEVAR, STOP.ON.ERROR, ERROR.TEXT
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+
+   OPENPATH FP.FILEPATH TO FV.FILEVAR ELSE
+
+      ERROR.TEXT = "!ERROR - Unable to Open Path [":FP.FILEPATH:"]"
+      CALL U_CRT.RAW(ERROR.TEXT, "ERROR", "U_IO.OPENFILEPATH")
+      LOGMSG ERROR.TEXT
+      IF STOP.ON.ERROR THEN
+         STOP ERROR.TEXT
+      END
+
+   END
+
+   RETURN
+
+END

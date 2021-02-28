@@ -1,0 +1,52 @@
+SUBROUTINE U_IO.GET.LIST(IN.LIST.NAME, IN.LIST.PREFIX, RETURN.LIST, NO.ITEMS)
+** INFORMATION ****************************************************************
+*   Routine Name : U_IO.GET.LIST
+*           Type : SUBROUTINE
+*         Params : IN.LIST.NAME, IN.LIST.PREFIX, RETURN.LIST, NO.ITEMS
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP F_UTIL.LOG.EVENT.H
+
+
+   RETURN.LIST = ""
+   STOP.ON.ERROR = @TRUE
+   VERBOSE = @TRUE
+   NO.ITEMS = -1
+
+   IF IN.LIST.PREFIX <> "" AND IN.LIST.NAME <> "" THEN
+
+      ID.PROPERTIES = IN.LIST.NAME:".list"
+      R.PROPERTIES = ""
+
+      CALL U_IO.READ.LOCAL(FV.UTIL.CONFIG, ID.PROPERTIES, R.PROPERTIES, STOP.ON.ERROR, ERROR.TEXT, "REPLACE")
+
+      NO.PROPERTIES = DCOUNT(R.PROPERTIES, @AM)
+      * CALL U_CRT.INFO("NO.PROPS",NO.PROPERTIES)
+      NO.ITEMS = 0
+      FOR THIS.LIST = 1 TO NO.PROPERTIES
+         TEST.VAL = CONVERT(U$SEP.CFG, @AM, R.PROPERTIES<THIS.LIST>)
+         UP.TEST.LIST = UPCASE(TEST.VAL<1>)
+         UP.SEARCH.LIST = UPCASE(IN.LIST.PREFIX)
+
+         IF UP.TEST.LIST = UP.SEARCH.LIST THEN
+            NO.ITEMS += 1
+            *  RETURN.LIST<-1> = TEST.VAL<2>
+            RETURN.LIST<-1> = CHANGE(TEST.VAL<2>, SQL$EQUALS, "=")
+         END
+      NEXT
+
+      IF RETURN.LIST = "" THEN
+         ERROR.TEXT = "!ERROR - Could not find list ":DQUOTE(IN.LIST.PREFIX):" in ":ID.PROPERTIES
+         * CALL U_CRT.RAW(ERROR.TEXT, "ERROR", PROCESS.NAME)
+      END
+   END ELSE
+      ERROR.TEXT = "!ERROR - Not enough info to read list ":DQUOTE(IN.LIST.PREFIX):" ":DQUOTE(IN.LIST.NAME)
+      CALL U_CRT.RAW(ERROR.TEXT, "ERROR", PROCESS.NAME)
+   END
+   RETURN
+END

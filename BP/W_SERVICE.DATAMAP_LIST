@@ -1,0 +1,62 @@
+SUBROUTINE W_SERVICE.DATAMAP.LIST(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
+** INFORMATION ****************************************************************
+*   Routine Name : W_SERVICE.DATAMAP_LIST
+*           Type : SUBROUTINE
+*         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP I_HTTP.H
+
+** DO NOT CHANGE
+   PROCESS.NAME=SYSTEM(45) ; ERROR.TEXT = "" ; CALL U_START(PROCESS.NAME)
+   * CALL U_CRT.INFO(PROCESS.NAME, PROCESS.NAME)
+   * CALL U_CRT.INFO("requestItem", requestItem) ; * CALL U_CRT.INFO("requestParameters", requestParameters)
+** DO NOT CHANGE
+
+   dataMapPrefix = "" ; CALL U_IO.GET.PROPERTY("util", "dataMapPrefix", dataMapPrefix)
+   dataMapSuffix = ".list"
+   dataMapRemark = "" ; CALL U_IO.GET.PROPERTY("util", "dataMapRemark", dataMapRemark)
+   dataMapTemplate = "" ; CALL U_IO.GET.PROPERTY("util", "dataMapTemplate", dataMapTemplate)
+   dataMapTemplatePrefix = "" ; CALL U_IO.GET.PROPERTY("util", "dataMapTemplatePrefix", dataMapTemplatePrefix)
+   dataMapTemplateSuffix = "" ; CALL U_IO.GET.PROPERTY("util", "dataMapTemplateSuffix", dataMapTemplateSuffix)
+   STMT = "SELECT ":FN.UTIL.CONFIG:" LIKE ":dataMapPrefix:"...":dataMapSuffix
+
+** DO NOT CHANGE
+   PROCESS.LIST = ""
+   CALL U_GET.LIST(STMT, PROCESS.LIST, NO.ITEMS)
+   IF NO.ITEMS > 0 THEN
+      responseStatus = RC$OK
+      FOR I = 1 TO NO.ITEMS
+         cleanID = CHANGE(CHANGE(PROCESS.LIST<I>, dataMapPrefix, ""), dataMapSuffix, "")
+* GET DESCRIPTION IF THERE IS ONE
+         descrID = dataMapPrefix:cleanID
+         *     CALL U_CRT.INFO("descrID", descrID)
+         *       CALL U_CRT.INFO("dataMapRemark", dataMapRemark)
+         CALL U_IO.GET.LIST(descrID, dataMapRemark, descriptionText, "")
+         *       CALL U_CRT.INFO("descriptionText", descriptionText)
+         dataMapTemplateID = ""
+         *CALL U_IO.GET.LIST(descrID, dataMapTemplate, dataMapTemplateID, "")
+         IF cleanID <> "" THEN
+            dataMapTemplateID = dataMapTemplatePrefix:cleanID:dataMapTemplateSuffix
+         END ELSE
+            dataMapTemplateID = ""
+         END
+         *       CALL U_CRT.INFO("dataMapTemplateID", dataMapTemplateID)
+         descriptionText = CHANGE(descriptionText, @AM, W$CRLF)
+         responseContent<-1> = I:W$SEP:cleanID:W$SEP:PROCESS.LIST<I>:W$SEP:descriptionText<1>:W$SEP:dataMapTemplateID
+      NEXT I
+   END ELSE
+      responseStatus = RC$NO.DATA
+      responseContent = "[{{1}}] No Data Found '{{2}}' '{{3}}'"
+      CALL U_MSG(responseContent, RC$NO.DATA:@AM:requestItem:@AM:requestParameters)
+   END
+
+   CALL U_STOP(PROCESS.NAME)
+   ** DO NOT CHANGE
+   RETURN
+END

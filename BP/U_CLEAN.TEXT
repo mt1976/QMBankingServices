@@ -1,0 +1,47 @@
+SUBROUTINE U_CLEAN.TEXT(text)
+** INFORMATION ****************************************************************
+*   Routine Name : U_CLEAN.TEXT
+*           Type : SUBROUTINE
+*         Params : text
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+
+   text = ICONV(text, "HD")
+   text = OCONV(text, "HD")
+   text = ICONV(text, "HD")
+
+   text = CHANGE(text, "[K[H[J", "")
+   text = CHANGE(text, "[m", "")
+   text = CHANGE(text, "[K", "")
+   text = CHANGE(text, "[[1m", "")
+   text = CHANGE(text, "|1m", "")
+   text = CHANGE(text, "|1m", "")
+   text = CHANGE(text, "1m", "")
+   text = CHANGE(text, "[H[J", "")
+   text = CHANGE(text, "", "")
+   text = CHANGE(text, @VM, "")
+   text = CHANGE(text, @SM, "")
+
+   text = CHANGE(text, "[", "")
+   text = CHANGE(text, "]", "")
+
+   text = CHANGE(text, @(T$BOLD_ON), "")
+   text = CHANGE(text, @(T$BOLD_OFF), "")
+   text = CHANGE(text, @(T$BLINK_ON), "")
+   text = CHANGE(text, @(T$BLINK_OFF), "")
+   text = CHANGE(text, @(T$REVERSE_ON), "")
+   text = CHANGE(text, @(T$REVERSE_OFF), "")
+   text = CHANGE(text, @(T$UNDERLINE_ON), "")
+   text = CHANGE(text, @(T$UNDERLINE_OFF), "")
+   text = CHANGE(text, @(T$CLEARSCREEN), "")
+   text = CHANGE(text, @(T$CLEARLINE), "")
+   text = CHANGE(text, @(T$FOREGROUND), "")
+   text = CHANGE(text, @(T$BACKGROUND), "")
+   text = OCONV(text, "HD")
+   RETURN
+END
