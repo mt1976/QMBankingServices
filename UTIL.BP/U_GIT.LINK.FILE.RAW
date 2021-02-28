@@ -5,7 +5,7 @@ PROGRAM U_GIT.LINK.FILE.RAW
 *         Params :
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210228 at 00.15.49 in DEV by root
+*   Info Updated : 20210228 at 00.39.40 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -34,7 +34,7 @@ PROGRAM U_GIT.LINK.FILE.RAW
    CRT "OUTPUT  - ":DQUOTE(OUTPUT)
 
    READ R.VOC FROM FV.VOC, ID.VOC ELSE
-      ERROR.TEXT = "ERROR   - Unable to read ":DQUOTE(ID.RECORD)
+      ERROR.TEXT = "ERROR   - Unable to read ":DQUOTE(ID.VOC)
       STOP ERROR.TEXT
    END
 
