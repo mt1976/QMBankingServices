@@ -5,7 +5,7 @@ SUBROUTINE U_BUILD.SERVICE.CATALOG.HELPER(SPARE01)
 *         Params : SPARE01
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*   Info Updated : 20210228 at 16.21.20 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -15,6 +15,7 @@ $INCLUDE BP F_UTIL.WCT.RESP.H
 $INCLUDE BP F_UTIL.WCT.TEMPLATES.H
 $INCLUDE BP F_UTIL.WORKFILE.H
 $INCLUDE BP F_UTIL.WCT.TOKENS.H
+$INCLUDE BP F_UTIL.CONFIG.H
 
    PROCESS.NAME = "U_BUILD.SERVICE.CATALOG"
    wct_Properties = "wct_connect"
@@ -22,9 +23,14 @@ $INCLUDE BP F_UTIL.WCT.TOKENS.H
    CALL U_IO.OPENFILE(FN.VOC, FV.VOC, STOP.ON.ERROR, ERROR.TEXT)
 
    serviceCatalogID = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "serviceCatalogID", serviceCatalogID)
+   serviceCatalogItemsID = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "serviceCatalogItemsID", serviceCatalogItemsID)
    serviceID = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "serviceID", serviceID)
    menuID = "" ; CALL U_IO.GET.PROPERTY("util", "vocMenu", menuID)
 
+   rCatalogItems = ""
+   GOSUB BUILD.REPORTS
+
+   GOSUB BUILD.DATAMAP
 
    servicesList = ""
    servicesCount = 0
@@ -42,6 +48,7 @@ $INCLUDE BP F_UTIL.WCT.TOKENS.H
    menuOptionName = 3 ; servicesName = 1
    menuCommand = 4 ; servicesCommand = 2 ; servicesItem = 3 ; servicesOptions = 4
    menuHelptext = 5 ; serviceHelptext = 5
+
    FOR I = 1 TO servicesCount
       IF servicesList<I, servicesCommand>[1] # "@" THEN
          R.MENU<menuOptionName, I> = servicesList<I, servicesName>
@@ -66,8 +73,74 @@ $INCLUDE BP F_UTIL.WCT.TOKENS.H
    CALL U_IO.WRITE(FV.VOC, menuID, R.MENU, STOP.ON.ERROR, ERROR.TEXT)
 
    *CALL U_CRT.INFO("NOSERV", servicesCount)
-   CALL U_CRT.INFO("REBUILD", "Menu rebuilt from ":DQUOTE(serviceCatalogID):" as ":DQUOTE(menuID))
+   CALL U_CRT.INFO("REBUILD", "Menu rebuilt from ":DQUOTE(serviceCatalogItemsID):" as ":DQUOTE(menuID))
 
    CALL U_STOP(PROCESS.NAME)
    STOP
+
+
+BUILD.DATAMAP:
+   TITLE = "Transaction Generation"
+   CALL U_MSG(TITLE, "")
+   dataMapExtn = "" ; CALL U_IO.GET.PROPERTY("util", "dataMapExtn", dataMapExtn)
+   dataMapPrefix = "" ; CALL U_IO.GET.PROPERTY("util", "dataMapPrefix", dataMapPrefix)
+
+   STMT = "SELECT ":U$CONFIG.FILE.NAME:" LIKE ":dataMapPrefix:"...":dataMapExtn
+   * CALL U_CRT.INFO("STMT", STMT)
+   txnMenu.Items = "" ; txnMenu.Count = 0
+   CALL U_GET.LIST(STMT, txnMenu.Items, txnMenu.Count)
+   *CALL U_CRT.INFO("txnMenu.Count", txnMenu.Count)
+   *CALL U_CRT.INFO("txnMenu.Items", txnMenu.Items)
+
+   txnItems = ""
+   txnItems<-1> = serviceID:U$SEP.CFG:TITLE:U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:U$SEP.CFG
+   FOR I = 1 TO txnMenu.Count
+      txn.ID = CHANGE(CHANGE(txnMenu.Items<I>, dataMapExtn, ""), dataMapPrefix, "")
+      *  CALL U_CRT.INFO("txn.ID", txn.ID)
+
+      txnItems<-1> = serviceID:U$SEP.CFG:txn.ID:U$SEP.CFG.DATA:"!SIENA.GEN.TXNS":U$SEP.CFG.DATA:UPCASE(txn.ID):U$SEP.CFG.DATA:"NOPAGE":U$SEP.CFG.DATA:U$SEP.CFG
+
+   NEXT I
+
+   txnItems.Count = txnMenu.Count+1
+
+   *CALL U_CRT.INFO("txnItems", txnItems)
+   *CALL U_CRT.INFO("txnItems.Count", txnItems.Count)
+
+   sCatalogItems = ""
+   CALL U_IO.READ(FV.UTIL.CONFIG, serviceCatalogItemsID:".list", sCatalogItems, @FALSE, "")
+   *CALL U_CRT.INFO("serviceCatalogID", serviceCatalogID)
+   newCatalog = txnItems:@AM:rCatalogItems:@AM:"# FOLLOWING THIS LINE IS CONTENT FROM ":DQUOTE(serviceCatalogID):@AM:sCatalogItems
+   * CALL U_CRT.RECORD(newCatalog)
+   CALL U_IO.WRITE(FV.UTIL.CONFIG, serviceCatalogID:".list", newCatalog, @FALSE, "")
+
+
+   RETURN
+
+BUILD.REPORTS:
+   TITLE = "Reports and Queries"
+   CALL U_MSG(TITLE, "")
+   rCatalogItems = "" ; reports.REC = "" ; reports.Count = 0
+   rCatalogItems<-1> = serviceID:U$SEP.CFG:TITLE:U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:U$SEP.CFG
+   CALL U_IO.READ(FV.UTIL.CONFIG, "reports.properties", reports.REC, @FALSE, "")
+*   CALL U_CRT.RECORD(reports.REC)
+   reports.Count = DCOUNT(reports.REC, @AM)
+*   CALL U_CRT.INFO("reports.Count", reports.Count)
+   FOR thisReport = 1 TO reports.Count
+      thisReportItem = reports.REC<thisReport>
+      IF thisReportItem[1, 1] = "#" THEN
+         * IGNORE ITS A COMMENT
+      END ELSE
+         thisReportItem = CHANGE(thisReportItem, U$SEP.CFG, @AM)
+         thisReportItem = CHANGE(thisReportItem, U$SEP.CFG.DATA, @AM)
+         itemTitle = thisReportItem<1> ; IF thisReportItem<5> # "" THEN itemTitle = thisReportItem<5>
+         rCatalogItems<-1> = serviceID:U$SEP.CFG:itemTitle:U$SEP.CFG.DATA:"REPORT.DO":U$SEP.CFG.DATA:thisReportItem<1> :U$SEP.CFG.DATA:"NOPAGE":U$SEP.CFG.DATA:U$SEP.CFG
+
+
+
+      END
+   NEXT thisReport
+   * CALL U_CRT.RECORD(rCatalogItems)
+   RETURN
+
 END

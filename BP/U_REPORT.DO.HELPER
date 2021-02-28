@@ -5,7 +5,7 @@ SUBROUTINE U_REPORT.DO.HELPER(reportID)
 *         Params : reportID
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210228 at 14.27.43 in DEV by root
+*   Info Updated : 20210228 at 16.21.20 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -21,7 +21,7 @@ $INCLUDE BP I_UTIL.H
    activePath = ""
    CALL U_IO.GET.PROPERTY("util", "path", activePath)
    reportsFileName = ""
-   CALL U_IO.GET.PROPERTY("reports", "FILENAME", reportsFileName)
+   CALL U_IO.GET.PROPERTY("util", "reportsFileName", reportsFileName)
 
    uniqueID = ""
    CALL U_GET.UUID(uniqueID)
