@@ -9,19 +9,19 @@
     
 ## HEADER INFORMATION  
 ```javascript
-* UTIL.BP I_RATECSV.H
-* Generated MANUALLY at 16:42:49 on 27 May 2019
-
-
-
-
-
-
-
+** INFORMATION ****************************************************************
+*    Insert Name : I_RATECSV.H - UTIL.BP
+*           Type : INSERT
+*       Filename : n/a
+*         Prefix : n/a
+** AUDIT **********************************************************************
+*   Info Created : 20190527 at 16.42.49 in DEV by MANUALLY
+*                : MANUALLY CREATED
+*******************************************************************************
 ```
 ## BODY  
 ```javascript
-
+*******************************************************************************
 equate RATE.TYPE  to 3
 equate RATE.TENOR to 4
 equate RATE.CCY1  to 7

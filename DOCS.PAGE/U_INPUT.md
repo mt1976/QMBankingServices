@@ -20,7 +20,7 @@
 *         Params : QUESTION, RESPONSE
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 22.42.00 in DEV by root
+*   Info Updated : 20210228 at 00.15.49 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -28,6 +28,6 @@
 ## BODY  
 ### EXTERNAL CALLS  
 ### NOTES  
-####    DISPLAY @(U_CLEAR_LINE):@(U_BOLD_ON):U_PREF:@(U_BOLD_OFF):QUESTION:" ":  
+####    DISPLAY @(T$CLEARLINE):@(T$BOLD_ON):U_PREF:@(T$BOLD_OFF):QUESTION:" ":  
   
   

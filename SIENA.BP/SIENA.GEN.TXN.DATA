@@ -90,7 +90,7 @@ PROCESS.ROW:
 
       IF substituteData[1, 1]="@" THEN
          substituteData=searchTag:".":TRIM(substituteData[2, 99])
-         substituteData=SUB$PREFIX:substituteData:SUB$SUFFIX
+         substituteData=WC$PREFIX:substituteData:WC$SUFFIX
       END
 
       CALL U_WILDCARD.SUBSTITUTE(searchTag, substituteData, R.NEW.TXN)

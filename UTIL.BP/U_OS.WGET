@@ -5,7 +5,7 @@ SUBROUTINE U_OS.WGET(URI, VERBOSE, RESULT, URI.HEADER)
 *         Params : URI, VERBOSE, RESULT, URI.HEADER
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 22.42.00 in DEV by root
+*   Info Updated : 20210228 at 00.15.49 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -51,7 +51,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
    END ELSE
       STMT = WGET.LOCATION:SPACE(1):"-O ":DQUOTE(ID.TEMP.LOC):SPACE(1):WGET.DEFAULTS:SPACE(1):URI.HEADER:SPACE(1):URI
    END
-   CALL U_CRT.INFO("COMMAND", @(U_BOLD_ON):STMT:@(U_BOLD_OFF))
+   CALL U_CRT.INFO("COMMAND", @(T$BOLD_ON):STMT:@(T$BOLD_OFF))
 
    OS.EXECUTE STMT CAPTURING RESULT
 
@@ -65,7 +65,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
    TIME.ELAPSED = TIME.STOP - TIME.START
 
    CALL U_CRT.INFO("STOP", OCONV(TIME.START, "MTS."))
-   CALL U_CRT.INFO("ELAPSED", @(U_BOLD_ON):OCONV(TIME.ELAPSED, "MTS."):@(U_BOLD_OFF))
+   CALL U_CRT.INFO("ELAPSED", @(T$BOLD_ON):OCONV(TIME.ELAPSED, "MTS."):@(T$BOLD_OFF))
 
 
    R.EVENT = ""

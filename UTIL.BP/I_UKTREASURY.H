@@ -1,12 +1,12 @@
-* BP I_UKTREASURY.H
-
-
-
-
-
-
-
-
+** INFORMATION ****************************************************************
+*    Insert Name : I_UKTREASURY.H - UTIL.BP
+*           Type : INSERT
+*       Filename : n/a
+*         Prefix : n/a
+** AUDIT **********************************************************************
+*   Info Created : YYYYMMDD at HH.MM.SS in DEV by MANUALLY
+*                : MANUALLY CREATED
+*******************************************************************************
 equate UKTR_LONG.NAME to "1"
 equate UKTR_ISIN to "2"
 equate UKTR_TIDM to "3"

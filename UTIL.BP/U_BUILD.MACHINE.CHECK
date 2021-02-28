@@ -5,7 +5,7 @@ SUBROUTINE U_BUILD.MACHINE.CHECK(isBuildMachine)
 *         Params : isBuildMachine
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 22.42.00 in DEV by root
+*   Info Updated : 20210228 at 00.15.49 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -16,7 +16,7 @@ $INCLUDE UTIL.BP F_UTIL.LOG.EVENT.H
    CALL U_IO.GET.PROPERTY("util", "buildMachine", buildMachine)
    IF SYSTEM(1015) = buildMachine THEN
       isBuildMachine = @TRUE
-      CALL U_CRT.INFO("WARNING!", @(U_REVERSE_ON):"RUNNING ON BUILD MACHINE":@(U_REVERSE_OFF))
+      CALL U_CRT.INFO("WARNING!", @(T$REVERSE_ON):"RUNNING ON BUILD MACHINE":@(T$REVERSE_OFF))
    END
 
    RETURN

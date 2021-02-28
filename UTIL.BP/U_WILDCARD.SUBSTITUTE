@@ -5,13 +5,13 @@ SUBROUTINE U_WILDCARD.SUBSTITUTE(SUBS.REPLACE, SUBS.VALUE, XML.DOC)
 *         Params : SUBS.REPLACE, SUBS.VALUE, XML.DOC
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 22.42.00 in DEV by root
+*   Info Updated : 20210228 at 00.15.49 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INSERT UTIL.BP I_UTIL.H
 
-   SUBS.REPLACE.ITEM = SUB$PREFIX:SUBS.REPLACE:SUB$SUFFIX
+   SUBS.REPLACE.ITEM = WC$PREFIX:SUBS.REPLACE:WC$SUFFIX
    XML.DOC = CHANGE(XML.DOC, SUBS.REPLACE.ITEM, SUBS.VALUE)
 
    RETURN

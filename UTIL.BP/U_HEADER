@@ -5,7 +5,7 @@ SUBROUTINE U_HEADER(TEXT)
 *         Params : TEXT
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 22.42.00 in DEV by root
+*   Info Updated : 20210228 at 00.15.49 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -34,7 +34,7 @@ $INCLUDE UTIL.BP I_UTIL.H
 
    *CALL U_CRT(BAR, "", CALLING.SUBR)
    FOR POS.ROW = 1 TO NO.ROWS
-      CRT @(-4):@(U_BOLD_ON):OUTPUT<POS.ROW>:@(U_BOLD_OFF)
+      CRT @(-4):@(T$BOLD_ON):OUTPUT<POS.ROW>:@(T$BOLD_OFF)
    NEXT POS.ROW
    *CALL U_CRT(BAR, "", CALLING.SUBR)
 

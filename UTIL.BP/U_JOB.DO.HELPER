@@ -5,7 +5,7 @@ SUBROUTINE U_JOB.DO.HELPER(DO.ITEM)
 *         Params : DO.ITEM
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 22.42.00 in DEV by root
+*   Info Updated : 20210228 at 00.15.49 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -17,7 +17,7 @@ $INCLUDE UTIL.BP I_UTIL.H
    *CALL U_HEADER("U_JOB.DO.HELPER")
 
 
-   CALL U_CRT.INFO("PROCESS", @(U_BOLD_ON):DO.ITEM:@(U_BOLD_OFF))
+   CALL U_CRT.INFO("PROCESS", @(T$BOLD_ON):DO.ITEM:@(T$BOLD_OFF))
 
    DO.SCRIPT = ""
    DO.PROCESSOR = ""

@@ -5,7 +5,7 @@ SUBROUTINE U_CRT.RAW(TEXT, ITEM.NAME, CALLING.PROCESS)
 *         Params : TEXT, ITEM.NAME, CALLING.PROCESS
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 22.42.00 in DEV by root
+*   Info Updated : 20210228 at 00.15.49 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -30,12 +30,12 @@ $INCLUDE UTIL.BP I_UTIL.H
 
    OUTPUT.TEXT = ""
 
-   OUTPUT.TEXT := "[":@(U_BOLD_ON):CONVERT(":", "", OCONV(TIME(), "MTS")):@(U_BOLD_OFF)
-   OUTPUT.TEXT := "|":@(U_BOLD_ON):CALLING.PROCESS"L#15":@(U_BOLD_OFF)
-   OUTPUT.TEXT := "|":@(U_BOLD_ON):UPCASE(ITEM.NAME)"L#10":@(U_BOLD_OFF)
+   OUTPUT.TEXT := "[":@(T$BOLD_ON):CONVERT(":", "", OCONV(TIME(), "MTS")):@(T$BOLD_OFF)
+   OUTPUT.TEXT := "|":@(T$BOLD_ON):CALLING.PROCESS"L#15":@(T$BOLD_OFF)
+   OUTPUT.TEXT := "|":@(T$BOLD_ON):UPCASE(ITEM.NAME)"L#10":@(T$BOLD_OFF)
    OUTPUT.TEXT := "][":TEXT:"]"
 
-   DISPLAY @(U_CLEAR_LINE):OUTPUT.TEXT
+   DISPLAY @(T$CLEARLINE):OUTPUT.TEXT
 
    TEXT = IN.TEXT
 

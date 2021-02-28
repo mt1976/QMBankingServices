@@ -5,7 +5,7 @@ SUBROUTINE U_MSSQL.EXECUTE(SQL.STATEMENT, SQL.ADDRESS, SQL.DATABASE, VERBOSE, ID
 *         Params : SQL.STATEMENT, SQL.ADDRESS, SQL.DATABASE, VERBOSE, ID_UTIL.SQL.RESPONSE
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 22.42.00 in DEV by root
+*   Info Updated : 20210228 at 00.15.49 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -73,7 +73,7 @@ $INCLUDE UTIL.BP F_UTIL.SQL.RESPONSE.H
    STMT.EX = STMT.EX:" -o ":FP_UTIL.SQL.RESPONSE:"/":ID_UTIL.SQL.RESPONSE
 
 * The last part tells MSSQL to output in CSV and use commas.
-   CALL U_CRT.INFO("STMT.EX", @(U_BOLD_ON):STMT.EX:@(U_BOLD_OFF))
+   CALL U_CRT.INFO("STMT.EX", @(T$BOLD_ON):STMT.EX:@(T$BOLD_OFF))
    R.UTIL.SQL.CMD = ""
    R.UTIL.SQL.CMD<U_SQLCMD.COMMAND> = SQL.STATEMENT
 
@@ -89,7 +89,7 @@ $INCLUDE UTIL.BP F_UTIL.SQL.RESPONSE.H
    TIME.ELAPSED = TIME.STOP - TIME.START
 
    CALL U_CRT.INFO("STOP", "STOP    @ ":OCONV(TIME.START, "MTS."))
-   CALL U_CRT.INFO("ELAPSED", "ELAPSED @ ":@(U_BOLD_ON):OCONV(TIME.ELAPSED, "MTS."):@(U_BOLD_OFF))
+   CALL U_CRT.INFO("ELAPSED", "ELAPSED @ ":@(T$BOLD_ON):OCONV(TIME.ELAPSED, "MTS."):@(T$BOLD_OFF))
    CALL U_CRT.INFO("MSSQL.EX", "STOP")
 
    R.EVENT = ""

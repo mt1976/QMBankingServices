@@ -31,35 +31,35 @@ COMMON /UTIL/
               U_PROCESS.START.TIME, U_PROCESS.THREAD.ID,U_LOG.SEQ.NO
 
 * Terminal
-equate U_BOLD_ON              to    -58
-equate U_BOLD_OFF             to    -59
-equate U_BLINK_ON             to    -5
-equate U_BLINK_OFF            to    -6
-equate U_REVERSE_ON           to    -13
-equate U_REVERSE_OFF          to    -14
-equate U_UNDERLINE_ON         to    -15
-equate U_UNDERLINE_OFF        to    -16
-equate U_CLEAR_SCREEN         to    -1
-equate U_CLEAR_LINE           to    -4
-equate U_SET_FG_COLOUR        to    -37  ;* Set foreground colour
-equate U_SET_BG_COLOUR        to    -38  ;* Set background colour
+equate T$BOLD_ON              to    -58
+equate T$BOLD_OFF             to    -59
+equate T$BLINK_ON             to    -5
+equate T$BLINK_OFF            to    -6
+equate T$REVERSE_ON           to    -13
+equate T$REVERSE_OFF          to    -14
+equate T$UNDERLINE_ON         to    -15
+equate T$UNDERLINE_OFF        to    -16
+equate T$CLEARSCREEN          to    -1
+equate T$CLEARLINE            to    -4
+equate T$FOREGROUND           to    -37  ;* Set foreground colour
+equate T$BACKGROUND           to    -38  ;* Set background colour
 * Colours
-equate U_COL_BLACK            to     0
-equate U_COL_BLUE             to     1
-equate U_COL_GREEN            to     2
-equate U_COL_CYAN             to     3
-equate U_COL_RED              to     4
-equate U_COL_MAGENTA          to     5
-equate U_COL_BROWN            to     6
-equate U_COL_WHITE            to     7
-equate U_COL_GREY             to     8
-equate U_COL_BRIGHT_BLUE      to     9
-equate U_COL_BRIGHT_GREEN     to    10
-equate U_COL_BRIGHT_CYAN      to    11
-equate U_COL_BRIGHT_RED       to    12
-equate U_COL_BRIGHT_MAGENTA   to    13
-equate U_COL_YELLOW           to    14
-equate U_COL_BRIGHT_WHITE     to    15
+equate C$BLACK                to     0
+equate C$BLUE                 to     1
+equate C$GREEN                to     2
+equate C$CYAN                 to     3
+equate C$RED                  to     4
+equate C$MAGENTA              to     5
+equate C$BROWN                to     6
+equate C$WHITE                to     7
+equate C$GREY                 to     8
+equate C$BRIGHT_BLUE          to     9
+equate C$BRIGHT_GREEN         to    10
+equate C$BRIGHT_CYAN          to    11
+equate C$BRIGHT_RED           to    12
+equate C$BRIGHT_MAGENTA       to    13
+equate C$YELLOW               to    14
+equate C$BRIGHT_WHITE         to    15
 * General Static's
 equate U_SEP                  to    "~"
 equate U_SEP_ALT              to    "!"
@@ -83,18 +83,18 @@ equate MD$H3                  to    "### "
 equate MD$H4                  to    "#### "
 equate MD$TC                  to    "|"
 equate MD$TR                  to    " --- "
-equate DOC_COMMENT            to    "** "
-equate DOC_USAGE              to    "* USAGE "
-equate DOC_INCLUDE            to    "$INCLUDE "
-equate DOC_INSERT             to    "$INSERT "
+equate MD$COMMENT             to    "** "
+equate MD$USAGE               to    "* USAGE "
+equate MD$INCLUDE             to    "$INCLUDE "
+equate MD$INSERT              to    "$INSERT "
 equate MD$LIST                to    "* "
 equate MD$CODE.START          to    "```javascript"
 equate MD$CODE.END            to    "```"
 equate MD$SUFFIX              to    ".md"
 equate MD$CALL                to    "CALL"
 * Wildcard Processing
-equate SUB$PREFIX             to    "{{"
-equate SUB$SUFFIX             to    "}}"
+equate WC$PREFIX              to    "{{"
+equate WC$SUFFIX              to    "}}"
 * WCT Static
 equate U$ID.SEP               to    "-"
 equate W$SEP                  to    "|"

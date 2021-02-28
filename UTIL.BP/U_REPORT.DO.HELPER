@@ -5,7 +5,7 @@ SUBROUTINE U_REPORT.DO.HELPER(reportID)
 *         Params : reportID
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 22.42.00 in DEV by root
+*   Info Updated : 20210228 at 00.15.49 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -15,7 +15,7 @@ $INCLUDE UTIL.BP I_UTIL.H
    processName = SYSTEM(45)
    CALL U_START(processName)
 
-   * CALL U_CRT.INFO("REPORTNAME", @(U_BOLD_ON):reportID:@(U_BOLD_OFF))
+   * CALL U_CRT.INFO("REPORTNAME", @(T$BOLD_ON):reportID:@(T$BOLD_OFF))
 
    CALL U_IO.GET.PROPERTY("reports", reportID, reportCommand)
    activePath = ""
@@ -44,7 +44,7 @@ $INCLUDE UTIL.BP I_UTIL.H
    END ELSE
       *  CALL U_HEADER(reportID)
    END
-   *CALL U_CRT.INFO("STMT", @(U_BOLD_ON):processStmt:@(U_BOLD_OFF))
+   *CALL U_CRT.INFO("STMT", @(T$BOLD_ON):processStmt:@(T$BOLD_OFF))
    CMD = ""
    CMD<1> = "STORE"
    CMD<2> = activePath:"/":reportsFileName:"/"
@@ -52,8 +52,8 @@ $INCLUDE UTIL.BP I_UTIL.H
    * CALL U_CRT.RECORD(CMD)
    CALL U_OS.EXECUTE(processStmt, CMD)
 
-   * CALL U_CRT.INFO("STMT", @(U_BOLD_ON):processStmt:@(U_BOLD_OFF))
-   *CALL U_CRT.INFO("REPORT", "COMPLETE - ":@(U_BOLD_ON):reportID:@(U_BOLD_OFF))
+   * CALL U_CRT.INFO("STMT", @(T$BOLD_ON):processStmt:@(T$BOLD_OFF))
+   *CALL U_CRT.INFO("REPORT", "COMPLETE - ":@(T$BOLD_ON):reportID:@(T$BOLD_OFF))
    IF processOutput = "DISPLAY" THEN
       CALL U_CRT.REPORT(outputFileName)
    END

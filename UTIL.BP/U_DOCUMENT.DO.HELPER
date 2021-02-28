@@ -5,7 +5,7 @@ SUBROUTINE U_DOCUMENT.DO.HELPER(FN.ITEM, ID.ITEM, DO.TYPE, FV.ITEM, DOC.DETAIL)
 *         Params : FN.ITEM, ID.ITEM, DO.TYPE, FV.ITEM, DOC.DETAIL
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 23.57.17 in DEV by root
+*   Info Updated : 20210228 at 00.15.49 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -167,10 +167,10 @@ PROCESS.INSERTS:
 ** Process inserts, if line is prefixed $INSERT or $INCLUDE build output.
    PAGE.REC<-1> = MD$H2:TXT.REQUIRES:MD$BR
    FOR J = 1 TO NO.LINES
-      DOC_TEST=DOC_INCLUDE
+      DOC_TEST=MD$INCLUDE
       GOSUB PROCESS.INSERTS.ADD.MARKDOWN
 
-      DOC_TEST=DOC_INSERT
+      DOC_TEST=MD$INSERT
       GOSUB PROCESS.INSERTS.ADD.MARKDOWN
    NEXT J
    RETURN
@@ -206,14 +206,14 @@ PROCESS.BODY:
    PAGE.REC<-1> = MD$H3:TXT.CALLS:MD$BR
    GOSUB PROCESS.BODY.CALLS
    PAGE.REC<-1> = MD$H3:TXT.NOTES:MD$BR
-   LEN.DOC_COMMENT = LEN(DOC_COMMENT)
+   LEN.MD$COMMENT = LEN(MD$COMMENT)
    FOR L = HEADER.END TO NO.LINES
       IF RIGHT(R.REC<L>, 1) = ":" THEN
          PAGE.REC<-1> = MD$H4:R.REC<L>:MD$BR
          PAGE.REC<-1> = MD$BR
       END
-      IF R.REC<L>[1, LEN.DOC_COMMENT]=DOC_COMMENT THEN
-         PAGE.REC<-1> = R.REC<L>[LEN.DOC_COMMENT, 99]:MD$BR:MD$BR
+      IF R.REC<L>[1, LEN.MD$COMMENT]=MD$COMMENT THEN
+         PAGE.REC<-1> = R.REC<L>[LEN.MD$COMMENT, 99]:MD$BR:MD$BR
          PAGE.REC<-1> = MD$BR
       END
    NEXT L
@@ -242,11 +242,11 @@ PROCESS.BODY.CALLS:
 PROCESS.USAGE:
    SNIPIT<-1> = MD$H2:TXT.USAGE:MD$BR
    PAGE.REC<-1> = MD$H2:TXT.USAGE:MD$BR
-   LEN.DOC_USAGE = LEN(DOC_USAGE)
+   LEN.MD$USAGE = LEN(MD$USAGE)
    FOR M = 1 TO NO.LINES
-      IF R.REC<M>[1, LEN.DOC_USAGE]=DOC_USAGE THEN
-         PAGE.REC<-1> = MD$LIST:R.REC<M>[LEN.DOC_USAGE, 99]:MD$BR
-         SNIPIT<-1> = MD$LIST:R.REC<M>[LEN.DOC_USAGE, 99]
+      IF R.REC<M>[1, LEN.MD$USAGE]=MD$USAGE THEN
+         PAGE.REC<-1> = MD$LIST:R.REC<M>[LEN.MD$USAGE, 99]:MD$BR
+         SNIPIT<-1> = MD$LIST:R.REC<M>[LEN.MD$USAGE, 99]
       END
    NEXT M
    PAGE.REC<-1> = MD$BR

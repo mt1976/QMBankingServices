@@ -5,7 +5,7 @@ SUBROUTINE U_CLEAN.TEXT(text)
 *         Params : text
 *            Loc : UTIL.BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210227 at 22.42.00 in DEV by root
+*   Info Updated : 20210228 at 00.15.49 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -30,18 +30,18 @@ $INCLUDE UTIL.BP I_UTIL.H
    text = CHANGE(text, "[", "")
    text = CHANGE(text, "]", "")
 
-   text = CHANGE(text, @(U_BOLD_ON), "")
-   text = CHANGE(text, @(U_BOLD_OFF), "")
-   text = CHANGE(text, @(U_BLINK_ON), "")
-   text = CHANGE(text, @(U_BLINK_OFF), "")
-   text = CHANGE(text, @(U_REVERSE_ON), "")
-   text = CHANGE(text, @(U_REVERSE_OFF), "")
-   text = CHANGE(text, @(U_UNDERLINE_ON), "")
-   text = CHANGE(text, @(U_UNDERLINE_OFF), "")
-   text = CHANGE(text, @(U_CLEAR_SCREEN), "")
-   text = CHANGE(text, @(U_CLEAR_LINE), "")
-   text = CHANGE(text, @(U_SET_FG_COLOUR), "")
-   text = CHANGE(text, @(U_SET_BG_COLOUR), "")
+   text = CHANGE(text, @(T$BOLD_ON), "")
+   text = CHANGE(text, @(T$BOLD_OFF), "")
+   text = CHANGE(text, @(T$BLINK_ON), "")
+   text = CHANGE(text, @(T$BLINK_OFF), "")
+   text = CHANGE(text, @(T$REVERSE_ON), "")
+   text = CHANGE(text, @(T$REVERSE_OFF), "")
+   text = CHANGE(text, @(T$UNDERLINE_ON), "")
+   text = CHANGE(text, @(T$UNDERLINE_OFF), "")
+   text = CHANGE(text, @(T$CLEARSCREEN), "")
+   text = CHANGE(text, @(T$CLEARLINE), "")
+   text = CHANGE(text, @(T$FOREGROUND), "")
+   text = CHANGE(text, @(T$BACKGROUND), "")
    text = OCONV(text, "HD")
    RETURN
 END
