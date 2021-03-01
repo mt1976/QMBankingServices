@@ -5,7 +5,7 @@ PROGRAM U_TEST
 *         Params :
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210228 at 16.21.20 in DEV by root
+*   Info Updated : 20210301 at 15.40.47 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -17,9 +17,21 @@ $INSERT BP F_UTIL.TRANSLATE.H
    CALL U_INITIALISE(PN)
    CALL U_START(PN)
    CALL U_HEADER(PN)
-   QUESTION = "WHY" ; RESPONSE = ""
-   CALL U_INPUT(QUESTION, RESPONSE)
-   CALL U_CRT.INFO(QUESTION, RESPONSE)
+
+   PWD = "123456" ; KEY = ""
+   BUNDLE = ""
+   BUNDLE<1> = "username":W$SEP_DATA:"fred"
+   BUNDLE<2> = "password":W$SEP_DATA:"pumpkin"
+   BUNDLE = CHANGE(BUNDLE, @AM, W$SEP_LIST)
+   CALL U_CRT.INFO("BUNDLE", BUNDLE)
+   RESPONSE = ""
+   CALL W_BUNDLE.GET(BUNDLE, "username", RESPONSE)
+   CALL U_CRT.INFO("username", RESPONSE)
+   RESPONSE = ""
+   CALL W_BUNDLE.GET(BUNDLE, "password", RESPONSE)
+   CALL U_CRT.INFO("password", RESPONSE)
+
+   CALL U_CRT.INFO("EPOCH", EPOCH())
 
    CALL U_STOP(PN)
    STOP

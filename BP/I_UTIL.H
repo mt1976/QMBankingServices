@@ -86,6 +86,8 @@ equate WC$SUFFIX              to    "}}"
 * WCT Static
 equate W$SEP                  to    "|"
 equate W$CRLF                 to    " & "
+equate W$SEP_LIST             to    ";"
+equate W$SEP_DATA             to    "¡"
 * PICK Standard's
 equate T$AM                   to    "^"
 equate T$VM                   to    "]"

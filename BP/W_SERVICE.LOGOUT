@@ -1,0 +1,37 @@
+SUBROUTINE W_SERVICE.LOGIN(sessionToken, responseCode, responseMessage)
+** INFORMATION ****************************************************************
+*   Routine Name : W_SERVICE.LOGOUT
+*           Type : SUBROUTINE
+*         Params : sessionToken, responseCode, responseMessage
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210301 at 16.56.46 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_HTTP.H
+$INCLUDE BP F_UTIL.WCT.TOKENS.H
+
+   PROCESS.NAME = SYSTEM(45)
+
+   CALL U_CRT.INFO("sessionToken", sessionToken)
+
+   STOP.ON.ERROR = @TRUE ; FV.TOKEN="" ; R.TOKEN=""
+   CALL U_IO.OPENFILE(W$TOKEN.FILE.NAME, FV.TOKEN, STOP.ON.ERROR, "")
+
+   STMT = "SELECT ":W$TOKEN.FILE.NAME:" WITH ":W$TOKEN.SESSION.TOKEN:" = ":DQUOTE(sessionToken)
+   CALL U_CRT.INFO("STMT", STMT)
+   DELETE.LIST = "" ; NO.ITEMS = ""
+   CALL U_GET.LIST(STMT, DELETE.LIST, NO.ITEMS)
+   CALL U_CRT.INFO("NO.ITEMS", NO.ITEMS)
+   FOR I = 1 TO NO.ITEMS
+      CALL U_CRT.INFO("DESTROYING", DELETE.LIST<I>)
+      CALL U_IO.DELETE(FV.TOKEN, DELETE.LIST<I>, @FALSE, "")
+   NEXT I
+
+   responseCode=RC$OK
+   responseMessage=sessionToken
+   CALL U_CRT.INFO("LOGOUT", "SUCCESS")
+
+   RETURN
+END

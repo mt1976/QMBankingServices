@@ -21,7 +21,7 @@
 *         Params :
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210228 at 16.21.20 in DEV by root
+*   Info Updated : 20210301 at 15.40.47 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -31,8 +31,8 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_INITIALISE" width="25" />[U_INITIALISE](../DOCS.PAGE/U_INITIALISE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_START" width="25" />[U_START](../DOCS.PAGE/U_START.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_HEADER" width="25" />[U_HEADER](../DOCS.PAGE/U_HEADER.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_INPUT" width="25" />[U_INPUT](../DOCS.PAGE/U_INPUT.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="W_BUNDLE.GET" width="25" />[W_BUNDLE.GET](../DOCS.PAGE/W_BUNDLE.GET.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
 ### NOTES  
   

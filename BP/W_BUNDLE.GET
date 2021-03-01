@@ -1,0 +1,36 @@
+SUBROUTINE W_BUNDLE.GET(inBundle, inName, outValue)
+** INFORMATION ****************************************************************
+*   Routine Name : W_BUNDLE.GET
+*           Type : SUBROUTINE
+*         Params : inBundle, inName, outValue
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210301 at 15.20.48 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+
+
+
+
+   PROCESS.NAME = SYSTEM(45)
+   CALL U_START(PROCESS.NAME)
+   outValue = ""
+   * CALL U_CRT.INFO("find", inName)
+   wrkBundle = CHANGE(inBundle, W$SEP_LIST, @AM)
+   wrkBundle = CHANGE(wrkBundle, W$SEP_DATA, @VM)
+
+   noValues = DCOUNT(wrkBundle, @AM)
+   outValue = ""
+   FOR I = 1 TO noValues
+   UNTIL outValue # ""
+      IF DOWNCASE(wrkBundle<I, 1>) = DOWNCASE(inName) THEN
+         outValue = wrkBundle<I, 2>
+      END
+   NEXT I
+
+   *CALL U_CRT.RECORD(wrkBundle)
+   *CALL U_STOP(PROCESS.NAME)
+   RETURN
+END

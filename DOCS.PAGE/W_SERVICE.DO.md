@@ -26,7 +26,7 @@
 *         Params :
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210228 at 16.21.20 in DEV by root
+*   Info Updated : 20210301 at 16.05.44 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -46,6 +46,7 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.DELETE" width="25" />[U_IO.DELETE](../DOCS.PAGE/U_IO.DELETE.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_LOG.EVENT" width="25" />[U_LOG.EVENT](../DOCS.PAGE/U_LOG.EVENT.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="W_SERVICE.LOGIN" width="25" />[W_SERVICE.LOGIN](../DOCS.PAGE/W_SERVICE.LOGIN.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="W_SERVICE.LOGOUT" width="25" />[W_SERVICE.LOGOUT](../DOCS.PAGE/W_SERVICE.LOGOUT.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="W_SERVICE.TEST" width="25" />[W_SERVICE.TEST](../DOCS.PAGE/W_SERVICE.TEST.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="W_SERVICE.SERVICES" width="25" />[W_SERVICE.SERVICES](../DOCS.PAGE/W_SERVICE.SERVICES.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="!FINDPROG" width="25" />[!FINDPROG](../DOCS.PAGE/!FINDPROG.md)  

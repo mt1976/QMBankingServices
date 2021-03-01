@@ -5,7 +5,7 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210228 at 16.21.20 in DEV by root
+*   Info Updated : 20210301 at 16.05.44 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -224,8 +224,16 @@ PROCESS.ACTION:
       CASE UPCASE(requestAction)[1, 1] = "!"
          GOSUB PROCESS.DIRECT.CLI.COMMAND
       CASE UPCASE(requestAction) = "LOGIN"
+         CALL U_CRT.INFO("LOGIN", "LOGIN")
+
          responseCode = "" ; responseMessage = ""
-         CALL W_SERVICE.LOGIN(applicationToken, uniqueID, "", sessionToken, responseCode, responseMessage)
+         CALL W_SERVICE.LOGIN(msgPayload, responseCode, responseMessage)
+         responseStatus = responseCode
+         responseContent = responseMessage
+      CASE UPCASE(requestAction) = "LOGOUT"
+         CALL U_CRT.INFO("LOGOUT", sessionToken)
+         responseCode = "" ; responseMessage = ""
+         CALL W_SERVICE.LOGOUT(sessionToken, responseCode, responseMessage)
          responseStatus = responseCode
          responseContent = responseMessage
       CASE UPCASE(requestAction) = "TEST"
