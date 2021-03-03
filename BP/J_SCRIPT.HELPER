@@ -1,0 +1,56 @@
+SUBROUTINE J_SCRIPT.HELPER(SCRIPT.NAME)
+** INFORMATION ****************************************************************
+*   Routine Name : J_SCRIPT.HELPER
+*           Type : SUBROUTINE
+*         Params : SCRIPT.NAME
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210302 at 21.53.22 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP F_UTIL.TRANSLATE.H
+$INCLUDE BP I_RATECSV.H
+$INSERT BP I_UTIL.H
+
+
+* INITIALISE
+   PROCESS.NAME = SYSTEM(45)
+   CALL U_START(PROCESS.NAME)
+* Setup some temp locations for input data
+
+
+   ERROR.TEXT = ""; STOP.ON.ERROR = @TRUE ; VERBOSE = @TRUE
+* OPEN FILES
+   FN.UTIL.SCRIPTS = "UTIL.SCRIPTS" ; FV.UTIL.SCRIPTS = ""
+   CALL U_IO.OPENFILE(FN.UTIL.SCRIPTS, FV.UTIL.SCRIPTS, STOP.ON.ERROR, ERROR.TEXT)
+
+   HOME.PATH=""
+   CALL U_IO.GET.PROPERTY("util", "path", HOME.PATH)
+
+   CALL U_HEADER("SCRIPT ":DQUOTE(SCRIPT.NAME))
+
+   CALL U_CRT.INFO("HOME", HOME.PATH)
+   STMT = "SSELECT ":FN.UTIL.SCRIPTS:" LIKE ...":SCRIPT.NAME:"..."
+   CALL U_OS.EXECUTE(STMT, VERBOSE)
+   PROCESS.LIST = ""
+   LOOP
+      READNEXT ID.SIENA.IN ELSE EXIT
+      PROCESS.LIST<-1> = ID.SIENA.IN
+   REPEAT
+
+   NO.SCRIPTS = DCOUNT(PROCESS.LIST, @AM)
+   CALL U_CRT.INFO("NO.SCRIPTS", NO.SCRIPTS)
+
+   FOR I = 1 TO NO.SCRIPTS
+      CALL U_CRT.INFO("SCRIPT", PROCESS.LIST<I>)
+      EX.STMT = "bash ":HOME.PATH:"/":FN.UTIL.SCRIPTS:"/":PROCESS.LIST<I>
+      CALL U_CRT.INFO("INSTRUCTION", EX.STMT)
+      CALL U_OS.COMMAND(EX.STMT, VERBOSE, "", @FALSE)
+   NEXT I
+
+   CALL U_CRT.INFO("PROCESSING", "COMPLETE")
+   CALL U_STOP(PROCESS.NAME)
+   RETURN
+
+END

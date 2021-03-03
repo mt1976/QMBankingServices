@@ -5,16 +5,17 @@ PROGRAM JOB.DO
 *         Params :
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.20.48 in DEV by root
+*   Info Updated : 20210302 at 21.55.12 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE BP I_UTIL.H
-   CALL U_INITIALISE("JOB.DO")
-   PROCESS.NAME = "JOB.DO"
+   PROCESS.NAME = SYSTEM(45)
+   CALL U_INITIALISE(PROCESS.NAME)
+
    CALL U_START(PROCESS.NAME)
 
-   CALL U_HEADER("JOB.DO")
+   CALL U_HEADER(PROCESS.NAME)
 
    CMD.STRING = CONVERT(SPACE(1), @AM, @SENTENCE)
    IF CMD.STRING<2> = "" THEN

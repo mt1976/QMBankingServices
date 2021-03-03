@@ -5,7 +5,7 @@ SUBROUTINE W_SERVICE.DATAMAP_VIEW(requestItem, requestParameters, msgPayload, re
 *         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.20.48 in DEV by root
+*   Info Updated : 20210302 at 21.53.22 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -14,8 +14,8 @@ $INCLUDE BP I_HTTP.H
 $INCLUDE BP F_SIENA.TXN.TEMPLATES.H
 ** DO NOT CHANGE
    PROCESS.NAME=SYSTEM(45) ; ERROR.TEXT = "" ; CALL U_START(PROCESS.NAME)
-   CALL U_CRT.INFO(PROCESS.NAME, PROCESS.NAME)
-   CALL U_CRT.INFO("requestItem", requestItem) ; CALL U_CRT.INFO("requestParameters", requestParameters)
+   * * CALL U_CRT.INFO(PROCESS.NAME, PROCESS.NAME)
+   * * CALL U_CRT.INFO("requestItem", requestItem) ; * * CALL U_CRT.INFO("requestParameters", requestParameters)
 ** DO NOT CHANGE
    FV.txnTemplate = "" ; txnTemplate.ID = ""; txnTemplate.REC = ""
    CALL U_IO.OPENFILE(S_TXN_TEMPLATE_FILE.NAME, FV.txnTemplate, @TRUE, "")
@@ -25,11 +25,11 @@ $INCLUDE BP F_SIENA.TXN.TEMPLATES.H
 
       CALL W_SERVICE.DATAXML.GETID(requestParameters, txnTemplate.ID)
 
-      CALL U_CRT.INFO("txnTemplate.ID", txnTemplate.ID)
+      * CALL U_CRT.INFO("txnTemplate.ID", txnTemplate.ID)
 
       CALL U_IO.READ(FV.txnTemplate, txnTemplate.ID, txnTemplate.REC, @FALSE, ERROR.TEXT)
-      CALL U_CRT.INFO("ERROR", ERROR.TEXT)
-      CALL U_CRT.INFO("txnTemplate.REC", txnTemplate.REC)
+      * CALL U_CRT.INFO("ERROR", ERROR.TEXT)
+      * CALL U_CRT.INFO("txnTemplate.REC", txnTemplate.REC)
 
       outputMatrix = txnTemplate.REC
 
@@ -48,8 +48,8 @@ $INCLUDE BP F_SIENA.TXN.TEMPLATES.H
       responseContent = "[{{1}}] No Data Found '{{2}}' '{{3}}'"
       CALL U_MSG(responseContent, RC$NO.DATA:@AM:requestItem:@AM:requestParameters)
    END
-   CALL U_CRT.INFO("responseStatus", responseStatus)
-   CALL U_CRT.INFO("responseContent", responseContent)
+   * CALL U_CRT.INFO("responseStatus", responseStatus)
+   * CALL U_CRT.INFO("responseContent", responseContent)
 
    CALL U_STOP(PROCESS.NAME)
    RETURN

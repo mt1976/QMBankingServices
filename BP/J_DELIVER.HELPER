@@ -1,0 +1,54 @@
+SUBROUTINE J_DELIVER.HELPER(PROCESS.NAME, SPECIFIC)
+** INFORMATION ****************************************************************
+*   Routine Name : J_DELIVER.HELPER
+*           Type : SUBROUTINE
+*         Params : PROCESS.NAME, SPECIFIC
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210302 at 21.53.22 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+
+* INITIALISE
+   PROCESS.NAME=SYSTEM(45)
+   CALL U_START(PROCESS.NAME)
+* Setup some temp locations for input data
+
+   ERROR.TEXT = ""; STOP.ON.ERROR = @TRUE ; VERBOSE = @TRUE
+* OPEN FILES
+
+   FN.SIENA.STAGING = "SIENA.STAGING" ; FV.SIENA.STAGING = ""
+   CALL U_IO.OPENFILE(FN.SIENA.STAGING, FV.SIENA.STAGING, STOP.ON.ERROR, ERROR.TEXT)
+
+   CALL U_HEADER("SIENA - Deliver Data ":DQUOTE(SPECIFIC))
+   R.UTIL.CONFIG = ""
+   CALL U_IO.READ.LOCAL(FV.UTIL.CONFIG, "siena_delivery.list", R.UTIL.CONFIG, STOP.ON.ERROR, ERROR.TEXT, "REPLACE")
+
+   * CALL U_CRT.RECORD(R.UTIL.CONFIG)
+
+   NO.ITERATIONS = DCOUNT(R.UTIL.CONFIG, @AM)
+   CALL U_CRT.INFO("NO CONFIGS", NO.ITERATIONS)
+   FOR THIS.ITERATION = 1 TO NO.ITERATIONS
+
+      SIENA.RVID = ""
+      SIENA.DROPOFF = ""
+
+      INSTRUCTION = ""
+      INSTRUCTION = CONVERT(U$SEP.CFG, @AM, R.UTIL.CONFIG<THIS.ITERATION>)
+
+      SIENA.RVID = INSTRUCTION<1>
+      SIENA.DROPOFF = INSTRUCTION<2>
+      IF SIENA.RVID # "#" THEN
+         IF (SPECIFIC # "" AND SIENA.RVID = SPECIFIC) OR (SPECIFIC="") THEN
+            CALL U_CRT.INFO("DELIVERING", @(T$BOLD_ON):SIENA.DROPOFF:@(T$BOLD_OFF))
+            CALL SIENA.DELIVER.FILE(SIENA.RVID, SIENA.DROPOFF)
+         END
+      END
+   NEXT THIS.ITERATION
+
+   CALL U_STOP(PROCESS.NAME)
+
+   RETURN
+END

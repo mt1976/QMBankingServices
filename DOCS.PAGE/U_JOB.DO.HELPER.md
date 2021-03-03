@@ -20,7 +20,7 @@
 *         Params : DO.ITEM
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.20.48 in DEV by root
+*   Info Updated : 20210302 at 21.55.32 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -31,12 +31,12 @@
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.PROPERTY" width="25" />[U_IO.GET.PROPERTY](../DOCS.PAGE/U_IO.GET.PROPERTY.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_INFO" width="25" />[U_INFO](../DOCS.PAGE/U_INFO.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.SCRIPT.HELPER" width="25" />[SIENA.SCRIPT.HELPER](../DOCS.PAGE/SIENA.SCRIPT.HELPER.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="J_SCRIPT.HELPER" width="25" />[J_SCRIPT.HELPER](../DOCS.PAGE/J_SCRIPT.HELPER.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_INFO" width="25" />[U_INFO](../DOCS.PAGE/U_INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="@SUB.NAME" width="25" />[@SUB.NAME](../DOCS.PAGE/@SUB.NAME.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="@PP.SUB.NAME" width="25" />[@PP.SUB.NAME](../DOCS.PAGE/@PP.SUB.NAME.md)  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="SIENA.DELIVER.HELPER" width="25" />[SIENA.DELIVER.HELPER](../DOCS.PAGE/SIENA.DELIVER.HELPER.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="J_DELIVER.HELPER" width="25" />[J_DELIVER.HELPER](../DOCS.PAGE/J_DELIVER.HELPER.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_STOP" width="25" />[U_STOP](../DOCS.PAGE/U_STOP.md)  
 ### NOTES  

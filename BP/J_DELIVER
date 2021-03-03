@@ -1,0 +1,45 @@
+PROGRAM J_DELIVER
+** INFORMATION ****************************************************************
+*   Routine Name : J_DELIVER
+*           Type : PROGRAM
+*         Params :
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210302 at 21.53.22 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+   CALL U_INITIALISE("SIENA.DELIVER")
+
+   PROCESS.NAME = SYSTEM(45)
+   CALL U_START(PROCESS.NAME)
+
+   CALL U_HEADER("SIENA - DELIVER FILE(S)")
+
+   CMD.STRING = CONVERT(SPACE(1), @AM, @SENTENCE)
+   IF CMD.STRING<2> = "" THEN
+      CALL U_CRT.INFO("ERROR", "Parameters [ALL, or specific type i.e. RVMARKET]")
+      CALL U_STOP(PROCESS.NAME)
+      STOP
+   END
+* remove the program name from the stack of cmds
+   DEL CMD.STRING<1>
+* loop through the cmd strings
+   NO.CMDS = DCOUNT(CMD.STRING, @AM)
+
+   CALL U_CRT.INFO("NO ITEMS", NO.CMDS)
+   FOR THIS.CMD = 1 TO NO.CMDS
+      DELIVERY.ITEM = CMD.STRING<THIS.CMD>
+      CALL U_CRT.INFO("PROCESS", DELIVERY.ITEM)
+      IF DELIVERY.ITEM = "ALL" THEN
+         CALL J_DELIVER.HELPER("DELIVER", "")
+      END ELSE
+         CALL J_DELIVER.HELPER("DELIVER", DELIVERY.ITEM)
+      END
+   NEXT THIS.CMD
+   STOP
+
+   CALL U_STOP(PROCESS.NAME)
+
+END

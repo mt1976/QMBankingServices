@@ -4,8 +4,12 @@
 *       Filename : UTIL.WCT.TEMPLATES
 *         Prefix : W$TEMPLATE.
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.46.56 in DEV by root
+*   Info Updated : 20210302 at 14.09.14 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate W$TEMPLATE.FILE.NAME to "UTIL.WCT.TEMPLATES"
+equate W$TEMPLATE.FILENAME to "UTIL.WCT.TEMPLATES"
 equate W$TEMPLATE.CONTENT to 1
+equate W$TEMPLATE.CONTENT$LEN to "15"
+equate W$TEMPLATE.CONTENT$MASK to ""
+equate W$TEMPLATE.CONTENT$LABEL to ""

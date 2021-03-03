@@ -22,14 +22,13 @@
 *         Params : inValue, txnTemplate.ID
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.20.48 in DEV by root
+*   Info Updated : 20210302 at 21.53.22 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 ```
 ## BODY  
 ### EXTERNAL CALLS  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 <img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.PROPERTY" width="25" />[U_IO.GET.PROPERTY](../DOCS.PAGE/U_IO.GET.PROPERTY.md)  
 ### NOTES  
  DO NOT CHANGE    

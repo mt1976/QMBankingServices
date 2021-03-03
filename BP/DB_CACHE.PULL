@@ -1,0 +1,54 @@
+SUBROUTINE DB_CACHE.PULL(FETCH.OBJECT, RESULT.VALUE)
+** INFORMATION ****************************************************************
+*   Routine Name : DB_CACHE.PULL
+*           Type : SUBROUTINE
+*         Params : FETCH.OBJECT, RESULT.VALUE
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210302 at 21.53.22 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP F_UTIL.LOG.EVENT.H
+$INCLUDE BP F_SIENA.TXN.TEMPLATES.H
+$INCLUDE BP F_SIENA.TXN.OUT.H
+$INCLUDE BP F_SIENA.CACHE.H
+** INITIALISE
+   PROCESS.NAME = SYSTEM(45)
+   CALL U_START(PROCESS.NAME)
+* Setup some temp locations for input data
+
+   ERROR.TEXT = ""; STOP.ON.ERROR = @TRUE ; VERBOSE = @TRUE
+** Open Files
+
+   FN.SIENA.CACHE = S_CACHE_FILE.NAME ; FV.SIENA.CACHE = ""
+   CALL U_IO.OPENFILE(FN.SIENA.CACHE, FV.SIENA.CACHE, STOP.ON.ERROR, ERROR.TEXT)
+
+** Setup static
+   cacheSampleSize = 10 ; cacheSampleFreq = 10 ; generateNoItems = 10
+   amountRangeStart = 100
+   amountRangeEnd = 1000
+
+   CALL U_IO.GET.PROPERTY("randomizer", "cacheSampleSize", cacheSampleSize)
+   CALL U_IO.GET.PROPERTY("randomizer", "cacheSampleFreq", cacheSampleFreq)
+   CALL U_IO.GET.PROPERTY("randomizer", "generateNoItems", generateNoItems)
+   CALL U_IO.GET.PROPERTY("randomizer", "amountRangeStart", amountRangeStart)
+   CALL U_IO.GET.PROPERTY("randomizer", "amountRangeEnd", amountRangeEnd)
+
+
+   GET.VALUE.STMT = ""
+   GET.VALUE.STMT := "SELECT ":S_CACHE_FILE.NAME:" "
+   GET.VALUE.STMT := "WITH ":S_CACHE_OBJECT:" = ":DQUOTE(FETCH.OBJECT):" "
+   *GET.VALUE.STMT := "SAMPLED ":cacheSampleFreq:" "
+   GET.VALUE.STMT := "SAMPLE ":cacheSampleSize:" "
+   GET.VALUE.STMT := "SAVING UNIQUE ":S_CACHE_VALUE
+
+   CALL U_GET.LIST(GET.VALUE.STMT, GET.VALUE.LIST, NO.VALUE.ITEMS)
+   GET.VALUE.POS = 1
+   CALL U_RND.BETWEEN(GET.VALUE.POS, 1, NO.VALUE.ITEMS)
+   RESULT.VALUE = GET.VALUE.LIST<GET.VALUE.POS>
+
+   CALL U_STOP(PROCESS.NAME)
+
+   RETURN

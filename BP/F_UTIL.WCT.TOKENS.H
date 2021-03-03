@@ -1,13 +1,13 @@
 ** INFORMATION ****************************************************************
-*    Insert Name : F_UTIL.WCT.TOKENS.H - BP
+*    Insert Name : F_WEB.SESSIONS.H - BP
 *           Type : INSERT
-*       Filename : UTIL.WCT.TOKENS
+*       Filename : WEB.SESSIONS
 *         Prefix : W$TOKEN.
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.46.56 in DEV by root
+*   Info Updated : 20210302 at 12.10.38 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
-equate W$TOKEN.FILE.NAME to "UTIL.WCT.TOKENS"
+equate W$TOKEN.FILE.NAME to "WEB.SESSIONS"
 equate W$TOKEN.APP.TOKEN to 1
 equate W$TOKEN.CREATE.DATE to 2
 equate W$TOKEN.CREATE.TIME to 3

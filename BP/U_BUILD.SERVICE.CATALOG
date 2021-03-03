@@ -5,7 +5,7 @@ PROGRAM U_BUILD.SERVICE.CATALOG
 *         Params :
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.20.48 in DEV by root
+*   Info Updated : 20210302 at 22.03.40 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -14,7 +14,7 @@ $INCLUDE BP F_UTIL.WCT.RECV.H
 $INCLUDE BP F_UTIL.WCT.RESP.H
 $INCLUDE BP F_UTIL.WCT.TEMPLATES.H
 $INCLUDE BP F_UTIL.WORKFILE.H
-$INCLUDE BP F_UTIL.WCT.TOKENS.H
+$INCLUDE BP F_WEB.SESSIONS.H
 
    CALL U_BUILD.SERVICE.CATALOG.HELPER("")
 

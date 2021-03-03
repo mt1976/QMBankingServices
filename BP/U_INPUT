@@ -1,19 +1,30 @@
-SUBROUTINE U_INPUT(QUESTION, RESPONSE)
+SUBROUTINE U_INPUT(QUESTION, INPUT_WIDTH, INPUT_MASK, INPUT_MANDATORY, RESPONSE)
 ** INFORMATION ****************************************************************
 *   Routine Name : U_INPUT
 *           Type : SUBROUTINE
-*         Params : QUESTION, RESPONSE
+*         Params : QUESTION, INPUT_WIDTH, INPUT_MASK, INPUT_MANDATORY, RESPONSE
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.20.48 in DEV by root
+*   Info Updated : 20210302 at 21.53.22 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE BP I_UTIL.H
 
+   RESPONSE = ""
 
-   DISPLAY @(T$CLEARLINE):@(T$BOLD_ON):T$INPUT.PREFIX:@(T$BOLD_OFF):QUESTION:" ":
-   INPUT RESPONSE, -1
+   GOSUB REQUEST.INPUT
+   IF INPUT_MANDATORY THEN
+      LOOP UNTIL RESPONSE # "" DO
+         DISPLAY @(T$BOLD_ON):SPACE(INPUT_WIDTH+1):" ":QUESTION:" is ":@(T$BLINK_ON):"MANDATORY":@(T$BLINK_OFF):@(T$BOLD_OFF)
+         GOSUB REQUEST.INPUT
+      REPEAT
+   END
    CRT
+   RETURN
+
+REQUEST.INPUT:
+   DISPLAY @(-4):@(T$BOLD_ON):QUESTION:@(T$BOLD_OFF):" ":
+   INPUTDW RESPONSE, INPUT_WIDTH, "_":
    RETURN
 END

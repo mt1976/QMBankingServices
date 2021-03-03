@@ -5,13 +5,13 @@ SUBROUTINE U_JOB.DO.HELPER(DO.ITEM)
 *         Params : DO.ITEM
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.20.48 in DEV by root
+*   Info Updated : 20210302 at 21.55.32 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
 $INCLUDE BP I_UTIL.H
 
-   PROCESS.NAME = "U_JOB.DO.HELPER"
+   PROCESS.NAME = SYSTEM(45)
    CALL U_START(PROCESS.NAME)
 
    *CALL U_HEADER("U_JOB.DO.HELPER")
@@ -24,7 +24,7 @@ $INCLUDE BP I_UTIL.H
    DO.POSTPROCESS = ""
    DO.DELIVER = ""
 
-   CALL U_IO.GET.PROPERTY("siena", DO.ITEM, DO.DATA)
+   CALL U_IO.GET.PROPERTY("jobs", DO.ITEM, DO.DATA)
 
    DO.DATA = CONVERT(U$SEP.CFG.DATA, @AM, DO.DATA)
 
@@ -36,12 +36,12 @@ $INCLUDE BP I_UTIL.H
    IF DO.SCRIPT <> "" THEN
       CALL U_CRT.INFO("SCRIPT", DO.SCRIPT)
       CALL U_INFO("ACT-START", DO.SCRIPT)
-      CALL SIENA.SCRIPT.HELPER(DO.SCRIPT)
+      CALL J_SCRIPT.HELPER(DO.SCRIPT)
       CALL U_INFO("ACT-END", DO.SCRIPT)
       CALL U_CRT.INFO("DONE", DO.SCRIPT)
    END
    IF DO.PROCESSOR <> "" THEN
-      SUB.NAME = "SIENA.":DO.PROCESSOR:".HELPER"
+      SUB.NAME = "J_":DO.PROCESSOR:".HELPER"
       DO.SUBN = SUB.NAME
       CALL U_CRT.INFO("JOB", DO.SUBN)
       CALL U_INFO("ACT-START", DO.SUBN)
@@ -50,7 +50,7 @@ $INCLUDE BP I_UTIL.H
       CALL U_CRT.INFO("DONE", DO.SUBN)
    END
    IF DO.POSTPROCESS <> "" THEN
-      PP.SUB.NAME = "SIENA.":DO.POSTPROCESS:".POST"
+      PP.SUB.NAME = "J_":DO.POSTPROCESS:".POST"
       DO.SUBN = PP.SUB.NAME
       CALL U_CRT.INFO("POST", DO.SUBN)
       CALL U_INFO("ACT-START", DO.SUBN)
@@ -61,7 +61,7 @@ $INCLUDE BP I_UTIL.H
    IF DO.DELIVER <> "" THEN
       CALL U_CRT.INFO("DELIVER", DO.DELIVER)
       CALL U_INFO("ACT-START", DO.DELIVER)
-      CALL SIENA.DELIVER.HELPER(SUB.NAME, DO.DELIVER)
+      CALL J_DELIVER.HELPER(SUB.NAME, DO.DELIVER)
       CALL U_INFO("ACT-END", DO.DELIVER)
       CALL U_CRT.INFO("DONE", DO.DELIVER)
    END

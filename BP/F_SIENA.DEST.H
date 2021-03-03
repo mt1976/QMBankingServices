@@ -4,8 +4,12 @@
 *       Filename : SIENA.DEST
 *         Prefix : S_DEST_
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.46.54 in DEV by root
+*   Info Updated : 20210302 at 14.09.12 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate S_DEST_FILE.NAME to "SIENA.DEST"
+equate S_DEST_FILENAME to "SIENA.DEST"
 equate S_DEST_OUTPUT to 1
+equate S_DEST_OUTPUT$LEN to "15"
+equate S_DEST_OUTPUT$MASK to ""
+equate S_DEST_OUTPUT$LABEL to ""

@@ -4,8 +4,12 @@
 *       Filename : SIENA.TXN.OUT
 *         Prefix : S_TXN_OUT_
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.46.54 in DEV by root
+*   Info Updated : 20210302 at 14.09.13 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate S_TXN_OUT_FILE.NAME to "SIENA.TXN.OUT"
+equate S_TXN_OUT_FILENAME to "SIENA.TXN.OUT"
 equate S_TXN_OUT_CONTENT to 1
+equate S_TXN_OUT_CONTENT$LEN to "15"
+equate S_TXN_OUT_CONTENT$MASK to ""
+equate S_TXN_OUT_CONTENT$LABEL to ""

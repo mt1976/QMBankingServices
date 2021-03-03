@@ -5,7 +5,7 @@ SUBROUTINE U_BUILD.SERVICE.CATALOG.HELPER(SPARE01)
 *         Params : SPARE01
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.20.48 in DEV by root
+*   Info Updated : 20210302 at 22.24.17 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -14,7 +14,7 @@ $INCLUDE BP F_UTIL.WCT.RECV.H
 $INCLUDE BP F_UTIL.WCT.RESP.H
 $INCLUDE BP F_UTIL.WCT.TEMPLATES.H
 $INCLUDE BP F_UTIL.WORKFILE.H
-$INCLUDE BP F_UTIL.WCT.TOKENS.H
+$INCLUDE BP F_WEB.SESSIONS.H
 $INCLUDE BP F_UTIL.CONFIG.H
 
    PROCESS.NAME = "U_BUILD.SERVICE.CATALOG"
@@ -27,10 +27,15 @@ $INCLUDE BP F_UTIL.CONFIG.H
    serviceID = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "serviceID", serviceID)
    menuID = "" ; CALL U_IO.GET.PROPERTY("util", "vocMenu", menuID)
 
-   rCatalogItems = ""
-   GOSUB BUILD.REPORTS
-
+   autoGenCatalogItems = ""
    GOSUB BUILD.DATAMAP
+   GOSUB BUILD.REPORTS
+   GOSUB BUILD.JOBS
+
+   manualCatalogItems = ""
+   CALL U_IO.READ(FV.UTIL.CONFIG, serviceCatalogItemsID:".list", manualCatalogItems, @FALSE, "")
+   newCatalog = autoGenCatalogItems:@AM:"# FOLLOWING THIS LINE IS CONTENT FROM ":DQUOTE(serviceCatalogID):@AM:manualCatalogItems
+   CALL U_IO.WRITE(FV.UTIL.CONFIG, serviceCatalogID:".list", newCatalog, @FALSE, "")
 
    servicesList = ""
    servicesCount = 0
@@ -76,8 +81,7 @@ $INCLUDE BP F_UTIL.CONFIG.H
    CALL U_CRT.INFO("REBUILD", "Menu rebuilt from ":DQUOTE(serviceCatalogItemsID):" as ":DQUOTE(menuID))
 
    CALL U_STOP(PROCESS.NAME)
-   STOP
-
+   RETURN
 
 BUILD.DATAMAP:
    TITLE = "Transaction Generation"
@@ -89,30 +93,14 @@ BUILD.DATAMAP:
    * CALL U_CRT.INFO("STMT", STMT)
    txnMenu.Items = "" ; txnMenu.Count = 0
    CALL U_GET.LIST(STMT, txnMenu.Items, txnMenu.Count)
-   *CALL U_CRT.INFO("txnMenu.Count", txnMenu.Count)
-   *CALL U_CRT.INFO("txnMenu.Items", txnMenu.Items)
+
 
    txnItems = ""
-   txnItems<-1> = serviceID:U$SEP.CFG:TITLE:U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:U$SEP.CFG
+   autoGenCatalogItems<-1> = serviceID:U$SEP.CFG:TITLE:U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:U$SEP.CFG
    FOR I = 1 TO txnMenu.Count
       txn.ID = CHANGE(CHANGE(txnMenu.Items<I>, dataMapExtn, ""), dataMapPrefix, "")
-      *  CALL U_CRT.INFO("txn.ID", txn.ID)
-
-      txnItems<-1> = serviceID:U$SEP.CFG:txn.ID:U$SEP.CFG.DATA:"!SIENA.GEN.TXNS":U$SEP.CFG.DATA:UPCASE(txn.ID):U$SEP.CFG.DATA:"NOPAGE":U$SEP.CFG.DATA:U$SEP.CFG
-
+      autoGenCatalogItems<-1> = serviceID:U$SEP.CFG:txn.ID:U$SEP.CFG.DATA:"!U_GEN.TXNS":U$SEP.CFG.DATA:UPCASE(txn.ID):U$SEP.CFG.DATA:"NOPAGE":U$SEP.CFG.DATA:U$SEP.CFG
    NEXT I
-
-   txnItems.Count = txnMenu.Count+1
-
-   *CALL U_CRT.INFO("txnItems", txnItems)
-   *CALL U_CRT.INFO("txnItems.Count", txnItems.Count)
-
-   sCatalogItems = ""
-   CALL U_IO.READ(FV.UTIL.CONFIG, serviceCatalogItemsID:".list", sCatalogItems, @FALSE, "")
-   *CALL U_CRT.INFO("serviceCatalogID", serviceCatalogID)
-   newCatalog = txnItems:@AM:rCatalogItems:@AM:"# FOLLOWING THIS LINE IS CONTENT FROM ":DQUOTE(serviceCatalogID):@AM:sCatalogItems
-   * CALL U_CRT.RECORD(newCatalog)
-   CALL U_IO.WRITE(FV.UTIL.CONFIG, serviceCatalogID:".list", newCatalog, @FALSE, "")
 
 
    RETURN
@@ -120,12 +108,10 @@ BUILD.DATAMAP:
 BUILD.REPORTS:
    TITLE = "Reports and Queries"
    CALL U_MSG(TITLE, "")
-   rCatalogItems = "" ; reports.REC = "" ; reports.Count = 0
-   rCatalogItems<-1> = serviceID:U$SEP.CFG:TITLE:U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:U$SEP.CFG
+   reports.REC = "" ; reports.Count = 0
+   autoGenCatalogItems<-1> = serviceID:U$SEP.CFG:TITLE:U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:U$SEP.CFG
    CALL U_IO.READ(FV.UTIL.CONFIG, "reports.properties", reports.REC, @FALSE, "")
-*   CALL U_CRT.RECORD(reports.REC)
    reports.Count = DCOUNT(reports.REC, @AM)
-*   CALL U_CRT.INFO("reports.Count", reports.Count)
    FOR thisReport = 1 TO reports.Count
       thisReportItem = reports.REC<thisReport>
       IF thisReportItem[1, 1] = "#" THEN
@@ -134,13 +120,38 @@ BUILD.REPORTS:
          thisReportItem = CHANGE(thisReportItem, U$SEP.CFG, @AM)
          thisReportItem = CHANGE(thisReportItem, U$SEP.CFG.DATA, @AM)
          itemTitle = thisReportItem<1> ; IF thisReportItem<5> # "" THEN itemTitle = thisReportItem<5>
-         rCatalogItems<-1> = serviceID:U$SEP.CFG:itemTitle:U$SEP.CFG.DATA:"REPORT.DO":U$SEP.CFG.DATA:thisReportItem<1> :U$SEP.CFG.DATA:"NOPAGE":U$SEP.CFG.DATA:U$SEP.CFG
-
-
-
+         autoGenCatalogItems<-1> = serviceID:U$SEP.CFG:itemTitle:U$SEP.CFG.DATA:"REPORT.DO":U$SEP.CFG.DATA:thisReportItem<1> :U$SEP.CFG.DATA:"NOPAGE":U$SEP.CFG.DATA:U$SEP.CFG
       END
    NEXT thisReport
-   * CALL U_CRT.RECORD(rCatalogItems)
    RETURN
+
+BUILD.JOBS:
+   TITLE = "Application Maintenance"
+   CALL U_MSG(TITLE, "")
+   jobs.REC = "" ; jobs.Count = 0
+   autoGenCatalogItems<-1> = serviceID:U$SEP.CFG:TITLE:U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:"":U$SEP.CFG.DATA:U$SEP.CFG
+
+   CALL U_IO.READ(FV.UTIL.CONFIG, "jobs.properties", jobs.REC, @FALSE, "")
+
+   jobs.Count = DCOUNT(jobs.REC, @AM)
+   *   CALL U_CRT.INFO("reports.Count", reports.Count)
+   FOR thisJob = 1 TO jobs.Count
+      thisJobItem = jobs.REC<thisJob>
+      IF thisJobItem[1, 1] = "#" THEN
+         * IGNORE ITS A COMMENT
+      END ELSE
+         thisJobItem = CHANGE(thisJobItem, U$SEP.CFG, @AM)
+         *CALL U_CRT.RECORD(thisJobItem)
+         thisJobDesc = ""
+         thisJobDesc = thisJobItem<3>
+         thisJobItem = CHANGE(thisJobItem, U$SEP.CFG.DATA, @AM)
+         *CALL U_CRT.RECORD(thisJobItem)
+         itemTitle = thisJobItem<1> ; IF thisJobDesc # "" THEN itemTitle = thisJobDesc
+         autoGenCatalogItems<-1> = serviceID:U$SEP.CFG:itemTitle:U$SEP.CFG.DATA:"JOB.DO":U$SEP.CFG.DATA:thisJobItem<1> :U$SEP.CFG.DATA:"NOPAGE":U$SEP.CFG.DATA:U$SEP.CFG
+      END
+   NEXT thisJob
+   * CALL U_CRT.RECORD(autoGenCatalogItems)
+   RETURN
+
 
 END

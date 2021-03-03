@@ -5,7 +5,7 @@
 |TYPE|SUBROUTINE|
 |SOURCE|<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="BP" width="25" />[BP](../DOCS/BP.md)|
 |ID|U_INPUT|
-|PARAMETERS|QUESTION, RESPONSE|
+|PARAMETERS|QUESTION, INPUT_WIDTH, INPUT_MASK, INPUT_MANDATORY, RESPONSE|
     
 ## USAGE  
   
@@ -17,10 +17,10 @@
 ** INFORMATION ****************************************************************
 *   Routine Name : U_INPUT
 *           Type : SUBROUTINE
-*         Params : QUESTION, RESPONSE
+*         Params : QUESTION, INPUT_WIDTH, INPUT_MASK, INPUT_MANDATORY, RESPONSE
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.20.48 in DEV by root
+*   Info Updated : 20210302 at 21.53.22 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -28,6 +28,10 @@
 ## BODY  
 ### EXTERNAL CALLS  
 ### NOTES  
-####    DISPLAY @(T$CLEARLINE):@(T$BOLD_ON):T$INPUT.PREFIX:@(T$BOLD_OFF):QUESTION:" ":  
+#### REQUEST.INPUT:  
+  
+####    DISPLAY @(-4):@(T$BOLD_ON):QUESTION:@(T$BOLD_OFF):" ":  
+  
+####    INPUTDW RESPONSE, INPUT_WIDTH, "_":  
   
   

@@ -5,7 +5,7 @@ PROGRAM BATCH.DO
 *         Params :
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.20.48 in DEV by root
+*   Info Updated : 20210302 at 21.53.22 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -36,11 +36,11 @@ $INCLUDE BP I_UTIL.H
    DO.POSTPROCESS = ""
    DO.DELIVER = ""
 
-   * CALL U_IO.GET.PROPERTY("jobs", DO.BATCH, DO.DATA)
+   * CALL U_IO.GET.PROPERTY("jobs_batch", DO.BATCH, DO.DATA)
    DO.DATA = ""
    NO.ITEMS = 0
 
-   CALL U_IO.GET.LIST("jobs", DO.BATCH, DO.DATA, NO.ITEMS)
+   CALL U_IO.GET.LIST("batch", DO.BATCH, DO.DATA, NO.ITEMS)
 
 
    CALL U_CRT.INFO("ITEMS", NO.ITEMS)

@@ -4,8 +4,12 @@
 *       Filename : UTIL.SQL.CMD
 *         Prefix : U_SQLCMD.
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.46.52 in DEV by root
+*   Info Updated : 20210302 at 14.09.11 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate U_SQLCMD.FILE.NAME to "UTIL.SQL.CMD"
+equate U_SQLCMD.FILENAME to "UTIL.SQL.CMD"
 equate U_SQLCMD.COMMAND to 1
+equate U_SQLCMD.COMMAND$LEN to "15"
+equate U_SQLCMD.COMMAND$MASK to ""
+equate U_SQLCMD.COMMAND$LABEL to ""

@@ -1,0 +1,102 @@
+SUBROUTINE W_SERVICE.SESSION.VALIDATE(sessionToken, uniqueID, applicationToken, msgPayload, OK.TO.CONTINUE, responseCode, responseMessage)
+** INFORMATION ****************************************************************
+*   Routine Name : W_SERVICE.SESSION.VALIDATE
+*           Type : SUBROUTINE
+*         Params : sessionToken, uniqueID, applicationToken, msgPayload, OK.TO.CONTINUE, responseCode, responseMessage
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210302 at 21.53.22 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_HTTP.H
+$INCLUDE BP F_WEB.SESSIONS.H
+$INCLUDE BP F_WEB.CREDENTIALS.H
+$INCLUDE BP F_WEB.CREDENTIALS.IDX.H
+
+   PROCESS.NAME = SYSTEM(45)
+   wct_Properties = "wct_connect"
+
+   DEBUGIT = @FALSE
+   IF DEBUGIT THEN
+
+      CALL U_CRT.INFO("sessionToken", sessionToken)
+      CALL U_CRT.INFO("uniqueID", uniqueID)
+      CALL U_CRT.INFO("applicationToken", applicationToken)
+      CALL U_CRT.INFO("msgPayload", msgPayload)
+      CALL U_CRT.INFO("OK.TO.CONTINUE", OK.TO.CONTINUE)
+      CALL U_CRT.INFO("responseCode", responseCode)
+      CALL U_CRT.INFO("responseMessage", responseMessage)
+   END
+   OK.TO.CONTINUE = @TRUE
+
+   FV.WEB.SESSIONS = "" ; CALL U_IO.OPENFILE(W$TOKEN.FILENAME, FV.WEB.SESSIONS, @TRUE, "")
+   FV.WEB.CREDENTIALS = "" ; CALL U_IO.OPENFILE(W$CRED.FILENAME, FV.WEB.CREDENTIALS, @TRUE, "")
+   FV.WEB.CREDENTIALS.IDX = "" ; CALL U_IO.OPENFILE(W$CRED_IDX.FILENAME, FV.WEB.CREDENTIALS.IDX, @TRUE, "")
+
+
+   ID.WEB.CREDENTIALS = ""
+
+   sessionTokenLife = 0 ; CALL U_IO.GET.PROPERTY("wct_connect", "sessionTokenLife", sessionTokenLife)
+
+   masterAppToken = "" ; CALL U_IO.GET.PROPERTY(wct_Properties, "appToken", masterAppToken)
+   IF DEBUGIT THEN CALL U_CRT.INFO("masterAppToken", masterAppToken)
+
+   SECURITY.VIOLATION = @FALSE
+
+   IF applicationToken # masterAppToken THEN
+      SECURITY.VIOLATION = @TRUE
+      CALL U_CRT.INFO("ERROR", "TOKEN MISMATCH")
+   END
+
+   IF NOT(SECURITY.VIOLATION) THEN
+      GOSUB CHECK.SESSION.TOKEN
+   END
+
+   IF NOT(SECURITY.VIOLATION) THEN
+      GOSUB UPDATE.SESSION.TOKEN
+   END
+
+   IF SECURITY.VIOLATION THEN
+      responseCode=RC$SECURITY.VIOLATION
+      responseMessage=RC$SECURITY.VIOLATION
+      CALL U_MSG.HTTP(responseMessage, "")
+      IF DEBUGIT THEN CALL U_CRT.INFO(responseCode, responseMessage)
+   END
+
+   * CALL U_CRT.INFO("responseCode", responseCode)
+   * CALL U_CRT.INFO("responseMessage", responseMessage)
+   IF DEBUGIT THEN CALL U_CRT.INFO(responseCode, responseMessage)
+
+   RETURN
+
+
+UPDATE.SESSION.TOKEN:
+
+   R.WEB.SESSIONS<W$TOKEN.EXPIRY> = EPOCH() + sessionTokenLife
+
+   CALL U_IO.WRITE(FV.WEB.SESSIONS, ID.WEB.SESSIONS, R.WEB.SESSIONS, STOP.ON.ERROR, ERROR.TEXT)
+
+   responseCode=RC$OK
+   responseMessage=""
+   OK.TO.CONTINUE = @TRUE
+   RETURN
+
+
+CHECK.SESSION.TOKEN:
+   R.WEB.CREDENTIALS = ""
+   ID.WEB.SESSIONS = sessionToken
+   CALL U_IO.READ(FV.WEB.SESSIONS, ID.WEB.SESSIONS, R.WEB.SESSIONS, @FALSE, "")
+   IF R.WEB.SESSIONS = "" THEN
+      CALL U_CRT.INFO("ERROR", "NO SESSION ":DQUOTE(ID.WEB.SESSIONS))
+      SECURITY.VIOLATION = @TRUE
+   END
+   RETURN
+
+CHECK.SESSION.USER:
+   IF R.WEB.SESSIONS<W$TOKEN.UNIQUE.ID> # uniqueID THEN
+      CALL U_CRT.INFO("ERROR", "SESSION & USER MISMATCH":DQUOTE(uniqueID:"-":R.WEB.SESSIONS<W$TOKEN.UNIQUE.ID>))
+      SECURITY.VIOLATION = @TRUE
+   END
+   RETURN
+END

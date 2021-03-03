@@ -4,8 +4,12 @@
 *       Filename : LOGS
 *         Prefix : S_L_
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.46.53 in DEV by root
+*   Info Updated : 20210302 at 14.09.12 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate S_L_FILE.NAME to "LOGS"
+equate S_L_FILENAME to "LOGS"
 equate S_L_LOG to 1
+equate S_L_LOG$LEN to "15"
+equate S_L_LOG$MASK to ""
+equate S_L_LOG$LABEL to ""

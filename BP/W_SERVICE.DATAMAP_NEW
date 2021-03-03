@@ -5,7 +5,7 @@ SUBROUTINE W_SERVICE.DATAMAP_NEW(requestItem, requestParameters, msgPayload, res
 *         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 15.20.48 in DEV by root
+*   Info Updated : 20210302 at 21.53.22 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -15,8 +15,8 @@ $INCLUDE BP F_SIENA.TXN.TEMPLATES.H
 
 ** DO NOT CHANGE
    PROCESS.NAME=SYSTEM(45) ; ERROR.TEXT = "" ; CALL U_START(PROCESS.NAME)
-   CALL U_CRT.INFO(PROCESS.NAME, PROCESS.NAME)
-   CALL U_CRT.INFO("requestItem", requestItem) ; CALL U_CRT.INFO("requestParameters", requestParameters)
+   * CALL U_CRT.INFO(PROCESS.NAME, PROCESS.NAME)
+   * CALL U_CRT.INFO("requestItem", requestItem) ; * CALL U_CRT.INFO("requestParameters", requestParameters)
 ** DO NOT CHANGE
    FV.txnTemplate = "" ; txnTemplate.ID = ""; txnTemplate.REC = ""
    CALL U_IO.OPENFILE(S_TXN_TEMPLATE_FILE.NAME, FV.txnTemplate, @TRUE, "")
@@ -66,7 +66,7 @@ $INCLUDE BP F_SIENA.TXN.TEMPLATES.H
       dataMap.REC<-1> = mapDataList:"=AND THIS|AS WELL AS THIS="
       new.ID = CHANGE(requestParameters, " ", "_")
       dataMap.ID:= new.ID:dataMapExtn
-      CALL U_CRT.INFO("CONFIG", dataMap.ID)
+      * CALL U_CRT.INFO("CONFIG", dataMap.ID)
       CALL U_IO.WRITE(FV.UTIL.CONFIG, dataMap.ID, dataMap.REC, @FALSE, ERROR.TEXT)
 
       template.XML = ""
@@ -75,7 +75,7 @@ $INCLUDE BP F_SIENA.TXN.TEMPLATES.H
       template.XML<-1> = "<!--":msgPayload:"-->"
       template.XML<-1> = "<Collection></Collection>"
       template.ID = dataMapTemplatePrefix:CHANGE(requestParameters, " ", "_"):dataMapTemplateSuffix
-      CALL U_CRT.INFO("template.ID", template.ID)
+      * CALL U_CRT.INFO("template.ID", template.ID)
 
       CALL U_IO.WRITE(FV.txnTemplate, template.ID, template.XML, @FALSE, ERROR.TEXT)
 
@@ -96,7 +96,7 @@ $INCLUDE BP F_SIENA.TXN.TEMPLATES.H
 
       properties.REC = CHANGE(properties.REC, SUBS.REPLACE.ITEM, properties.NEW)
 
-      CALL U_CRT.INFO("PROPERTIES", properties.REC)
+      * CALL U_CRT.INFO("PROPERTIES", properties.REC)
       CALL U_IO.WRITE(FV.UTIL.CONFIG, properties.ID, properties.REC, @FALSE, ERROR.TEXT)
 
 ** need to insert the following data for this to work;

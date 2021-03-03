@@ -1,0 +1,27 @@
+SUBROUTINE J_CACHE_PORTFOLIO.HELPER(PROCESS.NAME)
+** INFORMATION ****************************************************************
+*   Routine Name : J_CACHE_PORTFOLIO.HELPER
+*           Type : SUBROUTINE
+*         Params : PROCESS.NAME
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210302 at 21.53.22 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP F_UTIL.LOG.EVENT.H
+* INITIALISE
+   PROCESS.NAME = "SIENA.CACHE_PORTFOLIO.HELPER"
+   CALL U_START(PROCESS.NAME)
+* Setup some temp locations for input data
+
+   ERROR.TEXT = ""; STOP.ON.ERROR = @TRUE ; VERBOSE = @TRUE
+* OPEN FILES
+
+   CALL J_CACHE_VALUE.HELPER("PORTFOLIO")
+   CALL U_STOP(PROCESS.NAME)
+
+   RETURN
+
+END

@@ -5,7 +5,7 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210301 at 16.05.44 in DEV by root
+*   Info Updated : 20210302 at 21.53.22 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -15,7 +15,7 @@ $INCLUDE BP F_UTIL.WCT.RECV.H
 $INCLUDE BP F_UTIL.WCT.RESP.H
 $INCLUDE BP F_UTIL.WCT.TEMPLATES.H
 $INCLUDE BP F_UTIL.WORKFILE.H
-$INCLUDE BP F_UTIL.WCT.TOKENS.H
+$INCLUDE BP F_WEB.SESSIONS.H
 $INCLUDE BP F_UTIL.LOG.EVENT.H
 
    PROCESS.NAME = "W_SERVICE.DO"
@@ -157,17 +157,25 @@ PROCESS.QUEUE.ITEM:
       CALL U_WILDCARD.SUBSTITUTE("responseFilePath", responseFilePath, response)
 
       CALL U_WILDCARD.SUBSTITUTE("responseFileType", responseType, response)
-
-      GOSUB GET.REQUEST.DATA
+      IF OK.TO.CONTINUE THEN
+         GOSUB GET.REQUEST.DATA
+      END
 
       CALL U_WILDCARD.SUBSTITUTE("requestPayloadCount", requestPayloadCount, response)
       CALL U_WILDCARD.SUBSTITUTE("requestPayload", requestPayload, response)
 
-      GOSUB PROCESS.ACTION
+      IF OK.TO.CONTINUE THEN
+         IF UPCASE(requestAction) # "LOGOUT" AND UPCASE(requestAction) # "LOGIN" THEN
+            GOSUB VALIDATE.SESSION
+         END
+      END
+
+      IF OK.TO.CONTINUE THEN
+         GOSUB PROCESS.ACTION
+      END
 
       responseEjected = "" ; CALL U_GET.EPOCH.DATE(responseEjected)
       CALL U_WILDCARD.SUBSTITUTE("responseEjected", responseEjected, response)
-
       CALL U_WILDCARD.SUBSTITUTE("responseContentCount", responseContentCount, response)
       CALL U_WILDCARD.SUBSTITUTE("responseContent", responseContent, response)
       CALL U_WILDCARD.SUBSTITUTE("responseStatus", responseStatus, response)
@@ -177,12 +185,6 @@ PROCESS.QUEUE.ITEM:
       END
 
       GOSUB PROCESS.REQUEST.LOG.EVENT
-
-      *  CALL !VIEW(response, 'X', KEY)
-*      CRT "8888888888"
-*      CRT response
-*      CRT "9999999999"
-
 
       CALL U_IO.WRITE(FV.RESPONSE, responseFileName, response, STOP.ON.ERROR, ERROR.TEXT)
    END
@@ -265,11 +267,11 @@ PROCESS.ACTION:
 
 PROCESS.CALLOUT:
    CALLOUT.ROUTINE = "W_SERVICE.":CHANGE(requestAction, "@", "")
-   CALL U_CRT.INFO("EXTERNAL", CALLOUT.ROUTINE)
+   * CALL U_CRT.INFO("EXTERNAL", CALLOUT.ROUTINE)
 
    fsResult = ""
    CALL !FINDPROG(fsResult, CALLOUT.ROUTINE)
-   CALL U_CRT.INFO("FINGPROG", fsResult)
+   * CALL U_CRT.INFO("FINGPROG", fsResult)
    IF fsResult <> "" THEN
       CALL @CALLOUT.ROUTINE(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
    END ELSE
@@ -416,6 +418,18 @@ GET.SEARCH.PROPERTY:
       CALL U_XML.FIND(searchID, request, searchResult)
    END
 
+   RETURN
+
+VALIDATE.SESSION:
+   responseMessage = ""
+   CALL W_SERVICE.SESSION.VALIDATE(sessionToken, uniqueID, applicationToken, msgPayload, OK.TO.CONTINUE, responseStatus, responseMessage)
+
+   IF NOT(OK.TO.CONTINUE) THEN
+      GOSUB PROCESS.RESPONSE.CONTENT
+   END ELSE
+      responseStatus = ""
+      responseMessage = ""
+   END
    RETURN
 
 END
