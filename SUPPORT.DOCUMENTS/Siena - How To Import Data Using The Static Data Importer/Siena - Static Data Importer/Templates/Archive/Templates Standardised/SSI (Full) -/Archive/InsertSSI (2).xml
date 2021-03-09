@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : SSI.xml
+    Created on : 10 July 2009
+    Author     : rhawes
+    Description:
+        This is an example Data Import file for the tables
+       SettlementInstructions and
+        SettlementInstructionsName.
+-->
+
+<TRANSACTIONS xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+              xmlns='http://www.eurobase.com/schema/dataimport'
+              xsi:schemaLocation='http://www.eurobase.com/schema/dataimport dataimport.xsd'>
+  <TRANSACTION type="INSERT">
+    <TABLE name="SettlementInstructions"
+           classname="com.eurobase.siena.data.settlementinstructions.SettlementInstructions">
+      <RECORD>
+        <KEYFIELD name="name.counterparty.firm">Importer2</KEYFIELD>
+        <KEYFIELD name="name.counterparty.centre">LDN</KEYFIELD>
+        <KEYFIELD name="name.currency">GBP</KEYFIELD>
+        <KEYFIELD name="name.accountType">Correspondent</KEYFIELD>
+        <KEYFIELD name="name.settlementCodeName">ALL</KEYFIELD>
+        <FIELD name="boan"></FIELD>
+        <FIELD name="clearing"></FIELD>
+        <FIELD name="isAutoConf">N</FIELD>
+        <FIELD name="accountNumber">N</FIELD>
+        <FIELD name="payTo.firm">Importer</FIELD>
+        <FIELD name="payTo.centre">LDN</FIELD>
+        <FIELD name="accountOf.firm"></FIELD>
+        <FIELD name="accountOf.centre"></FIELD>
+        <FIELD name="favourOf.firm"></FIELD>
+        <FIELD name="favourOf.centre"></FIELD>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

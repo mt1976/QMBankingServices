@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+
+    <TRANSACTION type="INSERT">
+        <TABLE name="Currency" classname="com.eurobase.siena.data.currencies.Currency">
+             <RECORD>
+                 <KEYFIELD name="code">YZX</KEYFIELD>
+                 <FIELD name="name">Test</FIELD>
+                 <FIELD name="active">Y</FIELD>
+                 <FIELD name="euroData.isEuroCurrency">N</FIELD>
+                 <FIELD name="euroData.transitionStart"/>
+                 <FIELD name="euroData.transitionEnd"/>
+                 <FIELD name="euroData.monthsWarning">0</FIELD>
+                 <FIELD name="amountDp">2</FIELD>
+                 <FIELD name="intBase">IB 365</FIELD>
+                 <FIELD name="keydateBase">2</FIELD>
+                 <FIELD name="overnightFundingSpread.bid">0.00</FIELD>
+                 <FIELD name="overnightFundingSpread.offer">0.00</FIELD>
+                 <FIELD name="country">United Kingdom</FIELD>
+                 <FIELD name="interestRateTolerance">0.00</FIELD>
+                 <FIELD name="checkPayTo">N</FIELD>
+                 <FIELD name="stripRateFuture.exchangeCode"/>
+                 <FIELD name="stripRateFuture.currencyContract.currencyIsoCode"/>
+                 <FIELD name="stripRateFuture.currencyContract.futureContractCode"/>
+                 <FIELD name="defaultLayOffBookKey"/>
+                 <FIELD name="cLS">N</FIELD>
+                 <FIELD name="cLSStart"/>
+                 <FIELD name="timeout">0</FIELD>
+                 <FIELD name="cutOffTime.timeZone"/>
+                 <FIELD name="cutOffTime.cutOffTime"/>
+                 <FIELD name="cutOffTime.derivedData.uTCOffset">+0:00</FIELD>
+                 <FIELD name="cutOffTime.derivedData.hasDaylightSaving">N</FIELD>
+                 <FIELD name="cutOffTime.derivedData.daylightStart"/>
+                 <FIELD name="cutOffTime.derivedData.daylightEnd"/>
+                 <FIELD name="dealerInterventionQuoteTimeout">Undefined</FIELD>
+	    <FIELD name="timeout">0</FIELD>
+            </RECORD>
+ </TABLE>
+
+    </TRANSACTION>
+</TRANSACTIONS>
+

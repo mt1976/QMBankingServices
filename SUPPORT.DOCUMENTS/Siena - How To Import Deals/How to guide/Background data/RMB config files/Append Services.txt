@@ -1,0 +1,13 @@
+
+# Deal Importer
+service11 = Deal Importer
+service11.startClass=com.eurobase.siena.link.daemon.apps.TwistContainerLauncher
+service11.endClass=com.eurobase.siena.link.daemon.apps.TwistContainerKiller
+service11.defaultLoc={hostName}
+service11.timeout = 300
+# do not change!!!!
+service11.stream = DealImporter
+service11.args = LogFile|{logPath}/DealImporter.log, Jvm|{javaExe} -DDealImporter -XX:+HeapDumpOnOutOfMemoryError -DlogServer.sendToStdErr=Y -Deurobase.class.path=siena.dealexporter.class.path -Xms512M -Xmx512M {globalVariables} -Djava.awt.headless=true -Dfile.encoding={fileEncoding} -Dsiena.working={systemPath}/data, ProcessList|Deal Import Handler=True
+service11.DealImporter.application.0=DealImportHandler
+service11.panelName=TwistContainer
+

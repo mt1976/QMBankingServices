@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+  <TRANSACTION type="INSERT">
+        <TABLE name="RateDefinition" classname="com.eurobase.siena.rates.model.RateDefinition">
+            <RECORD>
+                <KEYFIELD name="rateDefinitionName.rateType">FX Spot Rate</KEYFIELD>]
+                <KEYFIELD name="rateDefinitionName.rateCategory">Market</KEYFIELD>
+                <KEYFIELD name="rateDefinitionName.rateInstrument">EURUGX</KEYFIELD>
+             </RECORD>
+        </TABLE>
+    </TRANSACTION>
+</TRANSACTIONS>

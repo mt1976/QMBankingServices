@@ -1,5 +1,5 @@
-SELECT        dbo.CounterpartyImportID.KeyImportID, dbo.CounterpartyImportID.CounterpartyFirm AS Firm, dbo.CounterpartyImportID.CounterpartyCentre AS Centre, dbo.Firm.FirmName, dbo.Centre.FullName AS CentreName
-FROM            dbo.CounterpartyImportID INNER JOIN
-                         dbo.Firm ON dbo.CounterpartyImportID.CounterpartyFirm = dbo.Firm.FirmName INNER JOIN
-                         dbo.Centre ON dbo.CounterpartyImportID.CounterpartyCentre = dbo.Centre.ShortName
-WHERE        (dbo.CounterpartyImportID.InternalDeleted IS NULL) AND (dbo.CounterpartyImportID.KeyOriginID = 'ExternalDealImporter')
+SELECT        {{SQL.SOURCE}}.CounterpartyImportID.KeyImportID, {{SQL.SOURCE}}.CounterpartyImportID.CounterpartyFirm AS Firm, {{SQL.SOURCE}}.CounterpartyImportID.CounterpartyCentre AS Centre, {{SQL.SOURCE}}.Firm.FirmName, {{SQL.SOURCE}}.Centre.FullName AS CentreName
+FROM            {{SQL.SOURCE}}.CounterpartyImportID INNER JOIN
+                         {{SQL.SOURCE}}.Firm ON {{SQL.SOURCE}}.CounterpartyImportID.CounterpartyFirm = {{SQL.SOURCE}}.Firm.FirmName INNER JOIN
+                         {{SQL.SOURCE}}.Centre ON {{SQL.SOURCE}}.CounterpartyImportID.CounterpartyCentre = {{SQL.SOURCE}}.Centre.ShortName
+WHERE        ({{SQL.SOURCE}}.CounterpartyImportID.InternalDeleted IS NULL) AND ({{SQL.SOURCE}}.CounterpartyImportID.KeyOriginID = 'ExternalDealImporter')

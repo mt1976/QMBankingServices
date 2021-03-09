@@ -1,0 +1,14 @@
+# Limit Import
+servicenn = Limit Importer
+servicenn.startClass=com.eurobase.siena.link.daemon.apps.TwistContainerLauncher
+servicenn.endClass=com.eurobase.siena.link.daemon.apps.TwistContainerKiller
+servicenn.defaultLoc={hostName}
+servicenn.timeout = 300
+# do not change!!!!
+servicenn.stream = LimitImporter
+servicenn.args = LogFile|{logPath}/LimitImporter.log, Jvm|{javaExe} -DLimitImporter -Dsiena.lib.path=${siena.lib.path} -DlogServer.sendToStdErr=Y 
+-Dcom.sun.management.jmxremote.port=9123 -Dcom.sun.management.jmxremote.ssl=false 
+-Dcom.sun.management.jmxremote.authenticate=false -Deurobase.class.path=siena.limitimporter.class.path -Xms8M -Xmx16M -Djava.awt.headless=true 
+-Dfile.encoding={fileEncoding} -Dsiena.working={systemPath}/data, ProcessList|LimitImportHandler=True
+servicenn.LimitImporter.application.0=LimitImportHandler
+servicenn.panelName=TwistContainer

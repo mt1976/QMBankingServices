@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<!--
+    Document   : testSlotsProductCodeInsert.xml
+    Created on : 29 October 2009, 11:21
+    Author     : rhawes
+    Description:
+        Purpose of the document follows.
+-->
+<TRANSACTIONS xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+              xmlns='http://www.eurobase.com/schema/dataimport'
+              xsi:schemaLocation='http://www.eurobase.com/schema/dataimport dataimport.xsd'>
+  <TRANSACTION type="INSERT">
+    <TABLE classname="com.eurobase.siena.data.productcode.ProductCode"
+           name="ProductCode">
+      <RECORD>
+        <KEYFIELD name="productCode">TST1</KEYFIELD>
+        <FIELD name="productType">Spot</FIELD>
+        <FIELD name="dealType">Spot</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="productCode">TST2</KEYFIELD>
+        <FIELD name="productType">Spot</FIELD>
+        <FIELD name="dealType">Spot</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="productCode">TST3</KEYFIELD>
+        <FIELD name="productType">Spot</FIELD>
+        <FIELD name="dealType">Spot</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="productCode">TST4</KEYFIELD>
+        <FIELD name="productType">Spot</FIELD>
+        <FIELD name="dealType">Spot</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="productCode">TST5</KEYFIELD>
+        <FIELD name="productType">Spot</FIELD>
+        <FIELD name="dealType">Spot</FIELD>
+        <SLOT classname="com.eurobase.siena.data.productcode.LegProductCodesSet"
+              memberClassname="com.eurobase.siena.data.productcode.LegProductCode"
+              name="LegProductCodes">
+          <SLOTRECORD type="INSERT">
+            <SLOTKEYFIELD name="legNo">1</SLOTKEYFIELD>
+            <SLOTFIELD name="productCodeRef">TST1</SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD type="INSERT">
+            <SLOTKEYFIELD name="legNo">2</SLOTKEYFIELD>
+            <SLOTFIELD name="productCodeRef">TST2</SLOTFIELD>
+          </SLOTRECORD>
+        </SLOT>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

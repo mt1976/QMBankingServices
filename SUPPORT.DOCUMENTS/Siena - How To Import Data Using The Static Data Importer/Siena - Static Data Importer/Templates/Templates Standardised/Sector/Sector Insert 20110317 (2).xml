@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+    <TRANSACTION type="INSERT">
+        <TABLE name="Centre" classname="com.eurobase.siena.data.sector.Sector">
+            <RECORD>
+                <KEYFIELD name="code">6001</KEYFIELD>
+                <FIELD name="name">Test6001</FIELD>
+            </RECORD>
+        </TABLE>
+    </TRANSACTION>
+</TRANSACTIONS>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+    <TRANSACTION type="INSERT">
+        <TABLE name="Channel" classname="com.eurobase.siena.data.channel.Channel">
+            <RECORD>
+                  <KEYFIELD name="name">TEST</KEYFIELD>
+                  <FIELD name="on">Y</FIELD>
+                  <FIELD name="quoteAsIndicative">N</FIELD>
+              </RECORD>
+        </TABLE>
+      </TRANSACTION>
+  </TRANSACTIONS>

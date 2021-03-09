@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : spotReport.xml
+    Created on : 28 January 2011, 11:41
+    Author     : rmcconnell
+    Description:
+        Purpose of the document follows.
+   Deal Type identification:
+    This has a SubTyp of SWP so this is a Swap
+    
+    Attributes:
+      ExecTyp=0: means new report
+      TrdID: This is the external reference number as far as siena is concerened (allocated by the bank if this is deal import for referencing the deal).
+             If this is for deal export, then this will be a siena contract number
+      TrdID2: This is a siena reference number (deal export only). It remains constant for the lifetime of the deal (constant through deal edits)
+      OrigTrdId: If this deal is imported by siena and re-exported, this will contain the original trade id specified by the bank. From siena's point of view this is for maintaining an external reference id
+              For eTrader deals thsi will contain the eTrader generated external reference.
+      TrdDt: trade start date
+      SettlDt: This is the far leg settlement date
+      Ccy: This is the dealt currency
+      LastSpotRate: This is the spot rate for the near leg
+      LastPx:       The is the price for the far leg
+      LastQty:      This is the dealt amount for the far leg
+-->
+
+<TrdCaptRpt  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+   xmlns='http://www.fixprotocol.org/FIXML-5-0-SP1'
+   xsi:schemaLocation='http://www.fixprotocol.org/FIXML-5-0-SP1 fixml-tradecapture-base-5-0-SP1.xsd'
+   ExecTyp="0"
+   TrdID="SWAP0002" OrigTrdID="XYZ5433" TrdID2="SIENA-REF5433"
+   TrdDt="2011-03-14" SettlDt="2011-06-14" Ccy="USD"
+   LastSpotRt="1.6125" LastQty="65000000" LastPx="1.6125" >
+<!--
+  Snt: The time this report was sent
+-->
+<Hdr Snt="2011-03-14T10:32:00"/>
+<!--
+  Sym: traded currency pair
+  CFI: FFCPNW Indicates Swap
+  SubTyp: SWP means Swap
+-->
+<Instrmt Sym="GBP/USD" CFI="FFCPNW" SubTyp="SWP"/>
+<!--
+  The cross information plus the underlying side rates
+  
+  The logic works like this:
+  
+-->
+<!--
+  Underlying rates
+
+  Sym:    Currency pair of the price
+  FxRate: The price
+  Px:     Margin (derived if cross)
+  CFI:    RCSXXX=SPOT, FFCPN0=FORWARD
+  Mat:    Maurity date. Used to give a date for the rate. Where CFI is RCSXXX, this is the spot date
+-->
+<Undly Desc="SP" Sym="GBP/USD" FxRate="1.6125" Ccy="GBP" CFI="RCSXXX" Px="0" Mat="2011-03-16"/>
+<!--
+  far leg
+-->
+<Undly Desc="Leg2" Sym="GBP/USD" FxRate="1.6225" Ccy="GBP" CFI="FFCPN0" Px="0" Mat="2011-06-16"/>
+<!--
+  LegNo:  the leg in question, 1 = near
+  LastQty: the dealt amount for the near leg
+  SettlDt: Settlement date for this leg
+-->
+<TrdLeg LegNo="1" LastQty="65000000" SettlDt="2011-03-16"/>
+<!--
+  LegNo:  the leg in question, 2 = far
+  LastQty: the dealt amount for the far leg
+  SettlDt: Settlement date for this leg
+-->
+<TrdLeg LegNo="2"  LastQty="65000000" SettlDt="2011-06-16"/>
+<!--
+  Settlement Details, direction and parties
+  Side: 1 = the bank sells for near leg, Customer buy
+  Side: 2 = the bank buys for near leg, Customer sell
+-->
+<RptSide Side="1">
+  <!-- The customer mapped to a siena counterparty -->
+  <Pty ID="12345678" R="13"/>
+  <!--
+    The mandated user
+  -->
+  <!-- <Pty ID="DACochran" R="11"/>   -->
+  <!-- Near leg pay from and pay to -->
+  <SettlDetails>
+    <!-- Near leg the banks debit GBP, customer credit GBP -->
+  <!--   <Pty ID="057793778, SBSA, Jacobs"/>   -->
+  </SettlDetails>
+  <!-- Near leg take from and take at -->
+  <SettlDetails>
+    <!-- Near leg the banks credit USD customer debit USD -->
+    <!--   <Pty ID="057793778, SBSA, Jacobs"/>  -->
+  </SettlDetails>
+</RptSide>
+<!--
+  Side: 1 = the bank sells for far leg, Customer buy
+  Side: 2 = the bank buys for far leg, Customer sell
+-->
+<RptSide Side="2">
+  <!-- Far leg pay from and pay to -->
+  <SettlDetails>
+    <!-- Near leg the banks debit USD, customer credit USD -->
+ <!--    <Pty ID="057793778, SBSA, Jacobs"/>     -->
+    </SettlDetails>
+  <!-- Far Leg Take from, Take at -->
+  <SettlDetails>
+    <!-- Far leg the banks credit GBP, customer debit GBP-->
+  <!--   <Pty ID="057793778, SBSA, Jacobs"/>     -->
+  
+    </SettlDetails>
+</RptSide>
+</TrdCaptRpt>

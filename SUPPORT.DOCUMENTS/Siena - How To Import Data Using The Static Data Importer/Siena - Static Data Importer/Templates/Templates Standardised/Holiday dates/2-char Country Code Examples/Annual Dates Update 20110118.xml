@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+    <TRANSACTION type="UPDATE">
+        - <TABLE name="Country" classname="com.eurobase.siena.data.country.Country">
+            <RECORD>
+                <KEYFIELD name="code">GB</KEYFIELD>
+                <SLOT name="Holidays.AnnualDates" classname="com.eurobase.siena.data.holiday.AnnualHolidayDateSet" memberClassname="com.eurobase.siena.data.holiday.AnnualHolidayDate">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="name">Christmas</SLOTKEYFIELD>
+                        <SLOTFIELD name="hMonth">12</SLOTFIELD>
+                        <SLOTFIELD name="hDay">25</SLOTFIELD>
+                        <SLOTFIELD name="slide">Y</SLOTFIELD>
+                        <SLOTFIELD name="settleOK">N</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+            </RECORD>
+        </TABLE>
+    </TRANSACTION>
+</TRANSACTIONS>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+	<TRANSACTION type="UPDATE">
+		<TABLE name="NostroAgent"
+		       classname="com.eurobase.siena.data.nostro.NostroAgent">
+			<RECORD>
+				<KEYFIELD name="name">Agent</KEYFIELD>
+				<FIELD name="fullName">Universal Nostro 1</FIELD>
+				<FIELD name="countryCode">USA</FIELD>
+			</RECORD>
+		</TABLE>
+	</TRANSACTION>
+</TRANSACTIONS>

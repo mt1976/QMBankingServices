@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TRANSACTIONS>
+  <TRANSACTION type="IMPORT">
+
+    <TABLE classname="com.eurobase.siena.data.counterparty.Counterparty" name="Counterparty">
+      <RECORD>
+        <KEYFIELD name="name.firm">BCIX</KEYFIELD>
+        <KEYFIELD name="name.centre">LGS</KEYFIELD>
+        <!-- Note this is the group name, not liability number -->
+        <FIELD name="cpartyGroupName">BCIW</FIELD>
+      </RECORD>
+    </TABLE>
+
+	    <!-- Import of T24 party representing a parent party, i.e. if liability number is the same as customer number. -->
+    <TABLE classname="com.eurobase.siena.data.counterparty.CpartyGroup" name="CounterpartyGroup">
+      <RECORD>
+        <KEYFIELD name="name">BCIW</KEYFIELD>
+        <!-- Hard-coded to AAA as per other existing groups. Is this correct? -->
+        <FIELD name="timeBandID">AAA</FIELD>
+      </RECORD>
+    </TABLE>
+
+   </TRANSACTION>
+</TRANSACTIONS>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : AddCounterpartyTest.xml
+    Created on : 11:11 24 August 2009
+    Author     : rhawes
+    Description:
+        This is an example Data Import file Counterparty
+-->
+
+<TRANSACTIONS xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+              xmlns='http://www.eurobase.com/schema/dataimport'
+              xsi:schemaLocation='http://www.eurobase.com/schema/dataimport dataimport.xsd'>
+  <TRANSACTION type="INSERT">
+    <TABLE name="Counterparty" classname="com.eurobase.siena.data.counterparty.Counterparty">
+      <RECORD>
+        <KEYFIELD name="name.firm">Importer2</KEYFIELD>
+        <KEYFIELD name="name.centre">LDN</KEYFIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="fullName">Test Counterparty</FIELD>
+        <FIELD name="address">Blank</FIELD>
+        <SLOT name ="Extensions" classname="com.eurobase.common.tech.types.FixedSlotType" memberClassname="com.eurobase.common.tech.types.FixedSlotType$FixedData">
+          <SLOTRECORD>
+            <SLOTKEYFIELD name = "key">Know Your Customer Status</SLOTKEYFIELD>
+            <SLOTFIELD name="value">Y</SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name = "key">Inactive Status</SLOTKEYFIELD>
+            <SLOTFIELD name="value">N</SLOTFIELD>
+          </SLOTRECORD>
+        </SLOT>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

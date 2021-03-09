@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+<TRANSACTION type="INSERT">
+<TABLE name="Counterparty" classname="com.eurobase.siena.data.counterparty.Counterparty">
+<RECORD>
+<KEYFIELD name="name.firm">DFRENCH</KEYFIELD>
+<KEYFIELD name="name.centre">TOK</KEYFIELD>
+<FIELD name="fullName">DFRENCH</FIELD>
+<FIELD name="address">DFRENCH</FIELD>
+<FIELD name="telephoneNumber"/>
+<FIELD name="faxNumber"/>
+<FIELD name="cLSType">NO</FIELD>
+<FIELD name="accountOfficer">2000</FIELD>
+<FIELD name="countryCode">JP</FIELD>
+<FIELD name="sectorCode">3001</FIELD>
+<FIELD name="cpartyGroupName">BKTOKYO</FIELD>
+<FIELD name="swiftCode">DFRENCH</FIELD>
+</RECORD>
+</TABLE>
+</TRANSACTION>
+</TRANSACTIONS>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<TRANSACTIONS>
+  <TRANSACTION type="IMPORT">
+    <TABLE name="Portfolio" classname="com.eurobase.siena.data.portfolio.Portfolio">
+      <RECORD>
+        <KEYFIELD name="code">CF-00</KEYFIELD>
+        <FIELD name="description1">17:00 Prev Day</FIELD>
+        <FIELD name="default">N</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="code">CF-01</KEYFIELD>
+        <FIELD name="description1">09:30</FIELD>
+        <FIELD name="default">N</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="code">CF-02</KEYFIELD>
+        <FIELD name="description1">12:45</FIELD>
+        <FIELD name="default">N</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="code">CF-03</KEYFIELD>
+        <FIELD name="description1">14:15</FIELD>
+        <FIELD name="default">N</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="code">CF-04</KEYFIELD>
+        <FIELD name="description1">15:15</FIELD>
+        <FIELD name="default">N</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="code">CF-05</KEYFIELD>
+        <FIELD name="description1">15:40</FIELD>
+        <FIELD name="default">N</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="code">CF-06</KEYFIELD>
+        <FIELD name="description1">16:05</FIELD>
+        <FIELD name="default">N</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="code">CF-07</KEYFIELD>
+        <FIELD name="description1">16:30</FIELD>
+        <FIELD name="default">N</FIELD>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

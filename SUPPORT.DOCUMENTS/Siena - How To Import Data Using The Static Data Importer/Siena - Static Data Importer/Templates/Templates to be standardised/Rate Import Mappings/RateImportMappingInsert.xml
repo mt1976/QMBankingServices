@@ -1,0 +1,733 @@
+
+<TRANSACTIONS>
+    <!-- 
+**************************ChannelMargin table***********************
+    -->
+    <TRANSACTION type="INSERT">
+        <TABLE name="RateImportMapping" classname="com.eurobase.siena.external.implementation.mqrate.RateImportMapping">
+            <RECORD>
+                <KEYFIELD name="key">EURGBP=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURGBP</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURGBP=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURGBP</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EUR=EBS</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURUSD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EUR=EBS</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURUSD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">GBP=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">GBPUSD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">EUR=EBS</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURUSD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EUR=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURUSD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">CAD=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDCAD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+			
+		<RECORD>
+                <KEYFIELD name="key">EURCAD=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURCAD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURCHF=EBS</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURCHF</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">CHF=EBS</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDCHF</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">EURCYP=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURCYP</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">CYP=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDCYP</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURDKK=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURDKK</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">DKK=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDDKK</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURMTL=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURMTL</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">MTL=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDMTL</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURNOK=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURNOK</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">NOK=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDNOK</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURSEK=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURSEK</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">SEK=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDSEK</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">AUD=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">AUDUSD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">AUD=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">AUDUSD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURAUD=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURAUD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">HKD=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDHKD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">HKD=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDHKD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">EURHKD=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURHKD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURJPY=EBS</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURJPY</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">JPY=EBS</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDJPY</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+<!--            <RECORD>
+                <KEYFIELD name="key">NZD=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDNZD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>-->
+
+<!--		<RECORD>
+                <KEYFIELD name="key">EURNZD=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURNZD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>-->
+
+		<RECORD>
+                <KEYFIELD name="key">SAR=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDSAR</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURSAR=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURSAR</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+            <RECORD>
+                <KEYFIELD name="key">SGD=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDSGD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">EURSGD=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURSGD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+            <RECORD>
+                <KEYFIELD name="key">ZAR=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDZAR</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+			<RECORD>
+                <KEYFIELD name="key">EURZAR=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURZAR</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">CNY=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDCNY</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+			<RECORD>
+                <KEYFIELD name="key">EURCNY=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURCNY</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">INR=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURINR</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+			<RECORD>
+                <KEYFIELD name="key">EURINR=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURINR</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+            <RECORD>
+                <KEYFIELD name="key">ILS=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDILS</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+			<RECORD>
+                <KEYFIELD name="key">EURILS=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURILS</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+            <RECORD>
+                <KEYFIELD name="key">THB=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDTHB</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURTHB=W</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURTHB</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+            <RECORD>
+                <KEYFIELD name="key">MYR=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDMYR</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURMYR=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURMYR</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">BHD=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDBHD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+            <RECORD>
+                <KEYFIELD name="key">EURBHD=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURKWD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">KWD=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDKWD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+			<RECORD>
+                <KEYFIELD name="key">EURKWD=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURKWD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+            <RECORD>
+                <KEYFIELD name="key">OMR=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDOMR</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EUROMR=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EUROMR</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+            <RECORD>
+                <KEYFIELD name="key">QAR=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDQAR</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+			<RECORD>
+                <KEYFIELD name="key">EURQAR=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURQAR</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+            <RECORD>
+                <KEYFIELD name="key">JOD=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDJOD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+			<RECORD>
+                <KEYFIELD name="key">EURJOD=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURJOD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+            <RECORD>
+                <KEYFIELD name="key">EURCZK=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURCZK</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">CZK=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDCZK</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EGP=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDEGP</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EUREGP=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EUREGP</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURHUF=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURHUF</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">HUF=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDHUF</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">ISK=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDISK</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">EURISK=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURISK</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">XAF=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDXAF</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">EURXAF=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURXAF</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURPLN=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURPLN</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">PLN=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDPLN</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">AED=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDAED</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">EURAED=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURAED</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">PHP=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDPHP</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">EURPHP=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURPHP</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">MAD=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDMAD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">MAD=BKAM</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDMAD</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURSKK=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURSKK</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURLVL=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURLVL</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+		<RECORD>
+                <KEYFIELD name="key">LVL=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDLVL</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">TRYTOM=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDTRY</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+		<RECORD>
+                <KEYFIELD name="key">EURTRY=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURTRY</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURHRK=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURHRK</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">HRK=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDHRK</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EUREEK=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EUREEK</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+
+            <RECORD>
+                <KEYFIELD name="key">EEK=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDEEK</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURLTL=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURLTL</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">LTL=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDLTL</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">MXN=D3</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDMXN</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">EURMXN=R</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">EURMXN</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">FRF=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDFRF</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">BEF=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDBEF</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">ESP=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDESP</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+
+            <RECORD>
+                <KEYFIELD name="key">IEP=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDIEP</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+            
+        </TABLE>
+        
+    </TRANSACTION>
+    
+</TRANSACTIONS>

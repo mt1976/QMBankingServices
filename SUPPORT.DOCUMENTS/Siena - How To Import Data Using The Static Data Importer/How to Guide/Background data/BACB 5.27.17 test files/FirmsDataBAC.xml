@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TRANSACTIONS>
+  <TRANSACTION type="IMPORT">
+
+    <TABLE classname="com.eurobase.siena.data.firms.Firm" name="Firm">
+      <RECORD>
+        <KEYFIELD name="firmName">BCIZ</KEYFIELD>
+        <FIELD name="fullName">BCIZ (MALI)</FIELD>
+      </RECORD>
+    </TABLE>
+   </TRANSACTION>
+</TRANSACTIONS>

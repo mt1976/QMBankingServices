@@ -1,0 +1,107 @@
+
+<TRANSACTIONS>
+    
+    <TRANSACTION type="UPDATE">
+        <TABLE name="Counterparty" classname="com.eurobase.siena.data.counterparty.Counterparty">
+            <RECORD>
+                  <KEYFIELD name="name.firm">AIB</KEYFIELD>
+                  <KEYFIELD name="name.centre">CHQ</KEYFIELD>
+                  <FIELD name="countryCode">IRL</FIELD>
+                  <FIELD name="fullName">AIB CHEQUES222</FIELD>
+                  <FIELD name="sectorCode"></FIELD>
+                  <FIELD name="cpartyGroupName"></FIELD>
+                  <FIELD name="marginsTradingGroup"></FIELD>
+                  <FIELD name="tradingControlTradingGroup"></FIELD>
+                  <FIELD name="suspend">N</FIELD>
+                  <FIELD name="accountNumber"></FIELD>
+                  <FIELD name="swiftCode"></FIELD>
+                  <FIELD name="clearingCode"></FIELD>
+                  <FIELD name="customerType">InterBank</FIELD>
+                  <FIELD name="telephoneNumber"></FIELD>
+                  <FIELD name="faxNumber">012451001</FIELD>
+                  <FIELD name="accountOfficer"></FIELD>
+                  <FIELD name="autoConfirm">N</FIELD>
+                  <FIELD name="address"></FIELD>
+                  <FIELD name="sellText"></FIELD>
+                  <FIELD name="buyText"></FIELD>
+                  <FIELD name="cLSType">Not a Participant</FIELD>
+                  <FIELD name="cLSStart"></FIELD>
+                  <FIELD name="timeBandID">LER</FIELD>
+                  <FIELD name="safe">Y</FIELD>
+                  <FIELD name="marginFactor">0</FIELD>
+                  <FIELD name="adequacyRatioLimit">0.00</FIELD>
+                  <FIELD name="marginTradingType">Not Margin Trading</FIELD>
+                  <FIELD name="notes"></FIELD>
+                <SLOT name="NettingCurrencies" classname="com.eurobase.siena.data.currencies.NettingSet" memberClassname="com.eurobase.siena.data.currencies.NettingKey">
+                    <SLOTRECORD>
+                          <SLOTKEYFIELD name="currency">USD</SLOTKEYFIELD>
+                         
+                    </SLOTRECORD>
+                     
+                </SLOT>
+                <SLOT name="Extensions" classname="com.eurobase.common.tech.types.FixedSlotType" memberClassname="com.eurobase.common.tech.types.FixedSlotType$FixedData">
+                    <SLOTRECORD>
+                          <SLOTKEYFIELD name="key">Carve Out</SLOTKEYFIELD>
+                          <SLOTFIELD name="value">N</SLOTFIELD>
+                         
+                    </SLOTRECORD>
+                     
+                </SLOT>
+                 
+            </RECORD>
+            
+            
+            
+            
+            <RECORD>
+                  <KEYFIELD name="name.firm">AIB</KEYFIELD>
+                  <KEYFIELD name="name.centre">REM</KEYFIELD>
+                  <FIELD name="countryCode">IRL</FIELD>
+                  <FIELD name="fullName">AIB REMIT</FIELD>
+                  <FIELD name="sectorCode"></FIELD>
+                  <FIELD name="cpartyGroupName"></FIELD>
+                  <FIELD name="marginsTradingGroup"></FIELD>
+                  <FIELD name="tradingControlTradingGroup"></FIELD>
+                  <FIELD name="suspend">N</FIELD>
+                  <FIELD name="accountNumber"></FIELD>
+                  <FIELD name="swiftCode"></FIELD>
+                  <FIELD name="clearingCode"></FIELD>
+                  <FIELD name="customerType">InterBank</FIELD>
+                  <FIELD name="telephoneNumber"></FIELD>
+                  <FIELD name="faxNumber">012451001</FIELD>
+                  <FIELD name="accountOfficer"></FIELD>
+                  <FIELD name="autoConfirm">N</FIELD>
+                  <FIELD name="address"></FIELD>
+                  <FIELD name="sellText"></FIELD>
+                  <FIELD name="buyText"></FIELD>
+                  <FIELD name="cLSType">Not a Participant</FIELD>
+                  <FIELD name="cLSStart"></FIELD>
+                  <FIELD name="timeBandID">LER</FIELD>
+                
+                  <FIELD name="safe">Y</FIELD>
+                  <FIELD name="marginFactor">0</FIELD>
+                  <FIELD name="adequacyRatioLimit">0.00</FIELD>
+                  <FIELD name="marginTradingType">Not Margin Trading</FIELD>
+                  <FIELD name="notes"></FIELD>
+                <SLOT name="NettingCurrencies" classname="com.eurobase.siena.data.currencies.NettingSet" memberClassname="com.eurobase.siena.data.currencies.NettingKey">
+                    <SLOTRECORD>
+                          <SLOTKEYFIELD name="currency">USD</SLOTKEYFIELD>
+                         
+                    </SLOTRECORD>
+                     
+                </SLOT>
+                <SLOT name="Extensions" classname="com.eurobase.common.tech.types.FixedSlotType" memberClassname="com.eurobase.common.tech.types.FixedSlotType$FixedData">
+                    <SLOTRECORD>
+                          <SLOTKEYFIELD name="key">Carve Out</SLOTKEYFIELD>
+                          <SLOTFIELD name="value">N</SLOTFIELD>
+                         
+                    </SLOTRECORD>
+                     
+                </SLOT>
+            </RECORD>
+             
+             
+        </TABLE>
+         
+    </TRANSACTION>
+</TRANSACTIONS>

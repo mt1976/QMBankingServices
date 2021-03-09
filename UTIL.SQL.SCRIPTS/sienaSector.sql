@@ -1,3 +1,3 @@
 SELECT        Code, Name
-FROM            dbo.Sector
+FROM            {{SQL.SOURCE}}.Sector
 WHERE        (InternalDeleted IS NULL)

@@ -1,0 +1,67 @@
+<?xml version="1.0"  standalone="yes" ?>
+
+<!--
+XML to insert, update or delete records in the Siena database. 
+
+The transaction type attribute should be edited to one of INSERT, UPDATE or DELETE.
+Values to be edited are KEYFIELD, FIELD and SLOTFIELD
+One or more records can be read for each TABLE.
+One or more tables can be read for a TRANSACTION type.
+Attributes which are not transaction type attributes should NOT be edited.
+
+-->
+
+<TRANSACTIONS xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+              xmlns='http://www.eurobase.com/schema/dataimport'
+              xsi:schemaLocation='http://www.eurobase.com/schema/dataimport dataimport.xsd'>
+   <TRANSACTION type="INSERT">
+      <TABLE name="Firm" classname="com.eurobase.siena.data.firms.Firm">
+        <RECORD>
+          <KEYFIELD name = "firmName">Test</KEYFIELD>
+	  <FIELD name="fullName">Test Firm Fullname</FIELD>
+	  <FIELD name="country">GBR</FIELD>
+        </RECORD>
+      </TABLE>
+   </TRANSACTION>
+   <TRANSACTION type="INSERT">
+      <TABLE name="Counterparty" classname="com.eurobase.siena.data.counterparty.Counterparty">
+        <RECORD>
+	  <KEYFIELD name = "name.firm">Test</KEYFIELD>
+	  <KEYFIELD name = "name.centre">LON</KEYFIELD>
+	  <FIELD name="customerType">Corporate</FIELD>
+	  <FIELD name="countryCode">GBR</FIELD>
+	  <SLOT name ="Extensions" classname="com.eurobase.common.tech.types.FixedSlotType" 
+                       memberClassname="com.eurobase.common.tech.types.FixedSlotType$FixedData">
+	    <SLOTRECORD>
+	      <SLOTKEYFIELD name = "key">Carve Out</SLOTKEYFIELD>
+	      <SLOTFIELD name="value">Y</SLOTFIELD>
+	    </SLOTRECORD>
+	    <SLOTRECORD>
+	      <SLOTKEYFIELD name = "key">Client Primary TCID</SLOTKEYFIELD>
+	        <SLOTFIELD name="value">XXXX</SLOTFIELD>
+	     </SLOTRECORD>
+	     <SLOTRECORD>
+	       <SLOTKEYFIELD name = "key">Client Secondary TCID</SLOTKEYFIELD>
+	       <SLOTFIELD name="value">YYYY</SLOTFIELD>
+	     </SLOTRECORD>
+	     <SLOTRECORD>
+	       <SLOTKEYFIELD name = "key">Cover Trade</SLOTKEYFIELD>
+	       <SLOTFIELD name="value">N</SLOTFIELD>
+	     </SLOTRECORD>
+	     <SLOTRECORD>
+	       <SLOTKEYFIELD name = "key">Rate Timeout</SLOTKEYFIELD>
+	       <SLOTFIELD name="value">20000</SLOTFIELD>
+	     </SLOTRECORD>
+	     <SLOTRECORD>
+	       <SLOTKEYFIELD name = "key">Rate Validation</SLOTKEYFIELD>
+	       <SLOTFIELD name="value">Within Range and Within Timeout</SLOTFIELD>
+	     </SLOTRECORD>
+	     <SLOTRECORD>
+	       <SLOTKEYFIELD name = "key">Secured Settlement</SLOTKEYFIELD>
+	       <SLOTFIELD name="value">Y</SLOTFIELD>
+	     </SLOTRECORD>
+	   </SLOT>
+         </RECORD>
+	</TABLE>
+   </TRANSACTION>   
+</TRANSACTIONS>

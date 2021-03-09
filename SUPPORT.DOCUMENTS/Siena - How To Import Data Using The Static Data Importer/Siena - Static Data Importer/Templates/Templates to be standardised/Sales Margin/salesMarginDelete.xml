@@ -1,0 +1,37 @@
+<TRANSACTIONS>
+    <!--**************************SalesMargin table***********************-->
+    <TRANSACTION type = "DELETE">
+        <TABLE name ="SalesMargin" classname="com.eurobase.siena.portal.model.SalesMargin">
+            <RECORD>
+                <KEYFIELD name = "key.areaType">Counterparty</KEYFIELD>
+                <KEYFIELD name = "key.criteria">CurrencyPair Product Tenor</KEYFIELD>
+                <KEYFIELD name = "key.areaHolder.dealingInterface"></KEYFIELD>
+                <KEYFIELD name = "key.areaHolder.channel"></KEYFIELD>
+                <KEYFIELD name = "key.areaHolder.tradingGroup"></KEYFIELD>
+                <KEYFIELD name = "key.areaHolder.counterpartyDealingInterface.counterparty.firm">AIB</KEYFIELD>
+                <KEYFIELD name = "key.areaHolder.counterpartyDealingInterface.counterparty.centre">CHQ</KEYFIELD>
+                <KEYFIELD name = "key.areaHolder.counterpartyDealingInterface.dealingInterface">AIB-CH1</KEYFIELD>
+                <KEYFIELD name = "key.criteriaHolder.product">FX Spot</KEYFIELD>
+                <KEYFIELD name = "key.criteriaHolder.currencyPair.majorCurrencyIsoCode"></KEYFIELD>
+                <KEYFIELD name = "key.criteriaHolder.currencyPair.minorCurrencyIsoCode"></KEYFIELD>
+                <KEYFIELD name = "key.criteriaHolder.tenor">Undefined</KEYFIELD>
+                <KEYFIELD name = "key.criteriaHolder.timeZone"></KEYFIELD>
+                <FIELD name = "priority">2</FIELD>
+                <FIELD name = "data.marginBandAmountInMajor">Y</FIELD>
+                <FIELD name = "data.amountBandId">Other CCY's Cheques Band 1</FIELD>
+                <SLOT name ="Data.AmountBandList" classname="com.eurobase.siena.portal.model.AmountBandSlotType" 
+                      memberClassname="com.eurobase.siena.portal.model.AmountBandSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name = "marginBandMaxAmount">600</SLOTKEYFIELD>
+                        <SLOTFIELD name = "margin">3.0/3.0%</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name = "marginBandMaxAmount">13000</SLOTKEYFIELD>
+                        <SLOTFIELD name = "margin">1.5/1.5%</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+            </RECORD>
+
+</TABLE>
+    </TRANSACTION>
+</TRANSACTIONS>

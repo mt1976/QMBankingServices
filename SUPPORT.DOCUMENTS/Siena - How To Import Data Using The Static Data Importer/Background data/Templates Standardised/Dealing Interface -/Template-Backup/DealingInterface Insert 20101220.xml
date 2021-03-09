@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+    <TRANSACTION type="UPDATE">
+        <TABLE name="DealingInterface" classname="com.eurobase.siena.data.channel.DealingInterface">
+            <RECORD>
+                <KEYFIELD name="name">TEST</KEYFIELD>
+                <FIELD name="counterpartyImportId.originID"/>
+                <FIELD name="counterpartyImportId.importID"/>
+                <FIELD name="acceptReducedAmount"/>
+                <!-- FIELD name="ratePercentageDeviation"/-->
+                <FIELD name="quoteAsIndicative"/>
+                <FIELD name="rateTimeOut"/>
+                <FIELD name="propagationDelay"/>
+                <FIELD name="checkLiquidity"/>
+                <FIELD name="changeQuoteDirection"/>
+                <FIELD name="generateRejectedDeals"/>
+                <FIELD name="spotUpdatesForForwardQuotes"/>
+                <SLOT name="Extensions" classname="com.eurobase.common.tech.types.FixedSlotType" memberClassname="com.eurobase.common.tech.types.FixedSlotType$FixedData">
+                    <SLOTRECORD>
+                         	<SLOTKEYFIELD name="key">Can Retract Quotes</SLOTKEYFIELD>
+                        	<SLOTFIELD name="value">N</SLOTFIELD>
+                         	<SLOTKEYFIELD name="key">Cancel ESP if Not Priced</SLOTKEYFIELD>
+                        	<SLOTFIELD name="value">N</SLOTFIELD>
+		                    <SLOTKEYFIELD name="key">Cancel RFQ/S if Not Priced</SLOTKEYFIELD>
+                        	<SLOTFIELD name="value">N</SLOTFIELD>
+                        	<SLOTKEYFIELD name="key">Credit Checked at DI</SLOTKEYFIELD>
+                        	<SLOTFIELD name="value">N</SLOTFIELD>
+                         	<SLOTKEYFIELD name="key">Duplicate Check on External Ref</SLOTKEYFIELD>
+                        	<SLOTFIELD name="value">N</SLOTFIELD>
+                         	<SLOTKEYFIELD name="key">Feds User Id</SLOTKEYFIELD>
+                        	<SLOTFIELD name="value"/>
+                         	<SLOTKEYFIELD name="key">Limit Check Quote</SLOTKEYFIELD>
+                        	<SLOTFIELD name="value">N</SLOTFIELD>
+                         	<SLOTKEYFIELD name="key">Listen on Limits</SLOTKEYFIELD>
+                        	<SLOTFIELD name="value">N</SLOTFIELD>
+                         	<SLOTKEYFIELD name="key">Use Reroute Definition Only</SLOTKEYFIELD>
+                        	<SLOTFIELD name="value">N</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+            </RECORD>
+
+        </TABLE>
+    </TRANSACTION>
+</TRANSACTIONS>

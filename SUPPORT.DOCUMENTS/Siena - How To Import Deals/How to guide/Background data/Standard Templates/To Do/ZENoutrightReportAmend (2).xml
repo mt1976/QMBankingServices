@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : outrightReport.xml
+    Created on : 28 January 2011, 09:26
+    Author     : rhawes
+    Description:
+        Purpose of the document follows.
+        
+    Deal Type identification:
+     This has a SubTyp of OT so this is an Outright
+    
+    Attributes:
+      ExecTyp=0: means new report
+      TrdID: This is the external reference number as far as siena is concerened (allocated by the bank for referencing the deal).
+      TrdDt: TrdDt: trade start date
+      SettlDt: This is the settlement date
+      Ccy: This is the dealt currency
+      LastQty: This is the quantity of the dealt currency
+      LastPx: This is the all in price at which the currency is being bought or sold
+      LastSpotRate: This is the spot rate which plus points makes up LastPx
+      
+-->
+
+<TrdCaptRpt  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+   xmlns='http://www.fixprotocol.org/FIXML-5-0-SP1'
+   xsi:schemaLocation='http://www.fixprotocol.org/FIXML-5-0-SP1 fixml-tradecapture-base-5-0-SP1.xsd'
+   ExecTyp="5" TrdID="OUTR001" TrdDt="2011-03-14" SettlDt="2011-06-16" Ccy="GBP" LastQty="2560000"
+   LastPx="1.625813" LastSpotRt="1.6244">
+<!--
+  Snt: The time this report was sent
+-->
+<Hdr Snt="2011-03-14T10:32:00"/>
+<!--
+  Sym: The currency pair involved in the exchange
+  CFI=FFCPN0: Indicates that this is an outright.
+  SubTyp: OT means Outright
+-->
+<Instrmt Sym="GBP/USD" CFI="FFCPN0" SubTyp="OT"/>
+<!--
+
+  Must be at least two underlying. If only two then a pair for the traded currency pair:
+  
+    GBP/USD Spot
+    GBP/USD Forward
+    
+  Desc: Label identifying the underlying component
+  FxRate: The all in price
+  Px: margin.
+-->
+<!--
+  First the spot component
+-->
+<Undly Desc="SP" Sym="GBP/USD" FxRate="1.6244" CFI="RCSXXX" Px="0.001" Mat="2011-03-16"/>
+<!--
+  Now the forward component
+-->
+<Undly Desc="Leg1" Sym="GBP/USD" FxRate="1.625813" CFI="FFCPN0" Px="0" Mat="2011-06-16"/>
+<!--
+  Side=1: Means the bank is buying (customer is selling). 2 means selling
+-->
+<RptSide Side="1">
+  <!-- The customer. This is mapped to a siena counterparty. -->
+  <Pty ID="12345678" R="13"/>
+  <!--
+      The mandated user
+  -->
+  <!--   <Pty ID="DACochran" R="11"/>    -->
+
+</RptSide>
+<!--  "<Edt EdtBy="Client" Rsn="Amount Incorrect" />    -->
+</TrdCaptRpt>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+    <TRANSACTION type= "UPDATE">
+         <TABLE name="AmountBand" classname="com.eurobase.siena.data.counterparty.margin.AmountBand">
+             <RECORD>
+                 <KEYFIELD name="amountBandKey.amountBandId">TEST BAND</KEYFIELD>
+                 <KEYFIELD name="amountBandKey.amount">600</KEYFIELD>
+                 <FIELD name="amountBandKey.amount">6001</FIELD>
+            </RECORD>
+     </TABLE>
+     </TRANSACTION>
+</TRANSACTIONS>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+  <TRANSACTION type="INSERT">
+    <TABLE name="Portal/Data/AgreementDealingInterface" classname="com.eurobase.siena.portal.data.AgreementDealingInterface">
+      <RECORD>
+        <KEYFIELD name="key.agreement.priceMaker.type">Sales Desk</KEYFIELD>
+        <KEYFIELD name="key.agreement.priceMaker.tradingEntity">Sales Desk</KEYFIELD>
+        <KEYFIELD name="key.agreement.priceTaker.type">Counterparty</KEYFIELD>
+        <KEYFIELD name="key.agreement.priceTaker.tradingEntity">CTRPTY1LDN</KEYFIELD>
+        <KEYFIELD name="key.dealingInterface">Siena</KEYFIELD>
+        <SLOT name="TradingGroup" classname="com.eurobase.siena.data.counterparty.TradingGroupLinkSlotType" 
+                    memberClassname="com.eurobase.siena.data.counterparty.TradingGroupLinkSlotMember">
+          <SLOTRECORD type="INSERT">
+            <SLOTKEYFIELD name="tradingGroupLink">Test Link</SLOTKEYFIELD>
+            <SLOTFIELD name="tradingGroup">Test Trading Group</SLOTFIELD>
+          </SLOTRECORD>
+        </SLOT>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

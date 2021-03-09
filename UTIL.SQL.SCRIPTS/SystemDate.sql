@@ -1,2 +1,2 @@
 SELECT        CurrentDate
-FROM            Reporting.vwBusinessDate
+FROM            {{SQL.SOURCE}}.vwBusinessDate

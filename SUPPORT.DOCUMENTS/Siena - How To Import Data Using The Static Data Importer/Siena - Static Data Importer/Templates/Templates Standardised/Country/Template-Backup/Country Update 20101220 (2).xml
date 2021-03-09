@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+
+    <TRANSACTION type="UPDATE">
+        <TABLE name="Country" classname="com.eurobase.siena.data.country.Country">
+            <RECORD>
+                <KEYFIELD name = "code">TST</KEYFIELD>
+                <FIELD name = "name">Test Country 1</FIELD>
+            </RECORD>
+         
+        </TABLE>
+        
+    </TRANSACTION>
+    
+</TRANSACTIONS>

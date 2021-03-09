@@ -1,3 +1,3 @@
 SELECT        Code
-FROM            RG.Broker
+FROM            {{SQL.SOURCE}}.Broker
 WHERE        (InternalDeleted IS NULL)

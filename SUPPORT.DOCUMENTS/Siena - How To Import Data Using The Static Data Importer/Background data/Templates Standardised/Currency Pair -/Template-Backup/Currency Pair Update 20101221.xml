@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+    <TRANSACTION type="UPDATE">
+        <TABLE name="CurrencyPair" classname="com.eurobase.siena.data.currencies.CurrencyPair">
+            <RECORD>
+                 <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                 <KEYFIELD name="code.minorCurrencyIsoCode">XPT</KEYFIELD>
+                 <FIELD name="active">Y</FIELD>
+                 <FIELD name="divisive">N</FIELD>
+                 <FIELD name="normalRateFormat.rateDecimals">4</FIELD>
+                 <FIELD name="normalRateFormat.spotQuoteDecimals">4</FIELD>
+                 <FIELD name="normalRateFormat.forwardQuoteDecimals">6</FIELD>
+                 <FIELD name="normalRateFormat.rateIntegers">1</FIELD>
+                 <FIELD name="reciprocalRateFormat.rateDecimals">5</FIELD>
+                 <FIELD name="reciprocalRateFormat.spotQuoteDecimals">5</FIELD>
+                 <FIELD name="reciprocalRateFormat.forwardQuoteDecimals">5</FIELD>
+                 <FIELD name="reciprocalRateFormat.rateIntegers">0</FIELD>
+                 <FIELD name="defaultDealtIsMinor">N</FIELD>
+                 <FIELD name="profitCurrencyIsMajor">N</FIELD>
+                 <FIELD name="spotRateTolerance">0.00</FIELD>
+                 <FIELD name="forwardPointTolerance">0.00</FIELD>                 
+                 <FIELD name="nDFFixingDays">0</FIELD>
+                 <FIELD name="nDFCurrency"/>
+                 <SLOT name="NDFFixingBasisSet" classname="com.eurobase.siena.data.currencies.NDFFixingBasisSet" memberClassname="com.eurobase.siena.data.currencies.NDFFixingBasisSet$NDFFixingBasisKey">
+                     <SLOTRECORD>
+                         <SLOTKEYFIELD name="isDefault"/>
+                         <SLOTKEYFIELD name="nDFFixingBasisKey"/>
+                    </SLOTRECORD>
+                 </SLOT>
+	             <FIELD name="spotRerouteData.rerouteCurrency"/>
+                 <FIELD name="spotRerouteData.overridable">Y</FIELD>
+                 <FIELD name="spotRerouteData.rerouteMode">None</FIELD>
+                 <FIELD name="outrightRerouteData.rerouteCurrency"/>
+                 <FIELD name="outrightRerouteData.rerouteCurrencyDifferent"/>
+                 <FIELD name="outrightRerouteData.overridable">Y</FIELD>
+                 <FIELD name="outrightRerouteData.rerouteMode">None</FIELD>
+                 <FIELD name="defaultInterbankSpotBookKey"/>
+                 <FIELD name="defaultCorporateSpotBookKey"/>
+                 <FIELD name="defaultForwardLayOffBookKey"/>
+                 <FIELD name="costOfCarrySpread.bid">0.0</FIELD>
+                 <FIELD name="costOfCarrySpread.offer">0.0</FIELD>
+	             <FIELD name="swapRerouteData.rerouteCurrency"/>
+                 <FIELD name="swapRerouteData.overridable">Y</FIELD>
+                 <FIELD name="swapRerouteData.rerouteMode">None</FIELD>
+                 <FIELD name="dealerInterventionQuoteTimeout">None</FIELD>                
+                 <FIELD name="keydateBase">2</FIELD>
+ 	             <SLOT name="Extensions" classname="com.eurobase.common.tech.types.FixedSlotType" memberClassname="com.eurobase.common.tech.types.FixedSlotType$FixedData">
+                    <SLOTRECORD>
+                         <SLOTKEYFIELD name="key">Risk Factor</SLOTKEYFIELD>
+                         <SLOTFIELD name="value">100</SLOTFIELD>
+                    </SLOTRECORD>
+                 </SLOT>
+                 <FIELD name="timeout">0</FIELD>
+                 <FIELD name="volatility">0.00</FIELD>                
+           </RECORD>
+        </TABLE>
+    </TRANSACTION>
+ </TRANSACTIONS>

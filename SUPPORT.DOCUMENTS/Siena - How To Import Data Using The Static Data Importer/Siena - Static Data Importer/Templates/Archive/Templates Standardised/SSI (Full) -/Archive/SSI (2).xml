@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : SSI.xml
+    Created on : 10 July 2009
+    Author     : rhawes
+    Description:
+        This is an example Data Import file for the tables
+        CounterpartySettlementInstructions and
+        CounterpartySettlementInstructionsName.
+-->
+
+<TRANSACTIONS xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+              xmlns='http://www.eurobase.com/schema/dataimport'
+              xsi:schemaLocation='http://www.eurobase.com/schema/dataimport dataimport.xsd'>
+  <TRANSACTION type="INSERT">
+    <TABLE name="CounterpartySettlementInstructionsName"
+           classname="com.eurobase.siena.data.counterparty.CounterpartySettlementInstructionsName">
+      <RECORD>
+        <KEYFIELD name="name">JPY a/c 5432</KEYFIELD>
+      </RECORD>
+    </TABLE>
+    <TABLE name="CounterpartySettlementInstructions"
+           classname="com.eurobase.siena.data.counterparty.CounterpartySettlementInstructions">
+      <RECORD>
+        <KEYFIELD name="key.counterparty.firm">ClientA</KEYFIELD>
+        <KEYFIELD name="key.counterparty.centre">BRU</KEYFIELD>
+        <KEYFIELD name="key.currency">JPY</KEYFIELD>
+        <KEYFIELD name="key.name">JPY a/c 5432</KEYFIELD>
+        <KEYFIELD name="key.number">1</KEYFIELD>
+        <KEYFIELD name="key.direction">Receipt</KEYFIELD>
+        <KEYFIELD name="key.type"></KEYFIELD>
+        <FIELD name="isDefault">N</FIELD>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

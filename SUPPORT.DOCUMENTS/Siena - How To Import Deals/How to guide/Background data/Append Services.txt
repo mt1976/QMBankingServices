@@ -1,0 +1,12 @@
+
+# Deal Importer
+service7 = Deal Importer
+service7.startClass=com.eurobase.siena.link.daemon.apps.TwistContainerLauncher
+service7.endClass=com.eurobase.siena.link.daemon.apps.TwistContainerKiller
+service7.defaultLoc={hostName}
+service7.timeout = 300
+# do not change!!!!
+service7.stream = DealImporter
+service7.args = LogFile|{logPath}/DealImporter.log, Jvm|{javaExe} -DDealImporter -Dsiena.lib.path=${siena.lib.path} -DlogServer.sendToStdErr=Y -Deurobase.class.path=siena.dealexporter.class.path -Xms8M -Xmx32M -Djava.awt.headless=true -Dfile.encoding={fileEncoding} -Dsiena.working={systemPath}/data, ProcessList|Deal Import Handler=True
+service7.DealImporter.application.0=DealImportHandler
+service7.panelName=TwistContainer

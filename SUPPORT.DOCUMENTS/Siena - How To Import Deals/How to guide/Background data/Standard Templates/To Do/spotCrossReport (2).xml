@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : spotCrossReport.xml
+    Created on : 22 May 2008, 14:38
+    Author     : rmcconnell
+    Description:
+        Purpose of the document follows.
+    Deal Type identification:
+      This has a subtype of SP Therefore therefore this is a SPOT deal
+    
+    Attributes:
+      ExecTyp=0: means new report
+      TrdDt: TrdDt: trade start date
+      TrdID: This is the external reference number as far as siena is concerened (allocated by the bank if this is deal import for referencing the deal).
+             If this is for deal export, then this will be a siena contract number
+      TrdID2: This is a siena reference number (deal export only). It remains constant for the lifetime of the deal (constant through deal edits)
+      OrigTrdId: If this deal is imported by siena and re-exported, this will contain the original trade id specified by the bank. From siena's point of view this is for maintaining an external reference id
+              For eTrader deals thsi will contain the eTrader generated deal reference.
+      SettlDt: This is the settlement date
+      Ccy: This is the dealt currency
+      LastQty: This is the quantity of the dealt currency
+      LastPx: This is the price at which the currency is being bought or sold
+      LastSpotRate: This is the spot rate
+-->
+
+<TrdCaptRpt  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+   xmlns='http://www.fixprotocol.org/FIXML-5-0-SP1'
+   xsi:schemaLocation='http://www.fixprotocol.org/FIXML-5-0-SP1 fixml-tradecapture-base-5-0-SP1.xsd'
+   ExecTyp="0"
+   TrdID="SPOTX0009" OrigTrdID="XYZ1235" TrdID2="SIENA-REF1235"
+   TrdDt="2011-03-14" SettlDt="2011-03-16" Ccy="HKD"
+   LastQty="5120000" LastPx="11.01" >
+<!--
+  Snt: The time this report was sent
+-->
+<Hdr Snt="2011-03-14T10:32:00"/>
+<!--
+  Sym: The currency pair involved in the exchange
+  CFI=RCSXXX: Indicates that this is spot.
+  SubTyp: SP means Spot
+-->
+<Instrmt Sym="EUR/HKD" CFI="RCSXXX" SubTyp="SP"/>
+<!--
+  If we have more than one undelying, then must be a cross. Note this
+  is a spot deal, so all side rates and crosses are spot (no need for CFI).
+  
+  Logic:
+    assert first dealt-cross spot rate
+    process GBP/JPY cross
+    if more
+      process GBP/USD
+      process USD/JPY
+  
+  Desc: SP meaning these are spot components
+  FxRate: The price
+  Px: The absolute margin (derived if cross)
+-->
+<Undly Desc="SP" Sym="EUR/HKD" FxRate="11.01635" Px="0" Mat="2011-03-16"/>
+<Undly Desc="SP" Sym="EUR/USD" FxRate="1.41356" Px="0"  Mat="2011-03-16"/>
+<Undly Desc="SP" Sym="USD/HKD" FxRate="15.57227" Px="0"  Mat="2011-03-16"/>
+<!--
+  Acct: This will be mapped to a counterparty in siena
+  Side=1: Means the bank is buying (customer is selling). 2 means selling
+-->
+<RptSide Side="1">
+  <!--
+    The Order originating firm
+    -->
+  <Pty ID="12345678" R="13"/>
+  <!--
+    The mandated user
+  -->
+  <!--  <Pty ID="DACochran" R="11"/>   -->
+  <SettlDetails>
+    <!--the banks debit GBP, customer credit GBP -->
+  <!--    <Pty ID="057793778, SBSA, Jacobs"/>    -->
+  </SettlDetails>
+  <!-- Take from and take at -->
+  <SettlDetails>
+    <!-- the banks credit USD customer debit USD -->
+  <!--  <Pty ID="057793778, SBSA, Jacobs"/>   -->
+  </SettlDetails>
+</RptSide>
+</TrdCaptRpt>

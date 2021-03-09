@@ -1,0 +1,1689 @@
+<TRANSACTIONS> 
+    <!-- 
+**************************ChannelMargin table***********************
+ -->
+    <TRANSACTION type="INSERT">
+        <TABLE name="RateTolerance" classname="com.eurobase.siena.data.ratetolerance.RateTolerance">
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">GBP</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURGBP=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURGBP=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUR=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">GBP=D3</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">GBP=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">GBP=D3</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">USD</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUR=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="secondaryRicCode"></SLOTKEYFIELD>
+                        <SLOTFIELD name="op">NONE</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUR=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="secondaryRicCode"></SLOTKEYFIELD>
+                        <SLOTFIELD name="op">NONE</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUR=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="secondaryRicCode"></SLOTKEYFIELD>
+                        <SLOTFIELD name="op">NONE</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUR=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="secondaryRicCode"></SLOTKEYFIELD>
+                        <SLOTFIELD name="op">NONE</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">CAD</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUR=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="secondaryRicCode">CAD=D3</SLOTKEYFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUR=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">CAD=D3</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURCAD=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURCAD=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="primaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">CHF</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURCHF=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURCHF=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">CHF=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">CHF=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="primaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    
+                </SLOT>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">CYP</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURCYP=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURCYP=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">CYP=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">CYP=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="primaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">DKK</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURDKK=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURDKK=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">DKK=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">DKK=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="primaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">MTL</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURMTL=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURMTL=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">MTL=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">DIV</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">MTL=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">DIV</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">NOK</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURNOK=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTFIELD name="primaryRicCode">EURNOK=EBS</SLOTFIELD>
+                        <SLOTFIELD name="op">NONE</SLOTFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">NOK=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">NOK=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">SEK</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURSEK=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURSEK=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">SEK=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">SEK=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">AUD</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUR=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">DIV</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">AUD=D3</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUR=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">DIV</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">AUD=D3</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURAUD=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURAUD=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">HKD</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">HKD=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">HKD=D3</SLOTKEYFIELD>
+                        <SLOTFIELD name="op">MUL</SLOTFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURHKD=R</SLOTKEYFIELD>
+                        <SLOTFIELD name="op">NONE</SLOTFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURHKD=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">JPY</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURJPY=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURJPY=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">JPY=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">JPY=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">NZD</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUR=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">DIV</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">NZD=D3</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUR=EBS</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">DIV</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">NZD=D3</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURNZD=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURNZD=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">SAR</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">SAR=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">SAR=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURSAR=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURSAR=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">SGD</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">SGD=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">SGD=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURSGD=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURSGD=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">ZAR</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">ZAR=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">ZAR=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURZAR=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURZAR=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">CNY</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">CNY=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">CNY=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURCNY=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURCNY=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">INR</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">INR=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">INR=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURINR=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURINR=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">ISK</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">ILS=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">ILS=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURILS=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURILS=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">THB</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">THB=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">THB=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURTHB=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURTHB=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">MYR</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">MYR=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">MYR=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURMYR=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURMYR=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">BHD</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">BHD=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">BHD=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURBHD=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURBHD=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">KWD</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">KWD=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">KWD=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURKWD=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURKWD=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">OMR</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">OMR=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">OMR=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUROMR=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUROMR=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">QAR</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">QAR=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">QAR=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURQAR=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURQAR=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">JOD</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">JOD=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">JOD=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURJOD=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURJOD=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">CZK</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURCZK=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURCZK=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">CZK=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">CZK=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">EGP</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EGP=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EGP=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUREGP=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUREGP=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">HUF</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURHUF=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURHUF=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">HUF=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">HUF=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">ISK</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">ISK=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">ISK=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURISK=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURISK=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">XAF</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">ZAK=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">ZAK=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURZAK=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURZAK=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">PLN</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURPLN=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURPLN=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">PLN=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">PLN=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">AED</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">AED=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">AED=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURAED=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURAED=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">PHP</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">PHP=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">PHP=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURPHP=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURPHP=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">MAD</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">MAD=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">MAD=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">MADBKAM=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">MADBKAM=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">SKK</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURSKK=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURSKK=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">SKK=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">SKK=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">LVL</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURLVL=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURLVL=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">LVL=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">LVL=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">TRY</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">TRYTOM=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">TRYTOM=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURTRY=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURTRY=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">HRK</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURHRK=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURHRK=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">HRK=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">HRK=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">EEK</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUREEK=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EUREEK=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EEK=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EEK=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">LTL</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURLTL=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURLTL=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">LTL=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">LTL=</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">MXN</KEYFIELD>
+                <FIELD name="volatilityTolerance">2%</FIELD>
+                <FIELD name="spreadTolerance">25</FIELD>
+                <FIELD name="delay">1</FIELD>
+                <FIELD name="attempts">3</FIELD>
+                <SLOT name="RicPriority" classname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotType" memberClassname="com.eurobase.siena.data.ratetolerance.PriorityRicSlotMember">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">MXN=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">1</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">MXN=D3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">MUL</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode">EUR=EBS</SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">3</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURMXN=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="seq">4</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="priority">2</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="primaryRicCode">EURMXN=R</SLOTKEYFIELD>
+                        <SLOTKEYFIELD name="op">NONE</SLOTKEYFIELD>
+                        <SLOTFIELD name="secondaryRicCode"></SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="ricPriority">1</FIELD>
+            </RECORD>
+            
+        </TABLE>
+        
+    </TRANSACTION>
+    
+</TRANSACTIONS>

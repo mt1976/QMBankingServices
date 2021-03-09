@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+  <TRANSACTION type="INSERT">
+    <TABLE name="Counterparty" classname="com.eurobase.siena.data.counterparty.Counterparty">
+      <RECORD>
+        <KEYFIELD name="name.firm">Test</KEYFIELD>
+        <KEYFIELD name="name.centre">LBN</KEYFIELD>
+        <FIELD name="fullName">Test Counterparty</FIELD>
+        <FIELD name="address">Blank</FIELD>
+        <FIELD name="telephoneNumber"/>
+        <FIELD name="faxNumber"/>
+        <FIELD name="customerType">Interbank</FIELD>
+        <FIELD name="cLSType">Not a Participant</FIELD>
+        <FIELD name="cLSStart"/>
+        <FIELD name="autoConfirm">N</FIELD>
+        <FIELD name="accountOfficer"/>
+        <FIELD name="marginFactor">0</FIELD>
+        <FIELD name="autoConfirm">N</FIELD>
+        <FIELD name="adequacyRatioLimit">0</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode"/>
+        <FIELD name="cpartyGroupName"/>
+        <FIELD name="accountNumber"/>
+        <FIELD name="swiftCode"/>
+        <FIELD name="clearingCode"/>
+        <FIELD name="notes"/>
+        <FIELD name="buyText"/>
+        <FIELD name="sellText"/>
+        <FIELD name="timeBandID">LER</FIELD>
+        <SLOT name="TimeBands" classname="com.eurobase.siena.exposures.model.TimeBands" memberClassname="com.eurobase.siena.exposures.model.TimeBand">
+            <SLOTRECORD>
+              <SLOTKEYFIELD name="endDate">undefined</SLOTKEYFIELD>
+            </SLOTRECORD>
+            <SLOTRECORD>
+              <SLOTKEYFIELD name="fXWeighting">0.00</SLOTKEYFIELD>
+            </SLOTRECORD>
+            <SLOTRECORD>
+              <SLOTKEYFIELD name="displayBand">N</SLOTKEYFIELD>
+            </SLOTRECORD>
+        </SLOT>
+        <FIELD name="safe">Y</FIELD>
+        <FIELD name="marginTradingType">Not Margin Trading</FIELD>
+        <SLOT name ="NettingCurrencies" classname="com.eurobase.siena.data.currencies.NettingSet" memberClassname="com.eurobase.siena.data.currencies.NettingKey">
+            <SLOTRECORD>
+              <SLOTKEYFIELD name="currency">USD</SLOTKEYFIELD>
+            </SLOTRECORD>
+        </SLOT>
+        <FIELD name="owner"/>
+        <FIELD name="creditRating.agency">Moody</FIELD>
+        <FIELD name="creditRating.rating">AAA</FIELD>
+        <SLOT name ="Extensions" classname="com.eurobase.common.tech.types.FixedSlotType" memberClassname="com.eurobase.common.tech.types.FixedSlotType$FixedData">
+          <SLOTRECORD>
+            <SLOTKEYFIELD name = "key">Client Primary TCID</SLOTKEYFIELD>
+            <SLOTFIELD name="value"/>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name = "key">Client Secondary TCID</SLOTKEYFIELD>
+            <SLOTFIELD name="value"/>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name = "key">Cover Trade</SLOTKEYFIELD>
+            <SLOTFIELD name="value">N</SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name = "key">Customer Category</SLOTKEYFIELD>
+            <SLOTFIELD name="value"/>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name = "key">FEDS User Id</SLOTKEYFIELD>
+            <SLOTFIELD name="value"/>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name = "key">Inactive Status</SLOTKEYFIELD>
+            <SLOTFIELD name="value">N</SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name = "key">Know Your Customer Status</SLOTKEYFIELD>
+            <SLOTFIELD name="value">Y</SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name = "key">Loss Given Default</SLOTKEYFIELD>
+            <SLOTFIELD name="value"/>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name = "key">Rate Timeout</SLOTKEYFIELD>
+            <SLOTFIELD name="value">Y</SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name = "key">Rate Validation</SLOTKEYFIELD>
+            <SLOTFIELD name="value">Within Range Only</SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name = "key">Secured Settlement</SLOTKEYFIELD>
+            <SLOTFIELD name="value">N</SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name = "key">Settlement Limit Carve-Out</SLOTKEYFIELD>
+            <SLOTFIELD name="value">N</SLOTFIELD>
+          </SLOTRECORD>
+        </SLOT>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

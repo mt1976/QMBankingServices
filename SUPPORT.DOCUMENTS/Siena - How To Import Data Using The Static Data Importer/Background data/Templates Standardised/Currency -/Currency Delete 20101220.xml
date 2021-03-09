@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+
+    <TRANSACTION type="DELETE">
+        <TABLE name="Currency" classname="com.eurobase.siena.data.currencies.Currency">
+             <RECORD>
+                 <KEYFIELD name="code">YZX</KEYFIELD>
+            </RECORD>
+ </TABLE>
+
+    </TRANSACTION>
+</TRANSACTIONS>
+

@@ -1,0 +1,10 @@
+<TRANSACTIONS>
+    <!--**************************TradingGroup table***********************-->
+    <TRANSACTION type = "DELETE">
+        <TABLE name ="ScheduledFunction" classname="com.eurobase.siena.ess.scheduler.ScheduledFunction">
+            <RECORD>
+                <KEYFIELD name = "name">END-OF-DAY</KEYFIELD>
+            </RECORD>
+        </TABLE>
+       </TRANSACTION>
+</TRANSACTIONS>

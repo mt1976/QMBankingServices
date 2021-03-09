@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+
+  
+<TRANSACTION type="INSERT">
+    <TABLE name="CounterpartyImportID" classname="com.eurobase.siena.data.counterparty.CounterpartyImportID">
+      <RECORD>
+          	<KEYFIELD name="key.originID">EXTERNAL</KEYFIELD>
+          	<KEYFIELD name="key.importID">123456</KEYFIELD>
+  	<FIELD name="counterparty.firm">TEST1234</FIELD> 
+  	<FIELD name="counterparty.centre">LDN</FIELD> 
+      </RECORD>
+    </TABLE>
+</TRANSACTION>
+
+
+</TRANSACTIONS>

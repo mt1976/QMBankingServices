@@ -1,0 +1,5 @@
+
+external.interface.name=DealImporter
+#external.interface.ExternalDealImporter=com.eurobase.siena.external.implementation.jms.JmsPeerExternalSystem
+#external.interface.ExternalDealImporter=com.eurobase.external.support.FileReader
+external.interface.T24=com.eurobase.external.support.FileReader

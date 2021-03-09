@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+      <TRANSACTION type="INSERT">
+        <TABLE name="SalesDeskMargin" classname="com.eurobase.siena.portal.model.ChannelMargin">
+            <RECORD>
+                  <KEYFIELD name="key.areaType">Channel</KEYFIELD>
+                  <KEYFIELD name="key.criteria">CurrencyPair Product Tenor TimeZone</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.dealingInterface"></KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.channel">AIB-CH1 Cust inc TSY Margin</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.tradingGroup"></KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.counterparty.firm"></KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.counterparty.centre"></KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.dealingInterface"></KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.product">FX Spot</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.currencyPair.majorCurrencyIsoCode">EUR</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.currencyPair.minorCurrencyIsoCode">USD</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.tenor">Undefined</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.timeZone"></KEYFIELD>
+                  <FIELD name="priority">1</FIELD>
+                  <FIELD name="data.marginBandAmountInMajor">Y</FIELD>
+                  <FIELD name="data.amountBandId">Treasury Band - Spread 1</FIELD>
+                <SLOT name="Data.AmountBandList" classname="com.eurobase.siena.portal.model.AmountBandSlotType" memberClassname="com.eurobase.siena.portal.model.AmountBandSlotMember">
+                     <SLOTRECORD>
+                          <SLOTKEYFIELD name="marginBandMaxAmount">600</SLOTKEYFIELD>
+                          <SLOTFIELD name="margin">3.0/3.0%</SLOTFIELD>
+                    </SLOTRECORD>
+                     <SLOTRECORD>
+                          <SLOTKEYFIELD name="marginBandMaxAmount">13000</SLOTKEYFIELD>
+                          <SLOTFIELD name="margin">2.0/2.0%</SLOTFIELD>
+                    </SLOTRECORD>
+                     <SLOTRECORD>
+                          <SLOTKEYFIELD name="marginBandMaxAmount">70000</SLOTKEYFIELD>
+                          <SLOTFIELD name="margin">1.5/1.5%</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+            </RECORD>
+        </TABLE>
+    </TRANSACTION>
+  </TRANSACTIONS>

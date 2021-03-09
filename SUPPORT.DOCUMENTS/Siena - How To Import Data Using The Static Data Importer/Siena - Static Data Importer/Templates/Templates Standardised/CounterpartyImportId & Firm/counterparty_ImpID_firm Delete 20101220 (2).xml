@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+
+<TRANSACTION type="DELETE">
+    <TABLE name="CounterpartyImportID" classname="com.eurobase.siena.data.counterparty.CounterpartyImportID">
+      <RECORD>
+          	<KEYFIELD name="key.originID">StaticDataImporter</KEYFIELD>
+          	<KEYFIELD name="key.importID">123456</KEYFIELD>
+
+      </RECORD>
+    </TABLE>
+</TRANSACTION>
+
+<TRANSACTION type="DELETE">
+<TABLE name="Counterparty" classname="com.eurobase.siena.data.counterparty.Counterparty">
+<RECORD>
+	 <KEYFIELD name="name.firm">TEST1234</KEYFIELD> 
+  	<KEYFIELD name="name.centre">LDN</KEYFIELD> 
+
+  </RECORD>
+  </TABLE>
+  </TRANSACTION>  
+
+  <TRANSACTION type="DELETE">
+    <TABLE name="Firm" classname="com.eurobase.siena.data.firms.Firm">
+      <RECORD>
+         	<KEYFIELD name="firmName">TEST1234</KEYFIELD>
+
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>   
+</TRANSACTIONS>

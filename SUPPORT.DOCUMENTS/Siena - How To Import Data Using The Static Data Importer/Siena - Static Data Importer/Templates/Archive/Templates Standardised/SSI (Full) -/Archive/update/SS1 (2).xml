@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns="http://www.eurobase.com/schema/dataimport">
+		<TRANSACTION type="UPDATE">
+				<TABLE classname="com.eurobase.siena.data.counterparty.CounterpartySettlementInstructionsName" name="CounterpartySettlementInstructionsName">
+						<RECORD>
+						    <!-- for an update the Key needs to be the current KeyField -->
+								<KEYFIELD name="name">I'm an SSI1</KEYFIELD>
+								<!-- to update a KeyField with a new value, the Node needs to be called FIELD
+								     providing the name of the field one needs to update. -->
+								<FIELD name="name">Updated SSI Name</FIELD>
+						</RECORD>
+				</TABLE>
+				<TABLE classname="com.eurobase.siena.data.counterparty.CounterpartySettlementInstructions" name="CounterpartySettlementInstructions">
+						<RECORD>
+						    <!-- for an update the Key needs to be the current KeyField
+						        (note that the key.name is the newly updated CounterpartySettlementInstructionsName as this is automatically updated) -->
+								<KEYFIELD name="key.counterparty.firm">Firm1</KEYFIELD>
+								<KEYFIELD name="key.counterparty.centre">LRG</KEYFIELD>
+								<KEYFIELD name="key.currency">ZAR</KEYFIELD>
+								<KEYFIELD name="key.name">Updated SSI Name</KEYFIELD>
+								<KEYFIELD name="key.number">EXAnything</KEYFIELD>
+								<KEYFIELD name="key.type">MM</KEYFIELD>
+								<!-- if any of the above fields need to be changed, then the FIELD node needs to be used: -->
+								<FIELD name="key.counterparty.firm">Firm2</FIELD>
+								<FIELD name="key.counterparty.centre">MED</FIELD>
+								<!-- Any other field can be updated like the insert -->
+								<FIELD name="isDefault">Y</FIELD>
+						</RECORD>
+				</TABLE>
+		</TRANSACTION>
+</TRANSACTIONS>

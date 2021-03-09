@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : termReport.xml
+    Created on : 28 January 2011, 09:47
+    Author     : rhawes
+    Description:
+        Purpose of the document follows:
+          Example of a Term deal to  be importer or exported by siena
+        
+    Deal Type identification:
+      This has a SubTyp of TRM so this is a Term deal
+    
+    Attributes:
+      ExecTyp=0: means new report
+      TrdDt:   The date the trade was struck
+      TrdID:   For deal import this is a bank generated reference. For Deal export this will be a siena contract number.
+      OrigTrdID:  This is included for deal export. It is the siena external reference number. For trades that originated from the bank this will be a bank genrated number.
+      TrdID2:  The siena reference number. This is static for the lifetime of the deal (survives deal edits). Only relevant for deal export
+      Ccy:     The account currency
+      LastQty: The opening balance
+      LastPx:  The starting interest rate
+      SettlDt: The Settlement date for the final leg
+      Bk:      The book or portfolio
+-->
+
+<TrdCaptRpt  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+   xmlns='http://www.fixprotocol.org/FIXML-5-0-SP1'
+   xsi:schemaLocation='http://www.fixprotocol.org/FIXML-5-0-SP1 fixml-tradecapture-base-5-0-SP1.xsd'
+   ExecTyp="0"
+   TrdDt="2011-03-14" TrdID="TERM001" OrigTrdID="XYZ1234"  TrdID2="SIENA-REF1234"
+   Ccy="USD" LastPx="5" LastQty="3000000" Bk="Deal" LDM="false">
+<!--
+  Snt: The time this report was sent
+-->
+<Hdr Snt="2011-03-14T10:32:00"/>
+<!--
+  Sym: The currency pair involved in the exchange
+  CFI=DYXXXX: means MM
+  SubType: TRM means Term
+-->
+<Instrmt CFI="DYFXXX" SubTyp="TRM"/>
+<!-- 
+  StartDt: The start date of the first interest period
+  EndDt:   The maturity date. The date on which the last interest payment is due
+-->
+<FinDetls StartDt="2011-03-14" EndDt="2011-06-14"/>
+  <!--
+    Margins
+  -->
+  <!--
+    M1 = Cash Reserves and liquids
+  -->
+ <Undly Desc="M1" Px="0.2721"/>
+ <!--
+    M2 = Tennis Court
+  -->
+ <!--<Undly Desc="M2" Px="0.02"/>-->
+ <!--
+    M3 = Credit Premium
+  -->
+ <!-- <Undly Desc="M3" Px="0.01"/> -->
+ <!--
+    M4 = Capital costs
+  -->
+ <!-- <Undly Desc="M4" Px="0.01"/> -->
+ <!--
+    Point
+      Interest rate frequency:
+        3M means payable quarterly
+    Name
+      Interest Rate Types:
+        Base
+        Call
+        Fixed
+        LIBID
+        LIBOR
+        Prime
+        SIBID
+        SIBOR
+     IntAct
+        Interest Action:
+          Not present means Settle
+          0 means Settle
+          1 means capitalise
+  -->
+  <SprdBnchmkCurve Point="3M" Name="LIBOR" IntAct="1"/>
+
+  <!--
+    The fact that this leg has an interest rate fixed, implies that the
+    previous (first in this case) interest payment has matured
+    SettlDt:  The start date for the current interest period. Also the settlement
+              date for the previous interest period
+    LastPx:   The all in interest rate for this leg (LastPx - LastMkt = Margin)
+    LastMkt:  The Market rate at the time (LastPx - LastMkt = Margin)
+  -->
+  <TrdLeg SettlDt="2011-06-14" LastPx="3.5" LastMkt="3.1879"/>
+  <!--
+    The following legs have not yet reached their fixing date i.e. no interest rate
+    is defined, but are included to define the interest schedule.
+  -->
+  <!--<TrdLeg SettlDt="2011-06-15"/>-->
+  <!--<TrdLeg SettlDt="2011-09-15"/>-->
+  <!--
+    The last date interest is payable. LastPx is never specified for the last
+    leg as LastPx is the interest rate for the coming period.
+  -->
+  <!--<TrdLeg SettlDt="2011-12-15"/>-->
+<!-- 
+  Side=F: Means lend. B means borrow. This is from the banks point of view. This
+  is a Loan
+-->
+<RptSide Side="F">
+  <!--
+    The Order originating firm
+    -->
+  <Pty ID="12345678" R="13"/>
+  <!--
+    The mandated user
+  -->
+  <!--<Pty ID="DACochran" R="11"/> -->
+  <!--
+    The bank Siena User:
+    If entered or edited, by a bank user, that user will appear here
+    If entered by an eTrader user then the bank user who is the owner of deals
+        submitted by that eTrader user
+    If entered via deal intervention, then the bank user who sanctioned the deal
+  -->
+  <Pty ID="Super" R="53"/>
+  <!-- Settlement details -->
+  <SettlDetails>
+    <!-- Settlement key -->
+    <Pty ID="87654321"/>
+  </SettlDetails>
+  </RptSide>
+  <!--
+    Notes field iteration.
+  -->
+  <!--  Nt Txt="Testing the Notes Field"/> -->
+</TrdCaptRpt>

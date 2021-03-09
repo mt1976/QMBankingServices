@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : SalesMargin.xml
+    Created on : 10 July 2009
+    Author     : rhawes
+    Description:
+        This is an example Data Import file for the Sales Margin table.
+-->
+
+<TRANSACTIONS xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+              xmlns='http://www.eurobase.com/schema/dataimport'
+              xsi:schemaLocation='http://www.eurobase.com/schema/dataimport dataimport.xsd'>
+  <TRANSACTION type="INSERT">
+    <TABLE name="SalesMargin" classname="com.eurobase.siena.portal.model.SalesMargin">
+      <RECORD>
+        <!-- Note that if a KEYFIELD/FIELD does not have a value, the node does not need to be here: -->
+        <KEYFIELD name="key.areaType">Counterparty</KEYFIELD>
+        <KEYFIELD name="key.criteria">CurrencyPair Product Tenor TimeZone</KEYFIELD>
+        <KEYFIELD name="key.areaHolder.dealingInterface"></KEYFIELD>
+        <KEYFIELD name="key.areaHolder.channel"></KEYFIELD>
+        <KEYFIELD name="key.areaHolder.tradingGroup">Tier1</KEYFIELD>
+        <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.counterparty.firm"></KEYFIELD>
+        <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.counterparty.centre"></KEYFIELD>
+        <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.dealingInterface"></KEYFIELD>
+        <KEYFIELD name="key.criteriaHolder.product"></KEYFIELD>
+        <KEYFIELD name="key.criteriaHolder.currencyPair.majorCurrencyIsoCode">GBP</KEYFIELD>
+        <KEYFIELD name="key.criteriaHolder.currencyPair.minorCurrencyIsoCode">USD</KEYFIELD>
+        <KEYFIELD name="key.criteriaHolder.currency"></KEYFIELD>
+        <KEYFIELD name="key.criteriaHolder.tenor">2 Months</KEYFIELD>
+        <KEYFIELD name="key.criteriaHolder.timeZone"></KEYFIELD>
+        <FIELD name="priority">1</FIELD>
+        <FIELD name="data.bandAmountInMajor">Y</FIELD>
+        <FIELD name="data.amountBandId">FX</FIELD>
+        <SLOT name="Data.TenorList"
+              classname="com.eurobase.siena.portal.model.MarginTenorSlotType"
+              memberClassname="com.eurobase.siena.portal.model.MarginTenorSlotMember">
+          <SLOTRECORD type="INSERT">
+            <SLOTKEYFIELD name="tenor">Spot</SLOTKEYFIELD>
+            <SLOT name="AmountBandList"
+                  classname="com.eurobase.siena.portal.model.MarginAmountBandSlotType"
+                  memberClassname="com.eurobase.siena.portal.model.MarginAmountBandSlotMember">
+              <SLOTRECORD type="INSERT">
+                <SLOTKEYFIELD name="bandMaxAmount">1000000</SLOTKEYFIELD>
+                <SLOTFIELD name="margin">1 pip</SLOTFIELD>
+              </SLOTRECORD>
+              <SLOTRECORD type="INSERT">
+                <SLOTKEYFIELD name="bandMaxAmount">2000000</SLOTKEYFIELD>
+                <SLOTFIELD name="margin">2 pips</SLOTFIELD>
+              </SLOTRECORD>
+              <SLOTRECORD type="INSERT">
+                <SLOTKEYFIELD name="bandMaxAmount">3000000</SLOTKEYFIELD>
+                <SLOTFIELD name="margin">3 pips</SLOTFIELD>
+              </SLOTRECORD>
+            </SLOT>
+          </SLOTRECORD>
+        </SLOT>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

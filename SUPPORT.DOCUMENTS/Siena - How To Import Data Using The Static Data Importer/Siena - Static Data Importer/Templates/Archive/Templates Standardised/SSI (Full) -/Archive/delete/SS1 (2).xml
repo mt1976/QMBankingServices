@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns="http://www.eurobase.com/schema/dataimport">
+		<TRANSACTION type="DELETE">
+				<TABLE classname="com.eurobase.siena.data.counterparty.CounterpartySettlementInstructions" name="CounterpartySettlementInstructions">
+				<!-- this record will not be deleted if other records depend on it. An error will be shown in the event log. -->
+						<RECORD>
+								<KEYFIELD name="key.counterparty.firm">Firm1</KEYFIELD>
+								<KEYFIELD name="key.counterparty.centre">LRG</KEYFIELD>
+								<KEYFIELD name="key.currency">ZAR</KEYFIELD>
+								<KEYFIELD name="key.name">I'm an SSI1</KEYFIELD>
+								<KEYFIELD name="key.number">EXAnything</KEYFIELD>
+								<KEYFIELD name="key.type">MM</KEYFIELD>
+						</RECORD>
+				</TABLE>
+				<TABLE classname="com.eurobase.siena.data.counterparty.CounterpartySettlementInstructionsName" name="CounterpartySettlementInstructionsName">
+				<!-- this record will not be deleted if other records depend on it. An error will be shown in the event log. -->
+						<RECORD>
+								<KEYFIELD name="name">I'm an SSI1</KEYFIELD>
+						</RECORD>
+				</TABLE>
+		</TRANSACTION>
+</TRANSACTIONS>

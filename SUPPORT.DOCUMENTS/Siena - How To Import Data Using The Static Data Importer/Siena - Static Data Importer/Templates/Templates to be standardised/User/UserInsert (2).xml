@@ -1,0 +1,16 @@
+<TRANSACTIONS>
+    <!-- 
+**************************Channel table***********************
+ -->
+    <TRANSACTION type="INSERT">
+        <TABLE name="User" classname="com.eurobase.siena.info.security.User">
+            <RECORD>
+                <KEYFIELD name = "userId">WEB User</KEYFIELD>
+                <FIELD name = "fullName">Internet User</FIELD>
+            </RECORD>
+            
+        </TABLE>
+        
+    </TRANSACTION>
+    
+</TRANSACTIONS>

@@ -1,7 +1,7 @@
-SELECT        RG.CurrencyPair.CodeMajorCurrencyIsoCode, RG.CurrencyPair.CodeMinorCurrencyIsoCode, RG.CurrencyPair.Active, RG.CurrencyPair.SpotRerouteDataRerouteCurrency, RG.CurrencyPairRateRICCode.RICCode,
-                         RG.CurrencyPairRateRICCode.Period, { fn CONCAT(RG.CurrencyPair.CodeMajorCurrencyIsoCode, { fn CONCAT('\', RG.CurrencyPair.CodeMinorCurrencyIsoCode) }) } AS CODE1,
-                         { fn CONCAT(RG.CurrencyPair.CodeMajorCurrencyIsoCode, RG.CurrencyPair.CodeMinorCurrencyIsoCode) } AS CODE2
-FROM            RG.CurrencyPair INNER JOIN
-                         RG.CurrencyPairRateRICCode ON RG.CurrencyPair.CodeMajorCurrencyIsoCode = RG.CurrencyPairRateRICCode.CodeMajorCurrencyIsoCode AND
-                         RG.CurrencyPair.CodeMinorCurrencyIsoCode = RG.CurrencyPairRateRICCode.CodeMinorCurrencyIsoCode
-WHERE        (RG.CurrencyPairRateRICCode.RICCode <> '') AND (RG.CurrencyPair.SpotRerouteDataRerouteCurrency = '') AND (RG.CurrencyPairRateRICCode.Period = 'Spot') AND (RG.CurrencyPair.Active = 1)
+SELECT        {{SQL.SOURCE}}.CurrencyPair.CodeMajorCurrencyIsoCode, {{SQL.SOURCE}}.CurrencyPair.CodeMinorCurrencyIsoCode, {{SQL.SOURCE}}.CurrencyPair.Active, {{SQL.SOURCE}}.CurrencyPair.SpotRerouteDataRerouteCurrency, {{SQL.SOURCE}}.CurrencyPairRateRICCode.RICCode,
+                         {{SQL.SOURCE}}.CurrencyPairRateRICCode.Period, { fn CONCAT({{SQL.SOURCE}}.CurrencyPair.CodeMajorCurrencyIsoCode, { fn CONCAT('\', {{SQL.SOURCE}}.CurrencyPair.CodeMinorCurrencyIsoCode) }) } AS CODE1,
+                         { fn CONCAT({{SQL.SOURCE}}.CurrencyPair.CodeMajorCurrencyIsoCode, {{SQL.SOURCE}}.CurrencyPair.CodeMinorCurrencyIsoCode) } AS CODE2
+FROM            {{SQL.SOURCE}}.CurrencyPair INNER JOIN
+                         {{SQL.SOURCE}}.CurrencyPairRateRICCode ON {{SQL.SOURCE}}.CurrencyPair.CodeMajorCurrencyIsoCode = {{SQL.SOURCE}}.CurrencyPairRateRICCode.CodeMajorCurrencyIsoCode AND
+                         {{SQL.SOURCE}}.CurrencyPair.CodeMinorCurrencyIsoCode = {{SQL.SOURCE}}.CurrencyPairRateRICCode.CodeMinorCurrencyIsoCode
+WHERE        ({{SQL.SOURCE}}.CurrencyPairRateRICCode.RICCode <> '') AND ({{SQL.SOURCE}}.CurrencyPair.SpotRerouteDataRerouteCurrency = '') AND ({{SQL.SOURCE}}.CurrencyPairRateRICCode.Period = 'Spot') AND ({{SQL.SOURCE}}.CurrencyPair.Active = 1)

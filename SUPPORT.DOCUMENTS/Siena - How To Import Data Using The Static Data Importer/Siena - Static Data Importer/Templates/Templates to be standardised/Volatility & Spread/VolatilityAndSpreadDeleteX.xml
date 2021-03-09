@@ -1,0 +1,18 @@
+
+<TRANSACTIONS>
+    <!-- 
+**************************ChannelMargin table***********************
+  -->
+    <TRANSACTION type="DELETE">
+        
+        <TABLE name="RateTolerancea" classname="com.eurobase.siena.data.ratetolerance.RateTolerance">
+            <RECORD>
+                  <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                  <KEYFIELD name="code.minorCurrencyIsoCode">GBP</KEYFIELD>
+            </RECORD>
+             
+        </TABLE>
+         
+    </TRANSACTION>
+     
+</TRANSACTIONS>

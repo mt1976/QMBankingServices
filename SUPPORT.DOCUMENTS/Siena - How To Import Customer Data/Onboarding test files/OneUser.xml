@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<USERS>
+  <USER>
+    <NAME>LiteTest1</NAME>
+    <SOURCEUSER>LiteUserTemplate</SOURCEUSER>
+    <FULLNAME>LiteTest1 Full Name</FULLNAME>
+    <EMAILADDRESS>test1@rmb.co.za</EMAILADDRESS>
+    <ENABLED>true</ENABLED>
+    <LANGUAGE>en_GB</LANGUAGE>
+    <TELEPHONENUMBER>02081234567</TELEPHONENUMBER>
+    <COUNTERPARTY>COMPA</COUNTERPARTY>
+    <CURRENCY>ZAR</CURRENCY>
+    <CURRENCYPAIR>USDZAR</CURRENCYPAIR>
+    <MMESPMODE>Disabled</MMESPMODE>
+    <GROUPS>
+      <GROUP>AccelerateLite</GROUP>
+      <GROUP>LicenceEtrader</GROUP>
+    </GROUPS>
+    <MANDATEDUSER>
+      <NAME>LiteTest1 Full Name</NAME>
+      <TYPE>Both</TYPE>
+      <TELEPHONENUMBER>1234567890</TELEPHONENUMBER>
+      <EMAILADDRESS>test1@rmb.co.za</EMAILADDRESS>
+      <NOTIFY>true</NOTIFY>
+      <ACTIVE>true</ACTIVE>
+    </MANDATEDUSER>
+  </USER>
+</USERS>

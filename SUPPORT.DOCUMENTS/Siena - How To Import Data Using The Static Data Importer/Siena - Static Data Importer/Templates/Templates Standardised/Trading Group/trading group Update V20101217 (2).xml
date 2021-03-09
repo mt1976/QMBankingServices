@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+    <TRANSACTION type = "UPDATE">
+        <TABLE name ="TradingGroup" classname="com.eurobase.siena.data.counterparty.TradingGroup">
+            <RECORD>
+                <KEYFIELD name = "name">Test Trading Group</KEYFIELD>
+                <FIELD name = "name">Test Trading Group A</FIELD>
+            </RECORD>
+            <RECORD>
+                <KEYFIELD name = "name">Super Test Trading Group</KEYFIELD>
+            </RECORD>
+        </TABLE>
+       </TRANSACTION>
+</TRANSACTIONS>

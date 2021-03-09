@@ -1,3 +1,3 @@
 SELECT        Reason
-FROM            RG.EditDealReason
+FROM            {{SQL.SOURCE}}.EditDealReason
 WHERE        (InternalDeleted IS NULL)

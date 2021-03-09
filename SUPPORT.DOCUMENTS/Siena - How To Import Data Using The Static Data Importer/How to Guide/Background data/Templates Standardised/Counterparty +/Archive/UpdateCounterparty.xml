@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : UpdateCounterparty.xml
+    Created on : 12:44 23 November 2009
+    Author     : rhawes
+    Description:
+        This is an example Data Import file update Counterparty
+-->
+
+<TRANSACTIONS xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+              xmlns='http://www.eurobase.com/schema/dataimport'
+              xsi:schemaLocation='http://www.eurobase.com/schema/dataimport dataimport.xsd'>
+  <TRANSACTION type="UPDATE">
+    <TABLE name="Counterparty" classname="com.eurobase.siena.data.counterparty.Counterparty">
+      <RECORD>
+        <KEYFIELD name="name.firm">Test</KEYFIELD>
+        <KEYFIELD name="name.centre">LRG</KEYFIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="fullName">Test Update Counterparty</FIELD>
+        <FIELD name="address">123 Anywhere Road</FIELD>
+        <FIELD name="telephoneNumber">01234567890</FIELD>
+        <FIELD name="faxNumber">01234567890</FIELD>
+        <FIELD name="customerType">Interbank</FIELD>
+        <FIELD name="cLSType">Not a Participant</FIELD>
+        <FIELD name="cLSStart"></FIELD>
+        <FIELD name="autoConfirm">N</FIELD>
+        <FIELD name="accountOfficier"></FIELD>
+        <FIELD name="marginFactor">0</FIELD>
+        <FIELD name="adequacyRatioLimit">0.00</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+        <FIELD name="accountNumber"></FIELD>
+        <FIELD name="swiftCode"></FIELD>
+        <FIELD name="clearingCode"></FIELD>
+        <FIELD name="notes"></FIELD>
+        <FIELD name="buyText"></FIELD>
+        <FIELD name="sellText"></FIELD>
+        <FIELD name="timeBandID">LER</FIELD>
+        <FIELD name="safe">Y</FIELD>
+        <FIELD name="marginsTradingGroup"></FIELD>
+        <FIELD name="tradingControlTradingGroup"></FIELD>
+        <FIELD name="suspend">N</FIELD>
+        <FIELD name="marginTradingType">Not Margin Trading</FIELD>
+        <FIELD name="owner">Super</FIELD>
+        <FIELD name="creditRating.agency">Int</FIELD>
+        <FIELD name="creditRating.rating">AAA</FIELD>
+        <SLOT name="Extensions"
+              classname="com.eurobase.common.tech.types.FixedSlotType"
+              memberClassname="com.eurobase.common.tech.types.FixedSlotType$FixedData">
+          <SLOTRECORD>
+            <SLOTKEYFIELD name="key">Client Primary TCID</SLOTKEYFIELD>
+            <SLOTFIELD name="value"></SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name="key">Client Secondary TCID</SLOTKEYFIELD>
+            <SLOTFIELD name="value"></SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name="key">Cover Trade</SLOTKEYFIELD>
+            <SLOTFIELD name="value">N</SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name="key">FEDS User Id</SLOTKEYFIELD>
+            <SLOTFIELD name="value"></SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name="key">Inactive Status</SLOTKEYFIELD>
+            <SLOTFIELD name="value">N</SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name="key">Know Your Customer Status</SLOTKEYFIELD>
+            <SLOTFIELD name="value">Y</SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name="key">LER Limit Carve-Out</SLOTKEYFIELD>
+            <SLOTFIELD name="value">Y</SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name="key">Loss Given Default</SLOTKEYFIELD>
+            <SLOTFIELD name="value">0</SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name="key">Rate Timeout</SLOTKEYFIELD>
+            <SLOTFIELD name="value">10000</SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name="key">Rate Validation</SLOTKEYFIELD>
+            <SLOTFIELD name="value">Within Range Only</SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name="key">Secured Settlement</SLOTKEYFIELD>
+            <SLOTFIELD name="value">N</SLOTFIELD>
+          </SLOTRECORD>
+          <SLOTRECORD>
+            <SLOTKEYFIELD name="key">Settlement Limit Carve-Out</SLOTKEYFIELD>
+            <SLOTFIELD name="value">N</SLOTFIELD>
+          </SLOTRECORD>
+        </SLOT>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

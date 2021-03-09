@@ -1,3 +1,3 @@
 SELECT        Code, Name, ShortCode, EU_EEA, InternalDeleted
-FROM            dbo.Country
+FROM            {{SQL.SOURCE}}.Country
 WHERE        (InternalDeleted IS NULL)

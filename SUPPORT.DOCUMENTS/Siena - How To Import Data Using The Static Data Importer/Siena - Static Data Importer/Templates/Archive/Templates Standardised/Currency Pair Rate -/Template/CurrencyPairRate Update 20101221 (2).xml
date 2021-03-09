@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+    <TRANSACTION type="UPDATE">
+        <TABLE name="CurrencyPairRate" classname="com.eurobase.siena.data.currencies.CurrencyPairRate">
+            <RECORD>
+                <KEYFIELD name="code.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name="code.minorCurrencyIsoCode">XPT</KEYFIELD>
+                <FIELD name="rateTimeout">infinite</FIELD>
+                <FIELD name="fwdRateTimeout">infinite</FIELD>
+                <SLOT name="RICCode" classname="com.eurobase.siena.data.currencies.RicCodeSlotType" memberClassname="com.eurobase.siena.data.currencies.RicCodeSlotMember">
+                    <SLOTRECORD>
+                    <SLOTKEYFIELD name="period">Spot</SLOTKEYFIELD>
+                    <SLOTFIELD name="rICCode">EURXPT1=</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+                <FIELD name="rateCalculationInfo.excludeSpot">N</FIELD>
+                <FIELD name="rateCalculationInfo.rerouteCurrency"/>
+            </RECORD>
+        </TABLE>
+     </TRANSACTION>
+</TRANSACTIONS>

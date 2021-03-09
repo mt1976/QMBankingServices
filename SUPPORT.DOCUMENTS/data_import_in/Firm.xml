@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<TRANSACTIONS>
+  <TRANSACTION type="IMPORT">
+    <TABLE name="Firm" classname="com.eurobase.siena.data.firms.Firm">
+      <RECORD>
+        <KEYFIELD name="firmName">BOE</KEYFIELD>
+        <FIELD name="fullName">BANK OF ENGLAND</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">GOVT</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">COMM</KEYFIELD>
+        <FIELD name="fullName">COMMERCIAL</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">SELF</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">DEV</KEYFIELD>
+        <FIELD name="fullName">DEVELOPMENT</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">SELF</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">INV</KEYFIELD>
+        <FIELD name="fullName">INVESTMENT</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">SELF</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">LEND</KEYFIELD>
+        <FIELD name="fullName">LENDING</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">SELF</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">OTHER</KEYFIELD>
+        <FIELD name="fullName">OTHER</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">SELF</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">RETAIL</KEYFIELD>
+        <FIELD name="fullName">RETAIL</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">SELF</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">ADAMCOMPAN</KEYFIELD>
+        <FIELD name="fullName">ADAM and COMPANY PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">AIBGROUPUK</KEYFIELD>
+        <FIELD name="fullName">AIB GROUP UK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">ALDERMORE</KEYFIELD>
+        <FIELD name="fullName">ALDERMORE BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">ALLIANCETR</KEYFIELD>
+        <FIELD name="fullName">ALLIANCE TRUST SAVINGS LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">ARBUTHNOT</KEYFIELD>
+        <FIELD name="fullName">ARBUTHNOT LATHAM and CO LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">ATOM</KEYFIELD>
+        <FIELD name="fullName">ATOM BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">BACB</KEYFIELD>
+        <FIELD name="fullName">BRITISH ARAB COMMERCIAL BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">BARCLAYS</KEYFIELD>
+        <FIELD name="fullName">BARCLAYS BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">BIRABANKLT</KEYFIELD>
+        <FIELD name="fullName">BIRA BANK LTD</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">BMCE</KEYFIELD>
+        <FIELD name="fullName">BMCE BANK INTERNATIONAL PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">BOI</KEYFIELD>
+        <FIELD name="fullName">BANK OF IRELAND UK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">BOLME</KEYFIELD>
+        <FIELD name="fullName">BANK OF LONDON AND THE MIDDLE EAST PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">BOS</KEYFIELD>
+        <FIELD name="fullName">BANK OF SCOTLAND PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">CAF</KEYFIELD>
+        <FIELD name="fullName">CAF BANK LTD</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">CAMBRIDGEC</KEYFIELD>
+        <FIELD name="fullName">CAMBRIDGE and COUNTIES BANK LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">CHARITY</KEYFIELD>
+        <FIELD name="fullName">CHARITY BANK LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">CHARTER</KEYFIELD>
+        <FIELD name="fullName">CHARTER COURT FINANCIAL SERVICES LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">CHOARECO</KEYFIELD>
+        <FIELD name="fullName">C HOARE and CO</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">CLEARBANK</KEYFIELD>
+        <FIELD name="fullName">CLEARBANK LTD</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">CLOSEBROTH</KEYFIELD>
+        <FIELD name="fullName">CLOSE BROTHERS LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">CLYDESDALE</KEYFIELD>
+        <FIELD name="fullName">CLYDESDALE BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">COOP</KEYFIELD>
+        <FIELD name="fullName">CO-OPERATIVE BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">COUTTS</KEYFIELD>
+        <FIELD name="fullName">COUTTS and COMPANY</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">CROWNAGENT</KEYFIELD>
+        <FIELD name="fullName">CROWN AGENTS BANK LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">DUNCANLAWR</KEYFIELD>
+        <FIELD name="fullName">DUNCAN LAWRIE LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">GATEHOUSE</KEYFIELD>
+        <FIELD name="fullName">GATEHOUSE BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">GHANAINT</KEYFIELD>
+        <FIELD name="fullName">GHANA INTERNATIONAL BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">HAMPDENCOP</KEYFIELD>
+        <FIELD name="fullName">HAMPDEN and CO PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">HAMPSHIRE</KEYFIELD>
+        <FIELD name="fullName">HAMPSHIRE TRUST BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">HAVINBANK</KEYFIELD>
+        <FIELD name="fullName">HAVIN BANK LTD</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">HSBC</KEYFIELD>
+        <FIELD name="fullName">HSBC BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">JPMC</KEYFIELD>
+        <FIELD name="fullName">J.P. MORGAN INTERNATIONAL BANK LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">KINGDOM</KEYFIELD>
+        <FIELD name="fullName">KINGDOM BANK LTD</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">LLOYDS</KEYFIELD>
+        <FIELD name="fullName">LLOYDS BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">MARKSSPENC</KEYFIELD>
+        <FIELD name="fullName">MARKS and SPENCER FINANCIAL SERVICES PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">MASTHAVEN</KEYFIELD>
+        <FIELD name="fullName">MASTHAVEN BANK LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">METHODIST</KEYFIELD>
+        <FIELD name="fullName">METHODIST CHAPEL AID LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">METRO</KEYFIELD>
+        <FIELD name="fullName">METRO BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">MONZO</KEYFIELD>
+        <FIELD name="fullName">MONZO BANK LTD</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">NATWEST</KEYFIELD>
+        <FIELD name="fullName">NATIONAL WESTMINSTER BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">OAKNORTH</KEYFIELD>
+        <FIELD name="fullName">OAKNORTH BANK LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">ONESAVINGS</KEYFIELD>
+        <FIELD name="fullName">ONESAVINGS BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">PARAGON</KEYFIELD>
+        <FIELD name="fullName">PARAGON BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">PCFGROUP</KEYFIELD>
+        <FIELD name="fullName">PCF GROUP HOLDINGS LTD</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">RAPHAEL</KEYFIELD>
+        <FIELD name="fullName">R. RAPHAEL and SONS PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">RATHBONE</KEYFIELD>
+        <FIELD name="fullName">RATHBONE INVESTMENT MANAGEMENT LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">RBS</KEYFIELD>
+        <FIELD name="fullName">ROYAL BANK OF SCOTLAND PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">RELIANCE</KEYFIELD>
+        <FIELD name="fullName">RELIANCE BANK LTD</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">REVOLUT</KEYFIELD>
+        <FIELD name="fullName">REVOLUT</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">SAINSBURYS</KEYFIELD>
+        <FIELD name="fullName">SAINSBURYS BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">SCHRODER</KEYFIELD>
+        <FIELD name="fullName">SCHRODER and CO LTD</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">SCOTTISHWI</KEYFIELD>
+        <FIELD name="fullName">SCOTTISH WIDOWS BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">SECURE</KEYFIELD>
+        <FIELD name="fullName">SECURE TRUST BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">SHAWBROOK</KEYFIELD>
+        <FIELD name="fullName">SHAWBROOK BANK LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">STANCHART</KEYFIELD>
+        <FIELD name="fullName">STANDARD CHARTERED BANK</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">STARLING</KEYFIELD>
+        <FIELD name="fullName">STARLING BANK LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">TANDEM</KEYFIELD>
+        <FIELD name="fullName">TANDEM BANK LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">TESCO</KEYFIELD>
+        <FIELD name="fullName">TESCO PERSONAL FINANCE PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">ULSTER</KEYFIELD>
+        <FIELD name="fullName">ULSTER BANK LTD</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">UNITEDTRUS</KEYFIELD>
+        <FIELD name="fullName">UNITED TRUST BANK LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">UNITYTRUST</KEYFIELD>
+        <FIELD name="fullName">UNITY TRUST BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">VANQUIS</KEYFIELD>
+        <FIELD name="fullName">VANQUIS BANK LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">VIRGINMONE</KEYFIELD>
+        <FIELD name="fullName">VIRGIN MONEY PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">WEATHERBYS</KEYFIELD>
+        <FIELD name="fullName">WEATHERBYS BANK LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">WESLEYAN</KEYFIELD>
+        <FIELD name="fullName">WESLEYAN BANK LIMITED</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="firmName">WYELANDS</KEYFIELD>
+        <FIELD name="fullName">WYELANDS BANK PLC</FIELD>
+        <FIELD name="country">GBR</FIELD>
+        <FIELD name="sector">BANKS</FIELD>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

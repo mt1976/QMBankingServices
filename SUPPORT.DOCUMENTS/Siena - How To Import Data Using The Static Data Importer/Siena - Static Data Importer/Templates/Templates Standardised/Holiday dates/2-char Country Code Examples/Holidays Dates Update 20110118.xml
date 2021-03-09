@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+    <TRANSACTION type="UPDATE">
+        - <TABLE name="Country" classname="com.eurobase.siena.data.country.Country">
+            <RECORD>
+                <KEYFIELD name="code">ZA</KEYFIELD>
+                <FIELD name = "holidays.weekend">Sat Sun</FIELD>
+                <SLOT name="Holidays.Dates" classname="com.eurobase.siena.data.holiday.HolidayDateSet" memberClassname="com.eurobase.siena.data.holiday.HolidayDate">
+                    <SLOTRECORD>
+                        <SLOTKEYFIELD name="name">Day of Reconciliation</SLOTKEYFIELD>
+                        <SLOTFIELD name="settleOK">N</SLOTFIELD>
+                        <SLOTFIELD name="hDate">16/12/2016</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+            </RECORD>
+        </TABLE>
+    </TRANSACTION>
+</TRANSACTIONS>

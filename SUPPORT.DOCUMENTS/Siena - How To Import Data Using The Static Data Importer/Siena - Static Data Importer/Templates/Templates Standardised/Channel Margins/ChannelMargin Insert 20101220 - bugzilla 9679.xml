@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+      <TRANSACTION type="INSERT">
+        <TABLE name="SalesDeskMargin" classname="com.eurobase.siena.portal.model.SalesDeskMargin">
+            <RECORD>
+                  <KEYFIELD name="key.areaType">Channel</KEYFIELD>
+                  <KEYFIELD name="key.criteria">CurrencyPair Product Tenor</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.dealingInterface"></KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.channel">General</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.tradingGroup"></KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.agreementDealingInterface.agreement.priceMaker.type"></KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.agreementDealingInterface.agreement.priceMaker.tradingEntity"></KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.agreementDealingInterface.agreement.priceTaker.type"></KEYFIELD>
+	     <KEYFIELD name="key.areaHolder.agreementDealingInterface.agreement.priceTaker.tradingEntity"></KEYFIELD>
+	     <KEYFIELD name="key.areaHolder.agreementDealingInterface.dealingInterface"></KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.product">FX Spot</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.currencyPair.majorCurrencyIsoCode">AUD</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.currencyPair.minorCurrencyIsoCode">USD</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.tenor">Undefined</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.timeZone"></KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.currency"></KEYFIELD>
+                  <FIELD name="priority">1</FIELD>
+                  <FIELD name="data.amountCurrency">USD</FIELD>
+                  <FIELD name="data.amountBandId">FX</FIELD>
+                <SLOT name="Data.AmountBandList" classname="com.eurobase.siena.portal.model.AmountBandSlotType" memberClassname="com.eurobase.siena.portal.model.AmountBandSlotMember">
+                     <SLOTRECORD>
+                          <SLOTKEYFIELD name="bandMaxAmount">5000</SLOTKEYFIELD>
+                          <SLOTFIELD name="margin">3 pips</SLOTFIELD>
+                    </SLOTRECORD>
+                     <SLOTRECORD>
+                          <SLOTKEYFIELD name="bandMaxAmount">1000000</SLOTKEYFIELD>
+                          <SLOTFIELD name="margin">2 pips</SLOTFIELD>
+                    </SLOTRECORD>
+                     <SLOTRECORD>
+                          <SLOTKEYFIELD name="bandMaxAmount">10000000</SLOTKEYFIELD>
+                          <SLOTFIELD name="margin">1.5 pips</SLOTFIELD>
+                    </SLOTRECORD>
+                     <SLOTRECORD>
+                          <SLOTKEYFIELD name="bandMaxAmount">50000000</SLOTKEYFIELD>
+                          <SLOTFIELD name="margin">0.5 pips</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+            </RECORD>
+        </TABLE>
+    </TRANSACTION>
+  </TRANSACTIONS>

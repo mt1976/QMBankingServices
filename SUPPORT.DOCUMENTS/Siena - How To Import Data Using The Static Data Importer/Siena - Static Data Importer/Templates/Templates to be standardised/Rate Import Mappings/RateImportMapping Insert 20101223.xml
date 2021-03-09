@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+    <TRANSACTION type="INSERT">
+        <TABLE name="RateImportMapping" classname="com.eurobase.siena.external.implementation.mqrate.RateImportMapping">
+            <RECORD>
+                <KEYFIELD name="key">AAATEST=</KEYFIELD>
+                <FIELD name="type">FX</FIELD>
+                <!--FIELD name="enabled">Y</FIELD-->
+                <FIELD name="tenor">Spot</FIELD>
+                <!--FIELD name="adaptor">Test</FIELD-->
+                <FIELD name="category">Market</FIELD>
+                <FIELD name="instrument">CHFTRY</FIELD>
+            </RECORD>
+        </TABLE>
+    </TRANSACTION>
+</TRANSACTIONS>

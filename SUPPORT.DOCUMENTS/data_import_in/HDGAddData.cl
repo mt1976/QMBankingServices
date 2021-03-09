@@ -1,0 +1,9 @@
+run UpdateTable database=database() xmlFile = "data_import_in/Sector.xml";
+run UpdateTable database=database() xmlFile = "data_import_in/Book.xml";
+run UpdateTable database=database() xmlFile = "data_import_in/Centre.xml";
+run UpdateTable database=database() xmlFile = "data_import_in/Firm.xml";
+run UpdateTable database=database() xmlFile = "data_import_in/CounterpartyGroup.xml";
+run UpdateTable database=database() xmlFile = "data_import_in/Counterparty.xml";
+run UpdateTable database=database() xmlFile = "data_import_in/CounterpartyImportID.xml";
+run UpdateTable database=database() xmlFile = "data_import_in/Portfolio.xml";
+run UpdateTable database=database() xmlFile = "data_import_in/MandatedUser.xml";

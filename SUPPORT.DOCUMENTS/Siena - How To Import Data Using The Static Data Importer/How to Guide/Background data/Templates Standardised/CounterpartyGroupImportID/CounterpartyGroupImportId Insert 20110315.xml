@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+<TRANSACTION type="INSERT">
+    <TABLE name="CounterpartyGroupImportID" classname="com.eurobase.siena.data.counterparty.CpartyGroupImportID">
+      <RECORD>
+          	<KEYFIELD name="importID">1234567</KEYFIELD>
+  	<FIELD name="counterpartyGroup">CTRPTYGROUP1</FIELD> 
+      </RECORD>
+    </TABLE>
+</TRANSACTION>
+</TRANSACTIONS>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+  <TRANSACTION type="DELETE">
+    <TABLE name="Agreement" classname="com.eurobase.siena.data.tradingentity.AgreementImpl">
+      <RECORD>
+        <KEYFIELD name="key.priceMaker.type">Sales Desk</KEYFIELD>
+        <KEYFIELD name="key.priceMaker.tradingEntity">Sales Desk</KEYFIELD>
+        <KEYFIELD name="key.priceTaker.type">Counterparty</KEYFIELD>
+        <KEYFIELD name="key.priceTaker.tradingEntity">CTRPTY2LDN</KEYFIELD>
+        </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

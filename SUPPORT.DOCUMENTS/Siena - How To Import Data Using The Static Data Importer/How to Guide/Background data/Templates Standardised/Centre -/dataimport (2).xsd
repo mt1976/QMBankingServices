@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : dataimport.xsd
+    Copyright  : Copyright 2010 Eurobase Systems Limited. All rights reserved.
+                 EUROBASE PROPRIETARY/CONFIDENTIAL. Use is subject to license
+                 terms.
+    Created on : 09 July 2009
+    Author     : rhawes
+    Version    : 1.2
+    Description:
+        This document validates XML that will be used to import data into the
+        Siena database.
+    History:
+      1.0 - Initial Version
+      1.1 - Added IMPORT ImportType and changed the minimum amount of RECORDS to
+            0 so that blank/template XML can be created which will still
+            validate
+      1.2 - Added SELECT functionality
+      1.3 - Added SELECTRECORD functionality
+      1.4 - Updated use of SELECTRECORD functionality
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.eurobase.com/schema/dataimport"
+            xmlns:tns="http://www.eurobase.com/schema/dataimport"
+            elementFormDefault="qualified">
+    <xsd:simpleType name="ImportType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="INSERT">
+                <xsd:annotation>
+                    <xsd:documentation>Inserts the data into a table</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="UPDATE">
+                <xsd:annotation>
+                    <xsd:documentation>Uses the KeyField to update the data in a table</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="DELETE">
+                <xsd:annotation>
+                    <xsd:documentation>Uses the KeyField to remove the data from a table</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="IMPORT">
+                <xsd:annotation>
+                    <xsd:documentation>Uses the KeyField to update the data in a table. If the table does not exist, it inserts the data into a table</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="TableName">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="ClassName">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="MemberClassName">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="FieldName">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="RecordId">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="SlotName">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:complexType name="FieldType">
+        <xsd:simpleContent>
+            <xsd:extension base="tns:FieldValue">
+                <xsd:attributeGroup ref="tns:FieldAttributes"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="SelectFieldType">
+        <xsd:simpleContent>
+            <xsd:extension base="tns:FieldValue">
+                <xsd:attributeGroup ref="tns:SelectFieldAttributes"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:simpleType name="FieldValue">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:complexType name="SlotRecord">
+        <xsd:sequence>
+            <xsd:element ref="tns:SELECTRECORD" maxOccurs="unbounded" minOccurs="0" />
+            <xsd:element ref="tns:SLOTKEYFIELD" maxOccurs="unbounded"/>
+            <xsd:element ref="tns:SLOTFIELD" maxOccurs="unbounded" minOccurs="0"/>
+            <xsd:element ref="tns:SLOT" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="tns:SlotRecordAttributes"/>
+    </xsd:complexType>
+    <xsd:complexType name="Slot">
+        <xsd:sequence>
+            <xsd:element ref="tns:SLOTRECORD" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="tns:SlotAttributes"/>
+    </xsd:complexType>
+    <xsd:complexType name="Select">
+        <xsd:sequence>
+            <xsd:element ref="tns:SELECTRECORD" maxOccurs="unbounded" minOccurs="0" />
+            <xsd:element ref="tns:SELECTKEYFIELD" maxOccurs="unbounded"  minOccurs="0" xmlns:tns="http://www.eurobase.com/schema/dataimport"/>
+            <xsd:element ref="tns:SELECTFIELD" maxOccurs="unbounded" minOccurs="0" xmlns:tns="http://www.eurobase.com/schema/dataimport"/>
+            <xsd:element ref="tns:KEYFIELD" maxOccurs="unbounded"  minOccurs="0" xmlns:tns="http://www.eurobase.com/schema/dataimport"/>
+            <xsd:element ref="tns:FIELD" maxOccurs="unbounded" minOccurs="0" xmlns:tns="http://www.eurobase.com/schema/dataimport"/>
+            <xsd:element ref="tns:SLOT" maxOccurs="unbounded" minOccurs="0" xmlns:tns="http://www.eurobase.com/schema/dataimport"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="SelectRecord">
+      <xsd:sequence>
+        <xsd:element ref="tns:SELECTKEYFIELD" maxOccurs="unbounded" minOccurs="1" xmlns:tns="http://www.eurobase.com/schema/dataimport"/>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="tns:SelectRecordAttributes"/>
+    </xsd:complexType>
+    <xsd:complexType name="Record">
+        <xsd:sequence>
+            <xsd:element ref="tns:SELECTRECORD" maxOccurs="unbounded" minOccurs="0" />
+            <xsd:element ref="tns:KEYFIELD" maxOccurs="unbounded" xmlns:tns="http://www.eurobase.com/schema/dataimport"/>
+            <xsd:element ref="tns:FIELD" maxOccurs="unbounded" minOccurs="0" xmlns:tns="http://www.eurobase.com/schema/dataimport"/>
+            <xsd:element ref="tns:SLOT" maxOccurs="unbounded" minOccurs="0" xmlns:tns="http://www.eurobase.com/schema/dataimport"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Table">
+        <xsd:sequence>
+            <xsd:element ref="tns:SELECT" maxOccurs="unbounded" minOccurs="0" />
+            <xsd:element ref="tns:RECORD" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="tns:TableAttributes"/>
+    </xsd:complexType>
+    <xsd:complexType name="Transaction">
+        <xsd:sequence>
+            <xsd:element ref="tns:TABLE" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="tns:TransactionAttributes"/>
+    </xsd:complexType>
+    <xsd:complexType name="Transactions">
+        <xsd:sequence>
+            <xsd:element ref="tns:TRANSACTION" maxOccurs="unbounded" minOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="TRANSACTIONS" type="tns:Transactions">
+        <xsd:annotation>
+            <xsd:documentation>TRANSACTIONS is the parent node to the XML document.  Within this node there are
+TRANSACTION nodes. The TRANSACTIONS node can hold 1 to many TRANSACTION nodes.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="TRANSACTION" type="tns:Transaction">
+        <xsd:annotation>
+            <xsd:documentation>TRANSACTION holds the details for a transaction of data to be imported into the
+Siena database. This holds a mandatory type which specifies whether the data
+should be inserted, updated or deleted. The TRANSACTION node can hold 1 to many
+RECORD nodes.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="TABLE" type="tns:Table">
+        <xsd:annotation>
+            <xsd:documentation>The TABLE node represents a table in the Siena database. It's attributes consist
+of the table 'name' and the Class 'classname' associated with the table. The
+TABLE node holds 1 to many RECORD nodes.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="SELECT" type="tns:Select">
+        <xsd:annotation>
+            <xsd:documentation>The SELECT node represents a lookup for UPDATEs or
+DELETions to records of a table in the Siena database. The SELECT node holds the
+data to do the lookup and the data to be updated in the Siena database.  Additional
+data is not required if it is a DELETion.
+The SELECT is made up of SELECTKEYFIELDs, SELECTFIELDs, KEYFIELDs, FIELDs and SLOTs.
+Note for deleting records in the Siena database, only the KEYFIELD node(s)is/(are)
+required.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="RECORD" type="tns:Record">
+        <xsd:annotation>
+            <xsd:documentation>The RECORD node represents a record of a table in the Siena database. The RECORD
+node holds the data that will be inserted/update/deleted in the Siena database.
+The RECORD is made up of KEYFIELDs, FIELDs and SLOTs. Note for deleting records
+in the Siena database, only the KEYFIELD node(s) is/(are) required.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="SELECTRECORD" type="tns:SelectRecord">
+        <xsd:annotation>
+            <xsd:documentation>The SELECTRECORD node represents a lookup on a particular record
+where it's values can be used to lookup another record to do an update on.  This is defined within
+the SELECT node, therefore can only be used on UPDATE and DELETE.  The recordid defines the cache
+where this record can be referenced.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="SELECTKEYFIELD" type="tns:SelectFieldType">
+        <xsd:annotation>
+            <xsd:documentation>The SELECTKEYFIELD node represents the (or part of the)
+primary key of records in Siena database.  This data is used to do a record lookup in the
+Siena Database.  This node consists of an attribute, to hold the field name, and the
+contents hold the value of the field.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="SELECTFIELD" type="tns:SelectFieldType">
+        <xsd:annotation>
+            <xsd:documentation>The SELECTFIELD node represents a field of the record in the Siena database.
+This data is used to do a record lookup in the Siena Database.  This node consists of an attribute,
+to hold the field name, and the contents hold the value of the field.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="KEYFIELD" type="tns:FieldType">
+        <xsd:annotation>
+            <xsd:documentation>The KEYFIELD node represents the (or part of the) primary key of the record in
+Siena database. This node consists of an attribute, to hold the field name, and
+the contents hold the value of the field.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="FIELD" type="tns:FieldType">
+        <xsd:annotation>
+            <xsd:documentation>The FIELD node represents a field of the record in the Siena database. This node
+consists of an attribute, to hold the field name, and the contents hold the
+value of the field.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="SLOT" type="tns:Slot">
+        <xsd:annotation>
+            <xsd:documentation>The SLOT node holds a sub records in a record in the Siena database. The slot
+node consists of the slot 'name', the 'classname' which represents the slot
+holder and 'memberClassname' which represents a slot entry. There can be 1 to
+many SLOTRECORDs within the SLOT.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="SLOTRECORD" type="tns:SlotRecord">
+        <xsd:annotation>
+            <xsd:documentation>THE SLOTRECORD node holds data for a slot entry within a slot. The SLOTRECORD is
+made up of 1 to many SLOTKEYFIELDs and 0 to many SLOTFIELDs.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="SLOTKEYFIELD" type="tns:FieldType">
+        <xsd:annotation>
+            <xsd:documentation>The SLOTKEYFIELD node represents the (or part of the) primary key of the slot
+entry in a record in the Siena database. This node consists of an attribute, to
+hold the field name, and the contents hold the value of the field.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="SLOTFIELD" type="tns:FieldType">
+        <xsd:annotation>
+            <xsd:documentation>The SLOTKEYFIELD node represents a field of the slot entry in a record in the
+Siena database. This node consists of an attribute, to hold the field name, and
+the contents hold the value of the field.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:attributeGroup name="TableAttributes">
+        <xsd:attribute name="name" type="tns:TableName" use="required">
+            <xsd:annotation>
+                <xsd:documentation>This is the name of a Table in the Siena database.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="classname" type="tns:ClassName" use="required">
+            <xsd:annotation>
+                <xsd:documentation>The classname represents the table class in Siena database.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:attributeGroup>
+    <xsd:attributeGroup name="FieldAttributes">
+        <xsd:attribute name="name" type="tns:FieldName" use="required">
+            <xsd:annotation>
+                <xsd:documentation>This name represents a field name of a record in the SienaDatabase. See the
+documentation for a list of field names for a particular table.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="recordid" type="tns:RecordId" use="optional">
+            <xsd:annotation>
+                <xsd:documentation>The recordid on a SELECTRECORD node, defineds where the lookup record can
+be cached.  A SELECTKEYFIELD or SELECTFIELD nodes which defineds the attribute recordid references the record
+defined in SELECTRECORD to get information out of it.  If this attribute is defined in the SELECTKEYFIELD or
+SELECTFIELD nodes, then the content of the node is the field reference on the recordid record.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:attributeGroup>
+    <xsd:attributeGroup name="SelectRecordAttributes">
+        <xsd:attribute name="name" type="tns:TableName" use="required">
+            <xsd:annotation>
+                <xsd:documentation>This is the name of a Table in the Siena database.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="classname" type="tns:ClassName" use="required">
+            <xsd:annotation>
+                <xsd:documentation>The classname represents the table class in Siena database.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="recordid" type="tns:RecordId" use="optional">
+            <xsd:annotation>
+                <xsd:documentation>The recordid on a SELECTRECORD node, defineds where the lookup record can
+be cached.  A SELECTKEYFIELD or SELECTFIELD nodes which defineds the attribute recordid references the record
+defined in SELECTRECORD to get information out of it.  If this attribute is defined in the SELECTKEYFIELD or
+SELECTFIELD nodes, then the content of the node is the field reference on the recordid record.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:attributeGroup>
+    <xsd:attributeGroup name="SelectFieldAttributes">
+        <xsd:attribute name="name" type="tns:FieldName" use="required">
+            <xsd:annotation>
+                <xsd:documentation>This name represents a field name of a record in the SienaDatabase. See the
+documentation for a list of field names for a particular table.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="recordid" type="tns:RecordId" use="optional">
+            <xsd:annotation>
+                <xsd:documentation>The recordid on a SELECTRECORD node, defineds where the lookup record can
+be cached.  A SELECTKEYFIELD or SELECTFIELD nodes which defineds the attribute recordid references the record
+defined in SELECTRECORD to get information out of it.  If this attribute is defined in the SELECTKEYFIELD or
+SELECTFIELD nodes, then the content of the node is the field reference on the recordid record.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:attributeGroup>
+    <xsd:attributeGroup name="SlotAttributes">
+        <xsd:attribute name="name" type="tns:SlotName" use="required">
+            <xsd:annotation>
+                <xsd:documentation>This is the name of a Slot in a Record in the Siena database.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="classname" type="tns:ClassName" use="required">
+            <xsd:annotation>
+                <xsd:documentation>The classname represents the class which holds the slot entries in a record in
+Siena database.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="memberClassname" type="tns:MemberClassName" use="required">
+            <xsd:annotation>
+                <xsd:documentation>The memberClassname represents the class of an entry in a Slot of a record in
+the Siena database.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:attributeGroup>
+    <xsd:attributeGroup name="TransactionAttributes">
+        <xsd:attribute name="type" type="tns:ImportType" use="required">
+            <xsd:annotation>
+                <xsd:documentation>The type represents how the RECORD(s) will penetrate the Siena database. If type
+is set to INSERT the RECORD will be inserted into the Siena Database. If type is
+set to UPDATE the RECORD will update a record in the Siena Database. If type is
+set to DELETE the RECORD will be deleted from the Siena Database. If type is set
+to IMPORT the RECORD will update a record in the Siena Database if it exists,
+otherwise will be inserted into the Siena Database.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:attributeGroup>
+    <xsd:attributeGroup name="SlotRecordAttributes">
+        <xsd:attribute name="type" type="tns:ImportType">
+            <xsd:annotation>
+                <xsd:documentation>The type represents how the Slot details will penetrate the Siena database. If
+type is set to INSERT the SLOTRECORD will be inserted into a record in the Siena
+Database. If type is set to UPDATE the SLOTRECORD will be update to a record in
+the Siena Database. If type is set to DELETE the SLOTRECORD will be deleted from
+a record in the Siena Database. If type is set to IMPORT the SLOTRECORD will be
+update to a record in the Siena Database if it exists, otherwise it will be
+inserted into a record in the Siena Database. This attribute is optional and if
+it is not set the Siena database will use the type defined in the TRANSACTION
+node.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:attributeGroup>
+</xsd:schema>

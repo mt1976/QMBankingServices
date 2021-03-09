@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TRANSACTIONS>
+  <TRANSACTION type="IMPORT">
+
+    <!-- Import of T24 party representing a parent party, i.e. if liability number is the same as customer number. -->
+    <TABLE classname="com.eurobase.siena.data.counterparty.CpartyGroup" name="CounterpartyGroup">
+      <RECORD>
+        <KEYFIELD name="name">BCIX</KEYFIELD>
+        <!-- Hard-coded to AAA as per other existing groups. Is this correct? -->
+        <FIELD name="timeBandID">AAA</FIELD>
+      </RECORD>
+    </TABLE>
+    <TABLE classname="com.eurobase.siena.data.counterparty.CpartyGroupImportID" name="CounterpartyGroupImportID">
+      <!-- Used in limit import from T24 -->
+      <RECORD>
+        <KEYFIELD name="importID">20926</KEYFIELD>
+        <FIELD name="counterpartyGroup">BCIX</FIELD>
+      </RECORD>
+    </TABLE>
+    <!-- End of parent import -->
+
+    <TABLE classname="com.eurobase.siena.data.firms.Firm" name="Firm">
+      <RECORD>
+        <KEYFIELD name="firmName">BCIX</KEYFIELD>
+        <FIELD name="fullName">BCIX (MALI)</FIELD>
+      </RECORD>
+    </TABLE>
+    <TABLE classname="com.eurobase.siena.data.centres.Centre" name="Centre">
+      <RECORD>
+        <KEYFIELD name="shortName">BKX</KEYFIELD>
+        <FIELD name="fullName">BAMAKOX</FIELD>
+        <FIELD name="country">MAL</FIELD>
+      </RECORD>
+    </TABLE>
+    <TABLE classname="com.eurobase.siena.data.counterparty.Counterparty" name="Counterparty">
+      <RECORD>
+        <KEYFIELD name="name.firm">BCIX</KEYFIELD>
+        <KEYFIELD name="name.centre">BKX</KEYFIELD>
+        <!-- Note this is the group name, not liability number -->
+        <FIELD name="cpartyGroupName">BCIX</FIELD>
+      </RECORD>
+    </TABLE>
+    <TABLE classname="com.eurobase.siena.data.counterparty.CounterpartyImportID" name="CounterpartyImportID">
+      <!-- Used in deal export to T24 -->
+      <RECORD>
+        <KEYFIELD name="key.originID">T24</KEYFIELD>
+        <KEYFIELD name="key.importID">BCIX-BKX</KEYFIELD>
+        <FIELD name="counterparty.firm">BCIX</FIELD>
+        <FIELD name="counterparty.centre">BKX</FIELD>
+      </RECORD>
+      <!-- Used in limit import from T24 -->
+      <RECORD>
+        <KEYFIELD name="key.originID">LIMIT</KEYFIELD>
+        <KEYFIELD name="key.importID">209966</KEYFIELD>
+        <FIELD name="counterparty.firm">BCIX</FIELD>
+        <FIELD name="counterparty.centre">BKX</FIELD>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

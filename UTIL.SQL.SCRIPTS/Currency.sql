@@ -1,3 +1,3 @@
 SELECT        Code
-FROM            RG.Currency
+FROM            {{SQL.SOURCE}}.Currency
 WHERE        (InternalDeleted IS NULL) AND (Active = 1)

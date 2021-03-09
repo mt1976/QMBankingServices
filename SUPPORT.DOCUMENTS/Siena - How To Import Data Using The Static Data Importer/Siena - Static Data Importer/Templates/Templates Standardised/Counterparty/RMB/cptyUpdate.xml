@@ -1,0 +1,26 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<ns0:masterDataSynchInput xmlns:ns0 = "http://xsd.rmb.co.za/BT/Integration/MasterDataSynchInput-1.0.xsd">
+	<ns1:mappingRecord xmlns:ns1 = "http://xsd.rmb.co.za/BT/Integration/MasterDataMappingRecord-1.0.xsd">
+		<ns1:entityType>LEGALENTITY</ns1:entityType>
+		<ns1:masterId>77855</ns1:masterId>
+		<ns1:system>Siena</ns1:system>
+		<ns1:localId>77855</ns1:localId>
+		<ns1:pendingUpdate>N</ns1:pendingUpdate>
+	</ns1:mappingRecord>
+	<ns0:masterDataMessage>
+		<ns1:counterParty xmlns:ns1 = "http://xsd.rmb.co.za/siena/counterparty/sienaCounterpartyMaster-1.0.xsd">
+			<ns1:firm>
+				<ns1:shortName>HOLCIM.SU</ns1:shortName>
+				<ns1:name>Holcim (South Africa) (Pty) Limited</ns1:name>
+				<ns1:country>ZA</ns1:country>
+				<ns1:sector>Construction of Buildings</ns1:sector>
+			</ns1:firm>
+			<ns1:address>94 Rivonia Road, Sandton, , , 2146</ns1:address>
+			<ns1:telephone>10111</ns1:telephone>
+			<ns1:customerType>Corporate</ns1:customerType>
+			<ns1:owner/>
+			<ns1:kycStatus>yes</ns1:kycStatus>
+			<ns1:clientStatus>active</ns1:clientStatus>
+		</ns1:counterParty>
+	</ns0:masterDataMessage>
+</ns0:masterDataSynchInput>

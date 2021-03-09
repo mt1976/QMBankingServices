@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<FCUBS_HANDOFF_ENV>
+  <FCUBS_HEADER>
+     <SOURCE>FLEXCUBE</SOURCE>
+     <UBSCOMP/>
+     <USERID>FLEXCUBE</USERID>
+     <BRANCH>LDS</BRANCH>
+     <MODULEID>CO</MODULEID>
+     <SERVICE>FCUBSHandOffService</SERVICE>
+     <OPERATION/>
+     <DESTINATION>SIENA</DESTINATION>
+     <MSGSTAT>SUCCESS</MSGSTAT>
+   </FCUBS_HEADER>
+   <FCUBS_BODY>
+     <CO-BulkBalanceHandoff>
+       <BRN>LDS</BRN>
+       <CUSTOMER_NO>0001</CUSTOMER_NO>
+       <ACC_OR_GL_NO>USD001</ACC_OR_GL_NO>
+       <CURRENCY>USD</CURRENCY>
+       <TYPE>A</TYPE>
+       <BALANCE>1000001.23</BALANCE>
+     </CO-BulkBalanceHandoff>
+   </FCUBS_BODY>
+ </FCUBS_HANDOFF_ENV>

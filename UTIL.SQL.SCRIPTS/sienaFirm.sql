@@ -1,4 +1,4 @@
-SELECT        dbo.Centre.ShortName AS Code, dbo.Centre.FullName AS Name, dbo.Centre.Country, dbo.Country.Name AS CountryName
-FROM            dbo.Centre INNER JOIN
-                         dbo.Country ON dbo.Centre.Country = dbo.Country.Code
-WHERE        (dbo.Centre.InternalDeleted IS NULL)
+SELECT        {{SQL.SOURCE}}.Centre.ShortName AS Code, {{SQL.SOURCE}}.Centre.FullName AS Name, {{SQL.SOURCE}}.Centre.Country, {{SQL.SOURCE}}.Country.Name AS CountryName
+FROM            {{SQL.SOURCE}}.Centre INNER JOIN
+                         {{SQL.SOURCE}}.Country ON {{SQL.SOURCE}}.Centre.Country = {{SQL.SOURCE}}.Country.Code
+WHERE        ({{SQL.SOURCE}}.Centre.InternalDeleted IS NULL)

@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<TRANSACTIONS>
+  <TRANSACTION type="IMPORT">
+    <TABLE name="CounterpartyImportID" classname="com.eurobase.siena.data.counterparty.CounterpartyImportID">
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">BOE-OTH</KEYFIELD>
+        <FIELD name="counterparty.firm">BOE</FIELD>
+        <FIELD name="counterparty.centre">OTH</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">COMM-OTH</KEYFIELD>
+        <FIELD name="counterparty.firm">COMM</FIELD>
+        <FIELD name="counterparty.centre">OTH</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">DEV-OTH</KEYFIELD>
+        <FIELD name="counterparty.firm">DEV</FIELD>
+        <FIELD name="counterparty.centre">OTH</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">INV-OTH</KEYFIELD>
+        <FIELD name="counterparty.firm">INV</FIELD>
+        <FIELD name="counterparty.centre">OTH</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">LEND-OTH</KEYFIELD>
+        <FIELD name="counterparty.firm">LEND</FIELD>
+        <FIELD name="counterparty.centre">OTH</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">OTHER-OTH</KEYFIELD>
+        <FIELD name="counterparty.firm">OTHER</FIELD>
+        <FIELD name="counterparty.centre">OTH</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">RETAIL-OTH</KEYFIELD>
+        <FIELD name="counterparty.firm">RETAIL</FIELD>
+        <FIELD name="counterparty.centre">OTH</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">ADAMCOMPAN-SCO</KEYFIELD>
+        <FIELD name="counterparty.firm">ADAMCOMPAN</FIELD>
+        <FIELD name="counterparty.centre">SCO</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">AIBGROUPUK-REP</KEYFIELD>
+        <FIELD name="counterparty.firm">AIBGROUPUK</FIELD>
+        <FIELD name="counterparty.centre">REP</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">ALDERMORE-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">ALDERMORE</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">ALLIANCETR-SCO</KEYFIELD>
+        <FIELD name="counterparty.firm">ALLIANCETR</FIELD>
+        <FIELD name="counterparty.centre">SCO</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">ARBUTHNOT-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">ARBUTHNOT</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">ATOM-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">ATOM</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">BACB-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">BACB</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">BARCLAYS-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">BARCLAYS</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">BIRABANKLT-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">BIRABANKLT</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">BMCE-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">BMCE</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">BOI-REP</KEYFIELD>
+        <FIELD name="counterparty.firm">BOI</FIELD>
+        <FIELD name="counterparty.centre">REP</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">BOLME-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">BOLME</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">BOS-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">BOS</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">CAF-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">CAF</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">CAMBRIDGEC-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">CAMBRIDGEC</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">CHARITY-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">CHARITY</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">CHARTER-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">CHARTER</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">CHOARECO-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">CHOARECO</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">CLEARBANK-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">CLEARBANK</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">CLOSEBROTH-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">CLOSEBROTH</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">CLYDESDALE-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">CLYDESDALE</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">COOP-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">COOP</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">COUTTS-SCO</KEYFIELD>
+        <FIELD name="counterparty.firm">COUTTS</FIELD>
+        <FIELD name="counterparty.centre">SCO</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">CROWNAGENT-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">CROWNAGENT</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">DUNCANLAWR-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">DUNCANLAWR</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">GATEHOUSE-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">GATEHOUSE</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">GHANAINT-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">GHANAINT</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">HAMPDENCOP-SCO</KEYFIELD>
+        <FIELD name="counterparty.firm">HAMPDENCOP</FIELD>
+        <FIELD name="counterparty.centre">SCO</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">HAMPSHIRE-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">HAMPSHIRE</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">HAVINBANK-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">HAVINBANK</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">HSBC-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">HSBC</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">JPMC-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">JPMC</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">KINGDOM-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">KINGDOM</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">LLOYDS-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">LLOYDS</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">MARKSSPENC-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">MARKSSPENC</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">MASTHAVEN-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">MASTHAVEN</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">METHODIST-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">METHODIST</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">METRO-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">METRO</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">MONZO-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">MONZO</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">NATWEST-SCO</KEYFIELD>
+        <FIELD name="counterparty.firm">NATWEST</FIELD>
+        <FIELD name="counterparty.centre">SCO</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">OAKNORTH-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">OAKNORTH</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">ONESAVINGS-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">ONESAVINGS</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">PARAGON-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">PARAGON</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">PCFGROUP-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">PCFGROUP</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">RAPHAEL-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">RAPHAEL</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">RATHBONE-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">RATHBONE</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">RBS-SCO</KEYFIELD>
+        <FIELD name="counterparty.firm">RBS</FIELD>
+        <FIELD name="counterparty.centre">SCO</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">RELIANCE-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">RELIANCE</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">REVOLUT-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">REVOLUT</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">SAINSBURYS-SCO</KEYFIELD>
+        <FIELD name="counterparty.firm">SAINSBURYS</FIELD>
+        <FIELD name="counterparty.centre">SCO</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">SCHRODER-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">SCHRODER</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">SCOTTISHWI-SCO</KEYFIELD>
+        <FIELD name="counterparty.firm">SCOTTISHWI</FIELD>
+        <FIELD name="counterparty.centre">SCO</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">SECURE-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">SECURE</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">SHAWBROOK-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">SHAWBROOK</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">STANCHART-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">STANCHART</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">STARLING-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">STARLING</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">TANDEM-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">TANDEM</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">TESCO-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">TESCO</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">ULSTER-SCO</KEYFIELD>
+        <FIELD name="counterparty.firm">ULSTER</FIELD>
+        <FIELD name="counterparty.centre">SCO</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">UNITEDTRUS-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">UNITEDTRUS</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">UNITYTRUST-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">UNITYTRUST</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">VANQUIS-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">VANQUIS</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">VIRGINMONE-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">VIRGINMONE</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">WEATHERBYS-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">WEATHERBYS</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">WESLEYAN-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">WESLEYAN</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="key.originID">ExternalDealImporter</KEYFIELD>
+        <KEYFIELD name="key.importID">WYELANDS-ENG</KEYFIELD>
+        <FIELD name="counterparty.firm">WYELANDS</FIELD>
+        <FIELD name="counterparty.centre">ENG</FIELD>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

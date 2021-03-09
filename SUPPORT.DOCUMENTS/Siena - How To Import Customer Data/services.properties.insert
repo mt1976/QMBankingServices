@@ -1,0 +1,9 @@
+# Customer Importer
+service38 = Customer Importer
+service38.startClass=com.eurobase.siena.link.daemon.apps.TwistContainerLauncher
+service38.endClass=com.eurobase.siena.link.daemon.apps.TwistContainerKiller
+service38.defaultLoc={hostName}
+service38.timeout = 300
+service38.stream = CustomerImporter
+service38.args = Jvm|{javaExe} -DCustomerImporter -Deurobase.logger.domain=CustomerImporter -XX:+HeapDumpOnOutOfMemoryError -Dcom.eurobase.common.io.Loader.reportLoadFrom=y -DlogServer.sendToStdErr=Y -Dcom.sun.management.jmxremote.port=9113 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false  -Deurobase.class.path=siena.dataimporter.class.path -Xms64M -Xmx128M -Djava.awt.headless=true -Dfile.encoding={fileEncoding} -Dsiena.working={systemPath}/data, ProcessList|CustomerImporterHandler=True
+service38.panelName=TwistContainer

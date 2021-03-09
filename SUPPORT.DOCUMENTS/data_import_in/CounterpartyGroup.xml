@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<TRANSACTIONS>
+  <TRANSACTION type="IMPORT">
+    <TABLE name="CounterpartyGroup" classname="com.eurobase.siena.data.counterparty.CpartyGroup">
+      <RECORD>
+        <KEYFIELD name="name">BOE</KEYFIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name">COMM</KEYFIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name">DEV</KEYFIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name">INV</KEYFIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name">LEND</KEYFIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name">OTHER</KEYFIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name">RETAIL</KEYFIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

@@ -1,0 +1,91 @@
+<TRANSACTIONS>
+    <!--
+**************************ChannelMargin table***********************
+-->
+    <TRANSACTION type="UPDATE">
+        <TABLE name="ChannelMargin" classname="com.eurobase.siena.portal.model.ChannelMargin">
+            <RECORD>
+                  <KEYFIELD name="key.areaType">Dealing Interface</KEYFIELD>
+                  <KEYFIELD name="key.criteria">CurrencyPair Product Tenor TimeZone</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.dealingInterface">AIB 1</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.channel">AIB Test 1 Gold</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.tradingGroup">Gold</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.counterparty.firm">StanChart</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.counterparty.centre">LON</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.dealingInterface">Bloomberg</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.product">FX Spot</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.currencyPair.majorCurrencyIsoCode">EUR</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.currencyPair.minorCurrencyIsoCode">USD</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.tenor">Spot</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.timeZone"></KEYFIELD>
+                  <FIELD name="priority">0</FIELD>
+                  <FIELD name="data.marginBandAmountInMajor">Y</FIELD>
+                  <FIELD name="data.amountBandId">FX</FIELD>
+                <SLOT name="Data.AmountBandList" classname="com.eurobase.siena.portal.model.AmountBandSlotType" memberClassname="com.eurobase.siena.portal.model.AmountBandSlotMember">
+                    <SLOTRECORD>
+                          <SLOTKEYFIELD name="marginBandMaxAmount">250000</SLOTKEYFIELD>
+                          <SLOTFIELD name="margin">1/+1 pip</SLOTFIELD>
+                         
+                    </SLOTRECORD>
+                     
+                </SLOT>
+                 
+            </RECORD>
+            <RECORD>
+                  <KEYFIELD name="key.areaType">Dealing Interface</KEYFIELD>
+                  <KEYFIELD name="key.criteria">CurrencyPair Product Tenor TimeZone</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.dealingInterface">AIB 2</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.channel">AIB Test 2 Silver</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.tradingGroup">Silver</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.counterparty.firm">StanChart</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.counterparty.centre">LON</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.dealingInterface">Bloomberg</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.product">FX Spot</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.currencyPair.majorCurrencyIsoCode">GBP</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.currencyPair.minorCurrencyIsoCode">USD</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.tenor">Spot</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.timeZone"></KEYFIELD>
+                  <FIELD name="priority">0</FIELD>
+                  <FIELD name="data.marginBandAmountInMajor">Y</FIELD>
+                  <FIELD name="data.amountBandId">FX</FIELD>
+                <SLOT name="Data.AmountBandList" classname="com.eurobase.siena.portal.model.AmountBandSlotType" memberClassname="com.eurobase.siena.portal.model.AmountBandSlotMember">
+                    <SLOTRECORD>
+                          <SLOTKEYFIELD name="marginBandMaxAmount">250000</SLOTKEYFIELD>
+                          <SLOTFIELD name="margin">1/+1 pip</SLOTFIELD>
+                         
+                    </SLOTRECORD>
+                     
+                </SLOT>
+                 
+            </RECORD>
+            <RECORD>
+                  <KEYFIELD name="key.areaType">Dealing Interface</KEYFIELD>
+                  <KEYFIELD name="key.criteria">CurrencyPair Product Tenor TimeZone</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.dealingInterface">AIB 3</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.channel">AIB Test 3 Bronze</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.tradingGroup">Bronze</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.counterparty.firm">StanChart</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.counterparty.centre">LON</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.dealingInterface">Bloomberg</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.product">FX Spot</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.currencyPair.majorCurrencyIsoCode">EUR</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.currencyPair.minorCurrencyIsoCode">JPY</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.tenor">Spot</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.timeZone"></KEYFIELD>
+                  <FIELD name="priority">0</FIELD>
+                  <FIELD name="data.marginBandAmountInMajor">Y</FIELD>
+                  <FIELD name="data.amountBandId">FX</FIELD>
+                <SLOT name="Data.AmountBandList" classname="com.eurobase.siena.portal.model.AmountBandSlotType" memberClassname="com.eurobase.siena.portal.model.AmountBandSlotMember">
+                    <SLOTRECORD>
+                          <SLOTKEYFIELD name="marginBandMaxAmount">250000</SLOTKEYFIELD>
+                          <SLOTFIELD name="margin">1/+1 pip</SLOTFIELD>
+                         
+                    </SLOTRECORD>
+                     
+                </SLOT>
+            </RECORD>
+             
+        </TABLE>
+         
+      </TRANSACTION>
+</TRANSACTIONS>

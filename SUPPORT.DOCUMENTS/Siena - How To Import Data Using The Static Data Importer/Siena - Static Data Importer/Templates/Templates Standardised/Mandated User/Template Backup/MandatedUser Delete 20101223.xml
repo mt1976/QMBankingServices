@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+
+  <TRANSACTION type="DELETE">
+    <TABLE name="MandatedUser" classname="com.eurobase.siena.data.user.MandatedUser">
+      <RECORD>
+        <KEYFIELD name="mandatedUserKey.counterparty.firm">CTRPTY1</KEYFIELD>
+        <KEYFIELD name="mandatedUserKey.counterparty.centre">LDN</KEYFIELD>
+        <KEYFIELD name="mandatedUserKey.userName">M_User_Test</KEYFIELD>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

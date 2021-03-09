@@ -1,0 +1,15 @@
+
+<TRANSACTIONS>
+    <!-- 
+**************************ChannelMargin table***********************
+ -->
+    <TRANSACTION type="Delete">
+        <TABLE name="RateImportMapping" classname="com.eurobase.siena.external.implementation.mqrate.RateImportMapping">
+            <RECORD>
+                <KEYFIELD name="key">FRF=ASK</KEYFIELD>
+            </RECORD>
+        </TABLE>
+        
+    </TRANSACTION>
+    
+</TRANSACTIONS>

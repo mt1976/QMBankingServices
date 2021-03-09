@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+
+  
+
+  <TRANSACTION type="INSERT">
+    <TABLE name="Firm" classname="com.eurobase.siena.data.firms.Firm">
+      <RECORD>
+         	<KEYFIELD name="firmName">TEST1234</KEYFIELD>
+         	<FIELD name="fullName">Test1234</FIELD>
+	<FIELD name="country">GBR</FIELD>
+	<FIELD name="sector">Banks</FIELD>	
+	<FIELD name="identity"></FIELD>		
+      </RECORD>
+    </TABLE>
+  
+</TRANSACTION>
+<TRANSACTION type="INSERT">
+<TABLE name="Counterparty" classname="com.eurobase.siena.data.counterparty.Counterparty">
+<RECORD>
+	 <KEYFIELD name="name.firm">TEST1234</KEYFIELD> 
+  	<KEYFIELD name="name.centre">LDN</KEYFIELD> 
+  	<FIELD name="countryCode">GBR</FIELD> 
+  	<FIELD name="fullName">Test Counterparty</FIELD> 
+  	<FIELD name="address">Blank</FIELD> 
+		<SLOT name="Extensions" classname="com.eurobase.common.tech.types.FixedSlotType" memberClassname="com.eurobase.common.tech.types.FixedSlotType$FixedData">
+		<SLOTRECORD>
+  		<SLOTKEYFIELD name="key">Know Your Customer Status</SLOTKEYFIELD> 
+  		<SLOTFIELD name="value">Y</SLOTFIELD> 
+  		</SLOTRECORD>
+		<SLOTRECORD>
+  		<SLOTKEYFIELD name="key">Inactive Status</SLOTKEYFIELD> 
+  		<SLOTFIELD name="value">N</SLOTFIELD> 
+  		</SLOTRECORD>
+  		</SLOT>
+  </RECORD>
+  </TABLE>
+  </TRANSACTION>
+  
+<TRANSACTION type="INSERT">
+    <TABLE name="CounterpartyImportID" classname="com.eurobase.siena.data.counterparty.CounterpartyImportID">
+      <RECORD>
+          	<KEYFIELD name="key.originID">StaticDataImporter</KEYFIELD>
+          	<KEYFIELD name="key.importID">123456</KEYFIELD>
+  	<FIELD name="counterparty.firm">TEST1234</FIELD> 
+  	<FIELD name="counterparty.centre">LDN</FIELD> 
+      </RECORD>
+    </TABLE>
+</TRANSACTION>
+
+
+</TRANSACTIONS>

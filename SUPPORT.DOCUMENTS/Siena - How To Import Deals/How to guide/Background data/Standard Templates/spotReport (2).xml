@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : spotReport.xml
+    Created on : 28 January 2011, 10:56
+    Author     : rhawes
+    Description:
+        Purpose of the document follows.
+    
+     Deal Type identification:
+      This has a subtype of SP Therefore therefore this is a SPOT deal
+    
+    Attributes:
+      ExecTyp=0: means new report
+      TrdDt: TrdDt: trade start date
+      TrdID: This is the external reference number as far as siena is concerened (allocated by the bank if this is deal import for referencing the deal).
+             If this is for deal export, then this will be a siena contract number
+      TrdID2: This is a siena reference number (deal export only). It remains constant for the lifetime of the deal (constant through deal edits)
+      OrigTrdId: If this deal is imported by siena and re-exported, this will contain the original trade id specified by the bank. From siena's point of view this is for maintaining an external reference id
+              For eTrader deals thsi will contain the eTrader generated external reference.
+      SettlDt: This is the settlement date
+      Ccy: This is the dealt currency
+      LastQty: This is the quantity of the dealt currency
+      LastPx: This is the price at which the currency is being bought or sold
+      LastSpotRate: This is the spot rate
+      Bk: Book
+-->
+
+<TrdCaptRpt  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+   xmlns='http://www.fixprotocol.org/FIXML-5-0-SP1'
+   xsi:schemaLocation='http://www.fixprotocol.org/FIXML-5-0-SP1 fixml-tradecapture-base-5-0-SP1.xsd'
+   ExecTyp="0"
+   TrdDt="2011-03-14"
+   TrdID="SPOT0001" OrigTrdID="XYZ1234" TrdID2="SIENA-REF1234"
+   SettlDt="2011-03-16"
+   Ccy="GBP"
+   LastQty="1500000"
+   LastPx="1.6255"
+   Bk="WEB" MsgID="0000002">
+<!--
+  Snt: The time this report was sent
+-->
+<Hdr Snt="2011-03-14T10:32:00"/>
+<!--
+  Sym: The currency pair involved in the exchange
+  CFI=RCSXXX: Indicates that this is Spot
+  SubTyp: SP measn SPOT
+-->
+<Instrmt ID="1" Sym="GBP/USD" CFI="RCSXXX" SubTyp="SP"/>
+<!--
+  FxRate: The price
+  Px: The absolute margin (derived if cross)
+-->
+<Undly Sym="GBP/USD" FxRate="1.6255" Px="0" Mat="2011-03-16"/>
+<!--
+  Side=1: Means the bank is buying (customer is selling). 2 means selling
+  CstRef: Customer Reference
+-->
+<RptSide Side="1" CstRef="here is a customer reference">
+  <!-- The customer. This is mapped to a siena counterparty. -->
+  <Pty ID="12345678" R="13"/>
+  <!--
+    The mandated user
+  -->
+  <!--  Pty ID="DACochran" R="11"   -->
+  <!-- Pay From / Pay to  settlement instruction -->
+  <SettlDetails>
+    <!-- the banks Debit instruction, customer credit instruction for USD -->
+    <!--   <Pty ID="057793778, SBSA, Jacobs"/>    -->
+  </SettlDetails>
+  <!-- Take From / Take At settlement instruction -->
+  <SettlDetails>
+    <!-- Customer debit instruction, the banks credit instruction for GBP -->
+    <!--  <Pty ID="057793778, SBSA, Jacobs"/>   -->
+    </SettlDetails>
+</RptSide>
+<!--
+Notes field iteration.
+-->
+<!--   <Nt Txt="Testing Notes"/>  -->
+<!--
+  Edit Information Field.
+  EdtBy: Who Edited the Record
+  Rsn: The reason for the edit
+-->
+<!--   <Edt EdtBy="Client" Rsn="Amount Incorrect" />   -->
+</TrdCaptRpt>

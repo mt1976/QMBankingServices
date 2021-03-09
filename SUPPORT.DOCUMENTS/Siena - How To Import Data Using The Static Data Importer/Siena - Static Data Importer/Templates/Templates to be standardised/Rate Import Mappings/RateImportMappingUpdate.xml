@@ -1,0 +1,20 @@
+
+<TRANSACTIONS>
+    <!-- 
+**************************ChannelMargin table***********************
+ -->
+    <TRANSACTION type="UPDATE">
+        <TABLE name="RateImportMapping" classname="com.eurobase.siena.external.implementation.mqrate.RateImportMapping">
+            <RECORD>
+                <KEYFIELD name="key">FRF=ASK</KEYFIELD>
+                <FIELD name="type">Foreign Exchange</FIELD>
+                <FIELD name="tenor">Spot</FIELD>
+                <FIELD name="instrument">USDFRF</FIELD>
+                <FIELD name="category">Market</FIELD>
+            </RECORD>
+            
+        </TABLE>
+        
+    </TRANSACTION>
+    
+</TRANSACTIONS>

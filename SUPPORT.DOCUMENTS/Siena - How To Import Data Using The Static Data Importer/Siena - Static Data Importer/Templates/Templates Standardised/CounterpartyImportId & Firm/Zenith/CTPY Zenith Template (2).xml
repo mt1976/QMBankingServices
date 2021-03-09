@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+
+  <TRANSACTION type="INSERT">
+    <TABLE name="Firm" classname="com.eurobase.siena.data.firms.Firm">
+      <RECORD>
+         	<KEYFIELD name="firmName">TEST4321</KEYFIELD>
+         	<FIELD name="fullName">Test4321</FIELD>
+	<FIELD name="country">AL</FIELD>
+      </RECORD>
+    </TABLE>
+ </TRANSACTION>
+
+<TRANSACTION type="INSERT">
+<TABLE name="CounterpartyGroup" classname="com.eurobase.siena.data.counterparty.CpartyGroup">
+<RECORD>
+	<KEYFIELD name="name">TEST4321</KEYFIELD>
+  	<FIELD name="countryCode">AL</FIELD> 
+ </RECORD>
+  </TABLE>
+  </TRANSACTION>
+
+
+<TRANSACTION type="INSERT">
+<TABLE name="Counterparty" classname="com.eurobase.siena.data.counterparty.Counterparty">
+<RECORD>
+	<KEYFIELD name="name.firm">TEST4321</KEYFIELD> 
+  	<KEYFIELD name="name.centre">LDN</KEYFIELD> 
+  	<FIELD name="countryCode">AL</FIELD> 
+  	<FIELD name="fullName">Test Counterparty Test4321</FIELD> 
+	<FIELD name="cpartyGroupName">TEST4321</FIELD>
+  </RECORD>
+  </TABLE>
+  </TRANSACTION>
+  
+<TRANSACTION type="INSERT">
+    <TABLE name="CounterpartyImportID" classname="com.eurobase.siena.data.counterparty.CounterpartyImportID">
+      <RECORD>
+          	<KEYFIELD name="key.originID">T24</KEYFIELD>
+          	<KEYFIELD name="key.importID">654321</KEYFIELD>
+  	<FIELD name="counterparty.firm">TEST4321</FIELD> 
+  	<FIELD name="counterparty.centre">LDN</FIELD> 
+      </RECORD>
+    </TABLE>
+</TRANSACTION>
+
+
+</TRANSACTIONS>

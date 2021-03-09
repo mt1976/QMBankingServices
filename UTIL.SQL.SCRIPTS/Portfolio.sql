@@ -1,3 +1,3 @@
 SELECT        Description1
-FROM            RG.Portfolio
+FROM            {{SQL.SOURCE}}.Portfolio
 WHERE        (InternalDeleted IS NULL)

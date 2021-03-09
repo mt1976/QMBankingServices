@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<TRANSACTIONS>
+  <TRANSACTION type="IMPORT">
+    <TABLE name="Centre" classname="com.eurobase.siena.data.centres.Centre">
+      <RECORD>
+        <KEYFIELD name="shortName">OTH</KEYFIELD>
+        <FIELD name="fullName">OTHER</FIELD>
+        <FIELD name="country">GBR</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="shortName">ENG</KEYFIELD>
+        <FIELD name="fullName">ENGLAND and WALES</FIELD>
+        <FIELD name="country">GBR</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="shortName">REP</KEYFIELD>
+        <FIELD name="fullName">REPUBLIC of IRELAND</FIELD>
+        <FIELD name="country">ROI</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="shortName">SCO</KEYFIELD>
+        <FIELD name="fullName">SCOTLAND</FIELD>
+        <FIELD name="country">GBR</FIELD>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

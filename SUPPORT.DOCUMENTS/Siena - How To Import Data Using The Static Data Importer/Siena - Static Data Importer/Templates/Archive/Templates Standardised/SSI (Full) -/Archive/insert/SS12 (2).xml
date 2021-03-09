@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns="http://www.eurobase.com/schema/dataimport">
+		<TRANSACTION type="INSERT">
+				<TABLE classname="com.eurobase.siena.data.counterparty.CounterpartySettlementInstructionsName" name="CounterpartySettlementInstructionsName">
+						<RECORD>
+								<KEYFIELD name="name">I'm an SSI1</KEYFIELD>
+						</RECORD>
+				</TABLE>
+				<TABLE classname="com.eurobase.siena.data.counterparty.CounterpartySettlementInstructions" name="CounterpartySettlementInstructions">
+						<RECORD>
+								<KEYFIELD name="key.counterparty.firm">LEZA</KEYFIELD>
+								<KEYFIELD name="key.counterparty.centre">MED</KEYFIELD>
+								<KEYFIELD name="key.currency">ZAR</KEYFIELD>
+								<KEYFIELD name="key.name">I'm an SSI1</KEYFIELD>
+								<KEYFIELD name="key.number">EXAnything</KEYFIELD>
+								<KEYFIELD name="key.type">MM</KEYFIELD>
+								<FIELD name="isDefault">N</FIELD>
+								<FIELD name="isActive">Y</FIELD>
+						</RECORD>
+				</TABLE>
+		</TRANSACTION>
+</TRANSACTIONS>

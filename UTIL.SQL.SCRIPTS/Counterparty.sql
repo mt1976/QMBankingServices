@@ -1,3 +1,3 @@
 SELECT        KeyImportID
-FROM            RG.CounterpartyImportID
+FROM            {{SQL.SOURCE}}.CounterpartyImportID
 WHERE        (InternalDeleted IS NULL) AND (KeyOriginID = 'ExternalDealImporter')

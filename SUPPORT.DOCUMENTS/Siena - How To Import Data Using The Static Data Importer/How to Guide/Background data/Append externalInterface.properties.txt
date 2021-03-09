@@ -1,0 +1,7 @@
+external.interface.name=DataImportSource
+external.interface.DataImportSource=com.eurobase.external.support.FileReader
+#external.interface.DataImportSource=com.eurobase.siena.external.implementation.jms.JmsPeerExternalSystem
+
+external.interface.name=FormattedDataImportSource
+external.interface.FormattedDataImportSource=com.eurobase.external.support.FileReader
+#external.interface.FormattedDataImportSource=com.eurobase.siena.external.implementation.jms.JmsPeerExternalSystem

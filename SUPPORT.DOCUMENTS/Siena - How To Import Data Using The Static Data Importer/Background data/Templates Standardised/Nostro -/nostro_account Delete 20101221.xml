@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+	<TRANSACTION type="DELETE">
+		<TABLE name="NostroAccount"
+		       classname="com.eurobase.siena.data.nostro.NostroAccount">
+			<RECORD>
+				<KEYFIELD name="name.counterparty.firm"/>
+				<KEYFIELD name="name.counterparty.centre"/>
+				<KEYFIELD name="name.currency">XPT</KEYFIELD>
+				<KEYFIELD name="name.accountType">Correspondent</KEYFIELD>
+				<KEYFIELD name="name.settlementCode">ALL</KEYFIELD>
+ 			</RECORD>
+		</TABLE>
+	</TRANSACTION>
+</TRANSACTIONS>

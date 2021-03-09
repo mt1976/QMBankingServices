@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TRANSACTIONS>
+  <TRANSACTION type="IMPORT">
+
+     <TABLE classname="com.eurobase.siena.data.centres.Centre" name="Centre">
+      <RECORD>
+        <KEYFIELD name="shortName">BKZ</KEYFIELD>
+        <FIELD name="fullName">BAMAKOZ</FIELD>
+        <FIELD name="country">MAL</FIELD>
+      </RECORD>
+    </TABLE>
+    <TABLE classname="com.eurobase.siena.data.counterparty.Counterparty" name="Counterparty">
+      <RECORD>
+        <KEYFIELD name="name.firm">BCIZ</KEYFIELD>
+        <KEYFIELD name="name.centre">BKZ</KEYFIELD>
+        <!-- Note this is the group name, not liability number -->
+      </RECORD>
+    </TABLE>
+    <TABLE classname="com.eurobase.siena.data.counterparty.CounterpartyImportID" name="CounterpartyImportID">
+      <!-- Used in deal export to T24 -->
+      <RECORD>
+        <KEYFIELD name="key.originID">T24</KEYFIELD>
+        <KEYFIELD name="key.importID">BCIZ-BKZ</KEYFIELD>
+        <FIELD name="counterparty.firm">BCIZ</FIELD>
+        <FIELD name="counterparty.centre">BKZ</FIELD>
+      </RECORD>
+      <!-- Used in limit import from T24 -->
+      <RECORD>
+        <KEYFIELD name="key.originID">LIMIT</KEYFIELD>
+        <KEYFIELD name="key.importID">209967</KEYFIELD>
+        <FIELD name="counterparty.firm">BCIZ</FIELD>
+        <FIELD name="counterparty.centre">BKZ</FIELD>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

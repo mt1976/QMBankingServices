@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : callAmendReport.xml
+    Created on : 22 May 2008, 14:38
+    Author     : rmcconnell
+    Description:
+        Purpose of the document follows:
+          Example of a Term deal to  be importer or exported by siena
+        
+    Deal Type identification:
+      This has a SubTyp of CALLA so this is a Call Amendment
+    
+    Attributes:
+      ExecTyp=0: means new report
+      TrdDt:   The date the ammendment was struck
+      lINKid:  The parent call deal
+      TrdID:   For deal import this is the banks generated reference. For Deal export this will be a siena contract number.
+      OrigTrdID:  This is included for deal export. It is the siena external reference number. For trades that originated from the banks this will be an bank genrated number.
+      TrdID2:  The siena reference number. This is static for the lifetime of the deal (survives deal edits). Only relevant for deal export
+      Ccy:     The account currency
+      LastQty: The adjustment amount
+      LastPx:  The interest rate for this leg
+      LinkID:  The parent call deal
+      SettDt:  The date of the ammendment
+	  CGName:  The Call Group Name.
+-->
+
+<TrdCaptRpt  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+   xmlns='http://www.fixprotocol.org/FIXML-5-0-SP1'
+   xsi:schemaLocation='http://www.fixprotocol.org/FIXML-5-0-SP1 fixml-tradecapture-base-5-0-SP1.xsd'
+    ExecTyp="0" TrdDt="2008-05-21"
+   LinkID="ABC1234"
+   TrdID="ABC1234" OrigTrdID="XYZ1234" TrdID2="SIENA-REF1234"
+   Ccy="GBP" LastPx="5" LastQty="5000000" SettlDt="2005-06-23" CGName="Test1">
+<!--
+  Snt: The time this report was sent
+-->
+  <Hdr Snt="2008-12-01T10:32:00"/>
+  <!--
+    CFI=DYXXXX: means MM
+    SubTyp: CALLA means call amendment
+  -->
+  <Instrmt CFI="DYFXXX" SubTyp="CALLA"/>
+  <!-- 
+    Side=F: Means lend. B means borrow. This is from the banks point of view. This
+    is a Loan
+  -->
+  <RptSide Side="F">
+    <!--
+      The Order originating firm
+      -->
+    <Pty ID="ABCLON" R="13"/>
+    <!--
+      The mandated user
+    -->
+    <Pty ID="traderA" R="11"/>
+    <SettlDetails>
+    <!-- Key for settlement instruction -->
+    <Pty ID="abc1"/>
+  </SettlDetails>
+  </RptSide>
+</TrdCaptRpt>

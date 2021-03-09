@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<TRANSACTIONS>
+  <TRANSACTION type="IMPORT">
+    <TABLE name="Counterparty" classname="com.eurobase.siena.data.counterparty.Counterparty">
+      <RECORD>
+        <KEYFIELD name="name.firm">BOE</KEYFIELD>
+        <KEYFIELD name="name.centre">OTH</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">GOVT</FIELD>
+        <FIELD name="cpartyGroupName">BOE</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">COMM</KEYFIELD>
+        <KEYFIELD name="name.centre">OTH</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">SELF</FIELD>
+        <FIELD name="cpartyGroupName">COMM</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">DEV</KEYFIELD>
+        <KEYFIELD name="name.centre">OTH</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">SELF</FIELD>
+        <FIELD name="cpartyGroupName">DEV</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">INV</KEYFIELD>
+        <KEYFIELD name="name.centre">OTH</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">SELF</FIELD>
+        <FIELD name="cpartyGroupName">INV</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">LEND</KEYFIELD>
+        <KEYFIELD name="name.centre">OTH</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">SELF</FIELD>
+        <FIELD name="cpartyGroupName">LEND</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">OTHER</KEYFIELD>
+        <KEYFIELD name="name.centre">OTH</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">SELF</FIELD>
+        <FIELD name="cpartyGroupName">OTHER</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">RETAIL</KEYFIELD>
+        <KEYFIELD name="name.centre">OTH</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">SELF</FIELD>
+        <FIELD name="cpartyGroupName">RETAIL</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">ADAMCOMPAN</KEYFIELD>
+        <KEYFIELD name="name.centre">SCO</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">AIBGROUPUK</KEYFIELD>
+        <KEYFIELD name="name.centre">REP</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">ALDERMORE</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">ALLIANCETR</KEYFIELD>
+        <KEYFIELD name="name.centre">SCO</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">ARBUTHNOT</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">ATOM</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">BACB</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">BARCLAYS</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">BIRABANKLT</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">BMCE</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">BOI</KEYFIELD>
+        <KEYFIELD name="name.centre">REP</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">ROI</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">BOLME</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">BOS</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">CAF</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">CAMBRIDGEC</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">CHARITY</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">CHARTER</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">CHOARECO</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">CLEARBANK</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">CLOSEBROTH</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">CLYDESDALE</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">COOP</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">COUTTS</KEYFIELD>
+        <KEYFIELD name="name.centre">SCO</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">CROWNAGENT</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">DUNCANLAWR</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">GATEHOUSE</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">GHANAINT</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">HAMPDENCOP</KEYFIELD>
+        <KEYFIELD name="name.centre">SCO</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">HAMPSHIRE</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">HAVINBANK</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">HSBC</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">JPMC</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">KINGDOM</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">LLOYDS</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">MARKSSPENC</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">MASTHAVEN</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">METHODIST</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">METRO</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">MONZO</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">NATWEST</KEYFIELD>
+        <KEYFIELD name="name.centre">SCO</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">OAKNORTH</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">ONESAVINGS</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">PARAGON</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">PCFGROUP</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">RAPHAEL</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">RATHBONE</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">RBS</KEYFIELD>
+        <KEYFIELD name="name.centre">SCO</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">RELIANCE</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">REVOLUT</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">SAINSBURYS</KEYFIELD>
+        <KEYFIELD name="name.centre">SCO</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">SCHRODER</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">SCOTTISHWI</KEYFIELD>
+        <KEYFIELD name="name.centre">SCO</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">SECURE</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">SHAWBROOK</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">STANCHART</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">STARLING</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">TANDEM</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">TESCO</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">ULSTER</KEYFIELD>
+        <KEYFIELD name="name.centre">SCO</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">UNITEDTRUS</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">UNITYTRUST</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">VANQUIS</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">VIRGINMONE</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">WEATHERBYS</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">WESLEYAN</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="name.firm">WYELANDS</KEYFIELD>
+        <KEYFIELD name="name.centre">ENG</KEYFIELD>
+        <FIELD name="customerType">Corporate</FIELD>
+        <FIELD name="countryCode">GBR</FIELD>
+        <FIELD name="sectorCode">BANKS</FIELD>
+        <FIELD name="cpartyGroupName"></FIELD>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

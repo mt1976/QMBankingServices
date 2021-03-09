@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<TRANSACTIONS>
+  <TRANSACTION type="IMPORT">
+    <TABLE name="Sector" classname="com.eurobase.siena.data.sector.Sector">
+      <RECORD>
+        <KEYFIELD name="code">GOVT</KEYFIELD>
+        <FIELD name="name">GOVERNMENT</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="code">SELF</KEYFIELD>
+        <FIELD name="name">SELF</FIELD>
+      </RECORD>
+      <RECORD>
+        <KEYFIELD name="code">BANKS</KEYFIELD>
+        <FIELD name="name">BANKS</FIELD>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

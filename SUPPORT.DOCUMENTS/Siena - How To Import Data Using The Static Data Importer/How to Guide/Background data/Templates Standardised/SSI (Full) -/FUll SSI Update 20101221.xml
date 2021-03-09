@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+              xmlns='http://www.eurobase.com/schema/dataimport'
+              xsi:schemaLocation='http://www.eurobase.com/schema/dataimport dataimport.xsd'>
+  <TRANSACTION type="UPDATE">
+    <TABLE name="SettlementInstructions"
+           classname="com.eurobase.siena.data.settlementinstructions.SettlementInstructions">
+      <RECORD>
+        <KEYFIELD name="name.counterparty.firm">CTRPTY1</KEYFIELD>
+        <KEYFIELD name="name.counterparty.centre">LDN</KEYFIELD>
+        <KEYFIELD name="name.currency">XPT</KEYFIELD>
+        <FIELD name="name.currency">KWD</FIELD>
+        <KEYFIELD name="name.accountType">Correspondent</KEYFIELD>
+        <KEYFIELD name="name.settlementCodeName">ALL</KEYFIELD>
+        <FIELD name="boan"/>
+        <FIELD name="clearing"/>
+        <FIELD name="isAutoConf"></FIELD>
+        <FIELD name="accountNumber"></FIELD>
+        <FIELD name="accountReference"></FIELD>
+        <FIELD name="payTo.firm"/>
+        <FIELD name="payTo.centre"/>
+        <FIELD name="accountOf.firm"/>
+        <FIELD name="accountOf.centre"/>
+        <FIELD name="favourOf.firm"/>
+        <FIELD name="favourOf.centre"/>
+      </RECORD>
+    </TABLE>
+  </TRANSACTION>
+</TRANSACTIONS>

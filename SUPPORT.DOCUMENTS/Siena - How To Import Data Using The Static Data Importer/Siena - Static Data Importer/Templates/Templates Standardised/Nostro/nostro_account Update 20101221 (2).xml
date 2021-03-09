@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+	<TRANSACTION type="UPDATE">
+		<TABLE name="NostroAccount"
+		       classname="com.eurobase.siena.data.nostro.NostroAccount">
+			<RECORD>
+				<KEYFIELD name="name.counterparty.firm"/>
+				<KEYFIELD name="name.counterparty.centre"/>
+				<KEYFIELD name="name.currency">XPT</KEYFIELD>
+				<KEYFIELD name="name.accountType">Correspondent</KEYFIELD>
+				<KEYFIELD name="name.settlementCode">ALL</KEYFIELD>
+				<FIELD name="accountOf.firm"/>
+				<FIELD name="accountOf.centre"/>
+				<FIELD name="accountReference"/>                                				
+				<FIELD name="boan">6666</FIELD>
+				<FIELD name="favourOf.firm"/>
+				<FIELD name="favourOf.centre"/>
+ 				<FIELD name="agentName">Agent</FIELD>
+   				<FIELD name="cLSLimit"/>
+				<FIELD name="favourOfAcc"/>                                  				
+			</RECORD>
+		</TABLE>
+	</TRANSACTION>
+</TRANSACTIONS>

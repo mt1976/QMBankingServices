@@ -1,0 +1,18 @@
+<DataImport xmlns="http://www.eurobase.com/EBXML-DataImport-2-0"
+                  xmlns:EBXML="http://www.eurobase.com/EBXML-DataImport-2-0"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+                  xsd:schemaLocation="http://www.eurobase.com/EBXML-DataImport-2-0 EBXML-DataImport-base-2-0.xsd">
+  <Header timeStamp="2011-03-17T15:41:09" msgID="000001" />
+
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+    <TRANSACTION type="INSERT">
+        <TABLE name="Centre" classname="com.eurobase.siena.data.centres.Centre">
+            <RECORD>
+                <KEYFIELD name="shortName">NOS</KEYFIELD>
+                <FIELD name="fullName">NOSTRO</FIELD>
+                <FIELD name="country">GBR</FIELD>
+            </RECORD>
+        </TABLE>
+    </TRANSACTION>
+</TRANSACTIONS>
+</DataImport>

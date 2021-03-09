@@ -1,0 +1,111 @@
+<TRANSACTIONS>
+    
+    <TRANSACTION type="DELETE">
+        <TABLE name="ChannelMargin" classname="com.eurobase.siena.portal.model.ChannelMargin">
+            <RECORD>
+                  <KEYFIELD name="key.areaType">Dealing Interface</KEYFIELD>
+                  <KEYFIELD name="key.criteria">CurrencyPair Product Tenor TimeZone</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.dealingInterface">AIB 3</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.channel">AIB test 3</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.tradingGroup">3 Bronze</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.counterparty.firm">StanChart</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.counterparty.centre">LON</KEYFIELD>
+                  <KEYFIELD name="key.areaHolder.counterpartyDealingInterface.dealingInterface">Bloomberg</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.product">FX Spot</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.currencyPair.majorCurrencyIsoCode">EUR</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.currencyPair.minorCurrencyIsoCode">JPY</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.tenor">Spot</KEYFIELD>
+                  <KEYFIELD name="key.criteriaHolder.timeZone">Asia</KEYFIELD>
+            </RECORD>
+             
+        </TABLE>
+         
+    </TRANSACTION>
+  </TRANSACTIONS>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

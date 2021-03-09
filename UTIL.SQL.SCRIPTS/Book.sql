@@ -1,3 +1,3 @@
 SELECT        BookName
-FROM            RG.Book
+FROM            {{SQL.SOURCE}}.Book
 WHERE        (InternalDeleted IS NULL)

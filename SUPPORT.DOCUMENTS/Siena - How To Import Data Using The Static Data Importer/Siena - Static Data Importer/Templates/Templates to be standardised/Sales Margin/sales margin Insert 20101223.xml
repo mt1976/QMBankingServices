@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSACTIONS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.eurobase.com/schema/dataimport" xsi:schemaLocation="http://www.eurobase.com/schema/dataimport dataimport.xsd">
+     <TRANSACTION type="INSERT">
+    <TABLE name="CounterpartyMargin" classname="com.eurobase.siena.portal.model.CounterpartyMargin">
+            <RECORD>
+                <KEYFIELD name = "key.areaType">Counterparty</KEYFIELD>
+                <KEYFIELD name="key.criteria">CurrencyPair Product Tenor TimeZone</KEYFIELD>
+                <KEYFIELD name="key.areaHolder.dealingInterface"/>
+                <KEYFIELD name="key.areaHolder.channel">Test</KEYFIELD>
+                <KEYFIELD name="key.areaHolder.tradingGroup"/>
+                <KEYFIELD name="key.areaHolder.agreementDealingInterface.agreement.priceMaker.type"/>
+                <KEYFIELD name="key.areaHolder.agreementDealingInterface.agreement.priceMaker.tradingEntity"/>
+                <KEYFIELD name="key.areaHolder.agreementDealingInterface.agreement.priceTaker.type"/>
+	            <KEYFIELD name="key.areaHolder.agreementDealingInterface.agreement.priceTaker.tradingEntity"/>
+                <KEYFIELD name = "key.criteriaHolder.product">FX Spot</KEYFIELD>
+                <KEYFIELD name = "key.criteriaHolder.currencyPair.majorCurrencyIsoCode">EUR</KEYFIELD>
+                <KEYFIELD name = "key.criteriaHolder.currencyPair.minorCurrencyIsoCode">USD</KEYFIELD>
+                <KEYFIELD name = "key.criteriaHolder.tenor">Undefined</KEYFIELD>
+                <KEYFIELD name = "key.criteriaHolder.timeZone"/>
+                <KEYFIELD name="key.criteriaHolder.currency"/>
+                <FIELD name = "priority">1</FIELD>
+                <FIELD name="data.amountCurrency">Base</FIELD>
+                <FIELD name="data.amountBandId">Treasury Band - Spread 1</FIELD>
+                <SLOT name="Data.AmountBandList" classname="com.eurobase.siena.portal.model.AmountBandSlotType" memberClassname="com.eurobase.siena.portal.model.AmountBandSlotMember">
+                     <SLOTRECORD>
+                         <SLOTKEYFIELD name="bandMaxAmount">600</SLOTKEYFIELD>
+                         <SLOTFIELD name="margin">3.0/3.0%</SLOTFIELD>
+                    </SLOTRECORD>
+                     <SLOTRECORD>
+                         <SLOTKEYFIELD name="bandMaxAmount">13000</SLOTKEYFIELD>
+                         <SLOTFIELD name="margin">2.0/2.0%</SLOTFIELD>
+                    </SLOTRECORD>
+                     <SLOTRECORD>
+                         <SLOTKEYFIELD name="bandMaxAmount">70000</SLOTKEYFIELD>
+                         <SLOTFIELD name="margin">1.5/1.5%</SLOTFIELD>
+                    </SLOTRECORD>
+                </SLOT>
+            </RECORD>
+       </TABLE>
+    </TRANSACTION>
+</TRANSACTIONS>
