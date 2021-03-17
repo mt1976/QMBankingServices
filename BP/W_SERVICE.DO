@@ -48,8 +48,6 @@ $INCLUDE BP F_UTIL.LOG.EVENT.H
    waitTime = 0 ; CALL U_IO.GET.PROPERTY(wct_Properties, "waitTime", waitTime)
    shutdownChar = 0 ; CALL U_IO.GET.PROPERTY(wct_Properties, "shutdownChar", shutdownChar)
 
-
-
    CALL U_CRT.INFO("QUIT CHAR", shutdownChar:",":upcase(shutdownChar))
 
    breakLoop = @FALSE ; chkVar = ""
@@ -102,7 +100,6 @@ PROCESS.QUEUE.ITEM:
 
    requestFileType = "" ; requestFileType = CHANGE(requestFileName[4], ".", "")
 
-
    IF requestFileType <> "xml" AND requestFileType <> "json" THEN
       CALL U_CRT.INFO("ERROR", requestFileType:" cannot be processed skipping")
    END
@@ -115,8 +112,6 @@ PROCESS.QUEUE.ITEM:
       requestResponseFormat = "" ; searchProperty = "requestResponseFormat" ; GOSUB GET.SEARCH.PROPERTY ; requestResponseFormat=searchResult
 
       requestAction = "" ; searchProperty = "requestAction" ; GOSUB GET.SEARCH.PROPERTY ; requestAction=searchResult
-
-
 
       IF requestResponseFormat <> defaultResponseType THEN
          requestResponseTemplateID = "response.":requestResponseFormat
@@ -165,7 +160,7 @@ PROCESS.QUEUE.ITEM:
       CALL U_WILDCARD.SUBSTITUTE("requestPayload", requestPayload, response)
 
       IF OK.TO.CONTINUE THEN
-         IF UPCASE(requestAction) # "LOGOUT" AND UPCASE(requestAction) # "LOGIN" THEN
+         IF UPCASE(requestAction) # "LOGIN" THEN
             GOSUB VALIDATE.SESSION
          END
       END
@@ -217,8 +212,6 @@ PROCESS.ACTION:
    * CALL U_CRT.INFO("ra(last)", requestAction[1, 1])
    * CALL U_CRT.INFO("requestItem", requestItem)
 
-
-
    BEGIN CASE
 
       CASE UPCASE(requestAction)[1, 1] = "@"
@@ -243,8 +236,6 @@ PROCESS.ACTION:
          CALL W_SERVICE.TEST(requestItem, requestParameters, msgPayload, responseCode, responseMessage)
          responseStatus = responseCode
          responseContent = responseMessage
-      CASE UPCASE(requestAction) = "LOGOUT"
-         * TODO
       CASE UPCASE(requestAction) = "SERVICES"
          CALL W_SERVICE.SERVICES(responseStatus, responseContent)
       CASE UPCASE(requestAction) = "SHUTDOWN"

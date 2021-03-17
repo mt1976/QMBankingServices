@@ -5,7 +5,7 @@ SUBROUTINE W_SERVICE.SESSION.VALIDATE(sessionToken, uniqueID, applicationToken, 
 *         Params : sessionToken, uniqueID, applicationToken, msgPayload, OK.TO.CONTINUE, responseCode, responseMessage
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210302 at 21.53.22 in DEV by root
+*   Info Updated : 20210316 at 18.18.45 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 
@@ -17,7 +17,7 @@ $INCLUDE BP F_WEB.CREDENTIALS.IDX.H
    PROCESS.NAME = SYSTEM(45)
    wct_Properties = "wct_connect"
 
-   DEBUGIT = @FALSE
+   DEBUGIT = @TRUE
    IF DEBUGIT THEN
 
       CALL U_CRT.INFO("sessionToken", sessionToken)
@@ -62,6 +62,9 @@ $INCLUDE BP F_WEB.CREDENTIALS.IDX.H
       responseMessage=RC$SECURITY.VIOLATION
       CALL U_MSG.HTTP(responseMessage, "")
       IF DEBUGIT THEN CALL U_CRT.INFO(responseCode, responseMessage)
+
+      GOSUB CLEAR.TOKENS
+
    END
 
    * CALL U_CRT.INFO("responseCode", responseCode)
@@ -70,16 +73,35 @@ $INCLUDE BP F_WEB.CREDENTIALS.IDX.H
 
    RETURN
 
+CLEAR.TOKENS:
+
+* DELETE OFFENDING TOKEN TO INVALIDATE SESSION
+   IF sessionToken <> "" THEN
+      CALL U_IO.DELETE(FV.WEB.SESSIONS, sessionToken, @FALSE, "")
+   END
+
+   STMT = "SELECT ":W$TOKEN.FILENAME:" WITH ":W$TOKEN.UNIQUE.ID:"=":uniqueID
+   ITEMS.TO.DELETE.LIST=""
+   NO.ITEMS.TO.DELETE = ""
+   CALL U_GET.LIST(STMT, ITEMS.TO.DELETE.LIST, NO.ITEMS.TO.DELETE)
+   FOR I = 1 TO NO.ITEMS.TO.DELETE
+
+      CALL U_IO.DELETE(FV.WEB.SESSIONS, ITEMS.TO.DELETE.LIST<I>, @FALSE, "")
+
+   NEXT I
+
+   RETURN
+
 
 UPDATE.SESSION.TOKEN:
 
    R.WEB.SESSIONS<W$TOKEN.EXPIRY> = EPOCH() + sessionTokenLife
-
    CALL U_IO.WRITE(FV.WEB.SESSIONS, ID.WEB.SESSIONS, R.WEB.SESSIONS, STOP.ON.ERROR, ERROR.TEXT)
 
    responseCode=RC$OK
    responseMessage=""
    OK.TO.CONTINUE = @TRUE
+
    RETURN
 
 
