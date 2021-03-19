@@ -4,7 +4,7 @@
 *       Filename : WEB.CREDENTIALS
 *         Prefix : W$CRED.
 ** AUDIT **********************************************************************
-*   Info Updated : 20210302 at 14.09.14 in DEV by root
+*   Info Updated : 20210318 at 13.05.50 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate W$CRED.FILE.NAME to "WEB.CREDENTIALS"
@@ -45,3 +45,7 @@ equate W$CRED.MACHINE to 9
 equate W$CRED.MACHINE$LEN to "35"
 equate W$CRED.MACHINE$MASK to ""
 equate W$CRED.MACHINE$LABEL to "Machine"
+equate W$CRED.ROLE to 10
+equate W$CRED.ROLE$LEN to "15"
+equate W$CRED.ROLE$MASK to ""
+equate W$CRED.ROLE$LABEL to "User Role"

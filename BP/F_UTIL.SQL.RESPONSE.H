@@ -4,7 +4,7 @@
 *       Filename : UTIL.SQL.RESPONSE
 *         Prefix : U_SQLREP_
 ** AUDIT **********************************************************************
-*   Info Updated : 20210302 at 14.09.11 in DEV by root
+*   Info Updated : 20210318 at 13.05.47 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate U_SQLREP_FILE.NAME to "UTIL.SQL.RESPONSE"

@@ -4,7 +4,7 @@
 *       Filename : UTIL.LOG.EVENT
 *         Prefix : U_LOG_
 ** AUDIT **********************************************************************
-*   Info Updated : 20210302 at 14.09.09 in DEV by root
+*   Info Updated : 20210318 at 13.05.45 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate U_LOG_FILE.NAME to "UTIL.LOG.EVENT"
