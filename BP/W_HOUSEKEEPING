@@ -1,0 +1,29 @@
+PROGRAM W_NEW.USER
+** INFORMATION ****************************************************************
+*   Routine Name : W_HOUSEKEEPING
+*           Type : PROGRAM
+*         Params :
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210320 at 17.00.43 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+$INSERT BP I_HTTP.H
+$INSERT BP F_WEB.CREDENTIALS.H
+$INSERT BP F_WEB.CREDENTIALS.IDX.H
+
+   PN=SYSTEM(45)
+   CALL U_INITIALISE(PN)
+   CALL U_START(PN)
+   CALL U_HEADER(PN)
+
+   CALL W_SERVICE.HOUSEKEEPING_DO("", "", "", responseContent, responseStatus)
+
+   CALL U_CRT.INFO("STATUS", responseStatus)
+   CALL U_CRT.INFO("CONTENT", responseContent)
+
+   CALL U_STOP(PN)
+   STOP
+END

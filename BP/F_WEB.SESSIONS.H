@@ -4,7 +4,7 @@
 *       Filename : WEB.SESSIONS
 *         Prefix : W$TOKEN.
 ** AUDIT **********************************************************************
-*   Info Updated : 20210318 at 13.05.50 in DEV by root
+*   Info Updated : 20210320 at 17.08.32 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate W$TOKEN.FILE.NAME to "WEB.SESSIONS"
@@ -69,3 +69,7 @@ equate W$TOKEN.EXPIRY to 15
 equate W$TOKEN.EXPIRY$LEN to "35"
 equate W$TOKEN.EXPIRY$MASK to "EA"
 equate W$TOKEN.EXPIRY$LABEL to ""
+equate W$TOKEN.EXPIRY.RAW to 15
+equate W$TOKEN.EXPIRY.RAW$LEN to "35"
+equate W$TOKEN.EXPIRY.RAW$MASK to ""
+equate W$TOKEN.EXPIRY.RAW$LABEL to ""

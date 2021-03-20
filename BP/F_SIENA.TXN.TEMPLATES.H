@@ -4,7 +4,7 @@
 *       Filename : SIENA.TXN.TEMPLATES
 *         Prefix : S_TXN_TEMPLATE_
 ** AUDIT **********************************************************************
-*   Info Updated : 20210318 at 13.05.49 in DEV by root
+*   Info Updated : 20210320 at 17.08.32 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate S_TXN_TEMPLATE_FILE.NAME to "SIENA.TXN.TEMPLATES"

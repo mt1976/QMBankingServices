@@ -1,0 +1,64 @@
+SUBROUTINE W_SERVICE.HOUSEKEEPING_DO(requestItem, requestParameters, msgPayload, responseContent, responseStatus)
+** INFORMATION ****************************************************************
+*   Routine Name : W_SERVICE.HOUSEKEEPING_DO
+*           Type : SUBROUTINE
+*         Params : requestItem, requestParameters, msgPayload, responseContent, responseStatus
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210320 at 17.39.24 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INCLUDE BP I_UTIL.H
+$INCLUDE BP I_HTTP.H
+$INCLUDE BP F_WEB.SESSIONS.H
+** DO NOT CHANGE
+   PROCESS.NAME=SYSTEM(45) ; ERROR.TEXT = "" ; CALL U_START(PROCESS.NAME)
+   * * CALL U_CRT.INFO(PROCESS.NAME, PROCESS.NAME)
+   * * CALL U_CRT.INFO("requestItem", requestItem) ; * * CALL U_CRT.INFO("requestParameters", requestParameters)
+** DO NOT CHANGE
+   FV.session = "" ; session.ID = ""; session.REC = ""
+   CALL U_IO.OPENFILE(W$TOKEN.FILENAME, FV.session, @TRUE, "")
+   CALL U_CRT.INFO("NOW", OCONV(EPOCH(), W$TOKEN.EXPIRY$MASK))
+   STMT = "SELECT ":W$TOKEN.FILENAME:" WITH ":W$TOKEN.EXPIRY:" < ":EPOCH()
+
+   CALL U_CRT.INFO("STMT", STMT)
+   CALL U_GET.LIST(STMT, session.LIST, NO.sessions)
+   CALL U_CRT.INFO("sessions", NO.sessions)
+
+   return.DATA = ""
+   IF NO.sessions = 0 THEN
+      return.DATA = "NO SESSIONS TO EXPIRE"
+      CALL U_MSG(return.DATA, "")
+   END
+   FOR I = 1 TO NO.sessions
+      R.session = ""
+      ID.session = session.LIST<I>
+      CALL U_IO.READ(FV.session, ID.session, R.session, @FALSE, ERROR.TEXT)
+      enrichment = ""
+      enrichment:= "SESSION=":ID.session
+      enrichment:= W$SEP_DATA:"ACTION=EXPIRE"
+      enrichment:= W$SEP_DATA:"USER=":R.session<W$TOKEN.USERNAME>
+      enrichment:= W$SEP_DATA:"IP=":R.session<W$TOKEN.USER.IP>
+      enrichment:= W$SEP_DATA:"ISSUED=":OCONV(R.session<W$TOKEN.ISSUED>, W$TOKEN.ISSUED$MASK)
+      enrichment:= W$SEP_DATA:"EXPIRED=":OCONV(R.session<W$TOKEN.EXPIRY>, W$TOKEN.EXPIRY$MASK)
+      return.DATA<-1> = enrichment
+      CALL U_CRT.INFO("EXPIRE", enrichment)
+      CALL U_IO.DELETE(FV.session, ID.session, @FALSE, ERROR.TEXT)
+   NEXT I
+
+   IF ERROR.TEXT <> "" THEN
+      responseStatus = RC$BAD.REQUEST
+      responseContent = "[{{1}}] Template Data Found '{{2}}' '{{3}}'"
+      CALL U_MSG(responseContent, RC$BAD.REQUEST:@AM:requestItem:@AM:requestParameters)
+      responseContent<-1> = ERROR.TEXT
+   END ELSE
+      responseStatus = RC$OK
+      responseContent = CHANGE(return.DATA, @AM, W$SEP_LIST)
+   END
+
+
+
+   CALL U_STOP(PROCESS.NAME)
+   RETURN
+END

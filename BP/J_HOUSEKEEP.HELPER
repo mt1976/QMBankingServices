@@ -1,0 +1,19 @@
+SUBROUTINE J_BUILD.SERVICE.CATALOG.HELPER(PROCESS.NAME)
+** INFORMATION ****************************************************************
+*   Routine Name : J_HOUSEKEEP.HELPER
+*           Type : SUBROUTINE
+*         Params : PROCESS.NAME
+*            Loc : BP
+** AUDIT **********************************************************************
+*   Info Updated : 20210320 at 17.37.37 in DEV by root
+*                : on mercury.local (Mac)
+*******************************************************************************
+
+$INSERT BP I_UTIL.H
+   CALL U_CRT.INFO("PROCESSING", "STARTS")
+   CALL W_SERVICE.HOUSEKEEPING_DO("", "", "", responseContent, responseStatus)
+   CALL U_CRT.INFO("STATUS", responseStatus)
+   CALL U_CRT.INFO("CONTENT", responseContent)
+   CALL U_CRT.INFO("PROCESSING", "COMPLETE")
+   RETURN
+END
