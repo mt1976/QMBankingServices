@@ -1,0 +1,8 @@
+SELECT        {{SQL.SOURCE}}.Deals.SienaReference, {{SQL.SOURCE}}.Deals.UTI, {{SQL.SOURCE}}.Deals.FullDealType, {{SQL.SOURCE}}.Deals.Broker, {{SQL.SOURCE}}.Deals.Status, {{SQL.SOURCE}}.Deals.TradeDate, {{SQL.SOURCE}}.Deals.StartDate, {{SQL.SOURCE}}.Deals.MaturityDate, {{SQL.SOURCE}}.Deals.ContractNumber,
+                         {{SQL.SOURCE}}.Deals.ExternalReference, {{SQL.SOURCE}}.Deals.DealingInterface, {{SQL.SOURCE}}.Deals.DealtAmount, {{SQL.SOURCE}}.Deals.AgainstAmount, {{SQL.SOURCE}}.Deals.DealtCcy, {{SQL.SOURCE}}.Deals.AgainstCcy, {{SQL.SOURCE}}.Deals.MajorCcy, {{SQL.SOURCE}}.Deals.MinorCcy, {{SQL.SOURCE}}.Deals.AllInRate,
+                         {{SQL.SOURCE}}.Deals.Book, {{SQL.SOURCE}}.Deals.SettleCcy, {{SQL.SOURCE}}.Deals.Direction, {{SQL.SOURCE}}.Deals.MandatedUser, {{SQL.SOURCE}}.Deals.CustomerSienaView, {{SQL.SOURCE}}.Deals.PayInstruction, {{SQL.SOURCE}}.Deals.ReceiptInstruction, {{SQL.SOURCE}}.Deals.VenueUTI, {{SQL.SOURCE}}.Deals.Portfolio,
+                         {{SQL.SOURCE}}.Deals.ISIN, {{SQL.SOURCE}}.Deals.Waiver, {{SQL.SOURCE}}.Deals.LEI, {{SQL.SOURCE}}.Deals.AgreementId, {{SQL.SOURCE}}.Deals.DealOwner, {{SQL.SOURCE}}.Deals.OriginUser, {{SQL.SOURCE}}.Deals.SienaCommonRef
+FROM            {{SQL.SOURCE}}.FundamentalDealType RIGHT OUTER JOIN
+                         {{SQL.SOURCE}}.DealType ON {{SQL.SOURCE}}.FundamentalDealType.DealTypeKey = {{SQL.SOURCE}}.DealType.FundamentalDealTypeKey RIGHT OUTER JOIN
+                         {{SQL.SOURCE}}.Deals ON {{SQL.SOURCE}}.DealType.DealTypeKey = {{SQL.SOURCE}}.Deals.FullDealType
+WHERE        ({{SQL.SOURCE}}.Deals.InternalDeleted IS NULL) AND ({{SQL.SOURCE}}.FundamentalDealType.DealTypeShortName = 'BR')
