@@ -4,7 +4,7 @@
 *       Filename : UTIL.WCT.RECV
 *         Prefix : W$RECV.
 ** AUDIT **********************************************************************
-*   Info Updated : 20210320 at 17.08.32 in DEV by root
+*   Info Updated : 20210322 at 09.52.07 in DEV by root
 *                : on mercury.local (Mac)
 *******************************************************************************
 equate W$RECV.FILE.NAME to "UTIL.WCT.RECV"
