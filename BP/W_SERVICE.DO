@@ -2,10 +2,10 @@ PROGRAM W_SERVICE.DO
 ** INFORMATION ****************************************************************
 *   Routine Name : W_SERVICE.DO
 *           Type : PROGRAM
-*         Params : 
+*         Params :
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210411 at 16.25.52 in MWT-QM-DEV by matttownsend
+*   Info Updated : 20210411 at 17.02.44 in MWT-QM-DEV by matttownsend
 *                : on silicon.local (Mac)
 *******************************************************************************
 
@@ -48,7 +48,8 @@ $INCLUDE BP F_UTIL.LOG.EVENT.H
    waitTime = 0 ; CALL U_IO.GET.PROPERTY(wct_Properties, "waitTime", waitTime)
    shutdownChar = 0 ; CALL U_IO.GET.PROPERTY(wct_Properties, "shutdownChar", shutdownChar)
 
-   CALL U_CRT.INFO("QUIT CHAR", shutdownChar:",":upcase(shutdownChar))
+   CALL U_CRT.INFO("requestFilePath", requestFilePath)
+   CALL U_CRT.INFO("responseFilePath", responseFilePath)
 
    breakLoop = @FALSE ; chkVar = ""
    LOOP
@@ -56,15 +57,15 @@ $INCLUDE BP F_UTIL.LOG.EVENT.H
 
       GOSUB CHECK.QUEUE
 
-      PROMPT = ""
+      *  PROMPT = ""
       *CRT @CRTWIDE:",":@CRTHIGH
-      INPUT chkVar, 1:_ TIMEOUT waitTime
-      PROMPT = "?"
-      IF chkVar = shutdownChar or chkVar = upcase(shutdownChar) THEN
-         breakLoop=@TRUE
-         CRT @SYS.BELL
-
-      END
+      *  INPUT chkVar, 1:_ TIMEOUT waitTime
+      *  PROMPT = "."
+      *  IF chkVar = shutdownChar or chkVar = upcase(shutdownChar) THEN
+      *     breakLoop=@TRUE
+      *     CRT @SYS.BELL
+      *  END
+      SLEEP waitTime
 * for debugging
 *      breakLoop=@TRUE
 
