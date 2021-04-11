@@ -5,8 +5,8 @@ SUBROUTINE W_SERVICE.SESSION.VALIDATE(sessionToken, uniqueID, applicationToken, 
 *         Params : sessionToken, uniqueID, applicationToken, msgPayload, OK.TO.CONTINUE, responseCode, responseMessage
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210316 at 18.18.45 in DEV by root
-*                : on mercury.local (Mac)
+*   Info Updated : 20210411 at 16.25.52 in MWT-QM-DEV by matttownsend
+*                : on silicon.local (Mac)
 *******************************************************************************
 
 $INCLUDE BP I_HTTP.H

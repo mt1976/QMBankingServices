@@ -5,8 +5,8 @@ SUBROUTINE U_HEADER(TEXT)
 *         Params : TEXT
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210302 at 21.53.22 in DEV by root
-*                : on mercury.local (Mac)
+*   Info Updated : 20210411 at 16.34.32 in MWT-QM-DEV by matttownsend
+*                : on silicon.local (Mac)
 *******************************************************************************
 
 $INCLUDE BP I_UTIL.H
@@ -20,22 +20,22 @@ $INCLUDE BP I_UTIL.H
    BAR = STR("━", SPAN.WIDTH)
    CALLING.SUBR = SYSTEM(1002)<2, 1>
 
-   headerCMD="sh figlet -f small"
+   *headerCMD="sh figlet -f small"
 
-   CALL U_IO.GET.PROPERTY("util", "headerCMD", headerCMD)
+   *CALL U_IO.GET.PROPERTY("util", "headerCMD", headerCMD)
 
-   STMT = headerCMD:" ":DQUOTE(TEXT)
+   *STMT = headerCMD:" ":DQUOTE(TEXT)
 
    * HUSH ON
-   EXECUTE STMT CAPTURING OUTPUT
+   *EXECUTE STMT CAPTURING OUTPUT
    * HUSH OFF
 
-   NO.ROWS = DCOUNT(OUTPUT, @FM)
+   *NO.ROWS = DCOUNT(OUTPUT, @FM)
 
    *CALL U_CRT(BAR, "", CALLING.SUBR)
-   FOR POS.ROW = 1 TO NO.ROWS
-      CRT @(-4):@(T$BOLD_ON):OUTPUT<POS.ROW>:@(T$BOLD_OFF)
-   NEXT POS.ROW
+   *FOR POS.ROW = 1 TO NO.ROWS
+   CALL U_CRT.INFO("BEGIN", @(T$REVERSE_ON):TEXT:@(T$REVERSE_OFF))
+   *NEXT POS.ROW
    *CALL U_CRT(BAR, "", CALLING.SUBR)
 
    RETURN

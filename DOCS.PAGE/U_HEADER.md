@@ -20,13 +20,13 @@
 *         Params : TEXT
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210302 at 21.53.22 in DEV by root
-*                : on mercury.local (Mac)
+*   Info Updated : 20210411 at 16.34.32 in MWT-QM-DEV by matttownsend
+*                : on silicon.local (Mac)
 *******************************************************************************
 
 ```
 ## BODY  
 ### EXTERNAL CALLS  
-<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_IO.GET.PROPERTY" width="25" />[U_IO.GET.PROPERTY](../DOCS.PAGE/U_IO.GET.PROPERTY.md)  
+<img src="../.resources/themes/unicons-line-6563ff/link.svg" alt="U_CRT.INFO" width="25" />[U_CRT.INFO](../DOCS.PAGE/U_CRT.INFO.md)  
 ### NOTES  
   

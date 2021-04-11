@@ -4,8 +4,8 @@
 *       Filename : WEB.CREDENTIALS
 *         Prefix : W$CRED.
 ** AUDIT **********************************************************************
-*   Info Updated : 20210322 at 09.52.13 in DEV by root
-*                : on mercury.local (Mac)
+*   Info Updated : 20210411 at 16.29.38 in MWT-QM-DEV by matttownsend
+*                : on silicon.local (Mac)
 *******************************************************************************
 equate W$CRED.FILE.NAME to "WEB.CREDENTIALS"
 equate W$CRED.FILENAME to "WEB.CREDENTIALS"

@@ -2,17 +2,16 @@ PROGRAM U_GIT.LINK.FILE.RAW
 ** INFORMATION ****************************************************************
 *   Routine Name : U_GIT.LINK.FILE.RAW
 *           Type : PROGRAM
-*         Params :
+*         Params : 
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210302 at 21.53.22 in DEV by root
-*                : on mercury.local (Mac)
+*   Info Updated : 20210411 at 16.25.52 in MWT-QM-DEV by matttownsend
+*                : on silicon.local (Mac)
 *******************************************************************************
 
    CRT "EXECUTE - ":DQUOTE(@SENTENCE)
 
    FN.VOC = "VOC" ; FV.VOC = "" ; ID.VOC = "" ; R.VOC = "" ; STOP.ON.ERROR = @TRUE ; ERROR.TEXT = ""
-   CALL U_IO.OPENFILE(FN.VOC, FV.VOC, STOP.ON.ERROR, ERROR.TEXT)
 
    OPEN FN.VOC TO FV.VOC ELSE
 
@@ -37,13 +36,19 @@ PROGRAM U_GIT.LINK.FILE.RAW
       ERROR.TEXT = "ERROR   - Unable to read ":DQUOTE(ID.VOC)
       STOP ERROR.TEXT
    END
-
+   R.VOC<1> = "F"
    IF R.VOC<2> = "" THEN
       R.VOC<2> = ID.VOC
-      WRITE R.VOC TO FV.VOC, ID.VOC
-      CRT "SUCCESS - ":DQUOTE("File link complete")
+      CRT "SUCCESS - ":DQUOTE("File DATA link complete")
    END ELSE
-      CRT "INFO    - ":DQUOTE("File already linked")
+      CRT "INFO    - ":DQUOTE("File DATA already linked")
    END
+   IF R.VOC<3> = "" THEN
+      R.VOC<3> = ID.VOC:".DIC"
+      CRT "SUCCESS - ":DQUOTE("File DICT link complete")
+   END ELSE
+      CRT "INFO    - ":DQUOTE("File DICT already linked")
+   END
+   WRITE R.VOC TO FV.VOC, ID.VOC
    STOP "DONE    - ":DQUOTE(ID.VOC)
 END

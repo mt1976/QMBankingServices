@@ -4,8 +4,8 @@
 *       Filename : LOGS
 *         Prefix : S_L_
 ** AUDIT **********************************************************************
-*   Info Updated : 20210322 at 09.52.00 in DEV by root
-*                : on mercury.local (Mac)
+*   Info Updated : 20210411 at 16.29.36 in MWT-QM-DEV by matttownsend
+*                : on silicon.local (Mac)
 *******************************************************************************
 equate S_L_FILE.NAME to "LOGS"
 equate S_L_FILENAME to "LOGS"

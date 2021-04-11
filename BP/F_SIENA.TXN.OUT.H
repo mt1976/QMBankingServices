@@ -4,8 +4,8 @@
 *       Filename : SIENA.TXN.OUT
 *         Prefix : S_TXN_OUT_
 ** AUDIT **********************************************************************
-*   Info Updated : 20210322 at 09.52.05 in DEV by root
-*                : on mercury.local (Mac)
+*   Info Updated : 20210411 at 16.29.37 in MWT-QM-DEV by matttownsend
+*                : on silicon.local (Mac)
 *******************************************************************************
 equate S_TXN_OUT_FILE.NAME to "SIENA.TXN.OUT"
 equate S_TXN_OUT_FILENAME to "SIENA.TXN.OUT"

@@ -2,11 +2,11 @@ PROGRAM U_GIT.LINK.FILE
 ** INFORMATION ****************************************************************
 *   Routine Name : U_GIT.LINK.FILE
 *           Type : PROGRAM
-*         Params :
+*         Params : 
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210302 at 21.53.22 in DEV by root
-*                : on mercury.local (Mac)
+*   Info Updated : 20210411 at 16.25.52 in MWT-QM-DEV by matttownsend
+*                : on silicon.local (Mac)
 *******************************************************************************
 
 $INCLUDE BP I_UTIL.H
@@ -25,12 +25,15 @@ $INCLUDE BP F_UTIL.LOG.EVENT.H
    EXECUTE STMT
 
    CALL U_IO.READ(FV.VOC, ID.VOC, R.VOC, STOP.ON.ERROR, ERROR.TEXT)
+   R.VOC<1> = "F"
    IF R.VOC<2> = "" THEN
       R.VOC<2> = ID.VOC
-      CALL U_IO.WRITE(FV.VOC, ID.VOC, R.VOC, STOP.ON.ERROR, ERROR.TEXT)
+         END
+   IF R.VOC<3> = "" THEN
+      R.VOC<3> = ID.VOC:".DIC"
    END
-
-   CALL U_CRT.INFO("DONE", ID.VOC)
+   CALL U_IO.WRITE(FV.VOC, ID.VOC, R.VOC, STOP.ON.ERROR, ERROR.TEXT)
+   CALL U_CRT.INFO("DONE", ID.VOC:" ":R.VOC)
 
    R.EVENT = ""
    R.EVENT<U_LOG_EVENT> = "GIT.LINK.FILE"

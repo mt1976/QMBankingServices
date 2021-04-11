@@ -4,8 +4,8 @@
 *       Filename : UTIL.TRANSLATE
 *         Prefix : U_TRNS.
 ** AUDIT **********************************************************************
-*   Info Updated : 20210322 at 09.51.58 in DEV by root
-*                : on mercury.local (Mac)
+*   Info Updated : 20210411 at 16.29.35 in MWT-QM-DEV by matttownsend
+*                : on silicon.local (Mac)
 *******************************************************************************
 equate U_TRNS.FILE.NAME to "UTIL.TRANSLATE"
 equate U_TRNS.FILENAME to "UTIL.TRANSLATE"

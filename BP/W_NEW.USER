@@ -2,11 +2,11 @@ PROGRAM W_NEW.USER
 ** INFORMATION ****************************************************************
 *   Routine Name : W_NEW.USER
 *           Type : PROGRAM
-*         Params :
+*         Params : 
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210322 at 09.54.55 in DEV by root
-*                : on mercury.local (Mac)
+*   Info Updated : 20210411 at 16.25.52 in MWT-QM-DEV by matttownsend
+*                : on silicon.local (Mac)
 *******************************************************************************
 
 $INSERT BP I_UTIL.H

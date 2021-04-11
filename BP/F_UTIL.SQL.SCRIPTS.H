@@ -4,8 +4,8 @@
 *       Filename : UTIL.SQL.SCRIPTS
 *         Prefix : U_SQLSCR.
 ** AUDIT **********************************************************************
-*   Info Updated : 20210322 at 09.51.58 in DEV by root
-*                : on mercury.local (Mac)
+*   Info Updated : 20210411 at 16.29.35 in MWT-QM-DEV by matttownsend
+*                : on silicon.local (Mac)
 *******************************************************************************
 equate U_SQLSCR.FILE.NAME to "UTIL.SQL.SCRIPTS"
 equate U_SQLSCR.FILENAME to "UTIL.SQL.SCRIPTS"

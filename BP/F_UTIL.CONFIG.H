@@ -4,8 +4,8 @@
 *       Filename : UTIL.CONFIG
 *         Prefix : U$CONFIG.
 ** AUDIT **********************************************************************
-*   Info Updated : 20210322 at 09.51.59 in DEV by root
-*                : on mercury.local (Mac)
+*   Info Updated : 20210411 at 16.29.35 in MWT-QM-DEV by matttownsend
+*                : on silicon.local (Mac)
 *******************************************************************************
 equate U$CONFIG.FILE.NAME to "UTIL.CONFIG"
 equate U$CONFIG.FILENAME to "UTIL.CONFIG"
