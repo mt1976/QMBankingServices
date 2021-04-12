@@ -5,7 +5,7 @@ PROGRAM W_SERVICE.DO
 *         Params :
 *            Loc : BP
 ** AUDIT **********************************************************************
-*   Info Updated : 20210411 at 17.02.44 in MWT-QM-DEV by matttownsend
+*   Info Updated : 20210411 at 19.24.53 in MWT-QM-DEV by matttownsend
 *                : on silicon.local (Mac)
 *******************************************************************************
 
@@ -48,6 +48,16 @@ $INCLUDE BP F_UTIL.LOG.EVENT.H
    waitTime = 0 ; CALL U_IO.GET.PROPERTY(wct_Properties, "waitTime", waitTime)
    shutdownChar = 0 ; CALL U_IO.GET.PROPERTY(wct_Properties, "shutdownChar", shutdownChar)
 
+
+   releaseID = "" ; CALL U_IO.GET.PROPERTY("util", "releaseID", releaseID)
+   releaseLevel = "" ; CALL U_IO.GET.PROPERTY("util", "releaseLevel", releaseLevel)
+   releaseNumber = "" ; CALL U_IO.GET.PROPERTY("util", "releaseNumber", releaseNumber)
+
+   CALL U_CRT.INFO("releaseID", releaseID)
+   CALL U_CRT.INFO("releaseLevel", releaseLevel)
+   CALL U_CRT.INFO("releaseNumber", releaseNumber)
+
+
    CALL U_CRT.INFO("requestFilePath", requestFilePath)
    CALL U_CRT.INFO("responseFilePath", responseFilePath)
 
@@ -59,13 +69,13 @@ $INCLUDE BP F_UTIL.LOG.EVENT.H
 
       *  PROMPT = ""
       *CRT @CRTWIDE:",":@CRTHIGH
-      *  INPUT chkVar, 1:_ TIMEOUT waitTime
-      *  PROMPT = "."
-      *  IF chkVar = shutdownChar or chkVar = upcase(shutdownChar) THEN
-      *     breakLoop=@TRUE
-      *     CRT @SYS.BELL
-      *  END
-      SLEEP waitTime
+      INPUT chkVar, 1:_ TIMEOUT waitTime
+      PROMPT = "."
+      IF chkVar = shutdownChar or chkVar = upcase(shutdownChar) THEN
+         breakLoop=@TRUE
+         CRT @SYS.BELL
+      END
+      * SLEEP waitTime
 * for debugging
 *      breakLoop=@TRUE
 
